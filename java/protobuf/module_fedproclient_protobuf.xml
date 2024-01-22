@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_fedproclient_protobuf" default="compile.module.fedproclient_protobuf">
+  <dirname property="module.fedproclient_protobuf.basedir" file="${ant.file.module_fedproclient_protobuf}"/>
+  
+  <property name="module.jdk.home.fedproclient_protobuf" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_protobuf" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_protobuf" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_protobuf" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_protobuf.output.dir" value="${module.fedproclient_protobuf.basedir}/../../../../output/production/fedproclient_protobuf"/>
+  <property name="fedproclient_protobuf.testoutput.dir" value="${module.fedproclient_protobuf.basedir}/../../../../output/test/fedproclient_protobuf"/>
+  
+  <path id="fedproclient_protobuf.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_protobuf.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_protobuf}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_protobuf.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_protobuf.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_protobuf}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_protobuf.runtime.module.classpath">
+    <pathelement location="${fedproclient_protobuf.testoutput.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_protobuf">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_protobuf">
+    <patternset refid="excluded.from.module.fedproclient_protobuf"/>
+  </patternset>
+  
+  <path id="fedproclient_protobuf.module.sourcepath">
+    <dirset dir="${module.fedproclient_protobuf.basedir}">
+      <include name="src/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_protobuf" depends="compile.module.fedproclient_protobuf.production,compile.module.fedproclient_protobuf.tests" description="Compile module fedproclient_protobuf"/>
+  
+  <target name="compile.module.fedproclient_protobuf.production" description="Compile module fedproclient_protobuf; production classes">
+    <mkdir dir="${fedproclient_protobuf.output.dir}"/>
+    <javac destdir="${fedproclient_protobuf.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_protobuf}/javac">
+      <compilerarg line="${compiler.args.fedproclient_protobuf}"/>
+      <bootclasspath refid="fedproclient_protobuf.module.bootclasspath"/>
+      <classpath refid="fedproclient_protobuf.module.production.classpath"/>
+      <src refid="fedproclient_protobuf.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_protobuf"/>
+    </javac>
+    
+    <copy todir="${fedproclient_protobuf.output.dir}">
+      <fileset dir="${module.fedproclient_protobuf.basedir}/src/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_protobuf.tests" depends="compile.module.fedproclient_protobuf.production" description="compile module fedproclient_protobuf; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_protobuf" description="cleanup module">
+    <delete dir="${fedproclient_protobuf.output.dir}"/>
+    <delete dir="${fedproclient_protobuf.testoutput.dir}"/>
+  </target>
+</project>
