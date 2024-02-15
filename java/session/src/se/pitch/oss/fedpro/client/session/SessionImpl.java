@@ -52,10 +52,10 @@ public class SessionImpl implements Session {
    private static final Logger LOGGER = Logger.getLogger(SessionImpl.class.getName());
 
    private static final int MESSAGE_QUEUE_SIZE =
-         Integer.getInteger("se.pitch.prti1516e.fedpro.client.message.queue", 2000);
-   private static final boolean RATE_LIMIT_ENABLED = Boolean.getBoolean("se.pitch.prti1516.fedpro.client.rate.limit");
+         Integer.getInteger("se.pitch.oss.fedpro.client.message.queue", 2000);
+   private static final boolean RATE_LIMIT_ENABLED = Boolean.getBoolean("se.pitch.oss.fedpro.client.rate.limit");
    private static final boolean ALLOW_GAPS_IN_SEQUENCE_NUMBERS =
-         Boolean.getBoolean("se.pitch.prti1516e.fedpro.common.allowGapsInSequenceNumbers");
+         Boolean.getBoolean("se.pitch.oss.fedpro.common.allowGapsInSequenceNumbers");
 
    private final TransportBase _transport;
    private ClientMessageWriter _messageWriter;

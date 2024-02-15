@@ -1,0 +1,9 @@
+<component name="CopyrightManager">
+  <settings>
+    <module2copyright>
+      <element module="Pitch OSS" copyright="Apache 2" />
+      <element module="IEEE 202X APIs" copyright="IEEE 202X" />
+      <element module="IEEE 2010 APIs" copyright="IEEE 2010" />
+    </module2copyright>
+  </settings>
+</component>

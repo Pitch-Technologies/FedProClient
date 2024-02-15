@@ -1,14 +1,7 @@
 # Federate Protocol Client
 Client library for HLA 4 Federate Protocol
 
-## TODO before OSS
-- [x] Exclude `c/`, `cpp/` dirs
-- [x] Exclude `.teamcity/` dir
-- [ ] Figure out how to get a clean history in the external repo, 
-      while still maintaining the history in the internal repo.  
-- [ ] Figure out how to get internal changes to the external repo, _upstream first_? 
-
-### TODO after OSS
+## TODO
 - [ ] Build jar using GitHub Actions
 - [ ] Publish jar to Maven Central
 - [ ] Add JUnit test
