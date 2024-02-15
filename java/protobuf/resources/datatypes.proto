@@ -1,0 +1,331 @@
+/***********************************************************************
+   The IEEE hereby grants a general, royalty-free license to copy, distribute,
+   display and make derivative works from this material, for all purposes,
+   provided that any use of the material contains the following
+   attribution: "Reprinted with permission from IEEE 1516.1(TM)-202X".
+   Should you require additional information, contact the Manager, Standards
+   Intellectual Property, IEEE Standards Association (stds-ipr@ieee.org).
+***********************************************************************/
+/***********************************************************************
+   IEEE 1516.1 High Level Architecture Interface Specification Federate Protocol API
+   File: datatypes.proto
+***********************************************************************/
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "hla.rti1516_202X.fedpro";
+
+package rti1516_202X.fedpro;
+
+message ExceptionData {
+    string exceptionName = 1;
+    string details = 2;
+}
+
+message RtiConfiguration {
+    string configurationName = 1;
+    string rtiAddress = 2;
+    string additionalSettings = 3;
+}
+
+enum AdditionalSettingsResultCode {
+    SETTINGS_IGNORED = 0;
+    SETTINGS_FAILED_TO_PARSE = 1;
+    SETTINGS_APPLIED = 2;
+}
+
+message ConfigurationResult {
+    bool configurationUsed = 1;
+    bool addressUsed = 2;
+    AdditionalSettingsResultCode additionalSettingsResultCode = 3;
+    string message = 4;
+}
+
+message Credentials {
+    string type = 1;
+    bytes data = 2;
+}
+
+enum CallbackModel {
+    EVOKED = 0;
+    IMMEDIATE = 1;
+}
+
+enum ResignAction {
+    UNCONDITIONALLY_DIVEST_ATTRIBUTES = 0;
+    DELETE_OBJECTS = 1;
+    CANCEL_PENDING_OWNERSHIP_ACQUISITIONS = 2;
+    DELETE_OBJECTS_THEN_DIVEST = 3;
+    CANCEL_THEN_DELETE_THEN_DIVEST = 4;
+    NO_ACTION = 5;
+}
+
+enum SynchronizationPointFailureReason {
+    SYNCHRONIZATION_POINT_LABEL_NOT_UNIQUE = 0;
+    SYNCHRONIZATION_SET_MEMBER_NOT_JOINED = 1;
+}
+
+enum SaveFailureReason {
+    RTI_UNABLE_TO_SAVE = 0;
+    FEDERATE_REPORTED_FAILURE_DURING_SAVE = 1;
+    FEDERATE_RESIGNED_DURING_SAVE = 2;
+    RTI_DETECTED_FAILURE_DURING_SAVE = 3;
+    SAVE_TIME_CANNOT_BE_HONORED = 4;
+    SAVE_ABORTED = 5;
+}
+
+enum RestoreFailureReason {
+    RTI_UNABLE_TO_RESTORE = 0;
+    FEDERATE_REPORTED_FAILURE_DURING_RESTORE = 1;
+    FEDERATE_RESIGNED_DURING_RESTORE = 2;
+    RTI_DETECTED_FAILURE_DURING_RESTORE = 3;
+    RESTORE_ABORTED = 4;
+}
+
+enum SaveStatus {
+    NO_SAVE_IN_PROGRESS = 0;
+    FEDERATE_INSTRUCTED_TO_SAVE = 1;
+    FEDERATE_SAVING = 2;
+    FEDERATE_WAITING_FOR_FEDERATION_TO_SAVE = 3;
+}
+
+enum RestoreStatus {
+    NO_RESTORE_IN_PROGRESS = 0;
+    FEDERATE_RESTORE_REQUEST_PENDING = 1;
+    FEDERATE_WAITING_FOR_RESTORE_TO_BEGIN = 2;
+    FEDERATE_PREPARED_TO_RESTORE = 3;
+    FEDERATE_RESTORING = 4;
+    FEDERATE_WAITING_FOR_FEDERATION_TO_RESTORE = 5;
+}
+
+message FederateRestoreStatus {
+    FederateHandle preRestoreHandle = 1;
+    FederateHandle postRestoreHandle = 2;
+    RestoreStatus restoreStatus = 3;
+}
+
+message FederateRestoreStatusArray {
+    repeated FederateRestoreStatus federateRestoreStatus = 1;
+}
+
+message FederationExecutionInformation {
+    string federationExecutionName = 1;
+    string logicalTimeImplementationName = 2;
+}
+
+// Set of FederationExecutionInformation elements.
+// The set shall not contain duplicate elements.
+message FederationExecutionInformationSet {
+    repeated FederationExecutionInformation federationExecutionInformation = 1;
+}
+
+message FederationExecutionMemberInformation {
+    string federateName = 1;
+    string federateType = 2;
+}
+
+// Set of FederationExecutionMemberInformation elements.
+// The set shall not contain duplicate elements.
+message FederationExecutionMemberInformationSet {
+    repeated FederationExecutionMemberInformation federationExecutionMemberInformation = 1;
+}
+
+message FederateHandle {
+    bytes data = 1;
+}
+
+message FederateHandleSaveStatusPair {
+    FederateHandle federateHandle = 1;
+    SaveStatus saveStatus = 2;
+}
+
+message FederateHandleSaveStatusPairArray {
+    repeated FederateHandleSaveStatusPair federateHandleSaveStatusPair = 1;
+}
+
+message ObjectClassHandle {
+    bytes data = 1;
+}
+
+message AttributeHandle {
+    bytes data = 1;
+}
+
+message InteractionClassHandle {
+    bytes data = 1;
+}
+
+message ParameterHandle {
+    bytes data = 1;
+}
+
+message ObjectInstanceHandle {
+    bytes data = 1;
+}
+
+message AttributeHandleValue {
+    AttributeHandle attributeHandle = 1;
+    bytes value = 2;
+}
+
+// Map with AttributeHandle as key.
+// The map shall not contain duplicate keys.
+message AttributeHandleValueMap {
+    repeated AttributeHandleValue attributeHandleValue = 1;
+}
+
+message ParameterHandleValue {
+    ParameterHandle parameterHandle = 1;
+    bytes value = 2;
+}
+
+// Map with ParameterHandle as key.
+// The map shall not contain duplicate keys.
+message ParameterHandleValueMap {
+    repeated ParameterHandleValue parameterHandleValue = 1;
+}
+
+message MessageRetractionHandle {
+    bytes data = 1;
+}
+
+message MessageRetractionReturn {
+    bool retractionHandleIsValid = 1;
+    MessageRetractionHandle messageRetractionHandle = 2; // optional, only valid if retractionHandleIsValid == true
+}
+
+message LogicalTime {
+    bytes data = 1;
+}
+
+message LogicalTimeInterval {
+    bytes data = 1;
+}
+
+message TransportationTypeHandle {
+    bytes data = 1;
+}
+
+message DimensionHandle {
+    bytes data = 1;
+}
+
+message RegionHandle {
+    bytes data = 1;
+}
+
+message TimeQueryReturn {
+    bool logicalTimeIsValid = 1;
+    LogicalTime logicalTime = 2; // optional, only valid if logicalTimeIsValid == true
+}
+
+// Set of FederateHandle elements.
+// The set shall not contain duplicate elements.
+message FederateHandleSet {
+    repeated FederateHandle federateHandle = 1;
+}
+
+// Set of DimensionHandle elements.
+// The set shall not contain duplicate elements.
+message DimensionHandleSet {
+    repeated DimensionHandle dimensionHandle = 1;
+}
+
+// Set of RegionHandle elements.
+// The set shall not contain duplicate elements.
+message RegionHandleSet {
+    repeated RegionHandle regionHandle = 1;
+}
+
+// Set of AttributeHandle elements.
+// The set shall not contain duplicate elements.
+message AttributeHandleSet {
+    repeated AttributeHandle attributeHandle = 1;
+}
+
+message AttributeSetRegionSetPair {
+    AttributeHandleSet attributeSet = 1;
+    RegionHandleSet regionSet = 2;
+}
+
+message AttributeSetRegionSetPairList {
+    repeated AttributeSetRegionSetPair AttributeSetRegionSetPair = 1;
+}
+
+// Set of InteractionClass elements.
+// The set shall not contain duplicate elements.
+message InteractionClassHandleSet {
+    repeated InteractionClassHandle interactionClassHandle = 1;
+}
+
+enum OrderType {
+    RECEIVE = 0;
+    TIMESTAMP = 1;
+}
+
+enum ServiceGroup {
+    FEDERATION_MANAGEMENT = 0;
+    DECLARATION_MANAGEMENT = 1;
+    OBJECT_MANAGEMENT = 2;
+    OWNERSHIP_MANAGEMENT = 3;
+    TIME_MANAGEMENT = 4;
+    DATA_DISTRIBUTION_MANAGEMENT = 5;
+    SUPPORT_SERVICES = 6;
+}
+
+message RangeBounds {
+    uint32 lower = 1;
+    uint32 upper = 2;
+}
+
+message DimensionAndRange {
+    DimensionHandle dimensionHandle = 1;
+    RangeBounds rangeBounds = 2;
+}
+
+message ConveyedRegion {
+    repeated DimensionAndRange dimensionAndRange = 1;
+}
+
+// Set of ConveyedRegion elements.
+// The set shall not contain duplicate elements.
+message ConveyedRegionSet {
+    repeated ConveyedRegion conveyedRegions = 1;
+}
+
+message SupplementalReflectInfo {
+    FederateHandle producingFederate = 1;
+    bool conveyedRegionsIsValid = 2;
+    ConveyedRegionSet conveyedRegions = 3; // optional, only valid if conveyedRegionsIsValid == true
+}
+
+message SupplementalReceiveInfo {
+    FederateHandle producingFederate = 1;
+    bool conveyedRegionsIsValid = 2;
+    ConveyedRegionSet conveyedRegions = 3; // optional, only valid if conveyedRegionsIsValid == true
+}
+
+message FomModule {
+    oneof fomModule {
+        FileFomModule file = 1;
+        bytes compressedModule = 2;  // FOM module compressed as a Zip file (ISO/IEC 21320-1)
+        string url = 3;  // URL for the FOM module
+    }
+}
+
+message FileFomModule {
+    string name = 1;  // File name
+    bytes content = 2;  // Raw file content. Use binary since the encoding is defined in the xml header
+}
+
+// Set of FomModule elements.
+// The set shall not contain duplicate elements.
+message FomModuleSet {
+    repeated FomModule fomModule = 1;
+}
+
+message JoinResult {
+    FederateHandle federateHandle = 1;
+    string logicalTimeImplementationName = 2;
+}

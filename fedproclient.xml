@@ -594,7 +594,6 @@
   
   <path id="fedproclient_client.module.sourcepath">
     <dirset dir="${module.fedproclient_client.basedir}/java/client">
-      <include name="gensrc"/>
       <include name="resources"/>
       <include name="src"/>
     </dirset>
@@ -614,10 +613,6 @@
     </javac>
     
     <copy todir="${fedproclient_client.output.dir}">
-      <fileset dir="${module.fedproclient_client.basedir}/java/client/gensrc">
-        <patternset refid="compiler.resources"/>
-        <type type="file"/>
-      </fileset>
       <fileset dir="${module.fedproclient_client.basedir}/java/client/resources">
         <patternset refid="compiler.resources"/>
         <type type="file"/>

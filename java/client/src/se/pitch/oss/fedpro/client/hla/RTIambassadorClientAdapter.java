@@ -46,7 +46,6 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       _clientConverter = new ClientConverter();
       _rtiAmbassadorClient = new RTIambassadorClient(_clientConverter);
       _asyncRTIambassador = AsyncHelper.getAsyncRTIambassador(_rtiAmbassadorClient);
-      System.setProperty("se.pitch.prti1516e.thinhla", "true");
    }
 
    @Override

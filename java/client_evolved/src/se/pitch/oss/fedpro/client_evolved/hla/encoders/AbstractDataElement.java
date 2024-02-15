@@ -23,8 +23,6 @@ import hla.rti1516e.encoding.EncoderException;
 
 /**
  * Base class for data elements.
- *
- * @author Mikael Karlsson, Pitch AB
  */
 abstract class AbstractDataElement implements DataElement {
 
