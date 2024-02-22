@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Pitch OSS" pattern="file:src/se/pitch/oss//*||file:gensrc/se/pitch/oss//*" />
+</component>
