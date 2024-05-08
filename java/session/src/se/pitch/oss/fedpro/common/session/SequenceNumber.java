@@ -38,7 +38,7 @@ public class SequenceNumber {
    */
    public static final int NO_SEQUENCE_NUMBER = Integer.MIN_VALUE;
    public static final int MAX_SEQUENCE_NUMBER = Integer.MAX_VALUE;
-   public static final int INITIAL_SEQUENCE_NUMBER = 0;
+   public static final int INITIAL_SEQUENCE_NUMBER = 1;
 
    private int _value;
 
