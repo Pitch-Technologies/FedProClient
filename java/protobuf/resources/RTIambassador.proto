@@ -1,0 +1,1794 @@
+/***********************************************************************
+   The IEEE hereby grants a general, royalty-free license to copy, distribute,
+   display and make derivative works from this material, for all purposes,
+   provided that any use of the material contains the following
+   attribution: "Reprinted with permission from IEEE 1516.1(TM)-202X".
+   Should you require additional information, contact the Manager, Standards
+   Intellectual Property, IEEE Standards Association (stds-ipr@ieee.org).
+***********************************************************************/
+/***********************************************************************
+   IEEE 1516.1 High Level Architecture Interface Specification Federate Protocol API
+   File: RTIambassador.proto
+***********************************************************************/
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "hla.rti1516_202X.fedpro";
+
+package rti1516_202X.fedpro;
+
+import "datatypes.proto";
+
+message CreateFederationExecutionRequest {
+      string federationName = 1;
+      FomModule fomModule = 2;
+}
+
+message CreateFederationExecutionResponse {
+}
+
+message CreateFederationExecutionWithTimeRequest {
+      string federationName = 1;
+      FomModule fomModule = 2;
+      string logicalTimeImplementationName = 3;
+}
+
+message CreateFederationExecutionWithTimeResponse {
+}
+
+message CreateFederationExecutionWithModulesRequest {
+      string federationName = 1;
+      FomModuleSet fomModules = 2;
+}
+
+message CreateFederationExecutionWithModulesResponse {
+}
+
+message CreateFederationExecutionWithModulesAndTimeRequest {
+      string federationName = 1;
+      FomModuleSet fomModules = 2;
+      string logicalTimeImplementationName = 3;
+}
+
+message CreateFederationExecutionWithModulesAndTimeResponse {
+}
+
+message CreateFederationExecutionWithMIMRequest {
+      string federationName = 1;
+      FomModuleSet fomModules = 2;
+      FomModule mimModule = 3;
+}
+
+message CreateFederationExecutionWithMIMResponse {
+}
+
+message CreateFederationExecutionWithMIMAndTimeRequest {
+      string federationName = 1;
+      FomModuleSet fomModules = 2;
+      FomModule mimModule = 3;
+      string logicalTimeImplementationName = 4;
+}
+
+message CreateFederationExecutionWithMIMAndTimeResponse {
+}
+
+message DestroyFederationExecutionRequest {
+      string federationName = 1;
+}
+
+message DestroyFederationExecutionResponse {
+}
+
+message ListFederationExecutionsRequest {
+}
+
+message ListFederationExecutionsResponse {
+}
+
+message ListFederationExecutionMembersRequest {
+      string federationName = 1;
+}
+
+message ListFederationExecutionMembersResponse {
+}
+
+message JoinFederationExecutionRequest {
+      string federateType = 1;
+      string federationName = 2;
+}
+
+message JoinFederationExecutionResponse {
+    JoinResult result = 1;
+}
+
+message JoinFederationExecutionWithModulesRequest {
+      string federateType = 1;
+      string federationName = 2;
+      FomModuleSet additionalFomModules = 3;
+}
+
+message JoinFederationExecutionWithModulesResponse {
+    JoinResult result = 1;
+}
+
+message JoinFederationExecutionWithNameRequest {
+      string federateName = 1;
+      string federateType = 2;
+      string federationName = 3;
+}
+
+message JoinFederationExecutionWithNameResponse {
+    JoinResult result = 1;
+}
+
+message JoinFederationExecutionWithNameAndModulesRequest {
+      string federateName = 1;
+      string federateType = 2;
+      string federationName = 3;
+      FomModuleSet additionalFomModules = 4;
+}
+
+message JoinFederationExecutionWithNameAndModulesResponse {
+    JoinResult result = 1;
+}
+
+message ResignFederationExecutionRequest {
+      ResignAction resignAction = 1;
+}
+
+message ResignFederationExecutionResponse {
+}
+
+message RegisterFederationSynchronizationPointRequest {
+      string synchronizationPointLabel = 1;
+      bytes userSuppliedTag = 2;
+}
+
+message RegisterFederationSynchronizationPointResponse {
+}
+
+message RegisterFederationSynchronizationPointWithSetRequest {
+      string synchronizationPointLabel = 1;
+      bytes userSuppliedTag = 2;
+      FederateHandleSet synchronizationSet = 3;
+}
+
+message RegisterFederationSynchronizationPointWithSetResponse {
+}
+
+message SynchronizationPointAchievedRequest {
+      string synchronizationPointLabel = 1;
+      bool successfully = 2;
+}
+
+message SynchronizationPointAchievedResponse {
+}
+
+message RequestFederationSaveRequest {
+      string label = 1;
+}
+
+message RequestFederationSaveResponse {
+}
+
+message RequestFederationSaveWithTimeRequest {
+      string label = 1;
+      LogicalTime time = 2;
+}
+
+message RequestFederationSaveWithTimeResponse {
+}
+
+message FederateSaveBegunRequest {
+}
+
+message FederateSaveBegunResponse {
+}
+
+message FederateSaveCompleteRequest {
+}
+
+message FederateSaveCompleteResponse {
+}
+
+message FederateSaveNotCompleteRequest {
+}
+
+message FederateSaveNotCompleteResponse {
+}
+
+message AbortFederationSaveRequest {
+}
+
+message AbortFederationSaveResponse {
+}
+
+message QueryFederationSaveStatusRequest {
+}
+
+message QueryFederationSaveStatusResponse {
+}
+
+message RequestFederationRestoreRequest {
+      string label = 1;
+}
+
+message RequestFederationRestoreResponse {
+}
+
+message FederateRestoreCompleteRequest {
+}
+
+message FederateRestoreCompleteResponse {
+}
+
+message FederateRestoreNotCompleteRequest {
+}
+
+message FederateRestoreNotCompleteResponse {
+}
+
+message AbortFederationRestoreRequest {
+}
+
+message AbortFederationRestoreResponse {
+}
+
+message QueryFederationRestoreStatusRequest {
+}
+
+message QueryFederationRestoreStatusResponse {
+}
+
+message PublishObjectClassAttributesRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message PublishObjectClassAttributesResponse {
+}
+
+message UnpublishObjectClassRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message UnpublishObjectClassResponse {
+}
+
+message UnpublishObjectClassAttributesRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message UnpublishObjectClassAttributesResponse {
+}
+
+message PublishInteractionClassRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message PublishInteractionClassResponse {
+}
+
+message UnpublishInteractionClassRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message UnpublishInteractionClassResponse {
+}
+
+message PublishObjectClassDirectedInteractionsRequest {
+      ObjectClassHandle objectClass = 1;
+      InteractionClassHandleSet interactionClasses = 2;
+}
+
+message PublishObjectClassDirectedInteractionsResponse {
+}
+
+message UnpublishObjectClassDirectedInteractionsRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message UnpublishObjectClassDirectedInteractionsResponse {
+}
+
+message UnpublishObjectClassDirectedInteractionsWithSetRequest {
+      ObjectClassHandle objectClass = 1;
+      InteractionClassHandleSet interactionClasses = 2;
+}
+
+message UnpublishObjectClassDirectedInteractionsWithSetResponse {
+}
+
+message SubscribeObjectClassAttributesRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message SubscribeObjectClassAttributesResponse {
+}
+
+message SubscribeObjectClassAttributesWithRateRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+      string updateRateDesignator = 3;
+}
+
+message SubscribeObjectClassAttributesWithRateResponse {
+}
+
+message SubscribeObjectClassAttributesPassivelyRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message SubscribeObjectClassAttributesPassivelyResponse {
+}
+
+message SubscribeObjectClassAttributesPassivelyWithRateRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+      string updateRateDesignator = 3;
+}
+
+message SubscribeObjectClassAttributesPassivelyWithRateResponse {
+}
+
+message UnsubscribeObjectClassRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message UnsubscribeObjectClassResponse {
+}
+
+message UnsubscribeObjectClassAttributesRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message UnsubscribeObjectClassAttributesResponse {
+}
+
+message SubscribeInteractionClassRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message SubscribeInteractionClassResponse {
+}
+
+message SubscribeInteractionClassPassivelyRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message SubscribeInteractionClassPassivelyResponse {
+}
+
+message UnsubscribeInteractionClassRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message UnsubscribeInteractionClassResponse {
+}
+
+message SubscribeObjectClassDirectedInteractionsRequest {
+      ObjectClassHandle objectClass = 1;
+      InteractionClassHandleSet interactionClasses = 2;
+}
+
+message SubscribeObjectClassDirectedInteractionsResponse {
+}
+
+message SubscribeObjectClassDirectedInteractionsUniversallyRequest {
+      ObjectClassHandle objectClass = 1;
+      InteractionClassHandleSet interactionClasses = 2;
+}
+
+message SubscribeObjectClassDirectedInteractionsUniversallyResponse {
+}
+
+message UnsubscribeObjectClassDirectedInteractionsRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message UnsubscribeObjectClassDirectedInteractionsResponse {
+}
+
+message UnsubscribeObjectClassDirectedInteractionsWithSetRequest {
+      ObjectClassHandle objectClass = 1;
+      InteractionClassHandleSet interactionClasses = 2;
+}
+
+message UnsubscribeObjectClassDirectedInteractionsWithSetResponse {
+}
+
+message ReserveObjectInstanceNameRequest {
+      string objectInstanceName = 1;
+}
+
+message ReserveObjectInstanceNameResponse {
+}
+
+message ReleaseObjectInstanceNameRequest {
+      string objectInstanceName = 1;
+}
+
+message ReleaseObjectInstanceNameResponse {
+}
+
+message ReserveMultipleObjectInstanceNamesRequest {
+      repeated string objectInstanceNames = 1;
+}
+
+message ReserveMultipleObjectInstanceNamesResponse {
+}
+
+message ReleaseMultipleObjectInstanceNamesRequest {
+      repeated string objectInstanceNames = 1;
+}
+
+message ReleaseMultipleObjectInstanceNamesResponse {
+}
+
+message RegisterObjectInstanceRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message RegisterObjectInstanceResponse {
+    ObjectInstanceHandle result = 1;
+}
+
+message RegisterObjectInstanceWithNameRequest {
+      ObjectClassHandle objectClass = 1;
+      string objectInstanceName = 2;
+}
+
+message RegisterObjectInstanceWithNameResponse {
+    ObjectInstanceHandle result = 1;
+}
+
+message UpdateAttributeValuesRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleValueMap attributeValues = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message UpdateAttributeValuesResponse {
+}
+
+message UpdateAttributeValuesWithTimeRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleValueMap attributeValues = 2;
+      bytes userSuppliedTag = 3;
+      LogicalTime time = 4;
+}
+
+message UpdateAttributeValuesWithTimeResponse {
+    MessageRetractionReturn result = 1;
+}
+
+message SendInteractionRequest {
+      InteractionClassHandle interactionClass = 1;
+      ParameterHandleValueMap parameterValues = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message SendInteractionResponse {
+}
+
+message SendInteractionWithTimeRequest {
+      InteractionClassHandle interactionClass = 1;
+      ParameterHandleValueMap parameterValues = 2;
+      bytes userSuppliedTag = 3;
+      LogicalTime time = 4;
+}
+
+message SendInteractionWithTimeResponse {
+    MessageRetractionReturn result = 1;
+}
+
+message SendDirectedInteractionRequest {
+      InteractionClassHandle interactionClass = 1;
+      ObjectInstanceHandle objectInstance = 2;
+      ParameterHandleValueMap parameterValues = 3;
+      bytes userSuppliedTag = 4;
+}
+
+message SendDirectedInteractionResponse {
+}
+
+message SendDirectedInteractionWithTimeRequest {
+      InteractionClassHandle interactionClass = 1;
+      ObjectInstanceHandle objectInstance = 2;
+      ParameterHandleValueMap parameterValues = 3;
+      bytes userSuppliedTag = 4;
+      LogicalTime time = 5;
+}
+
+message SendDirectedInteractionWithTimeResponse {
+    MessageRetractionReturn result = 1;
+}
+
+message DeleteObjectInstanceRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      bytes userSuppliedTag = 2;
+}
+
+message DeleteObjectInstanceResponse {
+}
+
+message DeleteObjectInstanceWithTimeRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      bytes userSuppliedTag = 2;
+      LogicalTime time = 3;
+}
+
+message DeleteObjectInstanceWithTimeResponse {
+    MessageRetractionReturn result = 1;
+}
+
+message LocalDeleteObjectInstanceRequest {
+      ObjectInstanceHandle objectInstance = 1;
+}
+
+message LocalDeleteObjectInstanceResponse {
+}
+
+message RequestInstanceAttributeValueUpdateRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message RequestInstanceAttributeValueUpdateResponse {
+}
+
+message RequestClassAttributeValueUpdateRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message RequestClassAttributeValueUpdateResponse {
+}
+
+message RequestAttributeTransportationTypeChangeRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      TransportationTypeHandle transportationType = 3;
+}
+
+message RequestAttributeTransportationTypeChangeResponse {
+}
+
+message ChangeDefaultAttributeTransportationTypeRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandleSet attributes = 2;
+      TransportationTypeHandle transportationType = 3;
+}
+
+message ChangeDefaultAttributeTransportationTypeResponse {
+}
+
+message QueryAttributeTransportationTypeRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandle attribute = 2;
+}
+
+message QueryAttributeTransportationTypeResponse {
+}
+
+message RequestInteractionTransportationTypeChangeRequest {
+      InteractionClassHandle interactionClass = 1;
+      TransportationTypeHandle transportationType = 2;
+}
+
+message RequestInteractionTransportationTypeChangeResponse {
+}
+
+message QueryInteractionTransportationTypeRequest {
+      FederateHandle federate = 1;
+      InteractionClassHandle interactionClass = 2;
+}
+
+message QueryInteractionTransportationTypeResponse {
+}
+
+message UnconditionalAttributeOwnershipDivestitureRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message UnconditionalAttributeOwnershipDivestitureResponse {
+}
+
+message NegotiatedAttributeOwnershipDivestitureRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message NegotiatedAttributeOwnershipDivestitureResponse {
+}
+
+message ConfirmDivestitureRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet confirmedAttributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message ConfirmDivestitureResponse {
+}
+
+message AttributeOwnershipAcquisitionRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet desiredAttributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message AttributeOwnershipAcquisitionResponse {
+}
+
+message AttributeOwnershipAcquisitionIfAvailableRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet desiredAttributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message AttributeOwnershipAcquisitionIfAvailableResponse {
+}
+
+message AttributeOwnershipReleaseDeniedRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message AttributeOwnershipReleaseDeniedResponse {
+}
+
+message AttributeOwnershipDivestitureIfWantedRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message AttributeOwnershipDivestitureIfWantedResponse {
+    AttributeHandleSet result = 1;
+}
+
+message CancelNegotiatedAttributeOwnershipDivestitureRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message CancelNegotiatedAttributeOwnershipDivestitureResponse {
+}
+
+message CancelAttributeOwnershipAcquisitionRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message CancelAttributeOwnershipAcquisitionResponse {
+}
+
+message QueryAttributeOwnershipRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+
+message QueryAttributeOwnershipResponse {
+}
+
+message IsAttributeOwnedByFederateRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandle attribute = 2;
+}
+
+message IsAttributeOwnedByFederateResponse {
+    bool result = 1;
+}
+
+message EnableTimeRegulationRequest {
+      LogicalTimeInterval lookahead = 1;
+}
+
+message EnableTimeRegulationResponse {
+}
+
+message DisableTimeRegulationRequest {
+}
+
+message DisableTimeRegulationResponse {
+}
+
+message EnableTimeConstrainedRequest {
+}
+
+message EnableTimeConstrainedResponse {
+}
+
+message DisableTimeConstrainedRequest {
+}
+
+message DisableTimeConstrainedResponse {
+}
+
+message TimeAdvanceRequestRequest {
+      LogicalTime time = 1;
+}
+
+message TimeAdvanceRequestResponse {
+}
+
+message TimeAdvanceRequestAvailableRequest {
+      LogicalTime time = 1;
+}
+
+message TimeAdvanceRequestAvailableResponse {
+}
+
+message NextMessageRequestRequest {
+      LogicalTime time = 1;
+}
+
+message NextMessageRequestResponse {
+}
+
+message NextMessageRequestAvailableRequest {
+      LogicalTime time = 1;
+}
+
+message NextMessageRequestAvailableResponse {
+}
+
+message FlushQueueRequestRequest {
+      LogicalTime time = 1;
+}
+
+message FlushQueueRequestResponse {
+}
+
+message EnableAsynchronousDeliveryRequest {
+}
+
+message EnableAsynchronousDeliveryResponse {
+}
+
+message DisableAsynchronousDeliveryRequest {
+}
+
+message DisableAsynchronousDeliveryResponse {
+}
+
+message QueryGALTRequest {
+}
+
+message QueryGALTResponse {
+    TimeQueryReturn result = 1;
+}
+
+message QueryLogicalTimeRequest {
+}
+
+message QueryLogicalTimeResponse {
+    LogicalTime result = 1;
+}
+
+message QueryLITSRequest {
+}
+
+message QueryLITSResponse {
+    TimeQueryReturn result = 1;
+}
+
+message ModifyLookaheadRequest {
+      LogicalTimeInterval lookahead = 1;
+}
+
+message ModifyLookaheadResponse {
+}
+
+message QueryLookaheadRequest {
+}
+
+message QueryLookaheadResponse {
+    LogicalTimeInterval result = 1;
+}
+
+message RetractRequest {
+      MessageRetractionHandle retraction = 1;
+}
+
+message RetractResponse {
+}
+
+message ChangeAttributeOrderTypeRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      OrderType orderType = 3;
+}
+
+message ChangeAttributeOrderTypeResponse {
+}
+
+message ChangeDefaultAttributeOrderTypeRequest {
+      ObjectClassHandle theObjectClass = 1;
+      AttributeHandleSet attributes = 2;
+      OrderType orderType = 3;
+}
+
+message ChangeDefaultAttributeOrderTypeResponse {
+}
+
+message ChangeInteractionOrderTypeRequest {
+      InteractionClassHandle interactionClass = 1;
+      OrderType orderType = 2;
+}
+
+message ChangeInteractionOrderTypeResponse {
+}
+
+message CreateRegionRequest {
+      DimensionHandleSet dimensions = 1;
+}
+
+message CreateRegionResponse {
+    RegionHandle result = 1;
+}
+
+message CommitRegionModificationsRequest {
+      RegionHandleSet regions = 1;
+}
+
+message CommitRegionModificationsResponse {
+}
+
+message DeleteRegionRequest {
+      RegionHandle region = 1;
+}
+
+message DeleteRegionResponse {
+}
+
+message RegisterObjectInstanceWithRegionsRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+}
+
+message RegisterObjectInstanceWithRegionsResponse {
+    ObjectInstanceHandle result = 1;
+}
+
+message RegisterObjectInstanceWithNameAndRegionsRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+      string objectInstanceName = 3;
+}
+
+message RegisterObjectInstanceWithNameAndRegionsResponse {
+    ObjectInstanceHandle result = 1;
+}
+
+message AssociateRegionsForUpdatesRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+}
+
+message AssociateRegionsForUpdatesResponse {
+}
+
+message UnassociateRegionsForUpdatesRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+}
+
+message UnassociateRegionsForUpdatesResponse {
+}
+
+message SubscribeObjectClassAttributesWithRegionsRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+      bool active = 3;
+}
+
+message SubscribeObjectClassAttributesWithRegionsResponse {
+}
+
+message SubscribeObjectClassAttributesWithRegionsAndRateRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+      bool active = 3;
+      string updateRateDesignator = 4;
+}
+
+message SubscribeObjectClassAttributesWithRegionsAndRateResponse {
+}
+
+message UnsubscribeObjectClassAttributesWithRegionsRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+}
+
+message UnsubscribeObjectClassAttributesWithRegionsResponse {
+}
+
+message SubscribeInteractionClassWithRegionsRequest {
+      InteractionClassHandle interactionClass = 1;
+      bool active = 2;
+      RegionHandleSet regions = 3;
+}
+
+message SubscribeInteractionClassWithRegionsResponse {
+}
+
+message UnsubscribeInteractionClassWithRegionsRequest {
+      InteractionClassHandle interactionClass = 1;
+      RegionHandleSet regions = 2;
+}
+
+message UnsubscribeInteractionClassWithRegionsResponse {
+}
+
+message SendInteractionWithRegionsRequest {
+      InteractionClassHandle interactionClass = 1;
+      ParameterHandleValueMap parameterValues = 2;
+      RegionHandleSet regions = 3;
+      bytes userSuppliedTag = 4;
+}
+
+message SendInteractionWithRegionsResponse {
+}
+
+message SendInteractionWithRegionsAndTimeRequest {
+      InteractionClassHandle interactionClass = 1;
+      ParameterHandleValueMap parameterValues = 2;
+      RegionHandleSet regions = 3;
+      bytes userSuppliedTag = 4;
+      LogicalTime time = 5;
+}
+
+message SendInteractionWithRegionsAndTimeResponse {
+    MessageRetractionReturn result = 1;
+}
+
+message RequestAttributeValueUpdateWithRegionsRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeSetRegionSetPairList attributesAndRegions = 2;
+      bytes userSuppliedTag = 3;
+}
+
+message RequestAttributeValueUpdateWithRegionsResponse {
+}
+
+message GetFederateHandleRequest {
+      string federateName = 1;
+}
+
+message GetFederateHandleResponse {
+    FederateHandle result = 1;
+}
+
+message GetFederateNameRequest {
+      FederateHandle federate = 1;
+}
+
+message GetFederateNameResponse {
+    string result = 1;
+}
+
+message GetObjectClassHandleRequest {
+      string objectClassName = 1;
+}
+
+message GetObjectClassHandleResponse {
+    ObjectClassHandle result = 1;
+}
+
+message GetObjectClassNameRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message GetObjectClassNameResponse {
+    string result = 1;
+}
+
+message GetKnownObjectClassHandleRequest {
+      ObjectInstanceHandle objectInstance = 1;
+}
+
+message GetKnownObjectClassHandleResponse {
+    ObjectClassHandle result = 1;
+}
+
+message GetObjectInstanceHandleRequest {
+      string objectInstanceName = 1;
+}
+
+message GetObjectInstanceHandleResponse {
+    ObjectInstanceHandle result = 1;
+}
+
+message GetObjectInstanceNameRequest {
+      ObjectInstanceHandle objectInstance = 1;
+}
+
+message GetObjectInstanceNameResponse {
+    string result = 1;
+}
+
+message GetAttributeHandleRequest {
+      ObjectClassHandle objectClass = 1;
+      string attributeName = 2;
+}
+
+message GetAttributeHandleResponse {
+    AttributeHandle result = 1;
+}
+
+message GetAttributeNameRequest {
+      ObjectClassHandle objectClass = 1;
+      AttributeHandle attribute = 2;
+}
+
+message GetAttributeNameResponse {
+    string result = 1;
+}
+
+message GetUpdateRateValueRequest {
+      string updateRateDesignator = 1;
+}
+
+message GetUpdateRateValueResponse {
+    double result = 1;
+}
+
+message GetUpdateRateValueForAttributeRequest {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandle attribute = 2;
+}
+
+message GetUpdateRateValueForAttributeResponse {
+    double result = 1;
+}
+
+message GetInteractionClassHandleRequest {
+      string interactionClassName = 1;
+}
+
+message GetInteractionClassHandleResponse {
+    InteractionClassHandle result = 1;
+}
+
+message GetInteractionClassNameRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message GetInteractionClassNameResponse {
+    string result = 1;
+}
+
+message GetParameterHandleRequest {
+      InteractionClassHandle interactionClass = 1;
+      string parameterName = 2;
+}
+
+message GetParameterHandleResponse {
+    ParameterHandle result = 1;
+}
+
+message GetParameterNameRequest {
+      InteractionClassHandle interactionClass = 1;
+      ParameterHandle parameter = 2;
+}
+
+message GetParameterNameResponse {
+    string result = 1;
+}
+
+message GetOrderTypeRequest {
+      string orderTypeName = 1;
+}
+
+message GetOrderTypeResponse {
+    OrderType result = 1;
+}
+
+message GetOrderNameRequest {
+      OrderType orderType = 1;
+}
+
+message GetOrderNameResponse {
+    string result = 1;
+}
+
+message GetTransportationTypeHandleRequest {
+      string transportationTypeName = 1;
+}
+
+message GetTransportationTypeHandleResponse {
+    TransportationTypeHandle result = 1;
+}
+
+message GetTransportationTypeNameRequest {
+      TransportationTypeHandle transportationType = 1;
+}
+
+message GetTransportationTypeNameResponse {
+    string result = 1;
+}
+
+message GetAvailableDimensionsForObjectClassRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message GetAvailableDimensionsForObjectClassResponse {
+    DimensionHandleSet result = 1;
+}
+
+message GetAvailableDimensionsForInteractionClassRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message GetAvailableDimensionsForInteractionClassResponse {
+    DimensionHandleSet result = 1;
+}
+
+message GetDimensionHandleRequest {
+      string dimensionName = 1;
+}
+
+message GetDimensionHandleResponse {
+    DimensionHandle result = 1;
+}
+
+message GetDimensionNameRequest {
+      DimensionHandle dimension = 1;
+}
+
+message GetDimensionNameResponse {
+    string result = 1;
+}
+
+message GetDimensionUpperBoundRequest {
+      DimensionHandle dimension = 1;
+}
+
+message GetDimensionUpperBoundResponse {
+    uint32 result = 1;
+}
+
+message GetDimensionHandleSetRequest {
+      RegionHandle region = 1;
+}
+
+message GetDimensionHandleSetResponse {
+    DimensionHandleSet result = 1;
+}
+
+message GetRangeBoundsRequest {
+      RegionHandle region = 1;
+      DimensionHandle dimension = 2;
+}
+
+message GetRangeBoundsResponse {
+    RangeBounds result = 1;
+}
+
+message SetRangeBoundsRequest {
+      RegionHandle region = 1;
+      DimensionHandle dimension = 2;
+      RangeBounds rangeBounds = 3;
+}
+
+message SetRangeBoundsResponse {
+}
+
+message NormalizeServiceGroupRequest {
+      ServiceGroup serviceGroup = 1;
+}
+
+message NormalizeServiceGroupResponse {
+    uint32 result = 1;
+}
+
+message NormalizeFederateHandleRequest {
+      FederateHandle federate = 1;
+}
+
+message NormalizeFederateHandleResponse {
+    uint32 result = 1;
+}
+
+message NormalizeObjectClassHandleRequest {
+      ObjectClassHandle objectClass = 1;
+}
+
+message NormalizeObjectClassHandleResponse {
+    uint32 result = 1;
+}
+
+message NormalizeInteractionClassHandleRequest {
+      InteractionClassHandle interactionClass = 1;
+}
+
+message NormalizeInteractionClassHandleResponse {
+    uint32 result = 1;
+}
+
+message NormalizeObjectInstanceHandleRequest {
+      ObjectInstanceHandle objectInstance = 1;
+}
+
+message NormalizeObjectInstanceHandleResponse {
+    uint32 result = 1;
+}
+
+message GetObjectClassRelevanceAdvisorySwitchRequest {
+}
+
+message GetObjectClassRelevanceAdvisorySwitchResponse {
+    bool result = 1;
+}
+
+message SetObjectClassRelevanceAdvisorySwitchRequest {
+      bool value = 1;
+}
+
+message SetObjectClassRelevanceAdvisorySwitchResponse {
+}
+
+message GetAttributeRelevanceAdvisorySwitchRequest {
+}
+
+message GetAttributeRelevanceAdvisorySwitchResponse {
+    bool result = 1;
+}
+
+message SetAttributeRelevanceAdvisorySwitchRequest {
+      bool value = 1;
+}
+
+message SetAttributeRelevanceAdvisorySwitchResponse {
+}
+
+message GetAttributeScopeAdvisorySwitchRequest {
+}
+
+message GetAttributeScopeAdvisorySwitchResponse {
+    bool result = 1;
+}
+
+message SetAttributeScopeAdvisorySwitchRequest {
+      bool value = 1;
+}
+
+message SetAttributeScopeAdvisorySwitchResponse {
+}
+
+message GetInteractionRelevanceAdvisorySwitchRequest {
+}
+
+message GetInteractionRelevanceAdvisorySwitchResponse {
+    bool result = 1;
+}
+
+message SetInteractionRelevanceAdvisorySwitchRequest {
+      bool value = 1;
+}
+
+message SetInteractionRelevanceAdvisorySwitchResponse {
+}
+
+message GetConveyRegionDesignatorSetsSwitchRequest {
+}
+
+message GetConveyRegionDesignatorSetsSwitchResponse {
+    bool result = 1;
+}
+
+message SetConveyRegionDesignatorSetsSwitchRequest {
+      bool value = 1;
+}
+
+message SetConveyRegionDesignatorSetsSwitchResponse {
+}
+
+message GetAutomaticResignDirectiveRequest {
+}
+
+message GetAutomaticResignDirectiveResponse {
+    ResignAction result = 1;
+}
+
+message SetAutomaticResignDirectiveRequest {
+      ResignAction value = 1;
+}
+
+message SetAutomaticResignDirectiveResponse {
+}
+
+message GetServiceReportingSwitchRequest {
+}
+
+message GetServiceReportingSwitchResponse {
+    bool result = 1;
+}
+
+message SetServiceReportingSwitchRequest {
+      bool value = 1;
+}
+
+message SetServiceReportingSwitchResponse {
+}
+
+message GetExceptionReportingSwitchRequest {
+}
+
+message GetExceptionReportingSwitchResponse {
+    bool result = 1;
+}
+
+message SetExceptionReportingSwitchRequest {
+      bool value = 1;
+}
+
+message SetExceptionReportingSwitchResponse {
+}
+
+message GetSendServiceReportsToFileSwitchRequest {
+}
+
+message GetSendServiceReportsToFileSwitchResponse {
+    bool result = 1;
+}
+
+message SetSendServiceReportsToFileSwitchRequest {
+      bool value = 1;
+}
+
+message SetSendServiceReportsToFileSwitchResponse {
+}
+
+message GetAutoProvideSwitchRequest {
+}
+
+message GetAutoProvideSwitchResponse {
+    bool result = 1;
+}
+
+message GetDelaySubscriptionEvaluationSwitchRequest {
+}
+
+message GetDelaySubscriptionEvaluationSwitchResponse {
+    bool result = 1;
+}
+
+message GetAdvisoriesUseKnownClassSwitchRequest {
+}
+
+message GetAdvisoriesUseKnownClassSwitchResponse {
+    bool result = 1;
+}
+
+message GetAllowRelaxedDDMSwitchRequest {
+}
+
+message GetAllowRelaxedDDMSwitchResponse {
+    bool result = 1;
+}
+
+message GetNonRegulatedGrantSwitchRequest {
+}
+
+message GetNonRegulatedGrantSwitchResponse {
+    bool result = 1;
+}
+
+
+message ConnectRequest {
+}
+
+message ConnectResponse {
+  ConfigurationResult configurationResult = 1;
+}
+
+message ConnectWithConfigurationRequest {
+  RtiConfiguration rtiConfiguration = 1;
+}
+
+message ConnectWithConfigurationResponse {
+  ConfigurationResult configurationResult = 1;
+}
+
+message ConnectWithCredentialsRequest {
+  Credentials credentials = 1;
+}
+
+message ConnectWithCredentialsResponse {
+  ConfigurationResult configurationResult = 1;
+}
+
+message ConnectWithConfigurationAndCredentialsRequest {
+  RtiConfiguration rtiConfiguration = 1;
+  Credentials credentials = 2;
+}
+
+message ConnectWithConfigurationAndCredentialsResponse {
+  ConfigurationResult configurationResult = 1;
+}
+
+message DisconnectRequest {
+}
+
+message DisconnectResponse {
+}
+
+message CallRequest {
+  oneof callRequest {
+    ConnectRequest connectRequest = 1;
+    ConnectWithCredentialsRequest connectWithCredentialsRequest = 2;
+    ConnectWithConfigurationRequest connectWithConfigurationRequest = 3;
+    ConnectWithConfigurationAndCredentialsRequest connectWithConfigurationAndCredentialsRequest = 4;
+    DisconnectRequest disconnectRequest = 5;
+    CreateFederationExecutionRequest createFederationExecutionRequest = 6;
+    CreateFederationExecutionWithTimeRequest createFederationExecutionWithTimeRequest = 7;
+    CreateFederationExecutionWithModulesRequest createFederationExecutionWithModulesRequest = 8;
+    CreateFederationExecutionWithModulesAndTimeRequest createFederationExecutionWithModulesAndTimeRequest = 9;
+    CreateFederationExecutionWithMIMRequest createFederationExecutionWithMIMRequest = 10;
+    CreateFederationExecutionWithMIMAndTimeRequest createFederationExecutionWithMIMAndTimeRequest = 11;
+    DestroyFederationExecutionRequest destroyFederationExecutionRequest = 12;
+    ListFederationExecutionsRequest listFederationExecutionsRequest = 13;
+    ListFederationExecutionMembersRequest listFederationExecutionMembersRequest = 14;
+    JoinFederationExecutionRequest joinFederationExecutionRequest = 15;
+    JoinFederationExecutionWithModulesRequest joinFederationExecutionWithModulesRequest = 16;
+    JoinFederationExecutionWithNameRequest joinFederationExecutionWithNameRequest = 17;
+    JoinFederationExecutionWithNameAndModulesRequest joinFederationExecutionWithNameAndModulesRequest = 18;
+    ResignFederationExecutionRequest resignFederationExecutionRequest = 19;
+    RegisterFederationSynchronizationPointRequest registerFederationSynchronizationPointRequest = 20;
+    RegisterFederationSynchronizationPointWithSetRequest registerFederationSynchronizationPointWithSetRequest = 21;
+    SynchronizationPointAchievedRequest synchronizationPointAchievedRequest = 22;
+    RequestFederationSaveRequest requestFederationSaveRequest = 23;
+    RequestFederationSaveWithTimeRequest requestFederationSaveWithTimeRequest = 24;
+    FederateSaveBegunRequest federateSaveBegunRequest = 25;
+    FederateSaveCompleteRequest federateSaveCompleteRequest = 26;
+    FederateSaveNotCompleteRequest federateSaveNotCompleteRequest = 27;
+    AbortFederationSaveRequest abortFederationSaveRequest = 28;
+    QueryFederationSaveStatusRequest queryFederationSaveStatusRequest = 29;
+    RequestFederationRestoreRequest requestFederationRestoreRequest = 30;
+    FederateRestoreCompleteRequest federateRestoreCompleteRequest = 31;
+    FederateRestoreNotCompleteRequest federateRestoreNotCompleteRequest = 32;
+    AbortFederationRestoreRequest abortFederationRestoreRequest = 33;
+    QueryFederationRestoreStatusRequest queryFederationRestoreStatusRequest = 34;
+    PublishObjectClassAttributesRequest publishObjectClassAttributesRequest = 35;
+    UnpublishObjectClassRequest unpublishObjectClassRequest = 36;
+    UnpublishObjectClassAttributesRequest unpublishObjectClassAttributesRequest = 37;
+    PublishInteractionClassRequest publishInteractionClassRequest = 38;
+    UnpublishInteractionClassRequest unpublishInteractionClassRequest = 39;
+    PublishObjectClassDirectedInteractionsRequest publishObjectClassDirectedInteractionsRequest = 40;
+    UnpublishObjectClassDirectedInteractionsRequest unpublishObjectClassDirectedInteractionsRequest = 41;
+    UnpublishObjectClassDirectedInteractionsWithSetRequest unpublishObjectClassDirectedInteractionsWithSetRequest = 42;
+    SubscribeObjectClassAttributesRequest subscribeObjectClassAttributesRequest = 43;
+    SubscribeObjectClassAttributesWithRateRequest subscribeObjectClassAttributesWithRateRequest = 44;
+    SubscribeObjectClassAttributesPassivelyRequest subscribeObjectClassAttributesPassivelyRequest = 45;
+    SubscribeObjectClassAttributesPassivelyWithRateRequest subscribeObjectClassAttributesPassivelyWithRateRequest = 46;
+    UnsubscribeObjectClassRequest unsubscribeObjectClassRequest = 47;
+    UnsubscribeObjectClassAttributesRequest unsubscribeObjectClassAttributesRequest = 48;
+    SubscribeInteractionClassRequest subscribeInteractionClassRequest = 49;
+    SubscribeInteractionClassPassivelyRequest subscribeInteractionClassPassivelyRequest = 50;
+    UnsubscribeInteractionClassRequest unsubscribeInteractionClassRequest = 51;
+    SubscribeObjectClassDirectedInteractionsRequest subscribeObjectClassDirectedInteractionsRequest = 52;
+    SubscribeObjectClassDirectedInteractionsUniversallyRequest subscribeObjectClassDirectedInteractionsUniversallyRequest = 53;
+    UnsubscribeObjectClassDirectedInteractionsRequest unsubscribeObjectClassDirectedInteractionsRequest = 54;
+    UnsubscribeObjectClassDirectedInteractionsWithSetRequest unsubscribeObjectClassDirectedInteractionsWithSetRequest = 55;
+    ReserveObjectInstanceNameRequest reserveObjectInstanceNameRequest = 56;
+    ReleaseObjectInstanceNameRequest releaseObjectInstanceNameRequest = 57;
+    ReserveMultipleObjectInstanceNamesRequest reserveMultipleObjectInstanceNamesRequest = 58;
+    ReleaseMultipleObjectInstanceNamesRequest releaseMultipleObjectInstanceNamesRequest = 59;
+    RegisterObjectInstanceRequest registerObjectInstanceRequest = 60;
+    RegisterObjectInstanceWithNameRequest registerObjectInstanceWithNameRequest = 61;
+    UpdateAttributeValuesRequest updateAttributeValuesRequest = 62;
+    UpdateAttributeValuesWithTimeRequest updateAttributeValuesWithTimeRequest = 63;
+    SendInteractionRequest sendInteractionRequest = 64;
+    SendInteractionWithTimeRequest sendInteractionWithTimeRequest = 65;
+    SendDirectedInteractionRequest sendDirectedInteractionRequest = 66;
+    SendDirectedInteractionWithTimeRequest sendDirectedInteractionWithTimeRequest = 67;
+    DeleteObjectInstanceRequest deleteObjectInstanceRequest = 68;
+    DeleteObjectInstanceWithTimeRequest deleteObjectInstanceWithTimeRequest = 69;
+    LocalDeleteObjectInstanceRequest localDeleteObjectInstanceRequest = 70;
+    RequestInstanceAttributeValueUpdateRequest requestInstanceAttributeValueUpdateRequest = 71;
+    RequestClassAttributeValueUpdateRequest requestClassAttributeValueUpdateRequest = 72;
+    RequestAttributeTransportationTypeChangeRequest requestAttributeTransportationTypeChangeRequest = 73;
+    ChangeDefaultAttributeTransportationTypeRequest changeDefaultAttributeTransportationTypeRequest = 74;
+    QueryAttributeTransportationTypeRequest queryAttributeTransportationTypeRequest = 75;
+    RequestInteractionTransportationTypeChangeRequest requestInteractionTransportationTypeChangeRequest = 76;
+    QueryInteractionTransportationTypeRequest queryInteractionTransportationTypeRequest = 77;
+    UnconditionalAttributeOwnershipDivestitureRequest unconditionalAttributeOwnershipDivestitureRequest = 78;
+    NegotiatedAttributeOwnershipDivestitureRequest negotiatedAttributeOwnershipDivestitureRequest = 79;
+    ConfirmDivestitureRequest confirmDivestitureRequest = 80;
+    AttributeOwnershipAcquisitionRequest attributeOwnershipAcquisitionRequest = 81;
+    AttributeOwnershipAcquisitionIfAvailableRequest attributeOwnershipAcquisitionIfAvailableRequest = 82;
+    AttributeOwnershipReleaseDeniedRequest attributeOwnershipReleaseDeniedRequest = 83;
+    AttributeOwnershipDivestitureIfWantedRequest attributeOwnershipDivestitureIfWantedRequest = 84;
+    CancelNegotiatedAttributeOwnershipDivestitureRequest cancelNegotiatedAttributeOwnershipDivestitureRequest = 85;
+    CancelAttributeOwnershipAcquisitionRequest cancelAttributeOwnershipAcquisitionRequest = 86;
+    QueryAttributeOwnershipRequest queryAttributeOwnershipRequest = 87;
+    IsAttributeOwnedByFederateRequest isAttributeOwnedByFederateRequest = 88;
+    EnableTimeRegulationRequest enableTimeRegulationRequest = 89;
+    DisableTimeRegulationRequest disableTimeRegulationRequest = 90;
+    EnableTimeConstrainedRequest enableTimeConstrainedRequest = 91;
+    DisableTimeConstrainedRequest disableTimeConstrainedRequest = 92;
+    TimeAdvanceRequestRequest timeAdvanceRequestRequest = 93;
+    TimeAdvanceRequestAvailableRequest timeAdvanceRequestAvailableRequest = 94;
+    NextMessageRequestRequest nextMessageRequestRequest = 95;
+    NextMessageRequestAvailableRequest nextMessageRequestAvailableRequest = 96;
+    FlushQueueRequestRequest flushQueueRequestRequest = 97;
+    EnableAsynchronousDeliveryRequest enableAsynchronousDeliveryRequest = 98;
+    DisableAsynchronousDeliveryRequest disableAsynchronousDeliveryRequest = 99;
+    QueryGALTRequest queryGALTRequest = 100;
+    QueryLogicalTimeRequest queryLogicalTimeRequest = 101;
+    QueryLITSRequest queryLITSRequest = 102;
+    ModifyLookaheadRequest modifyLookaheadRequest = 103;
+    QueryLookaheadRequest queryLookaheadRequest = 104;
+    RetractRequest retractRequest = 105;
+    ChangeAttributeOrderTypeRequest changeAttributeOrderTypeRequest = 106;
+    ChangeDefaultAttributeOrderTypeRequest changeDefaultAttributeOrderTypeRequest = 107;
+    ChangeInteractionOrderTypeRequest changeInteractionOrderTypeRequest = 108;
+    CreateRegionRequest createRegionRequest = 109;
+    CommitRegionModificationsRequest commitRegionModificationsRequest = 110;
+    DeleteRegionRequest deleteRegionRequest = 111;
+    RegisterObjectInstanceWithRegionsRequest registerObjectInstanceWithRegionsRequest = 112;
+    RegisterObjectInstanceWithNameAndRegionsRequest registerObjectInstanceWithNameAndRegionsRequest = 113;
+    AssociateRegionsForUpdatesRequest associateRegionsForUpdatesRequest = 114;
+    UnassociateRegionsForUpdatesRequest unassociateRegionsForUpdatesRequest = 115;
+    SubscribeObjectClassAttributesWithRegionsRequest subscribeObjectClassAttributesWithRegionsRequest = 116;
+    SubscribeObjectClassAttributesWithRegionsAndRateRequest subscribeObjectClassAttributesWithRegionsAndRateRequest = 117;
+    UnsubscribeObjectClassAttributesWithRegionsRequest unsubscribeObjectClassAttributesWithRegionsRequest = 118;
+    SubscribeInteractionClassWithRegionsRequest subscribeInteractionClassWithRegionsRequest = 119;
+    UnsubscribeInteractionClassWithRegionsRequest unsubscribeInteractionClassWithRegionsRequest = 120;
+    SendInteractionWithRegionsRequest sendInteractionWithRegionsRequest = 121;
+    SendInteractionWithRegionsAndTimeRequest sendInteractionWithRegionsAndTimeRequest = 122;
+    RequestAttributeValueUpdateWithRegionsRequest requestAttributeValueUpdateWithRegionsRequest = 123;
+    GetFederateHandleRequest getFederateHandleRequest = 124;
+    GetFederateNameRequest getFederateNameRequest = 125;
+    GetObjectClassHandleRequest getObjectClassHandleRequest = 126;
+    GetObjectClassNameRequest getObjectClassNameRequest = 127;
+    GetKnownObjectClassHandleRequest getKnownObjectClassHandleRequest = 128;
+    GetObjectInstanceHandleRequest getObjectInstanceHandleRequest = 129;
+    GetObjectInstanceNameRequest getObjectInstanceNameRequest = 130;
+    GetAttributeHandleRequest getAttributeHandleRequest = 131;
+    GetAttributeNameRequest getAttributeNameRequest = 132;
+    GetUpdateRateValueRequest getUpdateRateValueRequest = 133;
+    GetUpdateRateValueForAttributeRequest getUpdateRateValueForAttributeRequest = 134;
+    GetInteractionClassHandleRequest getInteractionClassHandleRequest = 135;
+    GetInteractionClassNameRequest getInteractionClassNameRequest = 136;
+    GetParameterHandleRequest getParameterHandleRequest = 137;
+    GetParameterNameRequest getParameterNameRequest = 138;
+    GetOrderTypeRequest getOrderTypeRequest = 139;
+    GetOrderNameRequest getOrderNameRequest = 140;
+    GetTransportationTypeHandleRequest getTransportationTypeHandleRequest = 141;
+    GetTransportationTypeNameRequest getTransportationTypeNameRequest = 142;
+    GetAvailableDimensionsForObjectClassRequest getAvailableDimensionsForObjectClassRequest = 143;
+    GetAvailableDimensionsForInteractionClassRequest getAvailableDimensionsForInteractionClassRequest = 144;
+    GetDimensionHandleRequest getDimensionHandleRequest = 145;
+    GetDimensionNameRequest getDimensionNameRequest = 146;
+    GetDimensionUpperBoundRequest getDimensionUpperBoundRequest = 147;
+    GetDimensionHandleSetRequest getDimensionHandleSetRequest = 148;
+    GetRangeBoundsRequest getRangeBoundsRequest = 149;
+    SetRangeBoundsRequest setRangeBoundsRequest = 150;
+    NormalizeServiceGroupRequest normalizeServiceGroupRequest = 151;
+    NormalizeFederateHandleRequest normalizeFederateHandleRequest = 152;
+    NormalizeObjectClassHandleRequest normalizeObjectClassHandleRequest = 153;
+    NormalizeInteractionClassHandleRequest normalizeInteractionClassHandleRequest = 154;
+    NormalizeObjectInstanceHandleRequest normalizeObjectInstanceHandleRequest = 155;
+    GetObjectClassRelevanceAdvisorySwitchRequest getObjectClassRelevanceAdvisorySwitchRequest = 156;
+    SetObjectClassRelevanceAdvisorySwitchRequest setObjectClassRelevanceAdvisorySwitchRequest = 157;
+    GetAttributeRelevanceAdvisorySwitchRequest getAttributeRelevanceAdvisorySwitchRequest = 158;
+    SetAttributeRelevanceAdvisorySwitchRequest setAttributeRelevanceAdvisorySwitchRequest = 159;
+    GetAttributeScopeAdvisorySwitchRequest getAttributeScopeAdvisorySwitchRequest = 160;
+    SetAttributeScopeAdvisorySwitchRequest setAttributeScopeAdvisorySwitchRequest = 161;
+    GetInteractionRelevanceAdvisorySwitchRequest getInteractionRelevanceAdvisorySwitchRequest = 162;
+    SetInteractionRelevanceAdvisorySwitchRequest setInteractionRelevanceAdvisorySwitchRequest = 163;
+    GetConveyRegionDesignatorSetsSwitchRequest getConveyRegionDesignatorSetsSwitchRequest = 164;
+    SetConveyRegionDesignatorSetsSwitchRequest setConveyRegionDesignatorSetsSwitchRequest = 165;
+    GetAutomaticResignDirectiveRequest getAutomaticResignDirectiveRequest = 166;
+    SetAutomaticResignDirectiveRequest setAutomaticResignDirectiveRequest = 167;
+    GetServiceReportingSwitchRequest getServiceReportingSwitchRequest = 168;
+    SetServiceReportingSwitchRequest setServiceReportingSwitchRequest = 169;
+    GetExceptionReportingSwitchRequest getExceptionReportingSwitchRequest = 170;
+    SetExceptionReportingSwitchRequest setExceptionReportingSwitchRequest = 171;
+    GetSendServiceReportsToFileSwitchRequest getSendServiceReportsToFileSwitchRequest = 172;
+    SetSendServiceReportsToFileSwitchRequest setSendServiceReportsToFileSwitchRequest = 173;
+    GetAutoProvideSwitchRequest getAutoProvideSwitchRequest = 174;
+    GetDelaySubscriptionEvaluationSwitchRequest getDelaySubscriptionEvaluationSwitchRequest = 175;
+    GetAdvisoriesUseKnownClassSwitchRequest getAdvisoriesUseKnownClassSwitchRequest = 176;
+    GetAllowRelaxedDDMSwitchRequest getAllowRelaxedDDMSwitchRequest = 177;
+    GetNonRegulatedGrantSwitchRequest getNonRegulatedGrantSwitchRequest = 178;
+  }
+}
+
+message CallResponse {
+  oneof callResponse {
+    ExceptionData exceptionData = 1;
+    ConnectResponse connectResponse = 2;
+    ConnectWithCredentialsResponse connectWithCredentialsResponse = 3;
+    ConnectWithConfigurationResponse connectWithConfigurationResponse = 4;
+    ConnectWithConfigurationAndCredentialsResponse connectWithConfigurationAndCredentialsResponse = 5;
+    DisconnectResponse disconnectResponse = 6;
+    CreateFederationExecutionResponse createFederationExecutionResponse = 7;
+    CreateFederationExecutionWithTimeResponse createFederationExecutionWithTimeResponse = 8;
+    CreateFederationExecutionWithModulesResponse createFederationExecutionWithModulesResponse = 9;
+    CreateFederationExecutionWithModulesAndTimeResponse createFederationExecutionWithModulesAndTimeResponse = 10;
+    CreateFederationExecutionWithMIMResponse createFederationExecutionWithMIMResponse = 11;
+    CreateFederationExecutionWithMIMAndTimeResponse createFederationExecutionWithMIMAndTimeResponse = 12;
+    DestroyFederationExecutionResponse destroyFederationExecutionResponse = 13;
+    ListFederationExecutionsResponse listFederationExecutionsResponse = 14;
+    ListFederationExecutionMembersResponse listFederationExecutionMembersResponse = 15;
+    JoinFederationExecutionResponse joinFederationExecutionResponse = 16;
+    JoinFederationExecutionWithModulesResponse joinFederationExecutionWithModulesResponse = 17;
+    JoinFederationExecutionWithNameResponse joinFederationExecutionWithNameResponse = 18;
+    JoinFederationExecutionWithNameAndModulesResponse joinFederationExecutionWithNameAndModulesResponse = 19;
+    ResignFederationExecutionResponse resignFederationExecutionResponse = 20;
+    RegisterFederationSynchronizationPointResponse registerFederationSynchronizationPointResponse = 21;
+    RegisterFederationSynchronizationPointWithSetResponse registerFederationSynchronizationPointWithSetResponse = 22;
+    SynchronizationPointAchievedResponse synchronizationPointAchievedResponse = 23;
+    RequestFederationSaveResponse requestFederationSaveResponse = 24;
+    RequestFederationSaveWithTimeResponse requestFederationSaveWithTimeResponse = 25;
+    FederateSaveBegunResponse federateSaveBegunResponse = 26;
+    FederateSaveCompleteResponse federateSaveCompleteResponse = 27;
+    FederateSaveNotCompleteResponse federateSaveNotCompleteResponse = 28;
+    AbortFederationSaveResponse abortFederationSaveResponse = 29;
+    QueryFederationSaveStatusResponse queryFederationSaveStatusResponse = 30;
+    RequestFederationRestoreResponse requestFederationRestoreResponse = 31;
+    FederateRestoreCompleteResponse federateRestoreCompleteResponse = 32;
+    FederateRestoreNotCompleteResponse federateRestoreNotCompleteResponse = 33;
+    AbortFederationRestoreResponse abortFederationRestoreResponse = 34;
+    QueryFederationRestoreStatusResponse queryFederationRestoreStatusResponse = 35;
+    PublishObjectClassAttributesResponse publishObjectClassAttributesResponse = 36;
+    UnpublishObjectClassResponse unpublishObjectClassResponse = 37;
+    UnpublishObjectClassAttributesResponse unpublishObjectClassAttributesResponse = 38;
+    PublishInteractionClassResponse publishInteractionClassResponse = 39;
+    UnpublishInteractionClassResponse unpublishInteractionClassResponse = 40;
+    PublishObjectClassDirectedInteractionsResponse publishObjectClassDirectedInteractionsResponse = 41;
+    UnpublishObjectClassDirectedInteractionsResponse unpublishObjectClassDirectedInteractionsResponse = 42;
+    UnpublishObjectClassDirectedInteractionsWithSetResponse unpublishObjectClassDirectedInteractionsWithSetResponse = 43;
+    SubscribeObjectClassAttributesResponse subscribeObjectClassAttributesResponse = 44;
+    SubscribeObjectClassAttributesWithRateResponse subscribeObjectClassAttributesWithRateResponse = 45;
+    SubscribeObjectClassAttributesPassivelyResponse subscribeObjectClassAttributesPassivelyResponse = 46;
+    SubscribeObjectClassAttributesPassivelyWithRateResponse subscribeObjectClassAttributesPassivelyWithRateResponse = 47;
+    UnsubscribeObjectClassResponse unsubscribeObjectClassResponse = 48;
+    UnsubscribeObjectClassAttributesResponse unsubscribeObjectClassAttributesResponse = 49;
+    SubscribeInteractionClassResponse subscribeInteractionClassResponse = 50;
+    SubscribeInteractionClassPassivelyResponse subscribeInteractionClassPassivelyResponse = 51;
+    UnsubscribeInteractionClassResponse unsubscribeInteractionClassResponse = 52;
+    SubscribeObjectClassDirectedInteractionsResponse subscribeObjectClassDirectedInteractionsResponse = 53;
+    SubscribeObjectClassDirectedInteractionsUniversallyResponse subscribeObjectClassDirectedInteractionsUniversallyResponse = 54;
+    UnsubscribeObjectClassDirectedInteractionsResponse unsubscribeObjectClassDirectedInteractionsResponse = 55;
+    UnsubscribeObjectClassDirectedInteractionsWithSetResponse unsubscribeObjectClassDirectedInteractionsWithSetResponse = 56;
+    ReserveObjectInstanceNameResponse reserveObjectInstanceNameResponse = 57;
+    ReleaseObjectInstanceNameResponse releaseObjectInstanceNameResponse = 58;
+    ReserveMultipleObjectInstanceNamesResponse reserveMultipleObjectInstanceNamesResponse = 59;
+    ReleaseMultipleObjectInstanceNamesResponse releaseMultipleObjectInstanceNamesResponse = 60;
+    RegisterObjectInstanceResponse registerObjectInstanceResponse = 61;
+    RegisterObjectInstanceWithNameResponse registerObjectInstanceWithNameResponse = 62;
+    UpdateAttributeValuesResponse updateAttributeValuesResponse = 63;
+    UpdateAttributeValuesWithTimeResponse updateAttributeValuesWithTimeResponse = 64;
+    SendInteractionResponse sendInteractionResponse = 65;
+    SendInteractionWithTimeResponse sendInteractionWithTimeResponse = 66;
+    SendDirectedInteractionResponse sendDirectedInteractionResponse = 67;
+    SendDirectedInteractionWithTimeResponse sendDirectedInteractionWithTimeResponse = 68;
+    DeleteObjectInstanceResponse deleteObjectInstanceResponse = 69;
+    DeleteObjectInstanceWithTimeResponse deleteObjectInstanceWithTimeResponse = 70;
+    LocalDeleteObjectInstanceResponse localDeleteObjectInstanceResponse = 71;
+    RequestInstanceAttributeValueUpdateResponse requestInstanceAttributeValueUpdateResponse = 72;
+    RequestClassAttributeValueUpdateResponse requestClassAttributeValueUpdateResponse = 73;
+    RequestAttributeTransportationTypeChangeResponse requestAttributeTransportationTypeChangeResponse = 74;
+    ChangeDefaultAttributeTransportationTypeResponse changeDefaultAttributeTransportationTypeResponse = 75;
+    QueryAttributeTransportationTypeResponse queryAttributeTransportationTypeResponse = 76;
+    RequestInteractionTransportationTypeChangeResponse requestInteractionTransportationTypeChangeResponse = 77;
+    QueryInteractionTransportationTypeResponse queryInteractionTransportationTypeResponse = 78;
+    UnconditionalAttributeOwnershipDivestitureResponse unconditionalAttributeOwnershipDivestitureResponse = 79;
+    NegotiatedAttributeOwnershipDivestitureResponse negotiatedAttributeOwnershipDivestitureResponse = 80;
+    ConfirmDivestitureResponse confirmDivestitureResponse = 81;
+    AttributeOwnershipAcquisitionResponse attributeOwnershipAcquisitionResponse = 82;
+    AttributeOwnershipAcquisitionIfAvailableResponse attributeOwnershipAcquisitionIfAvailableResponse = 83;
+    AttributeOwnershipReleaseDeniedResponse attributeOwnershipReleaseDeniedResponse = 84;
+    AttributeOwnershipDivestitureIfWantedResponse attributeOwnershipDivestitureIfWantedResponse = 85;
+    CancelNegotiatedAttributeOwnershipDivestitureResponse cancelNegotiatedAttributeOwnershipDivestitureResponse = 86;
+    CancelAttributeOwnershipAcquisitionResponse cancelAttributeOwnershipAcquisitionResponse = 87;
+    QueryAttributeOwnershipResponse queryAttributeOwnershipResponse = 88;
+    IsAttributeOwnedByFederateResponse isAttributeOwnedByFederateResponse = 89;
+    EnableTimeRegulationResponse enableTimeRegulationResponse = 90;
+    DisableTimeRegulationResponse disableTimeRegulationResponse = 91;
+    EnableTimeConstrainedResponse enableTimeConstrainedResponse = 92;
+    DisableTimeConstrainedResponse disableTimeConstrainedResponse = 93;
+    TimeAdvanceRequestResponse timeAdvanceRequestResponse = 94;
+    TimeAdvanceRequestAvailableResponse timeAdvanceRequestAvailableResponse = 95;
+    NextMessageRequestResponse nextMessageRequestResponse = 96;
+    NextMessageRequestAvailableResponse nextMessageRequestAvailableResponse = 97;
+    FlushQueueRequestResponse flushQueueRequestResponse = 98;
+    EnableAsynchronousDeliveryResponse enableAsynchronousDeliveryResponse = 99;
+    DisableAsynchronousDeliveryResponse disableAsynchronousDeliveryResponse = 100;
+    QueryGALTResponse queryGALTResponse = 101;
+    QueryLogicalTimeResponse queryLogicalTimeResponse = 102;
+    QueryLITSResponse queryLITSResponse = 103;
+    ModifyLookaheadResponse modifyLookaheadResponse = 104;
+    QueryLookaheadResponse queryLookaheadResponse = 105;
+    RetractResponse retractResponse = 106;
+    ChangeAttributeOrderTypeResponse changeAttributeOrderTypeResponse = 107;
+    ChangeDefaultAttributeOrderTypeResponse changeDefaultAttributeOrderTypeResponse = 108;
+    ChangeInteractionOrderTypeResponse changeInteractionOrderTypeResponse = 109;
+    CreateRegionResponse createRegionResponse = 110;
+    CommitRegionModificationsResponse commitRegionModificationsResponse = 111;
+    DeleteRegionResponse deleteRegionResponse = 112;
+    RegisterObjectInstanceWithRegionsResponse registerObjectInstanceWithRegionsResponse = 113;
+    RegisterObjectInstanceWithNameAndRegionsResponse registerObjectInstanceWithNameAndRegionsResponse = 114;
+    AssociateRegionsForUpdatesResponse associateRegionsForUpdatesResponse = 115;
+    UnassociateRegionsForUpdatesResponse unassociateRegionsForUpdatesResponse = 116;
+    SubscribeObjectClassAttributesWithRegionsResponse subscribeObjectClassAttributesWithRegionsResponse = 117;
+    SubscribeObjectClassAttributesWithRegionsAndRateResponse subscribeObjectClassAttributesWithRegionsAndRateResponse = 118;
+    UnsubscribeObjectClassAttributesWithRegionsResponse unsubscribeObjectClassAttributesWithRegionsResponse = 119;
+    SubscribeInteractionClassWithRegionsResponse subscribeInteractionClassWithRegionsResponse = 120;
+    UnsubscribeInteractionClassWithRegionsResponse unsubscribeInteractionClassWithRegionsResponse = 121;
+    SendInteractionWithRegionsResponse sendInteractionWithRegionsResponse = 122;
+    SendInteractionWithRegionsAndTimeResponse sendInteractionWithRegionsAndTimeResponse = 123;
+    RequestAttributeValueUpdateWithRegionsResponse requestAttributeValueUpdateWithRegionsResponse = 124;
+    GetFederateHandleResponse getFederateHandleResponse = 125;
+    GetFederateNameResponse getFederateNameResponse = 126;
+    GetObjectClassHandleResponse getObjectClassHandleResponse = 127;
+    GetObjectClassNameResponse getObjectClassNameResponse = 128;
+    GetKnownObjectClassHandleResponse getKnownObjectClassHandleResponse = 129;
+    GetObjectInstanceHandleResponse getObjectInstanceHandleResponse = 130;
+    GetObjectInstanceNameResponse getObjectInstanceNameResponse = 131;
+    GetAttributeHandleResponse getAttributeHandleResponse = 132;
+    GetAttributeNameResponse getAttributeNameResponse = 133;
+    GetUpdateRateValueResponse getUpdateRateValueResponse = 134;
+    GetUpdateRateValueForAttributeResponse getUpdateRateValueForAttributeResponse = 135;
+    GetInteractionClassHandleResponse getInteractionClassHandleResponse = 136;
+    GetInteractionClassNameResponse getInteractionClassNameResponse = 137;
+    GetParameterHandleResponse getParameterHandleResponse = 138;
+    GetParameterNameResponse getParameterNameResponse = 139;
+    GetOrderTypeResponse getOrderTypeResponse = 140;
+    GetOrderNameResponse getOrderNameResponse = 141;
+    GetTransportationTypeHandleResponse getTransportationTypeHandleResponse = 142;
+    GetTransportationTypeNameResponse getTransportationTypeNameResponse = 143;
+    GetAvailableDimensionsForObjectClassResponse getAvailableDimensionsForObjectClassResponse = 144;
+    GetAvailableDimensionsForInteractionClassResponse getAvailableDimensionsForInteractionClassResponse = 145;
+    GetDimensionHandleResponse getDimensionHandleResponse = 146;
+    GetDimensionNameResponse getDimensionNameResponse = 147;
+    GetDimensionUpperBoundResponse getDimensionUpperBoundResponse = 148;
+    GetDimensionHandleSetResponse getDimensionHandleSetResponse = 149;
+    GetRangeBoundsResponse getRangeBoundsResponse = 150;
+    SetRangeBoundsResponse setRangeBoundsResponse = 151;
+    NormalizeServiceGroupResponse normalizeServiceGroupResponse = 152;
+    NormalizeFederateHandleResponse normalizeFederateHandleResponse = 153;
+    NormalizeObjectClassHandleResponse normalizeObjectClassHandleResponse = 154;
+    NormalizeInteractionClassHandleResponse normalizeInteractionClassHandleResponse = 155;
+    NormalizeObjectInstanceHandleResponse normalizeObjectInstanceHandleResponse = 156;
+    GetObjectClassRelevanceAdvisorySwitchResponse getObjectClassRelevanceAdvisorySwitchResponse = 157;
+    SetObjectClassRelevanceAdvisorySwitchResponse setObjectClassRelevanceAdvisorySwitchResponse = 158;
+    GetAttributeRelevanceAdvisorySwitchResponse getAttributeRelevanceAdvisorySwitchResponse = 159;
+    SetAttributeRelevanceAdvisorySwitchResponse setAttributeRelevanceAdvisorySwitchResponse = 160;
+    GetAttributeScopeAdvisorySwitchResponse getAttributeScopeAdvisorySwitchResponse = 161;
+    SetAttributeScopeAdvisorySwitchResponse setAttributeScopeAdvisorySwitchResponse = 162;
+    GetInteractionRelevanceAdvisorySwitchResponse getInteractionRelevanceAdvisorySwitchResponse = 163;
+    SetInteractionRelevanceAdvisorySwitchResponse setInteractionRelevanceAdvisorySwitchResponse = 164;
+    GetConveyRegionDesignatorSetsSwitchResponse getConveyRegionDesignatorSetsSwitchResponse = 165;
+    SetConveyRegionDesignatorSetsSwitchResponse setConveyRegionDesignatorSetsSwitchResponse = 166;
+    GetAutomaticResignDirectiveResponse getAutomaticResignDirectiveResponse = 167;
+    SetAutomaticResignDirectiveResponse setAutomaticResignDirectiveResponse = 168;
+    GetServiceReportingSwitchResponse getServiceReportingSwitchResponse = 169;
+    SetServiceReportingSwitchResponse setServiceReportingSwitchResponse = 170;
+    GetExceptionReportingSwitchResponse getExceptionReportingSwitchResponse = 171;
+    SetExceptionReportingSwitchResponse setExceptionReportingSwitchResponse = 172;
+    GetSendServiceReportsToFileSwitchResponse getSendServiceReportsToFileSwitchResponse = 173;
+    SetSendServiceReportsToFileSwitchResponse setSendServiceReportsToFileSwitchResponse = 174;
+    GetAutoProvideSwitchResponse getAutoProvideSwitchResponse = 175;
+    GetDelaySubscriptionEvaluationSwitchResponse getDelaySubscriptionEvaluationSwitchResponse = 176;
+    GetAdvisoriesUseKnownClassSwitchResponse getAdvisoriesUseKnownClassSwitchResponse = 177;
+    GetAllowRelaxedDDMSwitchResponse getAllowRelaxedDDMSwitchResponse = 178;
+    GetNonRegulatedGrantSwitchResponse getNonRegulatedGrantSwitchResponse = 179;
+  }
+}

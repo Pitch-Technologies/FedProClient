@@ -1,0 +1,373 @@
+/***********************************************************************
+   The IEEE hereby grants a general, royalty-free license to copy, distribute,
+   display and make derivative works from this material, for all purposes,
+   provided that any use of the material contains the following
+   attribution: "Reprinted with permission from IEEE 1516.1(TM)-202X".
+   Should you require additional information, contact the Manager, Standards
+   Intellectual Property, IEEE Standards Association (stds-ipr@ieee.org).
+***********************************************************************/
+/***********************************************************************
+   IEEE 1516.1 High Level Architecture Interface Specification Federate Protocol API
+   File: FederateAmbassador.proto
+***********************************************************************/
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "hla.rti1516_202X.fedpro";
+
+package rti1516_202X.fedpro;
+
+import "datatypes.proto";
+
+message ConnectionLost {
+      string faultDescription = 1;
+}
+message ReportFederationExecutions {
+      FederationExecutionInformationSet report = 1;
+}
+message ReportFederationExecutionMembers {
+      string federationName = 1;
+      FederationExecutionMemberInformationSet report = 2;
+}
+message ReportFederationExecutionDoesNotExist {
+      string federationName = 1;
+}
+message FederateResigned {
+      string reasonForResignDescription = 1;
+}
+message SynchronizationPointRegistrationSucceeded {
+      string synchronizationPointLabel = 1;
+}
+message SynchronizationPointRegistrationFailed {
+      string synchronizationPointLabel = 1;
+      SynchronizationPointFailureReason reason = 2;
+}
+message AnnounceSynchronizationPoint {
+      string synchronizationPointLabel = 1;
+      bytes userSuppliedTag = 2;
+}
+message FederationSynchronized {
+      string synchronizationPointLabel = 1;
+      FederateHandleSet failedToSyncSet = 2;
+}
+message InitiateFederateSave {
+      string label = 1;
+}
+message InitiateFederateSaveWithTime {
+      string label = 1;
+      LogicalTime time = 2;
+}
+message FederationSaved {
+}
+message FederationNotSaved {
+      SaveFailureReason reason = 1;
+}
+message FederationSaveStatusResponse {
+      FederateHandleSaveStatusPairArray response = 1;
+}
+message RequestFederationRestoreSucceeded {
+      string label = 1;
+}
+message RequestFederationRestoreFailed {
+      string label = 1;
+}
+message FederationRestoreBegun {
+}
+message InitiateFederateRestore {
+      string label = 1;
+      string federateName = 2;
+      FederateHandle postRestoreFederateHandle = 3;
+}
+message FederationRestored {
+}
+message FederationNotRestored {
+      RestoreFailureReason reason = 1;
+}
+message FederationRestoreStatusResponse {
+      FederateRestoreStatusArray response = 1;
+}
+message StartRegistrationForObjectClass {
+      ObjectClassHandle objectClass = 1;
+}
+message StopRegistrationForObjectClass {
+      ObjectClassHandle objectClass = 1;
+}
+message TurnInteractionsOn {
+      InteractionClassHandle interactionClass = 1;
+}
+message TurnInteractionsOff {
+      InteractionClassHandle interactionClass = 1;
+}
+message ObjectInstanceNameReservationSucceeded {
+      string objectInstanceName = 1;
+}
+message ObjectInstanceNameReservationFailed {
+      string objectInstanceName = 1;
+}
+message MultipleObjectInstanceNameReservationSucceeded {
+      repeated string objectInstanceNames = 1;
+}
+message MultipleObjectInstanceNameReservationFailed {
+      repeated string objectInstanceNames = 1;
+}
+message DiscoverObjectInstance {
+      ObjectInstanceHandle objectInstance = 1;
+      ObjectClassHandle objectClass = 2;
+      string objectInstanceName = 3;
+      FederateHandle producingFederate = 4;
+}
+message ReflectAttributeValues {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleValueMap attributeValues = 2;
+      bytes userSuppliedTag = 3;
+      TransportationTypeHandle transportationType = 4;
+      FederateHandle producingFederate = 5;
+      ConveyedRegionSet optionalSentRegions = 6;
+}
+message ReflectAttributeValuesWithTime {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleValueMap attributeValues = 2;
+      bytes userSuppliedTag = 3;
+      TransportationTypeHandle transportationType = 4;
+      FederateHandle producingFederate = 5;
+      ConveyedRegionSet optionalSentRegions = 6;
+      LogicalTime time = 7;
+      OrderType sentOrderType = 8;
+      OrderType receivedOrderType = 9;
+      MessageRetractionHandle optionalRetraction = 10;
+}
+message ReceiveInteraction {
+      InteractionClassHandle interactionClass = 1;
+      ParameterHandleValueMap parameterValues = 2;
+      bytes userSuppliedTag = 3;
+      TransportationTypeHandle transportationType = 4;
+      FederateHandle producingFederate = 5;
+      ConveyedRegionSet optionalSentRegions = 6;
+}
+message ReceiveInteractionWithTime {
+      InteractionClassHandle interactionClass = 1;
+      ParameterHandleValueMap parameterValues = 2;
+      bytes userSuppliedTag = 3;
+      TransportationTypeHandle transportationType = 4;
+      FederateHandle producingFederate = 5;
+      ConveyedRegionSet optionalSentRegions = 6;
+      LogicalTime time = 7;
+      OrderType sentOrderType = 8;
+      OrderType receivedOrderType = 9;
+      MessageRetractionHandle optionalRetraction = 10;
+}
+message ReceiveDirectedInteraction {
+      InteractionClassHandle interactionClass = 1;
+      ObjectInstanceHandle objectInstance = 2;
+      ParameterHandleValueMap parameterValues = 3;
+      bytes userSuppliedTag = 4;
+      TransportationTypeHandle transportationType = 5;
+      FederateHandle producingFederate = 6;
+}
+message ReceiveDirectedInteractionWithTime {
+      InteractionClassHandle interactionClass = 1;
+      ObjectInstanceHandle objectInstance = 2;
+      ParameterHandleValueMap parameterValues = 3;
+      bytes userSuppliedTag = 4;
+      TransportationTypeHandle transportationType = 5;
+      FederateHandle producingFederate = 6;
+      LogicalTime time = 7;
+      OrderType sentOrderType = 8;
+      OrderType receivedOrderType = 9;
+      MessageRetractionHandle optionalRetraction = 10;
+}
+message RemoveObjectInstance {
+      ObjectInstanceHandle objectInstance = 1;
+      bytes userSuppliedTag = 2;
+      FederateHandle producingFederate = 3;
+}
+message RemoveObjectInstanceWithTime {
+      ObjectInstanceHandle objectInstance = 1;
+      bytes userSuppliedTag = 2;
+      FederateHandle producingFederate = 3;
+      LogicalTime time = 4;
+      OrderType sentOrderType = 5;
+      OrderType receivedOrderType = 6;
+      MessageRetractionHandle optionalRetraction = 7;
+}
+message AttributesInScope {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+message AttributesOutOfScope {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+message ProvideAttributeValueUpdate {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+message TurnUpdatesOnForObjectInstance {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+message TurnUpdatesOnForObjectInstanceWithRate {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      string updateRateDesignator = 3;
+}
+message TurnUpdatesOffForObjectInstance {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+message ConfirmAttributeTransportationTypeChange {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      TransportationTypeHandle transportationType = 3;
+}
+message ReportAttributeTransportationType {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandle attribute = 2;
+      TransportationTypeHandle transportationType = 3;
+}
+message ConfirmInteractionTransportationTypeChange {
+      InteractionClassHandle interactionClass = 1;
+      TransportationTypeHandle transportationType = 2;
+}
+message ReportInteractionTransportationType {
+      FederateHandle federate = 1;
+      InteractionClassHandle interactionClass = 2;
+      TransportationTypeHandle transportationType = 3;
+}
+message RequestAttributeOwnershipAssumption {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet offeredAttributes = 2;
+      bytes userSuppliedTag = 3;
+}
+message RequestDivestitureConfirmation {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet releasedAttributes = 2;
+      bytes userSuppliedTag = 3;
+}
+message AttributeOwnershipAcquisitionNotification {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet securedAttributes = 2;
+      bytes userSuppliedTag = 3;
+}
+message AttributeOwnershipUnavailable {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      bytes userSuppliedTag = 3;
+}
+message RequestAttributeOwnershipRelease {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet candidateAttributes = 2;
+      bytes userSuppliedTag = 3;
+}
+message ConfirmAttributeOwnershipAcquisitionCancellation {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+message InformAttributeOwnership {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+      FederateHandle federate = 3;
+}
+message AttributeIsNotOwned {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+message AttributeIsOwnedByRTI {
+      ObjectInstanceHandle objectInstance = 1;
+      AttributeHandleSet attributes = 2;
+}
+message TimeRegulationEnabled {
+      LogicalTime time = 1;
+}
+message TimeConstrainedEnabled {
+      LogicalTime time = 1;
+}
+message FlushQueueGrant {
+      LogicalTime time = 1;
+      LogicalTime optimisticTime = 2;
+}
+message TimeAdvanceGrant {
+      LogicalTime time = 1;
+}
+message RequestRetraction {
+      MessageRetractionHandle retraction = 1;
+}
+
+message CallbackSucceeded {
+}
+
+message CallbackRequest {
+   oneof callbackRequest {
+      ConnectionLost connectionLost = 1;
+      ReportFederationExecutions reportFederationExecutions = 2;
+      ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
+      ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
+      FederateResigned federateResigned = 5;
+      SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
+      SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
+      AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
+      FederationSynchronized federationSynchronized = 9;
+      InitiateFederateSave initiateFederateSave = 10;
+      InitiateFederateSaveWithTime initiateFederateSaveWithTime = 11;
+      FederationSaved federationSaved = 12;
+      FederationNotSaved federationNotSaved = 13;
+      FederationSaveStatusResponse federationSaveStatusResponse = 14;
+      RequestFederationRestoreSucceeded requestFederationRestoreSucceeded = 15;
+      RequestFederationRestoreFailed requestFederationRestoreFailed = 16;
+      FederationRestoreBegun federationRestoreBegun = 17;
+      InitiateFederateRestore initiateFederateRestore = 18;
+      FederationRestored federationRestored = 19;
+      FederationNotRestored federationNotRestored = 20;
+      FederationRestoreStatusResponse federationRestoreStatusResponse = 21;
+      StartRegistrationForObjectClass startRegistrationForObjectClass = 22;
+      StopRegistrationForObjectClass stopRegistrationForObjectClass = 23;
+      TurnInteractionsOn turnInteractionsOn = 24;
+      TurnInteractionsOff turnInteractionsOff = 25;
+      ObjectInstanceNameReservationSucceeded objectInstanceNameReservationSucceeded = 26;
+      ObjectInstanceNameReservationFailed objectInstanceNameReservationFailed = 27;
+      MultipleObjectInstanceNameReservationSucceeded multipleObjectInstanceNameReservationSucceeded = 28;
+      MultipleObjectInstanceNameReservationFailed multipleObjectInstanceNameReservationFailed = 29;
+      DiscoverObjectInstance discoverObjectInstance = 30;
+      ReflectAttributeValues reflectAttributeValues = 31;
+      ReflectAttributeValuesWithTime reflectAttributeValuesWithTime = 32;
+      ReceiveInteraction receiveInteraction = 33;
+      ReceiveInteractionWithTime receiveInteractionWithTime = 34;
+      ReceiveDirectedInteraction receiveDirectedInteraction = 35;
+      ReceiveDirectedInteractionWithTime receiveDirectedInteractionWithTime = 36;
+      RemoveObjectInstance removeObjectInstance = 37;
+      RemoveObjectInstanceWithTime removeObjectInstanceWithTime = 38;
+      AttributesInScope attributesInScope = 39;
+      AttributesOutOfScope attributesOutOfScope = 40;
+      ProvideAttributeValueUpdate provideAttributeValueUpdate = 41;
+      TurnUpdatesOnForObjectInstance turnUpdatesOnForObjectInstance = 42;
+      TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
+      TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
+      ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
+      ReportAttributeTransportationType reportAttributeTransportationType = 46;
+      ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
+      ReportInteractionTransportationType reportInteractionTransportationType = 48;
+      RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
+      RequestDivestitureConfirmation requestDivestitureConfirmation = 50;
+      AttributeOwnershipAcquisitionNotification attributeOwnershipAcquisitionNotification = 51;
+      AttributeOwnershipUnavailable attributeOwnershipUnavailable = 52;
+      RequestAttributeOwnershipRelease requestAttributeOwnershipRelease = 53;
+      ConfirmAttributeOwnershipAcquisitionCancellation confirmAttributeOwnershipAcquisitionCancellation = 54;
+      InformAttributeOwnership informAttributeOwnership = 55;
+      AttributeIsNotOwned attributeIsNotOwned = 56;
+      AttributeIsOwnedByRTI attributeIsOwnedByRTI = 57;
+      TimeRegulationEnabled timeRegulationEnabled = 58;
+      TimeConstrainedEnabled timeConstrainedEnabled = 59;
+      FlushQueueGrant flushQueueGrant = 60;
+      TimeAdvanceGrant timeAdvanceGrant = 61;
+      RequestRetraction requestRetraction = 62;
+   }
+}
+
+message CallbackResponse {
+   oneof callbackResponse {
+      CallbackSucceeded callbackSucceeded = 1;
+      ExceptionData callbackFailed = 2;
+   }
+}
