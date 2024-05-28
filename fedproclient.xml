@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="fedproclient" default="all">
+  
+  
+  <property file="fedproclient.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.mypy_cache/**"/>
+    <exclude name="**/.pytest_cache/**"/>
+    <exclude name="**/.ruff_cache/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.egg"/>
+    <include name="*.klib"/>
+    <include name="*.jar"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.zip"/>
+    <include name="*.ear"/>
+    <include name="*.ane"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.11" value="${jdk.home.11}/bin"/>
+  <path id="jdk.classpath.11">
+    <fileset dir="${jdk.home.11}">
+      <include name="../jdk-11.0.18+10!/java.base"/>
+      <include name="../jdk-11.0.18+10!/java.compiler"/>
+      <include name="../jdk-11.0.18+10!/java.datatransfer"/>
+      <include name="../jdk-11.0.18+10!/java.desktop"/>
+      <include name="../jdk-11.0.18+10!/java.instrument"/>
+      <include name="../jdk-11.0.18+10!/java.logging"/>
+      <include name="../jdk-11.0.18+10!/java.management"/>
+      <include name="../jdk-11.0.18+10!/java.management.rmi"/>
+      <include name="../jdk-11.0.18+10!/java.naming"/>
+      <include name="../jdk-11.0.18+10!/java.net.http"/>
+      <include name="../jdk-11.0.18+10!/java.prefs"/>
+      <include name="../jdk-11.0.18+10!/java.rmi"/>
+      <include name="../jdk-11.0.18+10!/java.scripting"/>
+      <include name="../jdk-11.0.18+10!/java.se"/>
+      <include name="../jdk-11.0.18+10!/java.security.jgss"/>
+      <include name="../jdk-11.0.18+10!/java.security.sasl"/>
+      <include name="../jdk-11.0.18+10!/java.smartcardio"/>
+      <include name="../jdk-11.0.18+10!/java.sql"/>
+      <include name="../jdk-11.0.18+10!/java.sql.rowset"/>
+      <include name="../jdk-11.0.18+10!/java.transaction.xa"/>
+      <include name="../jdk-11.0.18+10!/java.xml"/>
+      <include name="../jdk-11.0.18+10!/java.xml.crypto"/>
+      <include name="../jdk-11.0.18+10!/jdk.accessibility"/>
+      <include name="../jdk-11.0.18+10!/jdk.aot"/>
+      <include name="../jdk-11.0.18+10!/jdk.attach"/>
+      <include name="../jdk-11.0.18+10!/jdk.charsets"/>
+      <include name="../jdk-11.0.18+10!/jdk.compiler"/>
+      <include name="../jdk-11.0.18+10!/jdk.crypto.cryptoki"/>
+      <include name="../jdk-11.0.18+10!/jdk.crypto.ec"/>
+      <include name="../jdk-11.0.18+10!/jdk.crypto.mscapi"/>
+      <include name="../jdk-11.0.18+10!/jdk.dynalink"/>
+      <include name="../jdk-11.0.18+10!/jdk.editpad"/>
+      <include name="../jdk-11.0.18+10!/jdk.hotspot.agent"/>
+      <include name="../jdk-11.0.18+10!/jdk.httpserver"/>
+      <include name="../jdk-11.0.18+10!/jdk.internal.ed"/>
+      <include name="../jdk-11.0.18+10!/jdk.internal.jvmstat"/>
+      <include name="../jdk-11.0.18+10!/jdk.internal.le"/>
+      <include name="../jdk-11.0.18+10!/jdk.internal.opt"/>
+      <include name="../jdk-11.0.18+10!/jdk.internal.vm.ci"/>
+      <include name="../jdk-11.0.18+10!/jdk.internal.vm.compiler"/>
+      <include name="../jdk-11.0.18+10!/jdk.internal.vm.compiler.management"/>
+      <include name="../jdk-11.0.18+10!/jdk.jartool"/>
+      <include name="../jdk-11.0.18+10!/jdk.javadoc"/>
+      <include name="../jdk-11.0.18+10!/jdk.jcmd"/>
+      <include name="../jdk-11.0.18+10!/jdk.jconsole"/>
+      <include name="../jdk-11.0.18+10!/jdk.jdeps"/>
+      <include name="../jdk-11.0.18+10!/jdk.jdi"/>
+      <include name="../jdk-11.0.18+10!/jdk.jdwp.agent"/>
+      <include name="../jdk-11.0.18+10!/jdk.jfr"/>
+      <include name="../jdk-11.0.18+10!/jdk.jlink"/>
+      <include name="../jdk-11.0.18+10!/jdk.jshell"/>
+      <include name="../jdk-11.0.18+10!/jdk.jsobject"/>
+      <include name="../jdk-11.0.18+10!/jdk.jstatd"/>
+      <include name="../jdk-11.0.18+10!/jdk.localedata"/>
+      <include name="../jdk-11.0.18+10!/jdk.management"/>
+      <include name="../jdk-11.0.18+10!/jdk.management.agent"/>
+      <include name="../jdk-11.0.18+10!/jdk.management.jfr"/>
+      <include name="../jdk-11.0.18+10!/jdk.naming.dns"/>
+      <include name="../jdk-11.0.18+10!/jdk.naming.ldap"/>
+      <include name="../jdk-11.0.18+10!/jdk.naming.rmi"/>
+      <include name="../jdk-11.0.18+10!/jdk.net"/>
+      <include name="../jdk-11.0.18+10!/jdk.pack"/>
+      <include name="../jdk-11.0.18+10!/jdk.rmic"/>
+      <include name="../jdk-11.0.18+10!/jdk.scripting.nashorn"/>
+      <include name="../jdk-11.0.18+10!/jdk.scripting.nashorn.shell"/>
+      <include name="../jdk-11.0.18+10!/jdk.sctp"/>
+      <include name="../jdk-11.0.18+10!/jdk.security.auth"/>
+      <include name="../jdk-11.0.18+10!/jdk.security.jgss"/>
+      <include name="../jdk-11.0.18+10!/jdk.unsupported"/>
+      <include name="../jdk-11.0.18+10!/jdk.unsupported.desktop"/>
+      <include name="../jdk-11.0.18+10!/jdk.xml.dom"/>
+      <include name="../jdk-11.0.18+10!/jdk.zipfs"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.11}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.11}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.11"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.java-websocket.classpath">
+    <pathelement location="${basedir}/java/lib/Java-WebSocket-1.5.3.jar"/>
+  </path>
+  
+  <path id="library.jcip-annotations.classpath">
+    <pathelement location="${basedir}/java/lib/jcip-annotations-1.0.jar"/>
+  </path>
+  
+  <path id="library.protobuf-java.classpath">
+    <pathelement location="${basedir}/java/lib/protobuf-java-3.21.7.jar"/>
+  </path>
+  
+  
+  <!-- Global Libraries -->
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module fedproclient_hla_api -->
+  
+  <dirname property="module.fedproclient_hla_api.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_hla_api" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_hla_api" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_hla_api" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_hla_api" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_hla_api.output.dir" value="${module.fedproclient_hla_api.basedir}/out/production/fedproclient_hla_api"/>
+  <property name="fedproclient_hla_api.testoutput.dir" value="${module.fedproclient_hla_api.basedir}/out/test/fedproclient_hla_api"/>
+  
+  <path id="fedproclient_hla_api.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_hla_api.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_hla_api}"/>
+  </path>
+  
+  <path id="fedproclient_hla_api.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_hla_api.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_hla_api}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_hla_api.runtime.module.classpath">
+    <pathelement location="${fedproclient_hla_api.testoutput.dir}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_hla_api">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_hla_api">
+    <patternset refid="excluded.from.module.fedproclient_hla_api"/>
+  </patternset>
+  
+  <path id="fedproclient_hla_api.module.sourcepath">
+    <dirset dir="${module.fedproclient_hla_api.basedir}/java/api">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_hla_api" depends="compile.module.fedproclient_hla_api.production,compile.module.fedproclient_hla_api.tests" description="Compile module fedproclient_hla_api"/>
+  
+  <target name="compile.module.fedproclient_hla_api.production" description="Compile module fedproclient_hla_api; production classes">
+    <mkdir dir="${fedproclient_hla_api.output.dir}"/>
+    <javac destdir="${fedproclient_hla_api.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_hla_api}/javac">
+      <compilerarg line="${compiler.args.fedproclient_hla_api}"/>
+      <bootclasspath refid="fedproclient_hla_api.module.bootclasspath"/>
+      <classpath refid="fedproclient_hla_api.module.production.classpath"/>
+      <src refid="fedproclient_hla_api.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_hla_api"/>
+    </javac>
+    
+    <copy todir="${fedproclient_hla_api.output.dir}">
+      <fileset dir="${module.fedproclient_hla_api.basedir}/java/api/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_hla_api.tests" depends="compile.module.fedproclient_hla_api.production" description="compile module fedproclient_hla_api; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_hla_api" description="cleanup module">
+    <delete dir="${fedproclient_hla_api.output.dir}"/>
+    <delete dir="${fedproclient_hla_api.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module fedproclient_protobuf -->
+  
+  <dirname property="module.fedproclient_protobuf.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_protobuf" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_protobuf" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_protobuf" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_protobuf" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_protobuf.output.dir" value="${module.fedproclient_protobuf.basedir}/out/production/fedproclient_protobuf"/>
+  <property name="fedproclient_protobuf.testoutput.dir" value="${module.fedproclient_protobuf.basedir}/out/test/fedproclient_protobuf"/>
+  
+  <path id="fedproclient_protobuf.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_protobuf.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_protobuf}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_protobuf.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_protobuf.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_protobuf}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_protobuf.runtime.module.classpath">
+    <pathelement location="${fedproclient_protobuf.testoutput.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_protobuf">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_protobuf">
+    <patternset refid="excluded.from.module.fedproclient_protobuf"/>
+  </patternset>
+  
+  <path id="fedproclient_protobuf.module.sourcepath">
+    <dirset dir="${module.fedproclient_protobuf.basedir}/java/protobuf">
+      <include name="src/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_protobuf" depends="compile.module.fedproclient_protobuf.production,compile.module.fedproclient_protobuf.tests" description="Compile module fedproclient_protobuf"/>
+  
+  <target name="compile.module.fedproclient_protobuf.production" description="Compile module fedproclient_protobuf; production classes">
+    <mkdir dir="${fedproclient_protobuf.output.dir}"/>
+    <javac destdir="${fedproclient_protobuf.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_protobuf}/javac">
+      <compilerarg line="${compiler.args.fedproclient_protobuf}"/>
+      <bootclasspath refid="fedproclient_protobuf.module.bootclasspath"/>
+      <classpath refid="fedproclient_protobuf.module.production.classpath"/>
+      <src refid="fedproclient_protobuf.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_protobuf"/>
+    </javac>
+    
+    <copy todir="${fedproclient_protobuf.output.dir}">
+      <fileset dir="${module.fedproclient_protobuf.basedir}/java/protobuf/src/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_protobuf.tests" depends="compile.module.fedproclient_protobuf.production" description="compile module fedproclient_protobuf; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_protobuf" description="cleanup module">
+    <delete dir="${fedproclient_protobuf.output.dir}"/>
+    <delete dir="${fedproclient_protobuf.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module fedproclient_session -->
+  
+  <dirname property="module.fedproclient_session.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_session" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_session" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_session" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_session" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_session.output.dir" value="${module.fedproclient_session.basedir}/out/production/fedproclient_session"/>
+  <property name="fedproclient_session.testoutput.dir" value="${module.fedproclient_session.basedir}/out/test/fedproclient_session"/>
+  
+  <path id="fedproclient_session.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_session.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_session}"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+  </path>
+  
+  <path id="fedproclient_session.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+  </path>
+  
+  <path id="fedproclient_session.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_session}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+  </path>
+  
+  <path id="fedproclient_session.runtime.module.classpath">
+    <pathelement location="${fedproclient_session.testoutput.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_session">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_session">
+    <patternset refid="excluded.from.module.fedproclient_session"/>
+  </patternset>
+  
+  <path id="fedproclient_session.module.sourcepath">
+    <dirset dir="${module.fedproclient_session.basedir}/java/session">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_session" depends="compile.module.fedproclient_session.production,compile.module.fedproclient_session.tests" description="Compile module fedproclient_session"/>
+  
+  <target name="compile.module.fedproclient_session.production" description="Compile module fedproclient_session; production classes">
+    <mkdir dir="${fedproclient_session.output.dir}"/>
+    <javac destdir="${fedproclient_session.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_session}/javac">
+      <compilerarg line="${compiler.args.fedproclient_session}"/>
+      <bootclasspath refid="fedproclient_session.module.bootclasspath"/>
+      <classpath refid="fedproclient_session.module.production.classpath"/>
+      <src refid="fedproclient_session.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_session"/>
+    </javac>
+    
+    <copy todir="${fedproclient_session.output.dir}">
+      <fileset dir="${module.fedproclient_session.basedir}/java/session/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_session.tests" depends="compile.module.fedproclient_session.production" description="compile module fedproclient_session; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_session" description="cleanup module">
+    <delete dir="${fedproclient_session.output.dir}"/>
+    <delete dir="${fedproclient_session.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module fedproclient_client_abstract -->
+  
+  <dirname property="module.fedproclient_client_abstract.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_client_abstract" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_client_abstract" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_client_abstract" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_client_abstract" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_client_abstract.output.dir" value="${module.fedproclient_client_abstract.basedir}/out/production/fedproclient_client_abstract"/>
+  <property name="fedproclient_client_abstract.testoutput.dir" value="${module.fedproclient_client_abstract.basedir}/out/test/fedproclient_client_abstract"/>
+  
+  <path id="fedproclient_client_abstract.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_client_abstract.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_client_abstract}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_client_abstract.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_client_abstract.output.dir}"/>
+    <path refid="fedproclient_session.runtime.production.module.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.production.module.classpath"/>
+  </path>
+  
+  <path id="fedproclient_client_abstract.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_client_abstract}"/>
+    <pathelement location="${fedproclient_client_abstract.output.dir}"/>
+    <pathelement location="${fedproclient_session.testoutput.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <pathelement location="${fedproclient_protobuf.testoutput.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_client_abstract.runtime.module.classpath">
+    <pathelement location="${fedproclient_client_abstract.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_abstract.output.dir}"/>
+    <path refid="fedproclient_session.runtime.module.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_client_abstract">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_client_abstract">
+    <patternset refid="excluded.from.module.fedproclient_client_abstract"/>
+  </patternset>
+  
+  <path id="fedproclient_client_abstract.module.sourcepath">
+    <dirset dir="${module.fedproclient_client_abstract.basedir}/java/client_abstract">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_client_abstract" depends="compile.module.fedproclient_client_abstract.production,compile.module.fedproclient_client_abstract.tests" description="Compile module fedproclient_client_abstract"/>
+  
+  <target name="compile.module.fedproclient_client_abstract.production" depends="compile.module.fedproclient_session,compile.module.fedproclient_protobuf" description="Compile module fedproclient_client_abstract; production classes">
+    <mkdir dir="${fedproclient_client_abstract.output.dir}"/>
+    <javac destdir="${fedproclient_client_abstract.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_client_abstract}/javac">
+      <compilerarg line="${compiler.args.fedproclient_client_abstract}"/>
+      <bootclasspath refid="fedproclient_client_abstract.module.bootclasspath"/>
+      <classpath refid="fedproclient_client_abstract.module.production.classpath"/>
+      <src refid="fedproclient_client_abstract.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_client_abstract"/>
+    </javac>
+    
+    <copy todir="${fedproclient_client_abstract.output.dir}">
+      <fileset dir="${module.fedproclient_client_abstract.basedir}/java/client_abstract/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_client_abstract.tests" depends="compile.module.fedproclient_client_abstract.production" description="compile module fedproclient_client_abstract; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_client_abstract" description="cleanup module">
+    <delete dir="${fedproclient_client_abstract.output.dir}"/>
+    <delete dir="${fedproclient_client_abstract.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module fedproclient_client -->
+  
+  <dirname property="module.fedproclient_client.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_client" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_client" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_client" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_client" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_client.output.dir" value="${module.fedproclient_client.basedir}/out/production/fedproclient_client"/>
+  <property name="fedproclient_client.testoutput.dir" value="${module.fedproclient_client.basedir}/out/test/fedproclient_client"/>
+  
+  <path id="fedproclient_client.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_client.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_client}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <pathelement location="${fedproclient_client_abstract.output.dir}"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_client.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_client.output.dir}"/>
+    <path refid="fedproclient_hla_api.runtime.production.module.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.production.module.classpath"/>
+    <path refid="fedproclient_session.runtime.production.module.classpath"/>
+    <path refid="fedproclient_client_abstract.runtime.production.module.classpath"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_client.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_client}"/>
+    <pathelement location="${fedproclient_client.output.dir}"/>
+    <pathelement location="${fedproclient_hla_api.testoutput.dir}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+    <pathelement location="${fedproclient_protobuf.testoutput.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <pathelement location="${fedproclient_session.testoutput.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <pathelement location="${fedproclient_client_abstract.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_abstract.output.dir}"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  <path id="fedproclient_client.runtime.module.classpath">
+    <pathelement location="${fedproclient_client.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client.output.dir}"/>
+    <path refid="fedproclient_hla_api.runtime.module.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.module.classpath"/>
+    <path refid="fedproclient_session.runtime.module.classpath"/>
+    <path refid="fedproclient_client_abstract.runtime.module.classpath"/>
+    <path refid="library.java-websocket.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_client">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_client">
+    <patternset refid="excluded.from.module.fedproclient_client"/>
+  </patternset>
+  
+  <path id="fedproclient_client.module.sourcepath">
+    <dirset dir="${module.fedproclient_client.basedir}/java/client">
+      <include name="resources"/>
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_client" depends="compile.module.fedproclient_client.production,compile.module.fedproclient_client.tests" description="Compile module fedproclient_client"/>
+  
+  <target name="compile.module.fedproclient_client.production" depends="compile.module.fedproclient_hla_api,compile.module.fedproclient_protobuf,compile.module.fedproclient_session,compile.module.fedproclient_client_abstract" description="Compile module fedproclient_client; production classes">
+    <mkdir dir="${fedproclient_client.output.dir}"/>
+    <javac destdir="${fedproclient_client.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_client}/javac">
+      <compilerarg line="${compiler.args.fedproclient_client}"/>
+      <bootclasspath refid="fedproclient_client.module.bootclasspath"/>
+      <classpath refid="fedproclient_client.module.production.classpath"/>
+      <src refid="fedproclient_client.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_client"/>
+    </javac>
+    
+    <copy todir="${fedproclient_client.output.dir}">
+      <fileset dir="${module.fedproclient_client.basedir}/java/client/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.fedproclient_client.basedir}/java/client/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_client.tests" depends="compile.module.fedproclient_client.production" description="compile module fedproclient_client; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_client" description="cleanup module">
+    <delete dir="${fedproclient_client.output.dir}"/>
+    <delete dir="${fedproclient_client.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module fedproclient_client_evolved -->
+  
+  <dirname property="module.fedproclient_client_evolved.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_client_evolved" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_client_evolved" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_client_evolved" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_client_evolved" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_client_evolved.output.dir" value="${module.fedproclient_client_evolved.basedir}/out/production/fedproclient_client_evolved"/>
+  <property name="fedproclient_client_evolved.testoutput.dir" value="${module.fedproclient_client_evolved.basedir}/out/test/fedproclient_client_evolved"/>
+  
+  <path id="fedproclient_client_evolved.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_client_evolved.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_client_evolved}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <pathelement location="${fedproclient_client_abstract.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.java-websocket.classpath"/>
+  </path>
+  
+  <path id="fedproclient_client_evolved.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+    <path refid="fedproclient_hla_api.runtime.production.module.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.production.module.classpath"/>
+    <path refid="fedproclient_session.runtime.production.module.classpath"/>
+    <path refid="fedproclient_client_abstract.runtime.production.module.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.java-websocket.classpath"/>
+  </path>
+  
+  <path id="fedproclient_client_evolved.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_client_evolved}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+    <pathelement location="${fedproclient_hla_api.testoutput.dir}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+    <pathelement location="${fedproclient_protobuf.testoutput.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <pathelement location="${fedproclient_session.testoutput.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <pathelement location="${fedproclient_client_abstract.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_abstract.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.java-websocket.classpath"/>
+  </path>
+  
+  <path id="fedproclient_client_evolved.runtime.module.classpath">
+    <pathelement location="${fedproclient_client_evolved.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+    <path refid="fedproclient_hla_api.runtime.module.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.module.classpath"/>
+    <path refid="fedproclient_session.runtime.module.classpath"/>
+    <path refid="fedproclient_client_abstract.runtime.module.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.jcip-annotations.classpath"/>
+    <path refid="library.java-websocket.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_client_evolved">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_client_evolved">
+    <patternset refid="excluded.from.module.fedproclient_client_evolved"/>
+  </patternset>
+  
+  <path id="fedproclient_client_evolved.module.sourcepath">
+    <dirset dir="${module.fedproclient_client_evolved.basedir}/java/client_evolved">
+      <include name="resources"/>
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_client_evolved" depends="compile.module.fedproclient_client_evolved.production,compile.module.fedproclient_client_evolved.tests" description="Compile module fedproclient_client_evolved"/>
+  
+  <target name="compile.module.fedproclient_client_evolved.production" depends="compile.module.fedproclient_hla_api,compile.module.fedproclient_protobuf,compile.module.fedproclient_session,compile.module.fedproclient_client_abstract" description="Compile module fedproclient_client_evolved; production classes">
+    <mkdir dir="${fedproclient_client_evolved.output.dir}"/>
+    <javac destdir="${fedproclient_client_evolved.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_client_evolved}/javac">
+      <compilerarg line="${compiler.args.fedproclient_client_evolved}"/>
+      <bootclasspath refid="fedproclient_client_evolved.module.bootclasspath"/>
+      <classpath refid="fedproclient_client_evolved.module.production.classpath"/>
+      <src refid="fedproclient_client_evolved.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_client_evolved"/>
+    </javac>
+    
+    <copy todir="${fedproclient_client_evolved.output.dir}">
+      <fileset dir="${module.fedproclient_client_evolved.basedir}/java/client_evolved/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.fedproclient_client_evolved.basedir}/java/client_evolved/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_client_evolved.tests" depends="compile.module.fedproclient_client_evolved.production" description="compile module fedproclient_client_evolved; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_client_evolved" description="cleanup module">
+    <delete dir="${fedproclient_client_evolved.output.dir}"/>
+    <delete dir="${fedproclient_client_evolved.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module fedproclient_sample -->
+  
+  <dirname property="module.fedproclient_sample.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_sample" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_sample" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_sample" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_sample" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_sample.output.dir" value="${module.fedproclient_sample.basedir}/out/production/fedproclient_sample"/>
+  <property name="fedproclient_sample.testoutput.dir" value="${module.fedproclient_sample.basedir}/out/test/fedproclient_sample"/>
+  
+  <path id="fedproclient_sample.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_sample.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_sample}"/>
+    <pathelement location="${fedproclient_client.output.dir}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_sample.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_sample.output.dir}"/>
+    <path refid="fedproclient_client.runtime.production.module.classpath"/>
+    <path refid="fedproclient_hla_api.runtime.production.module.classpath"/>
+  </path>
+  
+  <path id="fedproclient_sample.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_sample}"/>
+    <pathelement location="${fedproclient_sample.output.dir}"/>
+    <pathelement location="${fedproclient_client.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client.output.dir}"/>
+    <pathelement location="${fedproclient_hla_api.testoutput.dir}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_sample.runtime.module.classpath">
+    <pathelement location="${fedproclient_sample.testoutput.dir}"/>
+    <pathelement location="${fedproclient_sample.output.dir}"/>
+    <path refid="fedproclient_client.runtime.module.classpath"/>
+    <path refid="fedproclient_hla_api.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_sample">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_sample">
+    <patternset refid="excluded.from.module.fedproclient_sample"/>
+  </patternset>
+  
+  <path id="fedproclient_sample.module.sourcepath">
+    <dirset dir="${module.fedproclient_sample.basedir}/java/sample">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_sample" depends="compile.module.fedproclient_sample.production,compile.module.fedproclient_sample.tests" description="Compile module fedproclient_sample"/>
+  
+  <target name="compile.module.fedproclient_sample.production" depends="compile.module.fedproclient_client,compile.module.fedproclient_hla_api" description="Compile module fedproclient_sample; production classes">
+    <mkdir dir="${fedproclient_sample.output.dir}"/>
+    <javac destdir="${fedproclient_sample.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_sample}/javac">
+      <compilerarg line="${compiler.args.fedproclient_sample}"/>
+      <bootclasspath refid="fedproclient_sample.module.bootclasspath"/>
+      <classpath refid="fedproclient_sample.module.production.classpath"/>
+      <src refid="fedproclient_sample.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_sample"/>
+    </javac>
+    
+    <copy todir="${fedproclient_sample.output.dir}">
+      <fileset dir="${module.fedproclient_sample.basedir}/java/sample/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_sample.tests" depends="compile.module.fedproclient_sample.production" description="compile module fedproclient_sample; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_sample" description="cleanup module">
+    <delete dir="${fedproclient_sample.output.dir}"/>
+    <delete dir="${fedproclient_sample.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module fedproclient_sample_evolved -->
+  
+  <dirname property="module.fedproclient_sample_evolved.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_sample_evolved" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_sample_evolved" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_sample_evolved" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_sample_evolved" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_sample_evolved.output.dir" value="${module.fedproclient_sample_evolved.basedir}/out/production/fedproclient_sample_evolved"/>
+  <property name="fedproclient_sample_evolved.testoutput.dir" value="${module.fedproclient_sample_evolved.basedir}/out/test/fedproclient_sample_evolved"/>
+  
+  <path id="fedproclient_sample_evolved.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_sample_evolved.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_sample_evolved}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_sample_evolved.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
+    <path refid="fedproclient_client_evolved.runtime.production.module.classpath"/>
+  </path>
+  
+  <path id="fedproclient_sample_evolved.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_sample_evolved}"/>
+    <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+  </path>
+  
+  <path id="fedproclient_sample_evolved.runtime.module.classpath">
+    <pathelement location="${fedproclient_sample_evolved.testoutput.dir}"/>
+    <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
+    <path refid="fedproclient_client_evolved.runtime.module.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_sample_evolved">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_sample_evolved">
+    <patternset refid="excluded.from.module.fedproclient_sample_evolved"/>
+  </patternset>
+  
+  <path id="fedproclient_sample_evolved.module.sourcepath">
+    <dirset dir="${module.fedproclient_sample_evolved.basedir}/java/sample_evolved">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_sample_evolved" depends="compile.module.fedproclient_sample_evolved.production,compile.module.fedproclient_sample_evolved.tests" description="Compile module fedproclient_sample_evolved"/>
+  
+  <target name="compile.module.fedproclient_sample_evolved.production" depends="compile.module.fedproclient_client_evolved" description="Compile module fedproclient_sample_evolved; production classes">
+    <mkdir dir="${fedproclient_sample_evolved.output.dir}"/>
+    <javac destdir="${fedproclient_sample_evolved.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_sample_evolved}/javac">
+      <compilerarg line="${compiler.args.fedproclient_sample_evolved}"/>
+      <bootclasspath refid="fedproclient_sample_evolved.module.bootclasspath"/>
+      <classpath refid="fedproclient_sample_evolved.module.production.classpath"/>
+      <src refid="fedproclient_sample_evolved.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_sample_evolved"/>
+    </javac>
+    
+    <copy todir="${fedproclient_sample_evolved.output.dir}">
+      <fileset dir="${module.fedproclient_sample_evolved.basedir}/java/sample_evolved/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_sample_evolved.tests" depends="compile.module.fedproclient_sample_evolved.production" description="compile module fedproclient_sample_evolved; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_sample_evolved" description="cleanup module">
+    <delete dir="${fedproclient_sample_evolved.output.dir}"/>
+    <delete dir="${fedproclient_sample_evolved.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.fedproclient_hla_api, clean.module.fedproclient_protobuf, clean.module.fedproclient_session, clean.module.fedproclient_client_abstract, clean.module.fedproclient_client, clean.module.fedproclient_client_evolved, clean.module.fedproclient_sample, clean.module.fedproclient_sample_evolved" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.fedproclient_hla_api, compile.module.fedproclient_protobuf, compile.module.fedproclient_session, compile.module.fedproclient_client_abstract, compile.module.fedproclient_client, compile.module.fedproclient_client_evolved, compile.module.fedproclient_sample, compile.module.fedproclient_sample_evolved" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>
