@@ -22,4 +22,6 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Build with Ant
+      env:
+        JDK11_HOME: ${{ env.JAVA_HOME }}
       run: ant -noinput -buildfile build.xml
