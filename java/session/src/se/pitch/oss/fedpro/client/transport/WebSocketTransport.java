@@ -16,6 +16,7 @@
 
 package se.pitch.oss.fedpro.client.transport;
 
+import se.pitch.oss.fedpro.client.TypedProperties;
 import se.pitch.oss.fedpro.common.transport.FedProSocket;
 import se.pitch.oss.fedpro.common.transport.websockets.WebSocketSocket;
 
@@ -24,11 +25,34 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 
+import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_CONNECTION_HOST;
+import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_CONNECTION_PORT;
+import static se.pitch.oss.fedpro.client.transport.TransportSettings.*;
+import static se.pitch.oss.fedpro.common.Ports.DEFAULT_PORT_WS;
+
 public class WebSocketTransport extends TransportBase {
 
    public WebSocketTransport(String host, int port)
    {
       super(host, port);
+   }
+
+   public WebSocketTransport(TypedProperties settings)
+   {
+      super(
+            settings == null ?
+                  DEFAULT_CONNECTION_HOST :
+                  settings.getString(SETTING_NAME_CONNECTION_HOST, DEFAULT_CONNECTION_HOST),
+            settings == null ?
+                  DEFAULT_PORT_WS :
+                  settings.getInt(SETTING_NAME_CONNECTION_PORT, DEFAULT_PORT_WS));
+
+      TypedProperties allTransportSettingsUsed = new TypedProperties();
+      allTransportSettingsUsed.setString(SETTING_NAME_CONNECTION_HOST, _host);
+      allTransportSettingsUsed.setInt(SETTING_NAME_CONNECTION_PORT, _port);
+      LOGGER.config(() -> String.format(
+            "Federate Protocol client transport layer settings used:\n%s",
+            allTransportSettingsUsed.toPrettyString()));
    }
 
    @Override
@@ -55,7 +79,9 @@ public class WebSocketTransport extends TransportBase {
       impl.setTcpNoDelay(true);
 
       try {
-         impl.connectBlocking();
+         if (!impl.connectBlocking()) {
+            throw new IOException("Could not connect to server at " + host + ":" + port);
+         }
       } catch (InterruptedException ignore) {
       }
       return new WebSocketSocket(impl);

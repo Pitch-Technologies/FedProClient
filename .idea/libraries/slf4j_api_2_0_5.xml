@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="slf4j-api-2.0.5">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/java/lib/slf4j-api-2.0.5.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

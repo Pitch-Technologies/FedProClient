@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_fedproclient_sample_evolved" default="compile.module.fedproclient_sample_evolved">
+  <dirname property="module.fedproclient_sample_evolved.basedir" file="${ant.file.module_fedproclient_sample_evolved}"/>
+  
+  <property name="module.jdk.home.fedproclient_sample_evolved" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_sample_evolved" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_sample_evolved" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_sample_evolved" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_sample_evolved.output.dir" value="${module.fedproclient_sample_evolved.basedir}/../../../../output/production/fedproclient_sample_evolved"/>
+  <property name="fedproclient_sample_evolved.testoutput.dir" value="${module.fedproclient_sample_evolved.basedir}/../../../../output/test/fedproclient_sample_evolved"/>
+  
+  <path id="fedproclient_sample_evolved.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_sample_evolved.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_sample_evolved}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+    <path refid="library.slf4j-api-2.0.5.classpath"/>
+  </path>
+  
+  <path id="fedproclient_sample_evolved.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
+    <path refid="fedproclient_client_evolved.runtime.production.module.classpath"/>
+    <path refid="library.slf4j-api-2.0.5.classpath"/>
+  </path>
+  
+  <path id="fedproclient_sample_evolved.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_sample_evolved}"/>
+    <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+    <path refid="library.slf4j-api-2.0.5.classpath"/>
+  </path>
+  
+  <path id="fedproclient_sample_evolved.runtime.module.classpath">
+    <pathelement location="${fedproclient_sample_evolved.testoutput.dir}"/>
+    <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
+    <path refid="fedproclient_client_evolved.runtime.module.classpath"/>
+    <path refid="library.slf4j-api-2.0.5.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_sample_evolved">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_sample_evolved">
+    <patternset refid="excluded.from.module.fedproclient_sample_evolved"/>
+  </patternset>
+  
+  <path id="fedproclient_sample_evolved.module.sourcepath">
+    <dirset dir="${module.fedproclient_sample_evolved.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_sample_evolved" depends="compile.module.fedproclient_sample_evolved.production,compile.module.fedproclient_sample_evolved.tests" description="Compile module fedproclient_sample_evolved"/>
+  
+  <target name="compile.module.fedproclient_sample_evolved.production" depends="compile.module.fedproclient_client_evolved" description="Compile module fedproclient_sample_evolved; production classes">
+    <mkdir dir="${fedproclient_sample_evolved.output.dir}"/>
+    <javac destdir="${fedproclient_sample_evolved.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_sample_evolved}/javac">
+      <compilerarg line="${compiler.args.fedproclient_sample_evolved}"/>
+      <bootclasspath refid="fedproclient_sample_evolved.module.bootclasspath"/>
+      <classpath refid="fedproclient_sample_evolved.module.production.classpath"/>
+      <src refid="fedproclient_sample_evolved.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_sample_evolved"/>
+    </javac>
+    
+    <copy todir="${fedproclient_sample_evolved.output.dir}">
+      <fileset dir="${module.fedproclient_sample_evolved.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_sample_evolved.tests" depends="compile.module.fedproclient_sample_evolved.production" description="compile module fedproclient_sample_evolved; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_sample_evolved" description="cleanup module">
+    <delete dir="${fedproclient_sample_evolved.output.dir}"/>
+    <delete dir="${fedproclient_sample_evolved.testoutput.dir}"/>
+  </target>
+</project>

@@ -20,11 +20,6 @@ public final class FederateAmbassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_ConnectionLost_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_FederateResigned_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_FederateResigned_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_ReportFederationExecutions_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -39,6 +34,11 @@ public final class FederateAmbassador {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_ReportFederationExecutionDoesNotExist_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_FederateResigned_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_FederateResigned_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_SynchronizationPointRegistrationSucceeded_descriptor;
   static final 
@@ -240,15 +240,15 @@ public final class FederateAmbassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_ConfirmAttributeTransportationTypeChange_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_ReportAttributeTransportationType_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_ReportAttributeTransportationType_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_ReportInteractionTransportationType_descriptor;
   static final 
@@ -350,16 +350,16 @@ public final class FederateAmbassador {
     java.lang.String[] descriptorData = {
       "\n\030FederateAmbassador.proto\022\023rti1516_202X" +
       ".fedpro\032\017datatypes.proto\"*\n\016ConnectionLo" +
-      "st\022\030\n\020faultDescription\030\001 \001(\t\"6\n\020Federate" +
-      "Resigned\022\"\n\032reasonForResignDescription\030\001" +
-      " \001(\t\"d\n\032ReportFederationExecutions\022F\n\006re" +
-      "port\030\001 \001(\01326.rti1516_202X.fedpro.Federat" +
-      "ionExecutionInformationSet\"\210\001\n ReportFed" +
-      "erationExecutionMembers\022\026\n\016federationNam" +
-      "e\030\001 \001(\t\022L\n\006report\030\002 \001(\0132<.rti1516_202X.f" +
-      "edpro.FederationExecutionMemberInformati" +
-      "onSet\"?\n%ReportFederationExecutionDoesNo" +
-      "tExist\022\026\n\016federationName\030\001 \001(\t\"N\n)Synchr" +
+      "st\022\030\n\020faultDescription\030\001 \001(\t\"d\n\032ReportFe" +
+      "derationExecutions\022F\n\006report\030\001 \001(\01326.rti" +
+      "1516_202X.fedpro.FederationExecutionInfo" +
+      "rmationSet\"\210\001\n ReportFederationExecution" +
+      "Members\022\026\n\016federationName\030\001 \001(\t\022L\n\006repor" +
+      "t\030\002 \001(\0132<.rti1516_202X.fedpro.Federation" +
+      "ExecutionMemberInformationSet\"?\n%ReportF" +
+      "ederationExecutionDoesNotExist\022\026\n\016federa" +
+      "tionName\030\001 \001(\t\"6\n\020FederateResigned\022\"\n\032re" +
+      "asonForResignDescription\030\001 \001(\t\"N\n)Synchr" +
       "onizationPointRegistrationSucceeded\022!\n\031s" +
       "ynchronizationPointLabel\030\001 \001(\t\"\223\001\n&Synch" +
       "ronizationPointRegistrationFailed\022!\n\031syn" +
@@ -539,16 +539,16 @@ public final class FederateAmbassador {
       "utes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attribu" +
       "teHandleSet\022I\n\022transportationType\030\003 \001(\0132" +
       "-.rti1516_202X.fedpro.TransportationType" +
-      "Handle\"\276\001\n*ConfirmInteractionTransportat" +
-      "ionTypeChange\022E\n\020interactionClass\030\001 \001(\0132" +
-      "+.rti1516_202X.fedpro.InteractionClassHa" +
-      "ndle\022I\n\022transportationType\030\002 \001(\0132-.rti15" +
-      "16_202X.fedpro.TransportationTypeHandle\"" +
-      "\352\001\n!ReportAttributeTransportationType\022A\n" +
-      "\016objectInstance\030\001 \001(\0132).rti1516_202X.fed" +
-      "pro.ObjectInstanceHandle\0227\n\tattribute\030\002 " +
-      "\001(\0132$.rti1516_202X.fedpro.AttributeHandl" +
-      "e\022I\n\022transportationType\030\003 \001(\0132-.rti1516_" +
+      "Handle\"\352\001\n!ReportAttributeTransportation" +
+      "Type\022A\n\016objectInstance\030\001 \001(\0132).rti1516_2" +
+      "02X.fedpro.ObjectInstanceHandle\0227\n\tattri" +
+      "bute\030\002 \001(\0132$.rti1516_202X.fedpro.Attribu" +
+      "teHandle\022I\n\022transportationType\030\003 \001(\0132-.r" +
+      "ti1516_202X.fedpro.TransportationTypeHan" +
+      "dle\"\276\001\n*ConfirmInteractionTransportation" +
+      "TypeChange\022E\n\020interactionClass\030\001 \001(\0132+.r" +
+      "ti1516_202X.fedpro.InteractionClassHandl" +
+      "e\022I\n\022transportationType\030\002 \001(\0132-.rti1516_" +
       "202X.fedpro.TransportationTypeHandle\"\356\001\n" +
       "#ReportInteractionTransportationType\0225\n\010" +
       "federate\030\001 \001(\0132#.rti1516_202X.fedpro.Fed" +
@@ -611,16 +611,16 @@ public final class FederateAmbassador {
       ".fedpro.MessageRetractionHandle\"\023\n\021Callb" +
       "ackSucceeded\"\373+\n\017CallbackRequest\022=\n\016conn" +
       "ectionLost\030\001 \001(\0132#.rti1516_202X.fedpro.C" +
-      "onnectionLostH\000\022A\n\020federateResigned\030\002 \001(" +
-      "\0132%.rti1516_202X.fedpro.FederateResigned" +
-      "H\000\022U\n\032reportFederationExecutions\030\003 \001(\0132/" +
-      ".rti1516_202X.fedpro.ReportFederationExe" +
-      "cutionsH\000\022a\n reportFederationExecutionMe" +
-      "mbers\030\004 \001(\01325.rti1516_202X.fedpro.Report" +
-      "FederationExecutionMembersH\000\022k\n%reportFe" +
-      "derationExecutionDoesNotExist\030\005 \001(\0132:.rt" +
-      "i1516_202X.fedpro.ReportFederationExecut" +
-      "ionDoesNotExistH\000\022s\n)synchronizationPoin" +
+      "onnectionLostH\000\022U\n\032reportFederationExecu" +
+      "tions\030\002 \001(\0132/.rti1516_202X.fedpro.Report" +
+      "FederationExecutionsH\000\022a\n reportFederati" +
+      "onExecutionMembers\030\003 \001(\01325.rti1516_202X." +
+      "fedpro.ReportFederationExecutionMembersH" +
+      "\000\022k\n%reportFederationExecutionDoesNotExi" +
+      "st\030\004 \001(\0132:.rti1516_202X.fedpro.ReportFed" +
+      "erationExecutionDoesNotExistH\000\022A\n\020federa" +
+      "teResigned\030\005 \001(\0132%.rti1516_202X.fedpro.F" +
+      "ederateResignedH\000\022s\n)synchronizationPoin" +
       "tRegistrationSucceeded\030\006 \001(\0132>.rti1516_2" +
       "02X.fedpro.SynchronizationPointRegistrat" +
       "ionSucceededH\000\022m\n&synchronizationPointRe" +
@@ -710,13 +710,13 @@ public final class FederateAmbassador {
       "urnUpdatesOffForObjectInstanceH\000\022q\n(conf" +
       "irmAttributeTransportationTypeChange\030- \001" +
       "(\0132=.rti1516_202X.fedpro.ConfirmAttribut" +
-      "eTransportationTypeChangeH\000\022u\n*confirmIn" +
-      "teractionTransportationTypeChange\030. \001(\0132" +
-      "?.rti1516_202X.fedpro.ConfirmInteraction" +
-      "TransportationTypeChangeH\000\022c\n!reportAttr" +
-      "ibuteTransportationType\030/ \001(\01326.rti1516_" +
-      "202X.fedpro.ReportAttributeTransportatio" +
-      "nTypeH\000\022g\n#reportInteractionTransportati" +
+      "eTransportationTypeChangeH\000\022c\n!reportAtt" +
+      "ributeTransportationType\030. \001(\01326.rti1516" +
+      "_202X.fedpro.ReportAttributeTransportati" +
+      "onTypeH\000\022u\n*confirmInteractionTransporta" +
+      "tionTypeChange\030/ \001(\0132?.rti1516_202X.fedp" +
+      "ro.ConfirmInteractionTransportationTypeC" +
+      "hangeH\000\022g\n#reportInteractionTransportati" +
       "onType\0300 \001(\01328.rti1516_202X.fedpro.Repor" +
       "tInteractionTransportationTypeH\000\022g\n#requ" +
       "estAttributeOwnershipAssumption\0301 \001(\01328." +
@@ -768,30 +768,30 @@ public final class FederateAmbassador {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectionLost_descriptor,
         new java.lang.String[] { "FaultDescription", });
-    internal_static_rti1516_202X_fedpro_FederateResigned_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_rti1516_202X_fedpro_FederateResigned_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_FederateResigned_descriptor,
-        new java.lang.String[] { "ReasonForResignDescription", });
     internal_static_rti1516_202X_fedpro_ReportFederationExecutions_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_rti1516_202X_fedpro_ReportFederationExecutions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReportFederationExecutions_descriptor,
         new java.lang.String[] { "Report", });
     internal_static_rti1516_202X_fedpro_ReportFederationExecutionMembers_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_rti1516_202X_fedpro_ReportFederationExecutionMembers_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReportFederationExecutionMembers_descriptor,
         new java.lang.String[] { "FederationName", "Report", });
     internal_static_rti1516_202X_fedpro_ReportFederationExecutionDoesNotExist_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_rti1516_202X_fedpro_ReportFederationExecutionDoesNotExist_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReportFederationExecutionDoesNotExist_descriptor,
         new java.lang.String[] { "FederationName", });
+    internal_static_rti1516_202X_fedpro_FederateResigned_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_rti1516_202X_fedpro_FederateResigned_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_FederateResigned_descriptor,
+        new java.lang.String[] { "ReasonForResignDescription", });
     internal_static_rti1516_202X_fedpro_SynchronizationPointRegistrationSucceeded_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_rti1516_202X_fedpro_SynchronizationPointRegistrationSucceeded_fieldAccessorTable = new
@@ -1032,18 +1032,18 @@ public final class FederateAmbassador {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConfirmAttributeTransportationTypeChange_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "TransportationType", });
-    internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_descriptor =
-      getDescriptor().getMessageTypes().get(45);
-    internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_descriptor,
-        new java.lang.String[] { "InteractionClass", "TransportationType", });
     internal_static_rti1516_202X_fedpro_ReportAttributeTransportationType_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_rti1516_202X_fedpro_ReportAttributeTransportationType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReportAttributeTransportationType_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attribute", "TransportationType", });
+    internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_ConfirmInteractionTransportationTypeChange_descriptor,
+        new java.lang.String[] { "InteractionClass", "TransportationType", });
     internal_static_rti1516_202X_fedpro_ReportInteractionTransportationType_descriptor =
       getDescriptor().getMessageTypes().get(47);
     internal_static_rti1516_202X_fedpro_ReportInteractionTransportationType_fieldAccessorTable = new
@@ -1145,7 +1145,7 @@ public final class FederateAmbassador {
     internal_static_rti1516_202X_fedpro_CallbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CallbackRequest_descriptor,
-        new java.lang.String[] { "ConnectionLost", "FederateResigned", "ReportFederationExecutions", "ReportFederationExecutionMembers", "ReportFederationExecutionDoesNotExist", "SynchronizationPointRegistrationSucceeded", "SynchronizationPointRegistrationFailed", "AnnounceSynchronizationPoint", "FederationSynchronized", "InitiateFederateSave", "InitiateFederateSaveWithTime", "FederationSaved", "FederationNotSaved", "FederationSaveStatusResponse", "RequestFederationRestoreSucceeded", "RequestFederationRestoreFailed", "FederationRestoreBegun", "InitiateFederateRestore", "FederationRestored", "FederationNotRestored", "FederationRestoreStatusResponse", "StartRegistrationForObjectClass", "StopRegistrationForObjectClass", "TurnInteractionsOn", "TurnInteractionsOff", "ObjectInstanceNameReservationSucceeded", "ObjectInstanceNameReservationFailed", "MultipleObjectInstanceNameReservationSucceeded", "MultipleObjectInstanceNameReservationFailed", "DiscoverObjectInstance", "ReflectAttributeValues", "ReflectAttributeValuesWithTime", "ReceiveInteraction", "ReceiveInteractionWithTime", "ReceiveDirectedInteraction", "ReceiveDirectedInteractionWithTime", "RemoveObjectInstance", "RemoveObjectInstanceWithTime", "AttributesInScope", "AttributesOutOfScope", "ProvideAttributeValueUpdate", "TurnUpdatesOnForObjectInstance", "TurnUpdatesOnForObjectInstanceWithRate", "TurnUpdatesOffForObjectInstance", "ConfirmAttributeTransportationTypeChange", "ConfirmInteractionTransportationTypeChange", "ReportAttributeTransportationType", "ReportInteractionTransportationType", "RequestAttributeOwnershipAssumption", "RequestDivestitureConfirmation", "AttributeOwnershipAcquisitionNotification", "AttributeOwnershipUnavailable", "RequestAttributeOwnershipRelease", "ConfirmAttributeOwnershipAcquisitionCancellation", "InformAttributeOwnership", "AttributeIsNotOwned", "AttributeIsOwnedByRTI", "TimeRegulationEnabled", "TimeConstrainedEnabled", "FlushQueueGrant", "TimeAdvanceGrant", "RequestRetraction", "CallbackRequest", });
+        new java.lang.String[] { "ConnectionLost", "ReportFederationExecutions", "ReportFederationExecutionMembers", "ReportFederationExecutionDoesNotExist", "FederateResigned", "SynchronizationPointRegistrationSucceeded", "SynchronizationPointRegistrationFailed", "AnnounceSynchronizationPoint", "FederationSynchronized", "InitiateFederateSave", "InitiateFederateSaveWithTime", "FederationSaved", "FederationNotSaved", "FederationSaveStatusResponse", "RequestFederationRestoreSucceeded", "RequestFederationRestoreFailed", "FederationRestoreBegun", "InitiateFederateRestore", "FederationRestored", "FederationNotRestored", "FederationRestoreStatusResponse", "StartRegistrationForObjectClass", "StopRegistrationForObjectClass", "TurnInteractionsOn", "TurnInteractionsOff", "ObjectInstanceNameReservationSucceeded", "ObjectInstanceNameReservationFailed", "MultipleObjectInstanceNameReservationSucceeded", "MultipleObjectInstanceNameReservationFailed", "DiscoverObjectInstance", "ReflectAttributeValues", "ReflectAttributeValuesWithTime", "ReceiveInteraction", "ReceiveInteractionWithTime", "ReceiveDirectedInteraction", "ReceiveDirectedInteractionWithTime", "RemoveObjectInstance", "RemoveObjectInstanceWithTime", "AttributesInScope", "AttributesOutOfScope", "ProvideAttributeValueUpdate", "TurnUpdatesOnForObjectInstance", "TurnUpdatesOnForObjectInstanceWithRate", "TurnUpdatesOffForObjectInstance", "ConfirmAttributeTransportationTypeChange", "ReportAttributeTransportationType", "ConfirmInteractionTransportationTypeChange", "ReportInteractionTransportationType", "RequestAttributeOwnershipAssumption", "RequestDivestitureConfirmation", "AttributeOwnershipAcquisitionNotification", "AttributeOwnershipUnavailable", "RequestAttributeOwnershipRelease", "ConfirmAttributeOwnershipAcquisitionCancellation", "InformAttributeOwnership", "AttributeIsNotOwned", "AttributeIsOwnedByRTI", "TimeRegulationEnabled", "TimeConstrainedEnabled", "FlushQueueGrant", "TimeAdvanceGrant", "RequestRetraction", "CallbackRequest", });
     internal_static_rti1516_202X_fedpro_CallbackResponse_descriptor =
       getDescriptor().getMessageTypes().get(64);
     internal_static_rti1516_202X_fedpro_CallbackResponse_fieldAccessorTable = new

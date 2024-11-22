@@ -43,30 +43,30 @@ private static final long serialVersionUID = 0L;
             hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest.class, hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest.Builder.class);
   }
 
-  public static final int THEOBJECTCLASS_FIELD_NUMBER = 1;
-  private hla.rti1516_202X.fedpro.ObjectClassHandle theObjectClass_;
+  public static final int OBJECTCLASS_FIELD_NUMBER = 1;
+  private hla.rti1516_202X.fedpro.ObjectClassHandle objectClass_;
   /**
-   * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
-   * @return Whether the theObjectClass field is set.
+   * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
+   * @return Whether the objectClass field is set.
    */
   @java.lang.Override
-  public boolean hasTheObjectClass() {
-    return theObjectClass_ != null;
+  public boolean hasObjectClass() {
+    return objectClass_ != null;
   }
   /**
-   * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
-   * @return The theObjectClass.
+   * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
+   * @return The objectClass.
    */
   @java.lang.Override
-  public hla.rti1516_202X.fedpro.ObjectClassHandle getTheObjectClass() {
-    return theObjectClass_ == null ? hla.rti1516_202X.fedpro.ObjectClassHandle.getDefaultInstance() : theObjectClass_;
+  public hla.rti1516_202X.fedpro.ObjectClassHandle getObjectClass() {
+    return objectClass_ == null ? hla.rti1516_202X.fedpro.ObjectClassHandle.getDefaultInstance() : objectClass_;
   }
   /**
-   * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+   * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
    */
   @java.lang.Override
-  public hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder getTheObjectClassOrBuilder() {
-    return getTheObjectClass();
+  public hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder getObjectClassOrBuilder() {
+    return getObjectClass();
   }
 
   public static final int ATTRIBUTES_FIELD_NUMBER = 2;
@@ -135,8 +135,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (theObjectClass_ != null) {
-      output.writeMessage(1, getTheObjectClass());
+    if (objectClass_ != null) {
+      output.writeMessage(1, getObjectClass());
     }
     if (attributes_ != null) {
       output.writeMessage(2, getAttributes());
@@ -153,9 +153,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (theObjectClass_ != null) {
+    if (objectClass_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getTheObjectClass());
+        .computeMessageSize(1, getObjectClass());
     }
     if (attributes_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -180,10 +180,10 @@ private static final long serialVersionUID = 0L;
     }
     hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest other = (hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest) obj;
 
-    if (hasTheObjectClass() != other.hasTheObjectClass()) return false;
-    if (hasTheObjectClass()) {
-      if (!getTheObjectClass()
-          .equals(other.getTheObjectClass())) return false;
+    if (hasObjectClass() != other.hasObjectClass()) return false;
+    if (hasObjectClass()) {
+      if (!getObjectClass()
+          .equals(other.getObjectClass())) return false;
     }
     if (hasAttributes() != other.hasAttributes()) return false;
     if (hasAttributes()) {
@@ -206,9 +206,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasTheObjectClass()) {
-      hash = (37 * hash) + THEOBJECTCLASS_FIELD_NUMBER;
-      hash = (53 * hash) + getTheObjectClass().hashCode();
+    if (hasObjectClass()) {
+      hash = (37 * hash) + OBJECTCLASS_FIELD_NUMBER;
+      hash = (53 * hash) + getObjectClass().hashCode();
     }
     if (hasAttributes()) {
       hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
@@ -346,11 +346,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (theObjectClassBuilder_ == null) {
-        theObjectClass_ = null;
+      if (objectClassBuilder_ == null) {
+        objectClass_ = null;
       } else {
-        theObjectClass_ = null;
-        theObjectClassBuilder_ = null;
+        objectClass_ = null;
+        objectClassBuilder_ = null;
       }
       if (attributesBuilder_ == null) {
         attributes_ = null;
@@ -390,10 +390,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest buildPartial() {
       hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest result = new hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest(this);
-      if (theObjectClassBuilder_ == null) {
-        result.theObjectClass_ = theObjectClass_;
+      if (objectClassBuilder_ == null) {
+        result.objectClass_ = objectClass_;
       } else {
-        result.theObjectClass_ = theObjectClassBuilder_.build();
+        result.objectClass_ = objectClassBuilder_.build();
       }
       if (attributesBuilder_ == null) {
         result.attributes_ = attributes_;
@@ -453,8 +453,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest other) {
       if (other == hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest.getDefaultInstance()) return this;
-      if (other.hasTheObjectClass()) {
-        mergeTheObjectClass(other.getTheObjectClass());
+      if (other.hasObjectClass()) {
+        mergeObjectClass(other.getObjectClass());
       }
       if (other.hasAttributes()) {
         mergeAttributes(other.getAttributes());
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getTheObjectClassFieldBuilder().getBuilder(),
+                  getObjectClassFieldBuilder().getBuilder(),
                   extensionRegistry);
 
               break;
@@ -525,123 +525,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private hla.rti1516_202X.fedpro.ObjectClassHandle theObjectClass_;
+    private hla.rti1516_202X.fedpro.ObjectClassHandle objectClass_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.ObjectClassHandle, hla.rti1516_202X.fedpro.ObjectClassHandle.Builder, hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder> theObjectClassBuilder_;
+        hla.rti1516_202X.fedpro.ObjectClassHandle, hla.rti1516_202X.fedpro.ObjectClassHandle.Builder, hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder> objectClassBuilder_;
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
-     * @return Whether the theObjectClass field is set.
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
+     * @return Whether the objectClass field is set.
      */
-    public boolean hasTheObjectClass() {
-      return theObjectClassBuilder_ != null || theObjectClass_ != null;
+    public boolean hasObjectClass() {
+      return objectClassBuilder_ != null || objectClass_ != null;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
-     * @return The theObjectClass.
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
+     * @return The objectClass.
      */
-    public hla.rti1516_202X.fedpro.ObjectClassHandle getTheObjectClass() {
-      if (theObjectClassBuilder_ == null) {
-        return theObjectClass_ == null ? hla.rti1516_202X.fedpro.ObjectClassHandle.getDefaultInstance() : theObjectClass_;
+    public hla.rti1516_202X.fedpro.ObjectClassHandle getObjectClass() {
+      if (objectClassBuilder_ == null) {
+        return objectClass_ == null ? hla.rti1516_202X.fedpro.ObjectClassHandle.getDefaultInstance() : objectClass_;
       } else {
-        return theObjectClassBuilder_.getMessage();
+        return objectClassBuilder_.getMessage();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
      */
-    public Builder setTheObjectClass(hla.rti1516_202X.fedpro.ObjectClassHandle value) {
-      if (theObjectClassBuilder_ == null) {
+    public Builder setObjectClass(hla.rti1516_202X.fedpro.ObjectClassHandle value) {
+      if (objectClassBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        theObjectClass_ = value;
+        objectClass_ = value;
         onChanged();
       } else {
-        theObjectClassBuilder_.setMessage(value);
+        objectClassBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
      */
-    public Builder setTheObjectClass(
+    public Builder setObjectClass(
         hla.rti1516_202X.fedpro.ObjectClassHandle.Builder builderForValue) {
-      if (theObjectClassBuilder_ == null) {
-        theObjectClass_ = builderForValue.build();
+      if (objectClassBuilder_ == null) {
+        objectClass_ = builderForValue.build();
         onChanged();
       } else {
-        theObjectClassBuilder_.setMessage(builderForValue.build());
+        objectClassBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
      */
-    public Builder mergeTheObjectClass(hla.rti1516_202X.fedpro.ObjectClassHandle value) {
-      if (theObjectClassBuilder_ == null) {
-        if (theObjectClass_ != null) {
-          theObjectClass_ =
-            hla.rti1516_202X.fedpro.ObjectClassHandle.newBuilder(theObjectClass_).mergeFrom(value).buildPartial();
+    public Builder mergeObjectClass(hla.rti1516_202X.fedpro.ObjectClassHandle value) {
+      if (objectClassBuilder_ == null) {
+        if (objectClass_ != null) {
+          objectClass_ =
+            hla.rti1516_202X.fedpro.ObjectClassHandle.newBuilder(objectClass_).mergeFrom(value).buildPartial();
         } else {
-          theObjectClass_ = value;
+          objectClass_ = value;
         }
         onChanged();
       } else {
-        theObjectClassBuilder_.mergeFrom(value);
+        objectClassBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
      */
-    public Builder clearTheObjectClass() {
-      if (theObjectClassBuilder_ == null) {
-        theObjectClass_ = null;
+    public Builder clearObjectClass() {
+      if (objectClassBuilder_ == null) {
+        objectClass_ = null;
         onChanged();
       } else {
-        theObjectClass_ = null;
-        theObjectClassBuilder_ = null;
+        objectClass_ = null;
+        objectClassBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
      */
-    public hla.rti1516_202X.fedpro.ObjectClassHandle.Builder getTheObjectClassBuilder() {
+    public hla.rti1516_202X.fedpro.ObjectClassHandle.Builder getObjectClassBuilder() {
       
       onChanged();
-      return getTheObjectClassFieldBuilder().getBuilder();
+      return getObjectClassFieldBuilder().getBuilder();
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
      */
-    public hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder getTheObjectClassOrBuilder() {
-      if (theObjectClassBuilder_ != null) {
-        return theObjectClassBuilder_.getMessageOrBuilder();
+    public hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder getObjectClassOrBuilder() {
+      if (objectClassBuilder_ != null) {
+        return objectClassBuilder_.getMessageOrBuilder();
       } else {
-        return theObjectClass_ == null ?
-            hla.rti1516_202X.fedpro.ObjectClassHandle.getDefaultInstance() : theObjectClass_;
+        return objectClass_ == null ?
+            hla.rti1516_202X.fedpro.ObjectClassHandle.getDefaultInstance() : objectClass_;
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+     * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.ObjectClassHandle, hla.rti1516_202X.fedpro.ObjectClassHandle.Builder, hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder> 
-        getTheObjectClassFieldBuilder() {
-      if (theObjectClassBuilder_ == null) {
-        theObjectClassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getObjectClassFieldBuilder() {
+      if (objectClassBuilder_ == null) {
+        objectClassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             hla.rti1516_202X.fedpro.ObjectClassHandle, hla.rti1516_202X.fedpro.ObjectClassHandle.Builder, hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder>(
-                getTheObjectClass(),
+                getObjectClass(),
                 getParentForChildren(),
                 isClean());
-        theObjectClass_ = null;
+        objectClass_ = null;
       }
-      return theObjectClassBuilder_;
+      return objectClassBuilder_;
     }
 
     private hla.rti1516_202X.fedpro.AttributeHandleSet attributes_;

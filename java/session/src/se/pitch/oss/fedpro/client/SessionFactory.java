@@ -19,46 +19,92 @@ package se.pitch.oss.fedpro.client;
 import se.pitch.oss.fedpro.client.session.PersistentSessionImpl;
 import se.pitch.oss.fedpro.client.session.SessionImpl;
 
-import static se.pitch.oss.fedpro.client.TimeoutConstants.DEFAULT_RECONNECT_DELAY_MILLIS;
-import static se.pitch.oss.fedpro.client.TimeoutConstants.DEFAULT_RECONNECT_LIMIT_MILLIS;
-
 public class SessionFactory {
 
    /**
     * Create a new client session.
     *
-    * @param transport client transport to use
+    * @param transportProtocol Client transport to be used for the new session.
+    * @return A new Session instance.
     */
-   public static Session createSession(Transport transport)
+   public static Session createSession(Transport transportProtocol)
    {
-      return new SessionImpl(transport);
+      return createSession(transportProtocol, null);
    }
 
    /**
-    * @param transportProtocol      The underlying transport layer
-    * @param connectionLostListener The listener to be called when the session is terminally lost due to connection issues
+    * Create a new client session.
+    *
+    * @param transportProtocol Client transport to be used for the new session.
+    * @param settings          The FedProProperties object instance which session
+    *                          layer settings will be loaded from.
+    *                          Unprovided settings will get default values and
+    *                          non-session settings will be ignored.
+    * @return A new Session instance.
+    */
+   public static Session createSession(
+         Transport transportProtocol, TypedProperties settings)
+   {
+      return new SessionImpl(transportProtocol, settings);
+   }
+
+   /**
+    * Create a new persistent client session with default resume strategy.
+    *
+    * @param transportProtocol      The underlying transport protocol.
+    * @param connectionLostListener The listener to be invoked when the session is
+    *                               terminally lost due to connection issues.
+    * @return A new PersistentSession instance.
     */
    public static PersistentSession createPersistentSession(
-         Transport transportProtocol,
-         PersistentSession.ConnectionLostListener connectionLostListener)
+         Transport transportProtocol, PersistentSession.ConnectionLostListener connectionLostListener)
    {
-      ResumeStrategy strategy =
-            new SimpleResumeStrategy(DEFAULT_RECONNECT_DELAY_MILLIS, DEFAULT_RECONNECT_LIMIT_MILLIS);
-      return createPersistentSession(transportProtocol, connectionLostListener, strategy);
+      return createPersistentSession(transportProtocol, connectionLostListener, null);
    }
 
    /**
-    * @param transportProtocol      The underlying transport layer
-    * @param connectionLostListener The listener to be called when the session is terminally lost due to connection issues
-    * @param resumeStrategy         A ResumeStrategy instance that will control when, how often and for how long reconnection
-    *                               attempts will be made
+    * Create a new persistent client session with default resume strategy.
+    *
+    * @param transportProtocol      The underlying transport protocol.
+    * @param connectionLostListener The listener to be invoked when the session is
+    *                               terminally lost due to connection issues.
+    * @param settings               The FedProProperties object instance which session
+    *                               layer settings will be loaded from.
+    *                               Unprovided settings will get default values and
+    *                               non-session settings will be ignored.
+    * @return A new PersistentSession instance.
     */
    public static PersistentSession createPersistentSession(
          Transport transportProtocol,
          PersistentSession.ConnectionLostListener connectionLostListener,
+         TypedProperties settings)
+   {
+      return createPersistentSession(transportProtocol, connectionLostListener, settings, new SimpleResumeStrategy());
+   }
+
+   /**
+    * Create a new persistent client session with a custom resume strategy.
+    *
+    * @param transportProtocol      The underlying transport protocol.
+    * @param connectionLostListener The listener to be invoked when the session is
+    *                               terminally lost due to connection issues.
+    * @param settings               The FedProProperties object instance which session
+    *                               layer settings will be loaded from.
+    *                               Unprovided settings will get default values and
+    *                               non-session settings will be ignored.
+    * @param resumeStrategy         A ResumeStrategy instance that will control when, how
+    *                               often and for how long reconnection attempts are made
+    *                               in case of a lost connection.
+    * @return A new PersistentSession instance.
+    * @throws NullPointerException If resumeStrategy is null.
+    */
+   public static PersistentSession createPersistentSession(
+         Transport transportProtocol,
+         PersistentSession.ConnectionLostListener connectionLostListener,
+         TypedProperties settings,
          ResumeStrategy resumeStrategy)
    {
-      return new PersistentSessionImpl(transportProtocol, connectionLostListener, resumeStrategy);
+      return new PersistentSessionImpl(transportProtocol, connectionLostListener, settings, resumeStrategy);
    }
 
 }

@@ -95,7 +95,8 @@ public class ClientConverter {
    Credentials.Builder convertFromHla(hla.rti1516_202X.auth.Credentials credentials)
    {
       Credentials.Builder credentialsBuilder = Credentials.newBuilder();
-      credentialsBuilder.setType(credentials.getType());
+      String type = credentials.getType();
+      credentialsBuilder.setType(type != null ? type : "invalid");
       credentialsBuilder.setData(convertFromHla(credentials.getData()));
       return credentialsBuilder;
    }
@@ -1459,9 +1460,9 @@ public class ClientConverter {
    }
 
    private static class FederationExecutionInformationSetImpl extends HashSet<FederationExecutionInformation> implements FederationExecutionInformationSet {
-      public Object clone()
+      public FederationExecutionInformationSet clone()
       {
-         return super.clone();
+         return (FederationExecutionInformationSet) super.clone();
       }
    }
 
@@ -1471,9 +1472,9 @@ public class ClientConverter {
    }
 
    private static class FederationExecutionMemberInformationSetImpl extends HashSet<FederationExecutionMemberInformation> implements FederationExecutionMemberInformationSet {
-      public Object clone()
+      public FederationExecutionMemberInformationSetImpl clone()
       {
-         return super.clone();
+         return (FederationExecutionMemberInformationSetImpl) super.clone();
       }
    }
 
@@ -1519,6 +1520,11 @@ public class ClientConverter {
       public AttributeHandleValueMapImpl(int capacity)
       {
          super(capacity);
+      }
+
+      public AttributeHandleValueMapImpl clone()
+      {
+         return (AttributeHandleValueMapImpl) super.clone();
       }
 
       public ByteWrapper getValueReference(AttributeHandle key)
@@ -1578,6 +1584,11 @@ public class ClientConverter {
       public ParameterHandleValueMapImpl(int capacity)
       {
          super(capacity);
+      }
+
+      public ParameterHandleValueMapImpl clone()
+      {
+         return (ParameterHandleValueMapImpl) super.clone();
       }
 
       public ByteWrapper getValueReference(ParameterHandle key)

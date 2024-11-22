@@ -16,19 +16,24 @@
 
 package se.pitch.oss.fedpro.client.session.msg;
 
+import se.pitch.oss.fedpro.client.session.SessionImpl;
+import se.pitch.oss.fedpro.common.session.LogUtil;
 import se.pitch.oss.fedpro.common.session.MessageType;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.logging.Logger;
 
 public class QueueableMessage {
+
+   private static final Logger LOGGER = Logger.getLogger(SessionImpl.class.getName());
 
    private final long _payloadSize;
    private final int _lastReceivedSequenceNumber;
    private final long _sessionId;
    private final MessageType _messageType;
    private final EncodableMessage _message;
-   private final CompletableFuture<byte[]> _future;
+   private CompletableFuture<byte[]> _future;
    private final Map<Integer, CompletableFuture<byte[]>> _futuresMap;
 
    public QueueableMessage(
@@ -65,8 +70,16 @@ public class QueueableMessage {
       //   It's also important that we increment the sequence number at the atomically same time as we put the message
       //   on the message queue, since they must be sent in the correct order.
       if (_futuresMap != null) {
-         _futuresMap.put(nextSequenceNumber, _future);
+         if(_future != null) {
+            _futuresMap.put(nextSequenceNumber, _future);
+            _future = null;
+         } else {
+            LOGGER.warning(() -> String.format(
+                  "%s: An EncodedMessage has already been created by this QueueableMessage. There may only be one for each.",
+                  LogUtil.logPrefix(_sessionId, LogUtil.CLIENT_PREFIX)));
+         }
       }
+
       return msg;
    }
 }

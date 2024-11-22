@@ -20,6 +20,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 public class NewSessionMessage implements EncodableMessage {
 
    public static final int FEDERATE_PROTOCOL_VERSION = 1;
@@ -34,14 +36,13 @@ public class NewSessionMessage implements EncodableMessage {
    @Override
    public byte[] encode()
    {
-      return ByteBuffer.allocate(4).putInt(protocolVersion).array();
+      return ByteBuffer.allocate(INT32_SIZE).putInt(protocolVersion).array();
    }
 
    public static NewSessionMessage decode(InputStream inputStream)
    throws IOException
    {
-      int protocolVersion = ByteReader.getInt(inputStream);
-
+      int protocolVersion = ByteReader.getInt32(inputStream);
       return new NewSessionMessage(protocolVersion);
    }
 }

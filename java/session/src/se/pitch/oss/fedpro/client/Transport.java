@@ -16,5 +16,8 @@
 
 package se.pitch.oss.fedpro.client;
 
+/**
+ * Interface for representing a transport protocol.
+ */
 public interface Transport {
 }

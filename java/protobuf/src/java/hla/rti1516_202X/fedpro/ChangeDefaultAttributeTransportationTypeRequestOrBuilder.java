@@ -8,19 +8,19 @@ public interface ChangeDefaultAttributeTransportationTypeRequestOrBuilder extend
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
-   * @return Whether the theObjectClass field is set.
+   * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
+   * @return Whether the objectClass field is set.
    */
-  boolean hasTheObjectClass();
+  boolean hasObjectClass();
   /**
-   * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
-   * @return The theObjectClass.
+   * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
+   * @return The objectClass.
    */
-  hla.rti1516_202X.fedpro.ObjectClassHandle getTheObjectClass();
+  hla.rti1516_202X.fedpro.ObjectClassHandle getObjectClass();
   /**
-   * <code>.rti1516_202X.fedpro.ObjectClassHandle theObjectClass = 1;</code>
+   * <code>.rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;</code>
    */
-  hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder getTheObjectClassOrBuilder();
+  hla.rti1516_202X.fedpro.ObjectClassHandleOrBuilder getObjectClassOrBuilder();
 
   /**
    * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>

@@ -20,9 +20,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 public class HeartbeatResponseMessage implements EncodableMessage {
 
-   public final int responseToSequenceNumber; //unsigned int
+   public final int responseToSequenceNumber; // unsigned int
 
    public HeartbeatResponseMessage(int responseToSequenceNumber)
    {
@@ -32,15 +34,13 @@ public class HeartbeatResponseMessage implements EncodableMessage {
    @Override
    public byte[] encode()
    {
-      return ByteBuffer.allocate(4).putInt(responseToSequenceNumber).array();
+      return ByteBuffer.allocate(INT32_SIZE).putInt(responseToSequenceNumber).array();
    }
 
    public static HeartbeatResponseMessage decode(InputStream inputStream)
    throws IOException
    {
-      ByteBuffer buffer = ByteReader.wrap(inputStream, 4);
-      int responseToSequenceNumber = buffer.getInt();
-
+      int responseToSequenceNumber = ByteReader.getInt32(inputStream);
       return new HeartbeatResponseMessage(responseToSequenceNumber);
    }
 }

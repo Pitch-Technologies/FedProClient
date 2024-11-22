@@ -23,64 +23,64 @@ public interface CallbackRequestOrBuilder extends
   hla.rti1516_202X.fedpro.ConnectionLostOrBuilder getConnectionLostOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-   * @return Whether the federateResigned field is set.
-   */
-  boolean hasFederateResigned();
-  /**
-   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-   * @return The federateResigned.
-   */
-  hla.rti1516_202X.fedpro.FederateResigned getFederateResigned();
-  /**
-   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-   */
-  hla.rti1516_202X.fedpro.FederateResignedOrBuilder getFederateResignedOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
    * @return Whether the reportFederationExecutions field is set.
    */
   boolean hasReportFederationExecutions();
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
    * @return The reportFederationExecutions.
    */
   hla.rti1516_202X.fedpro.ReportFederationExecutions getReportFederationExecutions();
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
    */
   hla.rti1516_202X.fedpro.ReportFederationExecutionsOrBuilder getReportFederationExecutionsOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
    * @return Whether the reportFederationExecutionMembers field is set.
    */
   boolean hasReportFederationExecutionMembers();
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
    * @return The reportFederationExecutionMembers.
    */
   hla.rti1516_202X.fedpro.ReportFederationExecutionMembers getReportFederationExecutionMembers();
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
    */
   hla.rti1516_202X.fedpro.ReportFederationExecutionMembersOrBuilder getReportFederationExecutionMembersOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
    * @return Whether the reportFederationExecutionDoesNotExist field is set.
    */
   boolean hasReportFederationExecutionDoesNotExist();
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
    * @return The reportFederationExecutionDoesNotExist.
    */
   hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist getReportFederationExecutionDoesNotExist();
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
    */
   hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder getReportFederationExecutionDoesNotExistOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+   * @return Whether the federateResigned field is set.
+   */
+  boolean hasFederateResigned();
+  /**
+   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+   * @return The federateResigned.
+   */
+  hla.rti1516_202X.fedpro.FederateResigned getFederateResigned();
+  /**
+   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+   */
+  hla.rti1516_202X.fedpro.FederateResignedOrBuilder getFederateResignedOrBuilder();
 
   /**
    * <code>.rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;</code>
@@ -683,34 +683,34 @@ public interface CallbackRequestOrBuilder extends
   hla.rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChangeOrBuilder getConfirmAttributeTransportationTypeChangeOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-   * @return Whether the confirmInteractionTransportationTypeChange field is set.
-   */
-  boolean hasConfirmInteractionTransportationTypeChange();
-  /**
-   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-   * @return The confirmInteractionTransportationTypeChange.
-   */
-  hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange getConfirmInteractionTransportationTypeChange();
-  /**
-   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-   */
-  hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder getConfirmInteractionTransportationTypeChangeOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
    * @return Whether the reportAttributeTransportationType field is set.
    */
   boolean hasReportAttributeTransportationType();
   /**
-   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
    * @return The reportAttributeTransportationType.
    */
   hla.rti1516_202X.fedpro.ReportAttributeTransportationType getReportAttributeTransportationType();
   /**
-   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
    */
   hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder getReportAttributeTransportationTypeOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+   * @return Whether the confirmInteractionTransportationTypeChange field is set.
+   */
+  boolean hasConfirmInteractionTransportationTypeChange();
+  /**
+   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+   * @return The confirmInteractionTransportationTypeChange.
+   */
+  hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange getConfirmInteractionTransportationTypeChange();
+  /**
+   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+   */
+  hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder getConfirmInteractionTransportationTypeChangeOrBuilder();
 
   /**
    * <code>.rti1516_202X.fedpro.ReportInteractionTransportationType reportInteractionTransportationType = 48;</code>

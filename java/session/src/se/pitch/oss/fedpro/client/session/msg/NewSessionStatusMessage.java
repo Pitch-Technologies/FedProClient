@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 public class NewSessionStatusMessage implements EncodableMessage {
 
    public static final int REASON_SUCCESS = 0;
@@ -42,13 +44,13 @@ public class NewSessionStatusMessage implements EncodableMessage {
    @Override
    public byte[] encode()
    {
-      return ByteBuffer.allocate(4).putInt(reason).array();
+      return ByteBuffer.allocate(INT32_SIZE).putInt(reason).array();
    }
 
    public static NewSessionStatusMessage decode(InputStream inputStream)
    throws IOException, BadMessage
    {
-      int reason = ByteReader.getInt(inputStream);
+      int reason = ByteReader.getInt32(inputStream);
 
       if (!(reason == REASON_SUCCESS || reason == REASON_FAILURE_UNSUPPORTED_PROTOCOL_VERSION ||
             reason == REASON_FAILURE_OUT_OF_RESOURCES || reason == REASON_FAILURE_OTHER_ERROR)) {

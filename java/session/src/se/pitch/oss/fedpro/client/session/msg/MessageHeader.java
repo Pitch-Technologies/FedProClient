@@ -23,10 +23,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 public class MessageHeader {
 
-   // Header size in bytes
-   public static final int SIZE = 4 + 4 + 8 + 4 + 4;
+   // Header size in bytes, may be abstracted as 4 + 4 + 8 + 4 + 4 bytes.
+   public static final int SIZE = INT32_SIZE * 6;
    public static final long NO_SESSION_ID = 0;
 
    public final long packetSize; //unsigned int
@@ -78,16 +80,16 @@ public class MessageHeader {
    public static MessageHeader decode(InputStream inputStream)
    throws BadMessage, IOException
    {
-      long packetSize = Integer.toUnsignedLong(ByteReader.getInt(inputStream));
+      long packetSize = Integer.toUnsignedLong(ByteReader.getInt32(inputStream));
       if (packetSize < SIZE) {
          throw new BadMessage("Invalid PacketSize " + packetSize);
       }
 
-      long remaining = packetSize - 4;
+      long remaining = packetSize - INT32_SIZE;
       if (remaining >= Integer.MAX_VALUE) {
          throw new BadMessage("Invalid PacketSize " + packetSize);
       }
-      ByteBuffer buffer = ByteReader.wrap(inputStream, SIZE - 4);
+      ByteBuffer buffer = ByteReader.wrap(inputStream, SIZE - INT32_SIZE);
 
       int sequenceNumber = buffer.getInt();
       long sessionId = buffer.getLong();

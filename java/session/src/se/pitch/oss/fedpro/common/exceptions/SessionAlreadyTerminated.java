@@ -16,6 +16,10 @@
 
 package se.pitch.oss.fedpro.common.exceptions;
 
+/**
+ * Session layer exception thrown when calling a member function but the session has
+ * terminated.
+ */
 public class SessionAlreadyTerminated extends SessionIllegalState {
 
    public SessionAlreadyTerminated(String message)

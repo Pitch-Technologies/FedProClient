@@ -16,20 +16,35 @@
 
 package se.pitch.oss.fedpro.client;
 
+import java.time.Duration;
+
+import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_RECONNECT_LIMIT;
+import static se.pitch.oss.fedpro.client.session.SessionSettings.*;
+
 /**
- * This resume strategy keeps trying to resume a dropped session at a fixed interval, up to a specified limit.
+ * This resume strategy keeps trying to resume a dropped session at a fixed interval, up
+ * to a specified limit.
  */
 public class SimpleResumeStrategy implements ResumeStrategy {
 
-   private final long _reconnectDelayMillis;
+   private final long _reconnectDelayMillis = getDefaultReconnectDelayMillis();
    private final long _reconnectLimitMillis;
 
-   public SimpleResumeStrategy(
-         long reconnectDelayMillis,
-         long reconnectLimitMillis)
+   public SimpleResumeStrategy()
    {
-      _reconnectDelayMillis = reconnectDelayMillis;
-      _reconnectLimitMillis = reconnectLimitMillis;
+      this(null);
+   }
+
+   public SimpleResumeStrategy(
+         TypedProperties settings)
+   {
+      if (settings != null) {
+         _reconnectLimitMillis = settings.getDuration(
+                     SETTING_NAME_RECONNECT_LIMIT, Duration.ofMillis(getDefaultReconnectLimitMillis()))
+               .toMillis();
+      } else {
+         _reconnectLimitMillis = getDefaultReconnectLimitMillis();
+      }
    }
 
    @Override

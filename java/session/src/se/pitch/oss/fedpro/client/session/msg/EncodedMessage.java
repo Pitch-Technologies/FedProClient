@@ -20,7 +20,7 @@ import java.nio.ByteBuffer;
 
 public class EncodedMessage {
 
-   public final int sequenceNumber; //unsigned int
+   public final int sequenceNumber; // unsigned int
    public final boolean isControl;
    public final byte[] data;
 

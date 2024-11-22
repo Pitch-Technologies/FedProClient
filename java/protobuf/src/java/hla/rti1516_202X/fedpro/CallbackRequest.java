@@ -49,10 +49,10 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CONNECTIONLOST(1),
-    FEDERATERESIGNED(2),
-    REPORTFEDERATIONEXECUTIONS(3),
-    REPORTFEDERATIONEXECUTIONMEMBERS(4),
-    REPORTFEDERATIONEXECUTIONDOESNOTEXIST(5),
+    REPORTFEDERATIONEXECUTIONS(2),
+    REPORTFEDERATIONEXECUTIONMEMBERS(3),
+    REPORTFEDERATIONEXECUTIONDOESNOTEXIST(4),
+    FEDERATERESIGNED(5),
     SYNCHRONIZATIONPOINTREGISTRATIONSUCCEEDED(6),
     SYNCHRONIZATIONPOINTREGISTRATIONFAILED(7),
     ANNOUNCESYNCHRONIZATIONPOINT(8),
@@ -93,8 +93,8 @@ private static final long serialVersionUID = 0L;
     TURNUPDATESONFOROBJECTINSTANCEWITHRATE(43),
     TURNUPDATESOFFFOROBJECTINSTANCE(44),
     CONFIRMATTRIBUTETRANSPORTATIONTYPECHANGE(45),
-    CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE(46),
-    REPORTATTRIBUTETRANSPORTATIONTYPE(47),
+    REPORTATTRIBUTETRANSPORTATIONTYPE(46),
+    CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE(47),
     REPORTINTERACTIONTRANSPORTATIONTYPE(48),
     REQUESTATTRIBUTEOWNERSHIPASSUMPTION(49),
     REQUESTDIVESTITURECONFIRMATION(50),
@@ -128,10 +128,10 @@ private static final long serialVersionUID = 0L;
     public static CallbackRequestCase forNumber(int value) {
       switch (value) {
         case 1: return CONNECTIONLOST;
-        case 2: return FEDERATERESIGNED;
-        case 3: return REPORTFEDERATIONEXECUTIONS;
-        case 4: return REPORTFEDERATIONEXECUTIONMEMBERS;
-        case 5: return REPORTFEDERATIONEXECUTIONDOESNOTEXIST;
+        case 2: return REPORTFEDERATIONEXECUTIONS;
+        case 3: return REPORTFEDERATIONEXECUTIONMEMBERS;
+        case 4: return REPORTFEDERATIONEXECUTIONDOESNOTEXIST;
+        case 5: return FEDERATERESIGNED;
         case 6: return SYNCHRONIZATIONPOINTREGISTRATIONSUCCEEDED;
         case 7: return SYNCHRONIZATIONPOINTREGISTRATIONFAILED;
         case 8: return ANNOUNCESYNCHRONIZATIONPOINT;
@@ -172,8 +172,8 @@ private static final long serialVersionUID = 0L;
         case 43: return TURNUPDATESONFOROBJECTINSTANCEWITHRATE;
         case 44: return TURNUPDATESOFFFOROBJECTINSTANCE;
         case 45: return CONFIRMATTRIBUTETRANSPORTATIONTYPECHANGE;
-        case 46: return CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE;
-        case 47: return REPORTATTRIBUTETRANSPORTATIONTYPE;
+        case 46: return REPORTATTRIBUTETRANSPORTATIONTYPE;
+        case 47: return CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE;
         case 48: return REPORTINTERACTIONTRANSPORTATIONTYPE;
         case 49: return REQUESTATTRIBUTEOWNERSHIPASSUMPTION;
         case 50: return REQUESTDIVESTITURECONFIRMATION;
@@ -235,128 +235,128 @@ private static final long serialVersionUID = 0L;
     return hla.rti1516_202X.fedpro.ConnectionLost.getDefaultInstance();
   }
 
-  public static final int FEDERATERESIGNED_FIELD_NUMBER = 2;
+  public static final int REPORTFEDERATIONEXECUTIONS_FIELD_NUMBER = 2;
   /**
-   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-   * @return Whether the federateResigned field is set.
-   */
-  @java.lang.Override
-  public boolean hasFederateResigned() {
-    return callbackRequestCase_ == 2;
-  }
-  /**
-   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-   * @return The federateResigned.
-   */
-  @java.lang.Override
-  public hla.rti1516_202X.fedpro.FederateResigned getFederateResigned() {
-    if (callbackRequestCase_ == 2) {
-       return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
-    }
-    return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
-  }
-  /**
-   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-   */
-  @java.lang.Override
-  public hla.rti1516_202X.fedpro.FederateResignedOrBuilder getFederateResignedOrBuilder() {
-    if (callbackRequestCase_ == 2) {
-       return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
-    }
-    return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
-  }
-
-  public static final int REPORTFEDERATIONEXECUTIONS_FIELD_NUMBER = 3;
-  /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
    * @return Whether the reportFederationExecutions field is set.
    */
   @java.lang.Override
   public boolean hasReportFederationExecutions() {
-    return callbackRequestCase_ == 3;
+    return callbackRequestCase_ == 2;
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
    * @return The reportFederationExecutions.
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportFederationExecutions getReportFederationExecutions() {
-    if (callbackRequestCase_ == 3) {
+    if (callbackRequestCase_ == 2) {
        return (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportFederationExecutions.getDefaultInstance();
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportFederationExecutionsOrBuilder getReportFederationExecutionsOrBuilder() {
-    if (callbackRequestCase_ == 3) {
+    if (callbackRequestCase_ == 2) {
        return (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportFederationExecutions.getDefaultInstance();
   }
 
-  public static final int REPORTFEDERATIONEXECUTIONMEMBERS_FIELD_NUMBER = 4;
+  public static final int REPORTFEDERATIONEXECUTIONMEMBERS_FIELD_NUMBER = 3;
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
    * @return Whether the reportFederationExecutionMembers field is set.
    */
   @java.lang.Override
   public boolean hasReportFederationExecutionMembers() {
-    return callbackRequestCase_ == 4;
+    return callbackRequestCase_ == 3;
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
    * @return The reportFederationExecutionMembers.
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportFederationExecutionMembers getReportFederationExecutionMembers() {
-    if (callbackRequestCase_ == 4) {
+    if (callbackRequestCase_ == 3) {
        return (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.getDefaultInstance();
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportFederationExecutionMembersOrBuilder getReportFederationExecutionMembersOrBuilder() {
-    if (callbackRequestCase_ == 4) {
+    if (callbackRequestCase_ == 3) {
        return (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.getDefaultInstance();
   }
 
-  public static final int REPORTFEDERATIONEXECUTIONDOESNOTEXIST_FIELD_NUMBER = 5;
+  public static final int REPORTFEDERATIONEXECUTIONDOESNOTEXIST_FIELD_NUMBER = 4;
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
    * @return Whether the reportFederationExecutionDoesNotExist field is set.
    */
   @java.lang.Override
   public boolean hasReportFederationExecutionDoesNotExist() {
-    return callbackRequestCase_ == 5;
+    return callbackRequestCase_ == 4;
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
    * @return The reportFederationExecutionDoesNotExist.
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist getReportFederationExecutionDoesNotExist() {
-    if (callbackRequestCase_ == 5) {
+    if (callbackRequestCase_ == 4) {
        return (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+   * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder getReportFederationExecutionDoesNotExistOrBuilder() {
-    if (callbackRequestCase_ == 5) {
+    if (callbackRequestCase_ == 4) {
        return (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
+  }
+
+  public static final int FEDERATERESIGNED_FIELD_NUMBER = 5;
+  /**
+   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+   * @return Whether the federateResigned field is set.
+   */
+  @java.lang.Override
+  public boolean hasFederateResigned() {
+    return callbackRequestCase_ == 5;
+  }
+  /**
+   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+   * @return The federateResigned.
+   */
+  @java.lang.Override
+  public hla.rti1516_202X.fedpro.FederateResigned getFederateResigned() {
+    if (callbackRequestCase_ == 5) {
+       return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
+    }
+    return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
+  }
+  /**
+   * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+   */
+  @java.lang.Override
+  public hla.rti1516_202X.fedpro.FederateResignedOrBuilder getFederateResignedOrBuilder() {
+    if (callbackRequestCase_ == 5) {
+       return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
+    }
+    return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
   }
 
   public static final int SYNCHRONIZATIONPOINTREGISTRATIONSUCCEEDED_FIELD_NUMBER = 6;
@@ -1599,66 +1599,66 @@ private static final long serialVersionUID = 0L;
     return hla.rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange.getDefaultInstance();
   }
 
-  public static final int CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE_FIELD_NUMBER = 46;
+  public static final int REPORTATTRIBUTETRANSPORTATIONTYPE_FIELD_NUMBER = 46;
   /**
-   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-   * @return Whether the confirmInteractionTransportationTypeChange field is set.
-   */
-  @java.lang.Override
-  public boolean hasConfirmInteractionTransportationTypeChange() {
-    return callbackRequestCase_ == 46;
-  }
-  /**
-   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-   * @return The confirmInteractionTransportationTypeChange.
-   */
-  @java.lang.Override
-  public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange getConfirmInteractionTransportationTypeChange() {
-    if (callbackRequestCase_ == 46) {
-       return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
-    }
-    return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
-  }
-  /**
-   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-   */
-  @java.lang.Override
-  public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder getConfirmInteractionTransportationTypeChangeOrBuilder() {
-    if (callbackRequestCase_ == 46) {
-       return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
-    }
-    return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
-  }
-
-  public static final int REPORTATTRIBUTETRANSPORTATIONTYPE_FIELD_NUMBER = 47;
-  /**
-   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
    * @return Whether the reportAttributeTransportationType field is set.
    */
   @java.lang.Override
   public boolean hasReportAttributeTransportationType() {
-    return callbackRequestCase_ == 47;
+    return callbackRequestCase_ == 46;
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
    * @return The reportAttributeTransportationType.
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportAttributeTransportationType getReportAttributeTransportationType() {
-    if (callbackRequestCase_ == 47) {
+    if (callbackRequestCase_ == 46) {
        return (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
   }
   /**
-   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+   * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
    */
   @java.lang.Override
   public hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder getReportAttributeTransportationTypeOrBuilder() {
-    if (callbackRequestCase_ == 47) {
+    if (callbackRequestCase_ == 46) {
        return (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_;
     }
     return hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
+  }
+
+  public static final int CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE_FIELD_NUMBER = 47;
+  /**
+   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+   * @return Whether the confirmInteractionTransportationTypeChange field is set.
+   */
+  @java.lang.Override
+  public boolean hasConfirmInteractionTransportationTypeChange() {
+    return callbackRequestCase_ == 47;
+  }
+  /**
+   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+   * @return The confirmInteractionTransportationTypeChange.
+   */
+  @java.lang.Override
+  public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange getConfirmInteractionTransportationTypeChange() {
+    if (callbackRequestCase_ == 47) {
+       return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
+    }
+    return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
+  }
+  /**
+   * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+   */
+  @java.lang.Override
+  public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder getConfirmInteractionTransportationTypeChangeOrBuilder() {
+    if (callbackRequestCase_ == 47) {
+       return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
+    }
+    return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
   }
 
   public static final int REPORTINTERACTIONTRANSPORTATIONTYPE_FIELD_NUMBER = 48;
@@ -2144,16 +2144,16 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(1, (hla.rti1516_202X.fedpro.ConnectionLost) callbackRequest_);
     }
     if (callbackRequestCase_ == 2) {
-      output.writeMessage(2, (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_);
+      output.writeMessage(2, (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_);
     }
     if (callbackRequestCase_ == 3) {
-      output.writeMessage(3, (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_);
+      output.writeMessage(3, (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_);
     }
     if (callbackRequestCase_ == 4) {
-      output.writeMessage(4, (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_);
+      output.writeMessage(4, (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_);
     }
     if (callbackRequestCase_ == 5) {
-      output.writeMessage(5, (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_);
+      output.writeMessage(5, (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_);
     }
     if (callbackRequestCase_ == 6) {
       output.writeMessage(6, (hla.rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded) callbackRequest_);
@@ -2276,10 +2276,10 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(45, (hla.rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange) callbackRequest_);
     }
     if (callbackRequestCase_ == 46) {
-      output.writeMessage(46, (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_);
+      output.writeMessage(46, (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_);
     }
     if (callbackRequestCase_ == 47) {
-      output.writeMessage(47, (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_);
+      output.writeMessage(47, (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_);
     }
     if (callbackRequestCase_ == 48) {
       output.writeMessage(48, (hla.rti1516_202X.fedpro.ReportInteractionTransportationType) callbackRequest_);
@@ -2341,19 +2341,19 @@ private static final long serialVersionUID = 0L;
     }
     if (callbackRequestCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_);
+        .computeMessageSize(2, (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_);
     }
     if (callbackRequestCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_);
+        .computeMessageSize(3, (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_);
     }
     if (callbackRequestCase_ == 4) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_);
+        .computeMessageSize(4, (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_);
     }
     if (callbackRequestCase_ == 5) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_);
+        .computeMessageSize(5, (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_);
     }
     if (callbackRequestCase_ == 6) {
       size += com.google.protobuf.CodedOutputStream
@@ -2517,11 +2517,11 @@ private static final long serialVersionUID = 0L;
     }
     if (callbackRequestCase_ == 46) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(46, (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_);
+        .computeMessageSize(46, (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_);
     }
     if (callbackRequestCase_ == 47) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(47, (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_);
+        .computeMessageSize(47, (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_);
     }
     if (callbackRequestCase_ == 48) {
       size += com.google.protobuf.CodedOutputStream
@@ -2605,20 +2605,20 @@ private static final long serialVersionUID = 0L;
             .equals(other.getConnectionLost())) return false;
         break;
       case 2:
-        if (!getFederateResigned()
-            .equals(other.getFederateResigned())) return false;
-        break;
-      case 3:
         if (!getReportFederationExecutions()
             .equals(other.getReportFederationExecutions())) return false;
         break;
-      case 4:
+      case 3:
         if (!getReportFederationExecutionMembers()
             .equals(other.getReportFederationExecutionMembers())) return false;
         break;
-      case 5:
+      case 4:
         if (!getReportFederationExecutionDoesNotExist()
             .equals(other.getReportFederationExecutionDoesNotExist())) return false;
+        break;
+      case 5:
+        if (!getFederateResigned()
+            .equals(other.getFederateResigned())) return false;
         break;
       case 6:
         if (!getSynchronizationPointRegistrationSucceeded()
@@ -2781,12 +2781,12 @@ private static final long serialVersionUID = 0L;
             .equals(other.getConfirmAttributeTransportationTypeChange())) return false;
         break;
       case 46:
-        if (!getConfirmInteractionTransportationTypeChange()
-            .equals(other.getConfirmInteractionTransportationTypeChange())) return false;
-        break;
-      case 47:
         if (!getReportAttributeTransportationType()
             .equals(other.getReportAttributeTransportationType())) return false;
+        break;
+      case 47:
+        if (!getConfirmInteractionTransportationTypeChange()
+            .equals(other.getConfirmInteractionTransportationTypeChange())) return false;
         break;
       case 48:
         if (!getReportInteractionTransportationType()
@@ -2868,20 +2868,20 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getConnectionLost().hashCode();
         break;
       case 2:
-        hash = (37 * hash) + FEDERATERESIGNED_FIELD_NUMBER;
-        hash = (53 * hash) + getFederateResigned().hashCode();
-        break;
-      case 3:
         hash = (37 * hash) + REPORTFEDERATIONEXECUTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getReportFederationExecutions().hashCode();
         break;
-      case 4:
+      case 3:
         hash = (37 * hash) + REPORTFEDERATIONEXECUTIONMEMBERS_FIELD_NUMBER;
         hash = (53 * hash) + getReportFederationExecutionMembers().hashCode();
         break;
-      case 5:
+      case 4:
         hash = (37 * hash) + REPORTFEDERATIONEXECUTIONDOESNOTEXIST_FIELD_NUMBER;
         hash = (53 * hash) + getReportFederationExecutionDoesNotExist().hashCode();
+        break;
+      case 5:
+        hash = (37 * hash) + FEDERATERESIGNED_FIELD_NUMBER;
+        hash = (53 * hash) + getFederateResigned().hashCode();
         break;
       case 6:
         hash = (37 * hash) + SYNCHRONIZATIONPOINTREGISTRATIONSUCCEEDED_FIELD_NUMBER;
@@ -3044,12 +3044,12 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getConfirmAttributeTransportationTypeChange().hashCode();
         break;
       case 46:
-        hash = (37 * hash) + CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE_FIELD_NUMBER;
-        hash = (53 * hash) + getConfirmInteractionTransportationTypeChange().hashCode();
-        break;
-      case 47:
         hash = (37 * hash) + REPORTATTRIBUTETRANSPORTATIONTYPE_FIELD_NUMBER;
         hash = (53 * hash) + getReportAttributeTransportationType().hashCode();
+        break;
+      case 47:
+        hash = (37 * hash) + CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE_FIELD_NUMBER;
+        hash = (53 * hash) + getConfirmInteractionTransportationTypeChange().hashCode();
         break;
       case 48:
         hash = (37 * hash) + REPORTINTERACTIONTRANSPORTATIONTYPE_FIELD_NUMBER;
@@ -3245,9 +3245,6 @@ private static final long serialVersionUID = 0L;
       if (connectionLostBuilder_ != null) {
         connectionLostBuilder_.clear();
       }
-      if (federateResignedBuilder_ != null) {
-        federateResignedBuilder_.clear();
-      }
       if (reportFederationExecutionsBuilder_ != null) {
         reportFederationExecutionsBuilder_.clear();
       }
@@ -3256,6 +3253,9 @@ private static final long serialVersionUID = 0L;
       }
       if (reportFederationExecutionDoesNotExistBuilder_ != null) {
         reportFederationExecutionDoesNotExistBuilder_.clear();
+      }
+      if (federateResignedBuilder_ != null) {
+        federateResignedBuilder_.clear();
       }
       if (synchronizationPointRegistrationSucceededBuilder_ != null) {
         synchronizationPointRegistrationSucceededBuilder_.clear();
@@ -3377,11 +3377,11 @@ private static final long serialVersionUID = 0L;
       if (confirmAttributeTransportationTypeChangeBuilder_ != null) {
         confirmAttributeTransportationTypeChangeBuilder_.clear();
       }
-      if (confirmInteractionTransportationTypeChangeBuilder_ != null) {
-        confirmInteractionTransportationTypeChangeBuilder_.clear();
-      }
       if (reportAttributeTransportationTypeBuilder_ != null) {
         reportAttributeTransportationTypeBuilder_.clear();
+      }
+      if (confirmInteractionTransportationTypeChangeBuilder_ != null) {
+        confirmInteractionTransportationTypeChangeBuilder_.clear();
       }
       if (reportInteractionTransportationTypeBuilder_ != null) {
         reportInteractionTransportationTypeBuilder_.clear();
@@ -3464,31 +3464,31 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (callbackRequestCase_ == 2) {
-        if (federateResignedBuilder_ == null) {
-          result.callbackRequest_ = callbackRequest_;
-        } else {
-          result.callbackRequest_ = federateResignedBuilder_.build();
-        }
-      }
-      if (callbackRequestCase_ == 3) {
         if (reportFederationExecutionsBuilder_ == null) {
           result.callbackRequest_ = callbackRequest_;
         } else {
           result.callbackRequest_ = reportFederationExecutionsBuilder_.build();
         }
       }
-      if (callbackRequestCase_ == 4) {
+      if (callbackRequestCase_ == 3) {
         if (reportFederationExecutionMembersBuilder_ == null) {
           result.callbackRequest_ = callbackRequest_;
         } else {
           result.callbackRequest_ = reportFederationExecutionMembersBuilder_.build();
         }
       }
-      if (callbackRequestCase_ == 5) {
+      if (callbackRequestCase_ == 4) {
         if (reportFederationExecutionDoesNotExistBuilder_ == null) {
           result.callbackRequest_ = callbackRequest_;
         } else {
           result.callbackRequest_ = reportFederationExecutionDoesNotExistBuilder_.build();
+        }
+      }
+      if (callbackRequestCase_ == 5) {
+        if (federateResignedBuilder_ == null) {
+          result.callbackRequest_ = callbackRequest_;
+        } else {
+          result.callbackRequest_ = federateResignedBuilder_.build();
         }
       }
       if (callbackRequestCase_ == 6) {
@@ -3772,17 +3772,17 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (callbackRequestCase_ == 46) {
-        if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
-          result.callbackRequest_ = callbackRequest_;
-        } else {
-          result.callbackRequest_ = confirmInteractionTransportationTypeChangeBuilder_.build();
-        }
-      }
-      if (callbackRequestCase_ == 47) {
         if (reportAttributeTransportationTypeBuilder_ == null) {
           result.callbackRequest_ = callbackRequest_;
         } else {
           result.callbackRequest_ = reportAttributeTransportationTypeBuilder_.build();
+        }
+      }
+      if (callbackRequestCase_ == 47) {
+        if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
+          result.callbackRequest_ = callbackRequest_;
+        } else {
+          result.callbackRequest_ = confirmInteractionTransportationTypeChangeBuilder_.build();
         }
       }
       if (callbackRequestCase_ == 48) {
@@ -3944,10 +3944,6 @@ private static final long serialVersionUID = 0L;
           mergeConnectionLost(other.getConnectionLost());
           break;
         }
-        case FEDERATERESIGNED: {
-          mergeFederateResigned(other.getFederateResigned());
-          break;
-        }
         case REPORTFEDERATIONEXECUTIONS: {
           mergeReportFederationExecutions(other.getReportFederationExecutions());
           break;
@@ -3958,6 +3954,10 @@ private static final long serialVersionUID = 0L;
         }
         case REPORTFEDERATIONEXECUTIONDOESNOTEXIST: {
           mergeReportFederationExecutionDoesNotExist(other.getReportFederationExecutionDoesNotExist());
+          break;
+        }
+        case FEDERATERESIGNED: {
+          mergeFederateResigned(other.getFederateResigned());
           break;
         }
         case SYNCHRONIZATIONPOINTREGISTRATIONSUCCEEDED: {
@@ -4120,12 +4120,12 @@ private static final long serialVersionUID = 0L;
           mergeConfirmAttributeTransportationTypeChange(other.getConfirmAttributeTransportationTypeChange());
           break;
         }
-        case CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE: {
-          mergeConfirmInteractionTransportationTypeChange(other.getConfirmInteractionTransportationTypeChange());
-          break;
-        }
         case REPORTATTRIBUTETRANSPORTATIONTYPE: {
           mergeReportAttributeTransportationType(other.getReportAttributeTransportationType());
+          break;
+        }
+        case CONFIRMINTERACTIONTRANSPORTATIONTYPECHANGE: {
+          mergeConfirmInteractionTransportationTypeChange(other.getConfirmInteractionTransportationTypeChange());
           break;
         }
         case REPORTINTERACTIONTRANSPORTATIONTYPE: {
@@ -4227,28 +4227,28 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               input.readMessage(
-                  getFederateResignedFieldBuilder().getBuilder(),
+                  getReportFederationExecutionsFieldBuilder().getBuilder(),
                   extensionRegistry);
               callbackRequestCase_ = 2;
               break;
             } // case 18
             case 26: {
               input.readMessage(
-                  getReportFederationExecutionsFieldBuilder().getBuilder(),
+                  getReportFederationExecutionMembersFieldBuilder().getBuilder(),
                   extensionRegistry);
               callbackRequestCase_ = 3;
               break;
             } // case 26
             case 34: {
               input.readMessage(
-                  getReportFederationExecutionMembersFieldBuilder().getBuilder(),
+                  getReportFederationExecutionDoesNotExistFieldBuilder().getBuilder(),
                   extensionRegistry);
               callbackRequestCase_ = 4;
               break;
             } // case 34
             case 42: {
               input.readMessage(
-                  getReportFederationExecutionDoesNotExistFieldBuilder().getBuilder(),
+                  getFederateResignedFieldBuilder().getBuilder(),
                   extensionRegistry);
               callbackRequestCase_ = 5;
               break;
@@ -4535,14 +4535,14 @@ private static final long serialVersionUID = 0L;
             } // case 362
             case 370: {
               input.readMessage(
-                  getConfirmInteractionTransportationTypeChangeFieldBuilder().getBuilder(),
+                  getReportAttributeTransportationTypeFieldBuilder().getBuilder(),
                   extensionRegistry);
               callbackRequestCase_ = 46;
               break;
             } // case 370
             case 378: {
               input.readMessage(
-                  getReportAttributeTransportationTypeFieldBuilder().getBuilder(),
+                  getConfirmInteractionTransportationTypeChangeFieldBuilder().getBuilder(),
                   extensionRegistry);
               callbackRequestCase_ = 47;
               break;
@@ -4826,177 +4826,35 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.FederateResigned, hla.rti1516_202X.fedpro.FederateResigned.Builder, hla.rti1516_202X.fedpro.FederateResignedOrBuilder> federateResignedBuilder_;
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     * @return Whether the federateResigned field is set.
-     */
-    @java.lang.Override
-    public boolean hasFederateResigned() {
-      return callbackRequestCase_ == 2;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     * @return The federateResigned.
-     */
-    @java.lang.Override
-    public hla.rti1516_202X.fedpro.FederateResigned getFederateResigned() {
-      if (federateResignedBuilder_ == null) {
-        if (callbackRequestCase_ == 2) {
-          return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
-        }
-        return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
-      } else {
-        if (callbackRequestCase_ == 2) {
-          return federateResignedBuilder_.getMessage();
-        }
-        return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     */
-    public Builder setFederateResigned(hla.rti1516_202X.fedpro.FederateResigned value) {
-      if (federateResignedBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        callbackRequest_ = value;
-        onChanged();
-      } else {
-        federateResignedBuilder_.setMessage(value);
-      }
-      callbackRequestCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     */
-    public Builder setFederateResigned(
-        hla.rti1516_202X.fedpro.FederateResigned.Builder builderForValue) {
-      if (federateResignedBuilder_ == null) {
-        callbackRequest_ = builderForValue.build();
-        onChanged();
-      } else {
-        federateResignedBuilder_.setMessage(builderForValue.build());
-      }
-      callbackRequestCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     */
-    public Builder mergeFederateResigned(hla.rti1516_202X.fedpro.FederateResigned value) {
-      if (federateResignedBuilder_ == null) {
-        if (callbackRequestCase_ == 2 &&
-            callbackRequest_ != hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance()) {
-          callbackRequest_ = hla.rti1516_202X.fedpro.FederateResigned.newBuilder((hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          callbackRequest_ = value;
-        }
-        onChanged();
-      } else {
-        if (callbackRequestCase_ == 2) {
-          federateResignedBuilder_.mergeFrom(value);
-        } else {
-          federateResignedBuilder_.setMessage(value);
-        }
-      }
-      callbackRequestCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     */
-    public Builder clearFederateResigned() {
-      if (federateResignedBuilder_ == null) {
-        if (callbackRequestCase_ == 2) {
-          callbackRequestCase_ = 0;
-          callbackRequest_ = null;
-          onChanged();
-        }
-      } else {
-        if (callbackRequestCase_ == 2) {
-          callbackRequestCase_ = 0;
-          callbackRequest_ = null;
-        }
-        federateResignedBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     */
-    public hla.rti1516_202X.fedpro.FederateResigned.Builder getFederateResignedBuilder() {
-      return getFederateResignedFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     */
-    @java.lang.Override
-    public hla.rti1516_202X.fedpro.FederateResignedOrBuilder getFederateResignedOrBuilder() {
-      if ((callbackRequestCase_ == 2) && (federateResignedBuilder_ != null)) {
-        return federateResignedBuilder_.getMessageOrBuilder();
-      } else {
-        if (callbackRequestCase_ == 2) {
-          return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
-        }
-        return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 2;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.FederateResigned, hla.rti1516_202X.fedpro.FederateResigned.Builder, hla.rti1516_202X.fedpro.FederateResignedOrBuilder> 
-        getFederateResignedFieldBuilder() {
-      if (federateResignedBuilder_ == null) {
-        if (!(callbackRequestCase_ == 2)) {
-          callbackRequest_ = hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
-        }
-        federateResignedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            hla.rti1516_202X.fedpro.FederateResigned, hla.rti1516_202X.fedpro.FederateResigned.Builder, hla.rti1516_202X.fedpro.FederateResignedOrBuilder>(
-                (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_,
-                getParentForChildren(),
-                isClean());
-        callbackRequest_ = null;
-      }
-      callbackRequestCase_ = 2;
-      onChanged();;
-      return federateResignedBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.ReportFederationExecutions, hla.rti1516_202X.fedpro.ReportFederationExecutions.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionsOrBuilder> reportFederationExecutionsBuilder_;
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      * @return Whether the reportFederationExecutions field is set.
      */
     @java.lang.Override
     public boolean hasReportFederationExecutions() {
-      return callbackRequestCase_ == 3;
+      return callbackRequestCase_ == 2;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      * @return The reportFederationExecutions.
      */
     @java.lang.Override
     public hla.rti1516_202X.fedpro.ReportFederationExecutions getReportFederationExecutions() {
       if (reportFederationExecutionsBuilder_ == null) {
-        if (callbackRequestCase_ == 3) {
+        if (callbackRequestCase_ == 2) {
           return (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_;
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutions.getDefaultInstance();
       } else {
-        if (callbackRequestCase_ == 3) {
+        if (callbackRequestCase_ == 2) {
           return reportFederationExecutionsBuilder_.getMessage();
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutions.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      */
     public Builder setReportFederationExecutions(hla.rti1516_202X.fedpro.ReportFederationExecutions value) {
       if (reportFederationExecutionsBuilder_ == null) {
@@ -5008,11 +4866,11 @@ private static final long serialVersionUID = 0L;
       } else {
         reportFederationExecutionsBuilder_.setMessage(value);
       }
-      callbackRequestCase_ = 3;
+      callbackRequestCase_ = 2;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      */
     public Builder setReportFederationExecutions(
         hla.rti1516_202X.fedpro.ReportFederationExecutions.Builder builderForValue) {
@@ -5022,15 +4880,15 @@ private static final long serialVersionUID = 0L;
       } else {
         reportFederationExecutionsBuilder_.setMessage(builderForValue.build());
       }
-      callbackRequestCase_ = 3;
+      callbackRequestCase_ = 2;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      */
     public Builder mergeReportFederationExecutions(hla.rti1516_202X.fedpro.ReportFederationExecutions value) {
       if (reportFederationExecutionsBuilder_ == null) {
-        if (callbackRequestCase_ == 3 &&
+        if (callbackRequestCase_ == 2 &&
             callbackRequest_ != hla.rti1516_202X.fedpro.ReportFederationExecutions.getDefaultInstance()) {
           callbackRequest_ = hla.rti1516_202X.fedpro.ReportFederationExecutions.newBuilder((hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_)
               .mergeFrom(value).buildPartial();
@@ -5039,27 +4897,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (callbackRequestCase_ == 3) {
+        if (callbackRequestCase_ == 2) {
           reportFederationExecutionsBuilder_.mergeFrom(value);
         } else {
           reportFederationExecutionsBuilder_.setMessage(value);
         }
       }
-      callbackRequestCase_ = 3;
+      callbackRequestCase_ = 2;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      */
     public Builder clearReportFederationExecutions() {
       if (reportFederationExecutionsBuilder_ == null) {
-        if (callbackRequestCase_ == 3) {
+        if (callbackRequestCase_ == 2) {
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
           onChanged();
         }
       } else {
-        if (callbackRequestCase_ == 3) {
+        if (callbackRequestCase_ == 2) {
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
         }
@@ -5068,33 +4926,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      */
     public hla.rti1516_202X.fedpro.ReportFederationExecutions.Builder getReportFederationExecutionsBuilder() {
       return getReportFederationExecutionsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      */
     @java.lang.Override
     public hla.rti1516_202X.fedpro.ReportFederationExecutionsOrBuilder getReportFederationExecutionsOrBuilder() {
-      if ((callbackRequestCase_ == 3) && (reportFederationExecutionsBuilder_ != null)) {
+      if ((callbackRequestCase_ == 2) && (reportFederationExecutionsBuilder_ != null)) {
         return reportFederationExecutionsBuilder_.getMessageOrBuilder();
       } else {
-        if (callbackRequestCase_ == 3) {
+        if (callbackRequestCase_ == 2) {
           return (hla.rti1516_202X.fedpro.ReportFederationExecutions) callbackRequest_;
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutions.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 3;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.ReportFederationExecutions, hla.rti1516_202X.fedpro.ReportFederationExecutions.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionsOrBuilder> 
         getReportFederationExecutionsFieldBuilder() {
       if (reportFederationExecutionsBuilder_ == null) {
-        if (!(callbackRequestCase_ == 3)) {
+        if (!(callbackRequestCase_ == 2)) {
           callbackRequest_ = hla.rti1516_202X.fedpro.ReportFederationExecutions.getDefaultInstance();
         }
         reportFederationExecutionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5104,7 +4962,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         callbackRequest_ = null;
       }
-      callbackRequestCase_ = 3;
+      callbackRequestCase_ = 2;
       onChanged();;
       return reportFederationExecutionsBuilder_;
     }
@@ -5112,33 +4970,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.ReportFederationExecutionMembers, hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionMembersOrBuilder> reportFederationExecutionMembersBuilder_;
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      * @return Whether the reportFederationExecutionMembers field is set.
      */
     @java.lang.Override
     public boolean hasReportFederationExecutionMembers() {
-      return callbackRequestCase_ == 4;
+      return callbackRequestCase_ == 3;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      * @return The reportFederationExecutionMembers.
      */
     @java.lang.Override
     public hla.rti1516_202X.fedpro.ReportFederationExecutionMembers getReportFederationExecutionMembers() {
       if (reportFederationExecutionMembersBuilder_ == null) {
-        if (callbackRequestCase_ == 4) {
+        if (callbackRequestCase_ == 3) {
           return (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_;
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.getDefaultInstance();
       } else {
-        if (callbackRequestCase_ == 4) {
+        if (callbackRequestCase_ == 3) {
           return reportFederationExecutionMembersBuilder_.getMessage();
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      */
     public Builder setReportFederationExecutionMembers(hla.rti1516_202X.fedpro.ReportFederationExecutionMembers value) {
       if (reportFederationExecutionMembersBuilder_ == null) {
@@ -5150,11 +5008,11 @@ private static final long serialVersionUID = 0L;
       } else {
         reportFederationExecutionMembersBuilder_.setMessage(value);
       }
-      callbackRequestCase_ = 4;
+      callbackRequestCase_ = 3;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      */
     public Builder setReportFederationExecutionMembers(
         hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.Builder builderForValue) {
@@ -5164,15 +5022,15 @@ private static final long serialVersionUID = 0L;
       } else {
         reportFederationExecutionMembersBuilder_.setMessage(builderForValue.build());
       }
-      callbackRequestCase_ = 4;
+      callbackRequestCase_ = 3;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      */
     public Builder mergeReportFederationExecutionMembers(hla.rti1516_202X.fedpro.ReportFederationExecutionMembers value) {
       if (reportFederationExecutionMembersBuilder_ == null) {
-        if (callbackRequestCase_ == 4 &&
+        if (callbackRequestCase_ == 3 &&
             callbackRequest_ != hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.getDefaultInstance()) {
           callbackRequest_ = hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.newBuilder((hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_)
               .mergeFrom(value).buildPartial();
@@ -5181,27 +5039,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (callbackRequestCase_ == 4) {
+        if (callbackRequestCase_ == 3) {
           reportFederationExecutionMembersBuilder_.mergeFrom(value);
         } else {
           reportFederationExecutionMembersBuilder_.setMessage(value);
         }
       }
-      callbackRequestCase_ = 4;
+      callbackRequestCase_ = 3;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      */
     public Builder clearReportFederationExecutionMembers() {
       if (reportFederationExecutionMembersBuilder_ == null) {
-        if (callbackRequestCase_ == 4) {
+        if (callbackRequestCase_ == 3) {
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
           onChanged();
         }
       } else {
-        if (callbackRequestCase_ == 4) {
+        if (callbackRequestCase_ == 3) {
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
         }
@@ -5210,33 +5068,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      */
     public hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.Builder getReportFederationExecutionMembersBuilder() {
       return getReportFederationExecutionMembersFieldBuilder().getBuilder();
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      */
     @java.lang.Override
     public hla.rti1516_202X.fedpro.ReportFederationExecutionMembersOrBuilder getReportFederationExecutionMembersOrBuilder() {
-      if ((callbackRequestCase_ == 4) && (reportFederationExecutionMembersBuilder_ != null)) {
+      if ((callbackRequestCase_ == 3) && (reportFederationExecutionMembersBuilder_ != null)) {
         return reportFederationExecutionMembersBuilder_.getMessageOrBuilder();
       } else {
-        if (callbackRequestCase_ == 4) {
+        if (callbackRequestCase_ == 3) {
           return (hla.rti1516_202X.fedpro.ReportFederationExecutionMembers) callbackRequest_;
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 4;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.ReportFederationExecutionMembers, hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionMembersOrBuilder> 
         getReportFederationExecutionMembersFieldBuilder() {
       if (reportFederationExecutionMembersBuilder_ == null) {
-        if (!(callbackRequestCase_ == 4)) {
+        if (!(callbackRequestCase_ == 3)) {
           callbackRequest_ = hla.rti1516_202X.fedpro.ReportFederationExecutionMembers.getDefaultInstance();
         }
         reportFederationExecutionMembersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -5246,7 +5104,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         callbackRequest_ = null;
       }
-      callbackRequestCase_ = 4;
+      callbackRequestCase_ = 3;
       onChanged();;
       return reportFederationExecutionMembersBuilder_;
     }
@@ -5254,33 +5112,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder> reportFederationExecutionDoesNotExistBuilder_;
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
      * @return Whether the reportFederationExecutionDoesNotExist field is set.
      */
     @java.lang.Override
     public boolean hasReportFederationExecutionDoesNotExist() {
-      return callbackRequestCase_ == 5;
+      return callbackRequestCase_ == 4;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
      * @return The reportFederationExecutionDoesNotExist.
      */
     @java.lang.Override
     public hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist getReportFederationExecutionDoesNotExist() {
       if (reportFederationExecutionDoesNotExistBuilder_ == null) {
-        if (callbackRequestCase_ == 5) {
+        if (callbackRequestCase_ == 4) {
           return (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_;
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
       } else {
-        if (callbackRequestCase_ == 5) {
+        if (callbackRequestCase_ == 4) {
           return reportFederationExecutionDoesNotExistBuilder_.getMessage();
         }
         return hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
      */
     public Builder setReportFederationExecutionDoesNotExist(hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist value) {
       if (reportFederationExecutionDoesNotExistBuilder_ == null) {
@@ -5292,11 +5150,11 @@ private static final long serialVersionUID = 0L;
       } else {
         reportFederationExecutionDoesNotExistBuilder_.setMessage(value);
       }
-      callbackRequestCase_ = 5;
+      callbackRequestCase_ = 4;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
      */
     public Builder setReportFederationExecutionDoesNotExist(
         hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder builderForValue) {
@@ -5306,15 +5164,15 @@ private static final long serialVersionUID = 0L;
       } else {
         reportFederationExecutionDoesNotExistBuilder_.setMessage(builderForValue.build());
       }
-      callbackRequestCase_ = 5;
+      callbackRequestCase_ = 4;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
      */
     public Builder mergeReportFederationExecutionDoesNotExist(hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist value) {
       if (reportFederationExecutionDoesNotExistBuilder_ == null) {
-        if (callbackRequestCase_ == 5 &&
+        if (callbackRequestCase_ == 4 &&
             callbackRequest_ != hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance()) {
           callbackRequest_ = hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.newBuilder((hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_)
               .mergeFrom(value).buildPartial();
@@ -5323,20 +5181,162 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (callbackRequestCase_ == 5) {
+        if (callbackRequestCase_ == 4) {
           reportFederationExecutionDoesNotExistBuilder_.mergeFrom(value);
         } else {
           reportFederationExecutionDoesNotExistBuilder_.setMessage(value);
+        }
+      }
+      callbackRequestCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
+     */
+    public Builder clearReportFederationExecutionDoesNotExist() {
+      if (reportFederationExecutionDoesNotExistBuilder_ == null) {
+        if (callbackRequestCase_ == 4) {
+          callbackRequestCase_ = 0;
+          callbackRequest_ = null;
+          onChanged();
+        }
+      } else {
+        if (callbackRequestCase_ == 4) {
+          callbackRequestCase_ = 0;
+          callbackRequest_ = null;
+        }
+        reportFederationExecutionDoesNotExistBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
+     */
+    public hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder getReportFederationExecutionDoesNotExistBuilder() {
+      return getReportFederationExecutionDoesNotExistFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
+     */
+    @java.lang.Override
+    public hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder getReportFederationExecutionDoesNotExistOrBuilder() {
+      if ((callbackRequestCase_ == 4) && (reportFederationExecutionDoesNotExistBuilder_ != null)) {
+        return reportFederationExecutionDoesNotExistBuilder_.getMessageOrBuilder();
+      } else {
+        if (callbackRequestCase_ == 4) {
+          return (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_;
+        }
+        return hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder> 
+        getReportFederationExecutionDoesNotExistFieldBuilder() {
+      if (reportFederationExecutionDoesNotExistBuilder_ == null) {
+        if (!(callbackRequestCase_ == 4)) {
+          callbackRequest_ = hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
+        }
+        reportFederationExecutionDoesNotExistBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder>(
+                (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_,
+                getParentForChildren(),
+                isClean());
+        callbackRequest_ = null;
+      }
+      callbackRequestCase_ = 4;
+      onChanged();;
+      return reportFederationExecutionDoesNotExistBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        hla.rti1516_202X.fedpro.FederateResigned, hla.rti1516_202X.fedpro.FederateResigned.Builder, hla.rti1516_202X.fedpro.FederateResignedOrBuilder> federateResignedBuilder_;
+    /**
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+     * @return Whether the federateResigned field is set.
+     */
+    @java.lang.Override
+    public boolean hasFederateResigned() {
+      return callbackRequestCase_ == 5;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+     * @return The federateResigned.
+     */
+    @java.lang.Override
+    public hla.rti1516_202X.fedpro.FederateResigned getFederateResigned() {
+      if (federateResignedBuilder_ == null) {
+        if (callbackRequestCase_ == 5) {
+          return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
+        }
+        return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
+      } else {
+        if (callbackRequestCase_ == 5) {
+          return federateResignedBuilder_.getMessage();
+        }
+        return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+     */
+    public Builder setFederateResigned(hla.rti1516_202X.fedpro.FederateResigned value) {
+      if (federateResignedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callbackRequest_ = value;
+        onChanged();
+      } else {
+        federateResignedBuilder_.setMessage(value);
+      }
+      callbackRequestCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+     */
+    public Builder setFederateResigned(
+        hla.rti1516_202X.fedpro.FederateResigned.Builder builderForValue) {
+      if (federateResignedBuilder_ == null) {
+        callbackRequest_ = builderForValue.build();
+        onChanged();
+      } else {
+        federateResignedBuilder_.setMessage(builderForValue.build());
+      }
+      callbackRequestCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
+     */
+    public Builder mergeFederateResigned(hla.rti1516_202X.fedpro.FederateResigned value) {
+      if (federateResignedBuilder_ == null) {
+        if (callbackRequestCase_ == 5 &&
+            callbackRequest_ != hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance()) {
+          callbackRequest_ = hla.rti1516_202X.fedpro.FederateResigned.newBuilder((hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          callbackRequest_ = value;
+        }
+        onChanged();
+      } else {
+        if (callbackRequestCase_ == 5) {
+          federateResignedBuilder_.mergeFrom(value);
+        } else {
+          federateResignedBuilder_.setMessage(value);
         }
       }
       callbackRequestCase_ = 5;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
      */
-    public Builder clearReportFederationExecutionDoesNotExist() {
-      if (reportFederationExecutionDoesNotExistBuilder_ == null) {
+    public Builder clearFederateResigned() {
+      if (federateResignedBuilder_ == null) {
         if (callbackRequestCase_ == 5) {
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
@@ -5347,50 +5347,50 @@ private static final long serialVersionUID = 0L;
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
         }
-        reportFederationExecutionDoesNotExistBuilder_.clear();
+        federateResignedBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
      */
-    public hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder getReportFederationExecutionDoesNotExistBuilder() {
-      return getReportFederationExecutionDoesNotExistFieldBuilder().getBuilder();
+    public hla.rti1516_202X.fedpro.FederateResigned.Builder getFederateResignedBuilder() {
+      return getFederateResignedFieldBuilder().getBuilder();
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
      */
     @java.lang.Override
-    public hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder getReportFederationExecutionDoesNotExistOrBuilder() {
-      if ((callbackRequestCase_ == 5) && (reportFederationExecutionDoesNotExistBuilder_ != null)) {
-        return reportFederationExecutionDoesNotExistBuilder_.getMessageOrBuilder();
+    public hla.rti1516_202X.fedpro.FederateResignedOrBuilder getFederateResignedOrBuilder() {
+      if ((callbackRequestCase_ == 5) && (federateResignedBuilder_ != null)) {
+        return federateResignedBuilder_.getMessageOrBuilder();
       } else {
         if (callbackRequestCase_ == 5) {
-          return (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_;
+          return (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_;
         }
-        return hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
+        return hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;</code>
+     * <code>.rti1516_202X.fedpro.FederateResigned federateResigned = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder> 
-        getReportFederationExecutionDoesNotExistFieldBuilder() {
-      if (reportFederationExecutionDoesNotExistBuilder_ == null) {
+        hla.rti1516_202X.fedpro.FederateResigned, hla.rti1516_202X.fedpro.FederateResigned.Builder, hla.rti1516_202X.fedpro.FederateResignedOrBuilder> 
+        getFederateResignedFieldBuilder() {
+      if (federateResignedBuilder_ == null) {
         if (!(callbackRequestCase_ == 5)) {
-          callbackRequest_ = hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.getDefaultInstance();
+          callbackRequest_ = hla.rti1516_202X.fedpro.FederateResigned.getDefaultInstance();
         }
-        reportFederationExecutionDoesNotExistBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.Builder, hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExistOrBuilder>(
-                (hla.rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist) callbackRequest_,
+        federateResignedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            hla.rti1516_202X.fedpro.FederateResigned, hla.rti1516_202X.fedpro.FederateResigned.Builder, hla.rti1516_202X.fedpro.FederateResignedOrBuilder>(
+                (hla.rti1516_202X.fedpro.FederateResigned) callbackRequest_,
                 getParentForChildren(),
                 isClean());
         callbackRequest_ = null;
       }
       callbackRequestCase_ = 5;
       onChanged();;
-      return reportFederationExecutionDoesNotExistBuilder_;
+      return federateResignedBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -11074,177 +11074,35 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder> confirmInteractionTransportationTypeChangeBuilder_;
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     * @return Whether the confirmInteractionTransportationTypeChange field is set.
-     */
-    @java.lang.Override
-    public boolean hasConfirmInteractionTransportationTypeChange() {
-      return callbackRequestCase_ == 46;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     * @return The confirmInteractionTransportationTypeChange.
-     */
-    @java.lang.Override
-    public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange getConfirmInteractionTransportationTypeChange() {
-      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
-        if (callbackRequestCase_ == 46) {
-          return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
-        }
-        return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
-      } else {
-        if (callbackRequestCase_ == 46) {
-          return confirmInteractionTransportationTypeChangeBuilder_.getMessage();
-        }
-        return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     */
-    public Builder setConfirmInteractionTransportationTypeChange(hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange value) {
-      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        callbackRequest_ = value;
-        onChanged();
-      } else {
-        confirmInteractionTransportationTypeChangeBuilder_.setMessage(value);
-      }
-      callbackRequestCase_ = 46;
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     */
-    public Builder setConfirmInteractionTransportationTypeChange(
-        hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder builderForValue) {
-      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
-        callbackRequest_ = builderForValue.build();
-        onChanged();
-      } else {
-        confirmInteractionTransportationTypeChangeBuilder_.setMessage(builderForValue.build());
-      }
-      callbackRequestCase_ = 46;
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     */
-    public Builder mergeConfirmInteractionTransportationTypeChange(hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange value) {
-      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
-        if (callbackRequestCase_ == 46 &&
-            callbackRequest_ != hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance()) {
-          callbackRequest_ = hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.newBuilder((hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          callbackRequest_ = value;
-        }
-        onChanged();
-      } else {
-        if (callbackRequestCase_ == 46) {
-          confirmInteractionTransportationTypeChangeBuilder_.mergeFrom(value);
-        } else {
-          confirmInteractionTransportationTypeChangeBuilder_.setMessage(value);
-        }
-      }
-      callbackRequestCase_ = 46;
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     */
-    public Builder clearConfirmInteractionTransportationTypeChange() {
-      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
-        if (callbackRequestCase_ == 46) {
-          callbackRequestCase_ = 0;
-          callbackRequest_ = null;
-          onChanged();
-        }
-      } else {
-        if (callbackRequestCase_ == 46) {
-          callbackRequestCase_ = 0;
-          callbackRequest_ = null;
-        }
-        confirmInteractionTransportationTypeChangeBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     */
-    public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder getConfirmInteractionTransportationTypeChangeBuilder() {
-      return getConfirmInteractionTransportationTypeChangeFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     */
-    @java.lang.Override
-    public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder getConfirmInteractionTransportationTypeChangeOrBuilder() {
-      if ((callbackRequestCase_ == 46) && (confirmInteractionTransportationTypeChangeBuilder_ != null)) {
-        return confirmInteractionTransportationTypeChangeBuilder_.getMessageOrBuilder();
-      } else {
-        if (callbackRequestCase_ == 46) {
-          return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
-        }
-        return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder> 
-        getConfirmInteractionTransportationTypeChangeFieldBuilder() {
-      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
-        if (!(callbackRequestCase_ == 46)) {
-          callbackRequest_ = hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
-        }
-        confirmInteractionTransportationTypeChangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder>(
-                (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_,
-                getParentForChildren(),
-                isClean());
-        callbackRequest_ = null;
-      }
-      callbackRequestCase_ = 46;
-      onChanged();;
-      return confirmInteractionTransportationTypeChangeBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.ReportAttributeTransportationType, hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder, hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder> reportAttributeTransportationTypeBuilder_;
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
      * @return Whether the reportAttributeTransportationType field is set.
      */
     @java.lang.Override
     public boolean hasReportAttributeTransportationType() {
-      return callbackRequestCase_ == 47;
+      return callbackRequestCase_ == 46;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
      * @return The reportAttributeTransportationType.
      */
     @java.lang.Override
     public hla.rti1516_202X.fedpro.ReportAttributeTransportationType getReportAttributeTransportationType() {
       if (reportAttributeTransportationTypeBuilder_ == null) {
-        if (callbackRequestCase_ == 47) {
+        if (callbackRequestCase_ == 46) {
           return (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_;
         }
         return hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
       } else {
-        if (callbackRequestCase_ == 47) {
+        if (callbackRequestCase_ == 46) {
           return reportAttributeTransportationTypeBuilder_.getMessage();
         }
         return hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
      */
     public Builder setReportAttributeTransportationType(hla.rti1516_202X.fedpro.ReportAttributeTransportationType value) {
       if (reportAttributeTransportationTypeBuilder_ == null) {
@@ -11256,11 +11114,11 @@ private static final long serialVersionUID = 0L;
       } else {
         reportAttributeTransportationTypeBuilder_.setMessage(value);
       }
-      callbackRequestCase_ = 47;
+      callbackRequestCase_ = 46;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
      */
     public Builder setReportAttributeTransportationType(
         hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder builderForValue) {
@@ -11270,15 +11128,15 @@ private static final long serialVersionUID = 0L;
       } else {
         reportAttributeTransportationTypeBuilder_.setMessage(builderForValue.build());
       }
-      callbackRequestCase_ = 47;
+      callbackRequestCase_ = 46;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
      */
     public Builder mergeReportAttributeTransportationType(hla.rti1516_202X.fedpro.ReportAttributeTransportationType value) {
       if (reportAttributeTransportationTypeBuilder_ == null) {
-        if (callbackRequestCase_ == 47 &&
+        if (callbackRequestCase_ == 46 &&
             callbackRequest_ != hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance()) {
           callbackRequest_ = hla.rti1516_202X.fedpro.ReportAttributeTransportationType.newBuilder((hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_)
               .mergeFrom(value).buildPartial();
@@ -11287,20 +11145,162 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (callbackRequestCase_ == 47) {
+        if (callbackRequestCase_ == 46) {
           reportAttributeTransportationTypeBuilder_.mergeFrom(value);
         } else {
           reportAttributeTransportationTypeBuilder_.setMessage(value);
+        }
+      }
+      callbackRequestCase_ = 46;
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
+     */
+    public Builder clearReportAttributeTransportationType() {
+      if (reportAttributeTransportationTypeBuilder_ == null) {
+        if (callbackRequestCase_ == 46) {
+          callbackRequestCase_ = 0;
+          callbackRequest_ = null;
+          onChanged();
+        }
+      } else {
+        if (callbackRequestCase_ == 46) {
+          callbackRequestCase_ = 0;
+          callbackRequest_ = null;
+        }
+        reportAttributeTransportationTypeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
+     */
+    public hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder getReportAttributeTransportationTypeBuilder() {
+      return getReportAttributeTransportationTypeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
+     */
+    @java.lang.Override
+    public hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder getReportAttributeTransportationTypeOrBuilder() {
+      if ((callbackRequestCase_ == 46) && (reportAttributeTransportationTypeBuilder_ != null)) {
+        return reportAttributeTransportationTypeBuilder_.getMessageOrBuilder();
+      } else {
+        if (callbackRequestCase_ == 46) {
+          return (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_;
+        }
+        return hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        hla.rti1516_202X.fedpro.ReportAttributeTransportationType, hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder, hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder> 
+        getReportAttributeTransportationTypeFieldBuilder() {
+      if (reportAttributeTransportationTypeBuilder_ == null) {
+        if (!(callbackRequestCase_ == 46)) {
+          callbackRequest_ = hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
+        }
+        reportAttributeTransportationTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            hla.rti1516_202X.fedpro.ReportAttributeTransportationType, hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder, hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder>(
+                (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_,
+                getParentForChildren(),
+                isClean());
+        callbackRequest_ = null;
+      }
+      callbackRequestCase_ = 46;
+      onChanged();;
+      return reportAttributeTransportationTypeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder> confirmInteractionTransportationTypeChangeBuilder_;
+    /**
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+     * @return Whether the confirmInteractionTransportationTypeChange field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfirmInteractionTransportationTypeChange() {
+      return callbackRequestCase_ == 47;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+     * @return The confirmInteractionTransportationTypeChange.
+     */
+    @java.lang.Override
+    public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange getConfirmInteractionTransportationTypeChange() {
+      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
+        if (callbackRequestCase_ == 47) {
+          return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
+        }
+        return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
+      } else {
+        if (callbackRequestCase_ == 47) {
+          return confirmInteractionTransportationTypeChangeBuilder_.getMessage();
+        }
+        return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+     */
+    public Builder setConfirmInteractionTransportationTypeChange(hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange value) {
+      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        callbackRequest_ = value;
+        onChanged();
+      } else {
+        confirmInteractionTransportationTypeChangeBuilder_.setMessage(value);
+      }
+      callbackRequestCase_ = 47;
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+     */
+    public Builder setConfirmInteractionTransportationTypeChange(
+        hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder builderForValue) {
+      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
+        callbackRequest_ = builderForValue.build();
+        onChanged();
+      } else {
+        confirmInteractionTransportationTypeChangeBuilder_.setMessage(builderForValue.build());
+      }
+      callbackRequestCase_ = 47;
+      return this;
+    }
+    /**
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
+     */
+    public Builder mergeConfirmInteractionTransportationTypeChange(hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange value) {
+      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
+        if (callbackRequestCase_ == 47 &&
+            callbackRequest_ != hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance()) {
+          callbackRequest_ = hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.newBuilder((hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          callbackRequest_ = value;
+        }
+        onChanged();
+      } else {
+        if (callbackRequestCase_ == 47) {
+          confirmInteractionTransportationTypeChangeBuilder_.mergeFrom(value);
+        } else {
+          confirmInteractionTransportationTypeChangeBuilder_.setMessage(value);
         }
       }
       callbackRequestCase_ = 47;
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
      */
-    public Builder clearReportAttributeTransportationType() {
-      if (reportAttributeTransportationTypeBuilder_ == null) {
+    public Builder clearConfirmInteractionTransportationTypeChange() {
+      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
         if (callbackRequestCase_ == 47) {
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
@@ -11311,50 +11311,50 @@ private static final long serialVersionUID = 0L;
           callbackRequestCase_ = 0;
           callbackRequest_ = null;
         }
-        reportAttributeTransportationTypeBuilder_.clear();
+        confirmInteractionTransportationTypeChangeBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
      */
-    public hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder getReportAttributeTransportationTypeBuilder() {
-      return getReportAttributeTransportationTypeFieldBuilder().getBuilder();
+    public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder getConfirmInteractionTransportationTypeChangeBuilder() {
+      return getConfirmInteractionTransportationTypeChangeFieldBuilder().getBuilder();
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
      */
     @java.lang.Override
-    public hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder getReportAttributeTransportationTypeOrBuilder() {
-      if ((callbackRequestCase_ == 47) && (reportAttributeTransportationTypeBuilder_ != null)) {
-        return reportAttributeTransportationTypeBuilder_.getMessageOrBuilder();
+    public hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder getConfirmInteractionTransportationTypeChangeOrBuilder() {
+      if ((callbackRequestCase_ == 47) && (confirmInteractionTransportationTypeChangeBuilder_ != null)) {
+        return confirmInteractionTransportationTypeChangeBuilder_.getMessageOrBuilder();
       } else {
         if (callbackRequestCase_ == 47) {
-          return (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_;
+          return (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_;
         }
-        return hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
+        return hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 47;</code>
+     * <code>.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.ReportAttributeTransportationType, hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder, hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder> 
-        getReportAttributeTransportationTypeFieldBuilder() {
-      if (reportAttributeTransportationTypeBuilder_ == null) {
+        hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder> 
+        getConfirmInteractionTransportationTypeChangeFieldBuilder() {
+      if (confirmInteractionTransportationTypeChangeBuilder_ == null) {
         if (!(callbackRequestCase_ == 47)) {
-          callbackRequest_ = hla.rti1516_202X.fedpro.ReportAttributeTransportationType.getDefaultInstance();
+          callbackRequest_ = hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.getDefaultInstance();
         }
-        reportAttributeTransportationTypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            hla.rti1516_202X.fedpro.ReportAttributeTransportationType, hla.rti1516_202X.fedpro.ReportAttributeTransportationType.Builder, hla.rti1516_202X.fedpro.ReportAttributeTransportationTypeOrBuilder>(
-                (hla.rti1516_202X.fedpro.ReportAttributeTransportationType) callbackRequest_,
+        confirmInteractionTransportationTypeChangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange.Builder, hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChangeOrBuilder>(
+                (hla.rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange) callbackRequest_,
                 getParentForChildren(),
                 isClean());
         callbackRequest_ = null;
       }
       callbackRequestCase_ = 47;
       onChanged();;
-      return reportAttributeTransportationTypeBuilder_;
+      return confirmInteractionTransportationTypeChangeBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

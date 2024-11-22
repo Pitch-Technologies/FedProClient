@@ -16,18 +16,57 @@
 
 package se.pitch.oss.fedpro.client.transport;
 
+import se.pitch.oss.fedpro.client.TypedProperties;
+
 import javax.net.ssl.SSLContext;
 import java.net.URI;
 import java.net.UnknownHostException;
+
+import static se.pitch.oss.fedpro.client.Settings.*;
+import static se.pitch.oss.fedpro.client.transport.TransportSettings.*;
+import static se.pitch.oss.fedpro.common.Ports.DEFAULT_PORT_WSS;
 
 public class WebSocketSecureTransport extends WebSocketTransport {
 
    private final SSLContext _context;
 
-   public WebSocketSecureTransport(SSLContext context, String host, int port)
+   // Transport layer settings
+   private final String _keyStoreAlgorithm;
+   private final String _passwordPath;
+   private final String _keystorePath;
+   private final String _keyStoreType;
+   private final boolean _useDefaultKeystore;
+   private final String _tlsModeString;
+
+   public WebSocketSecureTransport(SSLContext sslContext, TypedProperties settings)
    {
-      super(host, port);
-      _context = context;
+      super(
+            settings == null ?
+                  DEFAULT_CONNECTION_HOST :
+                  settings.getString(SETTING_NAME_CONNECTION_HOST, DEFAULT_CONNECTION_HOST),
+            settings == null ?
+                  DEFAULT_PORT_WSS :
+                  settings.getInt(SETTING_NAME_CONNECTION_PORT, DEFAULT_PORT_WSS));
+
+      if (settings == null) {
+         settings = new TypedProperties();
+      }
+
+      _keyStoreAlgorithm = settings.getString(SETTING_NAME_KEYSTORE_ALGORITHM, DEFAULT_KEYSTORE_ALGORITHM);
+      _passwordPath = settings.getString(SETTING_NAME_KEYSTORE_PASSWORD_PATH, DEFAULT_KEYSTORE_PASSWORD_PATH);
+      _keystorePath = settings.getString(SETTING_NAME_KEYSTORE_PATH, DEFAULT_KEYSTORE_PATH);
+      _keyStoreType = settings.getString(SETTING_NAME_KEYSTORE_TYPE, DEFAULT_KEYSTORE_TYPE);
+      _useDefaultKeystore = settings.getBoolean(SETTING_NAME_KEYSTORE_USE_DEFAULT, DEFAULT_KEYSTORE_USE_DEFAULT);
+      _tlsModeString = settings.getString(SETTING_NAME_TLS_MODE, DEFAULT_TLS_MODE.name());
+
+      if (sslContext != null) {
+         _context = sslContext;
+      } else {
+         _context = SecurityUtil.getSslContext(
+               SecurityUtil.toTlsMode(_tlsModeString), _passwordPath, _keystorePath, _keyStoreType,
+               _keyStoreAlgorithm, _useDefaultKeystore);
+      }
+      logSettings();
    }
 
    @Override
@@ -57,5 +96,19 @@ public class WebSocketSecureTransport extends WebSocketTransport {
       }
 
       return host;
+   }
+
+   private void logSettings()
+   {
+      TypedProperties allTransportSettingsUsed = new TypedProperties();
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_ALGORITHM, _keyStoreAlgorithm);
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_PASSWORD_PATH, _passwordPath);
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_PATH, _keystorePath);
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_TYPE, _keyStoreType);
+      allTransportSettingsUsed.setBoolean(SETTING_NAME_KEYSTORE_USE_DEFAULT, _useDefaultKeystore);
+      allTransportSettingsUsed.getString(SETTING_NAME_TLS_MODE, _tlsModeString);
+      LOGGER.config(() -> String.format(
+            "Federate Protocol client transport layer settings used:\n%s",
+            allTransportSettingsUsed.toPrettyString()));
    }
 }

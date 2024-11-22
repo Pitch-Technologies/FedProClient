@@ -335,6 +335,26 @@ public final class RTIambassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_UnpublishObjectClassAttributesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_PublishInteractionClassRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_PublishInteractionClassRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_PublishInteractionClassResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_PublishInteractionClassResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_UnpublishInteractionClassRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_UnpublishInteractionClassRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_UnpublishInteractionClassResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_UnpublishInteractionClassResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -364,26 +384,6 @@ public final class RTIambassador {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_PublishInteractionClassRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_PublishInteractionClassRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_PublishInteractionClassResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_PublishInteractionClassResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_UnpublishInteractionClassRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_UnpublishInteractionClassRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_UnpublishInteractionClassResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_UnpublishInteractionClassResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesRequest_descriptor;
   static final 
@@ -445,36 +445,6 @@ public final class RTIambassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -505,6 +475,46 @@ public final class RTIambassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -525,25 +535,25 @@ public final class RTIambassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_ReleaseObjectInstanceNameResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceRequest_descriptor;
   static final 
@@ -1185,26 +1195,6 @@ public final class RTIambassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_RequestAttributeValueUpdateWithRegionsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_GetFederateHandleRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1395,15 +1385,15 @@ public final class RTIambassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_GetTransportationTypeNameResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForInteractionClassRequest_descriptor;
   static final 
@@ -1525,85 +1515,235 @@ public final class RTIambassador {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rti1516_202X_fedpro_NormalizeObjectInstanceHandleResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchRequest_descriptor;
+    internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchResponse_descriptor;
+    internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable;
+      internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rti1516_202X_fedpro_ConnectRequest_descriptor;
   static final 
@@ -1788,30 +1928,30 @@ public final class RTIambassador {
       "fedpro.ObjectClassHandle\022;\n\nattributes\030\002" +
       " \001(\0132\'.rti1516_202X.fedpro.AttributeHand" +
       "leSet\"(\n&UnpublishObjectClassAttributesR" +
-      "esponse\"\270\001\n-PublishObjectClassDirectedIn" +
-      "teractionsRequest\022;\n\013objectClass\030\001 \001(\0132&" +
-      ".rti1516_202X.fedpro.ObjectClassHandle\022J" +
-      "\n\022interactionClasses\030\002 \001(\0132..rti1516_202" +
-      "X.fedpro.InteractionClassHandleSet\"0\n.Pu" +
-      "blishObjectClassDirectedInteractionsResp" +
-      "onse\"n\n/UnpublishObjectClassDirectedInte" +
-      "ractionsRequest\022;\n\013objectClass\030\001 \001(\0132&.r" +
-      "ti1516_202X.fedpro.ObjectClassHandle\"2\n0" +
-      "UnpublishObjectClassDirectedInteractions" +
-      "Response\"\301\001\n6UnpublishObjectClassDirecte" +
-      "dInteractionsWithSetRequest\022;\n\013objectCla" +
-      "ss\030\001 \001(\0132&.rti1516_202X.fedpro.ObjectCla" +
-      "ssHandle\022J\n\022interactionClasses\030\002 \001(\0132..r" +
-      "ti1516_202X.fedpro.InteractionClassHandl" +
-      "eSet\"9\n7UnpublishObjectClassDirectedInte" +
-      "ractionsWithSetResponse\"g\n\036PublishIntera" +
-      "ctionClassRequest\022E\n\020interactionClass\030\001 " +
-      "\001(\0132+.rti1516_202X.fedpro.InteractionCla" +
-      "ssHandle\"!\n\037PublishInteractionClassRespo" +
-      "nse\"i\n UnpublishInteractionClassRequest\022" +
-      "E\n\020interactionClass\030\001 \001(\0132+.rti1516_202X" +
-      ".fedpro.InteractionClassHandle\"#\n!Unpubl" +
-      "ishInteractionClassResponse\"\241\001\n%Subscrib" +
+      "esponse\"g\n\036PublishInteractionClassReques" +
+      "t\022E\n\020interactionClass\030\001 \001(\0132+.rti1516_20" +
+      "2X.fedpro.InteractionClassHandle\"!\n\037Publ" +
+      "ishInteractionClassResponse\"i\n Unpublish" +
+      "InteractionClassRequest\022E\n\020interactionCl" +
+      "ass\030\001 \001(\0132+.rti1516_202X.fedpro.Interact" +
+      "ionClassHandle\"#\n!UnpublishInteractionCl" +
+      "assResponse\"\270\001\n-PublishObjectClassDirect" +
+      "edInteractionsRequest\022;\n\013objectClass\030\001 \001" +
+      "(\0132&.rti1516_202X.fedpro.ObjectClassHand" +
+      "le\022J\n\022interactionClasses\030\002 \001(\0132..rti1516" +
+      "_202X.fedpro.InteractionClassHandleSet\"0" +
+      "\n.PublishObjectClassDirectedInteractions" +
+      "Response\"n\n/UnpublishObjectClassDirected" +
+      "InteractionsRequest\022;\n\013objectClass\030\001 \001(\013" +
+      "2&.rti1516_202X.fedpro.ObjectClassHandle" +
+      "\"2\n0UnpublishObjectClassDirectedInteract" +
+      "ionsResponse\"\301\001\n6UnpublishObjectClassDir" +
+      "ectedInteractionsWithSetRequest\022;\n\013objec" +
+      "tClass\030\001 \001(\0132&.rti1516_202X.fedpro.Objec" +
+      "tClassHandle\022J\n\022interactionClasses\030\002 \001(\013" +
+      "2..rti1516_202X.fedpro.InteractionClassH" +
+      "andleSet\"9\n7UnpublishObjectClassDirected" +
+      "InteractionsWithSetResponse\"\241\001\n%Subscrib" +
       "eObjectClassAttributesRequest\022;\n\013objectC" +
       "lass\030\001 \001(\0132&.rti1516_202X.fedpro.ObjectC" +
       "lassHandle\022;\n\nattributes\030\002 \001(\0132\'.rti1516" +
@@ -1843,1434 +1983,1548 @@ public final class RTIambassador {
       "tClass\030\001 \001(\0132&.rti1516_202X.fedpro.Objec" +
       "tClassHandle\022;\n\nattributes\030\002 \001(\0132\'.rti15" +
       "16_202X.fedpro.AttributeHandleSet\"*\n(Uns" +
-      "ubscribeObjectClassAttributesResponse\"\272\001" +
-      "\n/SubscribeObjectClassDirectedInteractio" +
-      "nsRequest\022;\n\013objectClass\030\001 \001(\0132&.rti1516" +
-      "_202X.fedpro.ObjectClassHandle\022J\n\022intera" +
-      "ctionClasses\030\002 \001(\0132..rti1516_202X.fedpro" +
-      ".InteractionClassHandleSet\"2\n0SubscribeO" +
-      "bjectClassDirectedInteractionsResponse\"p" +
-      "\n1UnsubscribeObjectClassDirectedInteract" +
-      "ionsRequest\022;\n\013objectClass\030\001 \001(\0132&.rti15" +
-      "16_202X.fedpro.ObjectClassHandle\"4\n2Unsu" +
-      "bscribeObjectClassDirectedInteractionsRe" +
-      "sponse\"\303\001\n8UnsubscribeObjectClassDirecte" +
-      "dInteractionsWithSetRequest\022;\n\013objectCla" +
-      "ss\030\001 \001(\0132&.rti1516_202X.fedpro.ObjectCla" +
-      "ssHandle\022J\n\022interactionClasses\030\002 \001(\0132..r" +
-      "ti1516_202X.fedpro.InteractionClassHandl" +
-      "eSet\";\n9UnsubscribeObjectClassDirectedIn" +
-      "teractionsWithSetResponse\"i\n SubscribeIn" +
+      "ubscribeObjectClassAttributesResponse\"i\n" +
+      " SubscribeInteractionClassRequest\022E\n\020int" +
+      "eractionClass\030\001 \001(\0132+.rti1516_202X.fedpr" +
+      "o.InteractionClassHandle\"#\n!SubscribeInt" +
+      "eractionClassResponse\"r\n)SubscribeIntera" +
+      "ctionClassPassivelyRequest\022E\n\020interactio" +
+      "nClass\030\001 \001(\0132+.rti1516_202X.fedpro.Inter" +
+      "actionClassHandle\",\n*SubscribeInteractio" +
+      "nClassPassivelyResponse\"k\n\"UnsubscribeIn" +
       "teractionClassRequest\022E\n\020interactionClas" +
       "s\030\001 \001(\0132+.rti1516_202X.fedpro.Interactio" +
-      "nClassHandle\"#\n!SubscribeInteractionClas" +
-      "sResponse\"r\n)SubscribeInteractionClassPa" +
-      "ssivelyRequest\022E\n\020interactionClass\030\001 \001(\013" +
-      "2+.rti1516_202X.fedpro.InteractionClassH" +
-      "andle\",\n*SubscribeInteractionClassPassiv" +
-      "elyResponse\"k\n\"UnsubscribeInteractionCla" +
-      "ssRequest\022E\n\020interactionClass\030\001 \001(\0132+.rt" +
-      "i1516_202X.fedpro.InteractionClassHandle" +
-      "\"%\n#UnsubscribeInteractionClassResponse\"" +
-      ">\n ReserveObjectInstanceNameRequest\022\032\n\022o" +
-      "bjectInstanceName\030\001 \001(\t\"#\n!ReserveObject" +
-      "InstanceNameResponse\">\n ReleaseObjectIns" +
-      "tanceNameRequest\022\032\n\022objectInstanceName\030\001" +
-      " \001(\t\"#\n!ReleaseObjectInstanceNameRespons" +
-      "e\"G\n(ReserveMultipleObjectInstanceNameRe" +
-      "quest\022\033\n\023objectInstanceNames\030\001 \003(\t\"+\n)Re" +
-      "serveMultipleObjectInstanceNameResponse\"" +
-      "G\n(ReleaseMultipleObjectInstanceNameRequ" +
-      "est\022\033\n\023objectInstanceNames\030\001 \003(\t\"+\n)Rele" +
-      "aseMultipleObjectInstanceNameResponse\"\\\n" +
-      "\035RegisterObjectInstanceRequest\022;\n\013object" +
-      "Class\030\001 \001(\0132&.rti1516_202X.fedpro.Object" +
-      "ClassHandle\"[\n\036RegisterObjectInstanceRes" +
-      "ponse\0229\n\006result\030\001 \001(\0132).rti1516_202X.fed" +
-      "pro.ObjectInstanceHandle\"\200\001\n%RegisterObj" +
-      "ectInstanceWithNameRequest\022;\n\013objectClas" +
-      "s\030\001 \001(\0132&.rti1516_202X.fedpro.ObjectClas" +
-      "sHandle\022\032\n\022objectInstanceName\030\002 \001(\t\"c\n&R" +
-      "egisterObjectInstanceWithNameResponse\0229\n" +
-      "\006result\030\001 \001(\0132).rti1516_202X.fedpro.Obje" +
-      "ctInstanceHandle\"\301\001\n\034UpdateAttributeValu" +
-      "esRequest\022A\n\016objectInstance\030\001 \001(\0132).rti1" +
-      "516_202X.fedpro.ObjectInstanceHandle\022E\n\017" +
-      "attributeValues\030\002 \001(\0132,.rti1516_202X.fed" +
-      "pro.AttributeHandleValueMap\022\027\n\017userSuppl" +
-      "iedTag\030\003 \001(\014\"\037\n\035UpdateAttributeValuesRes" +
-      "ponse\"\371\001\n$UpdateAttributeValuesWithTimeR" +
-      "equest\022A\n\016objectInstance\030\001 \001(\0132).rti1516" +
-      "_202X.fedpro.ObjectInstanceHandle\022E\n\017att" +
-      "ributeValues\030\002 \001(\0132,.rti1516_202X.fedpro" +
-      ".AttributeHandleValueMap\022\027\n\017userSupplied" +
-      "Tag\030\003 \001(\014\022.\n\004time\030\004 \001(\0132 .rti1516_202X.f" +
-      "edpro.LogicalTime\"e\n%UpdateAttributeValu" +
-      "esWithTimeResponse\022<\n\006result\030\001 \001(\0132,.rti" +
-      "1516_202X.fedpro.MessageRetractionReturn" +
-      "\"\277\001\n\026SendInteractionRequest\022E\n\020interacti" +
-      "onClass\030\001 \001(\0132+.rti1516_202X.fedpro.Inte" +
-      "ractionClassHandle\022E\n\017parameterValues\030\002 " +
-      "\001(\0132,.rti1516_202X.fedpro.ParameterHandl" +
-      "eValueMap\022\027\n\017userSuppliedTag\030\003 \001(\014\"\031\n\027Se" +
-      "ndInteractionResponse\"\367\001\n\036SendInteractio" +
-      "nWithTimeRequest\022E\n\020interactionClass\030\001 \001" +
-      "(\0132+.rti1516_202X.fedpro.InteractionClas" +
-      "sHandle\022E\n\017parameterValues\030\002 \001(\0132,.rti15" +
-      "16_202X.fedpro.ParameterHandleValueMap\022\027" +
-      "\n\017userSuppliedTag\030\003 \001(\014\022.\n\004time\030\004 \001(\0132 ." +
-      "rti1516_202X.fedpro.LogicalTime\"_\n\037SendI" +
-      "nteractionWithTimeResponse\022<\n\006result\030\001 \001" +
-      "(\0132,.rti1516_202X.fedpro.MessageRetracti" +
-      "onReturn\"\212\002\n\036SendDirectedInteractionRequ" +
-      "est\022E\n\020interactionClass\030\001 \001(\0132+.rti1516_" +
-      "202X.fedpro.InteractionClassHandle\022A\n\016ob" +
-      "jectInstance\030\002 \001(\0132).rti1516_202X.fedpro" +
-      ".ObjectInstanceHandle\022E\n\017parameterValues" +
-      "\030\003 \001(\0132,.rti1516_202X.fedpro.ParameterHa" +
-      "ndleValueMap\022\027\n\017userSuppliedTag\030\004 \001(\014\"!\n" +
-      "\037SendDirectedInteractionResponse\"\302\002\n&Sen" +
-      "dDirectedInteractionWithTimeRequest\022E\n\020i" +
-      "nteractionClass\030\001 \001(\0132+.rti1516_202X.fed" +
-      "pro.InteractionClassHandle\022A\n\016objectInst" +
-      "ance\030\002 \001(\0132).rti1516_202X.fedpro.ObjectI" +
-      "nstanceHandle\022E\n\017parameterValues\030\003 \001(\0132," +
-      ".rti1516_202X.fedpro.ParameterHandleValu" +
-      "eMap\022\027\n\017userSuppliedTag\030\004 \001(\014\022.\n\004time\030\005 " +
-      "\001(\0132 .rti1516_202X.fedpro.LogicalTime\"g\n" +
-      "\'SendDirectedInteractionWithTimeResponse" +
-      "\022<\n\006result\030\001 \001(\0132,.rti1516_202X.fedpro.M" +
-      "essageRetractionReturn\"y\n\033DeleteObjectIn" +
-      "stanceRequest\022A\n\016objectInstance\030\001 \001(\0132)." +
-      "rti1516_202X.fedpro.ObjectInstanceHandle" +
-      "\022\027\n\017userSuppliedTag\030\002 \001(\014\"\036\n\034DeleteObjec" +
-      "tInstanceResponse\"\261\001\n#DeleteObjectInstan" +
-      "ceWithTimeRequest\022A\n\016objectInstance\030\001 \001(" +
-      "\0132).rti1516_202X.fedpro.ObjectInstanceHa" +
-      "ndle\022\027\n\017userSuppliedTag\030\002 \001(\014\022.\n\004time\030\003 " +
-      "\001(\0132 .rti1516_202X.fedpro.LogicalTime\"d\n" +
-      "$DeleteObjectInstanceWithTimeResponse\022<\n" +
-      "\006result\030\001 \001(\0132,.rti1516_202X.fedpro.Mess" +
-      "ageRetractionReturn\"e\n LocalDeleteObject" +
-      "InstanceRequest\022A\n\016objectInstance\030\001 \001(\0132" +
-      ").rti1516_202X.fedpro.ObjectInstanceHand" +
-      "le\"#\n!LocalDeleteObjectInstanceResponse\"" +
-      "\305\001\n*RequestInstanceAttributeValueUpdateR" +
-      "equest\022A\n\016objectInstance\030\001 \001(\0132).rti1516" +
-      "_202X.fedpro.ObjectInstanceHandle\022;\n\natt" +
-      "ributes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attr" +
-      "ibuteHandleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"" +
-      "-\n+RequestInstanceAttributeValueUpdateRe" +
-      "sponse\"\274\001\n\'RequestClassAttributeValueUpd" +
-      "ateRequest\022;\n\013objectClass\030\001 \001(\0132&.rti151" +
-      "6_202X.fedpro.ObjectClassHandle\022;\n\nattri" +
-      "butes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attrib" +
-      "uteHandleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"*\n" +
-      "(RequestClassAttributeValueUpdateRespons" +
-      "e\"\374\001\n/RequestAttributeTransportationType" +
-      "ChangeRequest\022A\n\016objectInstance\030\001 \001(\0132)." +
-      "rti1516_202X.fedpro.ObjectInstanceHandle" +
-      "\022;\n\nattributes\030\002 \001(\0132\'.rti1516_202X.fedp" +
-      "ro.AttributeHandleSet\022I\n\022transportationT" +
-      "ype\030\003 \001(\0132-.rti1516_202X.fedpro.Transpor" +
-      "tationTypeHandle\"2\n0RequestAttributeTran" +
-      "sportationTypeChangeResponse\"\371\001\n/ChangeD" +
-      "efaultAttributeTransportationTypeRequest" +
-      "\022>\n\016theObjectClass\030\001 \001(\0132&.rti1516_202X." +
-      "fedpro.ObjectClassHandle\022;\n\nattributes\030\002" +
-      " \001(\0132\'.rti1516_202X.fedpro.AttributeHand" +
-      "leSet\022I\n\022transportationType\030\003 \001(\0132-.rti1" +
-      "516_202X.fedpro.TransportationTypeHandle" +
-      "\"2\n0ChangeDefaultAttributeTransportation" +
-      "TypeResponse\"\245\001\n\'QueryAttributeTransport" +
-      "ationTypeRequest\022A\n\016objectInstance\030\001 \001(\013" +
+      "nClassHandle\"%\n#UnsubscribeInteractionCl" +
+      "assResponse\"\272\001\n/SubscribeObjectClassDire" +
+      "ctedInteractionsRequest\022;\n\013objectClass\030\001" +
+      " \001(\0132&.rti1516_202X.fedpro.ObjectClassHa" +
+      "ndle\022J\n\022interactionClasses\030\002 \001(\0132..rti15" +
+      "16_202X.fedpro.InteractionClassHandleSet" +
+      "\"2\n0SubscribeObjectClassDirectedInteract" +
+      "ionsResponse\"\305\001\n:SubscribeObjectClassDir" +
+      "ectedInteractionsUniversallyRequest\022;\n\013o" +
+      "bjectClass\030\001 \001(\0132&.rti1516_202X.fedpro.O" +
+      "bjectClassHandle\022J\n\022interactionClasses\030\002" +
+      " \001(\0132..rti1516_202X.fedpro.InteractionCl" +
+      "assHandleSet\"=\n;SubscribeObjectClassDire" +
+      "ctedInteractionsUniversallyResponse\"p\n1U" +
+      "nsubscribeObjectClassDirectedInteraction" +
+      "sRequest\022;\n\013objectClass\030\001 \001(\0132&.rti1516_" +
+      "202X.fedpro.ObjectClassHandle\"4\n2Unsubsc" +
+      "ribeObjectClassDirectedInteractionsRespo" +
+      "nse\"\303\001\n8UnsubscribeObjectClassDirectedIn" +
+      "teractionsWithSetRequest\022;\n\013objectClass\030" +
+      "\001 \001(\0132&.rti1516_202X.fedpro.ObjectClassH" +
+      "andle\022J\n\022interactionClasses\030\002 \001(\0132..rti1" +
+      "516_202X.fedpro.InteractionClassHandleSe" +
+      "t\";\n9UnsubscribeObjectClassDirectedInter" +
+      "actionsWithSetResponse\">\n ReserveObjectI" +
+      "nstanceNameRequest\022\032\n\022objectInstanceName" +
+      "\030\001 \001(\t\"#\n!ReserveObjectInstanceNameRespo" +
+      "nse\">\n ReleaseObjectInstanceNameRequest\022" +
+      "\032\n\022objectInstanceName\030\001 \001(\t\"#\n!ReleaseOb" +
+      "jectInstanceNameResponse\"H\n)ReserveMulti" +
+      "pleObjectInstanceNamesRequest\022\033\n\023objectI" +
+      "nstanceNames\030\001 \003(\t\",\n*ReserveMultipleObj" +
+      "ectInstanceNamesResponse\"H\n)ReleaseMulti" +
+      "pleObjectInstanceNamesRequest\022\033\n\023objectI" +
+      "nstanceNames\030\001 \003(\t\",\n*ReleaseMultipleObj" +
+      "ectInstanceNamesResponse\"\\\n\035RegisterObje" +
+      "ctInstanceRequest\022;\n\013objectClass\030\001 \001(\0132&" +
+      ".rti1516_202X.fedpro.ObjectClassHandle\"[" +
+      "\n\036RegisterObjectInstanceResponse\0229\n\006resu" +
+      "lt\030\001 \001(\0132).rti1516_202X.fedpro.ObjectIns" +
+      "tanceHandle\"\200\001\n%RegisterObjectInstanceWi" +
+      "thNameRequest\022;\n\013objectClass\030\001 \001(\0132&.rti" +
+      "1516_202X.fedpro.ObjectClassHandle\022\032\n\022ob" +
+      "jectInstanceName\030\002 \001(\t\"c\n&RegisterObject" +
+      "InstanceWithNameResponse\0229\n\006result\030\001 \001(\013" +
       "2).rti1516_202X.fedpro.ObjectInstanceHan" +
-      "dle\0227\n\tattribute\030\002 \001(\0132$.rti1516_202X.fe" +
-      "dpro.AttributeHandle\"*\n(QueryAttributeTr" +
-      "ansportationTypeResponse\"\305\001\n1RequestInte" +
-      "ractionTransportationTypeChangeRequest\022E" +
-      "\n\020interactionClass\030\001 \001(\0132+.rti1516_202X." +
-      "fedpro.InteractionClassHandle\022I\n\022transpo" +
-      "rtationType\030\002 \001(\0132-.rti1516_202X.fedpro." +
-      "TransportationTypeHandle\"4\n2RequestInter" +
-      "actionTransportationTypeChangeResponse\"\251" +
-      "\001\n)QueryInteractionTransportationTypeReq" +
-      "uest\0225\n\010federate\030\001 \001(\0132#.rti1516_202X.fe" +
-      "dpro.FederateHandle\022E\n\020interactionClass\030" +
-      "\002 \001(\0132+.rti1516_202X.fedpro.InteractionC" +
-      "lassHandle\",\n*QueryInteractionTransporta" +
-      "tionTypeResponse\"\314\001\n1UnconditionalAttrib" +
-      "uteOwnershipDivestitureRequest\022A\n\016object" +
-      "Instance\030\001 \001(\0132).rti1516_202X.fedpro.Obj" +
-      "ectInstanceHandle\022;\n\nattributes\030\002 \001(\0132\'." +
-      "rti1516_202X.fedpro.AttributeHandleSet\022\027" +
-      "\n\017userSuppliedTag\030\003 \001(\014\"4\n2Unconditional" +
-      "AttributeOwnershipDivestitureResponse\"\311\001" +
-      "\n.NegotiatedAttributeOwnershipDivestitur" +
-      "eRequest\022A\n\016objectInstance\030\001 \001(\0132).rti15" +
-      "16_202X.fedpro.ObjectInstanceHandle\022;\n\na" +
-      "ttributes\030\002 \001(\0132\'.rti1516_202X.fedpro.At" +
-      "tributeHandleSet\022\027\n\017userSuppliedTag\030\003 \001(" +
-      "\014\"1\n/NegotiatedAttributeOwnershipDivesti" +
-      "tureResponse\"\264\001\n\031ConfirmDivestitureReque" +
+      "dle\"\301\001\n\034UpdateAttributeValuesRequest\022A\n\016" +
+      "objectInstance\030\001 \001(\0132).rti1516_202X.fedp" +
+      "ro.ObjectInstanceHandle\022E\n\017attributeValu" +
+      "es\030\002 \001(\0132,.rti1516_202X.fedpro.Attribute" +
+      "HandleValueMap\022\027\n\017userSuppliedTag\030\003 \001(\014\"" +
+      "\037\n\035UpdateAttributeValuesResponse\"\371\001\n$Upd" +
+      "ateAttributeValuesWithTimeRequest\022A\n\016obj" +
+      "ectInstance\030\001 \001(\0132).rti1516_202X.fedpro." +
+      "ObjectInstanceHandle\022E\n\017attributeValues\030" +
+      "\002 \001(\0132,.rti1516_202X.fedpro.AttributeHan" +
+      "dleValueMap\022\027\n\017userSuppliedTag\030\003 \001(\014\022.\n\004" +
+      "time\030\004 \001(\0132 .rti1516_202X.fedpro.Logical" +
+      "Time\"e\n%UpdateAttributeValuesWithTimeRes" +
+      "ponse\022<\n\006result\030\001 \001(\0132,.rti1516_202X.fed" +
+      "pro.MessageRetractionReturn\"\277\001\n\026SendInte" +
+      "ractionRequest\022E\n\020interactionClass\030\001 \001(\013" +
+      "2+.rti1516_202X.fedpro.InteractionClassH" +
+      "andle\022E\n\017parameterValues\030\002 \001(\0132,.rti1516" +
+      "_202X.fedpro.ParameterHandleValueMap\022\027\n\017" +
+      "userSuppliedTag\030\003 \001(\014\"\031\n\027SendInteraction" +
+      "Response\"\367\001\n\036SendInteractionWithTimeRequ" +
+      "est\022E\n\020interactionClass\030\001 \001(\0132+.rti1516_" +
+      "202X.fedpro.InteractionClassHandle\022E\n\017pa" +
+      "rameterValues\030\002 \001(\0132,.rti1516_202X.fedpr" +
+      "o.ParameterHandleValueMap\022\027\n\017userSupplie" +
+      "dTag\030\003 \001(\014\022.\n\004time\030\004 \001(\0132 .rti1516_202X." +
+      "fedpro.LogicalTime\"_\n\037SendInteractionWit" +
+      "hTimeResponse\022<\n\006result\030\001 \001(\0132,.rti1516_" +
+      "202X.fedpro.MessageRetractionReturn\"\212\002\n\036" +
+      "SendDirectedInteractionRequest\022E\n\020intera" +
+      "ctionClass\030\001 \001(\0132+.rti1516_202X.fedpro.I" +
+      "nteractionClassHandle\022A\n\016objectInstance\030" +
+      "\002 \001(\0132).rti1516_202X.fedpro.ObjectInstan" +
+      "ceHandle\022E\n\017parameterValues\030\003 \001(\0132,.rti1" +
+      "516_202X.fedpro.ParameterHandleValueMap\022" +
+      "\027\n\017userSuppliedTag\030\004 \001(\014\"!\n\037SendDirected" +
+      "InteractionResponse\"\302\002\n&SendDirectedInte" +
+      "ractionWithTimeRequest\022E\n\020interactionCla" +
+      "ss\030\001 \001(\0132+.rti1516_202X.fedpro.Interacti" +
+      "onClassHandle\022A\n\016objectInstance\030\002 \001(\0132)." +
+      "rti1516_202X.fedpro.ObjectInstanceHandle" +
+      "\022E\n\017parameterValues\030\003 \001(\0132,.rti1516_202X" +
+      ".fedpro.ParameterHandleValueMap\022\027\n\017userS" +
+      "uppliedTag\030\004 \001(\014\022.\n\004time\030\005 \001(\0132 .rti1516" +
+      "_202X.fedpro.LogicalTime\"g\n\'SendDirected" +
+      "InteractionWithTimeResponse\022<\n\006result\030\001 " +
+      "\001(\0132,.rti1516_202X.fedpro.MessageRetract" +
+      "ionReturn\"y\n\033DeleteObjectInstanceRequest" +
+      "\022A\n\016objectInstance\030\001 \001(\0132).rti1516_202X." +
+      "fedpro.ObjectInstanceHandle\022\027\n\017userSuppl" +
+      "iedTag\030\002 \001(\014\"\036\n\034DeleteObjectInstanceResp" +
+      "onse\"\261\001\n#DeleteObjectInstanceWithTimeReq" +
+      "uest\022A\n\016objectInstance\030\001 \001(\0132).rti1516_2" +
+      "02X.fedpro.ObjectInstanceHandle\022\027\n\017userS" +
+      "uppliedTag\030\002 \001(\014\022.\n\004time\030\003 \001(\0132 .rti1516" +
+      "_202X.fedpro.LogicalTime\"d\n$DeleteObject" +
+      "InstanceWithTimeResponse\022<\n\006result\030\001 \001(\013" +
+      "2,.rti1516_202X.fedpro.MessageRetraction" +
+      "Return\"e\n LocalDeleteObjectInstanceReque" +
       "st\022A\n\016objectInstance\030\001 \001(\0132).rti1516_202" +
-      "X.fedpro.ObjectInstanceHandle\022;\n\nattribu" +
-      "tes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attribut" +
-      "eHandleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"\034\n\032C" +
-      "onfirmDivestitureResponse\"\306\001\n$AttributeO" +
-      "wnershipAcquisitionRequest\022A\n\016objectInst" +
-      "ance\030\001 \001(\0132).rti1516_202X.fedpro.ObjectI" +
-      "nstanceHandle\022B\n\021desiredAttributes\030\002 \001(\013" +
+      "X.fedpro.ObjectInstanceHandle\"#\n!LocalDe" +
+      "leteObjectInstanceResponse\"\305\001\n*RequestIn" +
+      "stanceAttributeValueUpdateRequest\022A\n\016obj" +
+      "ectInstance\030\001 \001(\0132).rti1516_202X.fedpro." +
+      "ObjectInstanceHandle\022;\n\nattributes\030\002 \001(\013" +
       "2\'.rti1516_202X.fedpro.AttributeHandleSe" +
-      "t\022\027\n\017userSuppliedTag\030\003 \001(\014\"\'\n%AttributeO" +
-      "wnershipAcquisitionResponse\"\321\001\n/Attribut" +
-      "eOwnershipAcquisitionIfAvailableRequest\022" +
-      "A\n\016objectInstance\030\001 \001(\0132).rti1516_202X.f" +
-      "edpro.ObjectInstanceHandle\022B\n\021desiredAtt" +
-      "ributes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attr" +
-      "ibuteHandleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"" +
-      "2\n0AttributeOwnershipAcquisitionIfAvaila" +
-      "bleResponse\"\301\001\n&AttributeOwnershipReleas" +
-      "eDeniedRequest\022A\n\016objectInstance\030\001 \001(\0132)" +
+      "t\022\027\n\017userSuppliedTag\030\003 \001(\014\"-\n+RequestIns" +
+      "tanceAttributeValueUpdateResponse\"\274\001\n\'Re" +
+      "questClassAttributeValueUpdateRequest\022;\n" +
+      "\013objectClass\030\001 \001(\0132&.rti1516_202X.fedpro" +
+      ".ObjectClassHandle\022;\n\nattributes\030\002 \001(\0132\'" +
+      ".rti1516_202X.fedpro.AttributeHandleSet\022" +
+      "\027\n\017userSuppliedTag\030\003 \001(\014\"*\n(RequestClass" +
+      "AttributeValueUpdateResponse\"\374\001\n/Request" +
+      "AttributeTransportationTypeChangeRequest" +
+      "\022A\n\016objectInstance\030\001 \001(\0132).rti1516_202X." +
+      "fedpro.ObjectInstanceHandle\022;\n\nattribute" +
+      "s\030\002 \001(\0132\'.rti1516_202X.fedpro.AttributeH" +
+      "andleSet\022I\n\022transportationType\030\003 \001(\0132-.r" +
+      "ti1516_202X.fedpro.TransportationTypeHan" +
+      "dle\"2\n0RequestAttributeTransportationTyp" +
+      "eChangeResponse\"\366\001\n/ChangeDefaultAttribu" +
+      "teTransportationTypeRequest\022;\n\013objectCla" +
+      "ss\030\001 \001(\0132&.rti1516_202X.fedpro.ObjectCla" +
+      "ssHandle\022;\n\nattributes\030\002 \001(\0132\'.rti1516_2" +
+      "02X.fedpro.AttributeHandleSet\022I\n\022transpo" +
+      "rtationType\030\003 \001(\0132-.rti1516_202X.fedpro." +
+      "TransportationTypeHandle\"2\n0ChangeDefaul" +
+      "tAttributeTransportationTypeResponse\"\245\001\n" +
+      "\'QueryAttributeTransportationTypeRequest" +
+      "\022A\n\016objectInstance\030\001 \001(\0132).rti1516_202X." +
+      "fedpro.ObjectInstanceHandle\0227\n\tattribute" +
+      "\030\002 \001(\0132$.rti1516_202X.fedpro.AttributeHa" +
+      "ndle\"*\n(QueryAttributeTransportationType" +
+      "Response\"\305\001\n1RequestInteractionTransport" +
+      "ationTypeChangeRequest\022E\n\020interactionCla" +
+      "ss\030\001 \001(\0132+.rti1516_202X.fedpro.Interacti" +
+      "onClassHandle\022I\n\022transportationType\030\002 \001(" +
+      "\0132-.rti1516_202X.fedpro.TransportationTy" +
+      "peHandle\"4\n2RequestInteractionTransporta" +
+      "tionTypeChangeResponse\"\251\001\n)QueryInteract" +
+      "ionTransportationTypeRequest\0225\n\010federate" +
+      "\030\001 \001(\0132#.rti1516_202X.fedpro.FederateHan" +
+      "dle\022E\n\020interactionClass\030\002 \001(\0132+.rti1516_" +
+      "202X.fedpro.InteractionClassHandle\",\n*Qu" +
+      "eryInteractionTransportationTypeResponse" +
+      "\"\314\001\n1UnconditionalAttributeOwnershipDive" +
+      "stitureRequest\022A\n\016objectInstance\030\001 \001(\0132)" +
       ".rti1516_202X.fedpro.ObjectInstanceHandl" +
       "e\022;\n\nattributes\030\002 \001(\0132\'.rti1516_202X.fed" +
       "pro.AttributeHandleSet\022\027\n\017userSuppliedTa" +
-      "g\030\003 \001(\014\")\n\'AttributeOwnershipReleaseDeni" +
-      "edResponse\"\307\001\n,AttributeOwnershipDivesti" +
-      "tureIfWantedRequest\022A\n\016objectInstance\030\001 " +
+      "g\030\003 \001(\014\"4\n2UnconditionalAttributeOwnersh" +
+      "ipDivestitureResponse\"\311\001\n.NegotiatedAttr" +
+      "ibuteOwnershipDivestitureRequest\022A\n\016obje" +
+      "ctInstance\030\001 \001(\0132).rti1516_202X.fedpro.O" +
+      "bjectInstanceHandle\022;\n\nattributes\030\002 \001(\0132" +
+      "\'.rti1516_202X.fedpro.AttributeHandleSet" +
+      "\022\027\n\017userSuppliedTag\030\003 \001(\014\"1\n/NegotiatedA" +
+      "ttributeOwnershipDivestitureResponse\"\275\001\n" +
+      "\031ConfirmDivestitureRequest\022A\n\016objectInst" +
+      "ance\030\001 \001(\0132).rti1516_202X.fedpro.ObjectI" +
+      "nstanceHandle\022D\n\023confirmedAttributes\030\002 \001" +
+      "(\0132\'.rti1516_202X.fedpro.AttributeHandle" +
+      "Set\022\027\n\017userSuppliedTag\030\003 \001(\014\"\034\n\032ConfirmD" +
+      "ivestitureResponse\"\306\001\n$AttributeOwnershi" +
+      "pAcquisitionRequest\022A\n\016objectInstance\030\001 " +
       "\001(\0132).rti1516_202X.fedpro.ObjectInstance" +
-      "Handle\022;\n\nattributes\030\002 \001(\0132\'.rti1516_202" +
-      "X.fedpro.AttributeHandleSet\022\027\n\017userSuppl" +
-      "iedTag\030\003 \001(\014\"h\n-AttributeOwnershipDivest" +
-      "itureIfWantedResponse\0227\n\006result\030\001 \001(\0132\'." +
-      "rti1516_202X.fedpro.AttributeHandleSet\"\266" +
-      "\001\n4CancelNegotiatedAttributeOwnershipDiv" +
-      "estitureRequest\022A\n\016objectInstance\030\001 \001(\0132" +
-      ").rti1516_202X.fedpro.ObjectInstanceHand" +
-      "le\022;\n\nattributes\030\002 \001(\0132\'.rti1516_202X.fe" +
-      "dpro.AttributeHandleSet\"7\n5CancelNegotia" +
-      "tedAttributeOwnershipDivestitureResponse" +
-      "\"\254\001\n*CancelAttributeOwnershipAcquisition" +
+      "Handle\022B\n\021desiredAttributes\030\002 \001(\0132\'.rti1" +
+      "516_202X.fedpro.AttributeHandleSet\022\027\n\017us" +
+      "erSuppliedTag\030\003 \001(\014\"\'\n%AttributeOwnershi" +
+      "pAcquisitionResponse\"\321\001\n/AttributeOwners" +
+      "hipAcquisitionIfAvailableRequest\022A\n\016obje" +
+      "ctInstance\030\001 \001(\0132).rti1516_202X.fedpro.O" +
+      "bjectInstanceHandle\022B\n\021desiredAttributes" +
+      "\030\002 \001(\0132\'.rti1516_202X.fedpro.AttributeHa" +
+      "ndleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"2\n0Attr" +
+      "ibuteOwnershipAcquisitionIfAvailableResp" +
+      "onse\"\301\001\n&AttributeOwnershipReleaseDenied" +
       "Request\022A\n\016objectInstance\030\001 \001(\0132).rti151" +
       "6_202X.fedpro.ObjectInstanceHandle\022;\n\nat" +
       "tributes\030\002 \001(\0132\'.rti1516_202X.fedpro.Att" +
-      "ributeHandleSet\"-\n+CancelAttributeOwners" +
-      "hipAcquisitionResponse\"\240\001\n\036QueryAttribut" +
-      "eOwnershipRequest\022A\n\016objectInstance\030\001 \001(" +
-      "\0132).rti1516_202X.fedpro.ObjectInstanceHa" +
-      "ndle\022;\n\nattributes\030\002 \001(\0132\'.rti1516_202X." +
-      "fedpro.AttributeHandleSet\"!\n\037QueryAttrib" +
-      "uteOwnershipResponse\"\237\001\n!IsAttributeOwne" +
-      "dByFederateRequest\022A\n\016objectInstance\030\001 \001" +
-      "(\0132).rti1516_202X.fedpro.ObjectInstanceH" +
-      "andle\0227\n\tattribute\030\002 \001(\0132$.rti1516_202X." +
-      "fedpro.AttributeHandle\"4\n\"IsAttributeOwn" +
-      "edByFederateResponse\022\016\n\006result\030\001 \001(\010\"Z\n\033" +
-      "EnableTimeRegulationRequest\022;\n\tlookahead" +
-      "\030\001 \001(\0132(.rti1516_202X.fedpro.LogicalTime" +
-      "Interval\"\036\n\034EnableTimeRegulationResponse" +
-      "\"\036\n\034DisableTimeRegulationRequest\"\037\n\035Disa" +
-      "bleTimeRegulationResponse\"\036\n\034EnableTimeC" +
-      "onstrainedRequest\"\037\n\035EnableTimeConstrain" +
-      "edResponse\"\037\n\035DisableTimeConstrainedRequ",
-      "est\" \n\036DisableTimeConstrainedResponse\"K\n" +
-      "\031TimeAdvanceRequestRequest\022.\n\004time\030\001 \001(\013" +
-      "2 .rti1516_202X.fedpro.LogicalTime\"\034\n\032Ti" +
-      "meAdvanceRequestResponse\"T\n\"TimeAdvanceR" +
-      "equestAvailableRequest\022.\n\004time\030\001 \001(\0132 .r" +
-      "ti1516_202X.fedpro.LogicalTime\"%\n#TimeAd" +
-      "vanceRequestAvailableResponse\"K\n\031NextMes" +
-      "sageRequestRequest\022.\n\004time\030\001 \001(\0132 .rti15" +
-      "16_202X.fedpro.LogicalTime\"\034\n\032NextMessag" +
-      "eRequestResponse\"T\n\"NextMessageRequestAv" +
-      "ailableRequest\022.\n\004time\030\001 \001(\0132 .rti1516_2" +
-      "02X.fedpro.LogicalTime\"%\n#NextMessageReq" +
-      "uestAvailableResponse\"J\n\030FlushQueueReque" +
-      "stRequest\022.\n\004time\030\001 \001(\0132 .rti1516_202X.f" +
-      "edpro.LogicalTime\"\033\n\031FlushQueueRequestRe" +
-      "sponse\"#\n!EnableAsynchronousDeliveryRequ" +
-      "est\"$\n\"EnableAsynchronousDeliveryRespons" +
-      "e\"$\n\"DisableAsynchronousDeliveryRequest\"" +
-      "%\n#DisableAsynchronousDeliveryResponse\"\022" +
-      "\n\020QueryGALTRequest\"I\n\021QueryGALTResponse\022" +
-      "4\n\006result\030\001 \001(\0132$.rti1516_202X.fedpro.Ti" +
-      "meQueryReturn\"\031\n\027QueryLogicalTimeRequest" +
-      "\"L\n\030QueryLogicalTimeResponse\0220\n\006result\030\001" +
-      " \001(\0132 .rti1516_202X.fedpro.LogicalTime\"\022" +
-      "\n\020QueryLITSRequest\"I\n\021QueryLITSResponse\022" +
-      "4\n\006result\030\001 \001(\0132$.rti1516_202X.fedpro.Ti" +
-      "meQueryReturn\"U\n\026ModifyLookaheadRequest\022" +
-      ";\n\tlookahead\030\001 \001(\0132(.rti1516_202X.fedpro" +
-      ".LogicalTimeInterval\"\031\n\027ModifyLookaheadR" +
-      "esponse\"\027\n\025QueryLookaheadRequest\"R\n\026Quer" +
-      "yLookaheadResponse\0228\n\006result\030\001 \001(\0132(.rti" +
-      "1516_202X.fedpro.LogicalTimeInterval\"R\n\016" +
-      "RetractRequest\022@\n\nretraction\030\001 \001(\0132,.rti" +
-      "1516_202X.fedpro.MessageRetractionHandle" +
-      "\"\021\n\017RetractResponse\"\324\001\n\037ChangeAttributeO" +
-      "rderTypeRequest\022A\n\016objectInstance\030\001 \001(\0132" +
-      ").rti1516_202X.fedpro.ObjectInstanceHand" +
-      "le\022;\n\nattributes\030\002 \001(\0132\'.rti1516_202X.fe" +
-      "dpro.AttributeHandleSet\0221\n\torderType\030\003 \001" +
-      "(\0162\036.rti1516_202X.fedpro.OrderType\"\"\n Ch" +
-      "angeAttributeOrderTypeResponse\"\330\001\n&Chang" +
-      "eDefaultAttributeOrderTypeRequest\022>\n\016the" +
-      "ObjectClass\030\001 \001(\0132&.rti1516_202X.fedpro." +
-      "ObjectClassHandle\022;\n\nattributes\030\002 \001(\0132\'." +
-      "rti1516_202X.fedpro.AttributeHandleSet\0221" +
-      "\n\torderType\030\003 \001(\0162\036.rti1516_202X.fedpro." +
-      "OrderType\")\n\'ChangeDefaultAttributeOrder" +
-      "TypeResponse\"\235\001\n!ChangeInteractionOrderT" +
-      "ypeRequest\022E\n\020interactionClass\030\001 \001(\0132+.r" +
-      "ti1516_202X.fedpro.InteractionClassHandl" +
-      "e\0221\n\torderType\030\002 \001(\0162\036.rti1516_202X.fedp" +
-      "ro.OrderType\"$\n\"ChangeInteractionOrderTy" +
-      "peResponse\"R\n\023CreateRegionRequest\022;\n\ndim" +
-      "ensions\030\001 \001(\0132\'.rti1516_202X.fedpro.Dime" +
-      "nsionHandleSet\"I\n\024CreateRegionResponse\0221" +
-      "\n\006result\030\001 \001(\0132!.rti1516_202X.fedpro.Reg" +
-      "ionHandle\"Y\n CommitRegionModificationsRe" +
-      "quest\0225\n\007regions\030\001 \001(\0132$.rti1516_202X.fe" +
-      "dpro.RegionHandleSet\"#\n!CommitRegionModi" +
-      "ficationsResponse\"K\n\023DeleteRegionRequest" +
-      "\0224\n\ttheRegion\030\001 \001(\0132!.rti1516_202X.fedpr" +
-      "o.RegionHandle\"\026\n\024DeleteRegionResponse\"\271" +
-      "\001\n(RegisterObjectInstanceWithRegionsRequ" +
-      "est\022;\n\013objectClass\030\001 \001(\0132&.rti1516_202X." +
-      "fedpro.ObjectClassHandle\022P\n\024attributesAn" +
-      "dRegions\030\002 \001(\01322.rti1516_202X.fedpro.Att" +
-      "ributeSetRegionSetPairList\"f\n)RegisterOb" +
-      "jectInstanceWithRegionsResponse\0229\n\006resul" +
-      "t\030\001 \001(\0132).rti1516_202X.fedpro.ObjectInst" +
-      "anceHandle\"\334\001\n/RegisterObjectInstanceWit" +
-      "hNameAndRegionsRequest\022;\n\013objectClass\030\001 " +
-      "\001(\0132&.rti1516_202X.fedpro.ObjectClassHan" +
-      "dle\022P\n\024attributesAndRegions\030\002 \001(\01322.rti1" +
-      "516_202X.fedpro.AttributeSetRegionSetPai" +
-      "rList\022\032\n\022objectInstanceName\030\003 \001(\t\"m\n0Reg" +
-      "isterObjectInstanceWithNameAndRegionsRes" +
-      "ponse\0229\n\006result\030\001 \001(\0132).rti1516_202X.fed" +
-      "pro.ObjectInstanceHandle\"\270\001\n!AssociateRe" +
-      "gionsForUpdatesRequest\022A\n\016objectInstance" +
-      "\030\001 \001(\0132).rti1516_202X.fedpro.ObjectInsta" +
-      "nceHandle\022P\n\024attributesAndRegions\030\002 \001(\0132" +
-      "2.rti1516_202X.fedpro.AttributeSetRegion" +
-      "SetPairList\"$\n\"AssociateRegionsForUpdate" +
-      "sResponse\"\272\001\n#UnassociateRegionsForUpdat" +
-      "esRequest\022A\n\016objectInstance\030\001 \001(\0132).rti1" +
-      "516_202X.fedpro.ObjectInstanceHandle\022P\n\024" +
-      "attributesAndRegions\030\002 \001(\01322.rti1516_202" +
-      "X.fedpro.AttributeSetRegionSetPairList\"&" +
-      "\n$UnassociateRegionsForUpdatesResponse\"\321" +
-      "\001\n0SubscribeObjectClassAttributesWithReg" +
-      "ionsRequest\022;\n\013objectClass\030\001 \001(\0132&.rti15" +
-      "16_202X.fedpro.ObjectClassHandle\022P\n\024attr" +
-      "ibutesAndRegions\030\002 \001(\01322.rti1516_202X.fe" +
-      "dpro.AttributeSetRegionSetPairList\022\016\n\006ac" +
-      "tive\030\003 \001(\010\"3\n1SubscribeObjectClassAttrib" +
-      "utesWithRegionsResponse\"\366\001\n7SubscribeObj" +
-      "ectClassAttributesWithRegionsAndRateRequ" +
-      "est\022;\n\013objectClass\030\001 \001(\0132&.rti1516_202X." +
-      "fedpro.ObjectClassHandle\022P\n\024attributesAn" +
-      "dRegions\030\002 \001(\01322.rti1516_202X.fedpro.Att" +
-      "ributeSetRegionSetPairList\022\016\n\006active\030\003 \001" +
-      "(\010\022\034\n\024updateRateDesignator\030\004 \001(\t\":\n8Subs" +
-      "cribeObjectClassAttributesWithRegionsAnd" +
-      "RateResponse\"\303\001\n2UnsubscribeObjectClassA" +
-      "ttributesWithRegionsRequest\022;\n\013objectCla" +
-      "ss\030\001 \001(\0132&.rti1516_202X.fedpro.ObjectCla" +
-      "ssHandle\022P\n\024attributesAndRegions\030\002 \001(\01322" +
-      ".rti1516_202X.fedpro.AttributeSetRegionS" +
-      "etPairList\"5\n3UnsubscribeObjectClassAttr" +
-      "ibutesWithRegionsResponse\"\273\001\n+SubscribeI" +
-      "nteractionClassWithRegionsRequest\022E\n\020int" +
-      "eractionClass\030\001 \001(\0132+.rti1516_202X.fedpr" +
-      "o.InteractionClassHandle\022\016\n\006active\030\002 \001(\010" +
-      "\0225\n\007regions\030\003 \001(\0132$.rti1516_202X.fedpro." +
-      "RegionHandleSet\".\n,SubscribeInteractionC" +
-      "lassWithRegionsResponse\"\255\001\n-UnsubscribeI" +
-      "nteractionClassWithRegionsRequest\022E\n\020int" +
-      "eractionClass\030\001 \001(\0132+.rti1516_202X.fedpr" +
-      "o.InteractionClassHandle\0225\n\007regions\030\002 \001(" +
-      "\0132$.rti1516_202X.fedpro.RegionHandleSet\"" +
-      "0\n.UnsubscribeInteractionClassWithRegion" +
-      "sResponse\"\201\002\n!SendInteractionWithRegions" +
-      "Request\022E\n\020interactionClass\030\001 \001(\0132+.rti1" +
-      "516_202X.fedpro.InteractionClassHandle\022E" +
-      "\n\017parameterValues\030\002 \001(\0132,.rti1516_202X.f" +
-      "edpro.ParameterHandleValueMap\0225\n\007regions" +
-      "\030\003 \001(\0132$.rti1516_202X.fedpro.RegionHandl" +
-      "eSet\022\027\n\017userSuppliedTag\030\004 \001(\014\"$\n\"SendInt" +
-      "eractionWithRegionsResponse\"\270\002\n(SendInte" +
-      "ractionWithRegionsAndTimeRequest\022E\n\020inte" +
-      "ractionClass\030\001 \001(\0132+.rti1516_202X.fedpro" +
-      ".InteractionClassHandle\022E\n\017parameterValu" +
-      "es\030\002 \001(\0132,.rti1516_202X.fedpro.Parameter" +
-      "HandleValueMap\0225\n\007regions\030\003 \001(\0132$.rti151" +
-      "6_202X.fedpro.RegionHandleSet\022\027\n\017userSup" +
-      "pliedTag\030\004 \001(\014\022.\n\004time\030\005 \001(\0132 .rti1516_2" +
-      "02X.fedpro.LogicalTime\"i\n)SendInteractio" +
-      "nWithRegionsAndTimeResponse\022<\n\006result\030\001 " +
-      "\001(\0132,.rti1516_202X.fedpro.MessageRetract" +
-      "ionReturn\"\327\001\n-RequestAttributeValueUpdat" +
-      "eWithRegionsRequest\022;\n\013objectClass\030\001 \001(\013" +
-      "2&.rti1516_202X.fedpro.ObjectClassHandle" +
-      "\022P\n\024attributesAndRegions\030\002 \001(\01322.rti1516" +
-      "_202X.fedpro.AttributeSetRegionSetPairLi" +
-      "st\022\027\n\017userSuppliedTag\030\003 \001(\014\"0\n.RequestAt" +
-      "tributeValueUpdateWithRegionsResponse\"$\n" +
-      "\"GetAutomaticResignDirectiveRequest\"X\n#G" +
-      "etAutomaticResignDirectiveResponse\0221\n\006re" +
-      "sult\030\001 \001(\0162!.rti1516_202X.fedpro.ResignA" +
-      "ction\"]\n\"SetAutomaticResignDirectiveRequ" +
-      "est\0227\n\014resignAction\030\001 \001(\0162!.rti1516_202X" +
-      ".fedpro.ResignAction\"%\n#SetAutomaticResi" +
-      "gnDirectiveResponse\"0\n\030GetFederateHandle" +
-      "Request\022\024\n\014federateName\030\001 \001(\t\"P\n\031GetFede" +
-      "rateHandleResponse\0223\n\006result\030\001 \001(\0132#.rti" +
-      "1516_202X.fedpro.FederateHandle\"O\n\026GetFe" +
-      "derateNameRequest\0225\n\010federate\030\001 \001(\0132#.rt" +
-      "i1516_202X.fedpro.FederateHandle\")\n\027GetF" +
-      "ederateNameResponse\022\016\n\006result\030\001 \001(\t\"6\n\033G" +
-      "etObjectClassHandleRequest\022\027\n\017objectClas" +
-      "sName\030\001 \001(\t\"V\n\034GetObjectClassHandleRespo" +
-      "nse\0226\n\006result\030\001 \001(\0132&.rti1516_202X.fedpr" +
-      "o.ObjectClassHandle\"X\n\031GetObjectClassNam" +
+      "ributeHandleSet\022\027\n\017userSuppliedTag\030\003 \001(\014" +
+      "\")\n\'AttributeOwnershipReleaseDeniedRespo" +
+      "nse\"\307\001\n,AttributeOwnershipDivestitureIfW" +
+      "antedRequest\022A\n\016objectInstance\030\001 \001(\0132).r" +
+      "ti1516_202X.fedpro.ObjectInstanceHandle\022" +
+      ";\n\nattributes\030\002 \001(\0132\'.rti1516_202X.fedpr" +
+      "o.AttributeHandleSet\022\027\n\017userSuppliedTag\030" +
+      "\003 \001(\014\"h\n-AttributeOwnershipDivestitureIf" +
+      "WantedResponse\0227\n\006result\030\001 \001(\0132\'.rti1516" +
+      "_202X.fedpro.AttributeHandleSet\"\266\001\n4Canc" +
+      "elNegotiatedAttributeOwnershipDivestitur" +
+      "eRequest\022A\n\016objectInstance\030\001 \001(\0132).rti15" +
+      "16_202X.fedpro.ObjectInstanceHandle\022;\n\na" +
+      "ttributes\030\002 \001(\0132\'.rti1516_202X.fedpro.At" +
+      "tributeHandleSet\"7\n5CancelNegotiatedAttr" +
+      "ibuteOwnershipDivestitureResponse\"\254\001\n*Ca" +
+      "ncelAttributeOwnershipAcquisitionRequest" +
+      "\022A\n\016objectInstance\030\001 \001(\0132).rti1516_202X." +
+      "fedpro.ObjectInstanceHandle\022;\n\nattribute" +
+      "s\030\002 \001(\0132\'.rti1516_202X.fedpro.AttributeH" +
+      "andleSet\"-\n+CancelAttributeOwnershipAcqu" +
+      "isitionResponse\"\240\001\n\036QueryAttributeOwners" +
+      "hipRequest\022A\n\016objectInstance\030\001 \001(\0132).rti" +
+      "1516_202X.fedpro.ObjectInstanceHandle\022;\n" +
+      "\nattributes\030\002 \001(\0132\'.rti1516_202X.fedpro." +
+      "AttributeHandleSet\"!\n\037QueryAttributeOwne" +
+      "rshipResponse\"\237\001\n!IsAttributeOwnedByFede" +
+      "rateRequest\022A\n\016objectInstance\030\001 \001(\0132).rt" +
+      "i1516_202X.fedpro.ObjectInstanceHandle\0227" +
+      "\n\tattribute\030\002 \001(\0132$.rti1516_202X.fedpro." +
+      "AttributeHandle\"4\n\"IsAttributeOwnedByFed" +
+      "erateResponse\022\016\n\006result\030\001 \001(\010\"Z\n\033EnableT",
+      "imeRegulationRequest\022;\n\tlookahead\030\001 \001(\0132" +
+      "(.rti1516_202X.fedpro.LogicalTimeInterva" +
+      "l\"\036\n\034EnableTimeRegulationResponse\"\036\n\034Dis" +
+      "ableTimeRegulationRequest\"\037\n\035DisableTime" +
+      "RegulationResponse\"\036\n\034EnableTimeConstrai" +
+      "nedRequest\"\037\n\035EnableTimeConstrainedRespo" +
+      "nse\"\037\n\035DisableTimeConstrainedRequest\" \n\036" +
+      "DisableTimeConstrainedResponse\"K\n\031TimeAd" +
+      "vanceRequestRequest\022.\n\004time\030\001 \001(\0132 .rti1" +
+      "516_202X.fedpro.LogicalTime\"\034\n\032TimeAdvan" +
+      "ceRequestResponse\"T\n\"TimeAdvanceRequestA" +
+      "vailableRequest\022.\n\004time\030\001 \001(\0132 .rti1516_" +
+      "202X.fedpro.LogicalTime\"%\n#TimeAdvanceRe" +
+      "questAvailableResponse\"K\n\031NextMessageReq" +
+      "uestRequest\022.\n\004time\030\001 \001(\0132 .rti1516_202X" +
+      ".fedpro.LogicalTime\"\034\n\032NextMessageReques" +
+      "tResponse\"T\n\"NextMessageRequestAvailable" +
+      "Request\022.\n\004time\030\001 \001(\0132 .rti1516_202X.fed" +
+      "pro.LogicalTime\"%\n#NextMessageRequestAva" +
+      "ilableResponse\"J\n\030FlushQueueRequestReque" +
+      "st\022.\n\004time\030\001 \001(\0132 .rti1516_202X.fedpro.L" +
+      "ogicalTime\"\033\n\031FlushQueueRequestResponse\"" +
+      "#\n!EnableAsynchronousDeliveryRequest\"$\n\"" +
+      "EnableAsynchronousDeliveryResponse\"$\n\"Di" +
+      "sableAsynchronousDeliveryRequest\"%\n#Disa" +
+      "bleAsynchronousDeliveryResponse\"\022\n\020Query" +
+      "GALTRequest\"I\n\021QueryGALTResponse\0224\n\006resu" +
+      "lt\030\001 \001(\0132$.rti1516_202X.fedpro.TimeQuery" +
+      "Return\"\031\n\027QueryLogicalTimeRequest\"L\n\030Que" +
+      "ryLogicalTimeResponse\0220\n\006result\030\001 \001(\0132 ." +
+      "rti1516_202X.fedpro.LogicalTime\"\022\n\020Query" +
+      "LITSRequest\"I\n\021QueryLITSResponse\0224\n\006resu" +
+      "lt\030\001 \001(\0132$.rti1516_202X.fedpro.TimeQuery" +
+      "Return\"U\n\026ModifyLookaheadRequest\022;\n\tlook" +
+      "ahead\030\001 \001(\0132(.rti1516_202X.fedpro.Logica" +
+      "lTimeInterval\"\031\n\027ModifyLookaheadResponse" +
+      "\"\027\n\025QueryLookaheadRequest\"R\n\026QueryLookah" +
+      "eadResponse\0228\n\006result\030\001 \001(\0132(.rti1516_20" +
+      "2X.fedpro.LogicalTimeInterval\"R\n\016Retract" +
+      "Request\022@\n\nretraction\030\001 \001(\0132,.rti1516_20" +
+      "2X.fedpro.MessageRetractionHandle\"\021\n\017Ret" +
+      "ractResponse\"\324\001\n\037ChangeAttributeOrderTyp" +
+      "eRequest\022A\n\016objectInstance\030\001 \001(\0132).rti15" +
+      "16_202X.fedpro.ObjectInstanceHandle\022;\n\na" +
+      "ttributes\030\002 \001(\0132\'.rti1516_202X.fedpro.At" +
+      "tributeHandleSet\0221\n\torderType\030\003 \001(\0162\036.rt" +
+      "i1516_202X.fedpro.OrderType\"\"\n ChangeAtt" +
+      "ributeOrderTypeResponse\"\330\001\n&ChangeDefaul" +
+      "tAttributeOrderTypeRequest\022>\n\016theObjectC" +
+      "lass\030\001 \001(\0132&.rti1516_202X.fedpro.ObjectC" +
+      "lassHandle\022;\n\nattributes\030\002 \001(\0132\'.rti1516" +
+      "_202X.fedpro.AttributeHandleSet\0221\n\torder" +
+      "Type\030\003 \001(\0162\036.rti1516_202X.fedpro.OrderTy" +
+      "pe\")\n\'ChangeDefaultAttributeOrderTypeRes" +
+      "ponse\"\235\001\n!ChangeInteractionOrderTypeRequ" +
+      "est\022E\n\020interactionClass\030\001 \001(\0132+.rti1516_" +
+      "202X.fedpro.InteractionClassHandle\0221\n\tor" +
+      "derType\030\002 \001(\0162\036.rti1516_202X.fedpro.Orde" +
+      "rType\"$\n\"ChangeInteractionOrderTypeRespo" +
+      "nse\"R\n\023CreateRegionRequest\022;\n\ndimensions" +
+      "\030\001 \001(\0132\'.rti1516_202X.fedpro.DimensionHa" +
+      "ndleSet\"I\n\024CreateRegionResponse\0221\n\006resul" +
+      "t\030\001 \001(\0132!.rti1516_202X.fedpro.RegionHand" +
+      "le\"Y\n CommitRegionModificationsRequest\0225" +
+      "\n\007regions\030\001 \001(\0132$.rti1516_202X.fedpro.Re" +
+      "gionHandleSet\"#\n!CommitRegionModificatio" +
+      "nsResponse\"H\n\023DeleteRegionRequest\0221\n\006reg" +
+      "ion\030\001 \001(\0132!.rti1516_202X.fedpro.RegionHa" +
+      "ndle\"\026\n\024DeleteRegionResponse\"\271\001\n(Registe" +
+      "rObjectInstanceWithRegionsRequest\022;\n\013obj" +
+      "ectClass\030\001 \001(\0132&.rti1516_202X.fedpro.Obj" +
+      "ectClassHandle\022P\n\024attributesAndRegions\030\002" +
+      " \001(\01322.rti1516_202X.fedpro.AttributeSetR" +
+      "egionSetPairList\"f\n)RegisterObjectInstan" +
+      "ceWithRegionsResponse\0229\n\006result\030\001 \001(\0132)." +
+      "rti1516_202X.fedpro.ObjectInstanceHandle" +
+      "\"\334\001\n/RegisterObjectInstanceWithNameAndRe" +
+      "gionsRequest\022;\n\013objectClass\030\001 \001(\0132&.rti1" +
+      "516_202X.fedpro.ObjectClassHandle\022P\n\024att" +
+      "ributesAndRegions\030\002 \001(\01322.rti1516_202X.f" +
+      "edpro.AttributeSetRegionSetPairList\022\032\n\022o" +
+      "bjectInstanceName\030\003 \001(\t\"m\n0RegisterObjec" +
+      "tInstanceWithNameAndRegionsResponse\0229\n\006r" +
+      "esult\030\001 \001(\0132).rti1516_202X.fedpro.Object" +
+      "InstanceHandle\"\270\001\n!AssociateRegionsForUp" +
+      "datesRequest\022A\n\016objectInstance\030\001 \001(\0132).r" +
+      "ti1516_202X.fedpro.ObjectInstanceHandle\022" +
+      "P\n\024attributesAndRegions\030\002 \001(\01322.rti1516_" +
+      "202X.fedpro.AttributeSetRegionSetPairLis" +
+      "t\"$\n\"AssociateRegionsForUpdatesResponse\"" +
+      "\272\001\n#UnassociateRegionsForUpdatesRequest\022" +
+      "A\n\016objectInstance\030\001 \001(\0132).rti1516_202X.f" +
+      "edpro.ObjectInstanceHandle\022P\n\024attributes" +
+      "AndRegions\030\002 \001(\01322.rti1516_202X.fedpro.A" +
+      "ttributeSetRegionSetPairList\"&\n$Unassoci" +
+      "ateRegionsForUpdatesResponse\"\321\001\n0Subscri" +
+      "beObjectClassAttributesWithRegionsReques" +
+      "t\022;\n\013objectClass\030\001 \001(\0132&.rti1516_202X.fe" +
+      "dpro.ObjectClassHandle\022P\n\024attributesAndR" +
+      "egions\030\002 \001(\01322.rti1516_202X.fedpro.Attri" +
+      "buteSetRegionSetPairList\022\016\n\006active\030\003 \001(\010" +
+      "\"3\n1SubscribeObjectClassAttributesWithRe" +
+      "gionsResponse\"\366\001\n7SubscribeObjectClassAt" +
+      "tributesWithRegionsAndRateRequest\022;\n\013obj" +
+      "ectClass\030\001 \001(\0132&.rti1516_202X.fedpro.Obj" +
+      "ectClassHandle\022P\n\024attributesAndRegions\030\002" +
+      " \001(\01322.rti1516_202X.fedpro.AttributeSetR" +
+      "egionSetPairList\022\016\n\006active\030\003 \001(\010\022\034\n\024upda" +
+      "teRateDesignator\030\004 \001(\t\":\n8SubscribeObjec" +
+      "tClassAttributesWithRegionsAndRateRespon" +
+      "se\"\303\001\n2UnsubscribeObjectClassAttributesW" +
+      "ithRegionsRequest\022;\n\013objectClass\030\001 \001(\0132&" +
+      ".rti1516_202X.fedpro.ObjectClassHandle\022P" +
+      "\n\024attributesAndRegions\030\002 \001(\01322.rti1516_2" +
+      "02X.fedpro.AttributeSetRegionSetPairList" +
+      "\"5\n3UnsubscribeObjectClassAttributesWith" +
+      "RegionsResponse\"\273\001\n+SubscribeInteraction" +
+      "ClassWithRegionsRequest\022E\n\020interactionCl" +
+      "ass\030\001 \001(\0132+.rti1516_202X.fedpro.Interact" +
+      "ionClassHandle\022\016\n\006active\030\002 \001(\010\0225\n\007region" +
+      "s\030\003 \001(\0132$.rti1516_202X.fedpro.RegionHand" +
+      "leSet\".\n,SubscribeInteractionClassWithRe" +
+      "gionsResponse\"\255\001\n-UnsubscribeInteraction" +
+      "ClassWithRegionsRequest\022E\n\020interactionCl" +
+      "ass\030\001 \001(\0132+.rti1516_202X.fedpro.Interact" +
+      "ionClassHandle\0225\n\007regions\030\002 \001(\0132$.rti151" +
+      "6_202X.fedpro.RegionHandleSet\"0\n.Unsubsc" +
+      "ribeInteractionClassWithRegionsResponse\"" +
+      "\201\002\n!SendInteractionWithRegionsRequest\022E\n" +
+      "\020interactionClass\030\001 \001(\0132+.rti1516_202X.f" +
+      "edpro.InteractionClassHandle\022E\n\017paramete" +
+      "rValues\030\002 \001(\0132,.rti1516_202X.fedpro.Para" +
+      "meterHandleValueMap\0225\n\007regions\030\003 \001(\0132$.r" +
+      "ti1516_202X.fedpro.RegionHandleSet\022\027\n\017us" +
+      "erSuppliedTag\030\004 \001(\014\"$\n\"SendInteractionWi" +
+      "thRegionsResponse\"\270\002\n(SendInteractionWit" +
+      "hRegionsAndTimeRequest\022E\n\020interactionCla" +
+      "ss\030\001 \001(\0132+.rti1516_202X.fedpro.Interacti" +
+      "onClassHandle\022E\n\017parameterValues\030\002 \001(\0132," +
+      ".rti1516_202X.fedpro.ParameterHandleValu" +
+      "eMap\0225\n\007regions\030\003 \001(\0132$.rti1516_202X.fed" +
+      "pro.RegionHandleSet\022\027\n\017userSuppliedTag\030\004" +
+      " \001(\014\022.\n\004time\030\005 \001(\0132 .rti1516_202X.fedpro" +
+      ".LogicalTime\"i\n)SendInteractionWithRegio" +
+      "nsAndTimeResponse\022<\n\006result\030\001 \001(\0132,.rti1" +
+      "516_202X.fedpro.MessageRetractionReturn\"" +
+      "\327\001\n-RequestAttributeValueUpdateWithRegio" +
+      "nsRequest\022;\n\013objectClass\030\001 \001(\0132&.rti1516" +
+      "_202X.fedpro.ObjectClassHandle\022P\n\024attrib" +
+      "utesAndRegions\030\002 \001(\01322.rti1516_202X.fedp" +
+      "ro.AttributeSetRegionSetPairList\022\027\n\017user" +
+      "SuppliedTag\030\003 \001(\014\"0\n.RequestAttributeVal" +
+      "ueUpdateWithRegionsResponse\"0\n\030GetFedera" +
+      "teHandleRequest\022\024\n\014federateName\030\001 \001(\t\"P\n" +
+      "\031GetFederateHandleResponse\0223\n\006result\030\001 \001" +
+      "(\0132#.rti1516_202X.fedpro.FederateHandle\"" +
+      "O\n\026GetFederateNameRequest\0225\n\010federate\030\001 " +
+      "\001(\0132#.rti1516_202X.fedpro.FederateHandle" +
+      "\")\n\027GetFederateNameResponse\022\016\n\006result\030\001 " +
+      "\001(\t\"6\n\033GetObjectClassHandleRequest\022\027\n\017ob" +
+      "jectClassName\030\001 \001(\t\"V\n\034GetObjectClassHan" +
+      "dleResponse\0226\n\006result\030\001 \001(\0132&.rti1516_20" +
+      "2X.fedpro.ObjectClassHandle\"X\n\031GetObject" +
+      "ClassNameRequest\022;\n\013objectClass\030\001 \001(\0132&." +
+      "rti1516_202X.fedpro.ObjectClassHandle\",\n" +
+      "\032GetObjectClassNameResponse\022\016\n\006result\030\001 " +
+      "\001(\t\"e\n GetKnownObjectClassHandleRequest\022" +
+      "A\n\016objectInstance\030\001 \001(\0132).rti1516_202X.f" +
+      "edpro.ObjectInstanceHandle\"[\n!GetKnownOb" +
+      "jectClassHandleResponse\0226\n\006result\030\001 \001(\0132" +
+      "&.rti1516_202X.fedpro.ObjectClassHandle\"" +
+      "<\n\036GetObjectInstanceHandleRequest\022\032\n\022obj" +
+      "ectInstanceName\030\001 \001(\t\"\\\n\037GetObjectInstan" +
+      "ceHandleResponse\0229\n\006result\030\001 \001(\0132).rti15" +
+      "16_202X.fedpro.ObjectInstanceHandle\"a\n\034G" +
+      "etObjectInstanceNameRequest\022A\n\016objectIns" +
+      "tance\030\001 \001(\0132).rti1516_202X.fedpro.Object" +
+      "InstanceHandle\"/\n\035GetObjectInstanceNameR" +
+      "esponse\022\016\n\006result\030\001 \001(\t\"o\n\031GetAttributeH" +
+      "andleRequest\022;\n\013objectClass\030\001 \001(\0132&.rti1" +
+      "516_202X.fedpro.ObjectClassHandle\022\025\n\ratt" +
+      "ributeName\030\002 \001(\t\"R\n\032GetAttributeHandleRe" +
+      "sponse\0224\n\006result\030\001 \001(\0132$.rti1516_202X.fe" +
+      "dpro.AttributeHandle\"\217\001\n\027GetAttributeNam" +
       "eRequest\022;\n\013objectClass\030\001 \001(\0132&.rti1516_" +
-      "202X.fedpro.ObjectClassHandle\",\n\032GetObje" +
-      "ctClassNameResponse\022\016\n\006result\030\001 \001(\t\"e\n G" +
-      "etKnownObjectClassHandleRequest\022A\n\016objec" +
-      "tInstance\030\001 \001(\0132).rti1516_202X.fedpro.Ob" +
-      "jectInstanceHandle\"[\n!GetKnownObjectClas" +
-      "sHandleResponse\0226\n\006result\030\001 \001(\0132&.rti151" +
-      "6_202X.fedpro.ObjectClassHandle\"<\n\036GetOb" +
-      "jectInstanceHandleRequest\022\032\n\022objectInsta" +
-      "nceName\030\001 \001(\t\"\\\n\037GetObjectInstanceHandle" +
-      "Response\0229\n\006result\030\001 \001(\0132).rti1516_202X." +
-      "fedpro.ObjectInstanceHandle\"a\n\034GetObject" +
-      "InstanceNameRequest\022A\n\016objectInstance\030\001 " +
-      "\001(\0132).rti1516_202X.fedpro.ObjectInstance" +
-      "Handle\"/\n\035GetObjectInstanceNameResponse\022" +
-      "\016\n\006result\030\001 \001(\t\"o\n\031GetAttributeHandleReq" +
-      "uest\022;\n\013objectClass\030\001 \001(\0132&.rti1516_202X" +
-      ".fedpro.ObjectClassHandle\022\025\n\rattributeNa" +
-      "me\030\002 \001(\t\"R\n\032GetAttributeHandleResponse\0224" +
-      "\n\006result\030\001 \001(\0132$.rti1516_202X.fedpro.Att" +
-      "ributeHandle\"\217\001\n\027GetAttributeNameRequest" +
-      "\022;\n\013objectClass\030\001 \001(\0132&.rti1516_202X.fed" +
-      "pro.ObjectClassHandle\0227\n\tattribute\030\002 \001(\013" +
-      "2$.rti1516_202X.fedpro.AttributeHandle\"*" +
-      "\n\030GetAttributeNameResponse\022\016\n\006result\030\001 \001" +
-      "(\t\"9\n\031GetUpdateRateValueRequest\022\034\n\024updat" +
-      "eRateDesignator\030\001 \001(\t\",\n\032GetUpdateRateVa" +
-      "lueResponse\022\016\n\006result\030\001 \001(\001\"\243\001\n%GetUpdat" +
-      "eRateValueForAttributeRequest\022A\n\016objectI" +
-      "nstance\030\001 \001(\0132).rti1516_202X.fedpro.Obje" +
-      "ctInstanceHandle\0227\n\tattribute\030\002 \001(\0132$.rt" +
-      "i1516_202X.fedpro.AttributeHandle\"8\n&Get" +
-      "UpdateRateValueForAttributeResponse\022\016\n\006r" +
-      "esult\030\001 \001(\001\"@\n GetInteractionClassHandle" +
-      "Request\022\034\n\024interactionClassName\030\001 \001(\t\"`\n" +
-      "!GetInteractionClassHandleResponse\022;\n\006re" +
-      "sult\030\001 \001(\0132+.rti1516_202X.fedpro.Interac" +
-      "tionClassHandle\"g\n\036GetInteractionClassNa" +
-      "meRequest\022E\n\020interactionClass\030\001 \001(\0132+.rt" +
-      "i1516_202X.fedpro.InteractionClassHandle" +
-      "\"1\n\037GetInteractionClassNameResponse\022\016\n\006r" +
-      "esult\030\001 \001(\t\"y\n\031GetParameterHandleRequest" +
-      "\022E\n\020interactionClass\030\001 \001(\0132+.rti1516_202" +
-      "X.fedpro.InteractionClassHandle\022\025\n\rparam" +
-      "eterName\030\002 \001(\t\"R\n\032GetParameterHandleResp" +
-      "onse\0224\n\006result\030\001 \001(\0132$.rti1516_202X.fedp" +
-      "ro.ParameterHandle\"\231\001\n\027GetParameterNameR" +
-      "equest\022E\n\020interactionClass\030\001 \001(\0132+.rti15" +
-      "16_202X.fedpro.InteractionClassHandle\0227\n" +
-      "\tparameter\030\002 \001(\0132$.rti1516_202X.fedpro.P" +
-      "arameterHandle\"*\n\030GetParameterNameRespon" +
-      "se\022\016\n\006result\030\001 \001(\t\",\n\023GetOrderTypeReques" +
-      "t\022\025\n\rorderTypeName\030\001 \001(\t\"F\n\024GetOrderType" +
-      "Response\022.\n\006result\030\001 \001(\0162\036.rti1516_202X." +
-      "fedpro.OrderType\"H\n\023GetOrderNameRequest\022" +
-      "1\n\torderType\030\001 \001(\0162\036.rti1516_202X.fedpro" +
-      ".OrderType\"&\n\024GetOrderNameResponse\022\016\n\006re" +
-      "sult\030\001 \001(\t\"D\n\"GetTransportationTypeHandl" +
-      "eRequest\022\036\n\026transportationTypeName\030\001 \001(\t" +
-      "\"d\n#GetTransportationTypeHandleResponse\022" +
-      "=\n\006result\030\001 \001(\0132-.rti1516_202X.fedpro.Tr" +
-      "ansportationTypeHandle\"m\n GetTransportat" +
-      "ionTypeNameRequest\022I\n\022transportationType" +
-      "\030\001 \001(\0132-.rti1516_202X.fedpro.Transportat" +
-      "ionTypeHandle\"3\n!GetTransportationTypeNa" +
-      "meResponse\022\016\n\006result\030\001 \001(\t\"\246\001\n.GetAvaila" +
-      "bleDimensionsForClassAttributeRequest\022;\n" +
+      "202X.fedpro.ObjectClassHandle\0227\n\tattribu" +
+      "te\030\002 \001(\0132$.rti1516_202X.fedpro.Attribute" +
+      "Handle\"*\n\030GetAttributeNameResponse\022\016\n\006re" +
+      "sult\030\001 \001(\t\"9\n\031GetUpdateRateValueRequest\022" +
+      "\034\n\024updateRateDesignator\030\001 \001(\t\",\n\032GetUpda" +
+      "teRateValueResponse\022\016\n\006result\030\001 \001(\001\"\243\001\n%" +
+      "GetUpdateRateValueForAttributeRequest\022A\n" +
+      "\016objectInstance\030\001 \001(\0132).rti1516_202X.fed" +
+      "pro.ObjectInstanceHandle\0227\n\tattribute\030\002 " +
+      "\001(\0132$.rti1516_202X.fedpro.AttributeHandl" +
+      "e\"8\n&GetUpdateRateValueForAttributeRespo" +
+      "nse\022\016\n\006result\030\001 \001(\001\"@\n GetInteractionCla" +
+      "ssHandleRequest\022\034\n\024interactionClassName\030" +
+      "\001 \001(\t\"`\n!GetInteractionClassHandleRespon" +
+      "se\022;\n\006result\030\001 \001(\0132+.rti1516_202X.fedpro" +
+      ".InteractionClassHandle\"g\n\036GetInteractio" +
+      "nClassNameRequest\022E\n\020interactionClass\030\001 " +
+      "\001(\0132+.rti1516_202X.fedpro.InteractionCla" +
+      "ssHandle\"1\n\037GetInteractionClassNameRespo" +
+      "nse\022\016\n\006result\030\001 \001(\t\"y\n\031GetParameterHandl" +
+      "eRequest\022E\n\020interactionClass\030\001 \001(\0132+.rti" +
+      "1516_202X.fedpro.InteractionClassHandle\022" +
+      "\025\n\rparameterName\030\002 \001(\t\"R\n\032GetParameterHa" +
+      "ndleResponse\0224\n\006result\030\001 \001(\0132$.rti1516_2" +
+      "02X.fedpro.ParameterHandle\"\231\001\n\027GetParame" +
+      "terNameRequest\022E\n\020interactionClass\030\001 \001(\013" +
+      "2+.rti1516_202X.fedpro.InteractionClassH" +
+      "andle\0227\n\tparameter\030\002 \001(\0132$.rti1516_202X." +
+      "fedpro.ParameterHandle\"*\n\030GetParameterNa" +
+      "meResponse\022\016\n\006result\030\001 \001(\t\",\n\023GetOrderTy" +
+      "peRequest\022\025\n\rorderTypeName\030\001 \001(\t\"F\n\024GetO" +
+      "rderTypeResponse\022.\n\006result\030\001 \001(\0162\036.rti15" +
+      "16_202X.fedpro.OrderType\"H\n\023GetOrderName" +
+      "Request\0221\n\torderType\030\001 \001(\0162\036.rti1516_202" +
+      "X.fedpro.OrderType\"&\n\024GetOrderNameRespon" +
+      "se\022\016\n\006result\030\001 \001(\t\"D\n\"GetTransportationT" +
+      "ypeHandleRequest\022\036\n\026transportationTypeNa" +
+      "me\030\001 \001(\t\"d\n#GetTransportationTypeHandleR" +
+      "esponse\022=\n\006result\030\001 \001(\0132-.rti1516_202X.f" +
+      "edpro.TransportationTypeHandle\"m\n GetTra" +
+      "nsportationTypeNameRequest\022I\n\022transporta" +
+      "tionType\030\001 \001(\0132-.rti1516_202X.fedpro.Tra" +
+      "nsportationTypeHandle\"3\n!GetTransportati" +
+      "onTypeNameResponse\022\016\n\006result\030\001 \001(\t\"j\n+Ge" +
+      "tAvailableDimensionsForObjectClassReques" +
+      "t\022;\n\013objectClass\030\001 \001(\0132&.rti1516_202X.fe" +
+      "dpro.ObjectClassHandle\"g\n,GetAvailableDi" +
+      "mensionsForObjectClassResponse\0227\n\006result" +
+      "\030\001 \001(\0132\'.rti1516_202X.fedpro.DimensionHa" +
+      "ndleSet\"y\n0GetAvailableDimensionsForInte" +
+      "ractionClassRequest\022E\n\020interactionClass\030" +
+      "\001 \001(\0132+.rti1516_202X.fedpro.InteractionC" +
+      "lassHandle\"l\n1GetAvailableDimensionsForI" +
+      "nteractionClassResponse\0227\n\006result\030\001 \001(\0132" +
+      "\'.rti1516_202X.fedpro.DimensionHandleSet" +
+      "\"2\n\031GetDimensionHandleRequest\022\025\n\rdimensi" +
+      "onName\030\001 \001(\t\"R\n\032GetDimensionHandleRespon" +
+      "se\0224\n\006result\030\001 \001(\0132$.rti1516_202X.fedpro" +
+      ".DimensionHandle\"R\n\027GetDimensionNameRequ" +
+      "est\0227\n\tdimension\030\001 \001(\0132$.rti1516_202X.fe" +
+      "dpro.DimensionHandle\"*\n\030GetDimensionName" +
+      "Response\022\016\n\006result\030\001 \001(\t\"X\n\035GetDimension" +
+      "UpperBoundRequest\0227\n\tdimension\030\001 \001(\0132$.r" +
+      "ti1516_202X.fedpro.DimensionHandle\"0\n\036Ge" +
+      "tDimensionUpperBoundResponse\022\016\n\006result\030\001" +
+      " \001(\r\"Q\n\034GetDimensionHandleSetRequest\0221\n\006" +
+      "region\030\001 \001(\0132!.rti1516_202X.fedpro.Regio" +
+      "nHandle\"X\n\035GetDimensionHandleSetResponse" +
+      "\0227\n\006result\030\001 \001(\0132\'.rti1516_202X.fedpro.D" +
+      "imensionHandleSet\"\203\001\n\025GetRangeBoundsRequ" +
+      "est\0221\n\006region\030\001 \001(\0132!.rti1516_202X.fedpr" +
+      "o.RegionHandle\0227\n\tdimension\030\002 \001(\0132$.rti1" +
+      "516_202X.fedpro.DimensionHandle\"J\n\026GetRa" +
+      "ngeBoundsResponse\0220\n\006result\030\001 \001(\0132 .rti1" +
+      "516_202X.fedpro.RangeBounds\"\272\001\n\025SetRange" +
+      "BoundsRequest\0221\n\006region\030\001 \001(\0132!.rti1516_" +
+      "202X.fedpro.RegionHandle\0227\n\tdimension\030\002 " +
+      "\001(\0132$.rti1516_202X.fedpro.DimensionHandl" +
+      "e\0225\n\013rangeBounds\030\003 \001(\0132 .rti1516_202X.fe" +
+      "dpro.RangeBounds\"\030\n\026SetRangeBoundsRespon" +
+      "se\"W\n\034NormalizeServiceGroupRequest\0227\n\014se" +
+      "rviceGroup\030\001 \001(\0162!.rti1516_202X.fedpro.S" +
+      "erviceGroup\"/\n\035NormalizeServiceGroupResp" +
+      "onse\022\016\n\006result\030\001 \001(\r\"W\n\036NormalizeFederat" +
+      "eHandleRequest\0225\n\010federate\030\001 \001(\0132#.rti15" +
+      "16_202X.fedpro.FederateHandle\"1\n\037Normali" +
+      "zeFederateHandleResponse\022\016\n\006result\030\001 \001(\r" +
+      "\"`\n!NormalizeObjectClassHandleRequest\022;\n" +
       "\013objectClass\030\001 \001(\0132&.rti1516_202X.fedpro" +
-      ".ObjectClassHandle\0227\n\tattribute\030\002 \001(\0132$." +
-      "rti1516_202X.fedpro.AttributeHandle\"j\n/G" +
-      "etAvailableDimensionsForClassAttributeRe" +
-      "sponse\0227\n\006result\030\001 \001(\0132\'.rti1516_202X.fe" +
-      "dpro.DimensionHandleSet\"y\n0GetAvailableD" +
-      "imensionsForInteractionClassRequest\022E\n\020i" +
-      "nteractionClass\030\001 \001(\0132+.rti1516_202X.fed" +
-      "pro.InteractionClassHandle\"l\n1GetAvailab" +
-      "leDimensionsForInteractionClassResponse\022" +
-      "7\n\006result\030\001 \001(\0132\'.rti1516_202X.fedpro.Di" +
-      "mensionHandleSet\"2\n\031GetDimensionHandleRe" +
-      "quest\022\025\n\rdimensionName\030\001 \001(\t\"R\n\032GetDimen" +
-      "sionHandleResponse\0224\n\006result\030\001 \001(\0132$.rti" +
-      "1516_202X.fedpro.DimensionHandle\"R\n\027GetD" +
-      "imensionNameRequest\0227\n\tdimension\030\001 \001(\0132$" +
-      ".rti1516_202X.fedpro.DimensionHandle\"*\n\030" +
-      "GetDimensionNameResponse\022\016\n\006result\030\001 \001(\t" +
-      "\"X\n\035GetDimensionUpperBoundRequest\0227\n\tdim" +
-      "ension\030\001 \001(\0132$.rti1516_202X.fedpro.Dimen" +
-      "sionHandle\"0\n\036GetDimensionUpperBoundResp" +
-      "onse\022\016\n\006result\030\001 \001(\r\"Q\n\034GetDimensionHand" +
-      "leSetRequest\0221\n\006region\030\001 \001(\0132!.rti1516_2" +
-      "02X.fedpro.RegionHandle\"X\n\035GetDimensionH" +
-      "andleSetResponse\0227\n\006result\030\001 \001(\0132\'.rti15" +
-      "16_202X.fedpro.DimensionHandleSet\"\203\001\n\025Ge" +
-      "tRangeBoundsRequest\0221\n\006region\030\001 \001(\0132!.rt" +
-      "i1516_202X.fedpro.RegionHandle\0227\n\tdimens" +
-      "ion\030\002 \001(\0132$.rti1516_202X.fedpro.Dimensio" +
-      "nHandle\"J\n\026GetRangeBoundsResponse\0220\n\006res" +
-      "ult\030\001 \001(\0132 .rti1516_202X.fedpro.RangeBou" +
-      "nds\"\272\001\n\025SetRangeBoundsRequest\0221\n\006region\030" +
-      "\001 \001(\0132!.rti1516_202X.fedpro.RegionHandle" +
-      "\0227\n\tdimension\030\002 \001(\0132$.rti1516_202X.fedpr" +
-      "o.DimensionHandle\0225\n\013rangeBounds\030\003 \001(\0132 " +
-      ".rti1516_202X.fedpro.RangeBounds\"\030\n\026SetR" +
-      "angeBoundsResponse\"W\n\034NormalizeServiceGr" +
-      "oupRequest\0227\n\014serviceGroup\030\001 \001(\0162!.rti15" +
-      "16_202X.fedpro.ServiceGroup\"/\n\035Normalize" +
-      "ServiceGroupResponse\022\016\n\006result\030\001 \001(\r\"W\n\036" +
-      "NormalizeFederateHandleRequest\0225\n\010federa" +
-      "te\030\001 \001(\0132#.rti1516_202X.fedpro.FederateH" +
-      "andle\"1\n\037NormalizeFederateHandleResponse" +
-      "\022\016\n\006result\030\001 \001(\r\"`\n!NormalizeObjectClass" +
-      "HandleRequest\022;\n\013objectClass\030\001 \001(\0132&.rti" +
-      "1516_202X.fedpro.ObjectClassHandle\"4\n\"No" +
-      "rmalizeObjectClassHandleResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\r\"o\n&NormalizeInteractionClassHan" +
-      "dleRequest\022E\n\020interactionClass\030\001 \001(\0132+.r" +
-      "ti1516_202X.fedpro.InteractionClassHandl" +
-      "e\"9\n\'NormalizeInteractionClassHandleResp" +
-      "onse\022\016\n\006result\030\001 \001(\r\"i\n$NormalizeObjectI" +
-      "nstanceHandleRequest\022A\n\016objectInstance\030\001" +
-      " \001(\0132).rti1516_202X.fedpro.ObjectInstanc" +
-      "eHandle\"7\n%NormalizeObjectInstanceHandle" +
-      "Response\022\016\n\006result\030\001 \001(\r\"1\n/EnableObject" +
-      "ClassRelevanceAdvisorySwitchRequest\"2\n0E" +
-      "nableObjectClassRelevanceAdvisorySwitchR" +
-      "esponse\"2\n0DisableObjectClassRelevanceAd" +
-      "visorySwitchRequest\"3\n1DisableObjectClas" +
-      "sRelevanceAdvisorySwitchResponse\"/\n-Enab" +
-      "leAttributeRelevanceAdvisorySwitchReques" +
-      "t\"0\n.EnableAttributeRelevanceAdvisorySwi" +
-      "tchResponse\"0\n.DisableAttributeRelevance" +
-      "AdvisorySwitchRequest\"1\n/DisableAttribut" +
-      "eRelevanceAdvisorySwitchResponse\"+\n)Enab" +
-      "leAttributeScopeAdvisorySwitchRequest\",\n" +
-      "*EnableAttributeScopeAdvisorySwitchRespo" +
-      "nse\",\n*DisableAttributeScopeAdvisorySwit" +
-      "chRequest\"-\n+DisableAttributeScopeAdviso" +
-      "rySwitchResponse\"1\n/EnableInteractionRel" +
-      "evanceAdvisorySwitchRequest\"2\n0EnableInt" +
-      "eractionRelevanceAdvisorySwitchResponse\"" +
-      "2\n0DisableInteractionRelevanceAdvisorySw" +
-      "itchRequest\"3\n1DisableInteractionRelevan" +
-      "ceAdvisorySwitchResponse\"\020\n\016ConnectReque" +
-      "st\"X\n\017ConnectResponse\022E\n\023configurationRe" +
-      "sult\030\001 \001(\0132(.rti1516_202X.fedpro.Configu" +
-      "rationResult\"b\n\037ConnectWithConfiguration" +
-      "Request\022?\n\020rtiConfiguration\030\001 \001(\0132%.rti1" +
-      "516_202X.fedpro.RtiConfiguration\"i\n Conn" +
-      "ectWithConfigurationResponse\022E\n\023configur" +
-      "ationResult\030\001 \001(\0132(.rti1516_202X.fedpro." +
-      "ConfigurationResult\"V\n\035ConnectWithCreden" +
-      "tialsRequest\0225\n\013credentials\030\001 \001(\0132 .rti1" +
-      "516_202X.fedpro.Credentials\"g\n\036ConnectWi" +
-      "thCredentialsResponse\022E\n\023configurationRe" +
-      "sult\030\001 \001(\0132(.rti1516_202X.fedpro.Configu" +
-      "rationResult\"\247\001\n-ConnectWithConfiguratio" +
-      "nAndCredentialsRequest\022?\n\020rtiConfigurati" +
-      "on\030\001 \001(\0132%.rti1516_202X.fedpro.RtiConfig" +
-      "uration\0225\n\013credentials\030\002 \001(\0132 .rti1516_2" +
-      "02X.fedpro.Credentials\"w\n.ConnectWithCon" +
-      "figurationAndCredentialsResponse\022E\n\023conf" +
-      "igurationResult\030\001 \001(\0132(.rti1516_202X.fed" +
-      "pro.ConfigurationResult\"\023\n\021DisconnectReq" +
-      "uest\"\024\n\022DisconnectResponse\"\257\206\001\n\013CallRequ" +
-      "est\022=\n\016connectRequest\030\001 \001(\0132#.rti1516_20" +
-      "2X.fedpro.ConnectRequestH\000\022[\n\035connectWit" +
-      "hCredentialsRequest\030\002 \001(\01322.rti1516_202X" +
-      ".fedpro.ConnectWithCredentialsRequestH\000\022" +
-      "_\n\037connectWithConfigurationRequest\030\003 \001(\013" +
-      "24.rti1516_202X.fedpro.ConnectWithConfig" +
-      "urationRequestH\000\022{\n-connectWithConfigura" +
-      "tionAndCredentialsRequest\030\004 \001(\0132B.rti151" +
-      "6_202X.fedpro.ConnectWithConfigurationAn" +
-      "dCredentialsRequestH\000\022C\n\021disconnectReque" +
-      "st\030\005 \001(\0132&.rti1516_202X.fedpro.Disconnec" +
-      "tRequestH\000\022a\n createFederationExecutionR" +
-      "equest\030\006 \001(\01325.rti1516_202X.fedpro.Creat" +
-      "eFederationExecutionRequestH\000\022q\n(createF" +
-      "ederationExecutionWithTimeRequest\030\007 \001(\0132" +
-      "=.rti1516_202X.fedpro.CreateFederationEx" +
-      "ecutionWithTimeRequestH\000\022w\n+createFedera" +
-      "tionExecutionWithModulesRequest\030\010 \001(\0132@." +
-      "rti1516_202X.fedpro.CreateFederationExec" +
-      "utionWithModulesRequestH\000\022\205\001\n2createFede" +
-      "rationExecutionWithModulesAndTimeRequest" +
-      "\030\t \001(\0132G.rti1516_202X.fedpro.CreateFeder" +
-      "ationExecutionWithModulesAndTimeRequestH" +
-      "\000\022o\n\'createFederationExecutionWithMIMReq" +
-      "uest\030\n \001(\0132<.rti1516_202X.fedpro.CreateF" +
-      "ederationExecutionWithMIMRequestH\000\022}\n.cr" +
-      "eateFederationExecutionWithMIMAndTimeReq" +
-      "uest\030\013 \001(\0132C.rti1516_202X.fedpro.CreateF" +
-      "ederationExecutionWithMIMAndTimeRequestH" +
-      "\000\022c\n!destroyFederationExecutionRequest\030\014" +
-      " \001(\01326.rti1516_202X.fedpro.DestroyFedera" +
-      "tionExecutionRequestH\000\022_\n\037listFederation" +
-      "ExecutionsRequest\030\r \001(\01324.rti1516_202X.f" +
-      "edpro.ListFederationExecutionsRequestH\000\022" +
-      "k\n%listFederationExecutionMembersRequest" +
-      "\030\016 \001(\0132:.rti1516_202X.fedpro.ListFederat" +
-      "ionExecutionMembersRequestH\000\022]\n\036joinFede" +
-      "rationExecutionRequest\030\017 \001(\01323.rti1516_2" +
-      "02X.fedpro.JoinFederationExecutionReques" +
-      "tH\000\022s\n)joinFederationExecutionWithModule" +
-      "sRequest\030\020 \001(\0132>.rti1516_202X.fedpro.Joi" +
-      "nFederationExecutionWithModulesRequestH\000" +
-      "\022m\n&joinFederationExecutionWithNameReque" +
-      "st\030\021 \001(\0132;.rti1516_202X.fedpro.JoinFeder" +
-      "ationExecutionWithNameRequestH\000\022\201\001\n0join" +
-      "FederationExecutionWithNameAndModulesReq" +
-      "uest\030\022 \001(\0132E.rti1516_202X.fedpro.JoinFed" +
-      "erationExecutionWithNameAndModulesReques" +
-      "tH\000\022a\n resignFederationExecutionRequest\030" +
-      "\023 \001(\01325.rti1516_202X.fedpro.ResignFedera" +
-      "tionExecutionRequestH\000\022{\n-registerFedera" +
-      "tionSynchronizationPointRequest\030\024 \001(\0132B." +
-      "rti1516_202X.fedpro.RegisterFederationSy" +
-      "nchronizationPointRequestH\000\022\211\001\n4register" +
-      "FederationSynchronizationPointWithSetReq" +
-      "uest\030\025 \001(\0132I.rti1516_202X.fedpro.Registe" +
-      "rFederationSynchronizationPointWithSetRe" +
-      "questH\000\022g\n#synchronizationPointAchievedR" +
-      "equest\030\026 \001(\01328.rti1516_202X.fedpro.Synch" +
-      "ronizationPointAchievedRequestH\000\022Y\n\034requ" +
-      "estFederationSaveRequest\030\027 \001(\01321.rti1516" +
-      "_202X.fedpro.RequestFederationSaveReques" +
-      "tH\000\022i\n$requestFederationSaveWithTimeRequ" +
-      "est\030\030 \001(\01329.rti1516_202X.fedpro.RequestF" +
-      "ederationSaveWithTimeRequestH\000\022Q\n\030federa" +
-      "teSaveBegunRequest\030\031 \001(\0132-.rti1516_202X." +
-      "fedpro.FederateSaveBegunRequestH\000\022W\n\033fed" +
-      "erateSaveCompleteRequest\030\032 \001(\01320.rti1516" +
-      "_202X.fedpro.FederateSaveCompleteRequest" +
-      "H\000\022]\n\036federateSaveNotCompleteRequest\030\033 \001" +
-      "(\01323.rti1516_202X.fedpro.FederateSaveNot" +
-      "CompleteRequestH\000\022U\n\032abortFederationSave" +
-      "Request\030\034 \001(\0132/.rti1516_202X.fedpro.Abor",
-      "tFederationSaveRequestH\000\022a\n queryFederat" +
-      "ionSaveStatusRequest\030\035 \001(\01325.rti1516_202" +
-      "X.fedpro.QueryFederationSaveStatusReques" +
-      "tH\000\022_\n\037requestFederationRestoreRequest\030\036" +
-      " \001(\01324.rti1516_202X.fedpro.RequestFedera" +
-      "tionRestoreRequestH\000\022]\n\036federateRestoreC" +
-      "ompleteRequest\030\037 \001(\01323.rti1516_202X.fedp" +
-      "ro.FederateRestoreCompleteRequestH\000\022c\n!f" +
-      "ederateRestoreNotCompleteRequest\030  \001(\01326" +
-      ".rti1516_202X.fedpro.FederateRestoreNotC" +
-      "ompleteRequestH\000\022[\n\035abortFederationResto" +
-      "reRequest\030! \001(\01322.rti1516_202X.fedpro.Ab" +
-      "ortFederationRestoreRequestH\000\022g\n#queryFe" +
-      "derationRestoreStatusRequest\030\" \001(\01328.rti" +
-      "1516_202X.fedpro.QueryFederationRestoreS" +
-      "tatusRequestH\000\022g\n#publishObjectClassAttr" +
-      "ibutesRequest\030# \001(\01328.rti1516_202X.fedpr" +
-      "o.PublishObjectClassAttributesRequestH\000\022" +
-      "W\n\033unpublishObjectClassRequest\030$ \001(\01320.r" +
-      "ti1516_202X.fedpro.UnpublishObjectClassR" +
-      "equestH\000\022k\n%unpublishObjectClassAttribut" +
-      "esRequest\030% \001(\0132:.rti1516_202X.fedpro.Un" +
-      "publishObjectClassAttributesRequestH\000\022{\n" +
+      ".ObjectClassHandle\"4\n\"NormalizeObjectCla" +
+      "ssHandleResponse\022\016\n\006result\030\001 \001(\r\"o\n&Norm" +
+      "alizeInteractionClassHandleRequest\022E\n\020in" +
+      "teractionClass\030\001 \001(\0132+.rti1516_202X.fedp" +
+      "ro.InteractionClassHandle\"9\n\'NormalizeIn" +
+      "teractionClassHandleResponse\022\016\n\006result\030\001" +
+      " \001(\r\"i\n$NormalizeObjectInstanceHandleReq" +
+      "uest\022A\n\016objectInstance\030\001 \001(\0132).rti1516_2" +
+      "02X.fedpro.ObjectInstanceHandle\"7\n%Norma" +
+      "lizeObjectInstanceHandleResponse\022\016\n\006resu" +
+      "lt\030\001 \001(\r\".\n,GetObjectClassRelevanceAdvis" +
+      "orySwitchRequest\"?\n-GetObjectClassReleva" +
+      "nceAdvisorySwitchResponse\022\016\n\006result\030\001 \001(" +
+      "\010\"=\n,SetObjectClassRelevanceAdvisorySwit" +
+      "chRequest\022\r\n\005value\030\001 \001(\010\"/\n-SetObjectCla" +
+      "ssRelevanceAdvisorySwitchResponse\",\n*Get" +
+      "AttributeRelevanceAdvisorySwitchRequest\"" +
+      "=\n+GetAttributeRelevanceAdvisorySwitchRe" +
+      "sponse\022\016\n\006result\030\001 \001(\010\";\n*SetAttributeRe" +
+      "levanceAdvisorySwitchRequest\022\r\n\005value\030\001 " +
+      "\001(\010\"-\n+SetAttributeRelevanceAdvisorySwit" +
+      "chResponse\"(\n&GetAttributeScopeAdvisoryS" +
+      "witchRequest\"9\n\'GetAttributeScopeAdvisor" +
+      "ySwitchResponse\022\016\n\006result\030\001 \001(\010\"7\n&SetAt" +
+      "tributeScopeAdvisorySwitchRequest\022\r\n\005val" +
+      "ue\030\001 \001(\010\")\n\'SetAttributeScopeAdvisorySwi" +
+      "tchResponse\".\n,GetInteractionRelevanceAd" +
+      "visorySwitchRequest\"?\n-GetInteractionRel" +
+      "evanceAdvisorySwitchResponse\022\016\n\006result\030\001" +
+      " \001(\010\"=\n,SetInteractionRelevanceAdvisoryS" +
+      "witchRequest\022\r\n\005value\030\001 \001(\010\"/\n-SetIntera" +
+      "ctionRelevanceAdvisorySwitchResponse\",\n*" +
+      "GetConveyRegionDesignatorSetsSwitchReque" +
+      "st\"=\n+GetConveyRegionDesignatorSetsSwitc" +
+      "hResponse\022\016\n\006result\030\001 \001(\010\";\n*SetConveyRe" +
+      "gionDesignatorSetsSwitchRequest\022\r\n\005value" +
+      "\030\001 \001(\010\"-\n+SetConveyRegionDesignatorSetsS" +
+      "witchResponse\"$\n\"GetAutomaticResignDirec" +
+      "tiveRequest\"X\n#GetAutomaticResignDirecti" +
+      "veResponse\0221\n\006result\030\001 \001(\0162!.rti1516_202" +
+      "X.fedpro.ResignAction\"V\n\"SetAutomaticRes" +
+      "ignDirectiveRequest\0220\n\005value\030\001 \001(\0162!.rti" +
+      "1516_202X.fedpro.ResignAction\"%\n#SetAuto" +
+      "maticResignDirectiveResponse\"\"\n GetServi" +
+      "ceReportingSwitchRequest\"3\n!GetServiceRe" +
+      "portingSwitchResponse\022\016\n\006result\030\001 \001(\010\"1\n" +
+      " SetServiceReportingSwitchRequest\022\r\n\005val" +
+      "ue\030\001 \001(\010\"#\n!SetServiceReportingSwitchRes" +
+      "ponse\"$\n\"GetExceptionReportingSwitchRequ" +
+      "est\"5\n#GetExceptionReportingSwitchRespon" +
+      "se\022\016\n\006result\030\001 \001(\010\"3\n\"SetExceptionReport" +
+      "ingSwitchRequest\022\r\n\005value\030\001 \001(\010\"%\n#SetEx" +
+      "ceptionReportingSwitchResponse\"*\n(GetSen" +
+      "dServiceReportsToFileSwitchRequest\";\n)Ge" +
+      "tSendServiceReportsToFileSwitchResponse\022" +
+      "\016\n\006result\030\001 \001(\010\"9\n(SetSendServiceReports" +
+      "ToFileSwitchRequest\022\r\n\005value\030\001 \001(\010\"+\n)Se" +
+      "tSendServiceReportsToFileSwitchResponse\"" +
+      "\035\n\033GetAutoProvideSwitchRequest\".\n\034GetAut" +
+      "oProvideSwitchResponse\022\016\n\006result\030\001 \001(\010\"-" +
+      "\n+GetDelaySubscriptionEvaluationSwitchRe" +
+      "quest\">\n,GetDelaySubscriptionEvaluationS" +
+      "witchResponse\022\016\n\006result\030\001 \001(\010\")\n\'GetAdvi" +
+      "soriesUseKnownClassSwitchRequest\":\n(GetA" +
+      "dvisoriesUseKnownClassSwitchResponse\022\016\n\006" +
+      "result\030\001 \001(\010\"!\n\037GetAllowRelaxedDDMSwitch" +
+      "Request\"2\n GetAllowRelaxedDDMSwitchRespo" +
+      "nse\022\016\n\006result\030\001 \001(\010\"#\n!GetNonRegulatedGr" +
+      "antSwitchRequest\"4\n\"GetNonRegulatedGrant" +
+      "SwitchResponse\022\016\n\006result\030\001 \001(\010\"\020\n\016Connec" +
+      "tRequest\"X\n\017ConnectResponse\022E\n\023configura" +
+      "tionResult\030\001 \001(\0132(.rti1516_202X.fedpro.C" +
+      "onfigurationResult\"b\n\037ConnectWithConfigu" +
+      "rationRequest\022?\n\020rtiConfiguration\030\001 \001(\0132" +
+      "%.rti1516_202X.fedpro.RtiConfiguration\"i" +
+      "\n ConnectWithConfigurationResponse\022E\n\023co" +
+      "nfigurationResult\030\001 \001(\0132(.rti1516_202X.f" +
+      "edpro.ConfigurationResult\"V\n\035ConnectWith" +
+      "CredentialsRequest\0225\n\013credentials\030\001 \001(\0132" +
+      " .rti1516_202X.fedpro.Credentials\"g\n\036Con" +
+      "nectWithCredentialsResponse\022E\n\023configura" +
+      "tionResult\030\001 \001(\0132(.rti1516_202X.fedpro.C" +
+      "onfigurationResult\"\247\001\n-ConnectWithConfig" +
+      "urationAndCredentialsRequest\022?\n\020rtiConfi" +
+      "guration\030\001 \001(\0132%.rti1516_202X.fedpro.Rti" +
+      "Configuration\0225\n\013credentials\030\002 \001(\0132 .rti" +
+      "1516_202X.fedpro.Credentials\"w\n.ConnectW" +
+      "ithConfigurationAndCredentialsResponse\022E" +
+      "\n\023configurationResult\030\001 \001(\0132(.rti1516_20" +
+      "2X.fedpro.ConfigurationResult\"\023\n\021Disconn" +
+      "ectRequest\"\024\n\022DisconnectResponse\"\210\222\001\n\013Ca" +
+      "llRequest\022=\n\016connectRequest\030\001 \001(\0132#.rti1" +
+      "516_202X.fedpro.ConnectRequestH\000\022[\n\035conn" +
+      "ectWithCredentialsRequest\030\002 \001(\01322.rti151" +
+      "6_202X.fedpro.ConnectWithCredentialsRequ" +
+      "estH\000\022_\n\037connectWithConfigurationRequest" +
+      "\030\003 \001(\01324.rti1516_202X.fedpro.ConnectWith" +
+      "ConfigurationRequestH\000\022{\n-connectWithCon" +
+      "figurationAndCredentialsRequest\030\004 \001(\0132B." +
+      "rti1516_202X.fedpro.ConnectWithConfigura" +
+      "tionAndCredentialsRequestH\000\022C\n\021disconnec" +
+      "tRequest\030\005 \001(\0132&.rti1516_202X.fedpro.Dis" +
+      "connectRequestH\000\022a\n createFederationExec" +
+      "utionRequest\030\006 \001(\01325.rti1516_202X.fedpro" +
+      ".CreateFederationExecutionRequestH\000\022q\n(c" +
+      "reateFederationExecutionWithTimeRequest\030" +
+      "\007 \001(\0132=.rti1516_202X.fedpro.CreateFedera" +
+      "tionExecutionWithTimeRequestH\000\022w\n+create" +
+      "FederationExecutionWithModulesRequest\030\010 " +
+      "\001(\0132@.rti1516_202X.fedpro.CreateFederati" +
+      "onExecutionWithModulesRequestH\000\022\205\001\n2crea" +
+      "teFederationExecutionWithModulesAndTimeR" +
+      "equest\030\t \001(\0132G.rti1516_202X.fedpro.Creat" +
+      "eFederationExecutionWithModulesAndTimeRe" +
+      "questH\000\022o\n\'createFederationExecutionWith" +
+      "MIMRequest\030\n \001(\0132<.rti1516_202X.fedpro.C" +
+      "reateFederationExecutionWithMIMRequestH\000" +
+      "\022}\n.createFederationExecutionWithMIMAndT" +
+      "imeRequest\030\013 \001(\0132C.rti1516_202X.fedpro.C" +
+      "reateFederationExecutionWithMIMAndTimeRe" +
+      "questH\000\022c\n!destroyFederationExecutionReq" +
+      "uest\030\014 \001(\01326.rti1516_202X.fedpro.Destroy" +
+      "FederationExecutionRequestH\000\022_\n\037listFede" +
+      "rationExecutionsRequest\030\r \001(\01324.rti1516_" +
+      "202X.fedpro.ListFederationExecutionsRequ" +
+      "estH\000\022k\n%listFederationExecutionMembersR",
+      "equest\030\016 \001(\0132:.rti1516_202X.fedpro.ListF" +
+      "ederationExecutionMembersRequestH\000\022]\n\036jo" +
+      "inFederationExecutionRequest\030\017 \001(\01323.rti" +
+      "1516_202X.fedpro.JoinFederationExecution" +
+      "RequestH\000\022s\n)joinFederationExecutionWith" +
+      "ModulesRequest\030\020 \001(\0132>.rti1516_202X.fedp" +
+      "ro.JoinFederationExecutionWithModulesReq" +
+      "uestH\000\022m\n&joinFederationExecutionWithNam" +
+      "eRequest\030\021 \001(\0132;.rti1516_202X.fedpro.Joi" +
+      "nFederationExecutionWithNameRequestH\000\022\201\001" +
+      "\n0joinFederationExecutionWithNameAndModu" +
+      "lesRequest\030\022 \001(\0132E.rti1516_202X.fedpro.J" +
+      "oinFederationExecutionWithNameAndModules" +
+      "RequestH\000\022a\n resignFederationExecutionRe" +
+      "quest\030\023 \001(\01325.rti1516_202X.fedpro.Resign" +
+      "FederationExecutionRequestH\000\022{\n-register" +
+      "FederationSynchronizationPointRequest\030\024 " +
+      "\001(\0132B.rti1516_202X.fedpro.RegisterFedera" +
+      "tionSynchronizationPointRequestH\000\022\211\001\n4re" +
+      "gisterFederationSynchronizationPointWith" +
+      "SetRequest\030\025 \001(\0132I.rti1516_202X.fedpro.R" +
+      "egisterFederationSynchronizationPointWit" +
+      "hSetRequestH\000\022g\n#synchronizationPointAch" +
+      "ievedRequest\030\026 \001(\01328.rti1516_202X.fedpro" +
+      ".SynchronizationPointAchievedRequestH\000\022Y" +
+      "\n\034requestFederationSaveRequest\030\027 \001(\01321.r" +
+      "ti1516_202X.fedpro.RequestFederationSave" +
+      "RequestH\000\022i\n$requestFederationSaveWithTi" +
+      "meRequest\030\030 \001(\01329.rti1516_202X.fedpro.Re" +
+      "questFederationSaveWithTimeRequestH\000\022Q\n\030" +
+      "federateSaveBegunRequest\030\031 \001(\0132-.rti1516" +
+      "_202X.fedpro.FederateSaveBegunRequestH\000\022" +
+      "W\n\033federateSaveCompleteRequest\030\032 \001(\01320.r" +
+      "ti1516_202X.fedpro.FederateSaveCompleteR" +
+      "equestH\000\022]\n\036federateSaveNotCompleteReque" +
+      "st\030\033 \001(\01323.rti1516_202X.fedpro.FederateS" +
+      "aveNotCompleteRequestH\000\022U\n\032abortFederati" +
+      "onSaveRequest\030\034 \001(\0132/.rti1516_202X.fedpr" +
+      "o.AbortFederationSaveRequestH\000\022a\n queryF" +
+      "ederationSaveStatusRequest\030\035 \001(\01325.rti15" +
+      "16_202X.fedpro.QueryFederationSaveStatus" +
+      "RequestH\000\022_\n\037requestFederationRestoreReq" +
+      "uest\030\036 \001(\01324.rti1516_202X.fedpro.Request" +
+      "FederationRestoreRequestH\000\022]\n\036federateRe" +
+      "storeCompleteRequest\030\037 \001(\01323.rti1516_202" +
+      "X.fedpro.FederateRestoreCompleteRequestH" +
+      "\000\022c\n!federateRestoreNotCompleteRequest\030 " +
+      " \001(\01326.rti1516_202X.fedpro.FederateResto" +
+      "reNotCompleteRequestH\000\022[\n\035abortFederatio" +
+      "nRestoreRequest\030! \001(\01322.rti1516_202X.fed" +
+      "pro.AbortFederationRestoreRequestH\000\022g\n#q" +
+      "ueryFederationRestoreStatusRequest\030\" \001(\013" +
+      "28.rti1516_202X.fedpro.QueryFederationRe" +
+      "storeStatusRequestH\000\022g\n#publishObjectCla" +
+      "ssAttributesRequest\030# \001(\01328.rti1516_202X" +
+      ".fedpro.PublishObjectClassAttributesRequ" +
+      "estH\000\022W\n\033unpublishObjectClassRequest\030$ \001" +
+      "(\01320.rti1516_202X.fedpro.UnpublishObject" +
+      "ClassRequestH\000\022k\n%unpublishObjectClassAt" +
+      "tributesRequest\030% \001(\0132:.rti1516_202X.fed" +
+      "pro.UnpublishObjectClassAttributesReques" +
+      "tH\000\022]\n\036publishInteractionClassRequest\030& " +
+      "\001(\01323.rti1516_202X.fedpro.PublishInterac" +
+      "tionClassRequestH\000\022a\n unpublishInteracti" +
+      "onClassRequest\030\' \001(\01325.rti1516_202X.fedp" +
+      "ro.UnpublishInteractionClassRequestH\000\022{\n" +
       "-publishObjectClassDirectedInteractionsR" +
-      "equest\030& \001(\0132B.rti1516_202X.fedpro.Publi" +
+      "equest\030( \001(\0132B.rti1516_202X.fedpro.Publi" +
       "shObjectClassDirectedInteractionsRequest" +
       "H\000\022\177\n/unpublishObjectClassDirectedIntera" +
-      "ctionsRequest\030\' \001(\0132D.rti1516_202X.fedpr" +
+      "ctionsRequest\030) \001(\0132D.rti1516_202X.fedpr" +
       "o.UnpublishObjectClassDirectedInteractio" +
       "nsRequestH\000\022\215\001\n6unpublishObjectClassDire" +
-      "ctedInteractionsWithSetRequest\030( \001(\0132K.r" +
+      "ctedInteractionsWithSetRequest\030* \001(\0132K.r" +
       "ti1516_202X.fedpro.UnpublishObjectClassD" +
-      "irectedInteractionsWithSetRequestH\000\022]\n\036p" +
-      "ublishInteractionClassRequest\030) \001(\01323.rt" +
-      "i1516_202X.fedpro.PublishInteractionClas" +
-      "sRequestH\000\022a\n unpublishInteractionClassR" +
-      "equest\030* \001(\01325.rti1516_202X.fedpro.Unpub" +
-      "lishInteractionClassRequestH\000\022k\n%subscri" +
-      "beObjectClassAttributesRequest\030+ \001(\0132:.r" +
-      "ti1516_202X.fedpro.SubscribeObjectClassA" +
-      "ttributesRequestH\000\022{\n-subscribeObjectCla" +
-      "ssAttributesWithRateRequest\030, \001(\0132B.rti1" +
-      "516_202X.fedpro.SubscribeObjectClassAttr" +
-      "ibutesWithRateRequestH\000\022}\n.subscribeObje" +
-      "ctClassAttributesPassivelyRequest\030- \001(\0132" +
-      "C.rti1516_202X.fedpro.SubscribeObjectCla" +
-      "ssAttributesPassivelyRequestH\000\022\215\001\n6subsc" +
-      "ribeObjectClassAttributesPassivelyWithRa" +
-      "teRequest\030. \001(\0132K.rti1516_202X.fedpro.Su" +
-      "bscribeObjectClassAttributesPassivelyWit" +
-      "hRateRequestH\000\022[\n\035unsubscribeObjectClass" +
-      "Request\030/ \001(\01322.rti1516_202X.fedpro.Unsu" +
-      "bscribeObjectClassRequestH\000\022o\n\'unsubscri" +
-      "beObjectClassAttributesRequest\0300 \001(\0132<.r" +
-      "ti1516_202X.fedpro.UnsubscribeObjectClas" +
-      "sAttributesRequestH\000\022\177\n/subscribeObjectC" +
-      "lassDirectedInteractionsRequest\0301 \001(\0132D." +
-      "rti1516_202X.fedpro.SubscribeObjectClass" +
-      "DirectedInteractionsRequestH\000\022\203\001\n1unsubs" +
-      "cribeObjectClassDirectedInteractionsRequ" +
-      "est\0302 \001(\0132F.rti1516_202X.fedpro.Unsubscr" +
-      "ibeObjectClassDirectedInteractionsReques" +
-      "tH\000\022\221\001\n8unsubscribeObjectClassDirectedIn" +
-      "teractionsWithSetRequest\0303 \001(\0132M.rti1516" +
-      "_202X.fedpro.UnsubscribeObjectClassDirec" +
-      "tedInteractionsWithSetRequestH\000\022a\n subsc" +
-      "ribeInteractionClassRequest\0304 \001(\01325.rti1" +
-      "516_202X.fedpro.SubscribeInteractionClas" +
-      "sRequestH\000\022s\n)subscribeInteractionClassP" +
-      "assivelyRequest\0305 \001(\0132>.rti1516_202X.fed" +
-      "pro.SubscribeInteractionClassPassivelyRe" +
-      "questH\000\022e\n\"unsubscribeInteractionClassRe" +
-      "quest\0306 \001(\01327.rti1516_202X.fedpro.Unsubs" +
-      "cribeInteractionClassRequestH\000\022a\n reserv" +
-      "eObjectInstanceNameRequest\0307 \001(\01325.rti15" +
-      "16_202X.fedpro.ReserveObjectInstanceName" +
-      "RequestH\000\022a\n releaseObjectInstanceNameRe" +
-      "quest\0308 \001(\01325.rti1516_202X.fedpro.Releas" +
-      "eObjectInstanceNameRequestH\000\022q\n(reserveM" +
-      "ultipleObjectInstanceNameRequest\0309 \001(\0132=" +
-      ".rti1516_202X.fedpro.ReserveMultipleObje" +
-      "ctInstanceNameRequestH\000\022q\n(releaseMultip" +
-      "leObjectInstanceNameRequest\030: \001(\0132=.rti1" +
-      "516_202X.fedpro.ReleaseMultipleObjectIns" +
-      "tanceNameRequestH\000\022[\n\035registerObjectInst" +
-      "anceRequest\030; \001(\01322.rti1516_202X.fedpro." +
-      "RegisterObjectInstanceRequestH\000\022k\n%regis" +
-      "terObjectInstanceWithNameRequest\030< \001(\0132:" +
-      ".rti1516_202X.fedpro.RegisterObjectInsta" +
-      "nceWithNameRequestH\000\022Y\n\034updateAttributeV" +
-      "aluesRequest\030= \001(\01321.rti1516_202X.fedpro" +
-      ".UpdateAttributeValuesRequestH\000\022i\n$updat" +
-      "eAttributeValuesWithTimeRequest\030> \001(\01329." +
-      "rti1516_202X.fedpro.UpdateAttributeValue" +
-      "sWithTimeRequestH\000\022M\n\026sendInteractionReq" +
-      "uest\030? \001(\0132+.rti1516_202X.fedpro.SendInt" +
-      "eractionRequestH\000\022]\n\036sendInteractionWith" +
-      "TimeRequest\030@ \001(\01323.rti1516_202X.fedpro." +
-      "SendInteractionWithTimeRequestH\000\022]\n\036send" +
-      "DirectedInteractionRequest\030A \001(\01323.rti15" +
-      "16_202X.fedpro.SendDirectedInteractionRe" +
-      "questH\000\022m\n&sendDirectedInteractionWithTi" +
-      "meRequest\030B \001(\0132;.rti1516_202X.fedpro.Se" +
-      "ndDirectedInteractionWithTimeRequestH\000\022W" +
-      "\n\033deleteObjectInstanceRequest\030C \001(\01320.rt" +
-      "i1516_202X.fedpro.DeleteObjectInstanceRe" +
-      "questH\000\022g\n#deleteObjectInstanceWithTimeR" +
-      "equest\030D \001(\01328.rti1516_202X.fedpro.Delet" +
-      "eObjectInstanceWithTimeRequestH\000\022a\n loca" +
-      "lDeleteObjectInstanceRequest\030E \001(\01325.rti" +
-      "1516_202X.fedpro.LocalDeleteObjectInstan" +
-      "ceRequestH\000\022u\n*requestInstanceAttributeV" +
-      "alueUpdateRequest\030F \001(\0132?.rti1516_202X.f" +
-      "edpro.RequestInstanceAttributeValueUpdat" +
-      "eRequestH\000\022o\n\'requestClassAttributeValue" +
-      "UpdateRequest\030G \001(\0132<.rti1516_202X.fedpr" +
-      "o.RequestClassAttributeValueUpdateReques" +
-      "tH\000\022\177\n/requestAttributeTransportationTyp" +
-      "eChangeRequest\030H \001(\0132D.rti1516_202X.fedp" +
-      "ro.RequestAttributeTransportationTypeCha" +
-      "ngeRequestH\000\022\177\n/changeDefaultAttributeTr" +
-      "ansportationTypeRequest\030I \001(\0132D.rti1516_" +
-      "202X.fedpro.ChangeDefaultAttributeTransp" +
-      "ortationTypeRequestH\000\022o\n\'queryAttributeT" +
-      "ransportationTypeRequest\030J \001(\0132<.rti1516" +
-      "_202X.fedpro.QueryAttributeTransportatio" +
-      "nTypeRequestH\000\022\203\001\n1requestInteractionTra" +
-      "nsportationTypeChangeRequest\030K \001(\0132F.rti" +
-      "1516_202X.fedpro.RequestInteractionTrans" +
-      "portationTypeChangeRequestH\000\022s\n)queryInt" +
-      "eractionTransportationTypeRequest\030L \001(\0132" +
-      ">.rti1516_202X.fedpro.QueryInteractionTr" +
-      "ansportationTypeRequestH\000\022\203\001\n1unconditio" +
-      "nalAttributeOwnershipDivestitureRequest\030" +
-      "M \001(\0132F.rti1516_202X.fedpro.Unconditiona" +
-      "lAttributeOwnershipDivestitureRequestH\000\022" +
-      "}\n.negotiatedAttributeOwnershipDivestitu" +
-      "reRequest\030N \001(\0132C.rti1516_202X.fedpro.Ne" +
-      "gotiatedAttributeOwnershipDivestitureReq" +
-      "uestH\000\022S\n\031confirmDivestitureRequest\030O \001(" +
-      "\0132..rti1516_202X.fedpro.ConfirmDivestitu" +
-      "reRequestH\000\022i\n$attributeOwnershipAcquisi" +
-      "tionRequest\030P \001(\01329.rti1516_202X.fedpro." +
-      "AttributeOwnershipAcquisitionRequestH\000\022\177" +
-      "\n/attributeOwnershipAcquisitionIfAvailab" +
-      "leRequest\030Q \001(\0132D.rti1516_202X.fedpro.At" +
-      "tributeOwnershipAcquisitionIfAvailableRe" +
-      "questH\000\022m\n&attributeOwnershipReleaseDeni" +
-      "edRequest\030R \001(\0132;.rti1516_202X.fedpro.At" +
-      "tributeOwnershipReleaseDeniedRequestH\000\022y" +
-      "\n,attributeOwnershipDivestitureIfWantedR" +
-      "equest\030S \001(\0132A.rti1516_202X.fedpro.Attri" +
-      "buteOwnershipDivestitureIfWantedRequestH" +
-      "\000\022\211\001\n4cancelNegotiatedAttributeOwnership" +
-      "DivestitureRequest\030T \001(\0132I.rti1516_202X." +
-      "fedpro.CancelNegotiatedAttributeOwnershi" +
-      "pDivestitureRequestH\000\022u\n*cancelAttribute" +
-      "OwnershipAcquisitionRequest\030U \001(\0132?.rti1" +
-      "516_202X.fedpro.CancelAttributeOwnership" +
-      "AcquisitionRequestH\000\022]\n\036queryAttributeOw" +
-      "nershipRequest\030V \001(\01323.rti1516_202X.fedp" +
-      "ro.QueryAttributeOwnershipRequestH\000\022c\n!i" +
-      "sAttributeOwnedByFederateRequest\030W \001(\01326" +
-      ".rti1516_202X.fedpro.IsAttributeOwnedByF" +
-      "ederateRequestH\000\022W\n\033enableTimeRegulation" +
-      "Request\030X \001(\01320.rti1516_202X.fedpro.Enab" +
-      "leTimeRegulationRequestH\000\022Y\n\034disableTime" +
-      "RegulationRequest\030Y \001(\01321.rti1516_202X.f" +
-      "edpro.DisableTimeRegulationRequestH\000\022Y\n\034" +
-      "enableTimeConstrainedRequest\030Z \001(\01321.rti" +
-      "1516_202X.fedpro.EnableTimeConstrainedRe" +
-      "questH\000\022[\n\035disableTimeConstrainedRequest" +
-      "\030[ \001(\01322.rti1516_202X.fedpro.DisableTime" +
-      "ConstrainedRequestH\000\022S\n\031timeAdvanceReque" +
-      "stRequest\030\\ \001(\0132..rti1516_202X.fedpro.Ti" +
-      "meAdvanceRequestRequestH\000\022e\n\"timeAdvance" +
-      "RequestAvailableRequest\030] \001(\01327.rti1516_" +
-      "202X.fedpro.TimeAdvanceRequestAvailableR" +
-      "equestH\000\022S\n\031nextMessageRequestRequest\030^ " +
-      "\001(\0132..rti1516_202X.fedpro.NextMessageReq" +
-      "uestRequestH\000\022e\n\"nextMessageRequestAvail" +
-      "ableRequest\030_ \001(\01327.rti1516_202X.fedpro." +
-      "NextMessageRequestAvailableRequestH\000\022Q\n\030" +
-      "flushQueueRequestRequest\030` \001(\0132-.rti1516" +
-      "_202X.fedpro.FlushQueueRequestRequestH\000\022" +
-      "c\n!enableAsynchronousDeliveryRequest\030a \001" +
-      "(\01326.rti1516_202X.fedpro.EnableAsynchron" +
-      "ousDeliveryRequestH\000\022e\n\"disableAsynchron" +
-      "ousDeliveryRequest\030b \001(\01327.rti1516_202X." +
-      "fedpro.DisableAsynchronousDeliveryReques" +
-      "tH\000\022A\n\020queryGALTRequest\030c \001(\0132%.rti1516_" +
-      "202X.fedpro.QueryGALTRequestH\000\022O\n\027queryL" +
-      "ogicalTimeRequest\030d \001(\0132,.rti1516_202X.f" +
-      "edpro.QueryLogicalTimeRequestH\000\022A\n\020query" +
-      "LITSRequest\030e \001(\0132%.rti1516_202X.fedpro." +
-      "QueryLITSRequestH\000\022M\n\026modifyLookaheadReq" +
-      "uest\030f \001(\0132+.rti1516_202X.fedpro.ModifyL" +
-      "ookaheadRequestH\000\022K\n\025queryLookaheadReque" +
-      "st\030g \001(\0132*.rti1516_202X.fedpro.QueryLook" +
-      "aheadRequestH\000\022=\n\016retractRequest\030h \001(\0132#" +
-      ".rti1516_202X.fedpro.RetractRequestH\000\022_\n" +
-      "\037changeAttributeOrderTypeRequest\030i \001(\01324" +
-      ".rti1516_202X.fedpro.ChangeAttributeOrde" +
-      "rTypeRequestH\000\022m\n&changeDefaultAttribute" +
-      "OrderTypeRequest\030j \001(\0132;.rti1516_202X.fe" +
-      "dpro.ChangeDefaultAttributeOrderTypeRequ" +
-      "estH\000\022c\n!changeInteractionOrderTypeReque" +
-      "st\030k \001(\01326.rti1516_202X.fedpro.ChangeInt" +
-      "eractionOrderTypeRequestH\000\022G\n\023createRegi" +
-      "onRequest\030l \001(\0132(.rti1516_202X.fedpro.Cr" +
-      "eateRegionRequestH\000\022a\n commitRegionModif" +
-      "icationsRequest\030m \001(\01325.rti1516_202X.fed" +
-      "pro.CommitRegionModificationsRequestH\000\022G" +
-      "\n\023deleteRegionRequest\030n \001(\0132(.rti1516_20" +
-      "2X.fedpro.DeleteRegionRequestH\000\022q\n(regis" +
-      "terObjectInstanceWithRegionsRequest\030o \001(" +
-      "\0132=.rti1516_202X.fedpro.RegisterObjectIn" +
-      "stanceWithRegionsRequestH\000\022\177\n/registerOb" +
-      "jectInstanceWithNameAndRegionsRequest\030p " +
-      "\001(\0132D.rti1516_202X.fedpro.RegisterObject" +
-      "InstanceWithNameAndRegionsRequestH\000\022c\n!a" +
-      "ssociateRegionsForUpdatesRequest\030q \001(\01326" +
-      ".rti1516_202X.fedpro.AssociateRegionsFor" +
-      "UpdatesRequestH\000\022g\n#unassociateRegionsFo" +
-      "rUpdatesRequest\030r \001(\01328.rti1516_202X.fed" +
-      "pro.UnassociateRegionsForUpdatesRequestH" +
-      "\000\022\201\001\n0subscribeObjectClassAttributesWith" +
-      "RegionsRequest\030s \001(\0132E.rti1516_202X.fedp" +
-      "ro.SubscribeObjectClassAttributesWithReg" +
-      "ionsRequestH\000\022\217\001\n7subscribeObjectClassAt" +
-      "tributesWithRegionsAndRateRequest\030t \001(\0132" +
-      "L.rti1516_202X.fedpro.SubscribeObjectCla" +
-      "ssAttributesWithRegionsAndRateRequestH\000\022" +
-      "\205\001\n2unsubscribeObjectClassAttributesWith" +
-      "RegionsRequest\030u \001(\0132G.rti1516_202X.fedp" +
-      "ro.UnsubscribeObjectClassAttributesWithR" +
-      "egionsRequestH\000\022w\n+subscribeInteractionC" +
-      "lassWithRegionsRequest\030v \001(\0132@.rti1516_2" +
-      "02X.fedpro.SubscribeInteractionClassWith" +
-      "RegionsRequestH\000\022{\n-unsubscribeInteracti" +
-      "onClassWithRegionsRequest\030w \001(\0132B.rti151" +
-      "6_202X.fedpro.UnsubscribeInteractionClas" +
-      "sWithRegionsRequestH\000\022c\n!sendInteraction" +
-      "WithRegionsRequest\030x \001(\01326.rti1516_202X." +
-      "fedpro.SendInteractionWithRegionsRequest" +
-      "H\000\022q\n(sendInteractionWithRegionsAndTimeR" +
-      "equest\030y \001(\0132=.rti1516_202X.fedpro.SendI" +
-      "nteractionWithRegionsAndTimeRequestH\000\022{\n" +
-      "-requestAttributeValueUpdateWithRegionsR" +
-      "equest\030z \001(\0132B.rti1516_202X.fedpro.Reque" +
-      "stAttributeValueUpdateWithRegionsRequest" +
-      "H\000\022e\n\"getAutomaticResignDirectiveRequest" +
-      "\030{ \001(\01327.rti1516_202X.fedpro.GetAutomati" +
-      "cResignDirectiveRequestH\000\022e\n\"setAutomati" +
-      "cResignDirectiveRequest\030| \001(\01327.rti1516_" +
-      "202X.fedpro.SetAutomaticResignDirectiveR" +
-      "equestH\000\022Q\n\030getFederateHandleRequest\030} \001" +
-      "(\0132-.rti1516_202X.fedpro.GetFederateHand" +
-      "leRequestH\000\022M\n\026getFederateNameRequest\030~ " +
-      "\001(\0132+.rti1516_202X.fedpro.GetFederateNam" +
-      "eRequestH\000\022W\n\033getObjectClassHandleReques" +
-      "t\030\177 \001(\01320.rti1516_202X.fedpro.GetObjectC" +
-      "lassHandleRequestH\000\022T\n\031getObjectClassNam" +
-      "eRequest\030\200\001 \001(\0132..rti1516_202X.fedpro.Ge" +
-      "tObjectClassNameRequestH\000\022b\n getKnownObj" +
-      "ectClassHandleRequest\030\201\001 \001(\01325.rti1516_2" +
-      "02X.fedpro.GetKnownObjectClassHandleRequ" +
-      "estH\000\022^\n\036getObjectInstanceHandleRequest\030" +
-      "\202\001 \001(\01323.rti1516_202X.fedpro.GetObjectIn" +
-      "stanceHandleRequestH\000\022Z\n\034getObjectInstan" +
-      "ceNameRequest\030\203\001 \001(\01321.rti1516_202X.fedp" +
-      "ro.GetObjectInstanceNameRequestH\000\022T\n\031get" +
-      "AttributeHandleRequest\030\204\001 \001(\0132..rti1516_" +
-      "202X.fedpro.GetAttributeHandleRequestH\000\022" +
-      "P\n\027getAttributeNameRequest\030\205\001 \001(\0132,.rti1" +
-      "516_202X.fedpro.GetAttributeNameRequestH" +
-      "\000\022T\n\031getUpdateRateValueRequest\030\206\001 \001(\0132.." +
-      "rti1516_202X.fedpro.GetUpdateRateValueRe" +
-      "questH\000\022l\n%getUpdateRateValueForAttribut" +
-      "eRequest\030\207\001 \001(\0132:.rti1516_202X.fedpro.Ge" +
-      "tUpdateRateValueForAttributeRequestH\000\022b\n" +
-      " getInteractionClassHandleRequest\030\210\001 \001(\013" +
-      "25.rti1516_202X.fedpro.GetInteractionCla" +
-      "ssHandleRequestH\000\022^\n\036getInteractionClass" +
-      "NameRequest\030\211\001 \001(\01323.rti1516_202X.fedpro" +
-      ".GetInteractionClassNameRequestH\000\022T\n\031get" +
-      "ParameterHandleRequest\030\212\001 \001(\0132..rti1516_" +
-      "202X.fedpro.GetParameterHandleRequestH\000\022" +
-      "P\n\027getParameterNameRequest\030\213\001 \001(\0132,.rti1" +
-      "516_202X.fedpro.GetParameterNameRequestH" +
-      "\000\022H\n\023getOrderTypeRequest\030\214\001 \001(\0132(.rti151" +
-      "6_202X.fedpro.GetOrderTypeRequestH\000\022H\n\023g" +
-      "etOrderNameRequest\030\215\001 \001(\0132(.rti1516_202X" +
-      ".fedpro.GetOrderNameRequestH\000\022f\n\"getTran" +
-      "sportationTypeHandleRequest\030\216\001 \001(\01327.rti" +
-      "1516_202X.fedpro.GetTransportationTypeHa" +
-      "ndleRequestH\000\022b\n getTransportationTypeNa" +
-      "meRequest\030\217\001 \001(\01325.rti1516_202X.fedpro.G" +
-      "etTransportationTypeNameRequestH\000\022~\n.get" +
-      "AvailableDimensionsForClassAttributeRequ" +
-      "est\030\220\001 \001(\0132C.rti1516_202X.fedpro.GetAvai" +
-      "lableDimensionsForClassAttributeRequestH" +
-      "\000\022\202\001\n0getAvailableDimensionsForInteracti" +
-      "onClassRequest\030\221\001 \001(\0132E.rti1516_202X.fed" +
-      "pro.GetAvailableDimensionsForInteraction" +
-      "ClassRequestH\000\022T\n\031getDimensionHandleRequ" +
-      "est\030\222\001 \001(\0132..rti1516_202X.fedpro.GetDime" +
-      "nsionHandleRequestH\000\022P\n\027getDimensionName" +
-      "Request\030\223\001 \001(\0132,.rti1516_202X.fedpro.Get" +
-      "DimensionNameRequestH\000\022\\\n\035getDimensionUp" +
-      "perBoundRequest\030\224\001 \001(\01322.rti1516_202X.fe" +
-      "dpro.GetDimensionUpperBoundRequestH\000\022Z\n\034" +
-      "getDimensionHandleSetRequest\030\225\001 \001(\01321.rt" +
-      "i1516_202X.fedpro.GetDimensionHandleSetR" +
-      "equestH\000\022L\n\025getRangeBoundsRequest\030\226\001 \001(\013" +
-      "2*.rti1516_202X.fedpro.GetRangeBoundsReq" +
-      "uestH\000\022L\n\025setRangeBoundsRequest\030\227\001 \001(\0132*" +
-      ".rti1516_202X.fedpro.SetRangeBoundsReque" +
-      "stH\000\022Z\n\034normalizeServiceGroupRequest\030\230\001 " +
-      "\001(\01321.rti1516_202X.fedpro.NormalizeServi" +
-      "ceGroupRequestH\000\022^\n\036normalizeFederateHan" +
-      "dleRequest\030\231\001 \001(\01323.rti1516_202X.fedpro." +
-      "NormalizeFederateHandleRequestH\000\022d\n!norm" +
-      "alizeObjectClassHandleRequest\030\232\001 \001(\01326.r" +
-      "ti1516_202X.fedpro.NormalizeObjectClassH" +
-      "andleRequestH\000\022n\n&normalizeInteractionCl" +
-      "assHandleRequest\030\233\001 \001(\0132;.rti1516_202X.f" +
-      "edpro.NormalizeInteractionClassHandleReq" +
-      "uestH\000\022j\n$normalizeObjectInstanceHandleR" +
-      "equest\030\234\001 \001(\01329.rti1516_202X.fedpro.Norm" +
-      "alizeObjectInstanceHandleRequestH\000\022\200\001\n/e" +
-      "nableObjectClassRelevanceAdvisorySwitchR" +
-      "equest\030\235\001 \001(\0132D.rti1516_202X.fedpro.Enab" +
-      "leObjectClassRelevanceAdvisorySwitchRequ" +
-      "estH\000\022\202\001\n0disableObjectClassRelevanceAdv" +
-      "isorySwitchRequest\030\236\001 \001(\0132E.rti1516_202X" +
-      ".fedpro.DisableObjectClassRelevanceAdvis" +
-      "orySwitchRequestH\000\022|\n-enableAttributeRel" +
-      "evanceAdvisorySwitchRequest\030\237\001 \001(\0132B.rti" +
-      "1516_202X.fedpro.EnableAttributeRelevanc" +
-      "eAdvisorySwitchRequestH\000\022~\n.disableAttri" +
-      "buteRelevanceAdvisorySwitchRequest\030\240\001 \001(" +
-      "\0132C.rti1516_202X.fedpro.DisableAttribute" +
-      "RelevanceAdvisorySwitchRequestH\000\022t\n)enab" +
-      "leAttributeScopeAdvisorySwitchRequest\030\241\001" +
-      " \001(\0132>.rti1516_202X.fedpro.EnableAttribu" +
-      "teScopeAdvisorySwitchRequestH\000\022v\n*disabl" +
-      "eAttributeScopeAdvisorySwitchRequest\030\242\001 " +
-      "\001(\0132?.rti1516_202X.fedpro.DisableAttribu" +
-      "teScopeAdvisorySwitchRequestH\000\022\200\001\n/enabl" +
-      "eInteractionRelevanceAdvisorySwitchReque" +
-      "st\030\243\001 \001(\0132D.rti1516_202X.fedpro.EnableIn" +
-      "teractionRelevanceAdvisorySwitchRequestH" +
-      "\000\022\202\001\n0disableInteractionRelevanceAdvisor" +
-      "ySwitchRequest\030\244\001 \001(\0132E.rti1516_202X.fed" +
-      "pro.DisableInteractionRelevanceAdvisoryS" +
-      "witchRequestH\000B\r\n\013callRequest\"\277\211\001\n\014CallR" +
-      "esponse\022;\n\rexceptionData\030\001 \001(\0132\".rti1516" +
-      "_202X.fedpro.ExceptionDataH\000\022?\n\017connectR" +
-      "esponse\030\002 \001(\0132$.rti1516_202X.fedpro.Conn" +
-      "ectResponseH\000\022]\n\036connectWithCredentialsR" +
-      "esponse\030\003 \001(\01323.rti1516_202X.fedpro.Conn" +
-      "ectWithCredentialsResponseH\000\022a\n connectW" +
-      "ithConfigurationResponse\030\004 \001(\01325.rti1516" +
-      "_202X.fedpro.ConnectWithConfigurationRes" +
-      "ponseH\000\022}\n.connectWithConfigurationAndCr" +
-      "edentialsResponse\030\005 \001(\0132C.rti1516_202X.f" +
-      "edpro.ConnectWithConfigurationAndCredent" +
-      "ialsResponseH\000\022E\n\022disconnectResponse\030\006 \001" +
-      "(\0132\'.rti1516_202X.fedpro.DisconnectRespo" +
-      "nseH\000\022c\n!createFederationExecutionRespon" +
-      "se\030\007 \001(\01326.rti1516_202X.fedpro.CreateFed" +
-      "erationExecutionResponseH\000\022s\n)createFede" +
-      "rationExecutionWithTimeResponse\030\010 \001(\0132>." +
-      "rti1516_202X.fedpro.CreateFederationExec" +
-      "utionWithTimeResponseH\000\022y\n,createFederat" +
-      "ionExecutionWithModulesResponse\030\t \001(\0132A." +
-      "rti1516_202X.fedpro.CreateFederationExec" +
-      "utionWithModulesResponseH\000\022\207\001\n3createFed" +
-      "erationExecutionWithModulesAndTimeRespon" +
-      "se\030\n \001(\0132H.rti1516_202X.fedpro.CreateFed" +
-      "erationExecutionWithModulesAndTimeRespon" +
-      "seH\000\022q\n(createFederationExecutionWithMIM" +
-      "Response\030\013 \001(\0132=.rti1516_202X.fedpro.Cre" +
-      "ateFederationExecutionWithMIMResponseH\000\022" +
-      "\177\n/createFederationExecutionWithMIMAndTi" +
-      "meResponse\030\014 \001(\0132D.rti1516_202X.fedpro.C" +
-      "reateFederationExecutionWithMIMAndTimeRe" +
-      "sponseH\000\022e\n\"destroyFederationExecutionRe" +
-      "sponse\030\r \001(\01327.rti1516_202X.fedpro.Destr" +
-      "oyFederationExecutionResponseH\000\022a\n listF" +
-      "ederationExecutionsResponse\030\016 \001(\01325.rti1" +
-      "516_202X.fedpro.ListFederationExecutions" +
-      "ResponseH\000\022m\n&listFederationExecutionMem" +
-      "bersResponse\030\017 \001(\0132;.rti1516_202X.fedpro" +
-      ".ListFederationExecutionMembersResponseH" +
-      "\000\022_\n\037joinFederationExecutionResponse\030\020 \001" +
-      "(\01324.rti1516_202X.fedpro.JoinFederationE" +
-      "xecutionResponseH\000\022u\n*joinFederationExec" +
-      "utionWithModulesResponse\030\021 \001(\0132?.rti1516",
-      "_202X.fedpro.JoinFederationExecutionWith" +
-      "ModulesResponseH\000\022o\n\'joinFederationExecu" +
-      "tionWithNameResponse\030\022 \001(\0132<.rti1516_202" +
-      "X.fedpro.JoinFederationExecutionWithName" +
-      "ResponseH\000\022\203\001\n1joinFederationExecutionWi" +
-      "thNameAndModulesResponse\030\023 \001(\0132F.rti1516" +
-      "_202X.fedpro.JoinFederationExecutionWith" +
-      "NameAndModulesResponseH\000\022c\n!resignFedera" +
-      "tionExecutionResponse\030\024 \001(\01326.rti1516_20" +
-      "2X.fedpro.ResignFederationExecutionRespo" +
-      "nseH\000\022}\n.registerFederationSynchronizati" +
-      "onPointResponse\030\025 \001(\0132C.rti1516_202X.fed" +
-      "pro.RegisterFederationSynchronizationPoi" +
-      "ntResponseH\000\022\213\001\n5registerFederationSynch" +
-      "ronizationPointWithSetResponse\030\026 \001(\0132J.r" +
-      "ti1516_202X.fedpro.RegisterFederationSyn" +
-      "chronizationPointWithSetResponseH\000\022i\n$sy" +
-      "nchronizationPointAchievedResponse\030\027 \001(\013" +
-      "29.rti1516_202X.fedpro.SynchronizationPo" +
-      "intAchievedResponseH\000\022[\n\035requestFederati" +
-      "onSaveResponse\030\030 \001(\01322.rti1516_202X.fedp" +
-      "ro.RequestFederationSaveResponseH\000\022k\n%re" +
-      "questFederationSaveWithTimeResponse\030\031 \001(" +
-      "\0132:.rti1516_202X.fedpro.RequestFederatio" +
-      "nSaveWithTimeResponseH\000\022S\n\031federateSaveB" +
-      "egunResponse\030\032 \001(\0132..rti1516_202X.fedpro" +
-      ".FederateSaveBegunResponseH\000\022Y\n\034federate" +
-      "SaveCompleteResponse\030\033 \001(\01321.rti1516_202" +
-      "X.fedpro.FederateSaveCompleteResponseH\000\022" +
-      "_\n\037federateSaveNotCompleteResponse\030\034 \001(\013" +
-      "24.rti1516_202X.fedpro.FederateSaveNotCo" +
-      "mpleteResponseH\000\022W\n\033abortFederationSaveR" +
-      "esponse\030\035 \001(\01320.rti1516_202X.fedpro.Abor" +
-      "tFederationSaveResponseH\000\022c\n!queryFedera" +
-      "tionSaveStatusResponse\030\036 \001(\01326.rti1516_2" +
-      "02X.fedpro.QueryFederationSaveStatusResp" +
-      "onseH\000\022a\n requestFederationRestoreRespon" +
-      "se\030\037 \001(\01325.rti1516_202X.fedpro.RequestFe" +
-      "derationRestoreResponseH\000\022_\n\037federateRes" +
-      "toreCompleteResponse\030  \001(\01324.rti1516_202" +
-      "X.fedpro.FederateRestoreCompleteResponse" +
-      "H\000\022e\n\"federateRestoreNotCompleteResponse" +
-      "\030! \001(\01327.rti1516_202X.fedpro.FederateRes" +
-      "toreNotCompleteResponseH\000\022]\n\036abortFedera" +
-      "tionRestoreResponse\030\" \001(\01323.rti1516_202X" +
-      ".fedpro.AbortFederationRestoreResponseH\000" +
-      "\022i\n$queryFederationRestoreStatusResponse" +
-      "\030# \001(\01329.rti1516_202X.fedpro.QueryFedera" +
-      "tionRestoreStatusResponseH\000\022i\n$publishOb" +
-      "jectClassAttributesResponse\030$ \001(\01329.rti1" +
-      "516_202X.fedpro.PublishObjectClassAttrib" +
-      "utesResponseH\000\022Y\n\034unpublishObjectClassRe" +
-      "sponse\030% \001(\01321.rti1516_202X.fedpro.Unpub" +
-      "lishObjectClassResponseH\000\022m\n&unpublishOb" +
-      "jectClassAttributesResponse\030& \001(\0132;.rti1" +
-      "516_202X.fedpro.UnpublishObjectClassAttr" +
-      "ibutesResponseH\000\022}\n.publishObjectClassDi" +
-      "rectedInteractionsResponse\030\' \001(\0132C.rti15" +
-      "16_202X.fedpro.PublishObjectClassDirecte" +
-      "dInteractionsResponseH\000\022\201\001\n0unpublishObj" +
-      "ectClassDirectedInteractionsResponse\030( \001" +
-      "(\0132E.rti1516_202X.fedpro.UnpublishObject" +
-      "ClassDirectedInteractionsResponseH\000\022\217\001\n7" +
-      "unpublishObjectClassDirectedInteractions" +
-      "WithSetResponse\030) \001(\0132L.rti1516_202X.fed" +
-      "pro.UnpublishObjectClassDirectedInteract" +
-      "ionsWithSetResponseH\000\022_\n\037publishInteract" +
-      "ionClassResponse\030* \001(\01324.rti1516_202X.fe" +
-      "dpro.PublishInteractionClassResponseH\000\022c" +
-      "\n!unpublishInteractionClassResponse\030+ \001(" +
-      "\01326.rti1516_202X.fedpro.UnpublishInterac" +
-      "tionClassResponseH\000\022m\n&subscribeObjectCl" +
-      "assAttributesResponse\030, \001(\0132;.rti1516_20" +
-      "2X.fedpro.SubscribeObjectClassAttributes" +
-      "ResponseH\000\022}\n.subscribeObjectClassAttrib" +
-      "utesWithRateResponse\030- \001(\0132C.rti1516_202" +
-      "X.fedpro.SubscribeObjectClassAttributesW" +
-      "ithRateResponseH\000\022\177\n/subscribeObjectClas" +
-      "sAttributesPassivelyResponse\030. \001(\0132D.rti" +
-      "1516_202X.fedpro.SubscribeObjectClassAtt" +
-      "ributesPassivelyResponseH\000\022\217\001\n7subscribe" +
-      "ObjectClassAttributesPassivelyWithRateRe" +
-      "sponse\030/ \001(\0132L.rti1516_202X.fedpro.Subsc" +
-      "ribeObjectClassAttributesPassivelyWithRa" +
-      "teResponseH\000\022]\n\036unsubscribeObjectClassRe" +
-      "sponse\0300 \001(\01323.rti1516_202X.fedpro.Unsub" +
-      "scribeObjectClassResponseH\000\022q\n(unsubscri" +
-      "beObjectClassAttributesResponse\0301 \001(\0132=." +
-      "rti1516_202X.fedpro.UnsubscribeObjectCla" +
-      "ssAttributesResponseH\000\022\201\001\n0subscribeObje" +
-      "ctClassDirectedInteractionsResponse\0302 \001(" +
-      "\0132E.rti1516_202X.fedpro.SubscribeObjectC" +
-      "lassDirectedInteractionsResponseH\000\022\205\001\n2u" +
-      "nsubscribeObjectClassDirectedInteraction" +
-      "sResponse\0303 \001(\0132G.rti1516_202X.fedpro.Un" +
-      "subscribeObjectClassDirectedInteractions" +
-      "ResponseH\000\022\223\001\n9unsubscribeObjectClassDir" +
-      "ectedInteractionsWithSetResponse\0304 \001(\0132N" +
-      ".rti1516_202X.fedpro.UnsubscribeObjectCl" +
-      "assDirectedInteractionsWithSetResponseH\000" +
-      "\022c\n!subscribeInteractionClassResponse\0305 " +
-      "\001(\01326.rti1516_202X.fedpro.SubscribeInter" +
-      "actionClassResponseH\000\022u\n*subscribeIntera" +
-      "ctionClassPassivelyResponse\0306 \001(\0132?.rti1" +
-      "516_202X.fedpro.SubscribeInteractionClas" +
-      "sPassivelyResponseH\000\022g\n#unsubscribeInter" +
-      "actionClassResponse\0307 \001(\01328.rti1516_202X" +
-      ".fedpro.UnsubscribeInteractionClassRespo" +
-      "nseH\000\022c\n!reserveObjectInstanceNameRespon" +
-      "se\0308 \001(\01326.rti1516_202X.fedpro.ReserveOb" +
-      "jectInstanceNameResponseH\000\022c\n!releaseObj" +
-      "ectInstanceNameResponse\0309 \001(\01326.rti1516_" +
-      "202X.fedpro.ReleaseObjectInstanceNameRes" +
-      "ponseH\000\022s\n)reserveMultipleObjectInstance" +
-      "NameResponse\030: \001(\0132>.rti1516_202X.fedpro" +
-      ".ReserveMultipleObjectInstanceNameRespon" +
-      "seH\000\022s\n)releaseMultipleObjectInstanceNam" +
-      "eResponse\030; \001(\0132>.rti1516_202X.fedpro.Re" +
-      "leaseMultipleObjectInstanceNameResponseH" +
-      "\000\022]\n\036registerObjectInstanceResponse\030< \001(" +
-      "\01323.rti1516_202X.fedpro.RegisterObjectIn" +
-      "stanceResponseH\000\022m\n&registerObjectInstan" +
-      "ceWithNameResponse\030= \001(\0132;.rti1516_202X." +
-      "fedpro.RegisterObjectInstanceWithNameRes" +
-      "ponseH\000\022[\n\035updateAttributeValuesResponse" +
-      "\030> \001(\01322.rti1516_202X.fedpro.UpdateAttri" +
-      "buteValuesResponseH\000\022k\n%updateAttributeV" +
-      "aluesWithTimeResponse\030? \001(\0132:.rti1516_20" +
-      "2X.fedpro.UpdateAttributeValuesWithTimeR" +
-      "esponseH\000\022O\n\027sendInteractionResponse\030@ \001" +
-      "(\0132,.rti1516_202X.fedpro.SendInteraction" +
-      "ResponseH\000\022_\n\037sendInteractionWithTimeRes" +
-      "ponse\030A \001(\01324.rti1516_202X.fedpro.SendIn" +
-      "teractionWithTimeResponseH\000\022_\n\037sendDirec" +
-      "tedInteractionResponse\030B \001(\01324.rti1516_2" +
-      "02X.fedpro.SendDirectedInteractionRespon" +
-      "seH\000\022o\n\'sendDirectedInteractionWithTimeR" +
-      "esponse\030C \001(\0132<.rti1516_202X.fedpro.Send" +
-      "DirectedInteractionWithTimeResponseH\000\022Y\n" +
-      "\034deleteObjectInstanceResponse\030D \001(\01321.rt" +
-      "i1516_202X.fedpro.DeleteObjectInstanceRe" +
-      "sponseH\000\022i\n$deleteObjectInstanceWithTime" +
-      "Response\030E \001(\01329.rti1516_202X.fedpro.Del" +
-      "eteObjectInstanceWithTimeResponseH\000\022c\n!l" +
-      "ocalDeleteObjectInstanceResponse\030F \001(\01326" +
-      ".rti1516_202X.fedpro.LocalDeleteObjectIn" +
-      "stanceResponseH\000\022w\n+requestInstanceAttri" +
-      "buteValueUpdateResponse\030G \001(\0132@.rti1516_" +
-      "202X.fedpro.RequestInstanceAttributeValu" +
-      "eUpdateResponseH\000\022q\n(requestClassAttribu" +
-      "teValueUpdateResponse\030H \001(\0132=.rti1516_20" +
-      "2X.fedpro.RequestClassAttributeValueUpda" +
-      "teResponseH\000\022\201\001\n0requestAttributeTranspo" +
-      "rtationTypeChangeResponse\030I \001(\0132E.rti151" +
-      "6_202X.fedpro.RequestAttributeTransporta" +
-      "tionTypeChangeResponseH\000\022\201\001\n0changeDefau" +
-      "ltAttributeTransportationTypeResponse\030J " +
-      "\001(\0132E.rti1516_202X.fedpro.ChangeDefaultA" +
-      "ttributeTransportationTypeResponseH\000\022q\n(" +
-      "queryAttributeTransportationTypeResponse" +
-      "\030K \001(\0132=.rti1516_202X.fedpro.QueryAttrib" +
-      "uteTransportationTypeResponseH\000\022\205\001\n2requ" +
-      "estInteractionTransportationTypeChangeRe" +
-      "sponse\030L \001(\0132G.rti1516_202X.fedpro.Reque" +
-      "stInteractionTransportationTypeChangeRes" +
-      "ponseH\000\022u\n*queryInteractionTransportatio" +
-      "nTypeResponse\030M \001(\0132?.rti1516_202X.fedpr" +
-      "o.QueryInteractionTransportationTypeResp" +
-      "onseH\000\022\205\001\n2unconditionalAttributeOwnersh" +
-      "ipDivestitureResponse\030N \001(\0132G.rti1516_20" +
-      "2X.fedpro.UnconditionalAttributeOwnershi" +
-      "pDivestitureResponseH\000\022\177\n/negotiatedAttr" +
-      "ibuteOwnershipDivestitureResponse\030O \001(\0132" +
-      "D.rti1516_202X.fedpro.NegotiatedAttribut" +
-      "eOwnershipDivestitureResponseH\000\022U\n\032confi" +
-      "rmDivestitureResponse\030P \001(\0132/.rti1516_20" +
-      "2X.fedpro.ConfirmDivestitureResponseH\000\022k" +
-      "\n%attributeOwnershipAcquisitionResponse\030" +
-      "Q \001(\0132:.rti1516_202X.fedpro.AttributeOwn" +
-      "ershipAcquisitionResponseH\000\022\201\001\n0attribut" +
-      "eOwnershipAcquisitionIfAvailableResponse" +
-      "\030R \001(\0132E.rti1516_202X.fedpro.AttributeOw" +
-      "nershipAcquisitionIfAvailableResponseH\000\022" +
-      "o\n\'attributeOwnershipReleaseDeniedRespon" +
-      "se\030S \001(\0132<.rti1516_202X.fedpro.Attribute" +
-      "OwnershipReleaseDeniedResponseH\000\022{\n-attr" +
-      "ibuteOwnershipDivestitureIfWantedRespons" +
-      "e\030T \001(\0132B.rti1516_202X.fedpro.AttributeO" +
-      "wnershipDivestitureIfWantedResponseH\000\022\213\001" +
-      "\n5cancelNegotiatedAttributeOwnershipDive" +
-      "stitureResponse\030U \001(\0132J.rti1516_202X.fed" +
-      "pro.CancelNegotiatedAttributeOwnershipDi" +
-      "vestitureResponseH\000\022w\n+cancelAttributeOw" +
-      "nershipAcquisitionResponse\030V \001(\0132@.rti15" +
-      "16_202X.fedpro.CancelAttributeOwnershipA" +
-      "cquisitionResponseH\000\022_\n\037queryAttributeOw" +
-      "nershipResponse\030W \001(\01324.rti1516_202X.fed" +
-      "pro.QueryAttributeOwnershipResponseH\000\022e\n" +
-      "\"isAttributeOwnedByFederateResponse\030X \001(" +
-      "\01327.rti1516_202X.fedpro.IsAttributeOwned" +
-      "ByFederateResponseH\000\022Y\n\034enableTimeRegula" +
-      "tionResponse\030Y \001(\01321.rti1516_202X.fedpro" +
-      ".EnableTimeRegulationResponseH\000\022[\n\035disab" +
-      "leTimeRegulationResponse\030Z \001(\01322.rti1516" +
-      "_202X.fedpro.DisableTimeRegulationRespon" +
-      "seH\000\022[\n\035enableTimeConstrainedResponse\030[ " +
-      "\001(\01322.rti1516_202X.fedpro.EnableTimeCons" +
-      "trainedResponseH\000\022]\n\036disableTimeConstrai" +
-      "nedResponse\030\\ \001(\01323.rti1516_202X.fedpro." +
-      "DisableTimeConstrainedResponseH\000\022U\n\032time" +
-      "AdvanceRequestResponse\030] \001(\0132/.rti1516_2" +
-      "02X.fedpro.TimeAdvanceRequestResponseH\000\022" +
-      "g\n#timeAdvanceRequestAvailableResponse\030^" +
-      " \001(\01328.rti1516_202X.fedpro.TimeAdvanceRe" +
-      "questAvailableResponseH\000\022U\n\032nextMessageR" +
-      "equestResponse\030_ \001(\0132/.rti1516_202X.fedp" +
-      "ro.NextMessageRequestResponseH\000\022g\n#nextM" +
-      "essageRequestAvailableResponse\030` \001(\01328.r" +
-      "ti1516_202X.fedpro.NextMessageRequestAva" +
-      "ilableResponseH\000\022S\n\031flushQueueRequestRes" +
-      "ponse\030a \001(\0132..rti1516_202X.fedpro.FlushQ" +
-      "ueueRequestResponseH\000\022e\n\"enableAsynchron" +
-      "ousDeliveryResponse\030b \001(\01327.rti1516_202X" +
-      ".fedpro.EnableAsynchronousDeliveryRespon" +
-      "seH\000\022g\n#disableAsynchronousDeliveryRespo" +
-      "nse\030c \001(\01328.rti1516_202X.fedpro.DisableA" +
-      "synchronousDeliveryResponseH\000\022C\n\021queryGA" +
-      "LTResponse\030d \001(\0132&.rti1516_202X.fedpro.Q" +
-      "ueryGALTResponseH\000\022Q\n\030queryLogicalTimeRe" +
-      "sponse\030e \001(\0132-.rti1516_202X.fedpro.Query" +
-      "LogicalTimeResponseH\000\022C\n\021queryLITSRespon" +
-      "se\030f \001(\0132&.rti1516_202X.fedpro.QueryLITS" +
-      "ResponseH\000\022O\n\027modifyLookaheadResponse\030g " +
-      "\001(\0132,.rti1516_202X.fedpro.ModifyLookahea" +
-      "dResponseH\000\022M\n\026queryLookaheadResponse\030h " +
-      "\001(\0132+.rti1516_202X.fedpro.QueryLookahead" +
-      "ResponseH\000\022?\n\017retractResponse\030i \001(\0132$.rt" +
-      "i1516_202X.fedpro.RetractResponseH\000\022a\n c" +
-      "hangeAttributeOrderTypeResponse\030j \001(\01325." +
-      "rti1516_202X.fedpro.ChangeAttributeOrder" +
-      "TypeResponseH\000\022o\n\'changeDefaultAttribute" +
-      "OrderTypeResponse\030k \001(\0132<.rti1516_202X.f" +
-      "edpro.ChangeDefaultAttributeOrderTypeRes" +
-      "ponseH\000\022e\n\"changeInteractionOrderTypeRes" +
-      "ponse\030l \001(\01327.rti1516_202X.fedpro.Change" +
-      "InteractionOrderTypeResponseH\000\022I\n\024create" +
-      "RegionResponse\030m \001(\0132).rti1516_202X.fedp" +
-      "ro.CreateRegionResponseH\000\022c\n!commitRegio" +
-      "nModificationsResponse\030n \001(\01326.rti1516_2" +
-      "02X.fedpro.CommitRegionModificationsResp" +
-      "onseH\000\022I\n\024deleteRegionResponse\030o \001(\0132).r" +
-      "ti1516_202X.fedpro.DeleteRegionResponseH" +
-      "\000\022s\n)registerObjectInstanceWithRegionsRe" +
-      "sponse\030p \001(\0132>.rti1516_202X.fedpro.Regis" +
-      "terObjectInstanceWithRegionsResponseH\000\022\201" +
-      "\001\n0registerObjectInstanceWithNameAndRegi" +
-      "onsResponse\030q \001(\0132E.rti1516_202X.fedpro." +
-      "RegisterObjectInstanceWithNameAndRegions" +
-      "ResponseH\000\022e\n\"associateRegionsForUpdates" +
-      "Response\030r \001(\01327.rti1516_202X.fedpro.Ass" +
-      "ociateRegionsForUpdatesResponseH\000\022i\n$una" +
-      "ssociateRegionsForUpdatesResponse\030s \001(\0132" +
-      "9.rti1516_202X.fedpro.UnassociateRegions" +
-      "ForUpdatesResponseH\000\022\203\001\n1subscribeObject" +
-      "ClassAttributesWithRegionsResponse\030t \001(\013" +
-      "2F.rti1516_202X.fedpro.SubscribeObjectCl" +
-      "assAttributesWithRegionsResponseH\000\022\221\001\n8s" +
-      "ubscribeObjectClassAttributesWithRegions" +
-      "AndRateResponse\030u \001(\0132M.rti1516_202X.fed" +
-      "pro.SubscribeObjectClassAttributesWithRe" +
-      "gionsAndRateResponseH\000\022\207\001\n3unsubscribeOb" +
-      "jectClassAttributesWithRegionsResponse\030v" +
-      " \001(\0132H.rti1516_202X.fedpro.UnsubscribeOb" +
-      "jectClassAttributesWithRegionsResponseH\000" +
-      "\022y\n,subscribeInteractionClassWithRegions" +
-      "Response\030w \001(\0132A.rti1516_202X.fedpro.Sub" +
-      "scribeInteractionClassWithRegionsRespons" +
-      "eH\000\022}\n.unsubscribeInteractionClassWithRe" +
-      "gionsResponse\030x \001(\0132C.rti1516_202X.fedpr" +
-      "o.UnsubscribeInteractionClassWithRegions" +
-      "ResponseH\000\022e\n\"sendInteractionWithRegions" +
-      "Response\030y \001(\01327.rti1516_202X.fedpro.Sen" +
-      "dInteractionWithRegionsResponseH\000\022s\n)sen" +
-      "dInteractionWithRegionsAndTimeResponse\030z" +
-      " \001(\0132>.rti1516_202X.fedpro.SendInteracti" +
-      "onWithRegionsAndTimeResponseH\000\022}\n.reques" +
-      "tAttributeValueUpdateWithRegionsResponse" +
-      "\030{ \001(\0132C.rti1516_202X.fedpro.RequestAttr" +
-      "ibuteValueUpdateWithRegionsResponseH\000\022g\n" +
-      "#getAutomaticResignDirectiveResponse\030| \001" +
-      "(\01328.rti1516_202X.fedpro.GetAutomaticRes" +
-      "ignDirectiveResponseH\000\022g\n#setAutomaticRe" +
-      "signDirectiveResponse\030} \001(\01328.rti1516_20" +
-      "2X.fedpro.SetAutomaticResignDirectiveRes" +
-      "ponseH\000\022S\n\031getFederateHandleResponse\030~ \001" +
-      "(\0132..rti1516_202X.fedpro.GetFederateHand" +
-      "leResponseH\000\022O\n\027getFederateNameResponse\030" +
-      "\177 \001(\0132,.rti1516_202X.fedpro.GetFederateN" +
-      "ameResponseH\000\022Z\n\034getObjectClassHandleRes" +
-      "ponse\030\200\001 \001(\01321.rti1516_202X.fedpro.GetOb" +
-      "jectClassHandleResponseH\000\022V\n\032getObjectCl" +
-      "assNameResponse\030\201\001 \001(\0132/.rti1516_202X.fe" +
-      "dpro.GetObjectClassNameResponseH\000\022d\n!get" +
-      "KnownObjectClassHandleResponse\030\202\001 \001(\01326." +
-      "rti1516_202X.fedpro.GetKnownObjectClassH" +
-      "andleResponseH\000\022`\n\037getObjectInstanceHand" +
-      "leResponse\030\203\001 \001(\01324.rti1516_202X.fedpro." +
-      "GetObjectInstanceHandleResponseH\000\022\\\n\035get" +
-      "ObjectInstanceNameResponse\030\204\001 \001(\01322.rti1" +
-      "516_202X.fedpro.GetObjectInstanceNameRes" +
-      "ponseH\000\022V\n\032getAttributeHandleResponse\030\205\001" +
-      " \001(\0132/.rti1516_202X.fedpro.GetAttributeH" +
-      "andleResponseH\000\022R\n\030getAttributeNameRespo" +
-      "nse\030\206\001 \001(\0132-.rti1516_202X.fedpro.GetAttr" +
-      "ibuteNameResponseH\000\022V\n\032getUpdateRateValu" +
-      "eResponse\030\207\001 \001(\0132/.rti1516_202X.fedpro.G" +
-      "etUpdateRateValueResponseH\000\022n\n&getUpdate" +
-      "RateValueForAttributeResponse\030\210\001 \001(\0132;.r" +
-      "ti1516_202X.fedpro.GetUpdateRateValueFor" +
-      "AttributeResponseH\000\022d\n!getInteractionCla" +
-      "ssHandleResponse\030\211\001 \001(\01326.rti1516_202X.f" +
-      "edpro.GetInteractionClassHandleResponseH" +
-      "\000\022`\n\037getInteractionClassNameResponse\030\212\001 " +
-      "\001(\01324.rti1516_202X.fedpro.GetInteraction" +
-      "ClassNameResponseH\000\022V\n\032getParameterHandl" +
-      "eResponse\030\213\001 \001(\0132/.rti1516_202X.fedpro.G" +
-      "etParameterHandleResponseH\000\022R\n\030getParame" +
-      "terNameResponse\030\214\001 \001(\0132-.rti1516_202X.fe" +
-      "dpro.GetParameterNameResponseH\000\022J\n\024getOr" +
-      "derTypeResponse\030\215\001 \001(\0132).rti1516_202X.fe" +
-      "dpro.GetOrderTypeResponseH\000\022J\n\024getOrderN" +
-      "ameResponse\030\216\001 \001(\0132).rti1516_202X.fedpro" +
-      ".GetOrderNameResponseH\000\022h\n#getTransporta" +
-      "tionTypeHandleResponse\030\217\001 \001(\01328.rti1516_" +
+      "irectedInteractionsWithSetRequestH\000\022k\n%s" +
+      "ubscribeObjectClassAttributesRequest\030+ \001" +
+      "(\0132:.rti1516_202X.fedpro.SubscribeObject" +
+      "ClassAttributesRequestH\000\022{\n-subscribeObj" +
+      "ectClassAttributesWithRateRequest\030, \001(\0132" +
+      "B.rti1516_202X.fedpro.SubscribeObjectCla" +
+      "ssAttributesWithRateRequestH\000\022}\n.subscri" +
+      "beObjectClassAttributesPassivelyRequest\030" +
+      "- \001(\0132C.rti1516_202X.fedpro.SubscribeObj" +
+      "ectClassAttributesPassivelyRequestH\000\022\215\001\n" +
+      "6subscribeObjectClassAttributesPassively" +
+      "WithRateRequest\030. \001(\0132K.rti1516_202X.fed" +
+      "pro.SubscribeObjectClassAttributesPassiv" +
+      "elyWithRateRequestH\000\022[\n\035unsubscribeObjec" +
+      "tClassRequest\030/ \001(\01322.rti1516_202X.fedpr" +
+      "o.UnsubscribeObjectClassRequestH\000\022o\n\'uns" +
+      "ubscribeObjectClassAttributesRequest\0300 \001" +
+      "(\0132<.rti1516_202X.fedpro.UnsubscribeObje" +
+      "ctClassAttributesRequestH\000\022a\n subscribeI" +
+      "nteractionClassRequest\0301 \001(\01325.rti1516_2" +
+      "02X.fedpro.SubscribeInteractionClassRequ" +
+      "estH\000\022s\n)subscribeInteractionClassPassiv" +
+      "elyRequest\0302 \001(\0132>.rti1516_202X.fedpro.S" +
+      "ubscribeInteractionClassPassivelyRequest" +
+      "H\000\022e\n\"unsubscribeInteractionClassRequest" +
+      "\0303 \001(\01327.rti1516_202X.fedpro.Unsubscribe" +
+      "InteractionClassRequestH\000\022\177\n/subscribeOb" +
+      "jectClassDirectedInteractionsRequest\0304 \001" +
+      "(\0132D.rti1516_202X.fedpro.SubscribeObject" +
+      "ClassDirectedInteractionsRequestH\000\022\225\001\n:s" +
+      "ubscribeObjectClassDirectedInteractionsU" +
+      "niversallyRequest\0305 \001(\0132O.rti1516_202X.f" +
+      "edpro.SubscribeObjectClassDirectedIntera" +
+      "ctionsUniversallyRequestH\000\022\203\001\n1unsubscri" +
+      "beObjectClassDirectedInteractionsRequest" +
+      "\0306 \001(\0132F.rti1516_202X.fedpro.Unsubscribe" +
+      "ObjectClassDirectedInteractionsRequestH\000" +
+      "\022\221\001\n8unsubscribeObjectClassDirectedInter" +
+      "actionsWithSetRequest\0307 \001(\0132M.rti1516_20" +
+      "2X.fedpro.UnsubscribeObjectClassDirected" +
+      "InteractionsWithSetRequestH\000\022a\n reserveO" +
+      "bjectInstanceNameRequest\0308 \001(\01325.rti1516" +
+      "_202X.fedpro.ReserveObjectInstanceNameRe" +
+      "questH\000\022a\n releaseObjectInstanceNameRequ" +
+      "est\0309 \001(\01325.rti1516_202X.fedpro.ReleaseO" +
+      "bjectInstanceNameRequestH\000\022s\n)reserveMul" +
+      "tipleObjectInstanceNamesRequest\030: \001(\0132>." +
+      "rti1516_202X.fedpro.ReserveMultipleObjec" +
+      "tInstanceNamesRequestH\000\022s\n)releaseMultip" +
+      "leObjectInstanceNamesRequest\030; \001(\0132>.rti" +
+      "1516_202X.fedpro.ReleaseMultipleObjectIn" +
+      "stanceNamesRequestH\000\022[\n\035registerObjectIn" +
+      "stanceRequest\030< \001(\01322.rti1516_202X.fedpr" +
+      "o.RegisterObjectInstanceRequestH\000\022k\n%reg" +
+      "isterObjectInstanceWithNameRequest\030= \001(\013" +
+      "2:.rti1516_202X.fedpro.RegisterObjectIns" +
+      "tanceWithNameRequestH\000\022Y\n\034updateAttribut" +
+      "eValuesRequest\030> \001(\01321.rti1516_202X.fedp" +
+      "ro.UpdateAttributeValuesRequestH\000\022i\n$upd" +
+      "ateAttributeValuesWithTimeRequest\030? \001(\0132" +
+      "9.rti1516_202X.fedpro.UpdateAttributeVal" +
+      "uesWithTimeRequestH\000\022M\n\026sendInteractionR" +
+      "equest\030@ \001(\0132+.rti1516_202X.fedpro.SendI" +
+      "nteractionRequestH\000\022]\n\036sendInteractionWi" +
+      "thTimeRequest\030A \001(\01323.rti1516_202X.fedpr" +
+      "o.SendInteractionWithTimeRequestH\000\022]\n\036se" +
+      "ndDirectedInteractionRequest\030B \001(\01323.rti" +
+      "1516_202X.fedpro.SendDirectedInteraction" +
+      "RequestH\000\022m\n&sendDirectedInteractionWith" +
+      "TimeRequest\030C \001(\0132;.rti1516_202X.fedpro." +
+      "SendDirectedInteractionWithTimeRequestH\000" +
+      "\022W\n\033deleteObjectInstanceRequest\030D \001(\01320." +
+      "rti1516_202X.fedpro.DeleteObjectInstance" +
+      "RequestH\000\022g\n#deleteObjectInstanceWithTim" +
+      "eRequest\030E \001(\01328.rti1516_202X.fedpro.Del" +
+      "eteObjectInstanceWithTimeRequestH\000\022a\n lo" +
+      "calDeleteObjectInstanceRequest\030F \001(\01325.r" +
+      "ti1516_202X.fedpro.LocalDeleteObjectInst" +
+      "anceRequestH\000\022u\n*requestInstanceAttribut" +
+      "eValueUpdateRequest\030G \001(\0132?.rti1516_202X" +
+      ".fedpro.RequestInstanceAttributeValueUpd" +
+      "ateRequestH\000\022o\n\'requestClassAttributeVal" +
+      "ueUpdateRequest\030H \001(\0132<.rti1516_202X.fed" +
+      "pro.RequestClassAttributeValueUpdateRequ" +
+      "estH\000\022\177\n/requestAttributeTransportationT" +
+      "ypeChangeRequest\030I \001(\0132D.rti1516_202X.fe" +
+      "dpro.RequestAttributeTransportationTypeC" +
+      "hangeRequestH\000\022\177\n/changeDefaultAttribute" +
+      "TransportationTypeRequest\030J \001(\0132D.rti151" +
+      "6_202X.fedpro.ChangeDefaultAttributeTran" +
+      "sportationTypeRequestH\000\022o\n\'queryAttribut" +
+      "eTransportationTypeRequest\030K \001(\0132<.rti15" +
+      "16_202X.fedpro.QueryAttributeTransportat" +
+      "ionTypeRequestH\000\022\203\001\n1requestInteractionT" +
+      "ransportationTypeChangeRequest\030L \001(\0132F.r" +
+      "ti1516_202X.fedpro.RequestInteractionTra" +
+      "nsportationTypeChangeRequestH\000\022s\n)queryI" +
+      "nteractionTransportationTypeRequest\030M \001(" +
+      "\0132>.rti1516_202X.fedpro.QueryInteraction" +
+      "TransportationTypeRequestH\000\022\203\001\n1uncondit" +
+      "ionalAttributeOwnershipDivestitureReques" +
+      "t\030N \001(\0132F.rti1516_202X.fedpro.Unconditio" +
+      "nalAttributeOwnershipDivestitureRequestH" +
+      "\000\022}\n.negotiatedAttributeOwnershipDivesti" +
+      "tureRequest\030O \001(\0132C.rti1516_202X.fedpro." +
+      "NegotiatedAttributeOwnershipDivestitureR" +
+      "equestH\000\022S\n\031confirmDivestitureRequest\030P " +
+      "\001(\0132..rti1516_202X.fedpro.ConfirmDivesti" +
+      "tureRequestH\000\022i\n$attributeOwnershipAcqui" +
+      "sitionRequest\030Q \001(\01329.rti1516_202X.fedpr" +
+      "o.AttributeOwnershipAcquisitionRequestH\000" +
+      "\022\177\n/attributeOwnershipAcquisitionIfAvail" +
+      "ableRequest\030R \001(\0132D.rti1516_202X.fedpro." +
+      "AttributeOwnershipAcquisitionIfAvailable" +
+      "RequestH\000\022m\n&attributeOwnershipReleaseDe" +
+      "niedRequest\030S \001(\0132;.rti1516_202X.fedpro." +
+      "AttributeOwnershipReleaseDeniedRequestH\000" +
+      "\022y\n,attributeOwnershipDivestitureIfWante" +
+      "dRequest\030T \001(\0132A.rti1516_202X.fedpro.Att" +
+      "ributeOwnershipDivestitureIfWantedReques" +
+      "tH\000\022\211\001\n4cancelNegotiatedAttributeOwnersh" +
+      "ipDivestitureRequest\030U \001(\0132I.rti1516_202" +
+      "X.fedpro.CancelNegotiatedAttributeOwners" +
+      "hipDivestitureRequestH\000\022u\n*cancelAttribu" +
+      "teOwnershipAcquisitionRequest\030V \001(\0132?.rt" +
+      "i1516_202X.fedpro.CancelAttributeOwnersh" +
+      "ipAcquisitionRequestH\000\022]\n\036queryAttribute" +
+      "OwnershipRequest\030W \001(\01323.rti1516_202X.fe" +
+      "dpro.QueryAttributeOwnershipRequestH\000\022c\n" +
+      "!isAttributeOwnedByFederateRequest\030X \001(\013" +
+      "26.rti1516_202X.fedpro.IsAttributeOwnedB" +
+      "yFederateRequestH\000\022W\n\033enableTimeRegulati" +
+      "onRequest\030Y \001(\01320.rti1516_202X.fedpro.En" +
+      "ableTimeRegulationRequestH\000\022Y\n\034disableTi" +
+      "meRegulationRequest\030Z \001(\01321.rti1516_202X" +
+      ".fedpro.DisableTimeRegulationRequestH\000\022Y" +
+      "\n\034enableTimeConstrainedRequest\030[ \001(\01321.r" +
+      "ti1516_202X.fedpro.EnableTimeConstrained" +
+      "RequestH\000\022[\n\035disableTimeConstrainedReque" +
+      "st\030\\ \001(\01322.rti1516_202X.fedpro.DisableTi" +
+      "meConstrainedRequestH\000\022S\n\031timeAdvanceReq" +
+      "uestRequest\030] \001(\0132..rti1516_202X.fedpro." +
+      "TimeAdvanceRequestRequestH\000\022e\n\"timeAdvan" +
+      "ceRequestAvailableRequest\030^ \001(\01327.rti151" +
+      "6_202X.fedpro.TimeAdvanceRequestAvailabl" +
+      "eRequestH\000\022S\n\031nextMessageRequestRequest\030" +
+      "_ \001(\0132..rti1516_202X.fedpro.NextMessageR" +
+      "equestRequestH\000\022e\n\"nextMessageRequestAva" +
+      "ilableRequest\030` \001(\01327.rti1516_202X.fedpr" +
+      "o.NextMessageRequestAvailableRequestH\000\022Q" +
+      "\n\030flushQueueRequestRequest\030a \001(\0132-.rti15" +
+      "16_202X.fedpro.FlushQueueRequestRequestH" +
+      "\000\022c\n!enableAsynchronousDeliveryRequest\030b" +
+      " \001(\01326.rti1516_202X.fedpro.EnableAsynchr" +
+      "onousDeliveryRequestH\000\022e\n\"disableAsynchr" +
+      "onousDeliveryRequest\030c \001(\01327.rti1516_202" +
+      "X.fedpro.DisableAsynchronousDeliveryRequ" +
+      "estH\000\022A\n\020queryGALTRequest\030d \001(\0132%.rti151" +
+      "6_202X.fedpro.QueryGALTRequestH\000\022O\n\027quer" +
+      "yLogicalTimeRequest\030e \001(\0132,.rti1516_202X" +
+      ".fedpro.QueryLogicalTimeRequestH\000\022A\n\020que" +
+      "ryLITSRequest\030f \001(\0132%.rti1516_202X.fedpr" +
+      "o.QueryLITSRequestH\000\022M\n\026modifyLookaheadR" +
+      "equest\030g \001(\0132+.rti1516_202X.fedpro.Modif" +
+      "yLookaheadRequestH\000\022K\n\025queryLookaheadReq" +
+      "uest\030h \001(\0132*.rti1516_202X.fedpro.QueryLo" +
+      "okaheadRequestH\000\022=\n\016retractRequest\030i \001(\013" +
+      "2#.rti1516_202X.fedpro.RetractRequestH\000\022" +
+      "_\n\037changeAttributeOrderTypeRequest\030j \001(\013" +
+      "24.rti1516_202X.fedpro.ChangeAttributeOr" +
+      "derTypeRequestH\000\022m\n&changeDefaultAttribu" +
+      "teOrderTypeRequest\030k \001(\0132;.rti1516_202X." +
+      "fedpro.ChangeDefaultAttributeOrderTypeRe" +
+      "questH\000\022c\n!changeInteractionOrderTypeReq" +
+      "uest\030l \001(\01326.rti1516_202X.fedpro.ChangeI" +
+      "nteractionOrderTypeRequestH\000\022G\n\023createRe" +
+      "gionRequest\030m \001(\0132(.rti1516_202X.fedpro." +
+      "CreateRegionRequestH\000\022a\n commitRegionMod" +
+      "ificationsRequest\030n \001(\01325.rti1516_202X.f" +
+      "edpro.CommitRegionModificationsRequestH\000" +
+      "\022G\n\023deleteRegionRequest\030o \001(\0132(.rti1516_" +
+      "202X.fedpro.DeleteRegionRequestH\000\022q\n(reg" +
+      "isterObjectInstanceWithRegionsRequest\030p " +
+      "\001(\0132=.rti1516_202X.fedpro.RegisterObject" +
+      "InstanceWithRegionsRequestH\000\022\177\n/register" +
+      "ObjectInstanceWithNameAndRegionsRequest\030" +
+      "q \001(\0132D.rti1516_202X.fedpro.RegisterObje" +
+      "ctInstanceWithNameAndRegionsRequestH\000\022c\n" +
+      "!associateRegionsForUpdatesRequest\030r \001(\013" +
+      "26.rti1516_202X.fedpro.AssociateRegionsF" +
+      "orUpdatesRequestH\000\022g\n#unassociateRegions" +
+      "ForUpdatesRequest\030s \001(\01328.rti1516_202X.f" +
+      "edpro.UnassociateRegionsForUpdatesReques" +
+      "tH\000\022\201\001\n0subscribeObjectClassAttributesWi" +
+      "thRegionsRequest\030t \001(\0132E.rti1516_202X.fe" +
+      "dpro.SubscribeObjectClassAttributesWithR" +
+      "egionsRequestH\000\022\217\001\n7subscribeObjectClass" +
+      "AttributesWithRegionsAndRateRequest\030u \001(" +
+      "\0132L.rti1516_202X.fedpro.SubscribeObjectC" +
+      "lassAttributesWithRegionsAndRateRequestH" +
+      "\000\022\205\001\n2unsubscribeObjectClassAttributesWi" +
+      "thRegionsRequest\030v \001(\0132G.rti1516_202X.fe" +
+      "dpro.UnsubscribeObjectClassAttributesWit" +
+      "hRegionsRequestH\000\022w\n+subscribeInteractio" +
+      "nClassWithRegionsRequest\030w \001(\0132@.rti1516" +
+      "_202X.fedpro.SubscribeInteractionClassWi" +
+      "thRegionsRequestH\000\022{\n-unsubscribeInterac" +
+      "tionClassWithRegionsRequest\030x \001(\0132B.rti1" +
+      "516_202X.fedpro.UnsubscribeInteractionCl" +
+      "assWithRegionsRequestH\000\022c\n!sendInteracti" +
+      "onWithRegionsRequest\030y \001(\01326.rti1516_202" +
+      "X.fedpro.SendInteractionWithRegionsReque" +
+      "stH\000\022q\n(sendInteractionWithRegionsAndTim" +
+      "eRequest\030z \001(\0132=.rti1516_202X.fedpro.Sen" +
+      "dInteractionWithRegionsAndTimeRequestH\000\022" +
+      "{\n-requestAttributeValueUpdateWithRegion" +
+      "sRequest\030{ \001(\0132B.rti1516_202X.fedpro.Req" +
+      "uestAttributeValueUpdateWithRegionsReque" +
+      "stH\000\022Q\n\030getFederateHandleRequest\030| \001(\0132-" +
+      ".rti1516_202X.fedpro.GetFederateHandleRe" +
+      "questH\000\022M\n\026getFederateNameRequest\030} \001(\0132" +
+      "+.rti1516_202X.fedpro.GetFederateNameReq" +
+      "uestH\000\022W\n\033getObjectClassHandleRequest\030~ " +
+      "\001(\01320.rti1516_202X.fedpro.GetObjectClass" +
+      "HandleRequestH\000\022S\n\031getObjectClassNameReq" +
+      "uest\030\177 \001(\0132..rti1516_202X.fedpro.GetObje" +
+      "ctClassNameRequestH\000\022b\n getKnownObjectCl" +
+      "assHandleRequest\030\200\001 \001(\01325.rti1516_202X.f" +
+      "edpro.GetKnownObjectClassHandleRequestH\000" +
+      "\022^\n\036getObjectInstanceHandleRequest\030\201\001 \001(" +
+      "\01323.rti1516_202X.fedpro.GetObjectInstanc" +
+      "eHandleRequestH\000\022Z\n\034getObjectInstanceNam" +
+      "eRequest\030\202\001 \001(\01321.rti1516_202X.fedpro.Ge" +
+      "tObjectInstanceNameRequestH\000\022T\n\031getAttri" +
+      "buteHandleRequest\030\203\001 \001(\0132..rti1516_202X." +
+      "fedpro.GetAttributeHandleRequestH\000\022P\n\027ge" +
+      "tAttributeNameRequest\030\204\001 \001(\0132,.rti1516_2" +
+      "02X.fedpro.GetAttributeNameRequestH\000\022T\n\031" +
+      "getUpdateRateValueRequest\030\205\001 \001(\0132..rti15" +
+      "16_202X.fedpro.GetUpdateRateValueRequest" +
+      "H\000\022l\n%getUpdateRateValueForAttributeRequ" +
+      "est\030\206\001 \001(\0132:.rti1516_202X.fedpro.GetUpda" +
+      "teRateValueForAttributeRequestH\000\022b\n getI" +
+      "nteractionClassHandleRequest\030\207\001 \001(\01325.rt" +
+      "i1516_202X.fedpro.GetInteractionClassHan" +
+      "dleRequestH\000\022^\n\036getInteractionClassNameR" +
+      "equest\030\210\001 \001(\01323.rti1516_202X.fedpro.GetI" +
+      "nteractionClassNameRequestH\000\022T\n\031getParam" +
+      "eterHandleRequest\030\211\001 \001(\0132..rti1516_202X." +
+      "fedpro.GetParameterHandleRequestH\000\022P\n\027ge" +
+      "tParameterNameRequest\030\212\001 \001(\0132,.rti1516_2" +
+      "02X.fedpro.GetParameterNameRequestH\000\022H\n\023" +
+      "getOrderTypeRequest\030\213\001 \001(\0132(.rti1516_202" +
+      "X.fedpro.GetOrderTypeRequestH\000\022H\n\023getOrd" +
+      "erNameRequest\030\214\001 \001(\0132(.rti1516_202X.fedp" +
+      "ro.GetOrderNameRequestH\000\022f\n\"getTransport" +
+      "ationTypeHandleRequest\030\215\001 \001(\01327.rti1516_" +
       "202X.fedpro.GetTransportationTypeHandleR" +
-      "esponseH\000\022d\n!getTransportationTypeNameRe" +
-      "sponse\030\220\001 \001(\01326.rti1516_202X.fedpro.GetT" +
-      "ransportationTypeNameResponseH\000\022\200\001\n/getA" +
-      "vailableDimensionsForClassAttributeRespo" +
-      "nse\030\221\001 \001(\0132D.rti1516_202X.fedpro.GetAvai" +
-      "lableDimensionsForClassAttributeResponse" +
-      "H\000\022\204\001\n1getAvailableDimensionsForInteract" +
-      "ionClassResponse\030\222\001 \001(\0132F.rti1516_202X.f" +
-      "edpro.GetAvailableDimensionsForInteracti" +
-      "onClassResponseH\000\022V\n\032getDimensionHandleR" +
-      "esponse\030\223\001 \001(\0132/.rti1516_202X.fedpro.Get" +
-      "DimensionHandleResponseH\000\022R\n\030getDimensio" +
-      "nNameResponse\030\224\001 \001(\0132-.rti1516_202X.fedp" +
-      "ro.GetDimensionNameResponseH\000\022^\n\036getDime" +
-      "nsionUpperBoundResponse\030\225\001 \001(\01323.rti1516" +
-      "_202X.fedpro.GetDimensionUpperBoundRespo" +
-      "nseH\000\022\\\n\035getDimensionHandleSetResponse\030\226" +
-      "\001 \001(\01322.rti1516_202X.fedpro.GetDimension" +
-      "HandleSetResponseH\000\022N\n\026getRangeBoundsRes" +
-      "ponse\030\227\001 \001(\0132+.rti1516_202X.fedpro.GetRa" +
-      "ngeBoundsResponseH\000\022N\n\026setRangeBoundsRes" +
-      "ponse\030\230\001 \001(\0132+.rti1516_202X.fedpro.SetRa" +
-      "ngeBoundsResponseH\000\022\\\n\035normalizeServiceG" +
-      "roupResponse\030\231\001 \001(\01322.rti1516_202X.fedpr" +
-      "o.NormalizeServiceGroupResponseH\000\022`\n\037nor" +
-      "malizeFederateHandleResponse\030\232\001 \001(\01324.rt" +
-      "i1516_202X.fedpro.NormalizeFederateHandl" +
-      "eResponseH\000\022f\n\"normalizeObjectClassHandl" +
-      "eResponse\030\233\001 \001(\01327.rti1516_202X.fedpro.N" +
-      "ormalizeObjectClassHandleResponseH\000\022p\n\'n" +
-      "ormalizeInteractionClassHandleResponse\030\234" +
-      "\001 \001(\0132<.rti1516_202X.fedpro.NormalizeInt" +
-      "eractionClassHandleResponseH\000\022l\n%normali" +
-      "zeObjectInstanceHandleResponse\030\235\001 \001(\0132:." +
-      "rti1516_202X.fedpro.NormalizeObjectInsta" +
-      "nceHandleResponseH\000\022\202\001\n0enableObjectClas" +
-      "sRelevanceAdvisorySwitchResponse\030\236\001 \001(\0132" +
-      "E.rti1516_202X.fedpro.EnableObjectClassR" +
-      "elevanceAdvisorySwitchResponseH\000\022\204\001\n1dis" +
-      "ableObjectClassRelevanceAdvisorySwitchRe" +
-      "sponse\030\237\001 \001(\0132F.rti1516_202X.fedpro.Disa" +
-      "bleObjectClassRelevanceAdvisorySwitchRes" +
-      "ponseH\000\022~\n.enableAttributeRelevanceAdvis" +
-      "orySwitchResponse\030\240\001 \001(\0132C.rti1516_202X." +
-      "fedpro.EnableAttributeRelevanceAdvisoryS" +
-      "witchResponseH\000\022\200\001\n/disableAttributeRele" +
-      "vanceAdvisorySwitchResponse\030\241\001 \001(\0132D.rti" +
-      "1516_202X.fedpro.DisableAttributeRelevan" +
-      "ceAdvisorySwitchResponseH\000\022v\n*enableAttr" +
-      "ibuteScopeAdvisorySwitchResponse\030\242\001 \001(\0132" +
-      "?.rti1516_202X.fedpro.EnableAttributeSco" +
-      "peAdvisorySwitchResponseH\000\022x\n+disableAtt" +
-      "ributeScopeAdvisorySwitchResponse\030\243\001 \001(\013" +
-      "2@.rti1516_202X.fedpro.DisableAttributeS" +
-      "copeAdvisorySwitchResponseH\000\022\202\001\n0enableI" +
+      "equestH\000\022b\n getTransportationTypeNameReq" +
+      "uest\030\216\001 \001(\01325.rti1516_202X.fedpro.GetTra" +
+      "nsportationTypeNameRequestH\000\022x\n+getAvail" +
+      "ableDimensionsForObjectClassRequest\030\217\001 \001" +
+      "(\0132@.rti1516_202X.fedpro.GetAvailableDim" +
+      "ensionsForObjectClassRequestH\000\022\202\001\n0getAv" +
+      "ailableDimensionsForInteractionClassRequ" +
+      "est\030\220\001 \001(\0132E.rti1516_202X.fedpro.GetAvai" +
+      "lableDimensionsForInteractionClassReques" +
+      "tH\000\022T\n\031getDimensionHandleRequest\030\221\001 \001(\0132" +
+      "..rti1516_202X.fedpro.GetDimensionHandle" +
+      "RequestH\000\022P\n\027getDimensionNameRequest\030\222\001 " +
+      "\001(\0132,.rti1516_202X.fedpro.GetDimensionNa" +
+      "meRequestH\000\022\\\n\035getDimensionUpperBoundReq" +
+      "uest\030\223\001 \001(\01322.rti1516_202X.fedpro.GetDim" +
+      "ensionUpperBoundRequestH\000\022Z\n\034getDimensio" +
+      "nHandleSetRequest\030\224\001 \001(\01321.rti1516_202X." +
+      "fedpro.GetDimensionHandleSetRequestH\000\022L\n" +
+      "\025getRangeBoundsRequest\030\225\001 \001(\0132*.rti1516_" +
+      "202X.fedpro.GetRangeBoundsRequestH\000\022L\n\025s" +
+      "etRangeBoundsRequest\030\226\001 \001(\0132*.rti1516_20" +
+      "2X.fedpro.SetRangeBoundsRequestH\000\022Z\n\034nor" +
+      "malizeServiceGroupRequest\030\227\001 \001(\01321.rti15" +
+      "16_202X.fedpro.NormalizeServiceGroupRequ" +
+      "estH\000\022^\n\036normalizeFederateHandleRequest\030" +
+      "\230\001 \001(\01323.rti1516_202X.fedpro.NormalizeFe" +
+      "derateHandleRequestH\000\022d\n!normalizeObject" +
+      "ClassHandleRequest\030\231\001 \001(\01326.rti1516_202X" +
+      ".fedpro.NormalizeObjectClassHandleReques" +
+      "tH\000\022n\n&normalizeInteractionClassHandleRe" +
+      "quest\030\232\001 \001(\0132;.rti1516_202X.fedpro.Norma" +
+      "lizeInteractionClassHandleRequestH\000\022j\n$n" +
+      "ormalizeObjectInstanceHandleRequest\030\233\001 \001" +
+      "(\01329.rti1516_202X.fedpro.NormalizeObject" +
+      "InstanceHandleRequestH\000\022z\n,getObjectClas" +
+      "sRelevanceAdvisorySwitchRequest\030\234\001 \001(\0132A" +
+      ".rti1516_202X.fedpro.GetObjectClassRelev" +
+      "anceAdvisorySwitchRequestH\000\022z\n,setObject" +
+      "ClassRelevanceAdvisorySwitchRequest\030\235\001 \001" +
+      "(\0132A.rti1516_202X.fedpro.SetObjectClassR" +
+      "elevanceAdvisorySwitchRequestH\000\022v\n*getAt" +
+      "tributeRelevanceAdvisorySwitchRequest\030\236\001" +
+      " \001(\0132?.rti1516_202X.fedpro.GetAttributeR" +
+      "elevanceAdvisorySwitchRequestH\000\022v\n*setAt" +
+      "tributeRelevanceAdvisorySwitchRequest\030\237\001" +
+      " \001(\0132?.rti1516_202X.fedpro.SetAttributeR" +
+      "elevanceAdvisorySwitchRequestH\000\022n\n&getAt" +
+      "tributeScopeAdvisorySwitchRequest\030\240\001 \001(\013" +
+      "2;.rti1516_202X.fedpro.GetAttributeScope" +
+      "AdvisorySwitchRequestH\000\022n\n&setAttributeS" +
+      "copeAdvisorySwitchRequest\030\241\001 \001(\0132;.rti15" +
+      "16_202X.fedpro.SetAttributeScopeAdvisory" +
+      "SwitchRequestH\000\022z\n,getInteractionRelevan" +
+      "ceAdvisorySwitchRequest\030\242\001 \001(\0132A.rti1516" +
+      "_202X.fedpro.GetInteractionRelevanceAdvi" +
+      "sorySwitchRequestH\000\022z\n,setInteractionRel" +
+      "evanceAdvisorySwitchRequest\030\243\001 \001(\0132A.rti" +
+      "1516_202X.fedpro.SetInteractionRelevance" +
+      "AdvisorySwitchRequestH\000\022v\n*getConveyRegi" +
+      "onDesignatorSetsSwitchRequest\030\244\001 \001(\0132?.r" +
+      "ti1516_202X.fedpro.GetConveyRegionDesign" +
+      "atorSetsSwitchRequestH\000\022v\n*setConveyRegi" +
+      "onDesignatorSetsSwitchRequest\030\245\001 \001(\0132?.r" +
+      "ti1516_202X.fedpro.SetConveyRegionDesign" +
+      "atorSetsSwitchRequestH\000\022f\n\"getAutomaticR" +
+      "esignDirectiveRequest\030\246\001 \001(\01327.rti1516_2" +
+      "02X.fedpro.GetAutomaticResignDirectiveRe",
+      "questH\000\022f\n\"setAutomaticResignDirectiveRe" +
+      "quest\030\247\001 \001(\01327.rti1516_202X.fedpro.SetAu" +
+      "tomaticResignDirectiveRequestH\000\022b\n getSe" +
+      "rviceReportingSwitchRequest\030\250\001 \001(\01325.rti" +
+      "1516_202X.fedpro.GetServiceReportingSwit" +
+      "chRequestH\000\022b\n setServiceReportingSwitch" +
+      "Request\030\251\001 \001(\01325.rti1516_202X.fedpro.Set" +
+      "ServiceReportingSwitchRequestH\000\022f\n\"getEx" +
+      "ceptionReportingSwitchRequest\030\252\001 \001(\01327.r" +
+      "ti1516_202X.fedpro.GetExceptionReporting" +
+      "SwitchRequestH\000\022f\n\"setExceptionReporting" +
+      "SwitchRequest\030\253\001 \001(\01327.rti1516_202X.fedp" +
+      "ro.SetExceptionReportingSwitchRequestH\000\022" +
+      "r\n(getSendServiceReportsToFileSwitchRequ" +
+      "est\030\254\001 \001(\0132=.rti1516_202X.fedpro.GetSend" +
+      "ServiceReportsToFileSwitchRequestH\000\022r\n(s" +
+      "etSendServiceReportsToFileSwitchRequest\030" +
+      "\255\001 \001(\0132=.rti1516_202X.fedpro.SetSendServ" +
+      "iceReportsToFileSwitchRequestH\000\022X\n\033getAu" +
+      "toProvideSwitchRequest\030\256\001 \001(\01320.rti1516_" +
+      "202X.fedpro.GetAutoProvideSwitchRequestH" +
+      "\000\022x\n+getDelaySubscriptionEvaluationSwitc" +
+      "hRequest\030\257\001 \001(\0132@.rti1516_202X.fedpro.Ge" +
+      "tDelaySubscriptionEvaluationSwitchReques" +
+      "tH\000\022p\n\'getAdvisoriesUseKnownClassSwitchR" +
+      "equest\030\260\001 \001(\0132<.rti1516_202X.fedpro.GetA" +
+      "dvisoriesUseKnownClassSwitchRequestH\000\022`\n" +
+      "\037getAllowRelaxedDDMSwitchRequest\030\261\001 \001(\0132" +
+      "4.rti1516_202X.fedpro.GetAllowRelaxedDDM" +
+      "SwitchRequestH\000\022d\n!getNonRegulatedGrantS" +
+      "witchRequest\030\262\001 \001(\01326.rti1516_202X.fedpr" +
+      "o.GetNonRegulatedGrantSwitchRequestH\000B\r\n" +
+      "\013callRequest\"\262\225\001\n\014CallResponse\022;\n\rexcept" +
+      "ionData\030\001 \001(\0132\".rti1516_202X.fedpro.Exce" +
+      "ptionDataH\000\022?\n\017connectResponse\030\002 \001(\0132$.r" +
+      "ti1516_202X.fedpro.ConnectResponseH\000\022]\n\036" +
+      "connectWithCredentialsResponse\030\003 \001(\01323.r" +
+      "ti1516_202X.fedpro.ConnectWithCredential" +
+      "sResponseH\000\022a\n connectWithConfigurationR" +
+      "esponse\030\004 \001(\01325.rti1516_202X.fedpro.Conn" +
+      "ectWithConfigurationResponseH\000\022}\n.connec" +
+      "tWithConfigurationAndCredentialsResponse" +
+      "\030\005 \001(\0132C.rti1516_202X.fedpro.ConnectWith" +
+      "ConfigurationAndCredentialsResponseH\000\022E\n" +
+      "\022disconnectResponse\030\006 \001(\0132\'.rti1516_202X" +
+      ".fedpro.DisconnectResponseH\000\022c\n!createFe" +
+      "derationExecutionResponse\030\007 \001(\01326.rti151" +
+      "6_202X.fedpro.CreateFederationExecutionR" +
+      "esponseH\000\022s\n)createFederationExecutionWi" +
+      "thTimeResponse\030\010 \001(\0132>.rti1516_202X.fedp" +
+      "ro.CreateFederationExecutionWithTimeResp" +
+      "onseH\000\022y\n,createFederationExecutionWithM" +
+      "odulesResponse\030\t \001(\0132A.rti1516_202X.fedp" +
+      "ro.CreateFederationExecutionWithModulesR" +
+      "esponseH\000\022\207\001\n3createFederationExecutionW" +
+      "ithModulesAndTimeResponse\030\n \001(\0132H.rti151" +
+      "6_202X.fedpro.CreateFederationExecutionW" +
+      "ithModulesAndTimeResponseH\000\022q\n(createFed" +
+      "erationExecutionWithMIMResponse\030\013 \001(\0132=." +
+      "rti1516_202X.fedpro.CreateFederationExec" +
+      "utionWithMIMResponseH\000\022\177\n/createFederati" +
+      "onExecutionWithMIMAndTimeResponse\030\014 \001(\0132" +
+      "D.rti1516_202X.fedpro.CreateFederationEx" +
+      "ecutionWithMIMAndTimeResponseH\000\022e\n\"destr" +
+      "oyFederationExecutionResponse\030\r \001(\01327.rt" +
+      "i1516_202X.fedpro.DestroyFederationExecu" +
+      "tionResponseH\000\022a\n listFederationExecutio" +
+      "nsResponse\030\016 \001(\01325.rti1516_202X.fedpro.L" +
+      "istFederationExecutionsResponseH\000\022m\n&lis" +
+      "tFederationExecutionMembersResponse\030\017 \001(" +
+      "\0132;.rti1516_202X.fedpro.ListFederationEx" +
+      "ecutionMembersResponseH\000\022_\n\037joinFederati" +
+      "onExecutionResponse\030\020 \001(\01324.rti1516_202X" +
+      ".fedpro.JoinFederationExecutionResponseH" +
+      "\000\022u\n*joinFederationExecutionWithModulesR" +
+      "esponse\030\021 \001(\0132?.rti1516_202X.fedpro.Join" +
+      "FederationExecutionWithModulesResponseH\000" +
+      "\022o\n\'joinFederationExecutionWithNameRespo" +
+      "nse\030\022 \001(\0132<.rti1516_202X.fedpro.JoinFede" +
+      "rationExecutionWithNameResponseH\000\022\203\001\n1jo" +
+      "inFederationExecutionWithNameAndModulesR" +
+      "esponse\030\023 \001(\0132F.rti1516_202X.fedpro.Join" +
+      "FederationExecutionWithNameAndModulesRes" +
+      "ponseH\000\022c\n!resignFederationExecutionResp" +
+      "onse\030\024 \001(\01326.rti1516_202X.fedpro.ResignF" +
+      "ederationExecutionResponseH\000\022}\n.register" +
+      "FederationSynchronizationPointResponse\030\025" +
+      " \001(\0132C.rti1516_202X.fedpro.RegisterFeder" +
+      "ationSynchronizationPointResponseH\000\022\213\001\n5" +
+      "registerFederationSynchronizationPointWi" +
+      "thSetResponse\030\026 \001(\0132J.rti1516_202X.fedpr" +
+      "o.RegisterFederationSynchronizationPoint" +
+      "WithSetResponseH\000\022i\n$synchronizationPoin" +
+      "tAchievedResponse\030\027 \001(\01329.rti1516_202X.f" +
+      "edpro.SynchronizationPointAchievedRespon" +
+      "seH\000\022[\n\035requestFederationSaveResponse\030\030 " +
+      "\001(\01322.rti1516_202X.fedpro.RequestFederat" +
+      "ionSaveResponseH\000\022k\n%requestFederationSa" +
+      "veWithTimeResponse\030\031 \001(\0132:.rti1516_202X." +
+      "fedpro.RequestFederationSaveWithTimeResp" +
+      "onseH\000\022S\n\031federateSaveBegunResponse\030\032 \001(" +
+      "\0132..rti1516_202X.fedpro.FederateSaveBegu" +
+      "nResponseH\000\022Y\n\034federateSaveCompleteRespo" +
+      "nse\030\033 \001(\01321.rti1516_202X.fedpro.Federate" +
+      "SaveCompleteResponseH\000\022_\n\037federateSaveNo" +
+      "tCompleteResponse\030\034 \001(\01324.rti1516_202X.f" +
+      "edpro.FederateSaveNotCompleteResponseH\000\022" +
+      "W\n\033abortFederationSaveResponse\030\035 \001(\01320.r" +
+      "ti1516_202X.fedpro.AbortFederationSaveRe" +
+      "sponseH\000\022c\n!queryFederationSaveStatusRes" +
+      "ponse\030\036 \001(\01326.rti1516_202X.fedpro.QueryF" +
+      "ederationSaveStatusResponseH\000\022a\n request" +
+      "FederationRestoreResponse\030\037 \001(\01325.rti151" +
+      "6_202X.fedpro.RequestFederationRestoreRe" +
+      "sponseH\000\022_\n\037federateRestoreCompleteRespo" +
+      "nse\030  \001(\01324.rti1516_202X.fedpro.Federate" +
+      "RestoreCompleteResponseH\000\022e\n\"federateRes" +
+      "toreNotCompleteResponse\030! \001(\01327.rti1516_" +
+      "202X.fedpro.FederateRestoreNotCompleteRe" +
+      "sponseH\000\022]\n\036abortFederationRestoreRespon" +
+      "se\030\" \001(\01323.rti1516_202X.fedpro.AbortFede" +
+      "rationRestoreResponseH\000\022i\n$queryFederati" +
+      "onRestoreStatusResponse\030# \001(\01329.rti1516_" +
+      "202X.fedpro.QueryFederationRestoreStatus" +
+      "ResponseH\000\022i\n$publishObjectClassAttribut" +
+      "esResponse\030$ \001(\01329.rti1516_202X.fedpro.P" +
+      "ublishObjectClassAttributesResponseH\000\022Y\n" +
+      "\034unpublishObjectClassResponse\030% \001(\01321.rt" +
+      "i1516_202X.fedpro.UnpublishObjectClassRe" +
+      "sponseH\000\022m\n&unpublishObjectClassAttribut" +
+      "esResponse\030& \001(\0132;.rti1516_202X.fedpro.U" +
+      "npublishObjectClassAttributesResponseH\000\022" +
+      "_\n\037publishInteractionClassResponse\030\' \001(\013" +
+      "24.rti1516_202X.fedpro.PublishInteractio" +
+      "nClassResponseH\000\022c\n!unpublishInteraction" +
+      "ClassResponse\030( \001(\01326.rti1516_202X.fedpr" +
+      "o.UnpublishInteractionClassResponseH\000\022}\n" +
+      ".publishObjectClassDirectedInteractionsR" +
+      "esponse\030) \001(\0132C.rti1516_202X.fedpro.Publ" +
+      "ishObjectClassDirectedInteractionsRespon" +
+      "seH\000\022\201\001\n0unpublishObjectClassDirectedInt" +
+      "eractionsResponse\030* \001(\0132E.rti1516_202X.f" +
+      "edpro.UnpublishObjectClassDirectedIntera" +
+      "ctionsResponseH\000\022\217\001\n7unpublishObjectClas" +
+      "sDirectedInteractionsWithSetResponse\030+ \001" +
+      "(\0132L.rti1516_202X.fedpro.UnpublishObject" +
+      "ClassDirectedInteractionsWithSetResponse" +
+      "H\000\022m\n&subscribeObjectClassAttributesResp" +
+      "onse\030, \001(\0132;.rti1516_202X.fedpro.Subscri" +
+      "beObjectClassAttributesResponseH\000\022}\n.sub" +
+      "scribeObjectClassAttributesWithRateRespo" +
+      "nse\030- \001(\0132C.rti1516_202X.fedpro.Subscrib" +
+      "eObjectClassAttributesWithRateResponseH\000" +
+      "\022\177\n/subscribeObjectClassAttributesPassiv" +
+      "elyResponse\030. \001(\0132D.rti1516_202X.fedpro." +
+      "SubscribeObjectClassAttributesPassivelyR" +
+      "esponseH\000\022\217\001\n7subscribeObjectClassAttrib" +
+      "utesPassivelyWithRateResponse\030/ \001(\0132L.rt" +
+      "i1516_202X.fedpro.SubscribeObjectClassAt" +
+      "tributesPassivelyWithRateResponseH\000\022]\n\036u" +
+      "nsubscribeObjectClassResponse\0300 \001(\01323.rt" +
+      "i1516_202X.fedpro.UnsubscribeObjectClass" +
+      "ResponseH\000\022q\n(unsubscribeObjectClassAttr" +
+      "ibutesResponse\0301 \001(\0132=.rti1516_202X.fedp" +
+      "ro.UnsubscribeObjectClassAttributesRespo" +
+      "nseH\000\022c\n!subscribeInteractionClassRespon" +
+      "se\0302 \001(\01326.rti1516_202X.fedpro.Subscribe" +
+      "InteractionClassResponseH\000\022u\n*subscribeI" +
+      "nteractionClassPassivelyResponse\0303 \001(\0132?" +
+      ".rti1516_202X.fedpro.SubscribeInteractio" +
+      "nClassPassivelyResponseH\000\022g\n#unsubscribe" +
+      "InteractionClassResponse\0304 \001(\01328.rti1516" +
+      "_202X.fedpro.UnsubscribeInteractionClass" +
+      "ResponseH\000\022\201\001\n0subscribeObjectClassDirec" +
+      "tedInteractionsResponse\0305 \001(\0132E.rti1516_" +
+      "202X.fedpro.SubscribeObjectClassDirected" +
+      "InteractionsResponseH\000\022\227\001\n;subscribeObje" +
+      "ctClassDirectedInteractionsUniversallyRe" +
+      "sponse\0306 \001(\0132P.rti1516_202X.fedpro.Subsc" +
+      "ribeObjectClassDirectedInteractionsUnive" +
+      "rsallyResponseH\000\022\205\001\n2unsubscribeObjectCl" +
+      "assDirectedInteractionsResponse\0307 \001(\0132G." +
+      "rti1516_202X.fedpro.UnsubscribeObjectCla" +
+      "ssDirectedInteractionsResponseH\000\022\223\001\n9uns" +
+      "ubscribeObjectClassDirectedInteractionsW" +
+      "ithSetResponse\0308 \001(\0132N.rti1516_202X.fedp" +
+      "ro.UnsubscribeObjectClassDirectedInterac" +
+      "tionsWithSetResponseH\000\022c\n!reserveObjectI" +
+      "nstanceNameResponse\0309 \001(\01326.rti1516_202X" +
+      ".fedpro.ReserveObjectInstanceNameRespons" +
+      "eH\000\022c\n!releaseObjectInstanceNameResponse" +
+      "\030: \001(\01326.rti1516_202X.fedpro.ReleaseObje" +
+      "ctInstanceNameResponseH\000\022u\n*reserveMulti" +
+      "pleObjectInstanceNamesResponse\030; \001(\0132?.r" +
+      "ti1516_202X.fedpro.ReserveMultipleObject" +
+      "InstanceNamesResponseH\000\022u\n*releaseMultip" +
+      "leObjectInstanceNamesResponse\030< \001(\0132?.rt" +
+      "i1516_202X.fedpro.ReleaseMultipleObjectI" +
+      "nstanceNamesResponseH\000\022]\n\036registerObject" +
+      "InstanceResponse\030= \001(\01323.rti1516_202X.fe" +
+      "dpro.RegisterObjectInstanceResponseH\000\022m\n" +
+      "&registerObjectInstanceWithNameResponse\030" +
+      "> \001(\0132;.rti1516_202X.fedpro.RegisterObje" +
+      "ctInstanceWithNameResponseH\000\022[\n\035updateAt" +
+      "tributeValuesResponse\030? \001(\01322.rti1516_20" +
+      "2X.fedpro.UpdateAttributeValuesResponseH" +
+      "\000\022k\n%updateAttributeValuesWithTimeRespon" +
+      "se\030@ \001(\0132:.rti1516_202X.fedpro.UpdateAtt" +
+      "ributeValuesWithTimeResponseH\000\022O\n\027sendIn" +
+      "teractionResponse\030A \001(\0132,.rti1516_202X.f" +
+      "edpro.SendInteractionResponseH\000\022_\n\037sendI" +
+      "nteractionWithTimeResponse\030B \001(\01324.rti15" +
+      "16_202X.fedpro.SendInteractionWithTimeRe" +
+      "sponseH\000\022_\n\037sendDirectedInteractionRespo" +
+      "nse\030C \001(\01324.rti1516_202X.fedpro.SendDire" +
+      "ctedInteractionResponseH\000\022o\n\'sendDirecte" +
+      "dInteractionWithTimeResponse\030D \001(\0132<.rti" +
+      "1516_202X.fedpro.SendDirectedInteraction" +
+      "WithTimeResponseH\000\022Y\n\034deleteObjectInstan" +
+      "ceResponse\030E \001(\01321.rti1516_202X.fedpro.D" +
+      "eleteObjectInstanceResponseH\000\022i\n$deleteO" +
+      "bjectInstanceWithTimeResponse\030F \001(\01329.rt" +
+      "i1516_202X.fedpro.DeleteObjectInstanceWi" +
+      "thTimeResponseH\000\022c\n!localDeleteObjectIns" +
+      "tanceResponse\030G \001(\01326.rti1516_202X.fedpr" +
+      "o.LocalDeleteObjectInstanceResponseH\000\022w\n" +
+      "+requestInstanceAttributeValueUpdateResp" +
+      "onse\030H \001(\0132@.rti1516_202X.fedpro.Request" +
+      "InstanceAttributeValueUpdateResponseH\000\022q" +
+      "\n(requestClassAttributeValueUpdateRespon" +
+      "se\030I \001(\0132=.rti1516_202X.fedpro.RequestCl" +
+      "assAttributeValueUpdateResponseH\000\022\201\001\n0re" +
+      "questAttributeTransportationTypeChangeRe" +
+      "sponse\030J \001(\0132E.rti1516_202X.fedpro.Reque" +
+      "stAttributeTransportationTypeChangeRespo" +
+      "nseH\000\022\201\001\n0changeDefaultAttributeTranspor" +
+      "tationTypeResponse\030K \001(\0132E.rti1516_202X." +
+      "fedpro.ChangeDefaultAttributeTransportat" +
+      "ionTypeResponseH\000\022q\n(queryAttributeTrans" +
+      "portationTypeResponse\030L \001(\0132=.rti1516_20" +
+      "2X.fedpro.QueryAttributeTransportationTy" +
+      "peResponseH\000\022\205\001\n2requestInteractionTrans" +
+      "portationTypeChangeResponse\030M \001(\0132G.rti1" +
+      "516_202X.fedpro.RequestInteractionTransp" +
+      "ortationTypeChangeResponseH\000\022u\n*queryInt" +
+      "eractionTransportationTypeResponse\030N \001(\013" +
+      "2?.rti1516_202X.fedpro.QueryInteractionT" +
+      "ransportationTypeResponseH\000\022\205\001\n2uncondit" +
+      "ionalAttributeOwnershipDivestitureRespon" +
+      "se\030O \001(\0132G.rti1516_202X.fedpro.Unconditi" +
+      "onalAttributeOwnershipDivestitureRespons" +
+      "eH\000\022\177\n/negotiatedAttributeOwnershipDives" +
+      "titureResponse\030P \001(\0132D.rti1516_202X.fedp" +
+      "ro.NegotiatedAttributeOwnershipDivestitu" +
+      "reResponseH\000\022U\n\032confirmDivestitureRespon" +
+      "se\030Q \001(\0132/.rti1516_202X.fedpro.ConfirmDi" +
+      "vestitureResponseH\000\022k\n%attributeOwnershi" +
+      "pAcquisitionResponse\030R \001(\0132:.rti1516_202" +
+      "X.fedpro.AttributeOwnershipAcquisitionRe" +
+      "sponseH\000\022\201\001\n0attributeOwnershipAcquisiti" +
+      "onIfAvailableResponse\030S \001(\0132E.rti1516_20" +
+      "2X.fedpro.AttributeOwnershipAcquisitionI" +
+      "fAvailableResponseH\000\022o\n\'attributeOwnersh" +
+      "ipReleaseDeniedResponse\030T \001(\0132<.rti1516_" +
+      "202X.fedpro.AttributeOwnershipReleaseDen" +
+      "iedResponseH\000\022{\n-attributeOwnershipDives" +
+      "titureIfWantedResponse\030U \001(\0132B.rti1516_2" +
+      "02X.fedpro.AttributeOwnershipDivestiture" +
+      "IfWantedResponseH\000\022\213\001\n5cancelNegotiatedA" +
+      "ttributeOwnershipDivestitureResponse\030V \001" +
+      "(\0132J.rti1516_202X.fedpro.CancelNegotiate" +
+      "dAttributeOwnershipDivestitureResponseH\000" +
+      "\022w\n+cancelAttributeOwnershipAcquisitionR" +
+      "esponse\030W \001(\0132@.rti1516_202X.fedpro.Canc" +
+      "elAttributeOwnershipAcquisitionResponseH" +
+      "\000\022_\n\037queryAttributeOwnershipResponse\030X \001" +
+      "(\01324.rti1516_202X.fedpro.QueryAttributeO" +
+      "wnershipResponseH\000\022e\n\"isAttributeOwnedBy" +
+      "FederateResponse\030Y \001(\01327.rti1516_202X.fe" +
+      "dpro.IsAttributeOwnedByFederateResponseH" +
+      "\000\022Y\n\034enableTimeRegulationResponse\030Z \001(\0132" +
+      "1.rti1516_202X.fedpro.EnableTimeRegulati" +
+      "onResponseH\000\022[\n\035disableTimeRegulationRes" +
+      "ponse\030[ \001(\01322.rti1516_202X.fedpro.Disabl" +
+      "eTimeRegulationResponseH\000\022[\n\035enableTimeC" +
+      "onstrainedResponse\030\\ \001(\01322.rti1516_202X." +
+      "fedpro.EnableTimeConstrainedResponseH\000\022]" +
+      "\n\036disableTimeConstrainedResponse\030] \001(\01323" +
+      ".rti1516_202X.fedpro.DisableTimeConstrai" +
+      "nedResponseH\000\022U\n\032timeAdvanceRequestRespo" +
+      "nse\030^ \001(\0132/.rti1516_202X.fedpro.TimeAdva" +
+      "nceRequestResponseH\000\022g\n#timeAdvanceReque" +
+      "stAvailableResponse\030_ \001(\01328.rti1516_202X" +
+      ".fedpro.TimeAdvanceRequestAvailableRespo" +
+      "nseH\000\022U\n\032nextMessageRequestResponse\030` \001(" +
+      "\0132/.rti1516_202X.fedpro.NextMessageReque" +
+      "stResponseH\000\022g\n#nextMessageRequestAvaila" +
+      "bleResponse\030a \001(\01328.rti1516_202X.fedpro." +
+      "NextMessageRequestAvailableResponseH\000\022S\n" +
+      "\031flushQueueRequestResponse\030b \001(\0132..rti15" +
+      "16_202X.fedpro.FlushQueueRequestResponse" +
+      "H\000\022e\n\"enableAsynchronousDeliveryResponse" +
+      "\030c \001(\01327.rti1516_202X.fedpro.EnableAsync" +
+      "hronousDeliveryResponseH\000\022g\n#disableAsyn" +
+      "chronousDeliveryResponse\030d \001(\01328.rti1516" +
+      "_202X.fedpro.DisableAsynchronousDelivery" +
+      "ResponseH\000\022C\n\021queryGALTResponse\030e \001(\0132&." +
+      "rti1516_202X.fedpro.QueryGALTResponseH\000\022" +
+      "Q\n\030queryLogicalTimeResponse\030f \001(\0132-.rti1" +
+      "516_202X.fedpro.QueryLogicalTimeResponse" +
+      "H\000\022C\n\021queryLITSResponse\030g \001(\0132&.rti1516_" +
+      "202X.fedpro.QueryLITSResponseH\000\022O\n\027modif" +
+      "yLookaheadResponse\030h \001(\0132,.rti1516_202X." +
+      "fedpro.ModifyLookaheadResponseH\000\022M\n\026quer" +
+      "yLookaheadResponse\030i \001(\0132+.rti1516_202X." +
+      "fedpro.QueryLookaheadResponseH\000\022?\n\017retra" +
+      "ctResponse\030j \001(\0132$.rti1516_202X.fedpro.R" +
+      "etractResponseH\000\022a\n changeAttributeOrder" +
+      "TypeResponse\030k \001(\01325.rti1516_202X.fedpro" +
+      ".ChangeAttributeOrderTypeResponseH\000\022o\n\'c" +
+      "hangeDefaultAttributeOrderTypeResponse\030l" +
+      " \001(\0132<.rti1516_202X.fedpro.ChangeDefault" +
+      "AttributeOrderTypeResponseH\000\022e\n\"changeIn" +
+      "teractionOrderTypeResponse\030m \001(\01327.rti15" +
+      "16_202X.fedpro.ChangeInteractionOrderTyp" +
+      "eResponseH\000\022I\n\024createRegionResponse\030n \001(" +
+      "\0132).rti1516_202X.fedpro.CreateRegionResp" +
+      "onseH\000\022c\n!commitRegionModificationsRespo" +
+      "nse\030o \001(\01326.rti1516_202X.fedpro.CommitRe" +
+      "gionModificationsResponseH\000\022I\n\024deleteReg" +
+      "ionResponse\030p \001(\0132).rti1516_202X.fedpro." +
+      "DeleteRegionResponseH\000\022s\n)registerObject" +
+      "InstanceWithRegionsResponse\030q \001(\0132>.rti1" +
+      "516_202X.fedpro.RegisterObjectInstanceWi" +
+      "thRegionsResponseH\000\022\201\001\n0registerObjectIn" +
+      "stanceWithNameAndRegionsResponse\030r \001(\0132E" +
+      ".rti1516_202X.fedpro.RegisterObjectInsta" +
+      "nceWithNameAndRegionsResponseH\000\022e\n\"assoc" +
+      "iateRegionsForUpdatesResponse\030s \001(\01327.rt" +
+      "i1516_202X.fedpro.AssociateRegionsForUpd" +
+      "atesResponseH\000\022i\n$unassociateRegionsForU" +
+      "pdatesResponse\030t \001(\01329.rti1516_202X.fedp" +
+      "ro.UnassociateRegionsForUpdatesResponseH" +
+      "\000\022\203\001\n1subscribeObjectClassAttributesWith" +
+      "RegionsResponse\030u \001(\0132F.rti1516_202X.fed" +
+      "pro.SubscribeObjectClassAttributesWithRe" +
+      "gionsResponseH\000\022\221\001\n8subscribeObjectClass" +
+      "AttributesWithRegionsAndRateResponse\030v \001" +
+      "(\0132M.rti1516_202X.fedpro.SubscribeObject" +
+      "ClassAttributesWithRegionsAndRateRespons" +
+      "eH\000\022\207\001\n3unsubscribeObjectClassAttributes" +
+      "WithRegionsResponse\030w \001(\0132H.rti1516_202X" +
+      ".fedpro.UnsubscribeObjectClassAttributes" +
+      "WithRegionsResponseH\000\022y\n,subscribeIntera" +
+      "ctionClassWithRegionsResponse\030x \001(\0132A.rt" +
+      "i1516_202X.fedpro.SubscribeInteractionCl" +
+      "assWithRegionsResponseH\000\022}\n.unsubscribeI" +
+      "nteractionClassWithRegionsResponse\030y \001(\013" +
+      "2C.rti1516_202X.fedpro.UnsubscribeIntera" +
+      "ctionClassWithRegionsResponseH\000\022e\n\"sendI" +
+      "nteractionWithRegionsResponse\030z \001(\01327.rt" +
+      "i1516_202X.fedpro.SendInteractionWithReg" +
+      "ionsResponseH\000\022s\n)sendInteractionWithReg" +
+      "ionsAndTimeResponse\030{ \001(\0132>.rti1516_202X" +
+      ".fedpro.SendInteractionWithRegionsAndTim" +
+      "eResponseH\000\022}\n.requestAttributeValueUpda" +
+      "teWithRegionsResponse\030| \001(\0132C.rti1516_20" +
+      "2X.fedpro.RequestAttributeValueUpdateWit" +
+      "hRegionsResponseH\000\022S\n\031getFederateHandleR" +
+      "esponse\030} \001(\0132..rti1516_202X.fedpro.GetF" +
+      "ederateHandleResponseH\000\022O\n\027getFederateNa" +
+      "meResponse\030~ \001(\0132,.rti1516_202X.fedpro.G" +
+      "etFederateNameResponseH\000\022Y\n\034getObjectCla" +
+      "ssHandleResponse\030\177 \001(\01321.rti1516_202X.fe" +
+      "dpro.GetObjectClassHandleResponseH\000\022V\n\032g" +
+      "etObjectClassNameResponse\030\200\001 \001(\0132/.rti15" +
+      "16_202X.fedpro.GetObjectClassNameRespons" +
+      "eH\000\022d\n!getKnownObjectClassHandleResponse" +
+      "\030\201\001 \001(\01326.rti1516_202X.fedpro.GetKnownOb" +
+      "jectClassHandleResponseH\000\022`\n\037getObjectIn" +
+      "stanceHandleResponse\030\202\001 \001(\01324.rti1516_20" +
+      "2X.fedpro.GetObjectInstanceHandleRespons" +
+      "eH\000\022\\\n\035getObjectInstanceNameResponse\030\203\001 " +
+      "\001(\01322.rti1516_202X.fedpro.GetObjectInsta" +
+      "nceNameResponseH\000\022V\n\032getAttributeHandleR" +
+      "esponse\030\204\001 \001(\0132/.rti1516_202X.fedpro.Get" +
+      "AttributeHandleResponseH\000\022R\n\030getAttribut" +
+      "eNameResponse\030\205\001 \001(\0132-.rti1516_202X.fedp" +
+      "ro.GetAttributeNameResponseH\000\022V\n\032getUpda" +
+      "teRateValueResponse\030\206\001 \001(\0132/.rti1516_202" +
+      "X.fedpro.GetUpdateRateValueResponseH\000\022n\n" +
+      "&getUpdateRateValueForAttributeResponse\030" +
+      "\207\001 \001(\0132;.rti1516_202X.fedpro.GetUpdateRa" +
+      "teValueForAttributeResponseH\000\022d\n!getInte" +
+      "ractionClassHandleResponse\030\210\001 \001(\01326.rti1" +
+      "516_202X.fedpro.GetInteractionClassHandl" +
+      "eResponseH\000\022`\n\037getInteractionClassNameRe" +
+      "sponse\030\211\001 \001(\01324.rti1516_202X.fedpro.GetI" +
+      "nteractionClassNameResponseH\000\022V\n\032getPara" +
+      "meterHandleResponse\030\212\001 \001(\0132/.rti1516_202",
+      "X.fedpro.GetParameterHandleResponseH\000\022R\n" +
+      "\030getParameterNameResponse\030\213\001 \001(\0132-.rti15" +
+      "16_202X.fedpro.GetParameterNameResponseH" +
+      "\000\022J\n\024getOrderTypeResponse\030\214\001 \001(\0132).rti15" +
+      "16_202X.fedpro.GetOrderTypeResponseH\000\022J\n" +
+      "\024getOrderNameResponse\030\215\001 \001(\0132).rti1516_2" +
+      "02X.fedpro.GetOrderNameResponseH\000\022h\n#get" +
+      "TransportationTypeHandleResponse\030\216\001 \001(\0132" +
+      "8.rti1516_202X.fedpro.GetTransportationT" +
+      "ypeHandleResponseH\000\022d\n!getTransportation" +
+      "TypeNameResponse\030\217\001 \001(\01326.rti1516_202X.f" +
+      "edpro.GetTransportationTypeNameResponseH" +
+      "\000\022z\n,getAvailableDimensionsForObjectClas" +
+      "sResponse\030\220\001 \001(\0132A.rti1516_202X.fedpro.G" +
+      "etAvailableDimensionsForObjectClassRespo" +
+      "nseH\000\022\204\001\n1getAvailableDimensionsForInter" +
+      "actionClassResponse\030\221\001 \001(\0132F.rti1516_202" +
+      "X.fedpro.GetAvailableDimensionsForIntera" +
+      "ctionClassResponseH\000\022V\n\032getDimensionHand" +
+      "leResponse\030\222\001 \001(\0132/.rti1516_202X.fedpro." +
+      "GetDimensionHandleResponseH\000\022R\n\030getDimen" +
+      "sionNameResponse\030\223\001 \001(\0132-.rti1516_202X.f" +
+      "edpro.GetDimensionNameResponseH\000\022^\n\036getD" +
+      "imensionUpperBoundResponse\030\224\001 \001(\01323.rti1" +
+      "516_202X.fedpro.GetDimensionUpperBoundRe" +
+      "sponseH\000\022\\\n\035getDimensionHandleSetRespons" +
+      "e\030\225\001 \001(\01322.rti1516_202X.fedpro.GetDimens" +
+      "ionHandleSetResponseH\000\022N\n\026getRangeBounds" +
+      "Response\030\226\001 \001(\0132+.rti1516_202X.fedpro.Ge" +
+      "tRangeBoundsResponseH\000\022N\n\026setRangeBounds" +
+      "Response\030\227\001 \001(\0132+.rti1516_202X.fedpro.Se" +
+      "tRangeBoundsResponseH\000\022\\\n\035normalizeServi" +
+      "ceGroupResponse\030\230\001 \001(\01322.rti1516_202X.fe" +
+      "dpro.NormalizeServiceGroupResponseH\000\022`\n\037" +
+      "normalizeFederateHandleResponse\030\231\001 \001(\01324" +
+      ".rti1516_202X.fedpro.NormalizeFederateHa" +
+      "ndleResponseH\000\022f\n\"normalizeObjectClassHa" +
+      "ndleResponse\030\232\001 \001(\01327.rti1516_202X.fedpr" +
+      "o.NormalizeObjectClassHandleResponseH\000\022p" +
+      "\n\'normalizeInteractionClassHandleRespons" +
+      "e\030\233\001 \001(\0132<.rti1516_202X.fedpro.Normalize" +
+      "InteractionClassHandleResponseH\000\022l\n%norm" +
+      "alizeObjectInstanceHandleResponse\030\234\001 \001(\013" +
+      "2:.rti1516_202X.fedpro.NormalizeObjectIn" +
+      "stanceHandleResponseH\000\022|\n-getObjectClass" +
+      "RelevanceAdvisorySwitchResponse\030\235\001 \001(\0132B" +
+      ".rti1516_202X.fedpro.GetObjectClassRelev" +
+      "anceAdvisorySwitchResponseH\000\022|\n-setObjec" +
+      "tClassRelevanceAdvisorySwitchResponse\030\236\001" +
+      " \001(\0132B.rti1516_202X.fedpro.SetObjectClas" +
+      "sRelevanceAdvisorySwitchResponseH\000\022x\n+ge" +
+      "tAttributeRelevanceAdvisorySwitchRespons" +
+      "e\030\237\001 \001(\0132@.rti1516_202X.fedpro.GetAttrib" +
+      "uteRelevanceAdvisorySwitchResponseH\000\022x\n+" +
+      "setAttributeRelevanceAdvisorySwitchRespo" +
+      "nse\030\240\001 \001(\0132@.rti1516_202X.fedpro.SetAttr" +
+      "ibuteRelevanceAdvisorySwitchResponseH\000\022p" +
+      "\n\'getAttributeScopeAdvisorySwitchRespons" +
+      "e\030\241\001 \001(\0132<.rti1516_202X.fedpro.GetAttrib" +
+      "uteScopeAdvisorySwitchResponseH\000\022p\n\'setA" +
+      "ttributeScopeAdvisorySwitchResponse\030\242\001 \001" +
+      "(\0132<.rti1516_202X.fedpro.SetAttributeSco" +
+      "peAdvisorySwitchResponseH\000\022|\n-getInterac" +
+      "tionRelevanceAdvisorySwitchResponse\030\243\001 \001" +
+      "(\0132B.rti1516_202X.fedpro.GetInteractionR" +
+      "elevanceAdvisorySwitchResponseH\000\022|\n-setI" +
       "nteractionRelevanceAdvisorySwitchRespons" +
-      "e\030\244\001 \001(\0132E.rti1516_202X.fedpro.EnableInt" +
-      "eractionRelevanceAdvisorySwitchResponseH" +
-      "\000\022\204\001\n1disableInteractionRelevanceAdvisor" +
-      "ySwitchResponse\030\245\001 \001(\0132F.rti1516_202X.fe" +
-      "dpro.DisableInteractionRelevanceAdvisory" +
-      "SwitchResponseH\000B\016\n\014callResponseB\033\n\027hla." +
-      "rti1516_202X.fedproP\001b\006proto3"
+      "e\030\244\001 \001(\0132B.rti1516_202X.fedpro.SetIntera" +
+      "ctionRelevanceAdvisorySwitchResponseH\000\022x" +
+      "\n+getConveyRegionDesignatorSetsSwitchRes" +
+      "ponse\030\245\001 \001(\0132@.rti1516_202X.fedpro.GetCo" +
+      "nveyRegionDesignatorSetsSwitchResponseH\000" +
+      "\022x\n+setConveyRegionDesignatorSetsSwitchR" +
+      "esponse\030\246\001 \001(\0132@.rti1516_202X.fedpro.Set" +
+      "ConveyRegionDesignatorSetsSwitchResponse" +
+      "H\000\022h\n#getAutomaticResignDirectiveRespons" +
+      "e\030\247\001 \001(\01328.rti1516_202X.fedpro.GetAutoma" +
+      "ticResignDirectiveResponseH\000\022h\n#setAutom" +
+      "aticResignDirectiveResponse\030\250\001 \001(\01328.rti" +
+      "1516_202X.fedpro.SetAutomaticResignDirec" +
+      "tiveResponseH\000\022d\n!getServiceReportingSwi" +
+      "tchResponse\030\251\001 \001(\01326.rti1516_202X.fedpro" +
+      ".GetServiceReportingSwitchResponseH\000\022d\n!" +
+      "setServiceReportingSwitchResponse\030\252\001 \001(\013" +
+      "26.rti1516_202X.fedpro.SetServiceReporti" +
+      "ngSwitchResponseH\000\022h\n#getExceptionReport" +
+      "ingSwitchResponse\030\253\001 \001(\01328.rti1516_202X." +
+      "fedpro.GetExceptionReportingSwitchRespon" +
+      "seH\000\022h\n#setExceptionReportingSwitchRespo" +
+      "nse\030\254\001 \001(\01328.rti1516_202X.fedpro.SetExce" +
+      "ptionReportingSwitchResponseH\000\022t\n)getSen" +
+      "dServiceReportsToFileSwitchResponse\030\255\001 \001" +
+      "(\0132>.rti1516_202X.fedpro.GetSendServiceR" +
+      "eportsToFileSwitchResponseH\000\022t\n)setSendS" +
+      "erviceReportsToFileSwitchResponse\030\256\001 \001(\013" +
+      "2>.rti1516_202X.fedpro.SetSendServiceRep" +
+      "ortsToFileSwitchResponseH\000\022Z\n\034getAutoPro" +
+      "videSwitchResponse\030\257\001 \001(\01321.rti1516_202X" +
+      ".fedpro.GetAutoProvideSwitchResponseH\000\022z" +
+      "\n,getDelaySubscriptionEvaluationSwitchRe" +
+      "sponse\030\260\001 \001(\0132A.rti1516_202X.fedpro.GetD" +
+      "elaySubscriptionEvaluationSwitchResponse" +
+      "H\000\022r\n(getAdvisoriesUseKnownClassSwitchRe" +
+      "sponse\030\261\001 \001(\0132=.rti1516_202X.fedpro.GetA" +
+      "dvisoriesUseKnownClassSwitchResponseH\000\022b" +
+      "\n getAllowRelaxedDDMSwitchResponse\030\262\001 \001(" +
+      "\01325.rti1516_202X.fedpro.GetAllowRelaxedD" +
+      "DMSwitchResponseH\000\022f\n\"getNonRegulatedGra" +
+      "ntSwitchResponse\030\263\001 \001(\01327.rti1516_202X.f" +
+      "edpro.GetNonRegulatedGrantSwitchResponse" +
+      "H\000B\016\n\014callResponseB\033\n\027hla.rti1516_202X.f" +
+      "edproP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3661,65 +3915,65 @@ public final class RTIambassador {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnpublishObjectClassAttributesResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(64);
-    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsRequest_descriptor,
-        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
-    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(65);
-    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(66);
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsRequest_descriptor,
-        new java.lang.String[] { "ObjectClass", });
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(67);
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(68);
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetRequest_descriptor,
-        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(69);
-    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetResponse_descriptor,
-        new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_PublishInteractionClassRequest_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_rti1516_202X_fedpro_PublishInteractionClassRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_PublishInteractionClassRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_PublishInteractionClassResponse_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_rti1516_202X_fedpro_PublishInteractionClassResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_PublishInteractionClassResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_UnpublishInteractionClassRequest_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_rti1516_202X_fedpro_UnpublishInteractionClassRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnpublishInteractionClassRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_UnpublishInteractionClassResponse_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_rti1516_202X_fedpro_UnpublishInteractionClassResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnpublishInteractionClassResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(68);
+    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
+    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(69);
+    internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_PublishObjectClassDirectedInteractionsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(70);
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", });
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(71);
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(72);
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetResponse_descriptor =
+      getDescriptor().getMessageTypes().get(73);
+    internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnpublishObjectClassDirectedInteractionsWithSetResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesRequest_descriptor =
       getDescriptor().getMessageTypes().get(74);
@@ -3793,1470 +4047,1638 @@ public final class RTIambassador {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(86);
-    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_descriptor,
-        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
-    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(87);
-    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(88);
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_descriptor,
-        new java.lang.String[] { "ObjectClass", });
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(89);
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(90);
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_descriptor,
-        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(91);
-    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_descriptor,
-        new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassRequest_descriptor =
-      getDescriptor().getMessageTypes().get(92);
+      getDescriptor().getMessageTypes().get(86);
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeInteractionClassRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassResponse_descriptor =
-      getDescriptor().getMessageTypes().get(93);
+      getDescriptor().getMessageTypes().get(87);
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeInteractionClassResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassPassivelyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(94);
+      getDescriptor().getMessageTypes().get(88);
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassPassivelyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeInteractionClassPassivelyRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassPassivelyResponse_descriptor =
-      getDescriptor().getMessageTypes().get(95);
+      getDescriptor().getMessageTypes().get(89);
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassPassivelyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeInteractionClassPassivelyResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassRequest_descriptor =
-      getDescriptor().getMessageTypes().get(96);
+      getDescriptor().getMessageTypes().get(90);
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassResponse_descriptor =
-      getDescriptor().getMessageTypes().get(97);
+      getDescriptor().getMessageTypes().get(91);
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameRequest_descriptor =
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(92);
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(93);
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(94);
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyResponse_descriptor =
+      getDescriptor().getMessageTypes().get(95);
+    internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SubscribeObjectClassDirectedInteractionsUniversallyResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(96);
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", });
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(97);
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_descriptor =
       getDescriptor().getMessageTypes().get(98);
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", "InteractionClasses", });
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_descriptor =
+      getDescriptor().getMessageTypes().get(99);
+    internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassDirectedInteractionsWithSetResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameRequest_descriptor =
+      getDescriptor().getMessageTypes().get(100);
     internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameRequest_descriptor,
         new java.lang.String[] { "ObjectInstanceName", });
     internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(99);
+      getDescriptor().getMessageTypes().get(101);
     internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReserveObjectInstanceNameResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_ReleaseObjectInstanceNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(100);
+      getDescriptor().getMessageTypes().get(102);
     internal_static_rti1516_202X_fedpro_ReleaseObjectInstanceNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReleaseObjectInstanceNameRequest_descriptor,
         new java.lang.String[] { "ObjectInstanceName", });
     internal_static_rti1516_202X_fedpro_ReleaseObjectInstanceNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(101);
+      getDescriptor().getMessageTypes().get(103);
     internal_static_rti1516_202X_fedpro_ReleaseObjectInstanceNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ReleaseObjectInstanceNameResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(102);
-    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameRequest_descriptor,
-        new java.lang.String[] { "ObjectInstanceNames", });
-    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(103);
-    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNameResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameRequest_descriptor =
+    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesRequest_descriptor =
       getDescriptor().getMessageTypes().get(104);
-    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameRequest_descriptor,
+        internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesRequest_descriptor,
         new java.lang.String[] { "ObjectInstanceNames", });
-    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameResponse_descriptor =
+    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesResponse_descriptor =
       getDescriptor().getMessageTypes().get(105);
-    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNameResponse_descriptor,
+        internal_static_rti1516_202X_fedpro_ReserveMultipleObjectInstanceNamesResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(106);
+    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesRequest_descriptor,
+        new java.lang.String[] { "ObjectInstanceNames", });
+    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(107);
+    internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_ReleaseMultipleObjectInstanceNamesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(106);
+      getDescriptor().getMessageTypes().get(108);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceRequest_descriptor,
         new java.lang.String[] { "ObjectClass", });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(107);
+      getDescriptor().getMessageTypes().get(109);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(108);
+      getDescriptor().getMessageTypes().get(110);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "ObjectInstanceName", });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(109);
+      getDescriptor().getMessageTypes().get(111);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(110);
+      getDescriptor().getMessageTypes().get(112);
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UpdateAttributeValuesRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "AttributeValues", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(111);
+      getDescriptor().getMessageTypes().get(113);
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UpdateAttributeValuesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesWithTimeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(112);
+      getDescriptor().getMessageTypes().get(114);
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesWithTimeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UpdateAttributeValuesWithTimeRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "AttributeValues", "UserSuppliedTag", "Time", });
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesWithTimeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(113);
+      getDescriptor().getMessageTypes().get(115);
     internal_static_rti1516_202X_fedpro_UpdateAttributeValuesWithTimeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UpdateAttributeValuesWithTimeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_SendInteractionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(114);
+      getDescriptor().getMessageTypes().get(116);
     internal_static_rti1516_202X_fedpro_SendInteractionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "ParameterValues", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_SendInteractionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(115);
+      getDescriptor().getMessageTypes().get(117);
     internal_static_rti1516_202X_fedpro_SendInteractionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SendInteractionWithTimeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(116);
+      getDescriptor().getMessageTypes().get(118);
     internal_static_rti1516_202X_fedpro_SendInteractionWithTimeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionWithTimeRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "ParameterValues", "UserSuppliedTag", "Time", });
     internal_static_rti1516_202X_fedpro_SendInteractionWithTimeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(117);
+      getDescriptor().getMessageTypes().get(119);
     internal_static_rti1516_202X_fedpro_SendInteractionWithTimeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionWithTimeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(118);
+      getDescriptor().getMessageTypes().get(120);
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendDirectedInteractionRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "ObjectInstance", "ParameterValues", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(119);
+      getDescriptor().getMessageTypes().get(121);
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendDirectedInteractionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionWithTimeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(120);
+      getDescriptor().getMessageTypes().get(122);
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionWithTimeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendDirectedInteractionWithTimeRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "ObjectInstance", "ParameterValues", "UserSuppliedTag", "Time", });
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionWithTimeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(121);
+      getDescriptor().getMessageTypes().get(123);
     internal_static_rti1516_202X_fedpro_SendDirectedInteractionWithTimeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendDirectedInteractionWithTimeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(122);
+      getDescriptor().getMessageTypes().get(124);
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DeleteObjectInstanceRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(123);
+      getDescriptor().getMessageTypes().get(125);
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DeleteObjectInstanceResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceWithTimeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(124);
+      getDescriptor().getMessageTypes().get(126);
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceWithTimeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DeleteObjectInstanceWithTimeRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "UserSuppliedTag", "Time", });
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceWithTimeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(125);
+      getDescriptor().getMessageTypes().get(127);
     internal_static_rti1516_202X_fedpro_DeleteObjectInstanceWithTimeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DeleteObjectInstanceWithTimeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_LocalDeleteObjectInstanceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(126);
+      getDescriptor().getMessageTypes().get(128);
     internal_static_rti1516_202X_fedpro_LocalDeleteObjectInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_LocalDeleteObjectInstanceRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", });
     internal_static_rti1516_202X_fedpro_LocalDeleteObjectInstanceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(127);
+      getDescriptor().getMessageTypes().get(129);
     internal_static_rti1516_202X_fedpro_LocalDeleteObjectInstanceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_LocalDeleteObjectInstanceResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_RequestInstanceAttributeValueUpdateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(128);
+      getDescriptor().getMessageTypes().get(130);
     internal_static_rti1516_202X_fedpro_RequestInstanceAttributeValueUpdateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestInstanceAttributeValueUpdateRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_RequestInstanceAttributeValueUpdateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(129);
+      getDescriptor().getMessageTypes().get(131);
     internal_static_rti1516_202X_fedpro_RequestInstanceAttributeValueUpdateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestInstanceAttributeValueUpdateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_RequestClassAttributeValueUpdateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(130);
+      getDescriptor().getMessageTypes().get(132);
     internal_static_rti1516_202X_fedpro_RequestClassAttributeValueUpdateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestClassAttributeValueUpdateRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "Attributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_RequestClassAttributeValueUpdateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(131);
+      getDescriptor().getMessageTypes().get(133);
     internal_static_rti1516_202X_fedpro_RequestClassAttributeValueUpdateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestClassAttributeValueUpdateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_RequestAttributeTransportationTypeChangeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(132);
+      getDescriptor().getMessageTypes().get(134);
     internal_static_rti1516_202X_fedpro_RequestAttributeTransportationTypeChangeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestAttributeTransportationTypeChangeRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "TransportationType", });
     internal_static_rti1516_202X_fedpro_RequestAttributeTransportationTypeChangeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(133);
+      getDescriptor().getMessageTypes().get(135);
     internal_static_rti1516_202X_fedpro_RequestAttributeTransportationTypeChangeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestAttributeTransportationTypeChangeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeTransportationTypeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(134);
+      getDescriptor().getMessageTypes().get(136);
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeTransportationTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeTransportationTypeRequest_descriptor,
-        new java.lang.String[] { "TheObjectClass", "Attributes", "TransportationType", });
+        new java.lang.String[] { "ObjectClass", "Attributes", "TransportationType", });
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeTransportationTypeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(135);
+      getDescriptor().getMessageTypes().get(137);
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeTransportationTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeTransportationTypeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryAttributeTransportationTypeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(136);
+      getDescriptor().getMessageTypes().get(138);
     internal_static_rti1516_202X_fedpro_QueryAttributeTransportationTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryAttributeTransportationTypeRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attribute", });
     internal_static_rti1516_202X_fedpro_QueryAttributeTransportationTypeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(137);
+      getDescriptor().getMessageTypes().get(139);
     internal_static_rti1516_202X_fedpro_QueryAttributeTransportationTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryAttributeTransportationTypeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_RequestInteractionTransportationTypeChangeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(138);
+      getDescriptor().getMessageTypes().get(140);
     internal_static_rti1516_202X_fedpro_RequestInteractionTransportationTypeChangeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestInteractionTransportationTypeChangeRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "TransportationType", });
     internal_static_rti1516_202X_fedpro_RequestInteractionTransportationTypeChangeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(139);
+      getDescriptor().getMessageTypes().get(141);
     internal_static_rti1516_202X_fedpro_RequestInteractionTransportationTypeChangeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestInteractionTransportationTypeChangeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryInteractionTransportationTypeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(140);
+      getDescriptor().getMessageTypes().get(142);
     internal_static_rti1516_202X_fedpro_QueryInteractionTransportationTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryInteractionTransportationTypeRequest_descriptor,
         new java.lang.String[] { "Federate", "InteractionClass", });
     internal_static_rti1516_202X_fedpro_QueryInteractionTransportationTypeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(141);
+      getDescriptor().getMessageTypes().get(143);
     internal_static_rti1516_202X_fedpro_QueryInteractionTransportationTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryInteractionTransportationTypeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_UnconditionalAttributeOwnershipDivestitureRequest_descriptor =
-      getDescriptor().getMessageTypes().get(142);
+      getDescriptor().getMessageTypes().get(144);
     internal_static_rti1516_202X_fedpro_UnconditionalAttributeOwnershipDivestitureRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnconditionalAttributeOwnershipDivestitureRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_UnconditionalAttributeOwnershipDivestitureResponse_descriptor =
-      getDescriptor().getMessageTypes().get(143);
+      getDescriptor().getMessageTypes().get(145);
     internal_static_rti1516_202X_fedpro_UnconditionalAttributeOwnershipDivestitureResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnconditionalAttributeOwnershipDivestitureResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_NegotiatedAttributeOwnershipDivestitureRequest_descriptor =
-      getDescriptor().getMessageTypes().get(144);
+      getDescriptor().getMessageTypes().get(146);
     internal_static_rti1516_202X_fedpro_NegotiatedAttributeOwnershipDivestitureRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NegotiatedAttributeOwnershipDivestitureRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_NegotiatedAttributeOwnershipDivestitureResponse_descriptor =
-      getDescriptor().getMessageTypes().get(145);
+      getDescriptor().getMessageTypes().get(147);
     internal_static_rti1516_202X_fedpro_NegotiatedAttributeOwnershipDivestitureResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NegotiatedAttributeOwnershipDivestitureResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_ConfirmDivestitureRequest_descriptor =
-      getDescriptor().getMessageTypes().get(146);
+      getDescriptor().getMessageTypes().get(148);
     internal_static_rti1516_202X_fedpro_ConfirmDivestitureRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConfirmDivestitureRequest_descriptor,
-        new java.lang.String[] { "ObjectInstance", "Attributes", "UserSuppliedTag", });
+        new java.lang.String[] { "ObjectInstance", "ConfirmedAttributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_ConfirmDivestitureResponse_descriptor =
-      getDescriptor().getMessageTypes().get(147);
+      getDescriptor().getMessageTypes().get(149);
     internal_static_rti1516_202X_fedpro_ConfirmDivestitureResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConfirmDivestitureResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(148);
+      getDescriptor().getMessageTypes().get(150);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "DesiredAttributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(149);
+      getDescriptor().getMessageTypes().get(151);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionIfAvailableRequest_descriptor =
-      getDescriptor().getMessageTypes().get(150);
+      getDescriptor().getMessageTypes().get(152);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionIfAvailableRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionIfAvailableRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "DesiredAttributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionIfAvailableResponse_descriptor =
-      getDescriptor().getMessageTypes().get(151);
+      getDescriptor().getMessageTypes().get(153);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionIfAvailableResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipAcquisitionIfAvailableResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipReleaseDeniedRequest_descriptor =
-      getDescriptor().getMessageTypes().get(152);
+      getDescriptor().getMessageTypes().get(154);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipReleaseDeniedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipReleaseDeniedRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipReleaseDeniedResponse_descriptor =
-      getDescriptor().getMessageTypes().get(153);
+      getDescriptor().getMessageTypes().get(155);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipReleaseDeniedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipReleaseDeniedResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipDivestitureIfWantedRequest_descriptor =
-      getDescriptor().getMessageTypes().get(154);
+      getDescriptor().getMessageTypes().get(156);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipDivestitureIfWantedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipDivestitureIfWantedRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_AttributeOwnershipDivestitureIfWantedResponse_descriptor =
-      getDescriptor().getMessageTypes().get(155);
+      getDescriptor().getMessageTypes().get(157);
     internal_static_rti1516_202X_fedpro_AttributeOwnershipDivestitureIfWantedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AttributeOwnershipDivestitureIfWantedResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_CancelNegotiatedAttributeOwnershipDivestitureRequest_descriptor =
-      getDescriptor().getMessageTypes().get(156);
+      getDescriptor().getMessageTypes().get(158);
     internal_static_rti1516_202X_fedpro_CancelNegotiatedAttributeOwnershipDivestitureRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CancelNegotiatedAttributeOwnershipDivestitureRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", });
     internal_static_rti1516_202X_fedpro_CancelNegotiatedAttributeOwnershipDivestitureResponse_descriptor =
-      getDescriptor().getMessageTypes().get(157);
+      getDescriptor().getMessageTypes().get(159);
     internal_static_rti1516_202X_fedpro_CancelNegotiatedAttributeOwnershipDivestitureResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CancelNegotiatedAttributeOwnershipDivestitureResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_CancelAttributeOwnershipAcquisitionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(158);
+      getDescriptor().getMessageTypes().get(160);
     internal_static_rti1516_202X_fedpro_CancelAttributeOwnershipAcquisitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CancelAttributeOwnershipAcquisitionRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", });
     internal_static_rti1516_202X_fedpro_CancelAttributeOwnershipAcquisitionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(159);
+      getDescriptor().getMessageTypes().get(161);
     internal_static_rti1516_202X_fedpro_CancelAttributeOwnershipAcquisitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CancelAttributeOwnershipAcquisitionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryAttributeOwnershipRequest_descriptor =
-      getDescriptor().getMessageTypes().get(160);
+      getDescriptor().getMessageTypes().get(162);
     internal_static_rti1516_202X_fedpro_QueryAttributeOwnershipRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryAttributeOwnershipRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", });
     internal_static_rti1516_202X_fedpro_QueryAttributeOwnershipResponse_descriptor =
-      getDescriptor().getMessageTypes().get(161);
+      getDescriptor().getMessageTypes().get(163);
     internal_static_rti1516_202X_fedpro_QueryAttributeOwnershipResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryAttributeOwnershipResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_IsAttributeOwnedByFederateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(162);
+      getDescriptor().getMessageTypes().get(164);
     internal_static_rti1516_202X_fedpro_IsAttributeOwnedByFederateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_IsAttributeOwnedByFederateRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attribute", });
     internal_static_rti1516_202X_fedpro_IsAttributeOwnedByFederateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(163);
+      getDescriptor().getMessageTypes().get(165);
     internal_static_rti1516_202X_fedpro_IsAttributeOwnedByFederateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_IsAttributeOwnedByFederateResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_EnableTimeRegulationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(164);
+      getDescriptor().getMessageTypes().get(166);
     internal_static_rti1516_202X_fedpro_EnableTimeRegulationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_EnableTimeRegulationRequest_descriptor,
         new java.lang.String[] { "Lookahead", });
     internal_static_rti1516_202X_fedpro_EnableTimeRegulationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(165);
+      getDescriptor().getMessageTypes().get(167);
     internal_static_rti1516_202X_fedpro_EnableTimeRegulationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_EnableTimeRegulationResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DisableTimeRegulationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(166);
+      getDescriptor().getMessageTypes().get(168);
     internal_static_rti1516_202X_fedpro_DisableTimeRegulationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisableTimeRegulationRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DisableTimeRegulationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(167);
+      getDescriptor().getMessageTypes().get(169);
     internal_static_rti1516_202X_fedpro_DisableTimeRegulationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisableTimeRegulationResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_EnableTimeConstrainedRequest_descriptor =
-      getDescriptor().getMessageTypes().get(168);
+      getDescriptor().getMessageTypes().get(170);
     internal_static_rti1516_202X_fedpro_EnableTimeConstrainedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_EnableTimeConstrainedRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_EnableTimeConstrainedResponse_descriptor =
-      getDescriptor().getMessageTypes().get(169);
+      getDescriptor().getMessageTypes().get(171);
     internal_static_rti1516_202X_fedpro_EnableTimeConstrainedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_EnableTimeConstrainedResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DisableTimeConstrainedRequest_descriptor =
-      getDescriptor().getMessageTypes().get(170);
+      getDescriptor().getMessageTypes().get(172);
     internal_static_rti1516_202X_fedpro_DisableTimeConstrainedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisableTimeConstrainedRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DisableTimeConstrainedResponse_descriptor =
-      getDescriptor().getMessageTypes().get(171);
+      getDescriptor().getMessageTypes().get(173);
     internal_static_rti1516_202X_fedpro_DisableTimeConstrainedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisableTimeConstrainedResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestRequest_descriptor =
-      getDescriptor().getMessageTypes().get(172);
+      getDescriptor().getMessageTypes().get(174);
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_TimeAdvanceRequestRequest_descriptor,
         new java.lang.String[] { "Time", });
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestResponse_descriptor =
-      getDescriptor().getMessageTypes().get(173);
+      getDescriptor().getMessageTypes().get(175);
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_TimeAdvanceRequestResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestAvailableRequest_descriptor =
-      getDescriptor().getMessageTypes().get(174);
+      getDescriptor().getMessageTypes().get(176);
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestAvailableRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_TimeAdvanceRequestAvailableRequest_descriptor,
         new java.lang.String[] { "Time", });
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestAvailableResponse_descriptor =
-      getDescriptor().getMessageTypes().get(175);
+      getDescriptor().getMessageTypes().get(177);
     internal_static_rti1516_202X_fedpro_TimeAdvanceRequestAvailableResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_TimeAdvanceRequestAvailableResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_NextMessageRequestRequest_descriptor =
-      getDescriptor().getMessageTypes().get(176);
+      getDescriptor().getMessageTypes().get(178);
     internal_static_rti1516_202X_fedpro_NextMessageRequestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NextMessageRequestRequest_descriptor,
         new java.lang.String[] { "Time", });
     internal_static_rti1516_202X_fedpro_NextMessageRequestResponse_descriptor =
-      getDescriptor().getMessageTypes().get(177);
+      getDescriptor().getMessageTypes().get(179);
     internal_static_rti1516_202X_fedpro_NextMessageRequestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NextMessageRequestResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_NextMessageRequestAvailableRequest_descriptor =
-      getDescriptor().getMessageTypes().get(178);
+      getDescriptor().getMessageTypes().get(180);
     internal_static_rti1516_202X_fedpro_NextMessageRequestAvailableRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NextMessageRequestAvailableRequest_descriptor,
         new java.lang.String[] { "Time", });
     internal_static_rti1516_202X_fedpro_NextMessageRequestAvailableResponse_descriptor =
-      getDescriptor().getMessageTypes().get(179);
+      getDescriptor().getMessageTypes().get(181);
     internal_static_rti1516_202X_fedpro_NextMessageRequestAvailableResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NextMessageRequestAvailableResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_FlushQueueRequestRequest_descriptor =
-      getDescriptor().getMessageTypes().get(180);
+      getDescriptor().getMessageTypes().get(182);
     internal_static_rti1516_202X_fedpro_FlushQueueRequestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_FlushQueueRequestRequest_descriptor,
         new java.lang.String[] { "Time", });
     internal_static_rti1516_202X_fedpro_FlushQueueRequestResponse_descriptor =
-      getDescriptor().getMessageTypes().get(181);
+      getDescriptor().getMessageTypes().get(183);
     internal_static_rti1516_202X_fedpro_FlushQueueRequestResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_FlushQueueRequestResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_EnableAsynchronousDeliveryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(182);
+      getDescriptor().getMessageTypes().get(184);
     internal_static_rti1516_202X_fedpro_EnableAsynchronousDeliveryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_EnableAsynchronousDeliveryRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_EnableAsynchronousDeliveryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(183);
+      getDescriptor().getMessageTypes().get(185);
     internal_static_rti1516_202X_fedpro_EnableAsynchronousDeliveryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_EnableAsynchronousDeliveryResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DisableAsynchronousDeliveryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(184);
+      getDescriptor().getMessageTypes().get(186);
     internal_static_rti1516_202X_fedpro_DisableAsynchronousDeliveryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisableAsynchronousDeliveryRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DisableAsynchronousDeliveryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(185);
+      getDescriptor().getMessageTypes().get(187);
     internal_static_rti1516_202X_fedpro_DisableAsynchronousDeliveryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisableAsynchronousDeliveryResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryGALTRequest_descriptor =
-      getDescriptor().getMessageTypes().get(186);
+      getDescriptor().getMessageTypes().get(188);
     internal_static_rti1516_202X_fedpro_QueryGALTRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryGALTRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryGALTResponse_descriptor =
-      getDescriptor().getMessageTypes().get(187);
+      getDescriptor().getMessageTypes().get(189);
     internal_static_rti1516_202X_fedpro_QueryGALTResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryGALTResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_QueryLogicalTimeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(188);
+      getDescriptor().getMessageTypes().get(190);
     internal_static_rti1516_202X_fedpro_QueryLogicalTimeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryLogicalTimeRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryLogicalTimeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(189);
+      getDescriptor().getMessageTypes().get(191);
     internal_static_rti1516_202X_fedpro_QueryLogicalTimeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryLogicalTimeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_QueryLITSRequest_descriptor =
-      getDescriptor().getMessageTypes().get(190);
+      getDescriptor().getMessageTypes().get(192);
     internal_static_rti1516_202X_fedpro_QueryLITSRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryLITSRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryLITSResponse_descriptor =
-      getDescriptor().getMessageTypes().get(191);
+      getDescriptor().getMessageTypes().get(193);
     internal_static_rti1516_202X_fedpro_QueryLITSResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryLITSResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_ModifyLookaheadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(192);
+      getDescriptor().getMessageTypes().get(194);
     internal_static_rti1516_202X_fedpro_ModifyLookaheadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ModifyLookaheadRequest_descriptor,
         new java.lang.String[] { "Lookahead", });
     internal_static_rti1516_202X_fedpro_ModifyLookaheadResponse_descriptor =
-      getDescriptor().getMessageTypes().get(193);
+      getDescriptor().getMessageTypes().get(195);
     internal_static_rti1516_202X_fedpro_ModifyLookaheadResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ModifyLookaheadResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryLookaheadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(194);
+      getDescriptor().getMessageTypes().get(196);
     internal_static_rti1516_202X_fedpro_QueryLookaheadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryLookaheadRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_QueryLookaheadResponse_descriptor =
-      getDescriptor().getMessageTypes().get(195);
+      getDescriptor().getMessageTypes().get(197);
     internal_static_rti1516_202X_fedpro_QueryLookaheadResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_QueryLookaheadResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_RetractRequest_descriptor =
-      getDescriptor().getMessageTypes().get(196);
+      getDescriptor().getMessageTypes().get(198);
     internal_static_rti1516_202X_fedpro_RetractRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RetractRequest_descriptor,
         new java.lang.String[] { "Retraction", });
     internal_static_rti1516_202X_fedpro_RetractResponse_descriptor =
-      getDescriptor().getMessageTypes().get(197);
+      getDescriptor().getMessageTypes().get(199);
     internal_static_rti1516_202X_fedpro_RetractResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RetractResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_ChangeAttributeOrderTypeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(198);
+      getDescriptor().getMessageTypes().get(200);
     internal_static_rti1516_202X_fedpro_ChangeAttributeOrderTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeAttributeOrderTypeRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attributes", "OrderType", });
     internal_static_rti1516_202X_fedpro_ChangeAttributeOrderTypeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(199);
+      getDescriptor().getMessageTypes().get(201);
     internal_static_rti1516_202X_fedpro_ChangeAttributeOrderTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeAttributeOrderTypeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeOrderTypeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(200);
+      getDescriptor().getMessageTypes().get(202);
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeOrderTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeOrderTypeRequest_descriptor,
         new java.lang.String[] { "TheObjectClass", "Attributes", "OrderType", });
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeOrderTypeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(201);
+      getDescriptor().getMessageTypes().get(203);
     internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeOrderTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeDefaultAttributeOrderTypeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_ChangeInteractionOrderTypeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(202);
+      getDescriptor().getMessageTypes().get(204);
     internal_static_rti1516_202X_fedpro_ChangeInteractionOrderTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeInteractionOrderTypeRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "OrderType", });
     internal_static_rti1516_202X_fedpro_ChangeInteractionOrderTypeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(203);
+      getDescriptor().getMessageTypes().get(205);
     internal_static_rti1516_202X_fedpro_ChangeInteractionOrderTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ChangeInteractionOrderTypeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_CreateRegionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(204);
+      getDescriptor().getMessageTypes().get(206);
     internal_static_rti1516_202X_fedpro_CreateRegionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CreateRegionRequest_descriptor,
         new java.lang.String[] { "Dimensions", });
     internal_static_rti1516_202X_fedpro_CreateRegionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(205);
+      getDescriptor().getMessageTypes().get(207);
     internal_static_rti1516_202X_fedpro_CreateRegionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CreateRegionResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_CommitRegionModificationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(206);
+      getDescriptor().getMessageTypes().get(208);
     internal_static_rti1516_202X_fedpro_CommitRegionModificationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CommitRegionModificationsRequest_descriptor,
         new java.lang.String[] { "Regions", });
     internal_static_rti1516_202X_fedpro_CommitRegionModificationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(207);
+      getDescriptor().getMessageTypes().get(209);
     internal_static_rti1516_202X_fedpro_CommitRegionModificationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CommitRegionModificationsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DeleteRegionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(208);
+      getDescriptor().getMessageTypes().get(210);
     internal_static_rti1516_202X_fedpro_DeleteRegionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DeleteRegionRequest_descriptor,
-        new java.lang.String[] { "TheRegion", });
+        new java.lang.String[] { "Region", });
     internal_static_rti1516_202X_fedpro_DeleteRegionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(209);
+      getDescriptor().getMessageTypes().get(211);
     internal_static_rti1516_202X_fedpro_DeleteRegionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DeleteRegionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(210);
+      getDescriptor().getMessageTypes().get(212);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithRegionsRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "AttributesAndRegions", });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(211);
+      getDescriptor().getMessageTypes().get(213);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithRegionsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameAndRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(212);
+      getDescriptor().getMessageTypes().get(214);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameAndRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameAndRegionsRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "AttributesAndRegions", "ObjectInstanceName", });
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameAndRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(213);
+      getDescriptor().getMessageTypes().get(215);
     internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameAndRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RegisterObjectInstanceWithNameAndRegionsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_AssociateRegionsForUpdatesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(214);
+      getDescriptor().getMessageTypes().get(216);
     internal_static_rti1516_202X_fedpro_AssociateRegionsForUpdatesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AssociateRegionsForUpdatesRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "AttributesAndRegions", });
     internal_static_rti1516_202X_fedpro_AssociateRegionsForUpdatesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(215);
+      getDescriptor().getMessageTypes().get(217);
     internal_static_rti1516_202X_fedpro_AssociateRegionsForUpdatesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_AssociateRegionsForUpdatesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_UnassociateRegionsForUpdatesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(216);
+      getDescriptor().getMessageTypes().get(218);
     internal_static_rti1516_202X_fedpro_UnassociateRegionsForUpdatesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnassociateRegionsForUpdatesRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "AttributesAndRegions", });
     internal_static_rti1516_202X_fedpro_UnassociateRegionsForUpdatesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(217);
+      getDescriptor().getMessageTypes().get(219);
     internal_static_rti1516_202X_fedpro_UnassociateRegionsForUpdatesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnassociateRegionsForUpdatesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(218);
+      getDescriptor().getMessageTypes().get(220);
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "AttributesAndRegions", "Active", });
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(219);
+      getDescriptor().getMessageTypes().get(221);
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsAndRateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(220);
+      getDescriptor().getMessageTypes().get(222);
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsAndRateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsAndRateRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "AttributesAndRegions", "Active", "UpdateRateDesignator", });
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsAndRateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(221);
+      getDescriptor().getMessageTypes().get(223);
     internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsAndRateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeObjectClassAttributesWithRegionsAndRateResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesWithRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(222);
+      getDescriptor().getMessageTypes().get(224);
     internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesWithRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesWithRegionsRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "AttributesAndRegions", });
     internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesWithRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(223);
+      getDescriptor().getMessageTypes().get(225);
     internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesWithRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnsubscribeObjectClassAttributesWithRegionsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassWithRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(224);
+      getDescriptor().getMessageTypes().get(226);
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassWithRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeInteractionClassWithRegionsRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "Active", "Regions", });
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassWithRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(225);
+      getDescriptor().getMessageTypes().get(227);
     internal_static_rti1516_202X_fedpro_SubscribeInteractionClassWithRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SubscribeInteractionClassWithRegionsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassWithRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(226);
+      getDescriptor().getMessageTypes().get(228);
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassWithRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassWithRegionsRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "Regions", });
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassWithRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(227);
+      getDescriptor().getMessageTypes().get(229);
     internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassWithRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_UnsubscribeInteractionClassWithRegionsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(228);
+      getDescriptor().getMessageTypes().get(230);
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "ParameterValues", "Regions", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(229);
+      getDescriptor().getMessageTypes().get(231);
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsAndTimeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(230);
+      getDescriptor().getMessageTypes().get(232);
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsAndTimeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsAndTimeRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "ParameterValues", "Regions", "UserSuppliedTag", "Time", });
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsAndTimeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(231);
+      getDescriptor().getMessageTypes().get(233);
     internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsAndTimeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SendInteractionWithRegionsAndTimeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_RequestAttributeValueUpdateWithRegionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(232);
+      getDescriptor().getMessageTypes().get(234);
     internal_static_rti1516_202X_fedpro_RequestAttributeValueUpdateWithRegionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestAttributeValueUpdateWithRegionsRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "AttributesAndRegions", "UserSuppliedTag", });
     internal_static_rti1516_202X_fedpro_RequestAttributeValueUpdateWithRegionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(233);
+      getDescriptor().getMessageTypes().get(235);
     internal_static_rti1516_202X_fedpro_RequestAttributeValueUpdateWithRegionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_RequestAttributeValueUpdateWithRegionsResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_descriptor =
-      getDescriptor().getMessageTypes().get(234);
-    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_descriptor =
-      getDescriptor().getMessageTypes().get(235);
-    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_descriptor =
-      getDescriptor().getMessageTypes().get(236);
-    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_descriptor,
-        new java.lang.String[] { "ResignAction", });
-    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_descriptor =
-      getDescriptor().getMessageTypes().get(237);
-    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_descriptor,
-        new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_GetFederateHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(238);
+      getDescriptor().getMessageTypes().get(236);
     internal_static_rti1516_202X_fedpro_GetFederateHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetFederateHandleRequest_descriptor,
         new java.lang.String[] { "FederateName", });
     internal_static_rti1516_202X_fedpro_GetFederateHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(239);
+      getDescriptor().getMessageTypes().get(237);
     internal_static_rti1516_202X_fedpro_GetFederateHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetFederateHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetFederateNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(240);
+      getDescriptor().getMessageTypes().get(238);
     internal_static_rti1516_202X_fedpro_GetFederateNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetFederateNameRequest_descriptor,
         new java.lang.String[] { "Federate", });
     internal_static_rti1516_202X_fedpro_GetFederateNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(241);
+      getDescriptor().getMessageTypes().get(239);
     internal_static_rti1516_202X_fedpro_GetFederateNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetFederateNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetObjectClassHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(242);
+      getDescriptor().getMessageTypes().get(240);
     internal_static_rti1516_202X_fedpro_GetObjectClassHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectClassHandleRequest_descriptor,
         new java.lang.String[] { "ObjectClassName", });
     internal_static_rti1516_202X_fedpro_GetObjectClassHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(243);
+      getDescriptor().getMessageTypes().get(241);
     internal_static_rti1516_202X_fedpro_GetObjectClassHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectClassHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetObjectClassNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(244);
+      getDescriptor().getMessageTypes().get(242);
     internal_static_rti1516_202X_fedpro_GetObjectClassNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectClassNameRequest_descriptor,
         new java.lang.String[] { "ObjectClass", });
     internal_static_rti1516_202X_fedpro_GetObjectClassNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(245);
+      getDescriptor().getMessageTypes().get(243);
     internal_static_rti1516_202X_fedpro_GetObjectClassNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectClassNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetKnownObjectClassHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(246);
+      getDescriptor().getMessageTypes().get(244);
     internal_static_rti1516_202X_fedpro_GetKnownObjectClassHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetKnownObjectClassHandleRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", });
     internal_static_rti1516_202X_fedpro_GetKnownObjectClassHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(247);
+      getDescriptor().getMessageTypes().get(245);
     internal_static_rti1516_202X_fedpro_GetKnownObjectClassHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetKnownObjectClassHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetObjectInstanceHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(248);
+      getDescriptor().getMessageTypes().get(246);
     internal_static_rti1516_202X_fedpro_GetObjectInstanceHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectInstanceHandleRequest_descriptor,
         new java.lang.String[] { "ObjectInstanceName", });
     internal_static_rti1516_202X_fedpro_GetObjectInstanceHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(249);
+      getDescriptor().getMessageTypes().get(247);
     internal_static_rti1516_202X_fedpro_GetObjectInstanceHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectInstanceHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetObjectInstanceNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(250);
+      getDescriptor().getMessageTypes().get(248);
     internal_static_rti1516_202X_fedpro_GetObjectInstanceNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectInstanceNameRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", });
     internal_static_rti1516_202X_fedpro_GetObjectInstanceNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(251);
+      getDescriptor().getMessageTypes().get(249);
     internal_static_rti1516_202X_fedpro_GetObjectInstanceNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetObjectInstanceNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetAttributeHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(252);
+      getDescriptor().getMessageTypes().get(250);
     internal_static_rti1516_202X_fedpro_GetAttributeHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetAttributeHandleRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "AttributeName", });
     internal_static_rti1516_202X_fedpro_GetAttributeHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(253);
+      getDescriptor().getMessageTypes().get(251);
     internal_static_rti1516_202X_fedpro_GetAttributeHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetAttributeHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetAttributeNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(254);
+      getDescriptor().getMessageTypes().get(252);
     internal_static_rti1516_202X_fedpro_GetAttributeNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetAttributeNameRequest_descriptor,
         new java.lang.String[] { "ObjectClass", "Attribute", });
     internal_static_rti1516_202X_fedpro_GetAttributeNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(255);
+      getDescriptor().getMessageTypes().get(253);
     internal_static_rti1516_202X_fedpro_GetAttributeNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetAttributeNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueRequest_descriptor =
-      getDescriptor().getMessageTypes().get(256);
+      getDescriptor().getMessageTypes().get(254);
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetUpdateRateValueRequest_descriptor,
         new java.lang.String[] { "UpdateRateDesignator", });
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueResponse_descriptor =
-      getDescriptor().getMessageTypes().get(257);
+      getDescriptor().getMessageTypes().get(255);
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetUpdateRateValueResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueForAttributeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(258);
+      getDescriptor().getMessageTypes().get(256);
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueForAttributeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetUpdateRateValueForAttributeRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", "Attribute", });
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueForAttributeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(259);
+      getDescriptor().getMessageTypes().get(257);
     internal_static_rti1516_202X_fedpro_GetUpdateRateValueForAttributeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetUpdateRateValueForAttributeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetInteractionClassHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(260);
+      getDescriptor().getMessageTypes().get(258);
     internal_static_rti1516_202X_fedpro_GetInteractionClassHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetInteractionClassHandleRequest_descriptor,
         new java.lang.String[] { "InteractionClassName", });
     internal_static_rti1516_202X_fedpro_GetInteractionClassHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(261);
+      getDescriptor().getMessageTypes().get(259);
     internal_static_rti1516_202X_fedpro_GetInteractionClassHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetInteractionClassHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetInteractionClassNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(262);
+      getDescriptor().getMessageTypes().get(260);
     internal_static_rti1516_202X_fedpro_GetInteractionClassNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetInteractionClassNameRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_GetInteractionClassNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(263);
+      getDescriptor().getMessageTypes().get(261);
     internal_static_rti1516_202X_fedpro_GetInteractionClassNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetInteractionClassNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetParameterHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(264);
+      getDescriptor().getMessageTypes().get(262);
     internal_static_rti1516_202X_fedpro_GetParameterHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetParameterHandleRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "ParameterName", });
     internal_static_rti1516_202X_fedpro_GetParameterHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(265);
+      getDescriptor().getMessageTypes().get(263);
     internal_static_rti1516_202X_fedpro_GetParameterHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetParameterHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetParameterNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(266);
+      getDescriptor().getMessageTypes().get(264);
     internal_static_rti1516_202X_fedpro_GetParameterNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetParameterNameRequest_descriptor,
         new java.lang.String[] { "InteractionClass", "Parameter", });
     internal_static_rti1516_202X_fedpro_GetParameterNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(267);
+      getDescriptor().getMessageTypes().get(265);
     internal_static_rti1516_202X_fedpro_GetParameterNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetParameterNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetOrderTypeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(268);
+      getDescriptor().getMessageTypes().get(266);
     internal_static_rti1516_202X_fedpro_GetOrderTypeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetOrderTypeRequest_descriptor,
         new java.lang.String[] { "OrderTypeName", });
     internal_static_rti1516_202X_fedpro_GetOrderTypeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(269);
+      getDescriptor().getMessageTypes().get(267);
     internal_static_rti1516_202X_fedpro_GetOrderTypeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetOrderTypeResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetOrderNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(270);
+      getDescriptor().getMessageTypes().get(268);
     internal_static_rti1516_202X_fedpro_GetOrderNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetOrderNameRequest_descriptor,
         new java.lang.String[] { "OrderType", });
     internal_static_rti1516_202X_fedpro_GetOrderNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(271);
+      getDescriptor().getMessageTypes().get(269);
     internal_static_rti1516_202X_fedpro_GetOrderNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetOrderNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetTransportationTypeHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(272);
+      getDescriptor().getMessageTypes().get(270);
     internal_static_rti1516_202X_fedpro_GetTransportationTypeHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetTransportationTypeHandleRequest_descriptor,
         new java.lang.String[] { "TransportationTypeName", });
     internal_static_rti1516_202X_fedpro_GetTransportationTypeHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(273);
+      getDescriptor().getMessageTypes().get(271);
     internal_static_rti1516_202X_fedpro_GetTransportationTypeHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetTransportationTypeHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetTransportationTypeNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(274);
+      getDescriptor().getMessageTypes().get(272);
     internal_static_rti1516_202X_fedpro_GetTransportationTypeNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetTransportationTypeNameRequest_descriptor,
         new java.lang.String[] { "TransportationType", });
     internal_static_rti1516_202X_fedpro_GetTransportationTypeNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(275);
+      getDescriptor().getMessageTypes().get(273);
     internal_static_rti1516_202X_fedpro_GetTransportationTypeNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetTransportationTypeNameResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(276);
-    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassRequest_descriptor =
+      getDescriptor().getMessageTypes().get(274);
+    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeRequest_descriptor,
-        new java.lang.String[] { "ObjectClass", "Attribute", });
-    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(277);
-    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeResponse_fieldAccessorTable = new
+        internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassRequest_descriptor,
+        new java.lang.String[] { "ObjectClass", });
+    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassResponse_descriptor =
+      getDescriptor().getMessageTypes().get(275);
+    internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForClassAttributeResponse_descriptor,
+        internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForObjectClassResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForInteractionClassRequest_descriptor =
-      getDescriptor().getMessageTypes().get(278);
+      getDescriptor().getMessageTypes().get(276);
     internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForInteractionClassRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForInteractionClassRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForInteractionClassResponse_descriptor =
-      getDescriptor().getMessageTypes().get(279);
+      getDescriptor().getMessageTypes().get(277);
     internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForInteractionClassResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetAvailableDimensionsForInteractionClassResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetDimensionHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(280);
+      getDescriptor().getMessageTypes().get(278);
     internal_static_rti1516_202X_fedpro_GetDimensionHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionHandleRequest_descriptor,
         new java.lang.String[] { "DimensionName", });
     internal_static_rti1516_202X_fedpro_GetDimensionHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(281);
+      getDescriptor().getMessageTypes().get(279);
     internal_static_rti1516_202X_fedpro_GetDimensionHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetDimensionNameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(282);
+      getDescriptor().getMessageTypes().get(280);
     internal_static_rti1516_202X_fedpro_GetDimensionNameRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionNameRequest_descriptor,
         new java.lang.String[] { "Dimension", });
     internal_static_rti1516_202X_fedpro_GetDimensionNameResponse_descriptor =
-      getDescriptor().getMessageTypes().get(283);
+      getDescriptor().getMessageTypes().get(281);
     internal_static_rti1516_202X_fedpro_GetDimensionNameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionNameResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetDimensionUpperBoundRequest_descriptor =
-      getDescriptor().getMessageTypes().get(284);
+      getDescriptor().getMessageTypes().get(282);
     internal_static_rti1516_202X_fedpro_GetDimensionUpperBoundRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionUpperBoundRequest_descriptor,
         new java.lang.String[] { "Dimension", });
     internal_static_rti1516_202X_fedpro_GetDimensionUpperBoundResponse_descriptor =
-      getDescriptor().getMessageTypes().get(285);
+      getDescriptor().getMessageTypes().get(283);
     internal_static_rti1516_202X_fedpro_GetDimensionUpperBoundResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionUpperBoundResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetDimensionHandleSetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(286);
+      getDescriptor().getMessageTypes().get(284);
     internal_static_rti1516_202X_fedpro_GetDimensionHandleSetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionHandleSetRequest_descriptor,
         new java.lang.String[] { "Region", });
     internal_static_rti1516_202X_fedpro_GetDimensionHandleSetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(287);
+      getDescriptor().getMessageTypes().get(285);
     internal_static_rti1516_202X_fedpro_GetDimensionHandleSetResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetDimensionHandleSetResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_GetRangeBoundsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(288);
+      getDescriptor().getMessageTypes().get(286);
     internal_static_rti1516_202X_fedpro_GetRangeBoundsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetRangeBoundsRequest_descriptor,
         new java.lang.String[] { "Region", "Dimension", });
     internal_static_rti1516_202X_fedpro_GetRangeBoundsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(289);
+      getDescriptor().getMessageTypes().get(287);
     internal_static_rti1516_202X_fedpro_GetRangeBoundsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_GetRangeBoundsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_SetRangeBoundsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(290);
+      getDescriptor().getMessageTypes().get(288);
     internal_static_rti1516_202X_fedpro_SetRangeBoundsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SetRangeBoundsRequest_descriptor,
         new java.lang.String[] { "Region", "Dimension", "RangeBounds", });
     internal_static_rti1516_202X_fedpro_SetRangeBoundsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(291);
+      getDescriptor().getMessageTypes().get(289);
     internal_static_rti1516_202X_fedpro_SetRangeBoundsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_SetRangeBoundsResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_NormalizeServiceGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(292);
+      getDescriptor().getMessageTypes().get(290);
     internal_static_rti1516_202X_fedpro_NormalizeServiceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeServiceGroupRequest_descriptor,
         new java.lang.String[] { "ServiceGroup", });
     internal_static_rti1516_202X_fedpro_NormalizeServiceGroupResponse_descriptor =
-      getDescriptor().getMessageTypes().get(293);
+      getDescriptor().getMessageTypes().get(291);
     internal_static_rti1516_202X_fedpro_NormalizeServiceGroupResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeServiceGroupResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_NormalizeFederateHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(294);
+      getDescriptor().getMessageTypes().get(292);
     internal_static_rti1516_202X_fedpro_NormalizeFederateHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeFederateHandleRequest_descriptor,
         new java.lang.String[] { "Federate", });
     internal_static_rti1516_202X_fedpro_NormalizeFederateHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(295);
+      getDescriptor().getMessageTypes().get(293);
     internal_static_rti1516_202X_fedpro_NormalizeFederateHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeFederateHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_NormalizeObjectClassHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(296);
+      getDescriptor().getMessageTypes().get(294);
     internal_static_rti1516_202X_fedpro_NormalizeObjectClassHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeObjectClassHandleRequest_descriptor,
         new java.lang.String[] { "ObjectClass", });
     internal_static_rti1516_202X_fedpro_NormalizeObjectClassHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(297);
+      getDescriptor().getMessageTypes().get(295);
     internal_static_rti1516_202X_fedpro_NormalizeObjectClassHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeObjectClassHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_NormalizeInteractionClassHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(298);
+      getDescriptor().getMessageTypes().get(296);
     internal_static_rti1516_202X_fedpro_NormalizeInteractionClassHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeInteractionClassHandleRequest_descriptor,
         new java.lang.String[] { "InteractionClass", });
     internal_static_rti1516_202X_fedpro_NormalizeInteractionClassHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(299);
+      getDescriptor().getMessageTypes().get(297);
     internal_static_rti1516_202X_fedpro_NormalizeInteractionClassHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeInteractionClassHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_rti1516_202X_fedpro_NormalizeObjectInstanceHandleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(300);
+      getDescriptor().getMessageTypes().get(298);
     internal_static_rti1516_202X_fedpro_NormalizeObjectInstanceHandleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeObjectInstanceHandleRequest_descriptor,
         new java.lang.String[] { "ObjectInstance", });
     internal_static_rti1516_202X_fedpro_NormalizeObjectInstanceHandleResponse_descriptor =
-      getDescriptor().getMessageTypes().get(301);
+      getDescriptor().getMessageTypes().get(299);
     internal_static_rti1516_202X_fedpro_NormalizeObjectInstanceHandleResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_NormalizeObjectInstanceHandleResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchRequest_descriptor =
+    internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(300);
+    internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(301);
+    internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetObjectClassRelevanceAdvisorySwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(302);
-    internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchResponse_descriptor =
+        internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(303);
-    internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableObjectClassRelevanceAdvisorySwitchResponse_descriptor,
+        internal_static_rti1516_202X_fedpro_SetObjectClassRelevanceAdvisorySwitchResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchRequest_descriptor =
+    internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(304);
-    internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchRequest_descriptor,
+        internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchResponse_descriptor =
+    internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(305);
-    internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableObjectClassRelevanceAdvisorySwitchResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchRequest_descriptor =
+        internal_static_rti1516_202X_fedpro_GetAttributeRelevanceAdvisorySwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(306);
-    internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchResponse_descriptor =
+        internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(307);
-    internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableAttributeRelevanceAdvisorySwitchResponse_descriptor,
+        internal_static_rti1516_202X_fedpro_SetAttributeRelevanceAdvisorySwitchResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchRequest_descriptor =
+    internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(308);
-    internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchRequest_descriptor,
+        internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchResponse_descriptor =
+    internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(309);
-    internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableAttributeRelevanceAdvisorySwitchResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchRequest_descriptor =
+        internal_static_rti1516_202X_fedpro_GetAttributeScopeAdvisorySwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(310);
-    internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchResponse_descriptor =
+        internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(311);
-    internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableAttributeScopeAdvisorySwitchResponse_descriptor,
+        internal_static_rti1516_202X_fedpro_SetAttributeScopeAdvisorySwitchResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchRequest_descriptor =
+    internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(312);
-    internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchRequest_descriptor,
+        internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchResponse_descriptor =
+    internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(313);
-    internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableAttributeScopeAdvisorySwitchResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchRequest_descriptor =
+        internal_static_rti1516_202X_fedpro_GetInteractionRelevanceAdvisorySwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(314);
-    internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchResponse_descriptor =
+        internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(315);
-    internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_EnableInteractionRelevanceAdvisorySwitchResponse_descriptor,
+        internal_static_rti1516_202X_fedpro_SetInteractionRelevanceAdvisorySwitchResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchRequest_descriptor =
+    internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(316);
-    internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchRequest_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchRequest_descriptor,
+        internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchResponse_descriptor =
+    internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchResponse_descriptor =
       getDescriptor().getMessageTypes().get(317);
-    internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchResponse_fieldAccessorTable = new
+    internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rti1516_202X_fedpro_DisableInteractionRelevanceAdvisorySwitchResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_rti1516_202X_fedpro_ConnectRequest_descriptor =
+        internal_static_rti1516_202X_fedpro_GetConveyRegionDesignatorSetsSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchRequest_descriptor =
       getDescriptor().getMessageTypes().get(318);
+    internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(319);
+    internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetConveyRegionDesignatorSetsSwitchResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_descriptor =
+      getDescriptor().getMessageTypes().get(320);
+    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_descriptor =
+      getDescriptor().getMessageTypes().get(321);
+    internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAutomaticResignDirectiveResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_descriptor =
+      getDescriptor().getMessageTypes().get(322);
+    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_descriptor =
+      getDescriptor().getMessageTypes().get(323);
+    internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetAutomaticResignDirectiveResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(324);
+    internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(325);
+    internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetServiceReportingSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(326);
+    internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(327);
+    internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetServiceReportingSwitchResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(328);
+    internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(329);
+    internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetExceptionReportingSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(330);
+    internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(331);
+    internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetExceptionReportingSwitchResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(332);
+    internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(333);
+    internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetSendServiceReportsToFileSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(334);
+    internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchRequest_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(335);
+    internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_SetSendServiceReportsToFileSwitchResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(336);
+    internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(337);
+    internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAutoProvideSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(338);
+    internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(339);
+    internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetDelaySubscriptionEvaluationSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(340);
+    internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(341);
+    internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAdvisoriesUseKnownClassSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(342);
+    internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(343);
+    internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetAllowRelaxedDDMSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(344);
+    internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchResponse_descriptor =
+      getDescriptor().getMessageTypes().get(345);
+    internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_rti1516_202X_fedpro_GetNonRegulatedGrantSwitchResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_rti1516_202X_fedpro_ConnectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(346);
     internal_static_rti1516_202X_fedpro_ConnectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_ConnectResponse_descriptor =
-      getDescriptor().getMessageTypes().get(319);
+      getDescriptor().getMessageTypes().get(347);
     internal_static_rti1516_202X_fedpro_ConnectResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectResponse_descriptor,
         new java.lang.String[] { "ConfigurationResult", });
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(320);
+      getDescriptor().getMessageTypes().get(348);
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectWithConfigurationRequest_descriptor,
         new java.lang.String[] { "RtiConfiguration", });
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(321);
+      getDescriptor().getMessageTypes().get(349);
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectWithConfigurationResponse_descriptor,
         new java.lang.String[] { "ConfigurationResult", });
     internal_static_rti1516_202X_fedpro_ConnectWithCredentialsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(322);
+      getDescriptor().getMessageTypes().get(350);
     internal_static_rti1516_202X_fedpro_ConnectWithCredentialsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectWithCredentialsRequest_descriptor,
         new java.lang.String[] { "Credentials", });
     internal_static_rti1516_202X_fedpro_ConnectWithCredentialsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(323);
+      getDescriptor().getMessageTypes().get(351);
     internal_static_rti1516_202X_fedpro_ConnectWithCredentialsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectWithCredentialsResponse_descriptor,
         new java.lang.String[] { "ConfigurationResult", });
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationAndCredentialsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(324);
+      getDescriptor().getMessageTypes().get(352);
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationAndCredentialsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectWithConfigurationAndCredentialsRequest_descriptor,
         new java.lang.String[] { "RtiConfiguration", "Credentials", });
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationAndCredentialsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(325);
+      getDescriptor().getMessageTypes().get(353);
     internal_static_rti1516_202X_fedpro_ConnectWithConfigurationAndCredentialsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_ConnectWithConfigurationAndCredentialsResponse_descriptor,
         new java.lang.String[] { "ConfigurationResult", });
     internal_static_rti1516_202X_fedpro_DisconnectRequest_descriptor =
-      getDescriptor().getMessageTypes().get(326);
+      getDescriptor().getMessageTypes().get(354);
     internal_static_rti1516_202X_fedpro_DisconnectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisconnectRequest_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_DisconnectResponse_descriptor =
-      getDescriptor().getMessageTypes().get(327);
+      getDescriptor().getMessageTypes().get(355);
     internal_static_rti1516_202X_fedpro_DisconnectResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_DisconnectResponse_descriptor,
         new java.lang.String[] { });
     internal_static_rti1516_202X_fedpro_CallRequest_descriptor =
-      getDescriptor().getMessageTypes().get(328);
+      getDescriptor().getMessageTypes().get(356);
     internal_static_rti1516_202X_fedpro_CallRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CallRequest_descriptor,
-        new java.lang.String[] { "ConnectRequest", "ConnectWithCredentialsRequest", "ConnectWithConfigurationRequest", "ConnectWithConfigurationAndCredentialsRequest", "DisconnectRequest", "CreateFederationExecutionRequest", "CreateFederationExecutionWithTimeRequest", "CreateFederationExecutionWithModulesRequest", "CreateFederationExecutionWithModulesAndTimeRequest", "CreateFederationExecutionWithMIMRequest", "CreateFederationExecutionWithMIMAndTimeRequest", "DestroyFederationExecutionRequest", "ListFederationExecutionsRequest", "ListFederationExecutionMembersRequest", "JoinFederationExecutionRequest", "JoinFederationExecutionWithModulesRequest", "JoinFederationExecutionWithNameRequest", "JoinFederationExecutionWithNameAndModulesRequest", "ResignFederationExecutionRequest", "RegisterFederationSynchronizationPointRequest", "RegisterFederationSynchronizationPointWithSetRequest", "SynchronizationPointAchievedRequest", "RequestFederationSaveRequest", "RequestFederationSaveWithTimeRequest", "FederateSaveBegunRequest", "FederateSaveCompleteRequest", "FederateSaveNotCompleteRequest", "AbortFederationSaveRequest", "QueryFederationSaveStatusRequest", "RequestFederationRestoreRequest", "FederateRestoreCompleteRequest", "FederateRestoreNotCompleteRequest", "AbortFederationRestoreRequest", "QueryFederationRestoreStatusRequest", "PublishObjectClassAttributesRequest", "UnpublishObjectClassRequest", "UnpublishObjectClassAttributesRequest", "PublishObjectClassDirectedInteractionsRequest", "UnpublishObjectClassDirectedInteractionsRequest", "UnpublishObjectClassDirectedInteractionsWithSetRequest", "PublishInteractionClassRequest", "UnpublishInteractionClassRequest", "SubscribeObjectClassAttributesRequest", "SubscribeObjectClassAttributesWithRateRequest", "SubscribeObjectClassAttributesPassivelyRequest", "SubscribeObjectClassAttributesPassivelyWithRateRequest", "UnsubscribeObjectClassRequest", "UnsubscribeObjectClassAttributesRequest", "SubscribeObjectClassDirectedInteractionsRequest", "UnsubscribeObjectClassDirectedInteractionsRequest", "UnsubscribeObjectClassDirectedInteractionsWithSetRequest", "SubscribeInteractionClassRequest", "SubscribeInteractionClassPassivelyRequest", "UnsubscribeInteractionClassRequest", "ReserveObjectInstanceNameRequest", "ReleaseObjectInstanceNameRequest", "ReserveMultipleObjectInstanceNameRequest", "ReleaseMultipleObjectInstanceNameRequest", "RegisterObjectInstanceRequest", "RegisterObjectInstanceWithNameRequest", "UpdateAttributeValuesRequest", "UpdateAttributeValuesWithTimeRequest", "SendInteractionRequest", "SendInteractionWithTimeRequest", "SendDirectedInteractionRequest", "SendDirectedInteractionWithTimeRequest", "DeleteObjectInstanceRequest", "DeleteObjectInstanceWithTimeRequest", "LocalDeleteObjectInstanceRequest", "RequestInstanceAttributeValueUpdateRequest", "RequestClassAttributeValueUpdateRequest", "RequestAttributeTransportationTypeChangeRequest", "ChangeDefaultAttributeTransportationTypeRequest", "QueryAttributeTransportationTypeRequest", "RequestInteractionTransportationTypeChangeRequest", "QueryInteractionTransportationTypeRequest", "UnconditionalAttributeOwnershipDivestitureRequest", "NegotiatedAttributeOwnershipDivestitureRequest", "ConfirmDivestitureRequest", "AttributeOwnershipAcquisitionRequest", "AttributeOwnershipAcquisitionIfAvailableRequest", "AttributeOwnershipReleaseDeniedRequest", "AttributeOwnershipDivestitureIfWantedRequest", "CancelNegotiatedAttributeOwnershipDivestitureRequest", "CancelAttributeOwnershipAcquisitionRequest", "QueryAttributeOwnershipRequest", "IsAttributeOwnedByFederateRequest", "EnableTimeRegulationRequest", "DisableTimeRegulationRequest", "EnableTimeConstrainedRequest", "DisableTimeConstrainedRequest", "TimeAdvanceRequestRequest", "TimeAdvanceRequestAvailableRequest", "NextMessageRequestRequest", "NextMessageRequestAvailableRequest", "FlushQueueRequestRequest", "EnableAsynchronousDeliveryRequest", "DisableAsynchronousDeliveryRequest", "QueryGALTRequest", "QueryLogicalTimeRequest", "QueryLITSRequest", "ModifyLookaheadRequest", "QueryLookaheadRequest", "RetractRequest", "ChangeAttributeOrderTypeRequest", "ChangeDefaultAttributeOrderTypeRequest", "ChangeInteractionOrderTypeRequest", "CreateRegionRequest", "CommitRegionModificationsRequest", "DeleteRegionRequest", "RegisterObjectInstanceWithRegionsRequest", "RegisterObjectInstanceWithNameAndRegionsRequest", "AssociateRegionsForUpdatesRequest", "UnassociateRegionsForUpdatesRequest", "SubscribeObjectClassAttributesWithRegionsRequest", "SubscribeObjectClassAttributesWithRegionsAndRateRequest", "UnsubscribeObjectClassAttributesWithRegionsRequest", "SubscribeInteractionClassWithRegionsRequest", "UnsubscribeInteractionClassWithRegionsRequest", "SendInteractionWithRegionsRequest", "SendInteractionWithRegionsAndTimeRequest", "RequestAttributeValueUpdateWithRegionsRequest", "GetAutomaticResignDirectiveRequest", "SetAutomaticResignDirectiveRequest", "GetFederateHandleRequest", "GetFederateNameRequest", "GetObjectClassHandleRequest", "GetObjectClassNameRequest", "GetKnownObjectClassHandleRequest", "GetObjectInstanceHandleRequest", "GetObjectInstanceNameRequest", "GetAttributeHandleRequest", "GetAttributeNameRequest", "GetUpdateRateValueRequest", "GetUpdateRateValueForAttributeRequest", "GetInteractionClassHandleRequest", "GetInteractionClassNameRequest", "GetParameterHandleRequest", "GetParameterNameRequest", "GetOrderTypeRequest", "GetOrderNameRequest", "GetTransportationTypeHandleRequest", "GetTransportationTypeNameRequest", "GetAvailableDimensionsForClassAttributeRequest", "GetAvailableDimensionsForInteractionClassRequest", "GetDimensionHandleRequest", "GetDimensionNameRequest", "GetDimensionUpperBoundRequest", "GetDimensionHandleSetRequest", "GetRangeBoundsRequest", "SetRangeBoundsRequest", "NormalizeServiceGroupRequest", "NormalizeFederateHandleRequest", "NormalizeObjectClassHandleRequest", "NormalizeInteractionClassHandleRequest", "NormalizeObjectInstanceHandleRequest", "EnableObjectClassRelevanceAdvisorySwitchRequest", "DisableObjectClassRelevanceAdvisorySwitchRequest", "EnableAttributeRelevanceAdvisorySwitchRequest", "DisableAttributeRelevanceAdvisorySwitchRequest", "EnableAttributeScopeAdvisorySwitchRequest", "DisableAttributeScopeAdvisorySwitchRequest", "EnableInteractionRelevanceAdvisorySwitchRequest", "DisableInteractionRelevanceAdvisorySwitchRequest", "CallRequest", });
+        new java.lang.String[] { "ConnectRequest", "ConnectWithCredentialsRequest", "ConnectWithConfigurationRequest", "ConnectWithConfigurationAndCredentialsRequest", "DisconnectRequest", "CreateFederationExecutionRequest", "CreateFederationExecutionWithTimeRequest", "CreateFederationExecutionWithModulesRequest", "CreateFederationExecutionWithModulesAndTimeRequest", "CreateFederationExecutionWithMIMRequest", "CreateFederationExecutionWithMIMAndTimeRequest", "DestroyFederationExecutionRequest", "ListFederationExecutionsRequest", "ListFederationExecutionMembersRequest", "JoinFederationExecutionRequest", "JoinFederationExecutionWithModulesRequest", "JoinFederationExecutionWithNameRequest", "JoinFederationExecutionWithNameAndModulesRequest", "ResignFederationExecutionRequest", "RegisterFederationSynchronizationPointRequest", "RegisterFederationSynchronizationPointWithSetRequest", "SynchronizationPointAchievedRequest", "RequestFederationSaveRequest", "RequestFederationSaveWithTimeRequest", "FederateSaveBegunRequest", "FederateSaveCompleteRequest", "FederateSaveNotCompleteRequest", "AbortFederationSaveRequest", "QueryFederationSaveStatusRequest", "RequestFederationRestoreRequest", "FederateRestoreCompleteRequest", "FederateRestoreNotCompleteRequest", "AbortFederationRestoreRequest", "QueryFederationRestoreStatusRequest", "PublishObjectClassAttributesRequest", "UnpublishObjectClassRequest", "UnpublishObjectClassAttributesRequest", "PublishInteractionClassRequest", "UnpublishInteractionClassRequest", "PublishObjectClassDirectedInteractionsRequest", "UnpublishObjectClassDirectedInteractionsRequest", "UnpublishObjectClassDirectedInteractionsWithSetRequest", "SubscribeObjectClassAttributesRequest", "SubscribeObjectClassAttributesWithRateRequest", "SubscribeObjectClassAttributesPassivelyRequest", "SubscribeObjectClassAttributesPassivelyWithRateRequest", "UnsubscribeObjectClassRequest", "UnsubscribeObjectClassAttributesRequest", "SubscribeInteractionClassRequest", "SubscribeInteractionClassPassivelyRequest", "UnsubscribeInteractionClassRequest", "SubscribeObjectClassDirectedInteractionsRequest", "SubscribeObjectClassDirectedInteractionsUniversallyRequest", "UnsubscribeObjectClassDirectedInteractionsRequest", "UnsubscribeObjectClassDirectedInteractionsWithSetRequest", "ReserveObjectInstanceNameRequest", "ReleaseObjectInstanceNameRequest", "ReserveMultipleObjectInstanceNamesRequest", "ReleaseMultipleObjectInstanceNamesRequest", "RegisterObjectInstanceRequest", "RegisterObjectInstanceWithNameRequest", "UpdateAttributeValuesRequest", "UpdateAttributeValuesWithTimeRequest", "SendInteractionRequest", "SendInteractionWithTimeRequest", "SendDirectedInteractionRequest", "SendDirectedInteractionWithTimeRequest", "DeleteObjectInstanceRequest", "DeleteObjectInstanceWithTimeRequest", "LocalDeleteObjectInstanceRequest", "RequestInstanceAttributeValueUpdateRequest", "RequestClassAttributeValueUpdateRequest", "RequestAttributeTransportationTypeChangeRequest", "ChangeDefaultAttributeTransportationTypeRequest", "QueryAttributeTransportationTypeRequest", "RequestInteractionTransportationTypeChangeRequest", "QueryInteractionTransportationTypeRequest", "UnconditionalAttributeOwnershipDivestitureRequest", "NegotiatedAttributeOwnershipDivestitureRequest", "ConfirmDivestitureRequest", "AttributeOwnershipAcquisitionRequest", "AttributeOwnershipAcquisitionIfAvailableRequest", "AttributeOwnershipReleaseDeniedRequest", "AttributeOwnershipDivestitureIfWantedRequest", "CancelNegotiatedAttributeOwnershipDivestitureRequest", "CancelAttributeOwnershipAcquisitionRequest", "QueryAttributeOwnershipRequest", "IsAttributeOwnedByFederateRequest", "EnableTimeRegulationRequest", "DisableTimeRegulationRequest", "EnableTimeConstrainedRequest", "DisableTimeConstrainedRequest", "TimeAdvanceRequestRequest", "TimeAdvanceRequestAvailableRequest", "NextMessageRequestRequest", "NextMessageRequestAvailableRequest", "FlushQueueRequestRequest", "EnableAsynchronousDeliveryRequest", "DisableAsynchronousDeliveryRequest", "QueryGALTRequest", "QueryLogicalTimeRequest", "QueryLITSRequest", "ModifyLookaheadRequest", "QueryLookaheadRequest", "RetractRequest", "ChangeAttributeOrderTypeRequest", "ChangeDefaultAttributeOrderTypeRequest", "ChangeInteractionOrderTypeRequest", "CreateRegionRequest", "CommitRegionModificationsRequest", "DeleteRegionRequest", "RegisterObjectInstanceWithRegionsRequest", "RegisterObjectInstanceWithNameAndRegionsRequest", "AssociateRegionsForUpdatesRequest", "UnassociateRegionsForUpdatesRequest", "SubscribeObjectClassAttributesWithRegionsRequest", "SubscribeObjectClassAttributesWithRegionsAndRateRequest", "UnsubscribeObjectClassAttributesWithRegionsRequest", "SubscribeInteractionClassWithRegionsRequest", "UnsubscribeInteractionClassWithRegionsRequest", "SendInteractionWithRegionsRequest", "SendInteractionWithRegionsAndTimeRequest", "RequestAttributeValueUpdateWithRegionsRequest", "GetFederateHandleRequest", "GetFederateNameRequest", "GetObjectClassHandleRequest", "GetObjectClassNameRequest", "GetKnownObjectClassHandleRequest", "GetObjectInstanceHandleRequest", "GetObjectInstanceNameRequest", "GetAttributeHandleRequest", "GetAttributeNameRequest", "GetUpdateRateValueRequest", "GetUpdateRateValueForAttributeRequest", "GetInteractionClassHandleRequest", "GetInteractionClassNameRequest", "GetParameterHandleRequest", "GetParameterNameRequest", "GetOrderTypeRequest", "GetOrderNameRequest", "GetTransportationTypeHandleRequest", "GetTransportationTypeNameRequest", "GetAvailableDimensionsForObjectClassRequest", "GetAvailableDimensionsForInteractionClassRequest", "GetDimensionHandleRequest", "GetDimensionNameRequest", "GetDimensionUpperBoundRequest", "GetDimensionHandleSetRequest", "GetRangeBoundsRequest", "SetRangeBoundsRequest", "NormalizeServiceGroupRequest", "NormalizeFederateHandleRequest", "NormalizeObjectClassHandleRequest", "NormalizeInteractionClassHandleRequest", "NormalizeObjectInstanceHandleRequest", "GetObjectClassRelevanceAdvisorySwitchRequest", "SetObjectClassRelevanceAdvisorySwitchRequest", "GetAttributeRelevanceAdvisorySwitchRequest", "SetAttributeRelevanceAdvisorySwitchRequest", "GetAttributeScopeAdvisorySwitchRequest", "SetAttributeScopeAdvisorySwitchRequest", "GetInteractionRelevanceAdvisorySwitchRequest", "SetInteractionRelevanceAdvisorySwitchRequest", "GetConveyRegionDesignatorSetsSwitchRequest", "SetConveyRegionDesignatorSetsSwitchRequest", "GetAutomaticResignDirectiveRequest", "SetAutomaticResignDirectiveRequest", "GetServiceReportingSwitchRequest", "SetServiceReportingSwitchRequest", "GetExceptionReportingSwitchRequest", "SetExceptionReportingSwitchRequest", "GetSendServiceReportsToFileSwitchRequest", "SetSendServiceReportsToFileSwitchRequest", "GetAutoProvideSwitchRequest", "GetDelaySubscriptionEvaluationSwitchRequest", "GetAdvisoriesUseKnownClassSwitchRequest", "GetAllowRelaxedDDMSwitchRequest", "GetNonRegulatedGrantSwitchRequest", "CallRequest", });
     internal_static_rti1516_202X_fedpro_CallResponse_descriptor =
-      getDescriptor().getMessageTypes().get(329);
+      getDescriptor().getMessageTypes().get(357);
     internal_static_rti1516_202X_fedpro_CallResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_rti1516_202X_fedpro_CallResponse_descriptor,
-        new java.lang.String[] { "ExceptionData", "ConnectResponse", "ConnectWithCredentialsResponse", "ConnectWithConfigurationResponse", "ConnectWithConfigurationAndCredentialsResponse", "DisconnectResponse", "CreateFederationExecutionResponse", "CreateFederationExecutionWithTimeResponse", "CreateFederationExecutionWithModulesResponse", "CreateFederationExecutionWithModulesAndTimeResponse", "CreateFederationExecutionWithMIMResponse", "CreateFederationExecutionWithMIMAndTimeResponse", "DestroyFederationExecutionResponse", "ListFederationExecutionsResponse", "ListFederationExecutionMembersResponse", "JoinFederationExecutionResponse", "JoinFederationExecutionWithModulesResponse", "JoinFederationExecutionWithNameResponse", "JoinFederationExecutionWithNameAndModulesResponse", "ResignFederationExecutionResponse", "RegisterFederationSynchronizationPointResponse", "RegisterFederationSynchronizationPointWithSetResponse", "SynchronizationPointAchievedResponse", "RequestFederationSaveResponse", "RequestFederationSaveWithTimeResponse", "FederateSaveBegunResponse", "FederateSaveCompleteResponse", "FederateSaveNotCompleteResponse", "AbortFederationSaveResponse", "QueryFederationSaveStatusResponse", "RequestFederationRestoreResponse", "FederateRestoreCompleteResponse", "FederateRestoreNotCompleteResponse", "AbortFederationRestoreResponse", "QueryFederationRestoreStatusResponse", "PublishObjectClassAttributesResponse", "UnpublishObjectClassResponse", "UnpublishObjectClassAttributesResponse", "PublishObjectClassDirectedInteractionsResponse", "UnpublishObjectClassDirectedInteractionsResponse", "UnpublishObjectClassDirectedInteractionsWithSetResponse", "PublishInteractionClassResponse", "UnpublishInteractionClassResponse", "SubscribeObjectClassAttributesResponse", "SubscribeObjectClassAttributesWithRateResponse", "SubscribeObjectClassAttributesPassivelyResponse", "SubscribeObjectClassAttributesPassivelyWithRateResponse", "UnsubscribeObjectClassResponse", "UnsubscribeObjectClassAttributesResponse", "SubscribeObjectClassDirectedInteractionsResponse", "UnsubscribeObjectClassDirectedInteractionsResponse", "UnsubscribeObjectClassDirectedInteractionsWithSetResponse", "SubscribeInteractionClassResponse", "SubscribeInteractionClassPassivelyResponse", "UnsubscribeInteractionClassResponse", "ReserveObjectInstanceNameResponse", "ReleaseObjectInstanceNameResponse", "ReserveMultipleObjectInstanceNameResponse", "ReleaseMultipleObjectInstanceNameResponse", "RegisterObjectInstanceResponse", "RegisterObjectInstanceWithNameResponse", "UpdateAttributeValuesResponse", "UpdateAttributeValuesWithTimeResponse", "SendInteractionResponse", "SendInteractionWithTimeResponse", "SendDirectedInteractionResponse", "SendDirectedInteractionWithTimeResponse", "DeleteObjectInstanceResponse", "DeleteObjectInstanceWithTimeResponse", "LocalDeleteObjectInstanceResponse", "RequestInstanceAttributeValueUpdateResponse", "RequestClassAttributeValueUpdateResponse", "RequestAttributeTransportationTypeChangeResponse", "ChangeDefaultAttributeTransportationTypeResponse", "QueryAttributeTransportationTypeResponse", "RequestInteractionTransportationTypeChangeResponse", "QueryInteractionTransportationTypeResponse", "UnconditionalAttributeOwnershipDivestitureResponse", "NegotiatedAttributeOwnershipDivestitureResponse", "ConfirmDivestitureResponse", "AttributeOwnershipAcquisitionResponse", "AttributeOwnershipAcquisitionIfAvailableResponse", "AttributeOwnershipReleaseDeniedResponse", "AttributeOwnershipDivestitureIfWantedResponse", "CancelNegotiatedAttributeOwnershipDivestitureResponse", "CancelAttributeOwnershipAcquisitionResponse", "QueryAttributeOwnershipResponse", "IsAttributeOwnedByFederateResponse", "EnableTimeRegulationResponse", "DisableTimeRegulationResponse", "EnableTimeConstrainedResponse", "DisableTimeConstrainedResponse", "TimeAdvanceRequestResponse", "TimeAdvanceRequestAvailableResponse", "NextMessageRequestResponse", "NextMessageRequestAvailableResponse", "FlushQueueRequestResponse", "EnableAsynchronousDeliveryResponse", "DisableAsynchronousDeliveryResponse", "QueryGALTResponse", "QueryLogicalTimeResponse", "QueryLITSResponse", "ModifyLookaheadResponse", "QueryLookaheadResponse", "RetractResponse", "ChangeAttributeOrderTypeResponse", "ChangeDefaultAttributeOrderTypeResponse", "ChangeInteractionOrderTypeResponse", "CreateRegionResponse", "CommitRegionModificationsResponse", "DeleteRegionResponse", "RegisterObjectInstanceWithRegionsResponse", "RegisterObjectInstanceWithNameAndRegionsResponse", "AssociateRegionsForUpdatesResponse", "UnassociateRegionsForUpdatesResponse", "SubscribeObjectClassAttributesWithRegionsResponse", "SubscribeObjectClassAttributesWithRegionsAndRateResponse", "UnsubscribeObjectClassAttributesWithRegionsResponse", "SubscribeInteractionClassWithRegionsResponse", "UnsubscribeInteractionClassWithRegionsResponse", "SendInteractionWithRegionsResponse", "SendInteractionWithRegionsAndTimeResponse", "RequestAttributeValueUpdateWithRegionsResponse", "GetAutomaticResignDirectiveResponse", "SetAutomaticResignDirectiveResponse", "GetFederateHandleResponse", "GetFederateNameResponse", "GetObjectClassHandleResponse", "GetObjectClassNameResponse", "GetKnownObjectClassHandleResponse", "GetObjectInstanceHandleResponse", "GetObjectInstanceNameResponse", "GetAttributeHandleResponse", "GetAttributeNameResponse", "GetUpdateRateValueResponse", "GetUpdateRateValueForAttributeResponse", "GetInteractionClassHandleResponse", "GetInteractionClassNameResponse", "GetParameterHandleResponse", "GetParameterNameResponse", "GetOrderTypeResponse", "GetOrderNameResponse", "GetTransportationTypeHandleResponse", "GetTransportationTypeNameResponse", "GetAvailableDimensionsForClassAttributeResponse", "GetAvailableDimensionsForInteractionClassResponse", "GetDimensionHandleResponse", "GetDimensionNameResponse", "GetDimensionUpperBoundResponse", "GetDimensionHandleSetResponse", "GetRangeBoundsResponse", "SetRangeBoundsResponse", "NormalizeServiceGroupResponse", "NormalizeFederateHandleResponse", "NormalizeObjectClassHandleResponse", "NormalizeInteractionClassHandleResponse", "NormalizeObjectInstanceHandleResponse", "EnableObjectClassRelevanceAdvisorySwitchResponse", "DisableObjectClassRelevanceAdvisorySwitchResponse", "EnableAttributeRelevanceAdvisorySwitchResponse", "DisableAttributeRelevanceAdvisorySwitchResponse", "EnableAttributeScopeAdvisorySwitchResponse", "DisableAttributeScopeAdvisorySwitchResponse", "EnableInteractionRelevanceAdvisorySwitchResponse", "DisableInteractionRelevanceAdvisorySwitchResponse", "CallResponse", });
+        new java.lang.String[] { "ExceptionData", "ConnectResponse", "ConnectWithCredentialsResponse", "ConnectWithConfigurationResponse", "ConnectWithConfigurationAndCredentialsResponse", "DisconnectResponse", "CreateFederationExecutionResponse", "CreateFederationExecutionWithTimeResponse", "CreateFederationExecutionWithModulesResponse", "CreateFederationExecutionWithModulesAndTimeResponse", "CreateFederationExecutionWithMIMResponse", "CreateFederationExecutionWithMIMAndTimeResponse", "DestroyFederationExecutionResponse", "ListFederationExecutionsResponse", "ListFederationExecutionMembersResponse", "JoinFederationExecutionResponse", "JoinFederationExecutionWithModulesResponse", "JoinFederationExecutionWithNameResponse", "JoinFederationExecutionWithNameAndModulesResponse", "ResignFederationExecutionResponse", "RegisterFederationSynchronizationPointResponse", "RegisterFederationSynchronizationPointWithSetResponse", "SynchronizationPointAchievedResponse", "RequestFederationSaveResponse", "RequestFederationSaveWithTimeResponse", "FederateSaveBegunResponse", "FederateSaveCompleteResponse", "FederateSaveNotCompleteResponse", "AbortFederationSaveResponse", "QueryFederationSaveStatusResponse", "RequestFederationRestoreResponse", "FederateRestoreCompleteResponse", "FederateRestoreNotCompleteResponse", "AbortFederationRestoreResponse", "QueryFederationRestoreStatusResponse", "PublishObjectClassAttributesResponse", "UnpublishObjectClassResponse", "UnpublishObjectClassAttributesResponse", "PublishInteractionClassResponse", "UnpublishInteractionClassResponse", "PublishObjectClassDirectedInteractionsResponse", "UnpublishObjectClassDirectedInteractionsResponse", "UnpublishObjectClassDirectedInteractionsWithSetResponse", "SubscribeObjectClassAttributesResponse", "SubscribeObjectClassAttributesWithRateResponse", "SubscribeObjectClassAttributesPassivelyResponse", "SubscribeObjectClassAttributesPassivelyWithRateResponse", "UnsubscribeObjectClassResponse", "UnsubscribeObjectClassAttributesResponse", "SubscribeInteractionClassResponse", "SubscribeInteractionClassPassivelyResponse", "UnsubscribeInteractionClassResponse", "SubscribeObjectClassDirectedInteractionsResponse", "SubscribeObjectClassDirectedInteractionsUniversallyResponse", "UnsubscribeObjectClassDirectedInteractionsResponse", "UnsubscribeObjectClassDirectedInteractionsWithSetResponse", "ReserveObjectInstanceNameResponse", "ReleaseObjectInstanceNameResponse", "ReserveMultipleObjectInstanceNamesResponse", "ReleaseMultipleObjectInstanceNamesResponse", "RegisterObjectInstanceResponse", "RegisterObjectInstanceWithNameResponse", "UpdateAttributeValuesResponse", "UpdateAttributeValuesWithTimeResponse", "SendInteractionResponse", "SendInteractionWithTimeResponse", "SendDirectedInteractionResponse", "SendDirectedInteractionWithTimeResponse", "DeleteObjectInstanceResponse", "DeleteObjectInstanceWithTimeResponse", "LocalDeleteObjectInstanceResponse", "RequestInstanceAttributeValueUpdateResponse", "RequestClassAttributeValueUpdateResponse", "RequestAttributeTransportationTypeChangeResponse", "ChangeDefaultAttributeTransportationTypeResponse", "QueryAttributeTransportationTypeResponse", "RequestInteractionTransportationTypeChangeResponse", "QueryInteractionTransportationTypeResponse", "UnconditionalAttributeOwnershipDivestitureResponse", "NegotiatedAttributeOwnershipDivestitureResponse", "ConfirmDivestitureResponse", "AttributeOwnershipAcquisitionResponse", "AttributeOwnershipAcquisitionIfAvailableResponse", "AttributeOwnershipReleaseDeniedResponse", "AttributeOwnershipDivestitureIfWantedResponse", "CancelNegotiatedAttributeOwnershipDivestitureResponse", "CancelAttributeOwnershipAcquisitionResponse", "QueryAttributeOwnershipResponse", "IsAttributeOwnedByFederateResponse", "EnableTimeRegulationResponse", "DisableTimeRegulationResponse", "EnableTimeConstrainedResponse", "DisableTimeConstrainedResponse", "TimeAdvanceRequestResponse", "TimeAdvanceRequestAvailableResponse", "NextMessageRequestResponse", "NextMessageRequestAvailableResponse", "FlushQueueRequestResponse", "EnableAsynchronousDeliveryResponse", "DisableAsynchronousDeliveryResponse", "QueryGALTResponse", "QueryLogicalTimeResponse", "QueryLITSResponse", "ModifyLookaheadResponse", "QueryLookaheadResponse", "RetractResponse", "ChangeAttributeOrderTypeResponse", "ChangeDefaultAttributeOrderTypeResponse", "ChangeInteractionOrderTypeResponse", "CreateRegionResponse", "CommitRegionModificationsResponse", "DeleteRegionResponse", "RegisterObjectInstanceWithRegionsResponse", "RegisterObjectInstanceWithNameAndRegionsResponse", "AssociateRegionsForUpdatesResponse", "UnassociateRegionsForUpdatesResponse", "SubscribeObjectClassAttributesWithRegionsResponse", "SubscribeObjectClassAttributesWithRegionsAndRateResponse", "UnsubscribeObjectClassAttributesWithRegionsResponse", "SubscribeInteractionClassWithRegionsResponse", "UnsubscribeInteractionClassWithRegionsResponse", "SendInteractionWithRegionsResponse", "SendInteractionWithRegionsAndTimeResponse", "RequestAttributeValueUpdateWithRegionsResponse", "GetFederateHandleResponse", "GetFederateNameResponse", "GetObjectClassHandleResponse", "GetObjectClassNameResponse", "GetKnownObjectClassHandleResponse", "GetObjectInstanceHandleResponse", "GetObjectInstanceNameResponse", "GetAttributeHandleResponse", "GetAttributeNameResponse", "GetUpdateRateValueResponse", "GetUpdateRateValueForAttributeResponse", "GetInteractionClassHandleResponse", "GetInteractionClassNameResponse", "GetParameterHandleResponse", "GetParameterNameResponse", "GetOrderTypeResponse", "GetOrderNameResponse", "GetTransportationTypeHandleResponse", "GetTransportationTypeNameResponse", "GetAvailableDimensionsForObjectClassResponse", "GetAvailableDimensionsForInteractionClassResponse", "GetDimensionHandleResponse", "GetDimensionNameResponse", "GetDimensionUpperBoundResponse", "GetDimensionHandleSetResponse", "GetRangeBoundsResponse", "SetRangeBoundsResponse", "NormalizeServiceGroupResponse", "NormalizeFederateHandleResponse", "NormalizeObjectClassHandleResponse", "NormalizeInteractionClassHandleResponse", "NormalizeObjectInstanceHandleResponse", "GetObjectClassRelevanceAdvisorySwitchResponse", "SetObjectClassRelevanceAdvisorySwitchResponse", "GetAttributeRelevanceAdvisorySwitchResponse", "SetAttributeRelevanceAdvisorySwitchResponse", "GetAttributeScopeAdvisorySwitchResponse", "SetAttributeScopeAdvisorySwitchResponse", "GetInteractionRelevanceAdvisorySwitchResponse", "SetInteractionRelevanceAdvisorySwitchResponse", "GetConveyRegionDesignatorSetsSwitchResponse", "SetConveyRegionDesignatorSetsSwitchResponse", "GetAutomaticResignDirectiveResponse", "SetAutomaticResignDirectiveResponse", "GetServiceReportingSwitchResponse", "SetServiceReportingSwitchResponse", "GetExceptionReportingSwitchResponse", "SetExceptionReportingSwitchResponse", "GetSendServiceReportsToFileSwitchResponse", "SetSendServiceReportsToFileSwitchResponse", "GetAutoProvideSwitchResponse", "GetDelaySubscriptionEvaluationSwitchResponse", "GetAdvisoriesUseKnownClassSwitchResponse", "GetAllowRelaxedDDMSwitchResponse", "GetNonRegulatedGrantSwitchResponse", "CallResponse", });
     hla.rti1516_202X.fedpro.Datatypes.getDescriptor();
   }
 

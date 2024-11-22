@@ -16,6 +16,10 @@
 
 package se.pitch.oss.fedpro.common.exceptions;
 
+/**
+ * Session layer exception that may be thrown when failing to insert a message into a
+ * queue with no free allocated space left.
+ */
 public class MessageQueueFull extends Exception {
 
    public MessageQueueFull(String message)

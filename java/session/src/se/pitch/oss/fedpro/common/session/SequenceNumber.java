@@ -16,8 +16,9 @@
 
 package se.pitch.oss.fedpro.common.session;
 
-// Because of its wrap around behavior, the sequence number will never be negative.
-// Not thread safe.
+// Because of its wrap around behavior, the sequence number will never be negative unless explicitly set to invalid
+// sequence number.
+// Not thread-safe.
 
 import java.util.Objects;
 
@@ -37,19 +38,13 @@ public class SequenceNumber {
       java int:   2 147 483 647     (=Integer.MAX_VALUE)
    */
    public static final int NO_SEQUENCE_NUMBER = Integer.MIN_VALUE;
-   public static final int MAX_SEQUENCE_NUMBER = Integer.MAX_VALUE;
    public static final int INITIAL_SEQUENCE_NUMBER = 0;
+   public static final int MAX_SEQUENCE_NUMBER = Integer.MAX_VALUE;
 
    private int _value;
 
-   public SequenceNumber()
-   {
-      _value = INITIAL_SEQUENCE_NUMBER;
-   }
-
    public SequenceNumber(int value)
    {
-      validateArgument(value);
       _value = value;
    }
 
@@ -60,29 +55,17 @@ public class SequenceNumber {
 
    public SequenceNumber increment()
    {
-      return add(1);
-   }
-
-   public SequenceNumber decrement()
-   {
-      return subtract(1);
-   }
-
-   public SequenceNumber add(int valueToAdd)
-   {
-      wrapAndSet(_value + valueToAdd);
+      _value = resetInvalidToInitialValue(_value + 1);
       return this;
    }
 
-   public SequenceNumber subtract(int valueToSubtract)
-   {
-      wrapAndSet(_value - valueToSubtract);
-      return this;
+   public static int nextAfter(int sequenceNumber) {
+      return resetInvalidToInitialValue(sequenceNumber + 1);
    }
 
-   private void wrapAndSet(int x)
+   public static int sum(int a, int b)
    {
-      _value = wrapAroundIfNeeded(x);
+      return wrapIntoValidRange(a + b);
    }
 
    public void set(SequenceNumber newNumber)
@@ -92,7 +75,6 @@ public class SequenceNumber {
 
    public SequenceNumber set(int newValue)
    {
-      validateArgument(newValue);
       _value = newValue;
       return this;
    }
@@ -102,31 +84,23 @@ public class SequenceNumber {
       return _value;
    }
 
-   public int getDistanceFrom(SequenceNumber otherNumber)
-   {
-      return wrapAroundIfNeeded(_value - otherNumber.get());
-   }
-
-   public int getNext()
-   {
-      return wrapAroundIfNeeded(_value + 1);
-   }
-
-   public int getPrevious()
-   {
-      return wrapAroundIfNeeded(_value - 1);
-   }
-
-   private int wrapAroundIfNeeded(int value)
+   private static int wrapIntoValidRange(int value)
    {
       // Sets the most significant bit to 0.
       return value & ~(1 << 31);
    }
 
-   protected void validateArgument(int value)
+   private static int resetInvalidToInitialValue(int value)
    {
-      if (!isValidAsSequenceNumber(value)) {
-         throw new IllegalArgumentException("Sequence number argument must be positive");
+      return Math.max(value, INITIAL_SEQUENCE_NUMBER);
+   }
+
+   protected static void validateArguments(int... values)
+   {
+      for (int value : values) {
+         if (!isValidAsSequenceNumber(value)) {
+            throw new IllegalArgumentException("Sequence number argument must be positive");
+         }
       }
    }
 
@@ -140,11 +114,12 @@ public class SequenceNumber {
          int oldest,
          int newest)
    {
+      validateArguments(oldest, candidate, newest);
       if (oldest <= newest) {
-         // When history is linear
+         // When history is linear.
          return oldest <= candidate && candidate <= newest;
       } else {
-         // When wrap around happens in history
+         // When wrap around happens in history.
          return candidate <= newest || oldest <= candidate;
       }
    }

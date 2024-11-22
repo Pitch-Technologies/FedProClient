@@ -1,0 +1,255 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "clang-universal2",
+            "displayName": "Clang (universal2)",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/macos_amd64_arm64_clang.cmake",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/dist/${presetName}"
+            },
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "gcc-amd64",
+            "displayName": "Gcc (amd64)",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/linux_amd64_gcc.cmake",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/dist/${presetName}"
+            },
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "gcc-arm64",
+            "displayName": "Gcc (arm64)",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/linux_arm64_gcc.cmake",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/dist/${presetName}"
+            },
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "gcc-x86",
+            "displayName": "Gcc (x86)",
+            "inherits": ["gcc-amd64"],
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/linux_x86_gcc.cmake"
+            }
+        },
+        {
+            "name": "vc-amd64",
+            "displayName": "Visual Studio (latest toolset, amd64)",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/windows_amd64_msvc.cmake",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/dist/${presetName}"
+            },
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "vc-x86",
+            "displayName": "Visual Studio (latest toolset, x86)",
+            "inherits": ["vc-amd64"],
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/windows_x86_msvc.cmake"
+            }
+        },
+        {
+            "name": "vc140-amd64",
+            "displayName": "Visual Studio 2015 (vc140 amd64)",
+            "inherits": ["vc-amd64"],
+            "environment": {
+                "FEDPRO_VC_TOOLSET": "140"
+            }
+        },
+        {
+            "name": "vc140-x86",
+            "displayName": "Visual Studio 2015 (vc140 x86)",
+            "inherits": ["vc140-amd64"],
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/windows_x86_msvc.cmake"
+            }
+        },
+        {
+            "name": "vc142-amd64",
+            "displayName": "Visual Studio 2019 (vc142 amd64)",
+            "inherits": ["vc-amd64"],
+            "environment": {
+                "FEDPRO_VC_TOOLSET": "142"
+            }
+        },
+        {
+            "name": "vc143-amd64",
+            "displayName": "Visual Studio 2022 (vc143 amd64)",
+            "inherits": ["vc-amd64"],
+            "environment": {
+                "FEDPRO_VC_TOOLSET": "143"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "clang-universal2-release",
+            "displayName": "Clang (universal2) Release",
+            "configurePreset": "clang-universal2",
+            "configuration": "Release",
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "clang-universal2-debug",
+            "displayName": "Clang (universal2) Debug",
+            "inherits": ["clang-universal2-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "gcc-amd64-release",
+            "displayName": "Gcc (amd64) Release",
+            "configurePreset": "gcc-amd64",
+            "configuration": "Release",
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "gcc-amd64-debug",
+            "displayName": "Gcc (amd64) Debug",
+            "inherits": ["gcc-amd64-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "gcc-x86-release",
+            "displayName": "Gcc (x86) Release",
+            "inherits": ["gcc-amd64-release"],
+            "configurePreset": "gcc-x86"
+        },
+        {
+            "name": "gcc-x86-debug",
+            "displayName": "Gcc (x86) Debug",
+            "inherits": ["gcc-x86-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "gcc-arm64-release",
+            "displayName": "Gcc (arm64) Release",
+            "configurePreset": "gcc-arm64",
+            "configuration": "Release",
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "gcc-arm64-debug",
+            "displayName": "Gcc (arm64) Debug",
+            "inherits": ["gcc-arm64-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "vc-amd64-release",
+            "displayName": "Visual Studio (latest toolset, amd64) Release",
+            "configurePreset": "vc-amd64",
+            "configuration": "Release",
+            "condition": {
+                "lhs": "${hostSystemName}",
+                "type": "equals",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "vc-amd64-debug",
+            "displayName": "Visual Studio (latest toolset, amd64) Debug",
+            "inherits": ["vc-amd64-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "vc-x86-release",
+            "displayName": "Visual Studio (latest toolset, x86) Release",
+            "inherits": ["vc-amd64-release"],
+            "configurePreset": "vc-x86"
+        },
+        {
+            "name": "vc-x86-debug",
+            "displayName": "Visual Studio (latest toolset, x86) Debug",
+            "inherits": ["vc-x86-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "vc140-amd64-release",
+            "displayName": "Visual Studio 2015 (vc140 amd64) Release",
+            "inherits": ["vc-amd64-release"],
+            "configurePreset": "vc140-amd64"
+        },
+        {
+            "name": "vc140-amd64-debug",
+            "displayName": "Visual Studio 2015 (vc140 amd64) Debug",
+            "inherits": ["vc140-amd64-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "vc140-x86-release",
+            "displayName": "Visual Studio 2015 (vc140 x86) Release",
+            "inherits": ["vc140-amd64-release"],
+            "configurePreset": "vc140-x86"
+        },
+        {
+            "name": "vc140-x86-debug",
+            "displayName": "Visual Studio 2015 (vc140 x86) Debug",
+            "inherits": ["vc140-x86-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "vc142-amd64-release",
+            "displayName": "Visual Studio 2019 (vc142 amd64) Release",
+            "inherits": ["vc-amd64-release"],
+            "configurePreset": "vc142-amd64"
+        },
+        {
+            "name": "vc142-amd64-debug",
+            "displayName": "Visual Studio 2019 (vc142 amd64) Debug",
+            "inherits": ["vc142-amd64-release"],
+            "configuration": "Debug"
+        },
+        {
+            "name": "vc143-amd64-release",
+            "displayName": "Visual Studio 2022 (vc143 amd64) Release",
+            "inherits": ["vc-amd64-release"],
+            "configurePreset": "vc143-amd64"
+        },
+        {
+            "name": "vc143-amd64-debug",
+            "displayName": "Visual Studio 2022 (vc143 amd64) Debug",
+            "inherits": ["vc143-amd64-release"],
+            "configuration": "Debug"
+        }
+    ]
+}

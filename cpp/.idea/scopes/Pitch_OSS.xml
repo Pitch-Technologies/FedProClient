@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Pitch OSS" pattern="((file[cpp]:include//*||file[cpp]:src//*||file[cpp]:test//*)&amp;&amp;!file:sample_evolved/Chat-evolved.xml||file:sample_evolved/Chat.cpp||file:sample/Chat.cpp||file:sample/CMakeLists.txt||file:sample/CMakeLists.txt.public||file:sample_evolved/CMakeLists.txt||file:sample_evolved/CMakeLists.txt.public)&amp;&amp;!file[cpp]:src/fedpro/protobuf/generated//*" />
+</component>

@@ -25,9 +25,9 @@ import java.util.Queue;
 
 public class RateLimitedBuffer<E> implements GenericBuffer<E> {
 
-   private final Object _sessionLock;
+   private final Object _lock;
    private final int _capacity;
-   @GuardedBy("_sessionLock")
+   @GuardedBy("_lock")
    private final Queue<E> _data;
    private final RateLimiter _limiter;
    private final boolean _blockWhenFull;
@@ -42,20 +42,20 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
          int capacity,
          RateLimiter rateLimiter)
    {
-      this(capacity, rateLimiter, new Object(), true);
+      this(new Object(), capacity, rateLimiter, true);
    }
 
    public RateLimitedBuffer(
+         Object lock,
          int capacity,
          RateLimiter limiter,
-         Object sessionLock,
          boolean blockWhenFull)
    {
+      _lock = lock;
       _capacity = capacity;
       _data = new LinkedList<>();
       _limiter = limiter;
       _count = 0;
-      _sessionLock = sessionLock;
       _blockWhenFull = blockWhenFull;
    }
 
@@ -63,11 +63,11 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    public boolean insert(E element)
    {
       _limiter.preInsert(_count);
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          if (_blockWhenFull) {
             while (_count >= _capacity) {
                try {
-                  _sessionLock.wait();
+                  _lock.wait();
                } catch (InterruptedException ignore) {
                }
             }
@@ -78,7 +78,7 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
          }
          _data.add(element);
          _count++;
-         _sessionLock.notifyAll();
+         _lock.notifyAll();
       }
       _limiter.postInsert(_count);
       return true;
@@ -88,9 +88,9 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    public E waitAndPoll()
    throws InterruptedException
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          while (isEmpty()) {
-            _sessionLock.wait();
+            _lock.wait();
          }
          return poll();
       }
@@ -100,9 +100,9 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    public E waitAndPeek()
    throws InterruptedException
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          while (isEmpty()) {
-            _sessionLock.wait();
+            _lock.wait();
          }
          return peek();
       }
@@ -111,7 +111,7 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    @Override
    public boolean isEmpty()
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          return _count == 0;
       }
    }
@@ -125,7 +125,7 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    @Override
    public int size()
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          return _count;
       }
    }
@@ -133,10 +133,10 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    @Override
    public E poll()
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          if (_count > 0) {
             _count--;
-            _sessionLock.notifyAll();
+            _lock.notifyAll();
             return _data.poll();
          }
       }
@@ -146,7 +146,7 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    @Override
    public E peek()
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          if (_count > 0) {
             return _data.peek();
          }
@@ -159,18 +159,18 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    throws InterruptedException
    {
       if (timeoutMillis == 0) {
-         synchronized (_sessionLock) {
+         synchronized (_lock) {
             while (!isEmpty()) {
-               _sessionLock.wait();
+               _lock.wait();
             }
             return isEmpty();
          }
       } else {
          long waitEnd = System.currentTimeMillis() + timeoutMillis;
-         synchronized (_sessionLock) {
+         synchronized (_lock) {
             long timeLeft = waitEnd - System.currentTimeMillis();
             while (!isEmpty() && timeLeft > 0) {
-               _sessionLock.wait(timeLeft);
+               _lock.wait(timeLeft);
                timeLeft = waitEnd - System.currentTimeMillis();
             }
             return isEmpty();
@@ -181,7 +181,7 @@ public class RateLimitedBuffer<E> implements GenericBuffer<E> {
    @Override
    public String toString()
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          return "RateLimitedBuffer {\n" + "\tCapacity = " + _capacity + ",\n\tData = " + _data + ",\n\tLimiter = " +
                _limiter + ",\n\tBlock when full = " + _blockWhenFull + ",\n\tCount = " + _count + "\n}";
       }

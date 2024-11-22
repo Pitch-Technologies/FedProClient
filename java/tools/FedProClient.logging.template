@@ -1,0 +1,36 @@
+## Standard java.util.logging (JUL) configuration file format. See:
+## https://docs.oracle.com/javase/8/docs/technotes/guides/logging/overview.html
+
+## For a statement to be logged by a Handler, it must pass the level of both its Logger *and* the Handler.
+
+handlers = java.util.logging.ConsoleHandler,java.util.logging.FileHandler
+
+
+
+#### LOGGERS
+## Loggers are hierarchical, and the order of below Logger level settings is important.
+## Allowed Logger level values are OFF, SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST, ALL
+
+## Global logger default. May affect output from 3rd party libraries.
+.level = INFO
+
+## Pitch pRTI Federate Protocol Client log level. Adjust this as needed.
+se.pitch.oss.fedpro.level = FINER
+
+
+
+#### HANDLERS
+
+## Restrict entries that will appear in the console
+java.util.logging.ConsoleHandler.level = ALL
+java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+
+## Restrict entries that will appear in log files
+java.util.logging.FileHandler.level = ALL
+java.util.logging.FileHandler.pattern = FedProClientLogs/FedProClient-%g.log
+java.util.logging.FileHandler.limit = 1000000
+java.util.logging.FileHandler.count = 20
+java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
+java.util.logging.FileHandler.append = true
+
+java.util.logging.SimpleFormatter.format=[%1$tF %1$tT] [%4$-7s] %5$s %6$s%n

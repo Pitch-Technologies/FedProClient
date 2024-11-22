@@ -16,10 +16,6 @@
 
 package se.pitch.oss.chat1516_4;
 
-/*
- * Chat sample for Federate Protocol.
- */
-
 import hla.rti1516_202X.*;
 import hla.rti1516_202X.encoding.DecoderException;
 import hla.rti1516_202X.encoding.EncoderFactory;
@@ -39,6 +35,9 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
+/**
+ * Basic asynchronous HLA 4 Chat sample for Federate Protocol.
+ */
 class AsyncChat extends NullFederateAmbassador {
    private static final String FEDERATION_NAME = "ChatRoom";
 
@@ -134,10 +133,9 @@ class AsyncChat extends NullFederateAmbassador {
       if (!_args.isEmpty()) {
          rtiHost = _args.get(0);
       } else {
-         System.out.println("Enter the FedPro server and CRC address, such as");
-         System.out.println("'localhost;;localhost', 'localhost:15164;;localhost:8989', '192.168.1.62;;localhost'.");
-         System.out.println("Or if FedPro server is hosted on the same machine as CRC, only the CRC address, such as");
-         System.out.println("'localhost', '192.168.1.62'.");
+         System.out.println("Enter the Federate Protocol server address, such as");
+         System.out.println("'localhost', 'localhost:15164', '192.168.1.62'");
+         System.out.println("If no value is provided, defaults will be used.");
          System.out.println();
          System.out.print("[localhost]: ");
          rtiHost = _systemInput.readLine();
@@ -159,7 +157,11 @@ class AsyncChat extends NullFederateAmbassador {
 
       RtiConfiguration rtiConfiguration = RtiConfiguration.createConfiguration()
             .withRtiAddress(rtiHost);
-      _rtiAmbassador.connect(this, CallbackModel.HLA_IMMEDIATE, rtiConfiguration);
+      try {
+         _rtiAmbassador.connect(this, CallbackModel.HLA_IMMEDIATE, rtiConfiguration);
+      } catch (Unauthorized e) {
+         System.out.println(e.getMessage());
+      }
 
       try {
          // Clean up old federation

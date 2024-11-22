@@ -16,27 +16,24 @@
 
 package se.pitch.oss.fedpro.common.session;
 
-import se.pitch.oss.fedpro.client.session.msg.MessageHeader;
-
 public class LogUtil {
 
    private static final int NUMBER_LENGTH = 3;
-
-   public static String logPrefix(String caller)
-   {
-      StringBuilder prefix = new StringBuilder(caller);
-      while (prefix.length() < "Server session ".length() + NUMBER_LENGTH) {
-         prefix.append(" ");
-      }
-      return prefix.toString();
-   }
+   public static final String SERVER_PREFIX = "Server";
+   public static final String CLIENT_PREFIX = "Client";
 
    public static String logPrefix(
          long sessionId,
          String caller)
    {
-      return caller + " Session " +
-            padNumString(sessionId == MessageHeader.NO_SESSION_ID ? "-" : String.valueOf(sessionId));
+      return logPrefix(formatSessionId(sessionId), caller);
+   }
+
+   public static String logPrefix(
+         String sessionIdString,
+         String caller)
+   {
+      return caller + " Session " + sessionIdString;
    }
 
    public static String padNumString(int nr)
@@ -47,5 +44,11 @@ public class LogUtil {
    public static String padNumString(String nr)
    {
       return " ".repeat(Math.max(0, NUMBER_LENGTH - nr.length())) + nr;
+   }
+
+   public static String formatSessionId(long sessionId)
+   {
+      String format = String.format("%016x", sessionId);
+      return format.substring(0, 4) + "-" + format.substring(4, 8) + "-" + format.substring(8, 12) + "-" + format.substring(12, 16);
    }
 }

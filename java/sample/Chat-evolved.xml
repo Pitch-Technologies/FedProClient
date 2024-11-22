@@ -3,20 +3,20 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://www.sisostds.org/schemas/IEEE1516-2010 http://www.sisostds.org/schemas/IEEE1516-DIF-2010.xsd">
    <modelIdentification>
-      <name>Chat.xml</name>
+      <name>Chat-evolved.xml</name>
       <type>FOM</type>
       <version>1.0</version>
-      <modificationDate>2001-05-21</modificationDate>
+      <modificationDate>2024-02-23</modificationDate>
       <securityClassification>Undefined</securityClassification>
-      <purpose>DDM and MOM stuffs are added.</purpose>
-      <applicationDomain>HLA RTI Verification</applicationDomain>
+      <purpose>Small demo of HLA usage.</purpose>
+      <applicationDomain>Samples</applicationDomain>
       <description>Undefined</description>
       <poc>
          <pocType>Primary author</pocType>
-         <pocName>Susan Symington</pocName>
-         <pocOrg>MITRE W150</pocOrg>
-         <pocTelephone>+1 703-883-7209</pocTelephone>
-         <pocEmail>susan@mitre.org</pocEmail>
+         <pocName>Pitch</pocName>
+         <pocOrg>Pitch Technologies AB</pocOrg>
+         <pocTelephone>na</pocTelephone>
+         <pocEmail>na</pocEmail>
       </poc>
       <poc>
          <pocType>Sponsor</pocType>

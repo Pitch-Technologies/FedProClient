@@ -21,8 +21,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class UnboundedBuffer<E> implements GenericBuffer<E> {
 
-   private final BlockingQueue<E> _buffer = new LinkedBlockingQueue<>();
    private final Object _lock;
+   private final BlockingQueue<E> _buffer = new LinkedBlockingQueue<>();
 
    public UnboundedBuffer()
    {

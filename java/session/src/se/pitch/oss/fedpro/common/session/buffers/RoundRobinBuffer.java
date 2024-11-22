@@ -21,9 +21,9 @@ import net.jcip.annotations.GuardedBy;
 
 public class RoundRobinBuffer<E> implements GenericBuffer<E> {
 
-   private final Object _sessionLock;
-   private final GenericBuffer<E> _primaryQueue;
-   private final GenericBuffer<E> _alternateQueue;
+   private final Object _lock;
+   private final RateLimitedBuffer<E> _primaryQueue;
+   private final UnboundedBuffer<E> _alternateQueue;
    private final QueueAlternator<E> _alternator;
 
    private final int _primaryFactor;
@@ -36,29 +36,29 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
          RateLimiter limiter,
          QueueAlternator<E> alternator)
    {
-      this(capacity, limiter, alternator, new Object(), 1, 1);
+      this(new Object(), capacity, limiter, alternator, 1, 1);
    }
 
    public RoundRobinBuffer(
+         Object lock,
          int capacity,
          RateLimiter limiter,
-         QueueAlternator<E> alternator,
-         Object sessionLock)
+         QueueAlternator<E> alternator)
    {
-      this(capacity, limiter, alternator, sessionLock, 1, 1);
+      this(lock, capacity, limiter, alternator, 1, 1);
    }
 
    public RoundRobinBuffer(
+         Object lock,
          int capacity,
          RateLimiter limiter,
          QueueAlternator<E> alternator,
-         Object sessionLock,
          int primaryFactor,
          int alternateFactor)
    {
-      _sessionLock = sessionLock;
-      _primaryQueue = new RateLimitedBuffer<>(capacity, limiter, sessionLock, true);
-      _alternateQueue = new UnboundedBuffer<>(sessionLock);
+      _lock = lock;
+      _primaryQueue = new RateLimitedBuffer<>(lock, capacity, limiter, true);
+      _alternateQueue = new UnboundedBuffer<>(lock);
       _alternator = alternator;
       _primaryFactor = primaryFactor;
       _alternateFactor = alternateFactor;
@@ -80,9 +80,9 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
    public E waitAndPoll()
    throws InterruptedException
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          while (isEmpty()) {
-            _sessionLock.wait();
+            _lock.wait();
          }
          return poll();
       }
@@ -92,9 +92,9 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
    public E waitAndPeek()
    throws InterruptedException
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          while (isEmpty()) {
-            _sessionLock.wait();
+            _lock.wait();
          }
          return peek();
       }
@@ -103,7 +103,7 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
    @Override
    public E poll()
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          E result = selectReadBuffer().poll();
          incrementAlternator();
          return result;
@@ -113,7 +113,7 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
    @Override
    public E peek()
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          return selectReadBuffer().peek();
       }
    }
@@ -126,7 +126,7 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
       }
    }
 
-   @GuardedBy("_sessionLock")
+   @GuardedBy("_lock")
    private GenericBuffer<E> selectReadBuffer()
    {
       if (_alternatorIndex <= _smallerFactorDoubled) {
@@ -177,7 +177,7 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
    public boolean waitUntilEmpty(long timeoutMillis)
    throws InterruptedException
    {
-      synchronized (_sessionLock) {
+      synchronized (_lock) {
          _primaryQueue.waitUntilEmpty(timeoutMillis / 2);
          _alternateQueue.waitUntilEmpty(timeoutMillis / 2);
          return isEmpty();

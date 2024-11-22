@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client/fedproclient_client.iml" filepath="$PROJECT_DIR$/client/fedproclient_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client_common/fedproclient_client_common.iml" filepath="$PROJECT_DIR$/client_common/fedproclient_client_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client_evolved/fedproclient_client_evolved.iml" filepath="$PROJECT_DIR$/client_evolved/fedproclient_client_evolved.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/fedproclient_hla_api.iml" filepath="$PROJECT_DIR$/api/fedproclient_hla_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/protobuf/fedproclient_protobuf.iml" filepath="$PROJECT_DIR$/protobuf/fedproclient_protobuf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample/fedproclient_sample.iml" filepath="$PROJECT_DIR$/sample/fedproclient_sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample_evolved/fedproclient_sample_evolved.iml" filepath="$PROJECT_DIR$/sample_evolved/fedproclient_sample_evolved.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session/fedproclient_session.iml" filepath="$PROJECT_DIR$/session/fedproclient_session.iml" />
+    </modules>
+  </component>
+</project>

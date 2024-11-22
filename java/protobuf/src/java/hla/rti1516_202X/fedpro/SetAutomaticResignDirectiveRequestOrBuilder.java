@@ -8,13 +8,13 @@ public interface SetAutomaticResignDirectiveRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-   * @return The enum numeric value on the wire for resignAction.
+   * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+   * @return The enum numeric value on the wire for value.
    */
-  int getResignActionValue();
+  int getValueValue();
   /**
-   * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-   * @return The resignAction.
+   * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+   * @return The value.
    */
-  hla.rti1516_202X.fedpro.ResignAction getResignAction();
+  hla.rti1516_202X.fedpro.ResignAction getValue();
 }

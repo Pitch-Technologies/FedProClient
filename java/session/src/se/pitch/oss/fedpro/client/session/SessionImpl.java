@@ -18,13 +18,14 @@ package se.pitch.oss.fedpro.client.session;
 
 import net.jcip.annotations.GuardedBy;
 import org.java_websocket.exceptions.WebsocketNotConnectedException;
-import se.pitch.oss.fedpro.client.Transport;
+import se.pitch.oss.fedpro.client.TypedProperties;
 import se.pitch.oss.fedpro.client.Session;
+import se.pitch.oss.fedpro.client.Transport;
 import se.pitch.oss.fedpro.client.session.msg.*;
 import se.pitch.oss.fedpro.client.transport.TransportBase;
 import se.pitch.oss.fedpro.common.exceptions.BadMessage;
-import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionAlreadyTerminated;
+import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionLost;
 import se.pitch.oss.fedpro.common.session.*;
 import se.pitch.oss.fedpro.common.session.buffers.GenericBuffer;
@@ -37,12 +38,16 @@ import se.pitch.oss.fedpro.common.transport.FedProSocket;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.BindException;
+import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Logger;
 
-import static se.pitch.oss.fedpro.client.TimeoutConstants.DEFAULT_RESPONSE_TIMEOUT_MILLIS;
+import static java.util.Map.entry;
+import static se.pitch.oss.fedpro.client.Settings.*;
+import static se.pitch.oss.fedpro.client.session.SessionSettings.*;
 import static se.pitch.oss.fedpro.client.session.TimeoutTimer.createLazyTimeoutTimer;
 import static se.pitch.oss.fedpro.common.session.MessageType.CTRL_NEW_SESSION_STATUS;
 import static se.pitch.oss.fedpro.common.session.MessageType.CTRL_RESUME_STATUS;
@@ -51,25 +56,30 @@ public class SessionImpl implements Session {
 
    private static final Logger LOGGER = Logger.getLogger(SessionImpl.class.getName());
 
-   private static final int MESSAGE_QUEUE_SIZE =
-         Integer.getInteger("se.pitch.oss.fedpro.client.message.queue", 2000);
-   private static final boolean RATE_LIMIT_ENABLED = Boolean.getBoolean("se.pitch.oss.fedpro.client.rate.limit");
-   private static final boolean ALLOW_GAPS_IN_SEQUENCE_NUMBERS =
-         Boolean.getBoolean("se.pitch.oss.fedpro.common.allowGapsInSequenceNumbers");
+   // TODO: Consider turning this into FedPro a setting.
+   private static final long STATE_LISTENER_TIMEOUT_MILLIS = 30;
 
    private final TransportBase _transport;
    private ClientMessageWriter _messageWriter;
    private SocketWriter _socketWriter;
    private Thread _socketWriterThread;
    private TimeoutTimer _sessionTimeoutTimer;
-   private long _sessionTimeout = DEFAULT_RESPONSE_TIMEOUT_MILLIS;
+
+   // Session layer settings
+   private final long _sessionTimeoutMillis;
+   private final boolean _rateLimitEnabled;
+   private final int _maxRetryConnectAttempts;
+   private final long _connectionTimeoutMillis;
+   private final int _queueSize;
 
    private final Object _sessionLock = new Object();
    @GuardedBy("_sessionLock")
    private State _state = State.NEW;
    private FedProSocket _socket;
    private long _sessionId = MessageHeader.NO_SESSION_ID;
-   private final AtomicSequenceNumber _lastReceivedSequenceNumber = new AtomicSequenceNumber();
+   private String _sessionIdString = LogUtil.formatSessionId(_sessionId);
+   private final AtomicSequenceNumber _lastReceivedSequenceNumber =
+         new AtomicSequenceNumber(SequenceNumber.NO_SEQUENCE_NUMBER);
 
    // TODO: Save the original Exception that caused session to drop, and relay its message to federate
    //   in the connectionLost callback when and if we fail to resume the session.
@@ -77,10 +87,37 @@ public class SessionImpl implements Session {
    private final Map<Integer, CompletableFuture<byte[]>> _requestFutures = new ConcurrentHashMap<>();
 
    private HlaCallbackRequestListener _hlaCallbackRequestListener;
-   private static final ExecutorService _stateListenerExecutor;
+   private final ExecutorService _stateListenerExecutor;
    private final List<StateListener> _stateListeners = new ArrayList<>();
 
-   static {
+   private MessageSentListener _messageSentListener;
+
+   public SessionImpl(
+         Transport transport,
+         TypedProperties settings)
+   {
+      _transport = (TransportBase) transport;
+
+      // Initialize settings
+      if (settings != null) {
+         _sessionTimeoutMillis = settings.getDuration(
+               SETTING_NAME_RESPONSE_TIMEOUT,
+               Duration.ofMillis(DEFAULT_RESPONSE_TIMEOUT_MILLIS)).toMillis();
+         _rateLimitEnabled = settings.getBoolean(SETTING_NAME_RATE_LIMIT_ENABLED, DEFAULT_RATE_LIMIT_ENABLED);
+         _maxRetryConnectAttempts = settings.getInt(
+               SETTING_NAME_CONNECTION_MAX_RETRY_ATTEMPTS, DEFAULT_CONNECTION_MAX_RETRY_ATTEMPTS);
+         _connectionTimeoutMillis = settings.getDuration(
+               SETTING_NAME_CONNECTION_TIMEOUT, Duration.ofMillis(DEFAULT_CONNECTION_TIMEOUT_MILLIS)).toMillis();
+         _queueSize = settings.getInt(SETTING_NAME_MESSAGE_QUEUE_SIZE, DEFAULT_MESSAGE_QUEUE_SIZE);
+      } else {
+         // Initialize settings
+         _sessionTimeoutMillis = DEFAULT_RESPONSE_TIMEOUT_MILLIS;
+         _rateLimitEnabled = DEFAULT_RATE_LIMIT_ENABLED;
+         _maxRetryConnectAttempts = DEFAULT_CONNECTION_MAX_RETRY_ATTEMPTS;
+         _connectionTimeoutMillis = DEFAULT_CONNECTION_TIMEOUT_MILLIS;
+         _queueSize = DEFAULT_MESSAGE_QUEUE_SIZE;
+      }
+
       // Make the stateListenerExecutor tasks be daemons.
       _stateListenerExecutor = Executors.newFixedThreadPool(1, r -> {
          // This shouldn't be executed for each new queued runnable
@@ -92,11 +129,52 @@ public class SessionImpl implements Session {
       });
    }
 
-   private MessageSentListener _messageSentListener;
-
-   public SessionImpl(Transport transport)
+   void requestListenerExecutorShutdown()
    {
-      _transport = (TransportBase) transport;
+      // Add a poison task into the queue,
+      // to request the executor to shut down itself after processing pending tasks.
+      _stateListenerExecutor.execute(_stateListenerExecutor::shutdown);
+   }
+
+   @Override
+   public void close()
+   throws Exception
+   {
+      // Stop accepting task,
+      _stateListenerExecutor.shutdown();
+      // then await graceful termination.
+      if (!_stateListenerExecutor.awaitTermination(STATE_LISTENER_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)) {
+         LOGGER.severe(() -> String.format(
+               "%s: State Listener execution did not complete in %s ms",
+               logPrefix(),
+               STATE_LISTENER_TIMEOUT_MILLIS));
+         // Forcibly stop remaining tasks.
+         _stateListenerExecutor.shutdownNow();
+      }
+   }
+
+   private FedProSocket connect(Transport transport)
+   throws IOException
+   {
+      int attempt = 0;
+      while (true) {
+         try {
+            return _transport.connect();
+         } catch (BindException lastException) {
+            // Probably caused by port starvation. Wait a bit and try again.
+            if (attempt < _maxRetryConnectAttempts) {
+               try {
+                  Thread.sleep(300L);
+               } catch (InterruptedException ex) {
+                  // We were interrupted while waiting.
+                  throw lastException;
+               }
+            } else {
+               throw lastException;
+            }
+         }
+         attempt++;
+      }
    }
 
    @Override
@@ -113,21 +191,6 @@ public class SessionImpl implements Session {
          state = _state;
       }
       return state;
-   }
-
-   @Override
-   public void setSessionTimeout(
-         long sessionTimeout,
-         TimeUnit sessionTimeoutUnit)
-   throws SessionIllegalState
-   {
-      synchronized (_sessionLock) {
-         if (_state.equals(State.NEW)) {
-            _sessionTimeout = sessionTimeoutUnit.toMillis(sessionTimeout);
-         } else {
-            throw new SessionIllegalState("Session timeout can only be set before session start.");
-         }
-      }
    }
 
    @Override
@@ -178,12 +241,53 @@ public class SessionImpl implements Session {
       final long endTime = System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(timeout, timeUnit);
       synchronized (_sessionLock) {
          long timeLeft = endTime - System.currentTimeMillis();
-         while (!Arrays.asList(anticipatedStates).contains(_state) && timeLeft > 0) {
+         List<State> anticipatedStatesList = Arrays.asList(anticipatedStates);
+         while (!anticipatedStatesList.contains(_state) && timeLeft > 0) {
             // The parameter of wait() is specified in milliseconds.
             _sessionLock.wait(timeLeft);
             timeLeft = endTime - System.currentTimeMillis();
          }
          return _state;
+      }
+   }
+
+   private State waitForStates(State... anticipatedStates)
+   throws InterruptedException
+   {
+      List<State> anticipatedStatesList = Arrays.asList(anticipatedStates);
+      synchronized (_sessionLock) {
+         while (!anticipatedStatesList.contains(_state)) {
+            _sessionLock.wait();
+         }
+         return _state;
+      }
+   }
+
+   public State compareAndSetState(
+         Map<State, State> transitions,
+         String reason)
+   {
+      synchronized (_sessionLock) {
+         State oldState = _state;
+         for (Map.Entry<State, State> entry : transitions.entrySet()) {
+            compareAndSetState(entry.getKey(), entry.getValue(), reason);
+            if (oldState == entry.getKey()) {
+               return oldState;
+            }
+         }
+         return oldState;
+      }
+   }
+
+   public State compareAndSetState(Map<State, State> transitions)
+   {
+      return compareAndSetState(transitions, "");
+   }
+
+   private State setState(State newState)
+   {
+      synchronized (_sessionLock) {
+         return compareAndSetState(_state, newState);
       }
    }
 
@@ -202,11 +306,14 @@ public class SessionImpl implements Session {
       synchronized (_sessionLock) {
          State oldState = _state;
          if (_state == expectedState) {
-            LOGGER.finer(() -> String.format("%s: %s -> %s", logPrefix(), _state, newState));
+            LOGGER.finer(() -> String.format("%s: %s -> %s", logPrefix(), oldState, newState));
             _state = newState;
             if (oldState != newState) {
-               transitionSessionState(oldState, newState);
+               handleStateTransition(oldState, newState);
                fireOnStateTransition(oldState, newState, reason);
+               if (newState == State.TERMINATED) {
+                  requestListenerExecutorShutdown();
+               }
             }
             _sessionLock.notifyAll();
          }
@@ -215,74 +322,91 @@ public class SessionImpl implements Session {
    }
 
    @GuardedBy("_sessionLock")
-   private void transitionSessionState(
+   private void handleStateTransition(
          State oldState,
          State newState)
    {
       assert oldState != newState;
 
-      if (oldState == State.NEW) {
-         if (newState == State.STARTING) {
-            // Handled in start().
-         } else {
-            assert false : "Illegal state transition. " + oldState + " -> " + newState;
+      switch (oldState) {
+         case NEW: {
+            if (newState == State.STARTING) {
+               // Handled in start().
+            } else {
+               assert false : "Illegal state transition. " + oldState + " -> " + newState;
+            }
+            break;
          }
-
-      } else if (oldState == State.STARTING) {
-         if (newState == State.RUNNING) {
-            startWriterThread();
-            startReaderThread();
-         } else if (newState == State.TERMINATED) {
-            // Handled in start().
-         } else {
-            assert false : "Illegal state transition. " + oldState + " -> " + newState;
+         case STARTING: {
+            if (newState == State.RUNNING) {
+               startWriterThread();
+               startReaderThread();
+            } else if (newState == State.TERMINATED) {
+               // Handled in start().
+            } else {
+               assert false : "Illegal state transition. " + oldState + " -> " + newState;
+            }
+            break;
          }
-
-      } else if (oldState == State.RUNNING) {
-         // TODO: Since read and write threads are using non-interruptible streams (InputStream/OutputStream),
-         //   we have to close the socket in order to stop them. An alternative would be to look into using
-         //   Java NIO InterruptibleChannel and Selector
-         if (newState == State.DROPPED) {
-            _sessionTimeoutTimer.pause();
-            _socketWriterThread.interrupt();
-            close(_socket);
-            _socket = null;
-         } else if (newState == State.TERMINATED) {
-            transitionToTerminated();
-         } else {
-            assert false : "Illegal state transition. " + oldState + " -> " + newState;
+         case RUNNING: {
+            // TODO: Since read and write threads are using non-interruptible streams (InputStream/OutputStream),
+            //   we have to close the socket in order to stop them. An alternative would be to look into using
+            //   Java NIO InterruptibleChannel and Selector
+            if (newState == State.DROPPED) {
+               _sessionTimeoutTimer.pause();
+               _socketWriterThread.interrupt();
+               close(_socket);
+               _socket = null;
+            } else if (newState == State.TERMINATING) {
+               // Handled in terminate()
+            } else {
+               assert false : "Illegal state transition. " + oldState + " -> " + newState;
+            }
+            break;
          }
-
-      } else if (oldState == State.DROPPED) {
-         if (newState == State.RUNNING) {
-            startWriterThread();
-            startReaderThread();
-         } else if (newState == State.RESUMING) {
-            // Handled in resume().
-         } else if (newState == State.TERMINATED) {
-            transitionToTerminated();
-         } else {
-            assert false : "Illegal state transition. " + oldState + " -> " + newState;
+         case DROPPED: {
+            if (newState == State.RUNNING) {
+               startWriterThread();
+               startReaderThread();
+            } else if (newState == State.RESUMING) {
+               // Handled in resume().
+            } else if (newState == State.TERMINATING) {
+               // Handled in terminate()
+            } else {
+               assert false : "Illegal state transition. " + oldState + " -> " + newState;
+            }
+            break;
          }
-
-      } else if (oldState == State.RESUMING) {
-         if (newState == State.RUNNING) {
-            startWriterThread();
-            startReaderThread();
-         } else if (newState == State.TERMINATED) {
-            transitionToTerminated();
-         } else if (newState == State.DROPPED) {
-            // Nothing needs to be done, as the thread to resume has already been started
-            _sessionTimeoutTimer.pause();
-         } else {
-            assert false : "Illegal state transition. " + oldState + " -> " + newState;
+         case RESUMING: {
+            if (newState == State.RUNNING) {
+               startWriterThread();
+               startReaderThread();
+            } else if (newState == State.TERMINATED) {
+               transitionToTerminated();
+            } else if (newState == State.DROPPED) {
+               // Nothing needs to be done, as the thread to resume has already been started
+               _sessionTimeoutTimer.pause();
+            } else {
+               assert false : "Illegal state transition. " + oldState + " -> " + newState;
+            }
+            break;
          }
-
-      } else if (oldState == State.TERMINATED) {
-         assert false : "Illegal state transition. " + oldState + " -> " + newState;
+         case TERMINATING: {
+            if (newState == State.TERMINATED) {
+               transitionToTerminated();
+            } else {
+               assert false : "Illegal state transition. " + oldState + " -> " + newState;
+            }
+            break;
+         }
+         case TERMINATED: {
+            assert false : "Illegal state transition. " + oldState + " -> " + newState;
+            break;
+         }
       }
    }
 
+   @GuardedBy("_sessionLock")
    private void transitionToTerminated()
    {
       _sessionTimeoutTimer.cancel();
@@ -291,10 +415,9 @@ public class SessionImpl implements Session {
       _socketWriterThread.interrupt();
    }
 
+   @GuardedBy("_sessionLock")
    private void failAllFuturesWhenTerminating()
    {
-      // TODO: Make sure it's OK to call this when synced on _stateLock.
-
       _requestFutures.forEach((seqNum, future) -> failFutureWhenTerminating(future));
       _requestFutures.clear();
 
@@ -304,6 +427,7 @@ public class SessionImpl implements Session {
       }
    }
 
+   @GuardedBy("_sessionLock")
    private void failFutureWhenTerminating(CompletableFuture<?> future)
    {
       try {
@@ -313,6 +437,7 @@ public class SessionImpl implements Session {
       }
    }
 
+   @GuardedBy("_sessionLock")
    private void fireOnStateTransition(
          State oldState,
          State newState,
@@ -327,7 +452,7 @@ public class SessionImpl implements Session {
    public void start(HlaCallbackRequestListener hlaCallbackRequestListener)
    throws SessionLost, SessionIllegalState
    {
-      start(hlaCallbackRequestListener, DEFAULT_RESPONSE_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS);
+      start(hlaCallbackRequestListener, _connectionTimeoutMillis, TimeUnit.MILLISECONDS);
    }
 
    @Override
@@ -338,40 +463,35 @@ public class SessionImpl implements Session {
    throws SessionLost, SessionIllegalState
    {
       Objects.requireNonNull(hlaCallbackRequestListener);
-      synchronized (_sessionLock) {
-         State beforeState = compareAndSetState(State.NEW, State.STARTING);
-         switch (beforeState) {
-            case NEW:
-               // Correct state, continue starting.
-               break;
-            case STARTING:
-               throw new SessionIllegalState("Session already starting.");
-            case TERMINATED:
-               throw new SessionIllegalState("Tried to start terminated session.");
-            default:
-               throw new SessionIllegalState("Tried to start session that was in state " + beforeState);
-         }
+
+      State beforeState = compareAndSetState(State.NEW, State.STARTING);
+      if (beforeState == State.TERMINATED) {
+         throw new SessionAlreadyTerminated("Cannot start a session that has terminated");
+      } else if (beforeState != State.NEW) {
+         throw new SessionIllegalState("Cannot start a session that is in state " + beforeState);
       }
+      // Now that the session state is STARTING, this thread will have exclusive right to the session. This is
+      // guaranteed since the public methods that attempt to alter the session will throw in the wrong state.
 
       RateLimiter limiter;
-      if (RATE_LIMIT_ENABLED) {
-         limiter = new ExponentialRateLimiter(MESSAGE_QUEUE_SIZE);
+      if (_rateLimitEnabled) {
+         limiter = new ExponentialRateLimiter(_queueSize);
       } else {
          limiter = new NullRateLimiter();
       }
 
       GenericBuffer<QueueableMessage> messageQueue = new RoundRobinBuffer<>(
-            MESSAGE_QUEUE_SIZE,
+            _sessionLock,
+            _queueSize,
             limiter,
-            QueueableMessage::isHlaResponse,
-            _sessionLock);
+            QueueableMessage::isHlaResponse);
       assert _messageWriter == null;
-      _messageWriter = new ClientMessageWriter(MessageHeader.NO_SESSION_ID, messageQueue, _sessionLock);
+      _messageWriter = new ClientMessageWriter(MessageHeader.NO_SESSION_ID, messageQueue);
 
       _hlaCallbackRequestListener = hlaCallbackRequestListener;
 
       try {
-         _socket = _transport.connect();
+         _socket = connect(_transport);
 
          _socketWriter = SocketWriter.createSocketWriterForThread(
                MessageHeader.NO_SESSION_ID,
@@ -379,18 +499,21 @@ public class SessionImpl implements Session {
                messageQueue,
                _socket,
                true,
-               SequenceNumber.INITIAL_SEQUENCE_NUMBER);
+               SequenceNumber.INITIAL_SEQUENCE_NUMBER + 1);
+         // The first sequence number that socket writer will expect is not INITIAL_SEQUENCE_NUMBER, since the first
+         // session message (CTRL_NEW_SESSION) will be sent directly to the socket and not stored in the message-sent
+         // history.
 
-         _messageWriter.writeNewSessionMessage(NewSessionMessage.FEDERATE_PROTOCOL_VERSION);
-         _socketWriter.writeNextMessage();
-
+         _socketWriter.writeDirectMessage(ClientMessageWriter.createNewSessionMessage());
 
          final long connectionTimeoutMillis = TimeUnit.MILLISECONDS.convert(connectionTimeout, connectionTimeoutUnit);
-         final TimeoutTimer connectionTimeoutTimer =
-               createLazyTimeoutTimer("Client Connection Timeout Timer", connectionTimeoutMillis);
+         final TimeoutTimer connectionTimeoutTimer = createLazyTimeoutTimer(
+               "Client Connection Timeout Timer",
+               connectionTimeoutMillis);
          connectionTimeoutTimer.start(() -> doWhenTimedOut(connectionTimeoutTimer.getTimeoutDurationMillis()));
          try {
             _sessionId = readNewSessionStatus(_socket.getInputStream());
+            _sessionIdString = LogUtil.formatSessionId(_sessionId);
          } finally {
             connectionTimeoutTimer.cancel();
          }
@@ -398,11 +521,11 @@ public class SessionImpl implements Session {
          _messageWriter.setSessionId(_sessionId);
          _socketWriter.setSessionId(_sessionId);
 
-      } catch (IOException | BadMessage | InterruptedException | WebsocketNotConnectedException e) {
+      } catch (IOException | BadMessage | WebsocketNotConnectedException e) {
          // TODO: According to 12.17.4.7.1, Figure 27 in IEEE1516.2-202x_Feb2023.pdf, an IOException here means we should
          //   retry sending the new session request. Does that make sense...?
 
-         // For resuming we have ResumeStrategy, could we use something similar for connecting a new session?
+         // Todo For resuming we have ResumeStrategy, could we use something similar for connecting a new session?
          compareAndSetState(State.STARTING, State.TERMINATED, e.toString());
          throw new SessionLost(e.getMessage(), e);
       } catch (SessionLost e) {
@@ -410,7 +533,7 @@ public class SessionImpl implements Session {
          throw e;
       }
 
-      _sessionTimeoutTimer = createLazyTimeoutTimer("Client Session Timeout Timer", _sessionTimeout);
+      _sessionTimeoutTimer = createLazyTimeoutTimer("Client Session Timeout Timer", _sessionTimeoutMillis);
       _sessionTimeoutTimer.start(() -> doWhenTimedOut(_sessionTimeoutTimer.getTimeoutDurationMillis()));
 
       compareAndSetState(State.STARTING, State.RUNNING);
@@ -420,7 +543,7 @@ public class SessionImpl implements Session {
    {
       LOGGER.severe(() -> String.format(
             "%s: No response from server in %d milliseconds, session timing out.",
-            LogUtil.logPrefix(_sessionId, "Client"),
+            logPrefix(),
             timeoutMillis));
       close(_socket);
    }
@@ -429,10 +552,10 @@ public class SessionImpl implements Session {
    {
       return new SocketWriter.Listener() {
          @Override
-         public void exceptionOnWrite(String message)
+         public void exceptionOnWrite(Exception e)
          {
-            LOGGER.warning(() -> String.format("%s: Failed to write to socket: %s", logPrefix(), message));
-            compareAndSetState(State.RUNNING, State.DROPPED, "Failed to write to socket: " + message);
+            LOGGER.warning(() -> String.format("%s: Failed to write to socket: %s", logPrefix(), e.toString()));
+            compareAndSetState(State.RUNNING, State.DROPPED, "Failed to write to socket: " + e.toString());
          }
 
          @Override
@@ -460,9 +583,13 @@ public class SessionImpl implements Session {
    throws SessionLost, IOException, SessionIllegalState
    {
       State beforeState = compareAndSetState(State.DROPPED, State.RESUMING);
-      if (beforeState != State.DROPPED) {
-         throw new SessionIllegalState("Cannot resume a session in state " + beforeState);
+      if (beforeState == State.TERMINATED) {
+         throw new SessionAlreadyTerminated("Cannot resume a session that has terminated");
+      } else if (beforeState != State.DROPPED) {
+         throw new SessionIllegalState("Cannot resume a session that is in state " + beforeState);
       }
+      // Now that the session state is RESUMING, this thread will have exclusive right to the session. This is
+      // guaranteed since the public methods that attempt to alter the session will throw in the wrong state.
 
       LOGGER.fine(() -> String.format("%s: Trying to resume.", logPrefix()));
 
@@ -482,7 +609,7 @@ public class SessionImpl implements Session {
       FedProSocket newSocket = null;
       try {
 
-         newSocket = _transport.connect();
+         newSocket = connect(_transport);
 
          SocketWriter directSocketWriter = SocketWriter.createDirectSocketWriter(_sessionId, newSocket, true);
          EncodedMessage resumeSessionMessage = ClientMessageWriter.createResumeSessionMessage(
@@ -495,22 +622,22 @@ public class SessionImpl implements Session {
          ResumeStatusMessage resumeStatusMessage = readResumeStatus(newSocket.getInputStream());
 
          if (resumeStatusMessage.sessionStatus != ResumeStatusMessage.STATUS_OK_TO_RESUME) {
-            throw new SessionLost(
-                  "Server refused to resume session. Reason: " +
-                        resumeStatusToString(resumeStatusMessage.sessionStatus));
+            throw new SessionLost("Server refused to resume session. Reason: " +
+                  ResumeStatusMessage.toString(resumeStatusMessage.sessionStatus));
          }
 
-         SequenceNumber resumeFromNumber = new SequenceNumber(resumeStatusMessage.lastReceivedFederateSequenceNumber)
-               .increment();
+         final int resumeFromNumber = SequenceNumber.nextAfter(resumeStatusMessage.lastReceivedFederateSequenceNumber);
 
          LOGGER.fine(() -> String.format(
                "%s: Resuming Federate messages from sequence number %d.",
                logPrefix(),
-               resumeFromNumber.get()));
+               resumeFromNumber));
 
-         if (newestAvailableFederateMessage != SequenceNumber.NO_SEQUENCE_NUMBER &&
+         if (!SequenceNumber.isValidAsSequenceNumber(resumeStatusMessage.lastReceivedFederateSequenceNumber)) {
+            _socketWriter.rewindToFirstMessage();
+         } else if (SequenceNumber.isValidAsSequenceNumber(newestAvailableFederateMessage) &&
                newestAvailableFederateMessage != resumeStatusMessage.lastReceivedFederateSequenceNumber) {
-            _socketWriter.rewindToSequenceNumber(resumeFromNumber);
+            _socketWriter.rewindToSequenceNumberAfter(new SequenceNumber(resumeStatusMessage.lastReceivedFederateSequenceNumber));
          }
 
          _socketWriter.setNewSocket(newSocket);
@@ -520,30 +647,16 @@ public class SessionImpl implements Session {
 
          return true;
 
-      } catch (BadMessage | SessionLost | EOFException e) {
+      } catch (BadMessage | SessionLost e) {
          close(newSocket);
          compareAndSetState(State.RESUMING, State.TERMINATED, e.toString());
          throwAsSessionException(e);
-         return false; // Will not be reached
+         // Will not be reached.
+         return false;
       } catch (IOException e) {
          close(newSocket);
          compareAndSetState(State.RESUMING, State.DROPPED, e.toString());
          throw e;
-      }
-   }
-
-   private String resumeStatusToString(int resumeStatus)
-   {
-      switch (resumeStatus) {
-         case ResumeStatusMessage.STATUS_OK_TO_RESUME:
-            return "OK";
-         case ResumeStatusMessage.STATUS_FAILURE_INVALID_SESSION:
-            return "Invalid Session";
-         case ResumeStatusMessage.STATUS_FAILURE_NOT_ENOUGH_BUFFERED_MESSAGES:
-            return "Not enough buffered messages";
-         default:
-         case ResumeStatusMessage.STATUS_FAILURE_OTHER_ERROR:
-            return "Unknown error";
       }
    }
 
@@ -589,22 +702,46 @@ public class SessionImpl implements Session {
    public void terminate()
    throws SessionLost, SessionIllegalState
    {
-      terminate(((int) _sessionTimeout), TimeUnit.MILLISECONDS);
+      terminate(((int) _sessionTimeoutMillis), TimeUnit.MILLISECONDS);
    }
 
    @Override
-   public void terminate(int responseTimeout, TimeUnit responseTimeoutUnit)
+   public void terminate(
+         int responseTimeout,
+         TimeUnit responseTimeoutUnit)
    throws SessionLost, SessionIllegalState
    {
       CompletableFuture<Void> futureResponse = new CompletableFuture<>();
+      State[] stateBeforeTerminating = new State[1];
       doSessionOperation(() -> {
-         _sessionTerminatedFuture.set(futureResponse);
-         try {
-            _messageWriter.writeTerminateMessage(_lastReceivedSequenceNumber.get());
-         } catch (InterruptedException e) {
-            throw new RuntimeException("Client application thread was interrupted while trying to terminate session.");
+         if (getState() == State.RESUMING) {
+            try {
+               _sessionLock.wait();
+            } catch (InterruptedException ignore) {
+            }
          }
+         stateBeforeTerminating[0] = compareAndSetState(Map.ofEntries(
+               entry(State.RUNNING, State.TERMINATING),
+               entry(State.DROPPED, State.TERMINATING)));
+         // Henceforth, the session state is TERMINATING and so this thread has exclusive right to the session. This is
+         // guaranteed since the public methods that attempt to alter the session will throw in the wrong state.
       });
+
+      if (getState() == State.TERMINATED) {
+         throw new SessionLost("Session terminated while trying to resume.");
+      }
+
+      if (stateBeforeTerminating[0] == State.DROPPED) {
+         compareAndSetState(State.TERMINATING, State.TERMINATED, "Terminated dropped session without resuming.");
+         return;
+      }
+
+      _sessionTerminatedFuture.set(futureResponse);
+      try {
+         _messageWriter.writeTerminateMessage(_lastReceivedSequenceNumber.get());
+      } catch (InterruptedException e) {
+         throw new RuntimeException("Client application thread was interrupted while trying to terminate session.");
+      }
 
       try {
          futureResponse.get(responseTimeout, responseTimeoutUnit);
@@ -613,41 +750,17 @@ public class SessionImpl implements Session {
                logPrefix() + ": Interrupted while waiting for response to termination request: " + e,
                e);
       } catch (TimeoutException e) {
-         throw new SessionLost(
-               logPrefix() + ": Timed out while waiting for response to termination request: " + e);
+         throw new SessionLost(logPrefix() + ": Timed out while waiting for response to termination request: " + e);
       } catch (CancellationException | ExecutionException e) {
          throw new SessionLost(logPrefix() + ": Failed to complete termination request to server: " + e);
       } finally {
-         synchronized (_sessionLock) {
-            if (_state == State.RESUMING) {
-               try {
-                  waitForStates(10, TimeUnit.SECONDS, State.RUNNING, State.DROPPED, State.TERMINATED);
-               } catch (InterruptedException ignore) {
-               }
-               // This covers an ultra-edge case
-               compareAndSetState(State.RESUMING, State.TERMINATED);
-            }
-            String message = "Terminated on request.";
-            compareAndSetState(State.RUNNING, State.TERMINATED, message);
-            compareAndSetState(State.DROPPED, State.TERMINATED, message);
-         }
+         compareAndSetState(State.TERMINATING, State.TERMINATED, "Terminated on request.");
       }
    }
 
-   private CompletableFuture<byte[]> doSessionOperation(AsyncSessionOperation operation)
-   throws SessionIllegalState
-   {
-      synchronized (_sessionLock) {
-         if (_state == State.RUNNING || _state == State.DROPPED || _state == State.RESUMING) {
-            return operation.run();
-         } else if (_state == State.TERMINATED) {
-            throw new SessionAlreadyTerminated(logPrefix() + ": Terminated.");
-         } else if (_state == State.NEW || _state == State.STARTING) {
-            throw new SessionIllegalState(logPrefix() + ": Not yet established.");
-         } else {
-            throw new SessionIllegalState(logPrefix() + ": State " + _state + "is unknown.");
-         }
-      }
+   @FunctionalInterface
+   private interface AsyncSessionOperation {
+      CompletableFuture<byte[]> run();
    }
 
    private void doSessionOperation(Runnable operation)
@@ -659,9 +772,21 @@ public class SessionImpl implements Session {
       });
    }
 
-   @FunctionalInterface
-   private interface AsyncSessionOperation {
-      CompletableFuture<byte[]> run();
+   // All public methods that results in writing outgoing messages are thread-safe since they pass through this method,
+   // which only executes the passed operation in state RUNNING, DROPPED or RESUMING. This helps ensure correct ordering
+   // of messages.
+   private CompletableFuture<byte[]> doSessionOperation(AsyncSessionOperation operation)
+   throws SessionIllegalState
+   {
+      synchronized (_sessionLock) {
+         if (_state == State.RUNNING || _state == State.DROPPED || _state == State.RESUMING) {
+            return operation.run();
+         } else if (_state == State.TERMINATED) {
+            throw new SessionAlreadyTerminated(logPrefix() + ": Session has terminated.");
+         } else {
+            throw new SessionIllegalState(logPrefix() + ": Session state is " + _state);
+         }
+      }
    }
 
    private void close(FedProSocket socket)
@@ -680,14 +805,17 @@ public class SessionImpl implements Session {
    {
       _socketWriterThread = new Thread(
             _socketWriter::socketWriterLoop,
-            "Client Session " + _sessionId + " Writer Thread.");
+            "Client Session " + _sessionIdString + " Writer Thread.");
       _socketWriterThread.setDaemon(true);
       _socketWriterThread.start();
    }
 
+   @GuardedBy("_sessionLock")
    private void startReaderThread()
    {
-      Thread readerThread = new Thread(this::runMessageReaderLoop, "Client Session " + _sessionId + " Reader Thread.");
+      Thread readerThread = new Thread(
+            this::runMessageReaderLoop,
+            "Client Session " + _sessionIdString + " Reader Thread.");
       readerThread.setDaemon(true);
       readerThread.start();
    }
@@ -706,14 +834,15 @@ public class SessionImpl implements Session {
             logReceivedMessage(messageHeader.messageType, messageHeader.sequenceNumber);
 
             if (messageHeader.sessionId != _sessionId) {
-               throw new BadMessage(logPrefix() + ": Received wrong session ID " + messageHeader.sessionId);
+               throw new BadMessage(
+                     logPrefix() + ": Received wrong session ID " + LogUtil.formatSessionId(messageHeader.sessionId));
             }
 
             switch (messageHeader.messageType) {
                case CTRL_HEARTBEAT_RESPONSE: {
                   HeartbeatResponseMessage message = HeartbeatResponseMessage.decode(inputStream);
 
-                  trackMessageReceived(messageHeader.sequenceNumber);
+                  extendSessionTimer();
                   CompletableFuture<byte[]> future = _requestFutures.remove(message.responseToSequenceNumber);
                   if (future != null) {
                      future.completeAsync(() -> null);
@@ -727,9 +856,8 @@ public class SessionImpl implements Session {
                }
 
                case CTRL_SESSION_TERMINATED: {
-                  trackMessageReceived(messageHeader.sequenceNumber);
-
-                  CompletableFuture<Void> future = _sessionTerminatedFuture.get();
+                  extendSessionTimer();
+                  CompletableFuture<Void> future = _sessionTerminatedFuture.getAndSet(null);
                   if (future != null) {
                      future.completeAsync(() -> null);
                   } else {
@@ -747,7 +875,7 @@ public class SessionImpl implements Session {
                         inputStream,
                         messageHeader.getPayloadSize());
 
-                  trackMessageReceived(messageHeader.sequenceNumber);
+                  trackHlaMessageReceived(messageHeader.sequenceNumber);
                   CompletableFuture<byte[]> future = _requestFutures.remove(message.responseToSequenceNumber);
                   if (future != null) {
                      future.completeAsync(() -> message.hlaServiceReturnValueOrException);
@@ -770,7 +898,7 @@ public class SessionImpl implements Session {
                   _hlaCallbackRequestListener.onHlaCallbackRequest(
                         messageHeader.sequenceNumber,
                         message.hlaServiceCallbackWithParams);
-                  trackMessageReceived(messageHeader.sequenceNumber);
+                  trackHlaMessageReceived(messageHeader.sequenceNumber);
                   break;
                }
 
@@ -790,16 +918,18 @@ public class SessionImpl implements Session {
          // TODO: This case handles an inconsistency in the server implementation from the standard
          //       The server should not shut down the socket, but leave that to the client.
          //       We should consider removing this when the inconsistency is removed.
-         CompletableFuture<Void> future = _sessionTerminatedFuture.get();
-         if (future != null) {
-            future.completeAsync(() -> null);
-            return;
+         if (getState() == State.TERMINATING) {
+            CompletableFuture<Void> future = _sessionTerminatedFuture.get();
+            if (future != null) {
+               future.completeAsync(() -> null);
+               return;
+            }
          }
          compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
-         LOGGER.info(() -> String.format("%s: Session dropped: %s", logPrefix(), e));
+         LOGGER.info(() -> String.format("%s: Exception in reader thread: %s", logPrefix(), e));
       } catch (IOException e) {
          State oldState = compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
-         if (oldState == State.RUNNING) {
+         if (oldState == State.RUNNING || oldState == State.TERMINATING) {
             LOGGER.warning(() -> String.format("%s: Failed to read from socket: %s", logPrefix(), e));
          }
       } catch (BadMessage e) {
@@ -816,21 +946,24 @@ public class SessionImpl implements Session {
       }
    }
 
-   private void trackMessageReceived(int sequenceNumber)
+   private void trackHlaMessageReceived(int sequenceNumber)
+   {
+      extendSessionTimer();
+      if (SequenceNumber.isValidAsSequenceNumber(sequenceNumber)) {
+         _lastReceivedSequenceNumber.set(sequenceNumber);
+      } else {
+         LOGGER.warning(() -> String.format(
+               "%s: Received an invalid seq.nr. %s.",
+               logPrefix(),
+               LogUtil.padNumString(sequenceNumber)));
+      }
+   }
+
+   private void extendSessionTimer()
    {
       if (_sessionTimeoutTimer != null) {
-         // _dropSessionTimer may be null during the call to start
+         // This timer may be null during the call to start.
          _sessionTimeoutTimer.extend();
-      }
-      if (SequenceNumber.isValidAsSequenceNumber(sequenceNumber)) {
-         SequenceNumber previousReceived = _lastReceivedSequenceNumber.getAndSet(sequenceNumber);
-         if (!ALLOW_GAPS_IN_SEQUENCE_NUMBERS && sequenceNumber != previousReceived.getNext()) {
-            LOGGER.warning(() -> String.format(
-                  "%s: Got unexpected sequence number %d. Last received was %d.",
-                  logPrefix(),
-                  sequenceNumber,
-                  previousReceived.get()));
-         }
       }
    }
 
@@ -847,7 +980,7 @@ public class SessionImpl implements Session {
 
       NewSessionStatusMessage message = NewSessionStatusMessage.decode(inputStream);
 
-      trackMessageReceived(messageHeader.sequenceNumber);
+      extendSessionTimer();
 
       if (message.reason != NewSessionStatusMessage.REASON_SUCCESS) {
          throw new SessionLost(logPrefix() + ": Server unable to create session, reason " + message.reason);
@@ -864,14 +997,13 @@ public class SessionImpl implements Session {
       logReceivedMessage(messageHeader.messageType, messageHeader.sequenceNumber);
 
       if (messageHeader.messageType != CTRL_RESUME_STATUS) {
-         throw new BadMessage(
-               logPrefix() + ": Expected ResumeStatus message, got " + messageHeader.messageType);
+         throw new BadMessage(logPrefix() + ": Expected ResumeStatus message, got " + messageHeader.messageType);
       }
 
       return ResumeStatusMessage.decode(inputStream);
    }
 
-   private void throwAsSessionException(Exception e)
+   private static void throwAsSessionException(Exception e)
    throws SessionLost
    {
       if (e instanceof SessionLost) {
@@ -892,8 +1024,19 @@ public class SessionImpl implements Session {
             messageType));
    }
 
+   TypedProperties getSettings()
+   {
+      TypedProperties settings = new TypedProperties();
+      settings.setDuration(SETTING_NAME_RESPONSE_TIMEOUT, Duration.ofMillis(_sessionTimeoutMillis));
+      settings.setInt(SETTING_NAME_CONNECTION_MAX_RETRY_ATTEMPTS, _maxRetryConnectAttempts);
+      settings.setDuration(SETTING_NAME_CONNECTION_TIMEOUT, Duration.ofMillis(_connectionTimeoutMillis));
+      settings.setBoolean(SETTING_NAME_RATE_LIMIT_ENABLED, _rateLimitEnabled);
+      settings.setInt(SETTING_NAME_MESSAGE_QUEUE_SIZE, _queueSize);
+      return settings;
+   }
+
    String logPrefix()
    {
-      return LogUtil.logPrefix(_sessionId, "Client");
+      return LogUtil.logPrefix(_sessionIdString, LogUtil.CLIENT_PREFIX);
    }
 }

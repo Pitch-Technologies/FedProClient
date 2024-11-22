@@ -16,14 +16,8 @@
 
 package se.pitch.oss.fedpro.client;
 
-import se.pitch.oss.fedpro.client.transport.TcpTransport;
-import se.pitch.oss.fedpro.client.transport.TlsTransport;
-import se.pitch.oss.fedpro.client.transport.WebSocketTransport;
-import se.pitch.oss.fedpro.client.transport.WebSocketSecureTransport;
-import se.pitch.oss.fedpro.common.Ports;
+import se.pitch.oss.fedpro.client.transport.*;
 import se.pitch.oss.fedpro.common.TlsKeys;
-import se.pitch.oss.fedpro.common.TlsMode;
-import se.pitch.oss.fedpro.common.transport.TlsContext;
 import se.pitch.oss.fedpro.common.transport.TlsKeysImpl;
 
 import javax.net.ssl.SSLContext;
@@ -31,83 +25,169 @@ import java.security.KeyStore;
 
 public class TransportFactory {
 
-   public static Transport createTcpTransport(String host)
+   /**
+    * Create a new TCP specific transport instance with default settings.
+    *
+    * @return A new Transport instance.
+    */
+   public static Transport createTcpTransport()
    {
-      return new TcpTransport(host, Ports.DEFAULT_PORT_TCP);
+      return new TcpTransport(null);
    }
 
-   public static Transport createTcpTransport(String host, int port)
+   /**
+    * Create a new TCP specific transport instance with specified settings.
+    *
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
+   public static Transport createTcpTransport(TypedProperties settings)
    {
-      return new TcpTransport(host, port);
+      return new TcpTransport(settings);
    }
 
+   /**
+    * Create a new TLS specific transport instance with default settings.
+    *
+    * @return A new Transport instance.
+    */
+   public static Transport createTlsTransport()
+   {
+      return createTlsTransport(null);
+   }
+
+   /**
+    * Create a new TLS specific transport instance with specified settings.
+    *
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
+   public static Transport createTlsTransport(TypedProperties settings)
+   {
+      return new TlsTransport(null, settings);
+   }
+
+   /**
+    * Create a new TLS specific transport instance with specified TLS keys and settings.
+    *
+    * @param tlsKeys  The TLS keys containing the necessary cryptographic information for
+    *                 TLS.
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
    public static Transport createTlsTransport(
-         TlsMode mode,
          TlsKeys tlsKeys,
-         String host)
+         TypedProperties settings)
    {
-      boolean trustAllServers = mode == TlsMode.ENCRYPTED;
-      return createTlsTransport(
-            TlsContext.provideSSLContext((TlsKeysImpl) tlsKeys, trustAllServers),
-            host,
-            Ports.DEFAULT_PORT_TLS);
+      SSLContext sslContext = SecurityUtil.provideClientSSLContext((TlsKeysImpl) tlsKeys, settings);
+      return createTlsTransport(sslContext, settings);
    }
 
-   public static Transport createTlsTransport(
-         TlsMode mode,
+   /**
+    * Create a new TLS specific transport instance with specified SSLContext and settings.
+    *
+    * @param context  Defines the secure socket configuration for the Transport.
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
+   public static Transport createTlsTransport(SSLContext context, TypedProperties settings)
+   {
+      return new TlsTransport(context, settings);
+   }
+
+   /**
+    * Create a new Web Socket specific transport instance with default settings.
+    *
+    * @return A new Transport instance.
+    */
+   public static Transport createWebSocketTransport()
+   {
+      return createWebSocketTransport(null);
+   }
+
+   /**
+    * Create a new Web Socket specific transport instance with specified settings.
+    *
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
+   public static Transport createWebSocketTransport(TypedProperties settings)
+   {
+      return new WebSocketTransport(settings);
+   }
+
+   /**
+    * Create a new Secure Web Socket specific transport instance with default settings.
+    *
+    * @return A new Transport instance.
+    */
+   public static Transport createWebSocketSecureTransport()
+   {
+      return createWebSocketSecureTransport(null);
+   }
+
+   /**
+    * Create a new Secure Web Socket specific transport instance with specified settings.
+    *
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
+   public static Transport createWebSocketSecureTransport(TypedProperties settings)
+   {
+      return new WebSocketSecureTransport(null, settings);
+   }
+
+   /**
+    * Create a new Secure Web Socket specific transport instance with specified TLS keys
+    * and settings.
+    *
+    * @param tlsKeys  The TLS keys containing the necessary cryptographic information for TLS.
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
+   public static Transport createWebSocketSecureTransport(
          TlsKeys tlsKeys,
-         String host,
-         int port)
+         TypedProperties settings)
    {
-      boolean trustAllServers = mode == TlsMode.ENCRYPTED;
-      return createTlsTransport(TlsContext.provideSSLContext((TlsKeysImpl) tlsKeys, trustAllServers), host, port);
+      SSLContext sslContext = SecurityUtil.provideClientSSLContext((TlsKeysImpl) tlsKeys, settings);
+      return createWebSocketSecureTransport(sslContext, settings);
    }
 
-   public static Transport createTlsTransport(SSLContext context, String host)
+   /**
+    * Create a new Secure Web Socket specific transport instance with specified SSLContext
+    * and settings.
+    *
+    * @param context  Defines the secure socket configuration for the Transport.
+    * @param settings The FedProProperties object instance which transport layer settings
+    *                 will be loaded from.
+    *                 Unprovided settings will get default values and non-transport
+    *                 settings will be ignored.
+    * @return A new Transport instance.
+    */
+   public static Transport createWebSocketSecureTransport(SSLContext context, TypedProperties settings)
    {
-      return new TlsTransport(context, host, Ports.DEFAULT_PORT_TLS);
-   }
-
-   public static Transport createTlsTransport(SSLContext context, String host, int port)
-   {
-      return new TlsTransport(context, host, port);
-   }
-
-   public static Transport createWebSocketTransport(String host)
-   {
-      return new WebSocketTransport(host, Ports.DEFAULT_PORT_WS);
-   }
-
-   public static Transport createWebSocketTransport(String host, int port)
-   {
-      return new WebSocketTransport(host, port);
-   }
-
-   public static Transport createWebSocketSecureTransport(SSLContext context, String host)
-   {
-      return new WebSocketSecureTransport(context, host, Ports.DEFAULT_PORT_WSS);
-   }
-
-   public static Transport createWebSocketSecureTransport(SSLContext context, String host, int port)
-   {
-      return new WebSocketSecureTransport(context, host, port);
-   }
-
-   public static Transport createWebSocketSecureTransport(
-         TlsMode mode, TlsKeys keys, String host)
-   {
-      boolean trustAllServers = mode == TlsMode.ENCRYPTED;
-      return createWebSocketSecureTransport(
-            TlsContext.provideSSLContext((TlsKeysImpl) keys, trustAllServers), host, Ports.DEFAULT_PORT_WSS);
-   }
-
-   public static Transport createWebSocketSecureTransport(
-         TlsMode mode,
-         TlsKeys keys, String host, int port)
-   {
-      boolean trustAllServers = mode == TlsMode.ENCRYPTED;
-      return createWebSocketSecureTransport(
-            TlsContext.provideSSLContext((TlsKeysImpl) keys, trustAllServers), host, port);
+      return new WebSocketSecureTransport(context, settings);
    }
 
    public static TlsKeys createTlsKeys()

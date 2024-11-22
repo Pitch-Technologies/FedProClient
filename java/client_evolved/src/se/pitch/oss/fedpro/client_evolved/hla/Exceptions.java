@@ -18,7 +18,7 @@ package se.pitch.oss.fedpro.client_evolved.hla;
 
 import hla.rti1516e.exceptions.RTIexception;
 import hla.rti1516e.exceptions.RTIinternalError;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProRtiInternalError;
+import se.pitch.oss.fedpro.client_common.exceptions.FedProRtiInternalError;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

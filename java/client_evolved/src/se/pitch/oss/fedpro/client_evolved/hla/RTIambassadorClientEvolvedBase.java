@@ -21,14 +21,13 @@ import hla.rti1516e.CallbackModel;
 import hla.rti1516e.FederateAmbassador;
 import hla.rti1516e.exceptions.*;
 import net.jcip.annotations.GuardedBy;
-import se.pitch.oss.fedpro.client_abstract.ConnectSettings;
-import se.pitch.oss.fedpro.client_abstract.RTIambassadorClientGenericBase;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProConnectionFailed;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProFederateInternalError;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProNotConnected;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProRtiInternalError;
+import se.pitch.oss.fedpro.client_common.RTIambassadorClientGenericBase;
+import se.pitch.oss.fedpro.client_common.exceptions.*;
+
+import java.util.ArrayList;
 
 public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBase {
+
    protected final ClientConverter _clientConverter;
    private FederateAmbassadorDispatcher _federateAmbassadorDispatcher;
 
@@ -147,11 +146,14 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
    }
 
    protected void doAsyncHlaCall(CallRequest callRequest)
+   throws NotConnected
    {
       try {
+         // Evolved federates do not use the returned CompletableFuture,
+         // so ignore the result and return nothing.
          doAsyncHlaCallBase(callRequest);
-      } catch (FedProNotConnected ignore) {
-         // Evolved federates do not use the returned CompletableFuture.
+      } catch (FedProNotConnected e) {
+         throw new NotConnected(e.getMessage());
       }
    }
 
@@ -176,32 +178,22 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
       synchronized (_connectionStateLock) {
          throwIfAlreadyConnected();
 
-         // Everything after the second ';' is interpreted as the Local Setting Designator (LSD), or CRC address.
-         // We set limit = 3 so that the compound field only is split on the two first occurrences of ';'.
-         // What comes after that is not in the responsibility of the Federate protocol.
-         String[] splitConfiguration = localSettingsDesignator.split(";", 3);
+         ArrayList<String> inputValueList = splitFederateConnectSettings(localSettingsDesignator);
+         final String clientSettings = extractAndRemoveClientSettings(inputValueList, true);
+         final RtiConfiguration parsedRtiConfiguration = createRtiConfiguration(inputValueList);
 
-         ConnectSettings connectSettings;
          try {
-            connectSettings = ConnectSettings.parse(
-                  parseFederateProtocolAddress(splitConfiguration),
-                  parseFederateProtocolAdditionalSettings(splitConfiguration));
-         } catch (FedProConnectionFailed e) {
+            _persistentSession = createPersistentSession(clientSettings);
+         } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
-         }
-
-         try {
-            _persistentSession = createPersistentSession(connectSettings);
          } catch (FedProRtiInternalError e) {
             throw new RTIinternalError(e.getMessage());
          }
 
          _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter);
 
-         hla.rti1516_202X.fedpro.RtiConfiguration.Builder parsedBuilder =
-               parseLocalSettingsDesignator(splitConfiguration);
          CallRequest.Builder callRequest = CallRequest.newBuilder().setConnectWithConfigurationRequest(
-               ConnectWithConfigurationRequest.newBuilder().setRtiConfiguration(parsedBuilder));
+               ConnectWithConfigurationRequest.newBuilder().setRtiConfiguration(parsedRtiConfiguration));
 
          try {
             startPersistentSession();
@@ -221,62 +213,24 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
       }
    }
 
-   private String parseFederateProtocolAddress(String[] splitConfiguration)
+   public static RtiConfiguration createRtiConfiguration(ArrayList<String> inputValueList)
    {
-      if (splitConfiguration[0].isEmpty()) {
-         return "localhost";
-      }
-      return splitConfiguration[0];
-   }
-
-   private String parseFederateProtocolAdditionalSettings(String[] splitConfiguration)
-   {
-      if (splitConfiguration.length < 2) {
-         return "";
-      }
-      return splitConfiguration[1];
-   }
-
-   private hla.rti1516_202X.fedpro.RtiConfiguration.Builder parseLocalSettingsDesignator(String[] splitConfiguration)
-   {
-      String parsedLocalSettingsDesignator = "";
-
-      if (splitConfiguration.length > 2) {
-         parsedLocalSettingsDesignator = splitConfiguration[2];
+      RtiConfiguration.Builder builder = RtiConfiguration.newBuilder();
+      if (inputValueList.isEmpty()) {
+         return builder.build();
       }
 
-      hla.rti1516_202X.fedpro.RtiConfiguration.Builder builder = hla.rti1516_202X.fedpro.RtiConfiguration.newBuilder();
-      builder.setAdditionalSettings(parsedLocalSettingsDesignator);
-
-      if (!parsedLocalSettingsDesignator.isEmpty()) {
-         if (parsedLocalSettingsDesignator.contains("=")) {
-            String[] splitLsd = parsedLocalSettingsDesignator.split("[\r\n]+");
-            String address = "";
-            String port = "";
-            for (String lsdPart : splitLsd) {
-               if (address.isEmpty() && (lsdPart.startsWith("crcAddress=") | lsdPart.startsWith("crcHost="))) {
-                  String[] addressSplit = lsdPart.split("=", 2);
-                  if (addressSplit.length > 1) {
-                     address = addressSplit[1];
-                  }
-               } else if (port.isEmpty() && (lsdPart.startsWith("crcPort="))) {
-                  port = lsdPart;
-               }
-            }
-
-            if (!address.isEmpty()) {
-               if (!port.isEmpty()) {
-                  address = address + ":" + port;
-               }
-               builder.setRtiAddress(address);
-            }
-
-         } else {
-            builder.setRtiAddress(parsedLocalSettingsDesignator);
-         }
+      String firstLine = inputValueList.get(0);
+      if (!firstLine.contains("=")) {
+         builder.setConfigurationName(firstLine);
+         inputValueList.remove(0);
       }
 
-      return builder;
+      builder.setAdditionalSettings(String.join("\n", inputValueList));
+
+      // No need to set the rtiAddress since an LRC may specify the CRC address through the additional settings field
+      // of the RtiConfiguration object, which is done in this method.
+      return builder.build();
    }
 
    public void disconnect()

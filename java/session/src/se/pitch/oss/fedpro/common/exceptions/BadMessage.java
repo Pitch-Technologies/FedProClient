@@ -16,6 +16,9 @@
 
 package se.pitch.oss.fedpro.common.exceptions;
 
+/**
+ * Session layer exception that indicates that a received message is invalid.
+ */
 public class BadMessage extends Exception {
 
    public BadMessage(String message)

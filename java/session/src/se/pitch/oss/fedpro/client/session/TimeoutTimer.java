@@ -21,6 +21,12 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Utility class to execute a task after a timer expires.
+ * <p>
+ * Upon destruction, this cancels any pending timer. If the task must be executed,
+ * please ensure the corresponding timer is not destroyed before the timer expires.
+ */
 public class TimeoutTimer {
 
    private final ScheduledExecutorService _internalExecutorService;

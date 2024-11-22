@@ -70,30 +70,30 @@ private static final long serialVersionUID = 0L;
     return getObjectInstance();
   }
 
-  public static final int ATTRIBUTES_FIELD_NUMBER = 2;
-  private hla.rti1516_202X.fedpro.AttributeHandleSet attributes_;
+  public static final int CONFIRMEDATTRIBUTES_FIELD_NUMBER = 2;
+  private hla.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes_;
   /**
-   * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
-   * @return Whether the attributes field is set.
+   * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
+   * @return Whether the confirmedAttributes field is set.
    */
   @java.lang.Override
-  public boolean hasAttributes() {
-    return attributes_ != null;
+  public boolean hasConfirmedAttributes() {
+    return confirmedAttributes_ != null;
   }
   /**
-   * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
-   * @return The attributes.
+   * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
+   * @return The confirmedAttributes.
    */
   @java.lang.Override
-  public hla.rti1516_202X.fedpro.AttributeHandleSet getAttributes() {
-    return attributes_ == null ? hla.rti1516_202X.fedpro.AttributeHandleSet.getDefaultInstance() : attributes_;
+  public hla.rti1516_202X.fedpro.AttributeHandleSet getConfirmedAttributes() {
+    return confirmedAttributes_ == null ? hla.rti1516_202X.fedpro.AttributeHandleSet.getDefaultInstance() : confirmedAttributes_;
   }
   /**
-   * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+   * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
    */
   @java.lang.Override
-  public hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder getAttributesOrBuilder() {
-    return getAttributes();
+  public hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder getConfirmedAttributesOrBuilder() {
+    return getConfirmedAttributes();
   }
 
   public static final int USERSUPPLIEDTAG_FIELD_NUMBER = 3;
@@ -124,8 +124,8 @@ private static final long serialVersionUID = 0L;
     if (objectInstance_ != null) {
       output.writeMessage(1, getObjectInstance());
     }
-    if (attributes_ != null) {
-      output.writeMessage(2, getAttributes());
+    if (confirmedAttributes_ != null) {
+      output.writeMessage(2, getConfirmedAttributes());
     }
     if (!userSuppliedTag_.isEmpty()) {
       output.writeBytes(3, userSuppliedTag_);
@@ -143,9 +143,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getObjectInstance());
     }
-    if (attributes_ != null) {
+    if (confirmedAttributes_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getAttributes());
+        .computeMessageSize(2, getConfirmedAttributes());
     }
     if (!userSuppliedTag_.isEmpty()) {
       size += com.google.protobuf.CodedOutputStream
@@ -171,10 +171,10 @@ private static final long serialVersionUID = 0L;
       if (!getObjectInstance()
           .equals(other.getObjectInstance())) return false;
     }
-    if (hasAttributes() != other.hasAttributes()) return false;
-    if (hasAttributes()) {
-      if (!getAttributes()
-          .equals(other.getAttributes())) return false;
+    if (hasConfirmedAttributes() != other.hasConfirmedAttributes()) return false;
+    if (hasConfirmedAttributes()) {
+      if (!getConfirmedAttributes()
+          .equals(other.getConfirmedAttributes())) return false;
     }
     if (!getUserSuppliedTag()
         .equals(other.getUserSuppliedTag())) return false;
@@ -193,9 +193,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OBJECTINSTANCE_FIELD_NUMBER;
       hash = (53 * hash) + getObjectInstance().hashCode();
     }
-    if (hasAttributes()) {
-      hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
-      hash = (53 * hash) + getAttributes().hashCode();
+    if (hasConfirmedAttributes()) {
+      hash = (37 * hash) + CONFIRMEDATTRIBUTES_FIELD_NUMBER;
+      hash = (53 * hash) + getConfirmedAttributes().hashCode();
     }
     hash = (37 * hash) + USERSUPPLIEDTAG_FIELD_NUMBER;
     hash = (53 * hash) + getUserSuppliedTag().hashCode();
@@ -333,11 +333,11 @@ private static final long serialVersionUID = 0L;
         objectInstance_ = null;
         objectInstanceBuilder_ = null;
       }
-      if (attributesBuilder_ == null) {
-        attributes_ = null;
+      if (confirmedAttributesBuilder_ == null) {
+        confirmedAttributes_ = null;
       } else {
-        attributes_ = null;
-        attributesBuilder_ = null;
+        confirmedAttributes_ = null;
+        confirmedAttributesBuilder_ = null;
       }
       userSuppliedTag_ = com.google.protobuf.ByteString.EMPTY;
 
@@ -372,10 +372,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.objectInstance_ = objectInstanceBuilder_.build();
       }
-      if (attributesBuilder_ == null) {
-        result.attributes_ = attributes_;
+      if (confirmedAttributesBuilder_ == null) {
+        result.confirmedAttributes_ = confirmedAttributes_;
       } else {
-        result.attributes_ = attributesBuilder_.build();
+        result.confirmedAttributes_ = confirmedAttributesBuilder_.build();
       }
       result.userSuppliedTag_ = userSuppliedTag_;
       onBuilt();
@@ -429,8 +429,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasObjectInstance()) {
         mergeObjectInstance(other.getObjectInstance());
       }
-      if (other.hasAttributes()) {
-        mergeAttributes(other.getAttributes());
+      if (other.hasConfirmedAttributes()) {
+        mergeConfirmedAttributes(other.getConfirmedAttributes());
       }
       if (other.getUserSuppliedTag() != com.google.protobuf.ByteString.EMPTY) {
         setUserSuppliedTag(other.getUserSuppliedTag());
@@ -470,7 +470,7 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               input.readMessage(
-                  getAttributesFieldBuilder().getBuilder(),
+                  getConfirmedAttributesFieldBuilder().getBuilder(),
                   extensionRegistry);
 
               break;
@@ -615,123 +615,123 @@ private static final long serialVersionUID = 0L;
       return objectInstanceBuilder_;
     }
 
-    private hla.rti1516_202X.fedpro.AttributeHandleSet attributes_;
+    private hla.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.AttributeHandleSet, hla.rti1516_202X.fedpro.AttributeHandleSet.Builder, hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder> attributesBuilder_;
+        hla.rti1516_202X.fedpro.AttributeHandleSet, hla.rti1516_202X.fedpro.AttributeHandleSet.Builder, hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder> confirmedAttributesBuilder_;
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
-     * @return Whether the attributes field is set.
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
+     * @return Whether the confirmedAttributes field is set.
      */
-    public boolean hasAttributes() {
-      return attributesBuilder_ != null || attributes_ != null;
+    public boolean hasConfirmedAttributes() {
+      return confirmedAttributesBuilder_ != null || confirmedAttributes_ != null;
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
-     * @return The attributes.
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
+     * @return The confirmedAttributes.
      */
-    public hla.rti1516_202X.fedpro.AttributeHandleSet getAttributes() {
-      if (attributesBuilder_ == null) {
-        return attributes_ == null ? hla.rti1516_202X.fedpro.AttributeHandleSet.getDefaultInstance() : attributes_;
+    public hla.rti1516_202X.fedpro.AttributeHandleSet getConfirmedAttributes() {
+      if (confirmedAttributesBuilder_ == null) {
+        return confirmedAttributes_ == null ? hla.rti1516_202X.fedpro.AttributeHandleSet.getDefaultInstance() : confirmedAttributes_;
       } else {
-        return attributesBuilder_.getMessage();
+        return confirmedAttributesBuilder_.getMessage();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
      */
-    public Builder setAttributes(hla.rti1516_202X.fedpro.AttributeHandleSet value) {
-      if (attributesBuilder_ == null) {
+    public Builder setConfirmedAttributes(hla.rti1516_202X.fedpro.AttributeHandleSet value) {
+      if (confirmedAttributesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        attributes_ = value;
+        confirmedAttributes_ = value;
         onChanged();
       } else {
-        attributesBuilder_.setMessage(value);
+        confirmedAttributesBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
      */
-    public Builder setAttributes(
+    public Builder setConfirmedAttributes(
         hla.rti1516_202X.fedpro.AttributeHandleSet.Builder builderForValue) {
-      if (attributesBuilder_ == null) {
-        attributes_ = builderForValue.build();
+      if (confirmedAttributesBuilder_ == null) {
+        confirmedAttributes_ = builderForValue.build();
         onChanged();
       } else {
-        attributesBuilder_.setMessage(builderForValue.build());
+        confirmedAttributesBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
      */
-    public Builder mergeAttributes(hla.rti1516_202X.fedpro.AttributeHandleSet value) {
-      if (attributesBuilder_ == null) {
-        if (attributes_ != null) {
-          attributes_ =
-            hla.rti1516_202X.fedpro.AttributeHandleSet.newBuilder(attributes_).mergeFrom(value).buildPartial();
+    public Builder mergeConfirmedAttributes(hla.rti1516_202X.fedpro.AttributeHandleSet value) {
+      if (confirmedAttributesBuilder_ == null) {
+        if (confirmedAttributes_ != null) {
+          confirmedAttributes_ =
+            hla.rti1516_202X.fedpro.AttributeHandleSet.newBuilder(confirmedAttributes_).mergeFrom(value).buildPartial();
         } else {
-          attributes_ = value;
+          confirmedAttributes_ = value;
         }
         onChanged();
       } else {
-        attributesBuilder_.mergeFrom(value);
+        confirmedAttributesBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
      */
-    public Builder clearAttributes() {
-      if (attributesBuilder_ == null) {
-        attributes_ = null;
+    public Builder clearConfirmedAttributes() {
+      if (confirmedAttributesBuilder_ == null) {
+        confirmedAttributes_ = null;
         onChanged();
       } else {
-        attributes_ = null;
-        attributesBuilder_ = null;
+        confirmedAttributes_ = null;
+        confirmedAttributesBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
      */
-    public hla.rti1516_202X.fedpro.AttributeHandleSet.Builder getAttributesBuilder() {
+    public hla.rti1516_202X.fedpro.AttributeHandleSet.Builder getConfirmedAttributesBuilder() {
       
       onChanged();
-      return getAttributesFieldBuilder().getBuilder();
+      return getConfirmedAttributesFieldBuilder().getBuilder();
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
      */
-    public hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder getAttributesOrBuilder() {
-      if (attributesBuilder_ != null) {
-        return attributesBuilder_.getMessageOrBuilder();
+    public hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder getConfirmedAttributesOrBuilder() {
+      if (confirmedAttributesBuilder_ != null) {
+        return confirmedAttributesBuilder_.getMessageOrBuilder();
       } else {
-        return attributes_ == null ?
-            hla.rti1516_202X.fedpro.AttributeHandleSet.getDefaultInstance() : attributes_;
+        return confirmedAttributes_ == null ?
+            hla.rti1516_202X.fedpro.AttributeHandleSet.getDefaultInstance() : confirmedAttributes_;
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+     * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.AttributeHandleSet, hla.rti1516_202X.fedpro.AttributeHandleSet.Builder, hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder> 
-        getAttributesFieldBuilder() {
-      if (attributesBuilder_ == null) {
-        attributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getConfirmedAttributesFieldBuilder() {
+      if (confirmedAttributesBuilder_ == null) {
+        confirmedAttributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             hla.rti1516_202X.fedpro.AttributeHandleSet, hla.rti1516_202X.fedpro.AttributeHandleSet.Builder, hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder>(
-                getAttributes(),
+                getConfirmedAttributes(),
                 getParentForChildren(),
                 isClean());
-        attributes_ = null;
+        confirmedAttributes_ = null;
       }
-      return attributesBuilder_;
+      return confirmedAttributesBuilder_;
     }
 
     private com.google.protobuf.ByteString userSuppliedTag_ = com.google.protobuf.ByteString.EMPTY;

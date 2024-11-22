@@ -20,6 +20,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 public class HlaCallResponseMessage implements EncodableMessage {
 
    public final int responseToSequenceNumber; //unsigned int
@@ -34,7 +36,7 @@ public class HlaCallResponseMessage implements EncodableMessage {
    @Override
    public byte[] encode()
    {
-      return ByteBuffer.allocate(4 + hlaServiceReturnValueOrException.length)
+      return ByteBuffer.allocate(INT32_SIZE + hlaServiceReturnValueOrException.length)
             .putInt(responseToSequenceNumber)
             .put(hlaServiceReturnValueOrException)
             .array();
@@ -43,9 +45,8 @@ public class HlaCallResponseMessage implements EncodableMessage {
    public static HlaCallResponseMessage decode(InputStream inputStream, int length)
    throws IOException
    {
-      ByteBuffer buffer = ByteReader.wrap(inputStream, 4);
-      int responseToSequenceNumber = buffer.getInt();
-      byte[] hlaServiceReturnValueOrException = ByteReader.readNBytes(inputStream, length - 4);
+      int responseToSequenceNumber = ByteReader.getInt32(inputStream);
+      byte[] hlaServiceReturnValueOrException = ByteReader.readNBytes(inputStream, length - INT32_SIZE);
       return new HlaCallResponseMessage(responseToSequenceNumber, hlaServiceReturnValueOrException);
    }
 }

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build" default="dist.all">
+   <property environment="env"/>
+
+   <property name="build.number" value="LOCAL"/>
+
+   <!-- Workaround for machines that have JDK11X64_HOME set instead of JDK11_HOME -->
+   <condition property="jdk.home.11" value="${env.JDK11_HOME}">
+      <isset property="env.JDK11_HOME"/>
+   </condition>
+   <condition property="jdk.home.11" value="${env.JDK11X64_HOME}">
+      <isset property="env.JDK11X64_HOME"/>
+   </condition>
+
+   <property name="dist.dir" value="${basedir}/dist"/>
+   <property name="out.dir" value="${basedir}/out"/>
+
+   <!-- Java libs -->
+   <property name="protobuf_lib.jar" value="protobuf-java-3.21.7.jar"/>
+   <property name="protobuf_lib.jar.location" value="lib/${protobuf_lib.jar}"/>
+   <property name="websocket_lib.jar" value="Java-WebSocket-1.5.6.jar"/>
+   <property name="websocket_lib.jar.location" value="lib/${websocket_lib.jar}"/>
+   <property name="slf4j-api.jar" value="slf4j-api-2.0.5.jar"/>
+   <property name="slf4j-api.jar.location" value="lib/${slf4j-api.jar}"/>
+   <property name="slf4j-nop.jar" value="slf4j-nop-2.0.5.jar"/>
+   <property name="slf4j-nop.jar.location" value="lib/${slf4j-nop.jar}"/>
+
+   <!-- External includes -->
+   <include file="java.xml"/>
+
+   <!-- Moving files -->
+   <target name="copy.websocket.lib">
+      <copy file="${websocket_lib.jar.location}" todir="${dist.dir}"/>
+   </target>
+
+   <target name="copy.protobuf.lib">
+      <copy file="${protobuf_lib.jar.location}" todir="${dist.dir}"/>
+   </target>
+
+   <target name="copy.slf4j-api.jar">
+      <copy file="${slf4j-api.jar.location}" todir="${dist.dir}"/>
+   </target>
+
+   <target name="copy.slf4j-nop.jar">
+      <copy file="${slf4j-nop.jar.location}" todir="${dist.dir}"/>
+   </target>
+
+   <!-- Jar targets -->
+   <target name="session.jar" depends="java.compile.module.fedproclient_session.production">
+      <jar destfile="${dist.dir}/fedpro-session.jar">
+         <manifest>
+            <attribute name="Class-Path" value="${websocket_lib.jar}"/>
+            <attribute name="Build-number" value="${build.number}"/>
+         </manifest>
+         <zipfileset dir="${fedproclient_session.output.dir}" includes="**"/>
+      </jar>
+   </target>
+
+   <target name="protobuf.jar" depends="java.compile.module.fedproclient_protobuf.production">
+      <jar destfile="${dist.dir}/protobuf.jar">
+         <manifest>
+            <attribute name="Class-Path" value="${protobuf_lib.jar}"/>
+            <attribute name="Build-number" value="${build.number}"/>
+         </manifest>
+         <zipfileset dir="${fedproclient_protobuf.output.dir}" includes="**"/>
+      </jar>
+   </target>
+
+   <target name="client.jar" depends="java.compile.module.fedproclient_client.production">
+      <jar destfile="${dist.dir}/fedpro-client-hla4.jar">
+         <manifest>
+            <attribute name="Class-Path" value="protobuf.jar fedpro-session.jar ${protobuf_lib.jar} ${websocket_lib.jar} ${slf4j-api.jar} ${slf4j-nop.jar}"/>
+            <attribute name="Build-number" value="${build.number}"/>
+         </manifest>
+         <zipfileset dir="${fedproclient_client.output.dir}" includes="**"/>
+         <zipfileset dir="${fedproclient_hla_api.output.dir}" includes="**"/>
+         <zipfileset dir="${module.fedproclient_client.basedir}/client/resources" includes="**"/>
+
+         <!-- Add dependencies directly to the jar file -->
+         <zipfileset dir="${fedproclient_client_common.output.dir}" includes="**"/>
+      </jar>
+   </target>
+
+   <target name="evolved_client.jar" depends="java.compile.module.fedproclient_client_evolved.production">
+      <jar destfile="${dist.dir}/fedpro-client-evolved.jar">
+         <manifest>
+            <attribute name="Class-Path" value="protobuf.jar fedpro-session.jar ${protobuf_lib.jar} ${websocket_lib.jar} ${slf4j-api.jar} ${slf4j-nop.jar}"/>
+            <attribute name="Build-number" value="${build.number}"/>
+         </manifest>
+         <zipfileset dir="${fedproclient_client_evolved.output.dir}" includes="**"/>
+         <zipfileset dir="${fedproclient_hla_api.output.dir}" includes="**"/>
+         <zipfileset dir="${module.fedproclient_client_evolved.basedir}/client_evolved/resources" includes="**"/>
+
+         <!-- Add dependencies directly to the jar file -->
+         <zipfileset dir="${fedproclient_client_common.output.dir}" includes="**"/>
+      </jar>
+   </target>
+
+   <!-- Distribution targets -->
+   <target name="dist.init">
+      <mkdir dir="${dist.dir}"/>
+   </target>
+
+   <target name="java.session.dist"
+           depends="dist.init, session.jar, copy.websocket.lib"/>
+   <target name="java.protobuf.dist"
+           depends="dist.init, protobuf.jar, copy.protobuf.lib"/>
+   <target name="java.client.dist"
+           depends="dist.init, client.jar, copy.protobuf.lib, copy.websocket.lib"/>
+   <target name="java.client_evolved.dist"
+           depends="dist.init, evolved_client.jar"/>
+
+   <target name="java.dist.sample" depends="java.compile.module.fedproclient_sample.production, java.compile.module.fedproclient_sample_evolved.production, copy.slf4j-api.jar, copy.slf4j-nop.jar">
+      <!-- Hla 4 sample -->
+      <property name="dist.sample.dir" value="${dist.dir}/samples/chat-java-hla4-fedpro"/>
+      <jar destfile="${dist.sample.dir}/chat-java-hla4-fedpro.jar">
+         <manifest>
+            <attribute name="Class-Path" value="../../fedpro-client-hla4.jar"/>
+            <attribute name="Build-number" value="${build.number}"/>
+            <attribute name="Main-Class" value="se.pitch.oss.chat1516_4.Chat"/>
+         </manifest>
+
+         <zipfileset dir="${fedproclient_sample.output.dir}" includes="**/Chat.*,**/Chat$*"/>
+      </jar>
+      <copy todir="${dist.sample.dir}/src">
+         <fileset dir="sample/src" includes="**/Chat.java"/>
+      </copy>
+
+      <copy file="sample/Chat-evolved.xml" todir="${dist.sample.dir}"/>
+
+      <!-- Async HLA 4 sample -->
+      <property name="dist.sample.async.dir" value="${dist.dir}/samples/chat-java-hla4-fedpro-async"/>
+      <jar destfile="${dist.sample.async.dir}/chat-java-hla4-fedpro-async.jar">
+         <manifest>
+            <attribute name="Class-Path" value="../../fedpro-client-hla4.jar"/>
+            <attribute name="Build-number" value="${build.number}"/>
+            <attribute name="Main-Class" value="se.pitch.oss.chat1516_4.AsyncChat"/>
+         </manifest>
+
+         <zipfileset dir="${fedproclient_sample.output.dir}" includes="**/AsyncChat.*,**/AsyncChat$*"/>
+      </jar>
+      <copy todir="${dist.sample.async.dir}/src">
+         <fileset dir="sample/src" includes="**/AsyncChat.java"/>
+      </copy>
+
+      <copy file="sample/Chat-evolved.xml" todir="${dist.sample.async.dir}"/>
+
+      <!-- Evolved sample -->
+      <property name="dist.sample_evolved.dir" value="${dist.dir}/samples/chat-java-1516e-fedpro"/>
+      <jar destfile="${dist.sample_evolved.dir}/chat-java-1516e-fedpro.jar">
+         <manifest>
+            <attribute name="Class-Path" value="../../fedpro-client-evolved.jar"/>
+            <attribute name="Build-number" value="${build.number}"/>
+            <attribute name="Main-Class" value="se.pitch.oss.chat1516e.Chat"/>
+         </manifest>
+
+         <zipfileset dir="${fedproclient_sample_evolved.output.dir}" includes="**"/>
+      </jar>
+      <copy todir="${dist.sample_evolved.dir}/src">
+         <fileset dir="sample_evolved/src"/>
+      </copy>
+
+      <copy file="sample_evolved/Chat-evolved.xml" todir="${dist.sample_evolved.dir}"/>
+
+   </target>
+
+   <target name="dist.java"
+           depends="java.session.dist, java.protobuf.dist, java.client.dist, java.client_evolved.dist"/>
+
+   <target name="dist.all" depends="dist.init, dist.java, java.dist.sample"/>
+
+   <!-- Clean -->
+   <target name="clean" depends="java.clean">
+      <delete dir="${dist.dir}"/>
+      <delete dir="${out.dir}"/>
+   </target>
+
+
+</project>

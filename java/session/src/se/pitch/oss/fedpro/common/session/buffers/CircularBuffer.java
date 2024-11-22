@@ -18,15 +18,13 @@ package se.pitch.oss.fedpro.common.session.buffers;
 
 import net.jcip.annotations.GuardedBy;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * A thread-safe, circular buffer of objects.
  * <p>
- * On overflow, new objects inserted into the buffer will silently overwrite old ones, even if they have not been
- * read yet.
+ * On overflow, new objects inserted into the buffer will silently overwrite old ones,
+ * even if they have not been read yet.
  *
  * @param <E> The type of objects in the buffer
  */
@@ -41,6 +39,7 @@ public class CircularBuffer<E> implements GenericBuffer<E> {
    @GuardedBy("_lock")
    private int _count;
    private boolean _hasRotated = false;
+   private boolean _hasWrittenAfterRotate = false;
 
    @SuppressWarnings("unchecked")
    public CircularBuffer(int capacity)
@@ -69,7 +68,8 @@ public class CircularBuffer<E> implements GenericBuffer<E> {
    /**
     * Insert an element at the end of the buffer.
     * <p>
-    * Note that this may overwrite old elements, even if they have not been read from the buffer yet.
+    * Note that this may overwrite old elements, even if they have not been read from the
+    * buffer yet.
     *
     * @param element The element to insert
     */
@@ -80,6 +80,9 @@ public class CircularBuffer<E> implements GenericBuffer<E> {
          int nextWriteIndex = inc(_writeIndex);
          _data[nextWriteIndex] = element;
          _writeIndex = nextWriteIndex;
+         if (_hasRotated && !_hasWrittenAfterRotate) {
+            _hasWrittenAfterRotate = true;
+         }
          if (_writeIndex >= (_capacity - 1)) {
             _hasRotated = true;
          }
@@ -103,15 +106,6 @@ public class CircularBuffer<E> implements GenericBuffer<E> {
    private int oldestIndex()
    {
       return _hasRotated ? inc(_writeIndex) : 0;
-   }
-
-   // Todo - Delete this method or do we need it in the future?
-   public int availableHistoric()
-   {
-      synchronized (_lock) {
-         int historySize = readIndex() - oldestIndex();
-         return historySize < 0 ? historySize + _capacity : historySize;
-      }
    }
 
    public E peekNewest()
@@ -174,17 +168,17 @@ public class CircularBuffer<E> implements GenericBuffer<E> {
       }
    }
 
-   public void rewindBy(int numSteps)
+   public void rewindToFirst()
    {
       synchronized (_lock) {
-         if (numSteps + _count > _capacity) {
+         if (_hasWrittenAfterRotate) {
             throw new IllegalArgumentException("Tried to rewind past the bounds of the buffer.");
          }
-         if (!_hasRotated && numSteps > readIndex()) {
-            throw new IllegalArgumentException(
-                  "Tried to rewind " + numSteps + " elements but buffer only had " + (_writeIndex + 1) + ".");
+         if (_hasRotated) {
+            _count = _capacity;
+         } else {
+            _count = _writeIndex + 1;
          }
-         _count += numSteps;
       }
    }
 
@@ -273,19 +267,6 @@ public class CircularBuffer<E> implements GenericBuffer<E> {
    {
       synchronized (_lock) {
          return _count >= _capacity;
-      }
-   }
-
-   public List<E> copy()
-   {
-      synchronized (_lock) {
-         List<E> list = new ArrayList<>(_count);
-         int readIndex = readIndex();
-         for (int i = 0; i < _count; i++) {
-            list.add(_data[readIndex]);
-            readIndex = inc(readIndex);
-         }
-         return list;
       }
    }
 

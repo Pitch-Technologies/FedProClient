@@ -11,7 +11,7 @@
     <orderEntry type="module" module-name="fedproclient_hla_api" />
     <orderEntry type="module" module-name="fedproclient_protobuf" />
     <orderEntry type="module" module-name="fedproclient_session" />
-    <orderEntry type="module" module-name="fedproclient_client_abstract" />
+    <orderEntry type="module" module-name="fedproclient_client_common" />
     <orderEntry type="library" name="protobuf-java" level="project" />
     <orderEntry type="library" name="jcip-annotations" level="project" />
     <orderEntry type="library" name="Java-WebSocket" level="project" />

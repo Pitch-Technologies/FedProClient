@@ -16,14 +16,9 @@
 
 package se.pitch.oss.fedpro.common.session;
 
-// Thread safe.
+// Thread-safe.
 
 public class AtomicSequenceNumber extends SequenceNumber {
-
-   public AtomicSequenceNumber()
-   {
-      super();
-   }
 
    public AtomicSequenceNumber(int value)
    {
@@ -33,24 +28,6 @@ public class AtomicSequenceNumber extends SequenceNumber {
    public synchronized AtomicSequenceNumber increment()
    {
       super.increment();
-      return this;
-   }
-
-   public synchronized AtomicSequenceNumber decrement()
-   {
-      super.decrement();
-      return this;
-   }
-
-   public synchronized AtomicSequenceNumber add(int valueToAdd)
-   {
-      super.add(valueToAdd);
-      return this;
-   }
-
-   public synchronized AtomicSequenceNumber subtract(int valueToSubtract)
-   {
-      super.subtract(valueToSubtract);
       return this;
    }
 
@@ -69,24 +46,8 @@ public class AtomicSequenceNumber extends SequenceNumber {
       return super.get();
    }
 
-   public synchronized int getNext()
-   {
-      return super.getNext();
-   }
-
-   public synchronized int getPrevious()
-   {
-      return super.getPrevious();
-   }
-
-   public synchronized int getDistanceFrom(SequenceNumber otherNumber)
-   {
-      return super.getDistanceFrom(otherNumber);
-   }
-
    public synchronized SequenceNumber getAndSet(int newValue)
    {
-      validateArgument(newValue);
       int oldValue = get();
       set(newValue);
       return new SequenceNumber(oldValue);

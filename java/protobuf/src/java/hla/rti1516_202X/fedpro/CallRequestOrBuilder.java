@@ -563,79 +563,79 @@ public interface CallRequestOrBuilder extends
   hla.rti1516_202X.fedpro.UnpublishObjectClassAttributesRequestOrBuilder getUnpublishObjectClassAttributesRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest publishObjectClassDirectedInteractionsRequest = 38;</code>
-   * @return Whether the publishObjectClassDirectedInteractionsRequest field is set.
-   */
-  boolean hasPublishObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest publishObjectClassDirectedInteractionsRequest = 38;</code>
-   * @return The publishObjectClassDirectedInteractionsRequest.
-   */
-  hla.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest getPublishObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest publishObjectClassDirectedInteractionsRequest = 38;</code>
-   */
-  hla.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequestOrBuilder getPublishObjectClassDirectedInteractionsRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest unpublishObjectClassDirectedInteractionsRequest = 39;</code>
-   * @return Whether the unpublishObjectClassDirectedInteractionsRequest field is set.
-   */
-  boolean hasUnpublishObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest unpublishObjectClassDirectedInteractionsRequest = 39;</code>
-   * @return The unpublishObjectClassDirectedInteractionsRequest.
-   */
-  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest getUnpublishObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest unpublishObjectClassDirectedInteractionsRequest = 39;</code>
-   */
-  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequestOrBuilder getUnpublishObjectClassDirectedInteractionsRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest unpublishObjectClassDirectedInteractionsWithSetRequest = 40;</code>
-   * @return Whether the unpublishObjectClassDirectedInteractionsWithSetRequest field is set.
-   */
-  boolean hasUnpublishObjectClassDirectedInteractionsWithSetRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest unpublishObjectClassDirectedInteractionsWithSetRequest = 40;</code>
-   * @return The unpublishObjectClassDirectedInteractionsWithSetRequest.
-   */
-  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest getUnpublishObjectClassDirectedInteractionsWithSetRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest unpublishObjectClassDirectedInteractionsWithSetRequest = 40;</code>
-   */
-  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequestOrBuilder getUnpublishObjectClassDirectedInteractionsWithSetRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.PublishInteractionClassRequest publishInteractionClassRequest = 41;</code>
+   * <code>.rti1516_202X.fedpro.PublishInteractionClassRequest publishInteractionClassRequest = 38;</code>
    * @return Whether the publishInteractionClassRequest field is set.
    */
   boolean hasPublishInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.PublishInteractionClassRequest publishInteractionClassRequest = 41;</code>
+   * <code>.rti1516_202X.fedpro.PublishInteractionClassRequest publishInteractionClassRequest = 38;</code>
    * @return The publishInteractionClassRequest.
    */
   hla.rti1516_202X.fedpro.PublishInteractionClassRequest getPublishInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.PublishInteractionClassRequest publishInteractionClassRequest = 41;</code>
+   * <code>.rti1516_202X.fedpro.PublishInteractionClassRequest publishInteractionClassRequest = 38;</code>
    */
   hla.rti1516_202X.fedpro.PublishInteractionClassRequestOrBuilder getPublishInteractionClassRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UnpublishInteractionClassRequest unpublishInteractionClassRequest = 42;</code>
+   * <code>.rti1516_202X.fedpro.UnpublishInteractionClassRequest unpublishInteractionClassRequest = 39;</code>
    * @return Whether the unpublishInteractionClassRequest field is set.
    */
   boolean hasUnpublishInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnpublishInteractionClassRequest unpublishInteractionClassRequest = 42;</code>
+   * <code>.rti1516_202X.fedpro.UnpublishInteractionClassRequest unpublishInteractionClassRequest = 39;</code>
    * @return The unpublishInteractionClassRequest.
    */
   hla.rti1516_202X.fedpro.UnpublishInteractionClassRequest getUnpublishInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnpublishInteractionClassRequest unpublishInteractionClassRequest = 42;</code>
+   * <code>.rti1516_202X.fedpro.UnpublishInteractionClassRequest unpublishInteractionClassRequest = 39;</code>
    */
   hla.rti1516_202X.fedpro.UnpublishInteractionClassRequestOrBuilder getUnpublishInteractionClassRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest publishObjectClassDirectedInteractionsRequest = 40;</code>
+   * @return Whether the publishObjectClassDirectedInteractionsRequest field is set.
+   */
+  boolean hasPublishObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest publishObjectClassDirectedInteractionsRequest = 40;</code>
+   * @return The publishObjectClassDirectedInteractionsRequest.
+   */
+  hla.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest getPublishObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest publishObjectClassDirectedInteractionsRequest = 40;</code>
+   */
+  hla.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequestOrBuilder getPublishObjectClassDirectedInteractionsRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest unpublishObjectClassDirectedInteractionsRequest = 41;</code>
+   * @return Whether the unpublishObjectClassDirectedInteractionsRequest field is set.
+   */
+  boolean hasUnpublishObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest unpublishObjectClassDirectedInteractionsRequest = 41;</code>
+   * @return The unpublishObjectClassDirectedInteractionsRequest.
+   */
+  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest getUnpublishObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest unpublishObjectClassDirectedInteractionsRequest = 41;</code>
+   */
+  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequestOrBuilder getUnpublishObjectClassDirectedInteractionsRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest unpublishObjectClassDirectedInteractionsWithSetRequest = 42;</code>
+   * @return Whether the unpublishObjectClassDirectedInteractionsWithSetRequest field is set.
+   */
+  boolean hasUnpublishObjectClassDirectedInteractionsWithSetRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest unpublishObjectClassDirectedInteractionsWithSetRequest = 42;</code>
+   * @return The unpublishObjectClassDirectedInteractionsWithSetRequest.
+   */
+  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest getUnpublishObjectClassDirectedInteractionsWithSetRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest unpublishObjectClassDirectedInteractionsWithSetRequest = 42;</code>
+   */
+  hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequestOrBuilder getUnpublishObjectClassDirectedInteractionsWithSetRequestOrBuilder();
 
   /**
    * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesRequest subscribeObjectClassAttributesRequest = 43;</code>
@@ -728,1744 +728,1954 @@ public interface CallRequestOrBuilder extends
   hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesRequestOrBuilder getUnsubscribeObjectClassAttributesRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest subscribeObjectClassDirectedInteractionsRequest = 49;</code>
-   * @return Whether the subscribeObjectClassDirectedInteractionsRequest field is set.
-   */
-  boolean hasSubscribeObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest subscribeObjectClassDirectedInteractionsRequest = 49;</code>
-   * @return The subscribeObjectClassDirectedInteractionsRequest.
-   */
-  hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest getSubscribeObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest subscribeObjectClassDirectedInteractionsRequest = 49;</code>
-   */
-  hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequestOrBuilder getSubscribeObjectClassDirectedInteractionsRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest unsubscribeObjectClassDirectedInteractionsRequest = 50;</code>
-   * @return Whether the unsubscribeObjectClassDirectedInteractionsRequest field is set.
-   */
-  boolean hasUnsubscribeObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest unsubscribeObjectClassDirectedInteractionsRequest = 50;</code>
-   * @return The unsubscribeObjectClassDirectedInteractionsRequest.
-   */
-  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest getUnsubscribeObjectClassDirectedInteractionsRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest unsubscribeObjectClassDirectedInteractionsRequest = 50;</code>
-   */
-  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequestOrBuilder getUnsubscribeObjectClassDirectedInteractionsRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest unsubscribeObjectClassDirectedInteractionsWithSetRequest = 51;</code>
-   * @return Whether the unsubscribeObjectClassDirectedInteractionsWithSetRequest field is set.
-   */
-  boolean hasUnsubscribeObjectClassDirectedInteractionsWithSetRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest unsubscribeObjectClassDirectedInteractionsWithSetRequest = 51;</code>
-   * @return The unsubscribeObjectClassDirectedInteractionsWithSetRequest.
-   */
-  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest getUnsubscribeObjectClassDirectedInteractionsWithSetRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest unsubscribeObjectClassDirectedInteractionsWithSetRequest = 51;</code>
-   */
-  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequestOrBuilder getUnsubscribeObjectClassDirectedInteractionsWithSetRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassRequest subscribeInteractionClassRequest = 52;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassRequest subscribeInteractionClassRequest = 49;</code>
    * @return Whether the subscribeInteractionClassRequest field is set.
    */
   boolean hasSubscribeInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassRequest subscribeInteractionClassRequest = 52;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassRequest subscribeInteractionClassRequest = 49;</code>
    * @return The subscribeInteractionClassRequest.
    */
   hla.rti1516_202X.fedpro.SubscribeInteractionClassRequest getSubscribeInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassRequest subscribeInteractionClassRequest = 52;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassRequest subscribeInteractionClassRequest = 49;</code>
    */
   hla.rti1516_202X.fedpro.SubscribeInteractionClassRequestOrBuilder getSubscribeInteractionClassRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest subscribeInteractionClassPassivelyRequest = 53;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest subscribeInteractionClassPassivelyRequest = 50;</code>
    * @return Whether the subscribeInteractionClassPassivelyRequest field is set.
    */
   boolean hasSubscribeInteractionClassPassivelyRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest subscribeInteractionClassPassivelyRequest = 53;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest subscribeInteractionClassPassivelyRequest = 50;</code>
    * @return The subscribeInteractionClassPassivelyRequest.
    */
   hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest getSubscribeInteractionClassPassivelyRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest subscribeInteractionClassPassivelyRequest = 53;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest subscribeInteractionClassPassivelyRequest = 50;</code>
    */
   hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequestOrBuilder getSubscribeInteractionClassPassivelyRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest unsubscribeInteractionClassRequest = 54;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest unsubscribeInteractionClassRequest = 51;</code>
    * @return Whether the unsubscribeInteractionClassRequest field is set.
    */
   boolean hasUnsubscribeInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest unsubscribeInteractionClassRequest = 54;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest unsubscribeInteractionClassRequest = 51;</code>
    * @return The unsubscribeInteractionClassRequest.
    */
   hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest getUnsubscribeInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest unsubscribeInteractionClassRequest = 54;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest unsubscribeInteractionClassRequest = 51;</code>
    */
   hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequestOrBuilder getUnsubscribeInteractionClassRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest reserveObjectInstanceNameRequest = 55;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest subscribeObjectClassDirectedInteractionsRequest = 52;</code>
+   * @return Whether the subscribeObjectClassDirectedInteractionsRequest field is set.
+   */
+  boolean hasSubscribeObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest subscribeObjectClassDirectedInteractionsRequest = 52;</code>
+   * @return The subscribeObjectClassDirectedInteractionsRequest.
+   */
+  hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest getSubscribeObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest subscribeObjectClassDirectedInteractionsRequest = 52;</code>
+   */
+  hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequestOrBuilder getSubscribeObjectClassDirectedInteractionsRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest subscribeObjectClassDirectedInteractionsUniversallyRequest = 53;</code>
+   * @return Whether the subscribeObjectClassDirectedInteractionsUniversallyRequest field is set.
+   */
+  boolean hasSubscribeObjectClassDirectedInteractionsUniversallyRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest subscribeObjectClassDirectedInteractionsUniversallyRequest = 53;</code>
+   * @return The subscribeObjectClassDirectedInteractionsUniversallyRequest.
+   */
+  hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest getSubscribeObjectClassDirectedInteractionsUniversallyRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest subscribeObjectClassDirectedInteractionsUniversallyRequest = 53;</code>
+   */
+  hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequestOrBuilder getSubscribeObjectClassDirectedInteractionsUniversallyRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest unsubscribeObjectClassDirectedInteractionsRequest = 54;</code>
+   * @return Whether the unsubscribeObjectClassDirectedInteractionsRequest field is set.
+   */
+  boolean hasUnsubscribeObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest unsubscribeObjectClassDirectedInteractionsRequest = 54;</code>
+   * @return The unsubscribeObjectClassDirectedInteractionsRequest.
+   */
+  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest getUnsubscribeObjectClassDirectedInteractionsRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest unsubscribeObjectClassDirectedInteractionsRequest = 54;</code>
+   */
+  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequestOrBuilder getUnsubscribeObjectClassDirectedInteractionsRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest unsubscribeObjectClassDirectedInteractionsWithSetRequest = 55;</code>
+   * @return Whether the unsubscribeObjectClassDirectedInteractionsWithSetRequest field is set.
+   */
+  boolean hasUnsubscribeObjectClassDirectedInteractionsWithSetRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest unsubscribeObjectClassDirectedInteractionsWithSetRequest = 55;</code>
+   * @return The unsubscribeObjectClassDirectedInteractionsWithSetRequest.
+   */
+  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest getUnsubscribeObjectClassDirectedInteractionsWithSetRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest unsubscribeObjectClassDirectedInteractionsWithSetRequest = 55;</code>
+   */
+  hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequestOrBuilder getUnsubscribeObjectClassDirectedInteractionsWithSetRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest reserveObjectInstanceNameRequest = 56;</code>
    * @return Whether the reserveObjectInstanceNameRequest field is set.
    */
   boolean hasReserveObjectInstanceNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest reserveObjectInstanceNameRequest = 55;</code>
+   * <code>.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest reserveObjectInstanceNameRequest = 56;</code>
    * @return The reserveObjectInstanceNameRequest.
    */
   hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest getReserveObjectInstanceNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest reserveObjectInstanceNameRequest = 55;</code>
+   * <code>.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest reserveObjectInstanceNameRequest = 56;</code>
    */
   hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequestOrBuilder getReserveObjectInstanceNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest releaseObjectInstanceNameRequest = 56;</code>
+   * <code>.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest releaseObjectInstanceNameRequest = 57;</code>
    * @return Whether the releaseObjectInstanceNameRequest field is set.
    */
   boolean hasReleaseObjectInstanceNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest releaseObjectInstanceNameRequest = 56;</code>
+   * <code>.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest releaseObjectInstanceNameRequest = 57;</code>
    * @return The releaseObjectInstanceNameRequest.
    */
   hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest getReleaseObjectInstanceNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest releaseObjectInstanceNameRequest = 56;</code>
+   * <code>.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest releaseObjectInstanceNameRequest = 57;</code>
    */
   hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequestOrBuilder getReleaseObjectInstanceNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequest reserveMultipleObjectInstanceNameRequest = 57;</code>
-   * @return Whether the reserveMultipleObjectInstanceNameRequest field is set.
+   * <code>.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest reserveMultipleObjectInstanceNamesRequest = 58;</code>
+   * @return Whether the reserveMultipleObjectInstanceNamesRequest field is set.
    */
-  boolean hasReserveMultipleObjectInstanceNameRequest();
+  boolean hasReserveMultipleObjectInstanceNamesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequest reserveMultipleObjectInstanceNameRequest = 57;</code>
-   * @return The reserveMultipleObjectInstanceNameRequest.
+   * <code>.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest reserveMultipleObjectInstanceNamesRequest = 58;</code>
+   * @return The reserveMultipleObjectInstanceNamesRequest.
    */
-  hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequest getReserveMultipleObjectInstanceNameRequest();
+  hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest getReserveMultipleObjectInstanceNamesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequest reserveMultipleObjectInstanceNameRequest = 57;</code>
+   * <code>.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest reserveMultipleObjectInstanceNamesRequest = 58;</code>
    */
-  hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequestOrBuilder getReserveMultipleObjectInstanceNameRequestOrBuilder();
+  hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequestOrBuilder getReserveMultipleObjectInstanceNamesRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequest releaseMultipleObjectInstanceNameRequest = 58;</code>
-   * @return Whether the releaseMultipleObjectInstanceNameRequest field is set.
+   * <code>.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest releaseMultipleObjectInstanceNamesRequest = 59;</code>
+   * @return Whether the releaseMultipleObjectInstanceNamesRequest field is set.
    */
-  boolean hasReleaseMultipleObjectInstanceNameRequest();
+  boolean hasReleaseMultipleObjectInstanceNamesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequest releaseMultipleObjectInstanceNameRequest = 58;</code>
-   * @return The releaseMultipleObjectInstanceNameRequest.
+   * <code>.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest releaseMultipleObjectInstanceNamesRequest = 59;</code>
+   * @return The releaseMultipleObjectInstanceNamesRequest.
    */
-  hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequest getReleaseMultipleObjectInstanceNameRequest();
+  hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest getReleaseMultipleObjectInstanceNamesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequest releaseMultipleObjectInstanceNameRequest = 58;</code>
+   * <code>.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest releaseMultipleObjectInstanceNamesRequest = 59;</code>
    */
-  hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequestOrBuilder getReleaseMultipleObjectInstanceNameRequestOrBuilder();
+  hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequestOrBuilder getReleaseMultipleObjectInstanceNamesRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceRequest registerObjectInstanceRequest = 59;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceRequest registerObjectInstanceRequest = 60;</code>
    * @return Whether the registerObjectInstanceRequest field is set.
    */
   boolean hasRegisterObjectInstanceRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceRequest registerObjectInstanceRequest = 59;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceRequest registerObjectInstanceRequest = 60;</code>
    * @return The registerObjectInstanceRequest.
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceRequest getRegisterObjectInstanceRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceRequest registerObjectInstanceRequest = 59;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceRequest registerObjectInstanceRequest = 60;</code>
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceRequestOrBuilder getRegisterObjectInstanceRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest registerObjectInstanceWithNameRequest = 60;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest registerObjectInstanceWithNameRequest = 61;</code>
    * @return Whether the registerObjectInstanceWithNameRequest field is set.
    */
   boolean hasRegisterObjectInstanceWithNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest registerObjectInstanceWithNameRequest = 60;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest registerObjectInstanceWithNameRequest = 61;</code>
    * @return The registerObjectInstanceWithNameRequest.
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest getRegisterObjectInstanceWithNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest registerObjectInstanceWithNameRequest = 60;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest registerObjectInstanceWithNameRequest = 61;</code>
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequestOrBuilder getRegisterObjectInstanceWithNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesRequest updateAttributeValuesRequest = 61;</code>
+   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesRequest updateAttributeValuesRequest = 62;</code>
    * @return Whether the updateAttributeValuesRequest field is set.
    */
   boolean hasUpdateAttributeValuesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesRequest updateAttributeValuesRequest = 61;</code>
+   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesRequest updateAttributeValuesRequest = 62;</code>
    * @return The updateAttributeValuesRequest.
    */
   hla.rti1516_202X.fedpro.UpdateAttributeValuesRequest getUpdateAttributeValuesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesRequest updateAttributeValuesRequest = 61;</code>
+   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesRequest updateAttributeValuesRequest = 62;</code>
    */
   hla.rti1516_202X.fedpro.UpdateAttributeValuesRequestOrBuilder getUpdateAttributeValuesRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest updateAttributeValuesWithTimeRequest = 62;</code>
+   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest updateAttributeValuesWithTimeRequest = 63;</code>
    * @return Whether the updateAttributeValuesWithTimeRequest field is set.
    */
   boolean hasUpdateAttributeValuesWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest updateAttributeValuesWithTimeRequest = 62;</code>
+   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest updateAttributeValuesWithTimeRequest = 63;</code>
    * @return The updateAttributeValuesWithTimeRequest.
    */
   hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest getUpdateAttributeValuesWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest updateAttributeValuesWithTimeRequest = 62;</code>
+   * <code>.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest updateAttributeValuesWithTimeRequest = 63;</code>
    */
   hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequestOrBuilder getUpdateAttributeValuesWithTimeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionRequest sendInteractionRequest = 63;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionRequest sendInteractionRequest = 64;</code>
    * @return Whether the sendInteractionRequest field is set.
    */
   boolean hasSendInteractionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionRequest sendInteractionRequest = 63;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionRequest sendInteractionRequest = 64;</code>
    * @return The sendInteractionRequest.
    */
   hla.rti1516_202X.fedpro.SendInteractionRequest getSendInteractionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionRequest sendInteractionRequest = 63;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionRequest sendInteractionRequest = 64;</code>
    */
   hla.rti1516_202X.fedpro.SendInteractionRequestOrBuilder getSendInteractionRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithTimeRequest sendInteractionWithTimeRequest = 64;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithTimeRequest sendInteractionWithTimeRequest = 65;</code>
    * @return Whether the sendInteractionWithTimeRequest field is set.
    */
   boolean hasSendInteractionWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithTimeRequest sendInteractionWithTimeRequest = 64;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithTimeRequest sendInteractionWithTimeRequest = 65;</code>
    * @return The sendInteractionWithTimeRequest.
    */
   hla.rti1516_202X.fedpro.SendInteractionWithTimeRequest getSendInteractionWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithTimeRequest sendInteractionWithTimeRequest = 64;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithTimeRequest sendInteractionWithTimeRequest = 65;</code>
    */
   hla.rti1516_202X.fedpro.SendInteractionWithTimeRequestOrBuilder getSendInteractionWithTimeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SendDirectedInteractionRequest sendDirectedInteractionRequest = 65;</code>
+   * <code>.rti1516_202X.fedpro.SendDirectedInteractionRequest sendDirectedInteractionRequest = 66;</code>
    * @return Whether the sendDirectedInteractionRequest field is set.
    */
   boolean hasSendDirectedInteractionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendDirectedInteractionRequest sendDirectedInteractionRequest = 65;</code>
+   * <code>.rti1516_202X.fedpro.SendDirectedInteractionRequest sendDirectedInteractionRequest = 66;</code>
    * @return The sendDirectedInteractionRequest.
    */
   hla.rti1516_202X.fedpro.SendDirectedInteractionRequest getSendDirectedInteractionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendDirectedInteractionRequest sendDirectedInteractionRequest = 65;</code>
+   * <code>.rti1516_202X.fedpro.SendDirectedInteractionRequest sendDirectedInteractionRequest = 66;</code>
    */
   hla.rti1516_202X.fedpro.SendDirectedInteractionRequestOrBuilder getSendDirectedInteractionRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest sendDirectedInteractionWithTimeRequest = 66;</code>
+   * <code>.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest sendDirectedInteractionWithTimeRequest = 67;</code>
    * @return Whether the sendDirectedInteractionWithTimeRequest field is set.
    */
   boolean hasSendDirectedInteractionWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest sendDirectedInteractionWithTimeRequest = 66;</code>
+   * <code>.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest sendDirectedInteractionWithTimeRequest = 67;</code>
    * @return The sendDirectedInteractionWithTimeRequest.
    */
   hla.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest getSendDirectedInteractionWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest sendDirectedInteractionWithTimeRequest = 66;</code>
+   * <code>.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest sendDirectedInteractionWithTimeRequest = 67;</code>
    */
   hla.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequestOrBuilder getSendDirectedInteractionWithTimeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceRequest deleteObjectInstanceRequest = 67;</code>
+   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceRequest deleteObjectInstanceRequest = 68;</code>
    * @return Whether the deleteObjectInstanceRequest field is set.
    */
   boolean hasDeleteObjectInstanceRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceRequest deleteObjectInstanceRequest = 67;</code>
+   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceRequest deleteObjectInstanceRequest = 68;</code>
    * @return The deleteObjectInstanceRequest.
    */
   hla.rti1516_202X.fedpro.DeleteObjectInstanceRequest getDeleteObjectInstanceRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceRequest deleteObjectInstanceRequest = 67;</code>
+   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceRequest deleteObjectInstanceRequest = 68;</code>
    */
   hla.rti1516_202X.fedpro.DeleteObjectInstanceRequestOrBuilder getDeleteObjectInstanceRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest deleteObjectInstanceWithTimeRequest = 68;</code>
+   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest deleteObjectInstanceWithTimeRequest = 69;</code>
    * @return Whether the deleteObjectInstanceWithTimeRequest field is set.
    */
   boolean hasDeleteObjectInstanceWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest deleteObjectInstanceWithTimeRequest = 68;</code>
+   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest deleteObjectInstanceWithTimeRequest = 69;</code>
    * @return The deleteObjectInstanceWithTimeRequest.
    */
   hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest getDeleteObjectInstanceWithTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest deleteObjectInstanceWithTimeRequest = 68;</code>
+   * <code>.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest deleteObjectInstanceWithTimeRequest = 69;</code>
    */
   hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequestOrBuilder getDeleteObjectInstanceWithTimeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest localDeleteObjectInstanceRequest = 69;</code>
+   * <code>.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest localDeleteObjectInstanceRequest = 70;</code>
    * @return Whether the localDeleteObjectInstanceRequest field is set.
    */
   boolean hasLocalDeleteObjectInstanceRequest();
   /**
-   * <code>.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest localDeleteObjectInstanceRequest = 69;</code>
+   * <code>.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest localDeleteObjectInstanceRequest = 70;</code>
    * @return The localDeleteObjectInstanceRequest.
    */
   hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest getLocalDeleteObjectInstanceRequest();
   /**
-   * <code>.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest localDeleteObjectInstanceRequest = 69;</code>
+   * <code>.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest localDeleteObjectInstanceRequest = 70;</code>
    */
   hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequestOrBuilder getLocalDeleteObjectInstanceRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest requestInstanceAttributeValueUpdateRequest = 70;</code>
+   * <code>.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest requestInstanceAttributeValueUpdateRequest = 71;</code>
    * @return Whether the requestInstanceAttributeValueUpdateRequest field is set.
    */
   boolean hasRequestInstanceAttributeValueUpdateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest requestInstanceAttributeValueUpdateRequest = 70;</code>
+   * <code>.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest requestInstanceAttributeValueUpdateRequest = 71;</code>
    * @return The requestInstanceAttributeValueUpdateRequest.
    */
   hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest getRequestInstanceAttributeValueUpdateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest requestInstanceAttributeValueUpdateRequest = 70;</code>
+   * <code>.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest requestInstanceAttributeValueUpdateRequest = 71;</code>
    */
   hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequestOrBuilder getRequestInstanceAttributeValueUpdateRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest requestClassAttributeValueUpdateRequest = 71;</code>
+   * <code>.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest requestClassAttributeValueUpdateRequest = 72;</code>
    * @return Whether the requestClassAttributeValueUpdateRequest field is set.
    */
   boolean hasRequestClassAttributeValueUpdateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest requestClassAttributeValueUpdateRequest = 71;</code>
+   * <code>.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest requestClassAttributeValueUpdateRequest = 72;</code>
    * @return The requestClassAttributeValueUpdateRequest.
    */
   hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest getRequestClassAttributeValueUpdateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest requestClassAttributeValueUpdateRequest = 71;</code>
+   * <code>.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest requestClassAttributeValueUpdateRequest = 72;</code>
    */
   hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequestOrBuilder getRequestClassAttributeValueUpdateRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest requestAttributeTransportationTypeChangeRequest = 72;</code>
+   * <code>.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest requestAttributeTransportationTypeChangeRequest = 73;</code>
    * @return Whether the requestAttributeTransportationTypeChangeRequest field is set.
    */
   boolean hasRequestAttributeTransportationTypeChangeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest requestAttributeTransportationTypeChangeRequest = 72;</code>
+   * <code>.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest requestAttributeTransportationTypeChangeRequest = 73;</code>
    * @return The requestAttributeTransportationTypeChangeRequest.
    */
   hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest getRequestAttributeTransportationTypeChangeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest requestAttributeTransportationTypeChangeRequest = 72;</code>
+   * <code>.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest requestAttributeTransportationTypeChangeRequest = 73;</code>
    */
   hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequestOrBuilder getRequestAttributeTransportationTypeChangeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest changeDefaultAttributeTransportationTypeRequest = 73;</code>
+   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest changeDefaultAttributeTransportationTypeRequest = 74;</code>
    * @return Whether the changeDefaultAttributeTransportationTypeRequest field is set.
    */
   boolean hasChangeDefaultAttributeTransportationTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest changeDefaultAttributeTransportationTypeRequest = 73;</code>
+   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest changeDefaultAttributeTransportationTypeRequest = 74;</code>
    * @return The changeDefaultAttributeTransportationTypeRequest.
    */
   hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest getChangeDefaultAttributeTransportationTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest changeDefaultAttributeTransportationTypeRequest = 73;</code>
+   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest changeDefaultAttributeTransportationTypeRequest = 74;</code>
    */
   hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequestOrBuilder getChangeDefaultAttributeTransportationTypeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest queryAttributeTransportationTypeRequest = 74;</code>
+   * <code>.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest queryAttributeTransportationTypeRequest = 75;</code>
    * @return Whether the queryAttributeTransportationTypeRequest field is set.
    */
   boolean hasQueryAttributeTransportationTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest queryAttributeTransportationTypeRequest = 74;</code>
+   * <code>.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest queryAttributeTransportationTypeRequest = 75;</code>
    * @return The queryAttributeTransportationTypeRequest.
    */
   hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest getQueryAttributeTransportationTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest queryAttributeTransportationTypeRequest = 74;</code>
+   * <code>.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest queryAttributeTransportationTypeRequest = 75;</code>
    */
   hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequestOrBuilder getQueryAttributeTransportationTypeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest requestInteractionTransportationTypeChangeRequest = 75;</code>
+   * <code>.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest requestInteractionTransportationTypeChangeRequest = 76;</code>
    * @return Whether the requestInteractionTransportationTypeChangeRequest field is set.
    */
   boolean hasRequestInteractionTransportationTypeChangeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest requestInteractionTransportationTypeChangeRequest = 75;</code>
+   * <code>.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest requestInteractionTransportationTypeChangeRequest = 76;</code>
    * @return The requestInteractionTransportationTypeChangeRequest.
    */
   hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest getRequestInteractionTransportationTypeChangeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest requestInteractionTransportationTypeChangeRequest = 75;</code>
+   * <code>.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest requestInteractionTransportationTypeChangeRequest = 76;</code>
    */
   hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequestOrBuilder getRequestInteractionTransportationTypeChangeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest queryInteractionTransportationTypeRequest = 76;</code>
+   * <code>.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest queryInteractionTransportationTypeRequest = 77;</code>
    * @return Whether the queryInteractionTransportationTypeRequest field is set.
    */
   boolean hasQueryInteractionTransportationTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest queryInteractionTransportationTypeRequest = 76;</code>
+   * <code>.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest queryInteractionTransportationTypeRequest = 77;</code>
    * @return The queryInteractionTransportationTypeRequest.
    */
   hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest getQueryInteractionTransportationTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest queryInteractionTransportationTypeRequest = 76;</code>
+   * <code>.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest queryInteractionTransportationTypeRequest = 77;</code>
    */
   hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequestOrBuilder getQueryInteractionTransportationTypeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest unconditionalAttributeOwnershipDivestitureRequest = 77;</code>
+   * <code>.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest unconditionalAttributeOwnershipDivestitureRequest = 78;</code>
    * @return Whether the unconditionalAttributeOwnershipDivestitureRequest field is set.
    */
   boolean hasUnconditionalAttributeOwnershipDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest unconditionalAttributeOwnershipDivestitureRequest = 77;</code>
+   * <code>.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest unconditionalAttributeOwnershipDivestitureRequest = 78;</code>
    * @return The unconditionalAttributeOwnershipDivestitureRequest.
    */
   hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest getUnconditionalAttributeOwnershipDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest unconditionalAttributeOwnershipDivestitureRequest = 77;</code>
+   * <code>.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest unconditionalAttributeOwnershipDivestitureRequest = 78;</code>
    */
   hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequestOrBuilder getUnconditionalAttributeOwnershipDivestitureRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest negotiatedAttributeOwnershipDivestitureRequest = 78;</code>
+   * <code>.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest negotiatedAttributeOwnershipDivestitureRequest = 79;</code>
    * @return Whether the negotiatedAttributeOwnershipDivestitureRequest field is set.
    */
   boolean hasNegotiatedAttributeOwnershipDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest negotiatedAttributeOwnershipDivestitureRequest = 78;</code>
+   * <code>.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest negotiatedAttributeOwnershipDivestitureRequest = 79;</code>
    * @return The negotiatedAttributeOwnershipDivestitureRequest.
    */
   hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest getNegotiatedAttributeOwnershipDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest negotiatedAttributeOwnershipDivestitureRequest = 78;</code>
+   * <code>.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest negotiatedAttributeOwnershipDivestitureRequest = 79;</code>
    */
   hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequestOrBuilder getNegotiatedAttributeOwnershipDivestitureRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ConfirmDivestitureRequest confirmDivestitureRequest = 79;</code>
+   * <code>.rti1516_202X.fedpro.ConfirmDivestitureRequest confirmDivestitureRequest = 80;</code>
    * @return Whether the confirmDivestitureRequest field is set.
    */
   boolean hasConfirmDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ConfirmDivestitureRequest confirmDivestitureRequest = 79;</code>
+   * <code>.rti1516_202X.fedpro.ConfirmDivestitureRequest confirmDivestitureRequest = 80;</code>
    * @return The confirmDivestitureRequest.
    */
   hla.rti1516_202X.fedpro.ConfirmDivestitureRequest getConfirmDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ConfirmDivestitureRequest confirmDivestitureRequest = 79;</code>
+   * <code>.rti1516_202X.fedpro.ConfirmDivestitureRequest confirmDivestitureRequest = 80;</code>
    */
   hla.rti1516_202X.fedpro.ConfirmDivestitureRequestOrBuilder getConfirmDivestitureRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest attributeOwnershipAcquisitionRequest = 80;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest attributeOwnershipAcquisitionRequest = 81;</code>
    * @return Whether the attributeOwnershipAcquisitionRequest field is set.
    */
   boolean hasAttributeOwnershipAcquisitionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest attributeOwnershipAcquisitionRequest = 80;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest attributeOwnershipAcquisitionRequest = 81;</code>
    * @return The attributeOwnershipAcquisitionRequest.
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest getAttributeOwnershipAcquisitionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest attributeOwnershipAcquisitionRequest = 80;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest attributeOwnershipAcquisitionRequest = 81;</code>
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequestOrBuilder getAttributeOwnershipAcquisitionRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest attributeOwnershipAcquisitionIfAvailableRequest = 81;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest attributeOwnershipAcquisitionIfAvailableRequest = 82;</code>
    * @return Whether the attributeOwnershipAcquisitionIfAvailableRequest field is set.
    */
   boolean hasAttributeOwnershipAcquisitionIfAvailableRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest attributeOwnershipAcquisitionIfAvailableRequest = 81;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest attributeOwnershipAcquisitionIfAvailableRequest = 82;</code>
    * @return The attributeOwnershipAcquisitionIfAvailableRequest.
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest getAttributeOwnershipAcquisitionIfAvailableRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest attributeOwnershipAcquisitionIfAvailableRequest = 81;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest attributeOwnershipAcquisitionIfAvailableRequest = 82;</code>
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequestOrBuilder getAttributeOwnershipAcquisitionIfAvailableRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest attributeOwnershipReleaseDeniedRequest = 82;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest attributeOwnershipReleaseDeniedRequest = 83;</code>
    * @return Whether the attributeOwnershipReleaseDeniedRequest field is set.
    */
   boolean hasAttributeOwnershipReleaseDeniedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest attributeOwnershipReleaseDeniedRequest = 82;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest attributeOwnershipReleaseDeniedRequest = 83;</code>
    * @return The attributeOwnershipReleaseDeniedRequest.
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest getAttributeOwnershipReleaseDeniedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest attributeOwnershipReleaseDeniedRequest = 82;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest attributeOwnershipReleaseDeniedRequest = 83;</code>
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequestOrBuilder getAttributeOwnershipReleaseDeniedRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest attributeOwnershipDivestitureIfWantedRequest = 83;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest attributeOwnershipDivestitureIfWantedRequest = 84;</code>
    * @return Whether the attributeOwnershipDivestitureIfWantedRequest field is set.
    */
   boolean hasAttributeOwnershipDivestitureIfWantedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest attributeOwnershipDivestitureIfWantedRequest = 83;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest attributeOwnershipDivestitureIfWantedRequest = 84;</code>
    * @return The attributeOwnershipDivestitureIfWantedRequest.
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest getAttributeOwnershipDivestitureIfWantedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest attributeOwnershipDivestitureIfWantedRequest = 83;</code>
+   * <code>.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest attributeOwnershipDivestitureIfWantedRequest = 84;</code>
    */
   hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequestOrBuilder getAttributeOwnershipDivestitureIfWantedRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest cancelNegotiatedAttributeOwnershipDivestitureRequest = 84;</code>
+   * <code>.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest cancelNegotiatedAttributeOwnershipDivestitureRequest = 85;</code>
    * @return Whether the cancelNegotiatedAttributeOwnershipDivestitureRequest field is set.
    */
   boolean hasCancelNegotiatedAttributeOwnershipDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest cancelNegotiatedAttributeOwnershipDivestitureRequest = 84;</code>
+   * <code>.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest cancelNegotiatedAttributeOwnershipDivestitureRequest = 85;</code>
    * @return The cancelNegotiatedAttributeOwnershipDivestitureRequest.
    */
   hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest getCancelNegotiatedAttributeOwnershipDivestitureRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest cancelNegotiatedAttributeOwnershipDivestitureRequest = 84;</code>
+   * <code>.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest cancelNegotiatedAttributeOwnershipDivestitureRequest = 85;</code>
    */
   hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequestOrBuilder getCancelNegotiatedAttributeOwnershipDivestitureRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest cancelAttributeOwnershipAcquisitionRequest = 85;</code>
+   * <code>.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest cancelAttributeOwnershipAcquisitionRequest = 86;</code>
    * @return Whether the cancelAttributeOwnershipAcquisitionRequest field is set.
    */
   boolean hasCancelAttributeOwnershipAcquisitionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest cancelAttributeOwnershipAcquisitionRequest = 85;</code>
+   * <code>.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest cancelAttributeOwnershipAcquisitionRequest = 86;</code>
    * @return The cancelAttributeOwnershipAcquisitionRequest.
    */
   hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest getCancelAttributeOwnershipAcquisitionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest cancelAttributeOwnershipAcquisitionRequest = 85;</code>
+   * <code>.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest cancelAttributeOwnershipAcquisitionRequest = 86;</code>
    */
   hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequestOrBuilder getCancelAttributeOwnershipAcquisitionRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.QueryAttributeOwnershipRequest queryAttributeOwnershipRequest = 86;</code>
+   * <code>.rti1516_202X.fedpro.QueryAttributeOwnershipRequest queryAttributeOwnershipRequest = 87;</code>
    * @return Whether the queryAttributeOwnershipRequest field is set.
    */
   boolean hasQueryAttributeOwnershipRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryAttributeOwnershipRequest queryAttributeOwnershipRequest = 86;</code>
+   * <code>.rti1516_202X.fedpro.QueryAttributeOwnershipRequest queryAttributeOwnershipRequest = 87;</code>
    * @return The queryAttributeOwnershipRequest.
    */
   hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequest getQueryAttributeOwnershipRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryAttributeOwnershipRequest queryAttributeOwnershipRequest = 86;</code>
+   * <code>.rti1516_202X.fedpro.QueryAttributeOwnershipRequest queryAttributeOwnershipRequest = 87;</code>
    */
   hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequestOrBuilder getQueryAttributeOwnershipRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest isAttributeOwnedByFederateRequest = 87;</code>
+   * <code>.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest isAttributeOwnedByFederateRequest = 88;</code>
    * @return Whether the isAttributeOwnedByFederateRequest field is set.
    */
   boolean hasIsAttributeOwnedByFederateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest isAttributeOwnedByFederateRequest = 87;</code>
+   * <code>.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest isAttributeOwnedByFederateRequest = 88;</code>
    * @return The isAttributeOwnedByFederateRequest.
    */
   hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest getIsAttributeOwnedByFederateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest isAttributeOwnedByFederateRequest = 87;</code>
+   * <code>.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest isAttributeOwnedByFederateRequest = 88;</code>
    */
   hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequestOrBuilder getIsAttributeOwnedByFederateRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.EnableTimeRegulationRequest enableTimeRegulationRequest = 88;</code>
+   * <code>.rti1516_202X.fedpro.EnableTimeRegulationRequest enableTimeRegulationRequest = 89;</code>
    * @return Whether the enableTimeRegulationRequest field is set.
    */
   boolean hasEnableTimeRegulationRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableTimeRegulationRequest enableTimeRegulationRequest = 88;</code>
+   * <code>.rti1516_202X.fedpro.EnableTimeRegulationRequest enableTimeRegulationRequest = 89;</code>
    * @return The enableTimeRegulationRequest.
    */
   hla.rti1516_202X.fedpro.EnableTimeRegulationRequest getEnableTimeRegulationRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableTimeRegulationRequest enableTimeRegulationRequest = 88;</code>
+   * <code>.rti1516_202X.fedpro.EnableTimeRegulationRequest enableTimeRegulationRequest = 89;</code>
    */
   hla.rti1516_202X.fedpro.EnableTimeRegulationRequestOrBuilder getEnableTimeRegulationRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DisableTimeRegulationRequest disableTimeRegulationRequest = 89;</code>
+   * <code>.rti1516_202X.fedpro.DisableTimeRegulationRequest disableTimeRegulationRequest = 90;</code>
    * @return Whether the disableTimeRegulationRequest field is set.
    */
   boolean hasDisableTimeRegulationRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableTimeRegulationRequest disableTimeRegulationRequest = 89;</code>
+   * <code>.rti1516_202X.fedpro.DisableTimeRegulationRequest disableTimeRegulationRequest = 90;</code>
    * @return The disableTimeRegulationRequest.
    */
   hla.rti1516_202X.fedpro.DisableTimeRegulationRequest getDisableTimeRegulationRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableTimeRegulationRequest disableTimeRegulationRequest = 89;</code>
+   * <code>.rti1516_202X.fedpro.DisableTimeRegulationRequest disableTimeRegulationRequest = 90;</code>
    */
   hla.rti1516_202X.fedpro.DisableTimeRegulationRequestOrBuilder getDisableTimeRegulationRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.EnableTimeConstrainedRequest enableTimeConstrainedRequest = 90;</code>
+   * <code>.rti1516_202X.fedpro.EnableTimeConstrainedRequest enableTimeConstrainedRequest = 91;</code>
    * @return Whether the enableTimeConstrainedRequest field is set.
    */
   boolean hasEnableTimeConstrainedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableTimeConstrainedRequest enableTimeConstrainedRequest = 90;</code>
+   * <code>.rti1516_202X.fedpro.EnableTimeConstrainedRequest enableTimeConstrainedRequest = 91;</code>
    * @return The enableTimeConstrainedRequest.
    */
   hla.rti1516_202X.fedpro.EnableTimeConstrainedRequest getEnableTimeConstrainedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableTimeConstrainedRequest enableTimeConstrainedRequest = 90;</code>
+   * <code>.rti1516_202X.fedpro.EnableTimeConstrainedRequest enableTimeConstrainedRequest = 91;</code>
    */
   hla.rti1516_202X.fedpro.EnableTimeConstrainedRequestOrBuilder getEnableTimeConstrainedRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DisableTimeConstrainedRequest disableTimeConstrainedRequest = 91;</code>
+   * <code>.rti1516_202X.fedpro.DisableTimeConstrainedRequest disableTimeConstrainedRequest = 92;</code>
    * @return Whether the disableTimeConstrainedRequest field is set.
    */
   boolean hasDisableTimeConstrainedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableTimeConstrainedRequest disableTimeConstrainedRequest = 91;</code>
+   * <code>.rti1516_202X.fedpro.DisableTimeConstrainedRequest disableTimeConstrainedRequest = 92;</code>
    * @return The disableTimeConstrainedRequest.
    */
   hla.rti1516_202X.fedpro.DisableTimeConstrainedRequest getDisableTimeConstrainedRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableTimeConstrainedRequest disableTimeConstrainedRequest = 91;</code>
+   * <code>.rti1516_202X.fedpro.DisableTimeConstrainedRequest disableTimeConstrainedRequest = 92;</code>
    */
   hla.rti1516_202X.fedpro.DisableTimeConstrainedRequestOrBuilder getDisableTimeConstrainedRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestRequest timeAdvanceRequestRequest = 92;</code>
+   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestRequest timeAdvanceRequestRequest = 93;</code>
    * @return Whether the timeAdvanceRequestRequest field is set.
    */
   boolean hasTimeAdvanceRequestRequest();
   /**
-   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestRequest timeAdvanceRequestRequest = 92;</code>
+   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestRequest timeAdvanceRequestRequest = 93;</code>
    * @return The timeAdvanceRequestRequest.
    */
   hla.rti1516_202X.fedpro.TimeAdvanceRequestRequest getTimeAdvanceRequestRequest();
   /**
-   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestRequest timeAdvanceRequestRequest = 92;</code>
+   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestRequest timeAdvanceRequestRequest = 93;</code>
    */
   hla.rti1516_202X.fedpro.TimeAdvanceRequestRequestOrBuilder getTimeAdvanceRequestRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest timeAdvanceRequestAvailableRequest = 93;</code>
+   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest timeAdvanceRequestAvailableRequest = 94;</code>
    * @return Whether the timeAdvanceRequestAvailableRequest field is set.
    */
   boolean hasTimeAdvanceRequestAvailableRequest();
   /**
-   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest timeAdvanceRequestAvailableRequest = 93;</code>
+   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest timeAdvanceRequestAvailableRequest = 94;</code>
    * @return The timeAdvanceRequestAvailableRequest.
    */
   hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest getTimeAdvanceRequestAvailableRequest();
   /**
-   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest timeAdvanceRequestAvailableRequest = 93;</code>
+   * <code>.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest timeAdvanceRequestAvailableRequest = 94;</code>
    */
   hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequestOrBuilder getTimeAdvanceRequestAvailableRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NextMessageRequestRequest nextMessageRequestRequest = 94;</code>
+   * <code>.rti1516_202X.fedpro.NextMessageRequestRequest nextMessageRequestRequest = 95;</code>
    * @return Whether the nextMessageRequestRequest field is set.
    */
   boolean hasNextMessageRequestRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NextMessageRequestRequest nextMessageRequestRequest = 94;</code>
+   * <code>.rti1516_202X.fedpro.NextMessageRequestRequest nextMessageRequestRequest = 95;</code>
    * @return The nextMessageRequestRequest.
    */
   hla.rti1516_202X.fedpro.NextMessageRequestRequest getNextMessageRequestRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NextMessageRequestRequest nextMessageRequestRequest = 94;</code>
+   * <code>.rti1516_202X.fedpro.NextMessageRequestRequest nextMessageRequestRequest = 95;</code>
    */
   hla.rti1516_202X.fedpro.NextMessageRequestRequestOrBuilder getNextMessageRequestRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NextMessageRequestAvailableRequest nextMessageRequestAvailableRequest = 95;</code>
+   * <code>.rti1516_202X.fedpro.NextMessageRequestAvailableRequest nextMessageRequestAvailableRequest = 96;</code>
    * @return Whether the nextMessageRequestAvailableRequest field is set.
    */
   boolean hasNextMessageRequestAvailableRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NextMessageRequestAvailableRequest nextMessageRequestAvailableRequest = 95;</code>
+   * <code>.rti1516_202X.fedpro.NextMessageRequestAvailableRequest nextMessageRequestAvailableRequest = 96;</code>
    * @return The nextMessageRequestAvailableRequest.
    */
   hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequest getNextMessageRequestAvailableRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NextMessageRequestAvailableRequest nextMessageRequestAvailableRequest = 95;</code>
+   * <code>.rti1516_202X.fedpro.NextMessageRequestAvailableRequest nextMessageRequestAvailableRequest = 96;</code>
    */
   hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequestOrBuilder getNextMessageRequestAvailableRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.FlushQueueRequestRequest flushQueueRequestRequest = 96;</code>
+   * <code>.rti1516_202X.fedpro.FlushQueueRequestRequest flushQueueRequestRequest = 97;</code>
    * @return Whether the flushQueueRequestRequest field is set.
    */
   boolean hasFlushQueueRequestRequest();
   /**
-   * <code>.rti1516_202X.fedpro.FlushQueueRequestRequest flushQueueRequestRequest = 96;</code>
+   * <code>.rti1516_202X.fedpro.FlushQueueRequestRequest flushQueueRequestRequest = 97;</code>
    * @return The flushQueueRequestRequest.
    */
   hla.rti1516_202X.fedpro.FlushQueueRequestRequest getFlushQueueRequestRequest();
   /**
-   * <code>.rti1516_202X.fedpro.FlushQueueRequestRequest flushQueueRequestRequest = 96;</code>
+   * <code>.rti1516_202X.fedpro.FlushQueueRequestRequest flushQueueRequestRequest = 97;</code>
    */
   hla.rti1516_202X.fedpro.FlushQueueRequestRequestOrBuilder getFlushQueueRequestRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest enableAsynchronousDeliveryRequest = 97;</code>
+   * <code>.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest enableAsynchronousDeliveryRequest = 98;</code>
    * @return Whether the enableAsynchronousDeliveryRequest field is set.
    */
   boolean hasEnableAsynchronousDeliveryRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest enableAsynchronousDeliveryRequest = 97;</code>
+   * <code>.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest enableAsynchronousDeliveryRequest = 98;</code>
    * @return The enableAsynchronousDeliveryRequest.
    */
   hla.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest getEnableAsynchronousDeliveryRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest enableAsynchronousDeliveryRequest = 97;</code>
+   * <code>.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest enableAsynchronousDeliveryRequest = 98;</code>
    */
   hla.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequestOrBuilder getEnableAsynchronousDeliveryRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest disableAsynchronousDeliveryRequest = 98;</code>
+   * <code>.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest disableAsynchronousDeliveryRequest = 99;</code>
    * @return Whether the disableAsynchronousDeliveryRequest field is set.
    */
   boolean hasDisableAsynchronousDeliveryRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest disableAsynchronousDeliveryRequest = 98;</code>
+   * <code>.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest disableAsynchronousDeliveryRequest = 99;</code>
    * @return The disableAsynchronousDeliveryRequest.
    */
   hla.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest getDisableAsynchronousDeliveryRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest disableAsynchronousDeliveryRequest = 98;</code>
+   * <code>.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest disableAsynchronousDeliveryRequest = 99;</code>
    */
   hla.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequestOrBuilder getDisableAsynchronousDeliveryRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.QueryGALTRequest queryGALTRequest = 99;</code>
+   * <code>.rti1516_202X.fedpro.QueryGALTRequest queryGALTRequest = 100;</code>
    * @return Whether the queryGALTRequest field is set.
    */
   boolean hasQueryGALTRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryGALTRequest queryGALTRequest = 99;</code>
+   * <code>.rti1516_202X.fedpro.QueryGALTRequest queryGALTRequest = 100;</code>
    * @return The queryGALTRequest.
    */
   hla.rti1516_202X.fedpro.QueryGALTRequest getQueryGALTRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryGALTRequest queryGALTRequest = 99;</code>
+   * <code>.rti1516_202X.fedpro.QueryGALTRequest queryGALTRequest = 100;</code>
    */
   hla.rti1516_202X.fedpro.QueryGALTRequestOrBuilder getQueryGALTRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.QueryLogicalTimeRequest queryLogicalTimeRequest = 100;</code>
+   * <code>.rti1516_202X.fedpro.QueryLogicalTimeRequest queryLogicalTimeRequest = 101;</code>
    * @return Whether the queryLogicalTimeRequest field is set.
    */
   boolean hasQueryLogicalTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryLogicalTimeRequest queryLogicalTimeRequest = 100;</code>
+   * <code>.rti1516_202X.fedpro.QueryLogicalTimeRequest queryLogicalTimeRequest = 101;</code>
    * @return The queryLogicalTimeRequest.
    */
   hla.rti1516_202X.fedpro.QueryLogicalTimeRequest getQueryLogicalTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryLogicalTimeRequest queryLogicalTimeRequest = 100;</code>
+   * <code>.rti1516_202X.fedpro.QueryLogicalTimeRequest queryLogicalTimeRequest = 101;</code>
    */
   hla.rti1516_202X.fedpro.QueryLogicalTimeRequestOrBuilder getQueryLogicalTimeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.QueryLITSRequest queryLITSRequest = 101;</code>
+   * <code>.rti1516_202X.fedpro.QueryLITSRequest queryLITSRequest = 102;</code>
    * @return Whether the queryLITSRequest field is set.
    */
   boolean hasQueryLITSRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryLITSRequest queryLITSRequest = 101;</code>
+   * <code>.rti1516_202X.fedpro.QueryLITSRequest queryLITSRequest = 102;</code>
    * @return The queryLITSRequest.
    */
   hla.rti1516_202X.fedpro.QueryLITSRequest getQueryLITSRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryLITSRequest queryLITSRequest = 101;</code>
+   * <code>.rti1516_202X.fedpro.QueryLITSRequest queryLITSRequest = 102;</code>
    */
   hla.rti1516_202X.fedpro.QueryLITSRequestOrBuilder getQueryLITSRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ModifyLookaheadRequest modifyLookaheadRequest = 102;</code>
+   * <code>.rti1516_202X.fedpro.ModifyLookaheadRequest modifyLookaheadRequest = 103;</code>
    * @return Whether the modifyLookaheadRequest field is set.
    */
   boolean hasModifyLookaheadRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ModifyLookaheadRequest modifyLookaheadRequest = 102;</code>
+   * <code>.rti1516_202X.fedpro.ModifyLookaheadRequest modifyLookaheadRequest = 103;</code>
    * @return The modifyLookaheadRequest.
    */
   hla.rti1516_202X.fedpro.ModifyLookaheadRequest getModifyLookaheadRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ModifyLookaheadRequest modifyLookaheadRequest = 102;</code>
+   * <code>.rti1516_202X.fedpro.ModifyLookaheadRequest modifyLookaheadRequest = 103;</code>
    */
   hla.rti1516_202X.fedpro.ModifyLookaheadRequestOrBuilder getModifyLookaheadRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.QueryLookaheadRequest queryLookaheadRequest = 103;</code>
+   * <code>.rti1516_202X.fedpro.QueryLookaheadRequest queryLookaheadRequest = 104;</code>
    * @return Whether the queryLookaheadRequest field is set.
    */
   boolean hasQueryLookaheadRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryLookaheadRequest queryLookaheadRequest = 103;</code>
+   * <code>.rti1516_202X.fedpro.QueryLookaheadRequest queryLookaheadRequest = 104;</code>
    * @return The queryLookaheadRequest.
    */
   hla.rti1516_202X.fedpro.QueryLookaheadRequest getQueryLookaheadRequest();
   /**
-   * <code>.rti1516_202X.fedpro.QueryLookaheadRequest queryLookaheadRequest = 103;</code>
+   * <code>.rti1516_202X.fedpro.QueryLookaheadRequest queryLookaheadRequest = 104;</code>
    */
   hla.rti1516_202X.fedpro.QueryLookaheadRequestOrBuilder getQueryLookaheadRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RetractRequest retractRequest = 104;</code>
+   * <code>.rti1516_202X.fedpro.RetractRequest retractRequest = 105;</code>
    * @return Whether the retractRequest field is set.
    */
   boolean hasRetractRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RetractRequest retractRequest = 104;</code>
+   * <code>.rti1516_202X.fedpro.RetractRequest retractRequest = 105;</code>
    * @return The retractRequest.
    */
   hla.rti1516_202X.fedpro.RetractRequest getRetractRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RetractRequest retractRequest = 104;</code>
+   * <code>.rti1516_202X.fedpro.RetractRequest retractRequest = 105;</code>
    */
   hla.rti1516_202X.fedpro.RetractRequestOrBuilder getRetractRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest changeAttributeOrderTypeRequest = 105;</code>
+   * <code>.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest changeAttributeOrderTypeRequest = 106;</code>
    * @return Whether the changeAttributeOrderTypeRequest field is set.
    */
   boolean hasChangeAttributeOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest changeAttributeOrderTypeRequest = 105;</code>
+   * <code>.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest changeAttributeOrderTypeRequest = 106;</code>
    * @return The changeAttributeOrderTypeRequest.
    */
   hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest getChangeAttributeOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest changeAttributeOrderTypeRequest = 105;</code>
+   * <code>.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest changeAttributeOrderTypeRequest = 106;</code>
    */
   hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequestOrBuilder getChangeAttributeOrderTypeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest changeDefaultAttributeOrderTypeRequest = 106;</code>
+   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest changeDefaultAttributeOrderTypeRequest = 107;</code>
    * @return Whether the changeDefaultAttributeOrderTypeRequest field is set.
    */
   boolean hasChangeDefaultAttributeOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest changeDefaultAttributeOrderTypeRequest = 106;</code>
+   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest changeDefaultAttributeOrderTypeRequest = 107;</code>
    * @return The changeDefaultAttributeOrderTypeRequest.
    */
   hla.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest getChangeDefaultAttributeOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest changeDefaultAttributeOrderTypeRequest = 106;</code>
+   * <code>.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest changeDefaultAttributeOrderTypeRequest = 107;</code>
    */
   hla.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequestOrBuilder getChangeDefaultAttributeOrderTypeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest changeInteractionOrderTypeRequest = 107;</code>
+   * <code>.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest changeInteractionOrderTypeRequest = 108;</code>
    * @return Whether the changeInteractionOrderTypeRequest field is set.
    */
   boolean hasChangeInteractionOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest changeInteractionOrderTypeRequest = 107;</code>
+   * <code>.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest changeInteractionOrderTypeRequest = 108;</code>
    * @return The changeInteractionOrderTypeRequest.
    */
   hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest getChangeInteractionOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest changeInteractionOrderTypeRequest = 107;</code>
+   * <code>.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest changeInteractionOrderTypeRequest = 108;</code>
    */
   hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequestOrBuilder getChangeInteractionOrderTypeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.CreateRegionRequest createRegionRequest = 108;</code>
+   * <code>.rti1516_202X.fedpro.CreateRegionRequest createRegionRequest = 109;</code>
    * @return Whether the createRegionRequest field is set.
    */
   boolean hasCreateRegionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CreateRegionRequest createRegionRequest = 108;</code>
+   * <code>.rti1516_202X.fedpro.CreateRegionRequest createRegionRequest = 109;</code>
    * @return The createRegionRequest.
    */
   hla.rti1516_202X.fedpro.CreateRegionRequest getCreateRegionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CreateRegionRequest createRegionRequest = 108;</code>
+   * <code>.rti1516_202X.fedpro.CreateRegionRequest createRegionRequest = 109;</code>
    */
   hla.rti1516_202X.fedpro.CreateRegionRequestOrBuilder getCreateRegionRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.CommitRegionModificationsRequest commitRegionModificationsRequest = 109;</code>
+   * <code>.rti1516_202X.fedpro.CommitRegionModificationsRequest commitRegionModificationsRequest = 110;</code>
    * @return Whether the commitRegionModificationsRequest field is set.
    */
   boolean hasCommitRegionModificationsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CommitRegionModificationsRequest commitRegionModificationsRequest = 109;</code>
+   * <code>.rti1516_202X.fedpro.CommitRegionModificationsRequest commitRegionModificationsRequest = 110;</code>
    * @return The commitRegionModificationsRequest.
    */
   hla.rti1516_202X.fedpro.CommitRegionModificationsRequest getCommitRegionModificationsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.CommitRegionModificationsRequest commitRegionModificationsRequest = 109;</code>
+   * <code>.rti1516_202X.fedpro.CommitRegionModificationsRequest commitRegionModificationsRequest = 110;</code>
    */
   hla.rti1516_202X.fedpro.CommitRegionModificationsRequestOrBuilder getCommitRegionModificationsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DeleteRegionRequest deleteRegionRequest = 110;</code>
+   * <code>.rti1516_202X.fedpro.DeleteRegionRequest deleteRegionRequest = 111;</code>
    * @return Whether the deleteRegionRequest field is set.
    */
   boolean hasDeleteRegionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DeleteRegionRequest deleteRegionRequest = 110;</code>
+   * <code>.rti1516_202X.fedpro.DeleteRegionRequest deleteRegionRequest = 111;</code>
    * @return The deleteRegionRequest.
    */
   hla.rti1516_202X.fedpro.DeleteRegionRequest getDeleteRegionRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DeleteRegionRequest deleteRegionRequest = 110;</code>
+   * <code>.rti1516_202X.fedpro.DeleteRegionRequest deleteRegionRequest = 111;</code>
    */
   hla.rti1516_202X.fedpro.DeleteRegionRequestOrBuilder getDeleteRegionRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest registerObjectInstanceWithRegionsRequest = 111;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest registerObjectInstanceWithRegionsRequest = 112;</code>
    * @return Whether the registerObjectInstanceWithRegionsRequest field is set.
    */
   boolean hasRegisterObjectInstanceWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest registerObjectInstanceWithRegionsRequest = 111;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest registerObjectInstanceWithRegionsRequest = 112;</code>
    * @return The registerObjectInstanceWithRegionsRequest.
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest getRegisterObjectInstanceWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest registerObjectInstanceWithRegionsRequest = 111;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest registerObjectInstanceWithRegionsRequest = 112;</code>
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequestOrBuilder getRegisterObjectInstanceWithRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest registerObjectInstanceWithNameAndRegionsRequest = 112;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest registerObjectInstanceWithNameAndRegionsRequest = 113;</code>
    * @return Whether the registerObjectInstanceWithNameAndRegionsRequest field is set.
    */
   boolean hasRegisterObjectInstanceWithNameAndRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest registerObjectInstanceWithNameAndRegionsRequest = 112;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest registerObjectInstanceWithNameAndRegionsRequest = 113;</code>
    * @return The registerObjectInstanceWithNameAndRegionsRequest.
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest getRegisterObjectInstanceWithNameAndRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest registerObjectInstanceWithNameAndRegionsRequest = 112;</code>
+   * <code>.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest registerObjectInstanceWithNameAndRegionsRequest = 113;</code>
    */
   hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequestOrBuilder getRegisterObjectInstanceWithNameAndRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest associateRegionsForUpdatesRequest = 113;</code>
+   * <code>.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest associateRegionsForUpdatesRequest = 114;</code>
    * @return Whether the associateRegionsForUpdatesRequest field is set.
    */
   boolean hasAssociateRegionsForUpdatesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest associateRegionsForUpdatesRequest = 113;</code>
+   * <code>.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest associateRegionsForUpdatesRequest = 114;</code>
    * @return The associateRegionsForUpdatesRequest.
    */
   hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest getAssociateRegionsForUpdatesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest associateRegionsForUpdatesRequest = 113;</code>
+   * <code>.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest associateRegionsForUpdatesRequest = 114;</code>
    */
   hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequestOrBuilder getAssociateRegionsForUpdatesRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest unassociateRegionsForUpdatesRequest = 114;</code>
+   * <code>.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest unassociateRegionsForUpdatesRequest = 115;</code>
    * @return Whether the unassociateRegionsForUpdatesRequest field is set.
    */
   boolean hasUnassociateRegionsForUpdatesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest unassociateRegionsForUpdatesRequest = 114;</code>
+   * <code>.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest unassociateRegionsForUpdatesRequest = 115;</code>
    * @return The unassociateRegionsForUpdatesRequest.
    */
   hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest getUnassociateRegionsForUpdatesRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest unassociateRegionsForUpdatesRequest = 114;</code>
+   * <code>.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest unassociateRegionsForUpdatesRequest = 115;</code>
    */
   hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequestOrBuilder getUnassociateRegionsForUpdatesRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest subscribeObjectClassAttributesWithRegionsRequest = 115;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest subscribeObjectClassAttributesWithRegionsRequest = 116;</code>
    * @return Whether the subscribeObjectClassAttributesWithRegionsRequest field is set.
    */
   boolean hasSubscribeObjectClassAttributesWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest subscribeObjectClassAttributesWithRegionsRequest = 115;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest subscribeObjectClassAttributesWithRegionsRequest = 116;</code>
    * @return The subscribeObjectClassAttributesWithRegionsRequest.
    */
   hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest getSubscribeObjectClassAttributesWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest subscribeObjectClassAttributesWithRegionsRequest = 115;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest subscribeObjectClassAttributesWithRegionsRequest = 116;</code>
    */
   hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequestOrBuilder getSubscribeObjectClassAttributesWithRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest subscribeObjectClassAttributesWithRegionsAndRateRequest = 116;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest subscribeObjectClassAttributesWithRegionsAndRateRequest = 117;</code>
    * @return Whether the subscribeObjectClassAttributesWithRegionsAndRateRequest field is set.
    */
   boolean hasSubscribeObjectClassAttributesWithRegionsAndRateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest subscribeObjectClassAttributesWithRegionsAndRateRequest = 116;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest subscribeObjectClassAttributesWithRegionsAndRateRequest = 117;</code>
    * @return The subscribeObjectClassAttributesWithRegionsAndRateRequest.
    */
   hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest getSubscribeObjectClassAttributesWithRegionsAndRateRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest subscribeObjectClassAttributesWithRegionsAndRateRequest = 116;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest subscribeObjectClassAttributesWithRegionsAndRateRequest = 117;</code>
    */
   hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequestOrBuilder getSubscribeObjectClassAttributesWithRegionsAndRateRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest unsubscribeObjectClassAttributesWithRegionsRequest = 117;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest unsubscribeObjectClassAttributesWithRegionsRequest = 118;</code>
    * @return Whether the unsubscribeObjectClassAttributesWithRegionsRequest field is set.
    */
   boolean hasUnsubscribeObjectClassAttributesWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest unsubscribeObjectClassAttributesWithRegionsRequest = 117;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest unsubscribeObjectClassAttributesWithRegionsRequest = 118;</code>
    * @return The unsubscribeObjectClassAttributesWithRegionsRequest.
    */
   hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest getUnsubscribeObjectClassAttributesWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest unsubscribeObjectClassAttributesWithRegionsRequest = 117;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest unsubscribeObjectClassAttributesWithRegionsRequest = 118;</code>
    */
   hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequestOrBuilder getUnsubscribeObjectClassAttributesWithRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest subscribeInteractionClassWithRegionsRequest = 118;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest subscribeInteractionClassWithRegionsRequest = 119;</code>
    * @return Whether the subscribeInteractionClassWithRegionsRequest field is set.
    */
   boolean hasSubscribeInteractionClassWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest subscribeInteractionClassWithRegionsRequest = 118;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest subscribeInteractionClassWithRegionsRequest = 119;</code>
    * @return The subscribeInteractionClassWithRegionsRequest.
    */
   hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest getSubscribeInteractionClassWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest subscribeInteractionClassWithRegionsRequest = 118;</code>
+   * <code>.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest subscribeInteractionClassWithRegionsRequest = 119;</code>
    */
   hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequestOrBuilder getSubscribeInteractionClassWithRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest unsubscribeInteractionClassWithRegionsRequest = 119;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest unsubscribeInteractionClassWithRegionsRequest = 120;</code>
    * @return Whether the unsubscribeInteractionClassWithRegionsRequest field is set.
    */
   boolean hasUnsubscribeInteractionClassWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest unsubscribeInteractionClassWithRegionsRequest = 119;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest unsubscribeInteractionClassWithRegionsRequest = 120;</code>
    * @return The unsubscribeInteractionClassWithRegionsRequest.
    */
   hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest getUnsubscribeInteractionClassWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest unsubscribeInteractionClassWithRegionsRequest = 119;</code>
+   * <code>.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest unsubscribeInteractionClassWithRegionsRequest = 120;</code>
    */
   hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequestOrBuilder getUnsubscribeInteractionClassWithRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsRequest sendInteractionWithRegionsRequest = 120;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsRequest sendInteractionWithRegionsRequest = 121;</code>
    * @return Whether the sendInteractionWithRegionsRequest field is set.
    */
   boolean hasSendInteractionWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsRequest sendInteractionWithRegionsRequest = 120;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsRequest sendInteractionWithRegionsRequest = 121;</code>
    * @return The sendInteractionWithRegionsRequest.
    */
   hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequest getSendInteractionWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsRequest sendInteractionWithRegionsRequest = 120;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsRequest sendInteractionWithRegionsRequest = 121;</code>
    */
   hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequestOrBuilder getSendInteractionWithRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest sendInteractionWithRegionsAndTimeRequest = 121;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest sendInteractionWithRegionsAndTimeRequest = 122;</code>
    * @return Whether the sendInteractionWithRegionsAndTimeRequest field is set.
    */
   boolean hasSendInteractionWithRegionsAndTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest sendInteractionWithRegionsAndTimeRequest = 121;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest sendInteractionWithRegionsAndTimeRequest = 122;</code>
    * @return The sendInteractionWithRegionsAndTimeRequest.
    */
   hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest getSendInteractionWithRegionsAndTimeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest sendInteractionWithRegionsAndTimeRequest = 121;</code>
+   * <code>.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest sendInteractionWithRegionsAndTimeRequest = 122;</code>
    */
   hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequestOrBuilder getSendInteractionWithRegionsAndTimeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest requestAttributeValueUpdateWithRegionsRequest = 122;</code>
+   * <code>.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest requestAttributeValueUpdateWithRegionsRequest = 123;</code>
    * @return Whether the requestAttributeValueUpdateWithRegionsRequest field is set.
    */
   boolean hasRequestAttributeValueUpdateWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest requestAttributeValueUpdateWithRegionsRequest = 122;</code>
+   * <code>.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest requestAttributeValueUpdateWithRegionsRequest = 123;</code>
    * @return The requestAttributeValueUpdateWithRegionsRequest.
    */
   hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest getRequestAttributeValueUpdateWithRegionsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest requestAttributeValueUpdateWithRegionsRequest = 122;</code>
+   * <code>.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest requestAttributeValueUpdateWithRegionsRequest = 123;</code>
    */
   hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequestOrBuilder getRequestAttributeValueUpdateWithRegionsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getAutomaticResignDirectiveRequest = 123;</code>
-   * @return Whether the getAutomaticResignDirectiveRequest field is set.
-   */
-  boolean hasGetAutomaticResignDirectiveRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getAutomaticResignDirectiveRequest = 123;</code>
-   * @return The getAutomaticResignDirectiveRequest.
-   */
-  hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getGetAutomaticResignDirectiveRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getAutomaticResignDirectiveRequest = 123;</code>
-   */
-  hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequestOrBuilder getGetAutomaticResignDirectiveRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest setAutomaticResignDirectiveRequest = 124;</code>
-   * @return Whether the setAutomaticResignDirectiveRequest field is set.
-   */
-  boolean hasSetAutomaticResignDirectiveRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest setAutomaticResignDirectiveRequest = 124;</code>
-   * @return The setAutomaticResignDirectiveRequest.
-   */
-  hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest getSetAutomaticResignDirectiveRequest();
-  /**
-   * <code>.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest setAutomaticResignDirectiveRequest = 124;</code>
-   */
-  hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequestOrBuilder getSetAutomaticResignDirectiveRequestOrBuilder();
-
-  /**
-   * <code>.rti1516_202X.fedpro.GetFederateHandleRequest getFederateHandleRequest = 125;</code>
+   * <code>.rti1516_202X.fedpro.GetFederateHandleRequest getFederateHandleRequest = 124;</code>
    * @return Whether the getFederateHandleRequest field is set.
    */
   boolean hasGetFederateHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetFederateHandleRequest getFederateHandleRequest = 125;</code>
+   * <code>.rti1516_202X.fedpro.GetFederateHandleRequest getFederateHandleRequest = 124;</code>
    * @return The getFederateHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetFederateHandleRequest getGetFederateHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetFederateHandleRequest getFederateHandleRequest = 125;</code>
+   * <code>.rti1516_202X.fedpro.GetFederateHandleRequest getFederateHandleRequest = 124;</code>
    */
   hla.rti1516_202X.fedpro.GetFederateHandleRequestOrBuilder getGetFederateHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetFederateNameRequest getFederateNameRequest = 126;</code>
+   * <code>.rti1516_202X.fedpro.GetFederateNameRequest getFederateNameRequest = 125;</code>
    * @return Whether the getFederateNameRequest field is set.
    */
   boolean hasGetFederateNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetFederateNameRequest getFederateNameRequest = 126;</code>
+   * <code>.rti1516_202X.fedpro.GetFederateNameRequest getFederateNameRequest = 125;</code>
    * @return The getFederateNameRequest.
    */
   hla.rti1516_202X.fedpro.GetFederateNameRequest getGetFederateNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetFederateNameRequest getFederateNameRequest = 126;</code>
+   * <code>.rti1516_202X.fedpro.GetFederateNameRequest getFederateNameRequest = 125;</code>
    */
   hla.rti1516_202X.fedpro.GetFederateNameRequestOrBuilder getGetFederateNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectClassHandleRequest getObjectClassHandleRequest = 127;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectClassHandleRequest getObjectClassHandleRequest = 126;</code>
    * @return Whether the getObjectClassHandleRequest field is set.
    */
   boolean hasGetObjectClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectClassHandleRequest getObjectClassHandleRequest = 127;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectClassHandleRequest getObjectClassHandleRequest = 126;</code>
    * @return The getObjectClassHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetObjectClassHandleRequest getGetObjectClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectClassHandleRequest getObjectClassHandleRequest = 127;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectClassHandleRequest getObjectClassHandleRequest = 126;</code>
    */
   hla.rti1516_202X.fedpro.GetObjectClassHandleRequestOrBuilder getGetObjectClassHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectClassNameRequest getObjectClassNameRequest = 128;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectClassNameRequest getObjectClassNameRequest = 127;</code>
    * @return Whether the getObjectClassNameRequest field is set.
    */
   boolean hasGetObjectClassNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectClassNameRequest getObjectClassNameRequest = 128;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectClassNameRequest getObjectClassNameRequest = 127;</code>
    * @return The getObjectClassNameRequest.
    */
   hla.rti1516_202X.fedpro.GetObjectClassNameRequest getGetObjectClassNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectClassNameRequest getObjectClassNameRequest = 128;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectClassNameRequest getObjectClassNameRequest = 127;</code>
    */
   hla.rti1516_202X.fedpro.GetObjectClassNameRequestOrBuilder getGetObjectClassNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest getKnownObjectClassHandleRequest = 129;</code>
+   * <code>.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest getKnownObjectClassHandleRequest = 128;</code>
    * @return Whether the getKnownObjectClassHandleRequest field is set.
    */
   boolean hasGetKnownObjectClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest getKnownObjectClassHandleRequest = 129;</code>
+   * <code>.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest getKnownObjectClassHandleRequest = 128;</code>
    * @return The getKnownObjectClassHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest getGetKnownObjectClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest getKnownObjectClassHandleRequest = 129;</code>
+   * <code>.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest getKnownObjectClassHandleRequest = 128;</code>
    */
   hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequestOrBuilder getGetKnownObjectClassHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectInstanceHandleRequest getObjectInstanceHandleRequest = 130;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectInstanceHandleRequest getObjectInstanceHandleRequest = 129;</code>
    * @return Whether the getObjectInstanceHandleRequest field is set.
    */
   boolean hasGetObjectInstanceHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectInstanceHandleRequest getObjectInstanceHandleRequest = 130;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectInstanceHandleRequest getObjectInstanceHandleRequest = 129;</code>
    * @return The getObjectInstanceHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequest getGetObjectInstanceHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectInstanceHandleRequest getObjectInstanceHandleRequest = 130;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectInstanceHandleRequest getObjectInstanceHandleRequest = 129;</code>
    */
   hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequestOrBuilder getGetObjectInstanceHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectInstanceNameRequest getObjectInstanceNameRequest = 131;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectInstanceNameRequest getObjectInstanceNameRequest = 130;</code>
    * @return Whether the getObjectInstanceNameRequest field is set.
    */
   boolean hasGetObjectInstanceNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectInstanceNameRequest getObjectInstanceNameRequest = 131;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectInstanceNameRequest getObjectInstanceNameRequest = 130;</code>
    * @return The getObjectInstanceNameRequest.
    */
   hla.rti1516_202X.fedpro.GetObjectInstanceNameRequest getGetObjectInstanceNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetObjectInstanceNameRequest getObjectInstanceNameRequest = 131;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectInstanceNameRequest getObjectInstanceNameRequest = 130;</code>
    */
   hla.rti1516_202X.fedpro.GetObjectInstanceNameRequestOrBuilder getGetObjectInstanceNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetAttributeHandleRequest getAttributeHandleRequest = 132;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeHandleRequest getAttributeHandleRequest = 131;</code>
    * @return Whether the getAttributeHandleRequest field is set.
    */
   boolean hasGetAttributeHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAttributeHandleRequest getAttributeHandleRequest = 132;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeHandleRequest getAttributeHandleRequest = 131;</code>
    * @return The getAttributeHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetAttributeHandleRequest getGetAttributeHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAttributeHandleRequest getAttributeHandleRequest = 132;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeHandleRequest getAttributeHandleRequest = 131;</code>
    */
   hla.rti1516_202X.fedpro.GetAttributeHandleRequestOrBuilder getGetAttributeHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetAttributeNameRequest getAttributeNameRequest = 133;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeNameRequest getAttributeNameRequest = 132;</code>
    * @return Whether the getAttributeNameRequest field is set.
    */
   boolean hasGetAttributeNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAttributeNameRequest getAttributeNameRequest = 133;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeNameRequest getAttributeNameRequest = 132;</code>
    * @return The getAttributeNameRequest.
    */
   hla.rti1516_202X.fedpro.GetAttributeNameRequest getGetAttributeNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAttributeNameRequest getAttributeNameRequest = 133;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeNameRequest getAttributeNameRequest = 132;</code>
    */
   hla.rti1516_202X.fedpro.GetAttributeNameRequestOrBuilder getGetAttributeNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetUpdateRateValueRequest getUpdateRateValueRequest = 134;</code>
+   * <code>.rti1516_202X.fedpro.GetUpdateRateValueRequest getUpdateRateValueRequest = 133;</code>
    * @return Whether the getUpdateRateValueRequest field is set.
    */
   boolean hasGetUpdateRateValueRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetUpdateRateValueRequest getUpdateRateValueRequest = 134;</code>
+   * <code>.rti1516_202X.fedpro.GetUpdateRateValueRequest getUpdateRateValueRequest = 133;</code>
    * @return The getUpdateRateValueRequest.
    */
   hla.rti1516_202X.fedpro.GetUpdateRateValueRequest getGetUpdateRateValueRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetUpdateRateValueRequest getUpdateRateValueRequest = 134;</code>
+   * <code>.rti1516_202X.fedpro.GetUpdateRateValueRequest getUpdateRateValueRequest = 133;</code>
    */
   hla.rti1516_202X.fedpro.GetUpdateRateValueRequestOrBuilder getGetUpdateRateValueRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest getUpdateRateValueForAttributeRequest = 135;</code>
+   * <code>.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest getUpdateRateValueForAttributeRequest = 134;</code>
    * @return Whether the getUpdateRateValueForAttributeRequest field is set.
    */
   boolean hasGetUpdateRateValueForAttributeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest getUpdateRateValueForAttributeRequest = 135;</code>
+   * <code>.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest getUpdateRateValueForAttributeRequest = 134;</code>
    * @return The getUpdateRateValueForAttributeRequest.
    */
   hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest getGetUpdateRateValueForAttributeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest getUpdateRateValueForAttributeRequest = 135;</code>
+   * <code>.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest getUpdateRateValueForAttributeRequest = 134;</code>
    */
   hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequestOrBuilder getGetUpdateRateValueForAttributeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetInteractionClassHandleRequest getInteractionClassHandleRequest = 136;</code>
+   * <code>.rti1516_202X.fedpro.GetInteractionClassHandleRequest getInteractionClassHandleRequest = 135;</code>
    * @return Whether the getInteractionClassHandleRequest field is set.
    */
   boolean hasGetInteractionClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetInteractionClassHandleRequest getInteractionClassHandleRequest = 136;</code>
+   * <code>.rti1516_202X.fedpro.GetInteractionClassHandleRequest getInteractionClassHandleRequest = 135;</code>
    * @return The getInteractionClassHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetInteractionClassHandleRequest getGetInteractionClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetInteractionClassHandleRequest getInteractionClassHandleRequest = 136;</code>
+   * <code>.rti1516_202X.fedpro.GetInteractionClassHandleRequest getInteractionClassHandleRequest = 135;</code>
    */
   hla.rti1516_202X.fedpro.GetInteractionClassHandleRequestOrBuilder getGetInteractionClassHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetInteractionClassNameRequest getInteractionClassNameRequest = 137;</code>
+   * <code>.rti1516_202X.fedpro.GetInteractionClassNameRequest getInteractionClassNameRequest = 136;</code>
    * @return Whether the getInteractionClassNameRequest field is set.
    */
   boolean hasGetInteractionClassNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetInteractionClassNameRequest getInteractionClassNameRequest = 137;</code>
+   * <code>.rti1516_202X.fedpro.GetInteractionClassNameRequest getInteractionClassNameRequest = 136;</code>
    * @return The getInteractionClassNameRequest.
    */
   hla.rti1516_202X.fedpro.GetInteractionClassNameRequest getGetInteractionClassNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetInteractionClassNameRequest getInteractionClassNameRequest = 137;</code>
+   * <code>.rti1516_202X.fedpro.GetInteractionClassNameRequest getInteractionClassNameRequest = 136;</code>
    */
   hla.rti1516_202X.fedpro.GetInteractionClassNameRequestOrBuilder getGetInteractionClassNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetParameterHandleRequest getParameterHandleRequest = 138;</code>
+   * <code>.rti1516_202X.fedpro.GetParameterHandleRequest getParameterHandleRequest = 137;</code>
    * @return Whether the getParameterHandleRequest field is set.
    */
   boolean hasGetParameterHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetParameterHandleRequest getParameterHandleRequest = 138;</code>
+   * <code>.rti1516_202X.fedpro.GetParameterHandleRequest getParameterHandleRequest = 137;</code>
    * @return The getParameterHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetParameterHandleRequest getGetParameterHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetParameterHandleRequest getParameterHandleRequest = 138;</code>
+   * <code>.rti1516_202X.fedpro.GetParameterHandleRequest getParameterHandleRequest = 137;</code>
    */
   hla.rti1516_202X.fedpro.GetParameterHandleRequestOrBuilder getGetParameterHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetParameterNameRequest getParameterNameRequest = 139;</code>
+   * <code>.rti1516_202X.fedpro.GetParameterNameRequest getParameterNameRequest = 138;</code>
    * @return Whether the getParameterNameRequest field is set.
    */
   boolean hasGetParameterNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetParameterNameRequest getParameterNameRequest = 139;</code>
+   * <code>.rti1516_202X.fedpro.GetParameterNameRequest getParameterNameRequest = 138;</code>
    * @return The getParameterNameRequest.
    */
   hla.rti1516_202X.fedpro.GetParameterNameRequest getGetParameterNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetParameterNameRequest getParameterNameRequest = 139;</code>
+   * <code>.rti1516_202X.fedpro.GetParameterNameRequest getParameterNameRequest = 138;</code>
    */
   hla.rti1516_202X.fedpro.GetParameterNameRequestOrBuilder getGetParameterNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetOrderTypeRequest getOrderTypeRequest = 140;</code>
+   * <code>.rti1516_202X.fedpro.GetOrderTypeRequest getOrderTypeRequest = 139;</code>
    * @return Whether the getOrderTypeRequest field is set.
    */
   boolean hasGetOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetOrderTypeRequest getOrderTypeRequest = 140;</code>
+   * <code>.rti1516_202X.fedpro.GetOrderTypeRequest getOrderTypeRequest = 139;</code>
    * @return The getOrderTypeRequest.
    */
   hla.rti1516_202X.fedpro.GetOrderTypeRequest getGetOrderTypeRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetOrderTypeRequest getOrderTypeRequest = 140;</code>
+   * <code>.rti1516_202X.fedpro.GetOrderTypeRequest getOrderTypeRequest = 139;</code>
    */
   hla.rti1516_202X.fedpro.GetOrderTypeRequestOrBuilder getGetOrderTypeRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetOrderNameRequest getOrderNameRequest = 141;</code>
+   * <code>.rti1516_202X.fedpro.GetOrderNameRequest getOrderNameRequest = 140;</code>
    * @return Whether the getOrderNameRequest field is set.
    */
   boolean hasGetOrderNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetOrderNameRequest getOrderNameRequest = 141;</code>
+   * <code>.rti1516_202X.fedpro.GetOrderNameRequest getOrderNameRequest = 140;</code>
    * @return The getOrderNameRequest.
    */
   hla.rti1516_202X.fedpro.GetOrderNameRequest getGetOrderNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetOrderNameRequest getOrderNameRequest = 141;</code>
+   * <code>.rti1516_202X.fedpro.GetOrderNameRequest getOrderNameRequest = 140;</code>
    */
   hla.rti1516_202X.fedpro.GetOrderNameRequestOrBuilder getGetOrderNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetTransportationTypeHandleRequest getTransportationTypeHandleRequest = 142;</code>
+   * <code>.rti1516_202X.fedpro.GetTransportationTypeHandleRequest getTransportationTypeHandleRequest = 141;</code>
    * @return Whether the getTransportationTypeHandleRequest field is set.
    */
   boolean hasGetTransportationTypeHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetTransportationTypeHandleRequest getTransportationTypeHandleRequest = 142;</code>
+   * <code>.rti1516_202X.fedpro.GetTransportationTypeHandleRequest getTransportationTypeHandleRequest = 141;</code>
    * @return The getTransportationTypeHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequest getGetTransportationTypeHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetTransportationTypeHandleRequest getTransportationTypeHandleRequest = 142;</code>
+   * <code>.rti1516_202X.fedpro.GetTransportationTypeHandleRequest getTransportationTypeHandleRequest = 141;</code>
    */
   hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequestOrBuilder getGetTransportationTypeHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetTransportationTypeNameRequest getTransportationTypeNameRequest = 143;</code>
+   * <code>.rti1516_202X.fedpro.GetTransportationTypeNameRequest getTransportationTypeNameRequest = 142;</code>
    * @return Whether the getTransportationTypeNameRequest field is set.
    */
   boolean hasGetTransportationTypeNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetTransportationTypeNameRequest getTransportationTypeNameRequest = 143;</code>
+   * <code>.rti1516_202X.fedpro.GetTransportationTypeNameRequest getTransportationTypeNameRequest = 142;</code>
    * @return The getTransportationTypeNameRequest.
    */
   hla.rti1516_202X.fedpro.GetTransportationTypeNameRequest getGetTransportationTypeNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetTransportationTypeNameRequest getTransportationTypeNameRequest = 143;</code>
+   * <code>.rti1516_202X.fedpro.GetTransportationTypeNameRequest getTransportationTypeNameRequest = 142;</code>
    */
   hla.rti1516_202X.fedpro.GetTransportationTypeNameRequestOrBuilder getGetTransportationTypeNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequest getAvailableDimensionsForClassAttributeRequest = 144;</code>
-   * @return Whether the getAvailableDimensionsForClassAttributeRequest field is set.
+   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest getAvailableDimensionsForObjectClassRequest = 143;</code>
+   * @return Whether the getAvailableDimensionsForObjectClassRequest field is set.
    */
-  boolean hasGetAvailableDimensionsForClassAttributeRequest();
+  boolean hasGetAvailableDimensionsForObjectClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequest getAvailableDimensionsForClassAttributeRequest = 144;</code>
-   * @return The getAvailableDimensionsForClassAttributeRequest.
+   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest getAvailableDimensionsForObjectClassRequest = 143;</code>
+   * @return The getAvailableDimensionsForObjectClassRequest.
    */
-  hla.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequest getGetAvailableDimensionsForClassAttributeRequest();
+  hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest getGetAvailableDimensionsForObjectClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequest getAvailableDimensionsForClassAttributeRequest = 144;</code>
+   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest getAvailableDimensionsForObjectClassRequest = 143;</code>
    */
-  hla.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequestOrBuilder getGetAvailableDimensionsForClassAttributeRequestOrBuilder();
+  hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequestOrBuilder getGetAvailableDimensionsForObjectClassRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest getAvailableDimensionsForInteractionClassRequest = 145;</code>
+   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest getAvailableDimensionsForInteractionClassRequest = 144;</code>
    * @return Whether the getAvailableDimensionsForInteractionClassRequest field is set.
    */
   boolean hasGetAvailableDimensionsForInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest getAvailableDimensionsForInteractionClassRequest = 145;</code>
+   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest getAvailableDimensionsForInteractionClassRequest = 144;</code>
    * @return The getAvailableDimensionsForInteractionClassRequest.
    */
   hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest getGetAvailableDimensionsForInteractionClassRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest getAvailableDimensionsForInteractionClassRequest = 145;</code>
+   * <code>.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest getAvailableDimensionsForInteractionClassRequest = 144;</code>
    */
   hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequestOrBuilder getGetAvailableDimensionsForInteractionClassRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionHandleRequest getDimensionHandleRequest = 146;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionHandleRequest getDimensionHandleRequest = 145;</code>
    * @return Whether the getDimensionHandleRequest field is set.
    */
   boolean hasGetDimensionHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionHandleRequest getDimensionHandleRequest = 146;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionHandleRequest getDimensionHandleRequest = 145;</code>
    * @return The getDimensionHandleRequest.
    */
   hla.rti1516_202X.fedpro.GetDimensionHandleRequest getGetDimensionHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionHandleRequest getDimensionHandleRequest = 146;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionHandleRequest getDimensionHandleRequest = 145;</code>
    */
   hla.rti1516_202X.fedpro.GetDimensionHandleRequestOrBuilder getGetDimensionHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionNameRequest getDimensionNameRequest = 147;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionNameRequest getDimensionNameRequest = 146;</code>
    * @return Whether the getDimensionNameRequest field is set.
    */
   boolean hasGetDimensionNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionNameRequest getDimensionNameRequest = 147;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionNameRequest getDimensionNameRequest = 146;</code>
    * @return The getDimensionNameRequest.
    */
   hla.rti1516_202X.fedpro.GetDimensionNameRequest getGetDimensionNameRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionNameRequest getDimensionNameRequest = 147;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionNameRequest getDimensionNameRequest = 146;</code>
    */
   hla.rti1516_202X.fedpro.GetDimensionNameRequestOrBuilder getGetDimensionNameRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionUpperBoundRequest getDimensionUpperBoundRequest = 148;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionUpperBoundRequest getDimensionUpperBoundRequest = 147;</code>
    * @return Whether the getDimensionUpperBoundRequest field is set.
    */
   boolean hasGetDimensionUpperBoundRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionUpperBoundRequest getDimensionUpperBoundRequest = 148;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionUpperBoundRequest getDimensionUpperBoundRequest = 147;</code>
    * @return The getDimensionUpperBoundRequest.
    */
   hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequest getGetDimensionUpperBoundRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionUpperBoundRequest getDimensionUpperBoundRequest = 148;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionUpperBoundRequest getDimensionUpperBoundRequest = 147;</code>
    */
   hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequestOrBuilder getGetDimensionUpperBoundRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionHandleSetRequest getDimensionHandleSetRequest = 149;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionHandleSetRequest getDimensionHandleSetRequest = 148;</code>
    * @return Whether the getDimensionHandleSetRequest field is set.
    */
   boolean hasGetDimensionHandleSetRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionHandleSetRequest getDimensionHandleSetRequest = 149;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionHandleSetRequest getDimensionHandleSetRequest = 148;</code>
    * @return The getDimensionHandleSetRequest.
    */
   hla.rti1516_202X.fedpro.GetDimensionHandleSetRequest getGetDimensionHandleSetRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetDimensionHandleSetRequest getDimensionHandleSetRequest = 149;</code>
+   * <code>.rti1516_202X.fedpro.GetDimensionHandleSetRequest getDimensionHandleSetRequest = 148;</code>
    */
   hla.rti1516_202X.fedpro.GetDimensionHandleSetRequestOrBuilder getGetDimensionHandleSetRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.GetRangeBoundsRequest getRangeBoundsRequest = 150;</code>
+   * <code>.rti1516_202X.fedpro.GetRangeBoundsRequest getRangeBoundsRequest = 149;</code>
    * @return Whether the getRangeBoundsRequest field is set.
    */
   boolean hasGetRangeBoundsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetRangeBoundsRequest getRangeBoundsRequest = 150;</code>
+   * <code>.rti1516_202X.fedpro.GetRangeBoundsRequest getRangeBoundsRequest = 149;</code>
    * @return The getRangeBoundsRequest.
    */
   hla.rti1516_202X.fedpro.GetRangeBoundsRequest getGetRangeBoundsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.GetRangeBoundsRequest getRangeBoundsRequest = 150;</code>
+   * <code>.rti1516_202X.fedpro.GetRangeBoundsRequest getRangeBoundsRequest = 149;</code>
    */
   hla.rti1516_202X.fedpro.GetRangeBoundsRequestOrBuilder getGetRangeBoundsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.SetRangeBoundsRequest setRangeBoundsRequest = 151;</code>
+   * <code>.rti1516_202X.fedpro.SetRangeBoundsRequest setRangeBoundsRequest = 150;</code>
    * @return Whether the setRangeBoundsRequest field is set.
    */
   boolean hasSetRangeBoundsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SetRangeBoundsRequest setRangeBoundsRequest = 151;</code>
+   * <code>.rti1516_202X.fedpro.SetRangeBoundsRequest setRangeBoundsRequest = 150;</code>
    * @return The setRangeBoundsRequest.
    */
   hla.rti1516_202X.fedpro.SetRangeBoundsRequest getSetRangeBoundsRequest();
   /**
-   * <code>.rti1516_202X.fedpro.SetRangeBoundsRequest setRangeBoundsRequest = 151;</code>
+   * <code>.rti1516_202X.fedpro.SetRangeBoundsRequest setRangeBoundsRequest = 150;</code>
    */
   hla.rti1516_202X.fedpro.SetRangeBoundsRequestOrBuilder getSetRangeBoundsRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeServiceGroupRequest normalizeServiceGroupRequest = 152;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeServiceGroupRequest normalizeServiceGroupRequest = 151;</code>
    * @return Whether the normalizeServiceGroupRequest field is set.
    */
   boolean hasNormalizeServiceGroupRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeServiceGroupRequest normalizeServiceGroupRequest = 152;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeServiceGroupRequest normalizeServiceGroupRequest = 151;</code>
    * @return The normalizeServiceGroupRequest.
    */
   hla.rti1516_202X.fedpro.NormalizeServiceGroupRequest getNormalizeServiceGroupRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeServiceGroupRequest normalizeServiceGroupRequest = 152;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeServiceGroupRequest normalizeServiceGroupRequest = 151;</code>
    */
   hla.rti1516_202X.fedpro.NormalizeServiceGroupRequestOrBuilder getNormalizeServiceGroupRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeFederateHandleRequest normalizeFederateHandleRequest = 153;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeFederateHandleRequest normalizeFederateHandleRequest = 152;</code>
    * @return Whether the normalizeFederateHandleRequest field is set.
    */
   boolean hasNormalizeFederateHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeFederateHandleRequest normalizeFederateHandleRequest = 153;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeFederateHandleRequest normalizeFederateHandleRequest = 152;</code>
    * @return The normalizeFederateHandleRequest.
    */
   hla.rti1516_202X.fedpro.NormalizeFederateHandleRequest getNormalizeFederateHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeFederateHandleRequest normalizeFederateHandleRequest = 153;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeFederateHandleRequest normalizeFederateHandleRequest = 152;</code>
    */
   hla.rti1516_202X.fedpro.NormalizeFederateHandleRequestOrBuilder getNormalizeFederateHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest normalizeObjectClassHandleRequest = 154;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest normalizeObjectClassHandleRequest = 153;</code>
    * @return Whether the normalizeObjectClassHandleRequest field is set.
    */
   boolean hasNormalizeObjectClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest normalizeObjectClassHandleRequest = 154;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest normalizeObjectClassHandleRequest = 153;</code>
    * @return The normalizeObjectClassHandleRequest.
    */
   hla.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest getNormalizeObjectClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest normalizeObjectClassHandleRequest = 154;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest normalizeObjectClassHandleRequest = 153;</code>
    */
   hla.rti1516_202X.fedpro.NormalizeObjectClassHandleRequestOrBuilder getNormalizeObjectClassHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest normalizeInteractionClassHandleRequest = 155;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest normalizeInteractionClassHandleRequest = 154;</code>
    * @return Whether the normalizeInteractionClassHandleRequest field is set.
    */
   boolean hasNormalizeInteractionClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest normalizeInteractionClassHandleRequest = 155;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest normalizeInteractionClassHandleRequest = 154;</code>
    * @return The normalizeInteractionClassHandleRequest.
    */
   hla.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest getNormalizeInteractionClassHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest normalizeInteractionClassHandleRequest = 155;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest normalizeInteractionClassHandleRequest = 154;</code>
    */
   hla.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequestOrBuilder getNormalizeInteractionClassHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest normalizeObjectInstanceHandleRequest = 156;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest normalizeObjectInstanceHandleRequest = 155;</code>
    * @return Whether the normalizeObjectInstanceHandleRequest field is set.
    */
   boolean hasNormalizeObjectInstanceHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest normalizeObjectInstanceHandleRequest = 156;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest normalizeObjectInstanceHandleRequest = 155;</code>
    * @return The normalizeObjectInstanceHandleRequest.
    */
   hla.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest getNormalizeObjectInstanceHandleRequest();
   /**
-   * <code>.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest normalizeObjectInstanceHandleRequest = 156;</code>
+   * <code>.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest normalizeObjectInstanceHandleRequest = 155;</code>
    */
   hla.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequestOrBuilder getNormalizeObjectInstanceHandleRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.EnableObjectClassRelevanceAdvisorySwitchRequest enableObjectClassRelevanceAdvisorySwitchRequest = 157;</code>
-   * @return Whether the enableObjectClassRelevanceAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest getObjectClassRelevanceAdvisorySwitchRequest = 156;</code>
+   * @return Whether the getObjectClassRelevanceAdvisorySwitchRequest field is set.
    */
-  boolean hasEnableObjectClassRelevanceAdvisorySwitchRequest();
+  boolean hasGetObjectClassRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableObjectClassRelevanceAdvisorySwitchRequest enableObjectClassRelevanceAdvisorySwitchRequest = 157;</code>
-   * @return The enableObjectClassRelevanceAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest getObjectClassRelevanceAdvisorySwitchRequest = 156;</code>
+   * @return The getObjectClassRelevanceAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.EnableObjectClassRelevanceAdvisorySwitchRequest getEnableObjectClassRelevanceAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest getGetObjectClassRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableObjectClassRelevanceAdvisorySwitchRequest enableObjectClassRelevanceAdvisorySwitchRequest = 157;</code>
+   * <code>.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest getObjectClassRelevanceAdvisorySwitchRequest = 156;</code>
    */
-  hla.rti1516_202X.fedpro.EnableObjectClassRelevanceAdvisorySwitchRequestOrBuilder getEnableObjectClassRelevanceAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequestOrBuilder getGetObjectClassRelevanceAdvisorySwitchRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DisableObjectClassRelevanceAdvisorySwitchRequest disableObjectClassRelevanceAdvisorySwitchRequest = 158;</code>
-   * @return Whether the disableObjectClassRelevanceAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest setObjectClassRelevanceAdvisorySwitchRequest = 157;</code>
+   * @return Whether the setObjectClassRelevanceAdvisorySwitchRequest field is set.
    */
-  boolean hasDisableObjectClassRelevanceAdvisorySwitchRequest();
+  boolean hasSetObjectClassRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableObjectClassRelevanceAdvisorySwitchRequest disableObjectClassRelevanceAdvisorySwitchRequest = 158;</code>
-   * @return The disableObjectClassRelevanceAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest setObjectClassRelevanceAdvisorySwitchRequest = 157;</code>
+   * @return The setObjectClassRelevanceAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.DisableObjectClassRelevanceAdvisorySwitchRequest getDisableObjectClassRelevanceAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest getSetObjectClassRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableObjectClassRelevanceAdvisorySwitchRequest disableObjectClassRelevanceAdvisorySwitchRequest = 158;</code>
+   * <code>.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest setObjectClassRelevanceAdvisorySwitchRequest = 157;</code>
    */
-  hla.rti1516_202X.fedpro.DisableObjectClassRelevanceAdvisorySwitchRequestOrBuilder getDisableObjectClassRelevanceAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequestOrBuilder getSetObjectClassRelevanceAdvisorySwitchRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.EnableAttributeRelevanceAdvisorySwitchRequest enableAttributeRelevanceAdvisorySwitchRequest = 159;</code>
-   * @return Whether the enableAttributeRelevanceAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest getAttributeRelevanceAdvisorySwitchRequest = 158;</code>
+   * @return Whether the getAttributeRelevanceAdvisorySwitchRequest field is set.
    */
-  boolean hasEnableAttributeRelevanceAdvisorySwitchRequest();
+  boolean hasGetAttributeRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableAttributeRelevanceAdvisorySwitchRequest enableAttributeRelevanceAdvisorySwitchRequest = 159;</code>
-   * @return The enableAttributeRelevanceAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest getAttributeRelevanceAdvisorySwitchRequest = 158;</code>
+   * @return The getAttributeRelevanceAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.EnableAttributeRelevanceAdvisorySwitchRequest getEnableAttributeRelevanceAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest getGetAttributeRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableAttributeRelevanceAdvisorySwitchRequest enableAttributeRelevanceAdvisorySwitchRequest = 159;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest getAttributeRelevanceAdvisorySwitchRequest = 158;</code>
    */
-  hla.rti1516_202X.fedpro.EnableAttributeRelevanceAdvisorySwitchRequestOrBuilder getEnableAttributeRelevanceAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequestOrBuilder getGetAttributeRelevanceAdvisorySwitchRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DisableAttributeRelevanceAdvisorySwitchRequest disableAttributeRelevanceAdvisorySwitchRequest = 160;</code>
-   * @return Whether the disableAttributeRelevanceAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest setAttributeRelevanceAdvisorySwitchRequest = 159;</code>
+   * @return Whether the setAttributeRelevanceAdvisorySwitchRequest field is set.
    */
-  boolean hasDisableAttributeRelevanceAdvisorySwitchRequest();
+  boolean hasSetAttributeRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableAttributeRelevanceAdvisorySwitchRequest disableAttributeRelevanceAdvisorySwitchRequest = 160;</code>
-   * @return The disableAttributeRelevanceAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest setAttributeRelevanceAdvisorySwitchRequest = 159;</code>
+   * @return The setAttributeRelevanceAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.DisableAttributeRelevanceAdvisorySwitchRequest getDisableAttributeRelevanceAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest getSetAttributeRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableAttributeRelevanceAdvisorySwitchRequest disableAttributeRelevanceAdvisorySwitchRequest = 160;</code>
+   * <code>.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest setAttributeRelevanceAdvisorySwitchRequest = 159;</code>
    */
-  hla.rti1516_202X.fedpro.DisableAttributeRelevanceAdvisorySwitchRequestOrBuilder getDisableAttributeRelevanceAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequestOrBuilder getSetAttributeRelevanceAdvisorySwitchRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.EnableAttributeScopeAdvisorySwitchRequest enableAttributeScopeAdvisorySwitchRequest = 161;</code>
-   * @return Whether the enableAttributeScopeAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest getAttributeScopeAdvisorySwitchRequest = 160;</code>
+   * @return Whether the getAttributeScopeAdvisorySwitchRequest field is set.
    */
-  boolean hasEnableAttributeScopeAdvisorySwitchRequest();
+  boolean hasGetAttributeScopeAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableAttributeScopeAdvisorySwitchRequest enableAttributeScopeAdvisorySwitchRequest = 161;</code>
-   * @return The enableAttributeScopeAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest getAttributeScopeAdvisorySwitchRequest = 160;</code>
+   * @return The getAttributeScopeAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.EnableAttributeScopeAdvisorySwitchRequest getEnableAttributeScopeAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest getGetAttributeScopeAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableAttributeScopeAdvisorySwitchRequest enableAttributeScopeAdvisorySwitchRequest = 161;</code>
+   * <code>.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest getAttributeScopeAdvisorySwitchRequest = 160;</code>
    */
-  hla.rti1516_202X.fedpro.EnableAttributeScopeAdvisorySwitchRequestOrBuilder getEnableAttributeScopeAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequestOrBuilder getGetAttributeScopeAdvisorySwitchRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DisableAttributeScopeAdvisorySwitchRequest disableAttributeScopeAdvisorySwitchRequest = 162;</code>
-   * @return Whether the disableAttributeScopeAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest setAttributeScopeAdvisorySwitchRequest = 161;</code>
+   * @return Whether the setAttributeScopeAdvisorySwitchRequest field is set.
    */
-  boolean hasDisableAttributeScopeAdvisorySwitchRequest();
+  boolean hasSetAttributeScopeAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableAttributeScopeAdvisorySwitchRequest disableAttributeScopeAdvisorySwitchRequest = 162;</code>
-   * @return The disableAttributeScopeAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest setAttributeScopeAdvisorySwitchRequest = 161;</code>
+   * @return The setAttributeScopeAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.DisableAttributeScopeAdvisorySwitchRequest getDisableAttributeScopeAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest getSetAttributeScopeAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableAttributeScopeAdvisorySwitchRequest disableAttributeScopeAdvisorySwitchRequest = 162;</code>
+   * <code>.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest setAttributeScopeAdvisorySwitchRequest = 161;</code>
    */
-  hla.rti1516_202X.fedpro.DisableAttributeScopeAdvisorySwitchRequestOrBuilder getDisableAttributeScopeAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequestOrBuilder getSetAttributeScopeAdvisorySwitchRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.EnableInteractionRelevanceAdvisorySwitchRequest enableInteractionRelevanceAdvisorySwitchRequest = 163;</code>
-   * @return Whether the enableInteractionRelevanceAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest getInteractionRelevanceAdvisorySwitchRequest = 162;</code>
+   * @return Whether the getInteractionRelevanceAdvisorySwitchRequest field is set.
    */
-  boolean hasEnableInteractionRelevanceAdvisorySwitchRequest();
+  boolean hasGetInteractionRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableInteractionRelevanceAdvisorySwitchRequest enableInteractionRelevanceAdvisorySwitchRequest = 163;</code>
-   * @return The enableInteractionRelevanceAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest getInteractionRelevanceAdvisorySwitchRequest = 162;</code>
+   * @return The getInteractionRelevanceAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.EnableInteractionRelevanceAdvisorySwitchRequest getEnableInteractionRelevanceAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest getGetInteractionRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.EnableInteractionRelevanceAdvisorySwitchRequest enableInteractionRelevanceAdvisorySwitchRequest = 163;</code>
+   * <code>.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest getInteractionRelevanceAdvisorySwitchRequest = 162;</code>
    */
-  hla.rti1516_202X.fedpro.EnableInteractionRelevanceAdvisorySwitchRequestOrBuilder getEnableInteractionRelevanceAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequestOrBuilder getGetInteractionRelevanceAdvisorySwitchRequestOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.DisableInteractionRelevanceAdvisorySwitchRequest disableInteractionRelevanceAdvisorySwitchRequest = 164;</code>
-   * @return Whether the disableInteractionRelevanceAdvisorySwitchRequest field is set.
+   * <code>.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest setInteractionRelevanceAdvisorySwitchRequest = 163;</code>
+   * @return Whether the setInteractionRelevanceAdvisorySwitchRequest field is set.
    */
-  boolean hasDisableInteractionRelevanceAdvisorySwitchRequest();
+  boolean hasSetInteractionRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableInteractionRelevanceAdvisorySwitchRequest disableInteractionRelevanceAdvisorySwitchRequest = 164;</code>
-   * @return The disableInteractionRelevanceAdvisorySwitchRequest.
+   * <code>.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest setInteractionRelevanceAdvisorySwitchRequest = 163;</code>
+   * @return The setInteractionRelevanceAdvisorySwitchRequest.
    */
-  hla.rti1516_202X.fedpro.DisableInteractionRelevanceAdvisorySwitchRequest getDisableInteractionRelevanceAdvisorySwitchRequest();
+  hla.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest getSetInteractionRelevanceAdvisorySwitchRequest();
   /**
-   * <code>.rti1516_202X.fedpro.DisableInteractionRelevanceAdvisorySwitchRequest disableInteractionRelevanceAdvisorySwitchRequest = 164;</code>
+   * <code>.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest setInteractionRelevanceAdvisorySwitchRequest = 163;</code>
    */
-  hla.rti1516_202X.fedpro.DisableInteractionRelevanceAdvisorySwitchRequestOrBuilder getDisableInteractionRelevanceAdvisorySwitchRequestOrBuilder();
+  hla.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequestOrBuilder getSetInteractionRelevanceAdvisorySwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchRequest getConveyRegionDesignatorSetsSwitchRequest = 164;</code>
+   * @return Whether the getConveyRegionDesignatorSetsSwitchRequest field is set.
+   */
+  boolean hasGetConveyRegionDesignatorSetsSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchRequest getConveyRegionDesignatorSetsSwitchRequest = 164;</code>
+   * @return The getConveyRegionDesignatorSetsSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchRequest getGetConveyRegionDesignatorSetsSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchRequest getConveyRegionDesignatorSetsSwitchRequest = 164;</code>
+   */
+  hla.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchRequestOrBuilder getGetConveyRegionDesignatorSetsSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequest setConveyRegionDesignatorSetsSwitchRequest = 165;</code>
+   * @return Whether the setConveyRegionDesignatorSetsSwitchRequest field is set.
+   */
+  boolean hasSetConveyRegionDesignatorSetsSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequest setConveyRegionDesignatorSetsSwitchRequest = 165;</code>
+   * @return The setConveyRegionDesignatorSetsSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequest getSetConveyRegionDesignatorSetsSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequest setConveyRegionDesignatorSetsSwitchRequest = 165;</code>
+   */
+  hla.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequestOrBuilder getSetConveyRegionDesignatorSetsSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getAutomaticResignDirectiveRequest = 166;</code>
+   * @return Whether the getAutomaticResignDirectiveRequest field is set.
+   */
+  boolean hasGetAutomaticResignDirectiveRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getAutomaticResignDirectiveRequest = 166;</code>
+   * @return The getAutomaticResignDirectiveRequest.
+   */
+  hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getGetAutomaticResignDirectiveRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest getAutomaticResignDirectiveRequest = 166;</code>
+   */
+  hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequestOrBuilder getGetAutomaticResignDirectiveRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest setAutomaticResignDirectiveRequest = 167;</code>
+   * @return Whether the setAutomaticResignDirectiveRequest field is set.
+   */
+  boolean hasSetAutomaticResignDirectiveRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest setAutomaticResignDirectiveRequest = 167;</code>
+   * @return The setAutomaticResignDirectiveRequest.
+   */
+  hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest getSetAutomaticResignDirectiveRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest setAutomaticResignDirectiveRequest = 167;</code>
+   */
+  hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequestOrBuilder getSetAutomaticResignDirectiveRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetServiceReportingSwitchRequest getServiceReportingSwitchRequest = 168;</code>
+   * @return Whether the getServiceReportingSwitchRequest field is set.
+   */
+  boolean hasGetServiceReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetServiceReportingSwitchRequest getServiceReportingSwitchRequest = 168;</code>
+   * @return The getServiceReportingSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetServiceReportingSwitchRequest getGetServiceReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetServiceReportingSwitchRequest getServiceReportingSwitchRequest = 168;</code>
+   */
+  hla.rti1516_202X.fedpro.GetServiceReportingSwitchRequestOrBuilder getGetServiceReportingSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.SetServiceReportingSwitchRequest setServiceReportingSwitchRequest = 169;</code>
+   * @return Whether the setServiceReportingSwitchRequest field is set.
+   */
+  boolean hasSetServiceReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetServiceReportingSwitchRequest setServiceReportingSwitchRequest = 169;</code>
+   * @return The setServiceReportingSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.SetServiceReportingSwitchRequest getSetServiceReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetServiceReportingSwitchRequest setServiceReportingSwitchRequest = 169;</code>
+   */
+  hla.rti1516_202X.fedpro.SetServiceReportingSwitchRequestOrBuilder getSetServiceReportingSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetExceptionReportingSwitchRequest getExceptionReportingSwitchRequest = 170;</code>
+   * @return Whether the getExceptionReportingSwitchRequest field is set.
+   */
+  boolean hasGetExceptionReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetExceptionReportingSwitchRequest getExceptionReportingSwitchRequest = 170;</code>
+   * @return The getExceptionReportingSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetExceptionReportingSwitchRequest getGetExceptionReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetExceptionReportingSwitchRequest getExceptionReportingSwitchRequest = 170;</code>
+   */
+  hla.rti1516_202X.fedpro.GetExceptionReportingSwitchRequestOrBuilder getGetExceptionReportingSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.SetExceptionReportingSwitchRequest setExceptionReportingSwitchRequest = 171;</code>
+   * @return Whether the setExceptionReportingSwitchRequest field is set.
+   */
+  boolean hasSetExceptionReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetExceptionReportingSwitchRequest setExceptionReportingSwitchRequest = 171;</code>
+   * @return The setExceptionReportingSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.SetExceptionReportingSwitchRequest getSetExceptionReportingSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetExceptionReportingSwitchRequest setExceptionReportingSwitchRequest = 171;</code>
+   */
+  hla.rti1516_202X.fedpro.SetExceptionReportingSwitchRequestOrBuilder getSetExceptionReportingSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchRequest getSendServiceReportsToFileSwitchRequest = 172;</code>
+   * @return Whether the getSendServiceReportsToFileSwitchRequest field is set.
+   */
+  boolean hasGetSendServiceReportsToFileSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchRequest getSendServiceReportsToFileSwitchRequest = 172;</code>
+   * @return The getSendServiceReportsToFileSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchRequest getGetSendServiceReportsToFileSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchRequest getSendServiceReportsToFileSwitchRequest = 172;</code>
+   */
+  hla.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchRequestOrBuilder getGetSendServiceReportsToFileSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequest setSendServiceReportsToFileSwitchRequest = 173;</code>
+   * @return Whether the setSendServiceReportsToFileSwitchRequest field is set.
+   */
+  boolean hasSetSendServiceReportsToFileSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequest setSendServiceReportsToFileSwitchRequest = 173;</code>
+   * @return The setSendServiceReportsToFileSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequest getSetSendServiceReportsToFileSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequest setSendServiceReportsToFileSwitchRequest = 173;</code>
+   */
+  hla.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequestOrBuilder getSetSendServiceReportsToFileSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetAutoProvideSwitchRequest getAutoProvideSwitchRequest = 174;</code>
+   * @return Whether the getAutoProvideSwitchRequest field is set.
+   */
+  boolean hasGetAutoProvideSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAutoProvideSwitchRequest getAutoProvideSwitchRequest = 174;</code>
+   * @return The getAutoProvideSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetAutoProvideSwitchRequest getGetAutoProvideSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAutoProvideSwitchRequest getAutoProvideSwitchRequest = 174;</code>
+   */
+  hla.rti1516_202X.fedpro.GetAutoProvideSwitchRequestOrBuilder getGetAutoProvideSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchRequest getDelaySubscriptionEvaluationSwitchRequest = 175;</code>
+   * @return Whether the getDelaySubscriptionEvaluationSwitchRequest field is set.
+   */
+  boolean hasGetDelaySubscriptionEvaluationSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchRequest getDelaySubscriptionEvaluationSwitchRequest = 175;</code>
+   * @return The getDelaySubscriptionEvaluationSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchRequest getGetDelaySubscriptionEvaluationSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchRequest getDelaySubscriptionEvaluationSwitchRequest = 175;</code>
+   */
+  hla.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchRequestOrBuilder getGetDelaySubscriptionEvaluationSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchRequest getAdvisoriesUseKnownClassSwitchRequest = 176;</code>
+   * @return Whether the getAdvisoriesUseKnownClassSwitchRequest field is set.
+   */
+  boolean hasGetAdvisoriesUseKnownClassSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchRequest getAdvisoriesUseKnownClassSwitchRequest = 176;</code>
+   * @return The getAdvisoriesUseKnownClassSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchRequest getGetAdvisoriesUseKnownClassSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchRequest getAdvisoriesUseKnownClassSwitchRequest = 176;</code>
+   */
+  hla.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchRequestOrBuilder getGetAdvisoriesUseKnownClassSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchRequest getAllowRelaxedDDMSwitchRequest = 177;</code>
+   * @return Whether the getAllowRelaxedDDMSwitchRequest field is set.
+   */
+  boolean hasGetAllowRelaxedDDMSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchRequest getAllowRelaxedDDMSwitchRequest = 177;</code>
+   * @return The getAllowRelaxedDDMSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchRequest getGetAllowRelaxedDDMSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchRequest getAllowRelaxedDDMSwitchRequest = 177;</code>
+   */
+  hla.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchRequestOrBuilder getGetAllowRelaxedDDMSwitchRequestOrBuilder();
+
+  /**
+   * <code>.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchRequest getNonRegulatedGrantSwitchRequest = 178;</code>
+   * @return Whether the getNonRegulatedGrantSwitchRequest field is set.
+   */
+  boolean hasGetNonRegulatedGrantSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchRequest getNonRegulatedGrantSwitchRequest = 178;</code>
+   * @return The getNonRegulatedGrantSwitchRequest.
+   */
+  hla.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchRequest getGetNonRegulatedGrantSwitchRequest();
+  /**
+   * <code>.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchRequest getNonRegulatedGrantSwitchRequest = 178;</code>
+   */
+  hla.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchRequestOrBuilder getGetNonRegulatedGrantSwitchRequestOrBuilder();
 
   public hla.rti1516_202X.fedpro.CallRequest.CallRequestCase getCallRequestCase();
 }

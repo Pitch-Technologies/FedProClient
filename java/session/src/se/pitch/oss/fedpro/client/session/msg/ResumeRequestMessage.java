@@ -20,6 +20,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 public class ResumeRequestMessage implements EncodableMessage {
 
    public final int lastReceivedRtiSequenceNumber; //LRR, unsigned int
@@ -34,7 +36,7 @@ public class ResumeRequestMessage implements EncodableMessage {
    @Override
    public byte[] encode()
    {
-      return ByteBuffer.allocate(8)
+      return ByteBuffer.allocate(INT32_SIZE * 2)
             .putInt(lastReceivedRtiSequenceNumber)
             .putInt(oldestAvailableFederateSequenceNumber)
             .array();
@@ -43,7 +45,7 @@ public class ResumeRequestMessage implements EncodableMessage {
    public static ResumeRequestMessage decode(InputStream inputStream)
    throws IOException
    {
-      ByteBuffer buffer = ByteReader.wrap(inputStream, 8);
+      ByteBuffer buffer = ByteReader.wrap(inputStream, INT32_SIZE * 2);
       int lastReceivedRtiSequenceNumber = buffer.getInt();
       int oldestAvailableFederateSequenceNumber = buffer.getInt();
 

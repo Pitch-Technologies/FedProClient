@@ -17,10 +17,9 @@
 package se.pitch.oss.fedpro.common;
 
 public enum TlsMode {
-
-   ENCRYPTED,
-   SERVER_AUTH,
-   CLIENT_SERVER_AUTH;  // This mode is optional to support
+   ENCRYPTED,  // When connection should only be encrypted, and certificates not verified.
+   SERVER_AUTH, // Standard mode, fully TLS 1.3. Encrypted and certificates validated.
+   CLIENT_SERVER_AUTH;  // This mode is optional to support (also not in standard at 2024.01.24?)
 
    public static final TlsMode DEFAULT = SERVER_AUTH;
 }

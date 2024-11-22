@@ -33,6 +33,7 @@ import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+@SuppressWarnings("rawtypes")
 public class RTIambassadorClientAdapter implements RTIambassador {
 
    private final RTIambassadorClient _rtiAmbassadorClient;
@@ -112,6 +113,9 @@ public class RTIambassadorClientAdapter implements RTIambassador {
    {
       try {
          FomModuleSet fomModuleSet = getFomModuleSet(fomModules);
+         if (mimModule == null) {
+            throw new CouldNotOpenMIM("Provided MIM module cannot be null.");
+         }
          _rtiAmbassadorClient.createFederationExecutionWithMIM(
                federationExecutionName, fomModuleSet, getFomModule(mimModule), logicalTimeImplementationName);
       } catch (RTIexception e) {
@@ -158,6 +162,7 @@ public class RTIambassadorClientAdapter implements RTIambassador {
    }
 
    private FomModuleSet getFomModuleSet(URL[] fomModules)
+   throws CouldNotOpenFDD
    {
       FomModuleSet result = new FomModuleSet();
       for (URL fomModule : fomModules) {
@@ -167,18 +172,21 @@ public class RTIambassadorClientAdapter implements RTIambassador {
    }
 
    private FomModule getFomModule(URL fomModule)
+   throws CouldNotOpenFDD
    {
+      if (fomModule == null) {
+         throw new CouldNotOpenFDD("Provided FOM/MIM module cannot be null.");
+      }
       FomModule module = new FomModule();
       if ("file".equalsIgnoreCase(fomModule.getProtocol())) {
          try {
             File file = new File(fomModule.toURI());
             if (file.length() > 1024) {
                module.setCompressedModule(zip(file));
-               return module;
             } else {
                module.setFileNameAndContent(file.getName(), Files.readAllBytes(file.toPath()));
-               return module;
             }
+            return module;
          } catch (IllegalArgumentException | URISyntaxException | IOException ignore) {
             // fallback to url
          }
@@ -218,6 +226,9 @@ public class RTIambassadorClientAdapter implements RTIambassador {
    {
       try {
          FomModuleSet fomModuleSet = getFomModuleSet(fomModules);
+         if (mimModule == null) {
+            throw new CouldNotOpenMIM("Provided MIM module cannot be null.");
+         }
          _rtiAmbassadorClient.createFederationExecutionWithMIM(
                federationExecutionName,
                fomModuleSet,
@@ -285,7 +296,6 @@ public class RTIambassadorClientAdapter implements RTIambassador {
       } catch (RTIexception e) {
          // HLA 4 exception Unauthorized is converted to Evolved ConnectionFailed.
          // This is fine for the connect call but not here, so we convert to RTIinternalError.
-         //noinspection ConstantValue
          if (e instanceof ConnectionFailed) {
             throw new RTIinternalError(e.getMessage());
          } else {
@@ -1443,11 +1453,11 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      checkIntervalType(theLookahead);
+      throwIfInvalidLookahead(theLookahead);
       _rtiAmbassadorClient.enableTimeRegulation(theLookahead);
    }
 
-   private void checkIntervalType(LogicalTimeInterval theLookahead)
+   private void throwIfInvalidLookahead(LogicalTimeInterval theLookahead)
    throws
          InvalidLookahead
    {
@@ -1465,7 +1475,7 @@ public class RTIambassadorClientAdapter implements RTIambassador {
       }
    }
 
-   private void checkTimeType(LogicalTime theTime)
+   private void throwIfInvalidLogicalTime(LogicalTime theTime)
    throws
          InvalidLogicalTime
    {
@@ -1533,7 +1543,7 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(theTime);
+      throwIfInvalidLogicalTime(theTime);
       _rtiAmbassadorClient.timeAdvanceRequest(theTime);
    }
 
@@ -1550,7 +1560,7 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(theTime);
+      throwIfInvalidLogicalTime(theTime);
       _rtiAmbassadorClient.timeAdvanceRequestAvailable(theTime);
    }
 
@@ -1567,7 +1577,7 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(theTime);
+      throwIfInvalidLogicalTime(theTime);
       _rtiAmbassadorClient.nextMessageRequest(theTime);
    }
 
@@ -1584,7 +1594,7 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(theTime);
+      throwIfInvalidLogicalTime(theTime);
       _rtiAmbassadorClient.nextMessageRequestAvailable(theTime);
    }
 
@@ -1601,7 +1611,7 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(theTime);
+      throwIfInvalidLogicalTime(theTime);
       _rtiAmbassadorClient.flushQueueRequest(theTime);
    }
 
@@ -2556,7 +2566,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.enableObjectClassRelevanceAdvisorySwitch();
+      if (_rtiAmbassadorClient.getObjectClassRelevanceAdvisorySwitch()) {
+         throw new ObjectClassRelevanceAdvisorySwitchIsOn("Switch is already on");
+      }
+      _rtiAmbassadorClient.setObjectClassRelevanceAdvisorySwitch(true);
    }
 
    public void disableObjectClassRelevanceAdvisorySwitch()
@@ -2568,7 +2581,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.disableObjectClassRelevanceAdvisorySwitch();
+      if (!_rtiAmbassadorClient.getObjectClassRelevanceAdvisorySwitch()) {
+         throw new ObjectClassRelevanceAdvisorySwitchIsOff("Switch is already off");
+      }
+      _rtiAmbassadorClient.setObjectClassRelevanceAdvisorySwitch(false);
    }
 
    public void enableAttributeRelevanceAdvisorySwitch()
@@ -2580,7 +2596,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.enableAttributeRelevanceAdvisorySwitch();
+      if (_rtiAmbassadorClient.getAttributeRelevanceAdvisorySwitch()) {
+         throw new AttributeRelevanceAdvisorySwitchIsOn("Switch is already on");
+      }
+      _rtiAmbassadorClient.setAttributeRelevanceAdvisorySwitch(true);
    }
 
    public void disableAttributeRelevanceAdvisorySwitch()
@@ -2592,7 +2611,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.disableAttributeRelevanceAdvisorySwitch();
+      if (!_rtiAmbassadorClient.getAttributeRelevanceAdvisorySwitch()) {
+         throw new AttributeRelevanceAdvisorySwitchIsOff("Switch is already off");
+      }
+      _rtiAmbassadorClient.setAttributeRelevanceAdvisorySwitch(false);
    }
 
    public void enableAttributeScopeAdvisorySwitch()
@@ -2604,7 +2626,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.enableAttributeScopeAdvisorySwitch();
+      if (_rtiAmbassadorClient.getAttributeScopeAdvisorySwitch()) {
+         throw new AttributeScopeAdvisorySwitchIsOn("Switch is already on");
+      }
+      _rtiAmbassadorClient.setAttributeScopeAdvisorySwitch(true);
    }
 
    public void disableAttributeScopeAdvisorySwitch()
@@ -2616,7 +2641,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.disableAttributeScopeAdvisorySwitch();
+      if (!_rtiAmbassadorClient.getAttributeScopeAdvisorySwitch()) {
+         throw new AttributeScopeAdvisorySwitchIsOff("Switch is already off");
+      }
+      _rtiAmbassadorClient.setAttributeScopeAdvisorySwitch(false);
    }
 
    public void enableInteractionRelevanceAdvisorySwitch()
@@ -2628,7 +2656,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.enableInteractionRelevanceAdvisorySwitch();
+      if (_rtiAmbassadorClient.getInteractionRelevanceAdvisorySwitch()) {
+         throw new InteractionRelevanceAdvisorySwitchIsOn("Switch is already on");
+      }
+      _rtiAmbassadorClient.setInteractionRelevanceAdvisorySwitch(true);
    }
 
    public void disableInteractionRelevanceAdvisorySwitch()
@@ -2640,7 +2671,10 @@ public class RTIambassadorClientAdapter implements RTIambassador {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.disableInteractionRelevanceAdvisorySwitch();
+      if (!_rtiAmbassadorClient.getInteractionRelevanceAdvisorySwitch()) {
+         throw new InteractionRelevanceAdvisorySwitchIsOff("Switch is already off");
+      }
+      _rtiAmbassadorClient.setInteractionRelevanceAdvisorySwitch(false);
    }
 
    public boolean evokeCallback(double approximateMinimumTimeInSeconds)

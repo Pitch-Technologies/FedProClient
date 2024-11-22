@@ -24,15 +24,15 @@ import hla.rti1516_202X.auth.Credentials;
 import hla.rti1516_202X.exceptions.*;
 import hla.rti1516_202X.fedpro.*;
 import net.jcip.annotations.GuardedBy;
-import se.pitch.oss.fedpro.client_abstract.ConnectSettings;
-import se.pitch.oss.fedpro.client_abstract.RTIambassadorClientGenericBase;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProConnectionFailed;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProFederateInternalError;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProNotConnected;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProRtiInternalError;
+import se.pitch.oss.fedpro.client_common.RTIambassadorClientGenericBase;
+import se.pitch.oss.fedpro.client_common.exceptions.*;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
+
+import static se.pitch.oss.fedpro.client.Settings.*;
 
 public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase {
    protected final ClientConverter _clientConverter;
@@ -172,15 +172,30 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
    protected CompletableFuture<CallResponse> doAsyncHlaCall(CallRequest callRequest)
    {
       try {
-         return doAsyncHlaCallBase(callRequest);
+         CompletableFuture<byte[]> futureResponse = doAsyncHlaCallBase(callRequest);
+
+         // TODO Make sure the returned future, if completed exceptionally, always has an RTIexception
+         //  as the cause for the CompletionException. May use handle() or exceptionally().
+         return futureResponse.thenApply(encodedResponse -> {
+            try {
+               // This throws the appropriate RTIexception. This is caught below
+               // and passed on as a CompletionException. This completionException
+               // is thrown by get/join. The sync variants catch this completionException,
+               // extracts the cause and rethrows that.
+               return decodeHlaCallResponse(encodedResponse);
+            } catch (IOException | FedProRtiException e) {
+               // Will this result in nested CompletionExceptions, or not?
+               throw new CompletionException(e);
+            }
+         });
       } catch (FedProNotConnected e) {
          return CompletableFuture.failedFuture(new NotConnected(e.getMessage()));
       }
    }
 
-   public hla.rti1516_202X.ConfigurationResult connect(
+   public ConfigurationResult connect(
          FederateAmbassador federateReference,
-         hla.rti1516_202X.CallbackModel callbackModel)
+         CallbackModel callbackModel)
    throws
          ConnectionFailed,
          UnsupportedCallbackModel,
@@ -193,15 +208,10 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
 
          throwIfAlreadyConnected();
 
-         ConnectSettings connectSettings;
          try {
-            connectSettings = ConnectSettings.parse();
-         } catch (FedProConnectionFailed e) {
+            _persistentSession = createPersistentSession();
+         } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
-         }
-
-         try {
-            _persistentSession = createPersistentSession(connectSettings);
          } catch (FedProRtiInternalError e) {
             throw new RTIinternalError(e.getMessage());
          }
@@ -213,10 +223,10 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
       }
    }
 
-   public hla.rti1516_202X.ConfigurationResult connect(
+   public ConfigurationResult connect(
          FederateAmbassador federateReference,
-         hla.rti1516_202X.CallbackModel callbackModel,
-         hla.rti1516_202X.RtiConfiguration rtiConfiguration)
+         CallbackModel callbackModel,
+         RtiConfiguration rtiConfiguration)
    throws
          ConnectionFailed,
          UnsupportedCallbackModel,
@@ -229,20 +239,15 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
 
          throwIfAlreadyConnected();
 
-         ConnectSettings connectSettings;
-         RtiConfiguration parsedRtiConfiguration;
-         try {
-            String[] splitConfiguration = rtiConfiguration.rtiAddress().split(";", 3);
-            connectSettings = ConnectSettings.parse(
-                  parseFederateProtocolAddress(splitConfiguration),
-                  parseFederateProtocolAdditionalSettings(splitConfiguration));
-            parsedRtiConfiguration = parseRtiConfiguration(rtiConfiguration);
-         } catch (FedProConnectionFailed e) {
-            throw new ConnectionFailed(e.getMessage());
-         }
+         ArrayList<String> inputValueList = splitFederateConnectSettings(rtiConfiguration.additionalSettings());
+         addServerAddressToList(inputValueList, rtiConfiguration);
+         final String clientSettings = extractAndRemoveClientSettings(inputValueList, false);
+         final RtiConfiguration parsedRtiConfiguration = parseRtiConfiguration(rtiConfiguration, inputValueList);
 
          try {
-            _persistentSession = createPersistentSession(connectSettings);
+            _persistentSession = createPersistentSession(clientSettings);
+         } catch (InvalidSetting e) {
+            throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
             throw new RTIinternalError(e.getMessage());
          }
@@ -257,10 +262,10 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
       }
    }
 
-   public hla.rti1516_202X.ConfigurationResult connect(
+   public ConfigurationResult connect(
          FederateAmbassador federateReference,
-         hla.rti1516_202X.CallbackModel callbackModel,
-         hla.rti1516_202X.auth.Credentials credentials)
+         CallbackModel callbackModel,
+         Credentials credentials)
    throws
          Unauthorized,
          InvalidCredentials,
@@ -278,15 +283,10 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          }
          throwIfAlreadyConnected();
 
-         ConnectSettings connectSettings;
          try {
-            connectSettings = ConnectSettings.parse();
-         } catch (FedProConnectionFailed e) {
+            _persistentSession = createPersistentSession();
+         } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
-         }
-
-         try {
-            _persistentSession = createPersistentSession(connectSettings);
          } catch (FedProRtiInternalError e) {
             throw new RTIinternalError(e.getMessage());
          }
@@ -322,20 +322,15 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          }
          throwIfAlreadyConnected();
 
-         ConnectSettings connectSettings;
-         RtiConfiguration parsedRtiConfiguration;
-         try {
-            String[] splitConfiguration = rtiConfiguration.rtiAddress().split(";", 3);
-            connectSettings = ConnectSettings.parse(
-                  parseFederateProtocolAddress(splitConfiguration),
-                  parseFederateProtocolAdditionalSettings(splitConfiguration));
-            parsedRtiConfiguration = parseRtiConfiguration(rtiConfiguration);
-         } catch (FedProConnectionFailed e) {
-            throw new ConnectionFailed(e.getMessage());
-         }
+         ArrayList<String> inputValueList = splitFederateConnectSettings(rtiConfiguration.additionalSettings());
+         addServerAddressToList(inputValueList, rtiConfiguration);
+         final String clientSettings = extractAndRemoveClientSettings(inputValueList, false);
+         final RtiConfiguration parsedRtiConfiguration = parseRtiConfiguration(rtiConfiguration, inputValueList);
 
          try {
-            _persistentSession = createPersistentSession(connectSettings);
+            _persistentSession = createPersistentSession(clientSettings);
+         } catch (InvalidSetting e) {
+            throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
             throw new RTIinternalError(e.getMessage());
          }
@@ -355,7 +350,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
    @GuardedBy("_connectionStateLock")
    private CallResponse doConnect(
          FederateAmbassador federateReference,
-         hla.rti1516_202X.CallbackModel callbackModel,
+         CallbackModel callbackModel,
          CallRequest.Builder callRequest)
    throws ConnectionFailed, RTIinternalError
    {
@@ -365,7 +360,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter);
          // Todo - I don't see how we need throwOnException() here? remove?
          throwOnException(callResponse);
-         if (callbackModel == hla.rti1516_202X.CallbackModel.HLA_IMMEDIATE) {
+         if (callbackModel == CallbackModel.HLA_IMMEDIATE) {
             startCallbackThread();
          }
          return callResponse;
@@ -379,49 +374,6 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
 
    }
 
-   private String parseFederateProtocolAddress(String[] splitConfiguration)
-   {
-      if (splitConfiguration[0].isEmpty()) {
-         return "localhost";
-      }
-      return splitConfiguration[0];
-   }
-
-   private String parseFederateProtocolAdditionalSettings(String[] splitConfiguration)
-   {
-      if (splitConfiguration.length < 2) {
-         return "";
-      }
-      return splitConfiguration[1];
-   }
-
-   /**
-    * parseRtiConfiguration extracts rtiAddress from rtiAddress field of rtiConfiguration
-    * and constructs a new RtiConfiguration to pass to server.
-    */
-   private RtiConfiguration parseRtiConfiguration(RtiConfiguration rtiConfiguration)
-   throws FedProConnectionFailed
-   {
-      if (rtiConfiguration.rtiAddress().isEmpty()) {
-         return rtiConfiguration;
-      }
-      String[] splitConfiguration = rtiConfiguration.rtiAddress().split(";", 4);
-      if (splitConfiguration.length > 3) {
-         throw new FedProConnectionFailed("Configuration address contains too many ';', should at most contain 2.");
-      }
-
-      String rtiAddress = "";
-
-      if (splitConfiguration.length == 3) {
-         rtiAddress = splitConfiguration[2];
-      }
-
-      return RtiConfiguration.createConfiguration()
-            .withRtiAddress(rtiAddress)
-            .withConfigurationName(rtiConfiguration.configurationName())
-            .withAdditionalSettings(rtiConfiguration.additionalSettings());
-   }
-
    public void disconnect()
    throws FederateIsExecutionMember, CallNotAllowedFromWithinCallback, RTIinternalError
    {
@@ -433,6 +385,30 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          // TODO: What happens in the standard API when we call disconnect before the RTIambassador is connected?
          throw new RTIinternalError("" + e, e);
       }
+   }
+
+   private static void addServerAddressToList(
+         ArrayList<String> inputValueList,
+         RtiConfiguration rtiConfiguration)
+   {
+      String[] hostAndPort = rtiConfiguration.rtiAddress().split(":", 2);
+      if (!hostAndPort[0].isEmpty()) {
+         inputValueList.add(SETTING_PREFIX + SETTING_NAME_CONNECTION_HOST + "=" + hostAndPort[0]);
+      }
+      if (hostAndPort.length > 1 && !hostAndPort[1].isEmpty()) {
+         inputValueList.add(SETTING_PREFIX + SETTING_NAME_CONNECTION_PORT + "=" + hostAndPort[1]);
+      }
+   }
+
+   public static RtiConfiguration parseRtiConfiguration(
+         RtiConfiguration rtiConfiguration,
+         ArrayList<String> inputValueList)
+   {
+      // No need to set the rtiAddress since an LRC may specify the CRC address through the additional settings field
+      // of the RtiConfiguration object, which is done in this method.
+      return RtiConfiguration.createConfiguration()
+            .withConfigurationName(rtiConfiguration.configurationName())
+            .withAdditionalSettings(String.join("\n", inputValueList));
    }
 
 }

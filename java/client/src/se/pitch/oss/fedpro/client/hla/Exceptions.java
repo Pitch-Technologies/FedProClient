@@ -18,7 +18,7 @@ package se.pitch.oss.fedpro.client.hla;
 
 import hla.rti1516_202X.exceptions.RTIexception;
 import hla.rti1516_202X.exceptions.RTIinternalError;
-import se.pitch.oss.fedpro.client_abstract.exceptions.FedProRtiInternalError;
+import se.pitch.oss.fedpro.client_common.exceptions.FedProRtiInternalError;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -45,10 +45,6 @@ public class Exceptions {
          "AttributeNotDefined",
          "AttributeNotOwned",
          "AttributeNotPublished",
-         "AttributeRelevanceAdvisorySwitchIsOff",
-         "AttributeRelevanceAdvisorySwitchIsOn",
-         "AttributeScopeAdvisorySwitchIsOff",
-         "AttributeScopeAdvisorySwitchIsOn",
          "CallNotAllowedFromWithinCallback",
          "ConnectionFailed",
          "CouldNotCreateLogicalTimeFactory",
@@ -80,8 +76,6 @@ public class Exceptions {
          "InteractionClassNotDefined",
          "InteractionClassNotPublished",
          "InteractionParameterNotDefined",
-         "InteractionRelevanceAdvisorySwitchIsOff",
-         "InteractionRelevanceAdvisorySwitchIsOn",
          "InTimeAdvancingState",
          "InvalidAttributeHandle",
          "InvalidCredentials",
@@ -115,8 +109,6 @@ public class Exceptions {
          "NotConnected",
          "ObjectClassNotDefined",
          "ObjectClassNotPublished",
-         "ObjectClassRelevanceAdvisorySwitchIsOff",
-         "ObjectClassRelevanceAdvisorySwitchIsOn",
          "ObjectInstanceNameInUse",
          "ObjectInstanceNameNotReserved",
          "ObjectInstanceNotKnown",
@@ -124,6 +116,7 @@ public class Exceptions {
          "RegionDoesNotContainSpecifiedDimension",
          "RegionInUseForUpdateOrSubscription",
          "RegionNotCreatedByThisFederate",
+         "ReportServiceInvocationsAreSubscribed",
          "RequestForTimeConstrainedPending",
          "RequestForTimeRegulationPending",
          "RestoreInProgress",

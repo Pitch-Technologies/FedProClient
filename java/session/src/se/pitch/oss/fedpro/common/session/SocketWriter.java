@@ -32,7 +32,7 @@ public class SocketWriter {
 
    private static final Logger LOGGER = Logger.getLogger(SocketWriter.class.getName());
 
-   private long _sessionId;
+   private String _sessionIdString;
    private final String _clientOrServer;
    private final Listener _listener;
    private final HistoryBuffer _historyBuffer;
@@ -43,7 +43,7 @@ public class SocketWriter {
    private boolean _run = false;
 
    public interface Listener {
-      void exceptionOnWrite(String message);
+      void exceptionOnWrite(Exception e);
 
       void messageSent();
    }
@@ -62,15 +62,15 @@ public class SocketWriter {
          BufferReader<QueueableMessage> messageQueue,
          FedProSocket socket,
          boolean isClient,
-         int initialSequenceNumber)
+         int expectedNextSequenceNumber)
    {
       return new SocketWriter(
             sessionId,
             listener,
-            new HistoryBuffer(messageQueue, initialSequenceNumber),
+            new HistoryBuffer(messageQueue, expectedNextSequenceNumber),
             socket,
             isClient,
-            new SequenceNumber(initialSequenceNumber));
+            new SequenceNumber(expectedNextSequenceNumber));
    }
 
    private SocketWriter(
@@ -79,14 +79,14 @@ public class SocketWriter {
          HistoryBuffer historyBuffer,
          FedProSocket socket,
          boolean isClient,
-         SequenceNumber initialSequenceNumber)
+         SequenceNumber expectedNextSequenceNumber)
    {
-      _sessionId = sessionId;
+      _sessionIdString = LogUtil.formatSessionId(sessionId);
       _listener = listener;
       _historyBuffer = historyBuffer;
       _socket = socket;
-      _clientOrServer = isClient ? "Client" : "Server";
-      _expectedNextSequenceNumber = initialSequenceNumber;
+      _clientOrServer = isClient ? LogUtil.CLIENT_PREFIX : LogUtil.SERVER_PREFIX;
+      _expectedNextSequenceNumber = expectedNextSequenceNumber;
    }
 
    public boolean isDirectOnly()
@@ -130,16 +130,13 @@ public class SocketWriter {
          if (Thread.interrupted()) {
             throw new InterruptedException();
          } else {
-            _listener.exceptionOnWrite(e.toString());
+            _listener.exceptionOnWrite(e);
             _run = false;
             return;
          }
       }
 
       if (_expectedNextSequenceNumber.get() != message.sequenceNumber) {
-         assert _lastSequenceNumber != SequenceNumber.NO_SEQUENCE_NUMBER :
-               "Session layer set SocketWriter to start at sequence number" + _expectedNextSequenceNumber +
-                     ", but then sent message with number " + message.sequenceNumber;
          LOGGER.fine(() -> String.format(
                "%s: Use of non-sequential sequence number in outgoing message: %d after previous sequence number %s",
                logPrefix(),
@@ -166,7 +163,6 @@ public class SocketWriter {
    public void writeDirectMessage(EncodedMessage message)
    throws IOException
    {
-      assert isDirectOnly();
       writeMessage(message);
    }
 
@@ -177,17 +173,24 @@ public class SocketWriter {
       return _historyBuffer.waitUntilEmpty(timeoutMillis);
    }
 
-   public void rewindToSequenceNumber(SequenceNumber sequenceNumber)
+   public void rewindToFirstMessage()
    {
       assert !isDirectOnly();
-      if (sequenceNumber.get() == _expectedNextSequenceNumber.get()) {
-         // This method will be called even in the case where we don't need to rewind, because no messaged were lost.
-         // I.e.: The calling method wants to set the buffer to send message number N next, but N is not in the buffer
-         // because it hasn't been written to it yet.
-         return;
+      _historyBuffer.rewindToFirst();
+      if (!_historyBuffer.isEmpty()) {
+         _expectedNextSequenceNumber.set(_historyBuffer.peek().sequenceNumber);
       }
+   }
+
+   public void rewindToSequenceNumberAfter(SequenceNumber sequenceNumber)
+   {
+      assert !isDirectOnly();
       _historyBuffer.rewindTo(sequenceNumber);
-      _expectedNextSequenceNumber.set(sequenceNumber);
+      // Consume one message to end up on the message after the given sequence number.
+      _historyBuffer.poll();
+      if (!_historyBuffer.isEmpty()) {
+         _expectedNextSequenceNumber.set(_historyBuffer.peek().sequenceNumber);
+      }
    }
 
    public void setNewSocket(FedProSocket socket)
@@ -228,11 +231,11 @@ public class SocketWriter {
 
    public void setSessionId(long sessionId)
    {
-      _sessionId = sessionId;
+      _sessionIdString = LogUtil.formatSessionId(sessionId);
    }
 
    private String logPrefix()
    {
-      return LogUtil.logPrefix(_sessionId, _clientOrServer);
+      return LogUtil.logPrefix(_sessionIdString, _clientOrServer);
    }
 }

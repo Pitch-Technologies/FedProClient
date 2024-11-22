@@ -20,28 +20,31 @@ import se.pitch.oss.fedpro.common.session.buffers.GenericBuffer;
 import se.pitch.oss.fedpro.common.exceptions.MessageQueueFull;
 import se.pitch.oss.fedpro.client.session.msg.EncodableMessage;
 import se.pitch.oss.fedpro.client.session.msg.QueueableMessage;
-import net.jcip.annotations.GuardedBy;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
+// Not thread-safe
 public abstract class MessageWriter {
 
    private long _sessionId;
 
-   private final Object _sessionLock;
-
-   @GuardedBy("_sessionLock")
    private final GenericBuffer<QueueableMessage> _messageQueue;
 
+   /**
+    * Constructs a MessageWriter object with the specified session ID and message queue.
+    * The MessageWriter object is not thread-safe in itself. To achieve thread-safety,
+    * make sure that the passed message queue is thread-safe.
+    *
+    * @param sessionId    The session ID associated with the MessageWriter.
+    * @param messageQueue The message queue to be used by the MessageWriter.
+    */
    public MessageWriter(
          long sessionId,
-         GenericBuffer<QueueableMessage> messageQueue,
-         Object sessionLock)
+         GenericBuffer<QueueableMessage> messageQueue)
    {
       _messageQueue = messageQueue;
       _sessionId = sessionId;
-      _sessionLock = sessionLock;
    }
 
    protected void addMessage(
@@ -59,7 +62,8 @@ public abstract class MessageWriter {
          EncodableMessage message)
    throws InterruptedException
    {
-      CompletableFuture<byte[]> result = addRequest(payloadSize, lastReceivedSequenceNumber, messageType, message, null, false);
+      CompletableFuture<byte[]> result =
+            addRequest(payloadSize, lastReceivedSequenceNumber, messageType, message, null, false);
       if (result.isCompletedExceptionally()) {
          throw new InterruptedException();
       }
@@ -91,25 +95,23 @@ public abstract class MessageWriter {
          Map<Integer, CompletableFuture<byte[]>> futuresMap,
          boolean useFuturesMap)
    {
-      synchronized (_sessionLock) {
-         CompletableFuture<byte[]> result = new CompletableFuture<>();
-         QueueableMessage queueableMessage = new QueueableMessage(
-               payloadSize,
-               lastReceivedSequenceNumber,
-               _sessionId,
-               messageType,
-               message,
-               result,
-               useFuturesMap ? futuresMap : null);
-         // With a rate-limiting strategy that always blocks on full queue, this insert should always succeed.
-         // There is a theoretical exception when the writing thread gets interrupted while waiting to insert.
-         // (See UnboundedBuffer.insert())
-         boolean successfulInsert = _messageQueue.insert(queueableMessage);
-         if (!successfulInsert) {
-            result.completeExceptionally(new MessageQueueFull("The message queue is full."));
-         }
-         return result;
+      CompletableFuture<byte[]> result = new CompletableFuture<>();
+      QueueableMessage queueableMessage = new QueueableMessage(
+            payloadSize,
+            lastReceivedSequenceNumber,
+            _sessionId,
+            messageType,
+            message,
+            result,
+            useFuturesMap ? futuresMap : null);
+      // With a rate-limiting strategy that always blocks on full queue, this insert should always succeed.
+      // There is a theoretical exception when the writing thread gets interrupted while waiting to insert.
+      // (See UnboundedBuffer.insert())
+      boolean successfulInsert = _messageQueue.insert(queueableMessage);
+      if (!successfulInsert) {
+         result.completeExceptionally(new MessageQueueFull("The message queue is full."));
       }
+      return result;
    }
 
    public void setSessionId(long sessionId)

@@ -16,29 +16,35 @@
 
 package se.pitch.oss.fedpro.client;
 
+/**
+ * Interface for defining reconnection strategies.
+ */
 public interface ResumeStrategy {
 
    /**
-    * Specifies whether a new reconnection attempt should be made, after the specified time has passed since disconnect.
+    * Specifies whether a new reconnection attempt should be made, after the specified
+    * time has passed since disconnect.
     *
-    * @param timeSinceDisconnectMillis The time since the disconnect happened, in milliseconds
+    * @param timeSinceDisconnectMillis The time since the disconnect happened, in
+    *                                  milliseconds.
     * @return true if another reconnect attempt should be made, false otherwise.
     */
    boolean shouldRetry(long timeSinceDisconnectMillis);
 
    /**
-    * Specifies the time to wait, in milliseconds, between each reconnect attempt, given that the specified time has
-    * passed since disconnect.
+    * Specifies the time to wait, in milliseconds, between each reconnect attempt, given
+    * that the specified time has passed since disconnect.
     *
-    * @param timeSinceDisconnectMillis The time since the disconnect happened, in milliseconds
+    * @param timeSinceDisconnectMillis The time since the disconnect happened, in
+    *                                  milliseconds.
     * @return The delay between each new reconnect attempt.
     */
    long getRetryDelay(long timeSinceDisconnectMillis);
 
    /**
-    * The time limit after which to stop attempting reconnection.
+    * The time limit after which to stop attempting to reconnect.
     *
-    * @return The limit, in milliseconds
+    * @return The limit, in milliseconds.
     */
    long getRetryLimitMillis();
 }

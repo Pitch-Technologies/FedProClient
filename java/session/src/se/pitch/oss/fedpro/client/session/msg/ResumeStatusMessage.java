@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 public class ResumeStatusMessage implements EncodableMessage {
 
    public static final int STATUS_OK_TO_RESUME = 0;
@@ -41,13 +43,16 @@ public class ResumeStatusMessage implements EncodableMessage {
    @Override
    public byte[] encode()
    {
-      return ByteBuffer.allocate(8).putInt(sessionStatus).putInt(lastReceivedFederateSequenceNumber).array();
+      return ByteBuffer.allocate(INT32_SIZE * 2)
+            .putInt(sessionStatus)
+            .putInt(lastReceivedFederateSequenceNumber)
+            .array();
    }
 
    public static ResumeStatusMessage decode(InputStream inputStream)
    throws BadMessage, IOException
    {
-      ByteBuffer buffer = ByteReader.wrap(inputStream, 8);
+      ByteBuffer buffer = ByteReader.wrap(inputStream, INT32_SIZE * 2);
       int sessionStatus = buffer.getInt();
       int lastReceivedFederateSequenceNumber = buffer.getInt();
 
@@ -58,5 +63,21 @@ public class ResumeStatusMessage implements EncodableMessage {
       }
 
       return new ResumeStatusMessage(sessionStatus, lastReceivedFederateSequenceNumber);
+   }
+
+   public static String toString(int resumeStatus)
+   {
+      switch (resumeStatus) {
+         case ResumeStatusMessage.STATUS_OK_TO_RESUME:
+            return "OK";
+         case ResumeStatusMessage.STATUS_FAILURE_INVALID_SESSION:
+            return "Invalid Session";
+         case ResumeStatusMessage.STATUS_FAILURE_NOT_ENOUGH_BUFFERED_MESSAGES:
+            return "Not enough buffered messages";
+         case ResumeStatusMessage.STATUS_FAILURE_OTHER_ERROR:
+            return "Other error";
+         default:
+            return "Unknown error";
+      }
    }
 }

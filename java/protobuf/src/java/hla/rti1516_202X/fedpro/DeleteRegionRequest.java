@@ -43,30 +43,30 @@ private static final long serialVersionUID = 0L;
             hla.rti1516_202X.fedpro.DeleteRegionRequest.class, hla.rti1516_202X.fedpro.DeleteRegionRequest.Builder.class);
   }
 
-  public static final int THEREGION_FIELD_NUMBER = 1;
-  private hla.rti1516_202X.fedpro.RegionHandle theRegion_;
+  public static final int REGION_FIELD_NUMBER = 1;
+  private hla.rti1516_202X.fedpro.RegionHandle region_;
   /**
-   * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
-   * @return Whether the theRegion field is set.
+   * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
+   * @return Whether the region field is set.
    */
   @java.lang.Override
-  public boolean hasTheRegion() {
-    return theRegion_ != null;
+  public boolean hasRegion() {
+    return region_ != null;
   }
   /**
-   * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
-   * @return The theRegion.
+   * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
+   * @return The region.
    */
   @java.lang.Override
-  public hla.rti1516_202X.fedpro.RegionHandle getTheRegion() {
-    return theRegion_ == null ? hla.rti1516_202X.fedpro.RegionHandle.getDefaultInstance() : theRegion_;
+  public hla.rti1516_202X.fedpro.RegionHandle getRegion() {
+    return region_ == null ? hla.rti1516_202X.fedpro.RegionHandle.getDefaultInstance() : region_;
   }
   /**
-   * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+   * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
    */
   @java.lang.Override
-  public hla.rti1516_202X.fedpro.RegionHandleOrBuilder getTheRegionOrBuilder() {
-    return getTheRegion();
+  public hla.rti1516_202X.fedpro.RegionHandleOrBuilder getRegionOrBuilder() {
+    return getRegion();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -83,8 +83,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (theRegion_ != null) {
-      output.writeMessage(1, getTheRegion());
+    if (region_ != null) {
+      output.writeMessage(1, getRegion());
     }
     getUnknownFields().writeTo(output);
   }
@@ -95,9 +95,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (theRegion_ != null) {
+    if (region_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getTheRegion());
+        .computeMessageSize(1, getRegion());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -114,10 +114,10 @@ private static final long serialVersionUID = 0L;
     }
     hla.rti1516_202X.fedpro.DeleteRegionRequest other = (hla.rti1516_202X.fedpro.DeleteRegionRequest) obj;
 
-    if (hasTheRegion() != other.hasTheRegion()) return false;
-    if (hasTheRegion()) {
-      if (!getTheRegion()
-          .equals(other.getTheRegion())) return false;
+    if (hasRegion() != other.hasRegion()) return false;
+    if (hasRegion()) {
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -130,9 +130,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasTheRegion()) {
-      hash = (37 * hash) + THEREGION_FIELD_NUMBER;
-      hash = (53 * hash) + getTheRegion().hashCode();
+    if (hasRegion()) {
+      hash = (37 * hash) + REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getRegion().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -262,11 +262,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (theRegionBuilder_ == null) {
-        theRegion_ = null;
+      if (regionBuilder_ == null) {
+        region_ = null;
       } else {
-        theRegion_ = null;
-        theRegionBuilder_ = null;
+        region_ = null;
+        regionBuilder_ = null;
       }
       return this;
     }
@@ -294,10 +294,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public hla.rti1516_202X.fedpro.DeleteRegionRequest buildPartial() {
       hla.rti1516_202X.fedpro.DeleteRegionRequest result = new hla.rti1516_202X.fedpro.DeleteRegionRequest(this);
-      if (theRegionBuilder_ == null) {
-        result.theRegion_ = theRegion_;
+      if (regionBuilder_ == null) {
+        result.region_ = region_;
       } else {
-        result.theRegion_ = theRegionBuilder_.build();
+        result.region_ = regionBuilder_.build();
       }
       onBuilt();
       return result;
@@ -347,8 +347,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(hla.rti1516_202X.fedpro.DeleteRegionRequest other) {
       if (other == hla.rti1516_202X.fedpro.DeleteRegionRequest.getDefaultInstance()) return this;
-      if (other.hasTheRegion()) {
-        mergeTheRegion(other.getTheRegion());
+      if (other.hasRegion()) {
+        mergeRegion(other.getRegion());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -378,7 +378,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getTheRegionFieldBuilder().getBuilder(),
+                  getRegionFieldBuilder().getBuilder(),
                   extensionRegistry);
 
               break;
@@ -399,123 +399,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private hla.rti1516_202X.fedpro.RegionHandle theRegion_;
+    private hla.rti1516_202X.fedpro.RegionHandle region_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        hla.rti1516_202X.fedpro.RegionHandle, hla.rti1516_202X.fedpro.RegionHandle.Builder, hla.rti1516_202X.fedpro.RegionHandleOrBuilder> theRegionBuilder_;
+        hla.rti1516_202X.fedpro.RegionHandle, hla.rti1516_202X.fedpro.RegionHandle.Builder, hla.rti1516_202X.fedpro.RegionHandleOrBuilder> regionBuilder_;
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
-     * @return Whether the theRegion field is set.
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
+     * @return Whether the region field is set.
      */
-    public boolean hasTheRegion() {
-      return theRegionBuilder_ != null || theRegion_ != null;
+    public boolean hasRegion() {
+      return regionBuilder_ != null || region_ != null;
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
-     * @return The theRegion.
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
+     * @return The region.
      */
-    public hla.rti1516_202X.fedpro.RegionHandle getTheRegion() {
-      if (theRegionBuilder_ == null) {
-        return theRegion_ == null ? hla.rti1516_202X.fedpro.RegionHandle.getDefaultInstance() : theRegion_;
+    public hla.rti1516_202X.fedpro.RegionHandle getRegion() {
+      if (regionBuilder_ == null) {
+        return region_ == null ? hla.rti1516_202X.fedpro.RegionHandle.getDefaultInstance() : region_;
       } else {
-        return theRegionBuilder_.getMessage();
+        return regionBuilder_.getMessage();
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
      */
-    public Builder setTheRegion(hla.rti1516_202X.fedpro.RegionHandle value) {
-      if (theRegionBuilder_ == null) {
+    public Builder setRegion(hla.rti1516_202X.fedpro.RegionHandle value) {
+      if (regionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        theRegion_ = value;
+        region_ = value;
         onChanged();
       } else {
-        theRegionBuilder_.setMessage(value);
+        regionBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
      */
-    public Builder setTheRegion(
+    public Builder setRegion(
         hla.rti1516_202X.fedpro.RegionHandle.Builder builderForValue) {
-      if (theRegionBuilder_ == null) {
-        theRegion_ = builderForValue.build();
+      if (regionBuilder_ == null) {
+        region_ = builderForValue.build();
         onChanged();
       } else {
-        theRegionBuilder_.setMessage(builderForValue.build());
+        regionBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
      */
-    public Builder mergeTheRegion(hla.rti1516_202X.fedpro.RegionHandle value) {
-      if (theRegionBuilder_ == null) {
-        if (theRegion_ != null) {
-          theRegion_ =
-            hla.rti1516_202X.fedpro.RegionHandle.newBuilder(theRegion_).mergeFrom(value).buildPartial();
+    public Builder mergeRegion(hla.rti1516_202X.fedpro.RegionHandle value) {
+      if (regionBuilder_ == null) {
+        if (region_ != null) {
+          region_ =
+            hla.rti1516_202X.fedpro.RegionHandle.newBuilder(region_).mergeFrom(value).buildPartial();
         } else {
-          theRegion_ = value;
+          region_ = value;
         }
         onChanged();
       } else {
-        theRegionBuilder_.mergeFrom(value);
+        regionBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
      */
-    public Builder clearTheRegion() {
-      if (theRegionBuilder_ == null) {
-        theRegion_ = null;
+    public Builder clearRegion() {
+      if (regionBuilder_ == null) {
+        region_ = null;
         onChanged();
       } else {
-        theRegion_ = null;
-        theRegionBuilder_ = null;
+        region_ = null;
+        regionBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
      */
-    public hla.rti1516_202X.fedpro.RegionHandle.Builder getTheRegionBuilder() {
+    public hla.rti1516_202X.fedpro.RegionHandle.Builder getRegionBuilder() {
       
       onChanged();
-      return getTheRegionFieldBuilder().getBuilder();
+      return getRegionFieldBuilder().getBuilder();
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
      */
-    public hla.rti1516_202X.fedpro.RegionHandleOrBuilder getTheRegionOrBuilder() {
-      if (theRegionBuilder_ != null) {
-        return theRegionBuilder_.getMessageOrBuilder();
+    public hla.rti1516_202X.fedpro.RegionHandleOrBuilder getRegionOrBuilder() {
+      if (regionBuilder_ != null) {
+        return regionBuilder_.getMessageOrBuilder();
       } else {
-        return theRegion_ == null ?
-            hla.rti1516_202X.fedpro.RegionHandle.getDefaultInstance() : theRegion_;
+        return region_ == null ?
+            hla.rti1516_202X.fedpro.RegionHandle.getDefaultInstance() : region_;
       }
     }
     /**
-     * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+     * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         hla.rti1516_202X.fedpro.RegionHandle, hla.rti1516_202X.fedpro.RegionHandle.Builder, hla.rti1516_202X.fedpro.RegionHandleOrBuilder> 
-        getTheRegionFieldBuilder() {
-      if (theRegionBuilder_ == null) {
-        theRegionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getRegionFieldBuilder() {
+      if (regionBuilder_ == null) {
+        regionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             hla.rti1516_202X.fedpro.RegionHandle, hla.rti1516_202X.fedpro.RegionHandle.Builder, hla.rti1516_202X.fedpro.RegionHandleOrBuilder>(
-                getTheRegion(),
+                getRegion(),
                 getParentForChildren(),
                 isClean());
-        theRegion_ = null;
+        region_ = null;
       }
-      return theRegionBuilder_;
+      return regionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

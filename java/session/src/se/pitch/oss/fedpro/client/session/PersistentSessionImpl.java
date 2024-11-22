@@ -16,20 +16,21 @@
 
 package se.pitch.oss.fedpro.client.session;
 
-import se.pitch.oss.fedpro.client.PersistentSession;
-import se.pitch.oss.fedpro.client.ResumeStrategy;
-import se.pitch.oss.fedpro.client.Session;
-import se.pitch.oss.fedpro.client.Transport;
+import se.pitch.oss.fedpro.client.*;
 import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionLost;
+import se.pitch.oss.fedpro.common.session.LogUtil;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static se.pitch.oss.fedpro.client.TimeoutConstants.DEFAULT_HEARTBEAT_INTERVAL_MILLIS;
+import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_HEARTBEAT_INTERVAL;
+import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_RECONNECT_LIMIT;
+import static se.pitch.oss.fedpro.client.session.SessionSettings.DEFAULT_HEARTBEAT_INTERVAL_MILLIS;
 
 public class PersistentSessionImpl implements PersistentSession {
 
@@ -39,49 +40,54 @@ public class PersistentSessionImpl implements PersistentSession {
    private final ResumeStrategy _resumeStrategy;
    private final ConnectionLostListener _connectionLostListener;
 
-   private long _heartbeatInterval = DEFAULT_HEARTBEAT_INTERVAL_MILLIS;
-   private TimeUnit _heartbeatIntervalUnit = TimeUnit.MILLISECONDS;
    private TimeoutTimer _sendHeartbeatTimer;
 
+   // Session layer settings
+   private final long _heartbeatIntervalMillis;
+
    /**
-    * @param transportProtocol      The underlying transport layer
-    * @param connectionLostListener The listener to be called when the session is terminally lost due to connection issues
-    * @param resumeStrategy         A ResumeStrategy instance that will control when, how often and for how long reconnection
-    *                               attempts will be made
+    * @param transportProtocol      The underlying transport layer.
+    * @param connectionLostListener The listener to be called when the session is
+    *                               terminally lost due to connection issues.
+    * @param resumeStrategy         A ResumeStrategy instance that will control when, how
+    *                               often and for how long reconnection attempts will be
+    *                               made.
+    * @throws NullPointerException If resumeStrategy is null.
     */
    public PersistentSessionImpl(
          Transport transportProtocol,
          ConnectionLostListener connectionLostListener,
+         TypedProperties settings,
          ResumeStrategy resumeStrategy)
    {
-      _session = new SessionImpl(transportProtocol);
+      if (resumeStrategy == null) {
+         throw new NullPointerException(logPrefix() + ": The passed resume strategy is null.");
+      }
+
+      // Initialize settings
+      if (settings != null) {
+         _heartbeatIntervalMillis = settings.getDuration(
+               SETTING_NAME_HEARTBEAT_INTERVAL,
+               Duration.ofMillis(DEFAULT_HEARTBEAT_INTERVAL_MILLIS)).toMillis();
+      } else {
+         _heartbeatIntervalMillis = DEFAULT_HEARTBEAT_INTERVAL_MILLIS;
+      }
+
+      _session = new SessionImpl(transportProtocol, settings);
       _connectionLostListener = connectionLostListener;
       _resumeStrategy = resumeStrategy;
       _session.addStateListener(this::stateListener);
+
+      LOGGER.config(() -> String.format(
+            "Federate Protocol client session layer settings used:\n%s",
+            getSettings().toPrettyString()));
    }
 
    @Override
-   public void setHeartbeatInterval(
-         long heartbeatInterval,
-         TimeUnit heartbeatIntervalUnit)
+   public void close()
+   throws Exception
    {
-      if (_sendHeartbeatTimer == null) {
-         _heartbeatInterval = heartbeatInterval;
-         _heartbeatIntervalUnit = heartbeatIntervalUnit;
-      } else {
-         LOGGER.warning(() -> String.format(
-               "%s: Heartbeat interval can only be set before session start. ",
-               logPrefix()));
-      }
-   }
-
-   @Override
-   public void setSessionTimeout(
-         long sessionTimeout,
-         TimeUnit sessionTimeoutUnit)
-   throws SessionIllegalState
-   {
-      _session.setSessionTimeout(sessionTimeout, sessionTimeoutUnit);
+      _session.close();
    }
 
    @Override
@@ -112,8 +118,8 @@ public class PersistentSessionImpl implements PersistentSession {
    private void startHeartBeatTimer()
    {
       _sendHeartbeatTimer = TimeoutTimer.createEagerTimeoutTimer(
-            "Client Session Heartbeat Timer",
-            _heartbeatIntervalUnit.toMillis(_heartbeatInterval));
+            "Client Session " + LogUtil.formatSessionId(_session.getId()) + " Heartbeat Timer",
+            _heartbeatIntervalMillis);
       _session.setMessageSentListener(_sendHeartbeatTimer::extend);
       _sendHeartbeatTimer.start(this::heartbeat);
    }
@@ -145,7 +151,9 @@ public class PersistentSessionImpl implements PersistentSession {
    }
 
    @Override
-   public void terminate(int responseTimeout, TimeUnit responseTimeoutUnit)
+   public void terminate(
+         int responseTimeout,
+         TimeUnit responseTimeoutUnit)
    throws SessionLost, SessionIllegalState
    {
       if (_sendHeartbeatTimer != null) {
@@ -153,7 +161,6 @@ public class PersistentSessionImpl implements PersistentSession {
       }
       _session.terminate(responseTimeout, responseTimeoutUnit);
    }
-
 
    /**
     * Disrupt the current transport connection.
@@ -179,12 +186,17 @@ public class PersistentSessionImpl implements PersistentSession {
       } catch (SessionIllegalState e) {
          // session terminated or not initialized
       } catch (RuntimeException e) {
-         LOGGER.log(Level.SEVERE, e,
+         LOGGER.log(
+               Level.SEVERE,
+               e,
                () -> String.format("%s: Unexpected exception in session heartbeat timer.", logPrefix()));
       }
    }
 
-   private void stateListener(SessionImpl.State oldState, SessionImpl.State newState, String reason)
+   private void stateListener(
+         SessionImpl.State oldState,
+         SessionImpl.State newState,
+         String reason)
    {
       if (oldState == SessionImpl.State.RUNNING && newState == SessionImpl.State.DROPPED) {
          runResumeStrategy();
@@ -236,8 +248,17 @@ public class PersistentSessionImpl implements PersistentSession {
       }
 
       _connectionLostListener.onConnectionLost(
-            "Failed to resume Federate Protocol session after trying for " + _resumeStrategy.getRetryLimitMillis() +
+            "Failed to resume Federate Protocol session after trying for " +
+                  _resumeStrategy.getRetryLimitMillis() / 1000 +
                   " seconds. Reason for first failure: " + firstResumeFailedException);
+   }
+
+   private TypedProperties getSettings()
+   {
+      TypedProperties settings = _session.getSettings();
+      settings.setDuration(SETTING_NAME_HEARTBEAT_INTERVAL, Duration.ofMillis(_heartbeatIntervalMillis));
+      settings.setDuration(SETTING_NAME_RECONNECT_LIMIT, Duration.ofMillis(_resumeStrategy.getRetryLimitMillis()));
+      return settings;
    }
 
    private String logPrefix()

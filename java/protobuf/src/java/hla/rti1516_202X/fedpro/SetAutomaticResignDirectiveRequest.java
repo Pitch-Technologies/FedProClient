@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SetAutomaticResignDirectiveRequest() {
-    resignAction_ = 0;
+    value_ = 0;
   }
 
   @java.lang.Override
@@ -44,22 +44,22 @@ private static final long serialVersionUID = 0L;
             hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest.class, hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest.Builder.class);
   }
 
-  public static final int RESIGNACTION_FIELD_NUMBER = 1;
-  private int resignAction_;
+  public static final int VALUE_FIELD_NUMBER = 1;
+  private int value_;
   /**
-   * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-   * @return The enum numeric value on the wire for resignAction.
+   * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+   * @return The enum numeric value on the wire for value.
    */
-  @java.lang.Override public int getResignActionValue() {
-    return resignAction_;
+  @java.lang.Override public int getValueValue() {
+    return value_;
   }
   /**
-   * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-   * @return The resignAction.
+   * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+   * @return The value.
    */
-  @java.lang.Override public hla.rti1516_202X.fedpro.ResignAction getResignAction() {
+  @java.lang.Override public hla.rti1516_202X.fedpro.ResignAction getValue() {
     @SuppressWarnings("deprecation")
-    hla.rti1516_202X.fedpro.ResignAction result = hla.rti1516_202X.fedpro.ResignAction.valueOf(resignAction_);
+    hla.rti1516_202X.fedpro.ResignAction result = hla.rti1516_202X.fedpro.ResignAction.valueOf(value_);
     return result == null ? hla.rti1516_202X.fedpro.ResignAction.UNRECOGNIZED : result;
   }
 
@@ -77,8 +77,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (resignAction_ != hla.rti1516_202X.fedpro.ResignAction.UNCONDITIONALLY_DIVEST_ATTRIBUTES.getNumber()) {
-      output.writeEnum(1, resignAction_);
+    if (value_ != hla.rti1516_202X.fedpro.ResignAction.UNCONDITIONALLY_DIVEST_ATTRIBUTES.getNumber()) {
+      output.writeEnum(1, value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -89,9 +89,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (resignAction_ != hla.rti1516_202X.fedpro.ResignAction.UNCONDITIONALLY_DIVEST_ATTRIBUTES.getNumber()) {
+    if (value_ != hla.rti1516_202X.fedpro.ResignAction.UNCONDITIONALLY_DIVEST_ATTRIBUTES.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, resignAction_);
+        .computeEnumSize(1, value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
     }
     hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest other = (hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest) obj;
 
-    if (resignAction_ != other.resignAction_) return false;
+    if (value_ != other.value_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -120,8 +120,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + RESIGNACTION_FIELD_NUMBER;
-    hash = (53 * hash) + resignAction_;
+    hash = (37 * hash) + VALUE_FIELD_NUMBER;
+    hash = (53 * hash) + value_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      resignAction_ = 0;
+      value_ = 0;
 
       return this;
     }
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest buildPartial() {
       hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest result = new hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest(this);
-      result.resignAction_ = resignAction_;
+      result.value_ = value_;
       onBuilt();
       return result;
     }
@@ -327,8 +327,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest other) {
       if (other == hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest.getDefaultInstance()) return this;
-      if (other.resignAction_ != 0) {
-        setResignActionValue(other.getResignActionValue());
+      if (other.value_ != 0) {
+        setValueValue(other.getValueValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              resignAction_ = input.readEnum();
+              value_ = input.readEnum();
 
               break;
             } // case 8
@@ -377,56 +377,56 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int resignAction_ = 0;
+    private int value_ = 0;
     /**
-     * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-     * @return The enum numeric value on the wire for resignAction.
+     * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+     * @return The enum numeric value on the wire for value.
      */
-    @java.lang.Override public int getResignActionValue() {
-      return resignAction_;
+    @java.lang.Override public int getValueValue() {
+      return value_;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-     * @param value The enum numeric value on the wire for resignAction to set.
+     * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+     * @param value The enum numeric value on the wire for value to set.
      * @return This builder for chaining.
      */
-    public Builder setResignActionValue(int value) {
+    public Builder setValueValue(int value) {
       
-      resignAction_ = value;
+      value_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-     * @return The resignAction.
+     * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+     * @return The value.
      */
     @java.lang.Override
-    public hla.rti1516_202X.fedpro.ResignAction getResignAction() {
+    public hla.rti1516_202X.fedpro.ResignAction getValue() {
       @SuppressWarnings("deprecation")
-      hla.rti1516_202X.fedpro.ResignAction result = hla.rti1516_202X.fedpro.ResignAction.valueOf(resignAction_);
+      hla.rti1516_202X.fedpro.ResignAction result = hla.rti1516_202X.fedpro.ResignAction.valueOf(value_);
       return result == null ? hla.rti1516_202X.fedpro.ResignAction.UNRECOGNIZED : result;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
-     * @param value The resignAction to set.
+     * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
+     * @param value The value to set.
      * @return This builder for chaining.
      */
-    public Builder setResignAction(hla.rti1516_202X.fedpro.ResignAction value) {
+    public Builder setValue(hla.rti1516_202X.fedpro.ResignAction value) {
       if (value == null) {
         throw new NullPointerException();
       }
       
-      resignAction_ = value.getNumber();
+      value_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.rti1516_202X.fedpro.ResignAction resignAction = 1;</code>
+     * <code>.rti1516_202X.fedpro.ResignAction value = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearResignAction() {
+    public Builder clearValue() {
       
-      resignAction_ = 0;
+      value_ = 0;
       onChanged();
       return this;
     }

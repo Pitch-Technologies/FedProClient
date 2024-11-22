@@ -21,12 +21,12 @@ public class NullRateLimiter implements RateLimiter {
    @Override
    public void preInsert(int size)
    {
-      // Noop
+      // No-op
    }
 
    @Override
    public void postInsert(int size)
    {
-      // Noop
+      // No-op
    }
 }

@@ -16,9 +16,8 @@
 
 package se.pitch.oss.fedpro.client.transport;
 
-import se.pitch.oss.fedpro.common.transport.FedProSocket;
-import se.pitch.oss.fedpro.common.transport.FedProSocketImpl;
-import se.pitch.oss.fedpro.common.transport.Tls;
+import se.pitch.oss.fedpro.client.TypedProperties;
+import se.pitch.oss.fedpro.common.transport.*;
 
 import javax.net.ssl.SNIHostName;
 import javax.net.ssl.SSLContext;
@@ -27,15 +26,53 @@ import javax.net.ssl.SSLSocket;
 import java.io.IOException;
 import java.util.Collections;
 
+import static se.pitch.oss.fedpro.client.Settings.*;
+import static se.pitch.oss.fedpro.client.transport.TransportSettings.*;
+import static se.pitch.oss.fedpro.common.Ports.DEFAULT_PORT_TLS;
+
 public class TlsTransport extends TransportBase {
 
-   private static final String SNI_HOST_NAME = System.getProperty("alias");
    private final SSLContext _context;
 
-   public TlsTransport(SSLContext context, String host, int port)
+   // Transport layer settings
+   private final String _keyStoreAlgorithm;
+   private final String _passwordPath;
+   private final String _keystorePath;
+   private final String _keyStoreType;
+   private final boolean _useDefaultKeystore;
+   private final String _tlsModeString;
+   private final String _sniHostName;
+
+   public TlsTransport(SSLContext sslContext, TypedProperties settings)
    {
-      super(host, port);
-      _context = context;
+      super(
+            settings == null ?
+                  DEFAULT_CONNECTION_HOST :
+                  settings.getString(SETTING_NAME_CONNECTION_HOST, DEFAULT_CONNECTION_HOST),
+            settings == null ?
+                  DEFAULT_PORT_TLS :
+                  settings.getInt(SETTING_NAME_CONNECTION_PORT, DEFAULT_PORT_TLS));
+
+      if (settings == null) {
+         settings = new TypedProperties();
+      }
+
+      _keyStoreAlgorithm = settings.getString(SETTING_NAME_KEYSTORE_ALGORITHM, DEFAULT_KEYSTORE_ALGORITHM);
+      _passwordPath = settings.getString(SETTING_NAME_KEYSTORE_PASSWORD_PATH, DEFAULT_KEYSTORE_PASSWORD_PATH);
+      _keystorePath = settings.getString(SETTING_NAME_KEYSTORE_PATH, DEFAULT_KEYSTORE_PATH);
+      _keyStoreType = settings.getString(SETTING_NAME_KEYSTORE_TYPE, DEFAULT_KEYSTORE_TYPE);
+      _useDefaultKeystore = settings.getBoolean(SETTING_NAME_KEYSTORE_USE_DEFAULT, DEFAULT_KEYSTORE_USE_DEFAULT);
+      _tlsModeString = settings.getString(SETTING_NAME_TLS_MODE, DEFAULT_TLS_MODE.name());
+      _sniHostName = settings.getString(SETTING_NAME_TLS_SNI, DEFAULT_TLS_SNI);
+
+      if (sslContext != null) {
+         _context = sslContext;
+      } else {
+         _context = SecurityUtil.getSslContext(
+               SecurityUtil.toTlsMode(_tlsModeString), _passwordPath, _keystorePath, _keyStoreType,
+               _keyStoreAlgorithm, _useDefaultKeystore);
+      }
+      logSettings();
    }
 
    @Override
@@ -55,11 +92,11 @@ public class TlsTransport extends TransportBase {
        * If we use self-signed server certs imported directly in the client this is not needed.
        */
 
-      if (SNI_HOST_NAME != null) {
+      if (_sniHostName != null && !_sniHostName.isEmpty()) {
          // Use Server Name Indication (SNI) extension to send a host name
          // to indicate we want the new cert.
          SSLParameters params = socket.getSSLParameters();
-         params.setServerNames(Collections.singletonList(new SNIHostName(SNI_HOST_NAME)));
+         params.setServerNames(Collections.singletonList(new SNIHostName(_sniHostName)));
          socket.setSSLParameters(params);
       }
 
@@ -67,4 +104,20 @@ public class TlsTransport extends TransportBase {
 
       return new FedProSocketImpl(socket);
    }
+
+   private void logSettings()
+   {
+      TypedProperties allTransportSettingsUsed = new TypedProperties();
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_ALGORITHM, _keyStoreAlgorithm);
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_PASSWORD_PATH, _passwordPath);
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_PATH, _keystorePath);
+      allTransportSettingsUsed.setString(SETTING_NAME_KEYSTORE_TYPE, _keyStoreType);
+      allTransportSettingsUsed.setBoolean(SETTING_NAME_KEYSTORE_USE_DEFAULT, _useDefaultKeystore);
+      allTransportSettingsUsed.setString(SETTING_NAME_TLS_MODE, _tlsModeString);
+      allTransportSettingsUsed.setString(SETTING_NAME_TLS_SNI, _sniHostName);
+      LOGGER.config(() -> String.format(
+            "Federate Protocol client transport layer settings used:\n%s",
+            allTransportSettingsUsed.toPrettyString()));
+   }
+
 }

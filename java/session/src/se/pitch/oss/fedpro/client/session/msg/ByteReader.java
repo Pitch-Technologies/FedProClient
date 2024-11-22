@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
 class ByteReader {
 
    public static byte[] readNBytes(InputStream input, int count)
@@ -28,14 +30,16 @@ class ByteReader {
    {
       byte[] bytes = new byte[count];
 
-      int read = 0;
-      int n;
-      while ((n = input.read(bytes, read, bytes.length - read)) > 0) {
-         read += n;
+      int readInTotal = 0;
+      int bytesRead;
+
+      // Blocks when there is nothing to read, unless there is an IOException or EOF is reached.
+      while ((bytesRead = input.read(bytes, readInTotal, bytes.length - readInTotal)) > 0) {
+         readInTotal += bytesRead;
       }
 
-      if (read < count) {
-         throw new EOFException("Could only read " + read + " of " + count + " bytes");
+      if (readInTotal < count) {
+         throw new EOFException("Could only read " + readInTotal + " of " + count + " bytes");
       }
       return bytes;
    }
@@ -46,9 +50,9 @@ class ByteReader {
       return ByteBuffer.wrap(readNBytes(input, count));
    }
 
-   public static int getInt(InputStream input)
+   public static int getInt32(InputStream input)
    throws IOException
    {
-      return wrap(input, 4).getInt();
+      return wrap(input, INT32_SIZE).getInt();
    }
 }

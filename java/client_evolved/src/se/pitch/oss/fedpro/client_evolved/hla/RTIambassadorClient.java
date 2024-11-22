@@ -16,12 +16,13 @@
 
 package se.pitch.oss.fedpro.client_evolved.hla;
 
-import hla.rti1516_202X.fedpro.CallRequest;
-import hla.rti1516_202X.fedpro.CallResponse;
+import hla.rti1516_202X.fedpro.*;
 import hla.rti1516e.exceptions.*;
 
 import java.util.Collections;
 
+// Exceptions are thrown using reflection so we get false warnings
+@SuppressWarnings({"RedundantThrows", "rawtypes"})
 public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
 
    public RTIambassadorClient(ClientConverter clientConverter)
@@ -1101,17 +1102,17 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNameRequest.newBuilder();
+      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest request;
+      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest.Builder builder =
+            hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest.newBuilder();
 
       builder.addAllObjectInstanceNames(_clientConverter.convertFromHla(theObjectNames));
 
       request = builder.build();
-      CallRequest callRequest = CallRequest.newBuilder().setReserveMultipleObjectInstanceNameRequest(request).build();
+      CallRequest callRequest = CallRequest.newBuilder().setReserveMultipleObjectInstanceNamesRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasReserveMultipleObjectInstanceNameResponse();
+      assert callResponse.hasReserveMultipleObjectInstanceNamesResponse();
       // No return value
    }
 
@@ -1126,17 +1127,17 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNameRequest.newBuilder();
+      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest request;
+      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest.Builder builder =
+            hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest.newBuilder();
 
       builder.addAllObjectInstanceNames(_clientConverter.convertFromHla(theObjectNames));
 
       request = builder.build();
-      CallRequest callRequest = CallRequest.newBuilder().setReleaseMultipleObjectInstanceNameRequest(request).build();
+      CallRequest callRequest = CallRequest.newBuilder().setReleaseMultipleObjectInstanceNamesRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasReleaseMultipleObjectInstanceNameResponse();
+      assert callResponse.hasReleaseMultipleObjectInstanceNamesResponse();
       // No return value
    }
 
@@ -1694,7 +1695,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
             hla.rti1516_202X.fedpro.ConfirmDivestitureRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
-      builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
+      builder.setConfirmedAttributes(_clientConverter.convertFromHla(theAttributes));
       builder.setUserSuppliedTag(_clientConverter.convertFromHla(userSuppliedTag));
 
       request = builder.build();
@@ -2488,7 +2489,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       hla.rti1516_202X.fedpro.DeleteRegionRequest.Builder builder =
             hla.rti1516_202X.fedpro.DeleteRegionRequest.newBuilder();
 
-      builder.setTheRegion(_clientConverter.convertFromHla(theRegion));
+      builder.setRegion(_clientConverter.convertFromHla(theRegion));
 
       request = builder.build();
       CallRequest callRequest = CallRequest.newBuilder().setDeleteRegionRequest(request).build();
@@ -2943,7 +2944,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest.Builder builder =
             hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest.newBuilder();
 
-      builder.setResignAction(_clientConverter.convertFromHla(resignAction));
+      builder.setValue(_clientConverter.convertFromHla(resignAction));
 
       request = builder.build();
       CallRequest callRequest = CallRequest.newBuilder().setSetAutomaticResignDirectiveRequest(request).build();
@@ -3437,7 +3438,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
    public hla.rti1516e.DimensionHandleSet
    getAvailableDimensionsForClassAttribute(
          hla.rti1516e.ObjectClassHandle whichClass,
-         hla.rti1516e.AttributeHandle theHandle)
+         hla.rti1516e.AttributeHandle ignoredTheHandle)
    throws
          AttributeNotDefined,
          InvalidAttributeHandle,
@@ -3446,21 +3447,20 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequest request;
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeRequest.newBuilder();
+      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest request;
+      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest.Builder builder =
+            hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(whichClass));
-      builder.setAttribute(_clientConverter.convertFromHla(theHandle));
 
       request = builder.build();
       CallRequest callRequest =
-            CallRequest.newBuilder().setGetAvailableDimensionsForClassAttributeRequest(request).build();
+            CallRequest.newBuilder().setGetAvailableDimensionsForObjectClassRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasGetAvailableDimensionsForClassAttributeResponse();
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForClassAttributeResponse response =
-            callResponse.getGetAvailableDimensionsForClassAttributeResponse();
+      assert callResponse.hasGetAvailableDimensionsForObjectClassResponse();
+      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassResponse response =
+            callResponse.getGetAvailableDimensionsForObjectClassResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3698,170 +3698,155 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       return _clientConverter.convertToHla(Integer.toUnsignedLong(response.getResult()));
    }
 
-   public void
-   enableObjectClassRelevanceAdvisorySwitch(
-   )
-   throws
-         ObjectClassRelevanceAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   public boolean getObjectClassRelevanceAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.EnableObjectClassRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.EnableObjectClassRelevanceAdvisorySwitchRequest.getDefaultInstance();
+      hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest request;
+      GetObjectClassRelevanceAdvisorySwitchRequest.Builder builder =
+            GetObjectClassRelevanceAdvisorySwitchRequest.newBuilder();
+
+      request = builder.build();
+
       CallRequest callRequest =
-            CallRequest.newBuilder().setEnableObjectClassRelevanceAdvisorySwitchRequest(request).build();
+            CallRequest.newBuilder().setGetObjectClassRelevanceAdvisorySwitchRequest(request)
+                  .build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasEnableObjectClassRelevanceAdvisorySwitchResponse();
-      // No return value
+      assert callResponse.hasGetObjectClassRelevanceAdvisorySwitchResponse();
+      hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchResponse response = callResponse.getGetObjectClassRelevanceAdvisorySwitchResponse();
+      return response.getResult();
    }
 
-   public void
-   disableObjectClassRelevanceAdvisorySwitch(
-   )
-   throws
-         ObjectClassRelevanceAdvisorySwitchIsOff,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   public void setObjectClassRelevanceAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DisableObjectClassRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.DisableObjectClassRelevanceAdvisorySwitchRequest.getDefaultInstance();
+      hla.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest request;
+      SetObjectClassRelevanceAdvisorySwitchRequest.Builder builder =
+            SetObjectClassRelevanceAdvisorySwitchRequest.newBuilder();
+
+      builder.setValue(value);
+      request = builder.build();
+
       CallRequest callRequest =
-            CallRequest.newBuilder().setDisableObjectClassRelevanceAdvisorySwitchRequest(request).build();
+            CallRequest.newBuilder().setSetObjectClassRelevanceAdvisorySwitchRequest(request)
+                  .build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasDisableObjectClassRelevanceAdvisorySwitchResponse();
+      assert callResponse.hasSetObjectClassRelevanceAdvisorySwitchResponse();
       // No return value
    }
 
-   public void
-   enableAttributeRelevanceAdvisorySwitch(
-   )
-   throws
-         AttributeRelevanceAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   public boolean getAttributeRelevanceAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.EnableAttributeRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.EnableAttributeRelevanceAdvisorySwitchRequest.getDefaultInstance();
+      hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest request;
+      GetAttributeRelevanceAdvisorySwitchRequest.Builder builder =
+            GetAttributeRelevanceAdvisorySwitchRequest.newBuilder();
+
+      request = builder.build();
+
       CallRequest callRequest =
-            CallRequest.newBuilder().setEnableAttributeRelevanceAdvisorySwitchRequest(request).build();
+            CallRequest.newBuilder().setGetAttributeRelevanceAdvisorySwitchRequest(request)
+                  .build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasEnableAttributeRelevanceAdvisorySwitchResponse();
-      // No return value
+      assert callResponse.hasGetAttributeRelevanceAdvisorySwitchResponse();
+      hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchResponse response = callResponse.getGetAttributeRelevanceAdvisorySwitchResponse();
+      return response.getResult();
    }
 
-   public void
-   disableAttributeRelevanceAdvisorySwitch(
-   )
-   throws
-         AttributeRelevanceAdvisorySwitchIsOff,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   public void setAttributeRelevanceAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DisableAttributeRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.DisableAttributeRelevanceAdvisorySwitchRequest.getDefaultInstance();
+      hla.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest request;
+      SetAttributeRelevanceAdvisorySwitchRequest.Builder builder =
+            SetAttributeRelevanceAdvisorySwitchRequest.newBuilder();
+
+      builder.setValue(value);
+      request = builder.build();
+
       CallRequest callRequest =
-            CallRequest.newBuilder().setDisableAttributeRelevanceAdvisorySwitchRequest(request).build();
+            CallRequest.newBuilder().setSetAttributeRelevanceAdvisorySwitchRequest(request)
+                  .build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasDisableAttributeRelevanceAdvisorySwitchResponse();
+      assert callResponse.hasSetAttributeRelevanceAdvisorySwitchResponse();
       // No return value
    }
 
-   public void
-   enableAttributeScopeAdvisorySwitch(
-   )
-   throws
-         AttributeScopeAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   public boolean getAttributeScopeAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.EnableAttributeScopeAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.EnableAttributeScopeAdvisorySwitchRequest.getDefaultInstance();
-      CallRequest callRequest = CallRequest.newBuilder().setEnableAttributeScopeAdvisorySwitchRequest(request).build();
-      CallResponse callResponse = doHlaCall(callRequest);
+      hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest request;
+      GetAttributeScopeAdvisorySwitchRequest.Builder builder =
+            GetAttributeScopeAdvisorySwitchRequest.newBuilder();
 
-      assert callResponse.hasEnableAttributeScopeAdvisorySwitchResponse();
-      // No return value
-   }
+      request = builder.build();
 
-   public void
-   disableAttributeScopeAdvisorySwitch(
-   )
-   throws
-         AttributeScopeAdvisorySwitchIsOff,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
-   {
-      hla.rti1516_202X.fedpro.DisableAttributeScopeAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.DisableAttributeScopeAdvisorySwitchRequest.getDefaultInstance();
-      CallRequest callRequest = CallRequest.newBuilder().setDisableAttributeScopeAdvisorySwitchRequest(request).build();
-      CallResponse callResponse = doHlaCall(callRequest);
-
-      assert callResponse.hasDisableAttributeScopeAdvisorySwitchResponse();
-      // No return value
-   }
-
-   public void
-   enableInteractionRelevanceAdvisorySwitch(
-   )
-   throws
-         InteractionRelevanceAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
-   {
-      hla.rti1516_202X.fedpro.EnableInteractionRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.EnableInteractionRelevanceAdvisorySwitchRequest.getDefaultInstance();
       CallRequest callRequest =
-            CallRequest.newBuilder().setEnableInteractionRelevanceAdvisorySwitchRequest(request).build();
+            CallRequest.newBuilder().setGetAttributeScopeAdvisorySwitchRequest(request)
+                  .build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasEnableInteractionRelevanceAdvisorySwitchResponse();
-      // No return value
+      assert callResponse.hasGetAttributeScopeAdvisorySwitchResponse();
+      hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchResponse response = callResponse.getGetAttributeScopeAdvisorySwitchResponse();
+      return response.getResult();
    }
 
-   public void
-   disableInteractionRelevanceAdvisorySwitch(
-   )
-   throws
-         InteractionRelevanceAdvisorySwitchIsOff,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   public void setAttributeScopeAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DisableInteractionRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.DisableInteractionRelevanceAdvisorySwitchRequest.getDefaultInstance();
+      hla.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest request;
+      SetAttributeScopeAdvisorySwitchRequest.Builder builder =
+            SetAttributeScopeAdvisorySwitchRequest.newBuilder();
+
+      builder.setValue(value);
+      request = builder.build();
+
       CallRequest callRequest =
-            CallRequest.newBuilder().setDisableInteractionRelevanceAdvisorySwitchRequest(request).build();
+            CallRequest.newBuilder().setSetAttributeScopeAdvisorySwitchRequest(request)
+                  .build();
       CallResponse callResponse = doHlaCall(callRequest);
 
-      assert callResponse.hasDisableInteractionRelevanceAdvisorySwitchResponse();
+      assert callResponse.hasSetAttributeScopeAdvisorySwitchResponse();
       // No return value
    }
 
+   public boolean getInteractionRelevanceAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest request;
+      GetInteractionRelevanceAdvisorySwitchRequest.Builder builder =
+            GetInteractionRelevanceAdvisorySwitchRequest.newBuilder();
+
+      request = builder.build();
+
+      CallRequest callRequest =
+            CallRequest.newBuilder().setGetInteractionRelevanceAdvisorySwitchRequest(request)
+                  .build();
+      CallResponse callResponse = doHlaCall(callRequest);
+
+      assert callResponse.hasGetInteractionRelevanceAdvisorySwitchResponse();
+      hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchResponse response = callResponse.getGetInteractionRelevanceAdvisorySwitchResponse();
+      return response.getResult();
+   }
+
+   public void setInteractionRelevanceAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      hla.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest request;
+      SetInteractionRelevanceAdvisorySwitchRequest.Builder builder =
+            SetInteractionRelevanceAdvisorySwitchRequest.newBuilder();
+
+      builder.setValue(value);
+      request = builder.build();
+
+      CallRequest callRequest =
+            CallRequest.newBuilder().setSetInteractionRelevanceAdvisorySwitchRequest(request)
+                  .build();
+      CallResponse callResponse = doHlaCall(callRequest);
+
+      assert callResponse.hasSetInteractionRelevanceAdvisorySwitchResponse();
+      // No return value
+   }
 }

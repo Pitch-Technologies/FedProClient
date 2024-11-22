@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/gensrc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
@@ -11,7 +12,7 @@
     <orderEntry type="module" module-name="fedproclient_hla_api" />
     <orderEntry type="module" module-name="fedproclient_protobuf" />
     <orderEntry type="module" module-name="fedproclient_session" />
-    <orderEntry type="module" module-name="fedproclient_client_abstract" />
+    <orderEntry type="module" module-name="fedproclient_client_common" />
     <orderEntry type="library" name="Java-WebSocket" level="project" />
     <orderEntry type="library" name="jcip-annotations" level="project" />
     <orderEntry type="library" name="protobuf-java" level="project" />

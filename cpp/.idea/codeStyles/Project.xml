@@ -1,0 +1,46 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <Objective-C>
+      <option name="INDENT_NAMESPACE_MEMBERS" value="3" />
+      <option name="INDENT_C_STRUCT_MEMBERS" value="3" />
+      <option name="INDENT_CLASS_MEMBERS" value="3" />
+      <option name="INDENT_INSIDE_CODE_BLOCK" value="3" />
+      <option name="KEEP_DIRECTIVE_AT_FIRST_COLUMN" value="false" />
+      <option name="NAMESPACE_BRACE_PLACEMENT" value="2" />
+      <option name="FUNCTION_BRACE_PLACEMENT" value="2" />
+      <option name="FUNCTION_NON_TOP_AFTER_RETURN_TYPE_WRAP" value="0" />
+      <option name="FUNCTION_TOP_AFTER_RETURN_TYPE_WRAP" value="0" />
+      <option name="FUNCTION_PARAMETERS_WRAP" value="2" />
+      <option name="FUNCTION_PARAMETERS_NEW_LINE_AFTER_LPAR" value="true" />
+      <option name="LAMBDA_CAPTURE_LIST_WRAP" value="5" />
+      <option name="FUNCTION_CALL_ARGUMENTS_WRAP" value="5" />
+      <option name="FUNCTION_CALL_ARGUMENTS_NEW_LINE_AFTER_LPAR" value="true" />
+      <option name="CLASS_CONSTRUCTOR_INIT_LIST_WRAP" value="5" />
+      <option name="CLASS_CONSTRUCTOR_INIT_LIST_NEW_LINE_BEFORE_COLON" value="1" />
+      <option name="SPACE_BEFORE_COLON_IN_FOREACH" value="true" />
+      <option name="SPACE_AFTER_POINTER_IN_DECLARATION" value="true" />
+      <option name="SPACE_AFTER_REFERENCE_IN_DECLARATION" value="true" />
+      <option name="SPACE_BEFORE_DICTIONARY_LITERAL_COLON" value="true" />
+    </Objective-C>
+    <codeStyleSettings language="CMake">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="3" />
+        <option name="CONTINUATION_INDENT_SIZE" value="6" />
+        <option name="TAB_SIZE" value="3" />
+      </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="ObjectiveC">
+      <option name="KEEP_LINE_BREAKS" value="false" />
+      <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
+      <option name="CLASS_BRACE_STYLE" value="2" />
+      <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+      <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="false" />
+      <option name="ASSIGNMENT_WRAP" value="1" />
+      <indentOptions>
+        <option name="INDENT_SIZE" value="3" />
+        <option name="CONTINUATION_INDENT_SIZE" value="6" />
+        <option name="TAB_SIZE" value="3" />
+      </indentOptions>
+    </codeStyleSettings>
+  </code_scheme>
+</component>

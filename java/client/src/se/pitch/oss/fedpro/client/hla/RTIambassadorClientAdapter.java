@@ -938,6 +938,25 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
    }
 
    @Override
+   public void subscribeObjectClassDirectedInteractionsUniversally(
+         ObjectClassHandle objectClass,
+         InteractionClassHandleSet interactionClasses)
+   throws
+         InteractionClassNotDefined,
+         ObjectClassNotDefined,
+         SaveInProgress,
+         RestoreInProgress,
+         FederateNotExecutionMember,
+         NotConnected,
+         RTIinternalError
+   {
+      if (objectClass == null) {
+         throw new ObjectClassNotDefined("null");
+      }
+      _rtiAmbassadorClient.subscribeObjectClassDirectedInteractionsUniversally(objectClass, interactionClasses);
+   }
+
+   @Override
    public void unsubscribeObjectClassDirectedInteractions(ObjectClassHandle objectClass)
    throws
          ObjectClassNotDefined,
@@ -1037,7 +1056,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       _rtiAmbassadorClient.releaseObjectInstanceName(objectInstanceName);
    }
 
-   public void reserveMultipleObjectInstanceName(Set<String> objectInstanceNames)
+   public void reserveMultipleObjectInstanceNames(Set<String> objectInstanceNames)
    throws
          IllegalName,
          NameSetWasEmpty,
@@ -1047,10 +1066,10 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.reserveMultipleObjectInstanceName(objectInstanceNames);
+      _rtiAmbassadorClient.reserveMultipleObjectInstanceNames(objectInstanceNames);
    }
 
-   public void releaseMultipleObjectInstanceName(Set<String> objectInstanceNames)
+   public void releaseMultipleObjectInstanceNames(Set<String> objectInstanceNames)
    throws
          ObjectInstanceNameNotReserved,
          SaveInProgress,
@@ -1059,7 +1078,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.releaseMultipleObjectInstanceName(objectInstanceNames);
+      _rtiAmbassadorClient.releaseMultipleObjectInstanceNames(objectInstanceNames);
    }
 
    public ObjectInstanceHandle registerObjectInstance(ObjectClassHandle objectClass)
@@ -1327,7 +1346,6 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          AttributeHandleSet attributes,
          TransportationTypeHandle transportationType)
    throws
-         AttributeAlreadyBeingChanged,
          AttributeNotDefined,
          ObjectClassNotDefined,
          InvalidTransportationTypeHandle,
@@ -1616,11 +1634,11 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      checkIntervalType(lookahead);
+      throwIfInvalidLookahead(lookahead);
       _rtiAmbassadorClient.enableTimeRegulation(lookahead);
    }
 
-   private void checkIntervalType(LogicalTimeInterval<?> lookahead)
+   private void throwIfInvalidLookahead(LogicalTimeInterval<?> lookahead)
    throws InvalidLookahead
    {
       // Types match if they implement the same basic time type, e.g. HLAinteger64Time.
@@ -1637,7 +1655,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       }
    }
 
-   private void checkTimeType(LogicalTime<?, ?> time)
+   private void throwIfInvalidLogicalTime(LogicalTime<?, ?> time)
    throws InvalidLogicalTime
    {
       LogicalTime<?, ?> logicalTime = _timeFactory.makeInitial();
@@ -1704,7 +1722,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(time);
+      throwIfInvalidLogicalTime(time);
       _rtiAmbassadorClient.timeAdvanceRequest(time);
    }
 
@@ -1721,7 +1739,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(time);
+      throwIfInvalidLogicalTime(time);
       _rtiAmbassadorClient.timeAdvanceRequestAvailable(time);
    }
 
@@ -1738,7 +1756,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(time);
+      throwIfInvalidLogicalTime(time);
       _rtiAmbassadorClient.nextMessageRequest(time);
    }
 
@@ -1755,7 +1773,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(time);
+      throwIfInvalidLogicalTime(time);
       _rtiAmbassadorClient.nextMessageRequestAvailable(time);
    }
 
@@ -1772,7 +1790,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      checkTimeType(time);
+      throwIfInvalidLogicalTime(time);
       _rtiAmbassadorClient.flushQueueRequest(time);
    }
 
@@ -2300,13 +2318,13 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
    }
 
    public ResignAction getAutomaticResignDirective()
-   throws FederateNotExecutionMember, NotConnected, RTIinternalError
+   throws FederateNotExecutionMember, NotConnected, RTIinternalError, RestoreInProgress, SaveInProgress
    {
       return _rtiAmbassadorClient.getAutomaticResignDirective();
    }
 
    public void setAutomaticResignDirective(ResignAction resignAction)
-   throws InvalidResignAction, FederateNotExecutionMember, NotConnected, RTIinternalError
+   throws FederateNotExecutionMember, NotConnected, RTIinternalError, RestoreInProgress, SaveInProgress
    {
       _rtiAmbassadorClient.setAutomaticResignDirective(resignAction);
    }
@@ -2501,12 +2519,9 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       return _rtiAmbassadorClient.getTransportationTypeName(transportationType);
    }
 
-   public DimensionHandleSet getAvailableDimensionsForClassAttribute(
-         ObjectClassHandle objectClass,
-         AttributeHandle attribute)
+   public DimensionHandleSet getAvailableDimensionsForObjectClass(
+         ObjectClassHandle objectClass)
    throws
-         AttributeNotDefined,
-         InvalidAttributeHandle,
          InvalidObjectClassHandle,
          FederateNotExecutionMember,
          NotConnected,
@@ -2515,10 +2530,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new InvalidObjectClassHandle("null");
       }
-      if (attribute == null) {
-         throw new InvalidAttributeHandle("null");
-      }
-      return _rtiAmbassadorClient.getAvailableDimensionsForClassAttribute(objectClass, attribute);
+      return _rtiAmbassadorClient.getAvailableDimensionsForObjectClass(objectClass);
    }
 
    public DimensionHandleSet getAvailableDimensionsForInteractionClass(InteractionClassHandle interactionClass)
@@ -2657,100 +2669,157 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       return _rtiAmbassadorClient.normalizeServiceGroup(serviceGroup);
    }
 
-   public void enableObjectClassRelevanceAdvisorySwitch()
-   throws
-         ObjectClassRelevanceAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   @Override
+   public boolean getObjectClassRelevanceAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      _rtiAmbassadorClient.enableObjectClassRelevanceAdvisorySwitch();
+      return _rtiAmbassadorClient.getObjectClassRelevanceAdvisorySwitch();
    }
 
-   public void disableObjectClassRelevanceAdvisorySwitch()
-   throws
-         ObjectClassRelevanceAdvisorySwitchIsOff,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   @Override
+   public void setObjectClassRelevanceAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      _rtiAmbassadorClient.disableObjectClassRelevanceAdvisorySwitch();
+      _rtiAmbassadorClient.setObjectClassRelevanceAdvisorySwitch(value);
    }
 
-   public void enableAttributeRelevanceAdvisorySwitch()
-   throws
-         AttributeRelevanceAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   @Override
+   public boolean getAttributeRelevanceAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      _rtiAmbassadorClient.enableAttributeRelevanceAdvisorySwitch();
+      return _rtiAmbassadorClient.getAttributeRelevanceAdvisorySwitch();
    }
 
-   public void disableAttributeRelevanceAdvisorySwitch()
-   throws
-         AttributeRelevanceAdvisorySwitchIsOff,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   @Override
+   public void setAttributeRelevanceAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      _rtiAmbassadorClient.disableAttributeRelevanceAdvisorySwitch();
+      _rtiAmbassadorClient.setAttributeRelevanceAdvisorySwitch(value);
    }
 
-   public void enableAttributeScopeAdvisorySwitch()
-   throws
-         AttributeScopeAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   @Override
+   public boolean getAttributeScopeAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      _rtiAmbassadorClient.enableAttributeScopeAdvisorySwitch();
+      return _rtiAmbassadorClient.getAttributeScopeAdvisorySwitch();
    }
 
-   public void disableAttributeScopeAdvisorySwitch()
-   throws
-         AttributeScopeAdvisorySwitchIsOff,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   @Override
+   public void setAttributeScopeAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      _rtiAmbassadorClient.disableAttributeScopeAdvisorySwitch();
+      _rtiAmbassadorClient.setAttributeScopeAdvisorySwitch(value);
    }
 
-   public void enableInteractionRelevanceAdvisorySwitch()
-   throws
-         InteractionRelevanceAdvisorySwitchIsOn,
-         SaveInProgress,
-         RestoreInProgress,
-         FederateNotExecutionMember,
-         NotConnected,
-         RTIinternalError
+   @Override
+   public boolean getInteractionRelevanceAdvisorySwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      _rtiAmbassadorClient.enableInteractionRelevanceAdvisorySwitch();
+      return _rtiAmbassadorClient.getInteractionRelevanceAdvisorySwitch();
    }
 
-   public void disableInteractionRelevanceAdvisorySwitch()
+   @Override
+   public void setInteractionRelevanceAdvisorySwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      _rtiAmbassadorClient.setInteractionRelevanceAdvisorySwitch(value);
+   }
+
+   @Override
+   public boolean getConveyRegionDesignatorSetsSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getConveyRegionDesignatorSetsSwitch();
+   }
+
+   @Override
+   public void setConveyRegionDesignatorSetsSwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      _rtiAmbassadorClient.setConveyRegionDesignatorSetsSwitch(value);
+   }
+
+   @Override
+   public boolean getServiceReportingSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getServiceReportingSwitch();
+   }
+
+   @Override
+   public void setServiceReportingSwitch(boolean value)
    throws
-         InteractionRelevanceAdvisorySwitchIsOff,
+         ReportServiceInvocationsAreSubscribed,
          SaveInProgress,
          RestoreInProgress,
          FederateNotExecutionMember,
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.disableInteractionRelevanceAdvisorySwitch();
+      _rtiAmbassadorClient.setServiceReportingSwitch(value);
+   }
+
+   @Override
+   public boolean getExceptionReportingSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getExceptionReportingSwitch();
+   }
+
+   @Override
+   public void setExceptionReportingSwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      _rtiAmbassadorClient.setExceptionReportingSwitch(value);
+   }
+
+   @Override
+   public boolean getSendServiceReportsToFileSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getSendServiceReportsToFileSwitch();
+   }
+
+   @Override
+   public void setSendServiceReportsToFileSwitch(boolean value)
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      _rtiAmbassadorClient.setSendServiceReportsToFileSwitch(value);
+   }
+
+   @Override
+   public boolean getAutoProvideSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getAutoProvideSwitch();
+   }
+
+   @Override
+   public boolean getDelaySubscriptionEvaluationSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getDelaySubscriptionEvaluationSwitch();
+   }
+
+   @Override
+   public boolean getAdvisoriesUseKnownClassSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getAdvisoriesUseKnownClassSwitch();
+   }
+
+   @Override
+   public boolean getAllowRelaxedDDMSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getAllowRelaxedDDMSwitch();
+   }
+
+   @Override
+   public boolean getNonRegulatedGrantSwitch()
+   throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
+   {
+      return _rtiAmbassadorClient.getNonRegulatedGrantSwitch();
    }
 
    public boolean evokeCallback(double approximateMinimumTimeInSeconds)

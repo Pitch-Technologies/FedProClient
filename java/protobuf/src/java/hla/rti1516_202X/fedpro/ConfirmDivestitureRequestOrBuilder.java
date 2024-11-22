@@ -23,19 +23,19 @@ public interface ConfirmDivestitureRequestOrBuilder extends
   hla.rti1516_202X.fedpro.ObjectInstanceHandleOrBuilder getObjectInstanceOrBuilder();
 
   /**
-   * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
-   * @return Whether the attributes field is set.
+   * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
+   * @return Whether the confirmedAttributes field is set.
    */
-  boolean hasAttributes();
+  boolean hasConfirmedAttributes();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
-   * @return The attributes.
+   * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
+   * @return The confirmedAttributes.
    */
-  hla.rti1516_202X.fedpro.AttributeHandleSet getAttributes();
+  hla.rti1516_202X.fedpro.AttributeHandleSet getConfirmedAttributes();
   /**
-   * <code>.rti1516_202X.fedpro.AttributeHandleSet attributes = 2;</code>
+   * <code>.rti1516_202X.fedpro.AttributeHandleSet confirmedAttributes = 2;</code>
    */
-  hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder getAttributesOrBuilder();
+  hla.rti1516_202X.fedpro.AttributeHandleSetOrBuilder getConfirmedAttributesOrBuilder();
 
   /**
    * <code>bytes userSuppliedTag = 3;</code>

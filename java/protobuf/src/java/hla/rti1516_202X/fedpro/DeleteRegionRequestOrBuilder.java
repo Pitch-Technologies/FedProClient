@@ -8,17 +8,17 @@ public interface DeleteRegionRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
-   * @return Whether the theRegion field is set.
+   * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
+   * @return Whether the region field is set.
    */
-  boolean hasTheRegion();
+  boolean hasRegion();
   /**
-   * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
-   * @return The theRegion.
+   * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
+   * @return The region.
    */
-  hla.rti1516_202X.fedpro.RegionHandle getTheRegion();
+  hla.rti1516_202X.fedpro.RegionHandle getRegion();
   /**
-   * <code>.rti1516_202X.fedpro.RegionHandle theRegion = 1;</code>
+   * <code>.rti1516_202X.fedpro.RegionHandle region = 1;</code>
    */
-  hla.rti1516_202X.fedpro.RegionHandleOrBuilder getTheRegionOrBuilder();
+  hla.rti1516_202X.fedpro.RegionHandleOrBuilder getRegionOrBuilder();
 }

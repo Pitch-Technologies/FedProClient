@@ -16,16 +16,34 @@
 
 package se.pitch.oss.fedpro.client.transport;
 
+import se.pitch.oss.fedpro.client.TypedProperties;
 import se.pitch.oss.fedpro.common.transport.FedProSocket;
 import se.pitch.oss.fedpro.common.transport.FedProSocketImpl;
 
 import java.io.IOException;
 
+import static se.pitch.oss.fedpro.client.Settings.*;
+import static se.pitch.oss.fedpro.client.transport.TransportSettings.*;
+import static se.pitch.oss.fedpro.common.Ports.DEFAULT_PORT_TCP;
+
 public class TcpTransport extends TransportBase {
 
-   public TcpTransport(String host, int port)
+   public TcpTransport(TypedProperties settings)
    {
-      super(host, port);
+      super(
+            settings == null ?
+                  DEFAULT_CONNECTION_HOST :
+                  settings.getString(SETTING_NAME_CONNECTION_HOST, DEFAULT_CONNECTION_HOST),
+            settings == null ?
+                  DEFAULT_PORT_TCP :
+                  settings.getInt(SETTING_NAME_CONNECTION_PORT, DEFAULT_PORT_TCP));
+
+      TypedProperties allTransportSettingsUsed = new TypedProperties();
+      allTransportSettingsUsed.setString(SETTING_NAME_CONNECTION_HOST, _host);
+      allTransportSettingsUsed.setInt(SETTING_NAME_CONNECTION_PORT, _port);
+      LOGGER.config(() -> String.format(
+            "Federate Protocol client transport layer settings used:\n%s",
+            allTransportSettingsUsed.toPrettyString()));
    }
 
    protected FedProSocket doConnect(String host, int port)

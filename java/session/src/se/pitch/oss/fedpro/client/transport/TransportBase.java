@@ -21,11 +21,15 @@ import se.pitch.oss.fedpro.common.transport.FedProSocket;
 
 import java.io.IOException;
 import java.net.ConnectException;
+import java.util.logging.Logger;
 
 public abstract class TransportBase implements Transport {
 
-   private final String _host;
-   private final int _port;
+   protected static final Logger LOGGER = Logger.getLogger(TransportBase.class.getName());
+
+   // Transport layer settings
+   protected final String _host;
+   protected final int _port;
 
    protected TransportBase(String host, int port)
    {
@@ -33,6 +37,14 @@ public abstract class TransportBase implements Transport {
       _port = port;
    }
 
+   /**
+    * Establishes a connection with a server through the host IP address and port
+    * specified as arguments to the constructor of transport this instance.
+    *
+    * @return A socket instance.
+    * @throws IOException If an IO error occurs and no connection to the server is
+    *                     successfully established.
+    */
    public FedProSocket connect()
    throws IOException
    {
@@ -50,4 +62,5 @@ public abstract class TransportBase implements Transport {
 
    protected abstract FedProSocket doConnect(String host, int port)
    throws IOException;
+
 }

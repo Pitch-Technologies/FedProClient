@@ -16,6 +16,7 @@
 
 package se.pitch.oss.fedpro.client;
 
+import se.pitch.oss.fedpro.common.exceptions.SessionAlreadyTerminated;
 import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionLost;
 
@@ -29,45 +30,47 @@ import java.util.concurrent.TimeUnit;
  * Reconnection attempts will happen according to a supplied custom strategy, or, by default, every 5 seconds up to
  * a minute. If the connection cannot be reestablished, a {@link ConnectionLostListener} will be invoked.
  */
-public interface PersistentSession {
+public interface PersistentSession extends AutoCloseable {
 
    /**
-    * Set the interval at which to send heartbeats when no other messages are being sent, in order to keep the
-    * connection alive. May only be set before invoking {@link #start(Session.HlaCallbackRequestListener)}.
-    *
-    * @param heartbeatInterval     The interval at which to send heartbeats
-    * @param heartbeatIntervalUnit The time unit of heartbeatInterval
+    * Invoked when the session fails to reconnect to the server.
     */
-   void setHeartbeatInterval(
-         long heartbeatInterval,
-         TimeUnit heartbeatIntervalUnit);
+   interface ConnectionLostListener {
+      void onConnectionLost(String reason);
+   }
 
    /**
-    * Set the timeout for each request to the server, after which the session will be deemed dropped and attempt
-    * reconnection.
+    * Get the session ID.
     *
-    * @param sessionTimeout     The timeout for each request
-    * @param sessionTimeoutUnit The unit of sessionTimeout
-    * @throws SessionIllegalState If the session has already started.
+    * @return The session ID.
     */
-   void setSessionTimeout(
-         long sessionTimeout,
-         TimeUnit sessionTimeoutUnit)
-   throws SessionIllegalState;
-
    long getId();
 
+   /**
+    * Start a new Federate Protocol Persistent Session.
+    *
+    * @param hlaCallbackRequestListener The handler to be invoked for every callback that
+    *                                   the RTI needs to deliver to the federate.
+    * @throws SessionIllegalState  If the operation is not allowed in this state.
+    * @throws SessionLost          If the session is in a faulty state, or cannot be
+    *                              established for any reason.
+    * @throws NullPointerException If hlaCallbackRequestListener is null.
+    */
    void start(Session.HlaCallbackRequestListener hlaCallbackRequestListener)
    throws SessionLost, SessionIllegalState;
 
    /**
-    * Start a new Federate Protocol session
+    * Start a new Federate Protocol Persistent Session.
     *
-    * @param hlaCallbackRequestListener The handler to be invoked for every callback the RTI needs to deliver to the federate
-    * @param connectionTimeout          timeout for the server response to the initial connection
-    * @param connectionTimeoutUnit      time unit for connectionTimeout
-    * @throws SessionIllegalState if the operation is not allowed in this session state
-    * @throws SessionLost         if the session is in a faulty state, or cannot be established for any reason
+    * @param hlaCallbackRequestListener The handler to be invoked for every callback that
+    *                                   the RTI needs to deliver to the federate.
+    * @param connectionTimeout          Timeout for the server response to the initial
+    *                                   connection.
+    * @param connectionTimeoutUnit      Time unit for connectionTimeout.
+    * @throws SessionIllegalState  If the operation is not allowed in this state.
+    * @throws SessionLost          If the session is in a faulty state, or cannot be
+    *                              established for any reason.
+    * @throws NullPointerException If hlaCallbackRequestListener is null.
     */
    void start(
          Session.HlaCallbackRequestListener hlaCallbackRequestListener,
@@ -76,13 +79,15 @@ public interface PersistentSession {
    throws SessionLost, SessionIllegalState;
 
    /**
-    * Send an HLA call to the Federate Protocol server. If the connection to the server is currently broken, or breaks
-    * before the call can be sent, the call will be sent after the session has been reestablished.
+    * Send an HLA call to the server. If the connection to the server is currently broken,
+    * or breaks before the call can be sent, the call will be sent after the session has
+    * been reestablished.
     *
-    * @param encodedHlaCall the encoded HLA call
-    * @return a future that will be completed with the response to the HLA call, or, if the connection is terminated
-    *       before the call can be completed, with an exception.
-    * @throws SessionIllegalState if the operation is not allowed in this session state
+    * @param encodedHlaCall The encoded HLA call.
+    * @return A future that will be completed with the response to the HLA call, or, if
+    *       he connection is terminated before the call can be completed, with an exception.
+    * @throws SessionAlreadyTerminated If the session is already terminated.
+    * @throws SessionIllegalState      If the operation is not allowed in this state.
     */
    CompletableFuture<byte[]> sendHlaCallRequest(byte[] encodedHlaCall)
    throws SessionIllegalState;
@@ -90,9 +95,11 @@ public interface PersistentSession {
    /**
     * Send a response to an HLA callback received from the server.
     *
-    * @param responseToSequenceNumber the sequence number of the callback request message this message is in response to
-    * @param hlaCallbackResponse      the encoded callback response
-    * @throws SessionIllegalState if the operation is not allowed in this session state
+    * @param responseToSequenceNumber The sequence number of the callback request message
+    *                                 this message is in response to.
+    * @param hlaCallbackResponse      The encoded callback response.
+    * @throws SessionAlreadyTerminated If the session is already terminated.
+    * @throws SessionIllegalState      If the operation is not allowed in this state.
     */
    void sendHlaCallbackResponse(
          int responseToSequenceNumber,
@@ -102,9 +109,11 @@ public interface PersistentSession {
    /**
     * Terminate this session.
     *
-    * @throws SessionIllegalState if the operation is not allowed in this session state
-    * @throws SessionLost         if this method is interrupted for any reason, including timeout, while waiting
-    *                             for the server to respond. The session is still considered terminated when this happens.
+    * @throws SessionAlreadyTerminated If the session is already terminated.
+    * @throws SessionIllegalState      If the operation is not allowed in this state.
+    * @throws SessionLost              If this method is interrupted for any reason,
+    *                                  including timeout, while waiting. for the server to respond. The session is still
+    *                                  considered terminated when this happens.
     */
    void terminate()
    throws SessionLost, SessionIllegalState;
@@ -112,16 +121,16 @@ public interface PersistentSession {
    /**
     * Terminate this session.
     *
-    * @param responseTimeout     the maximum time to wait for a response to the termination request
-    * @param responseTimeoutUnit the time unit of the responseTimeout argument
-    * @throws SessionIllegalState if the operation is not allowed in this session state
-    * @throws SessionLost         if this method is interrupted for any reason, including timeout, while waiting for the
-    *                             server to respond. The session is still considered terminated when this happens.
+    * @param responseTimeout     The maximum time to wait for a response to the
+    *                            termination request.
+    * @param responseTimeoutUnit The time unit of the responseTimeout argument.
+    * @throws SessionAlreadyTerminated If the session is already terminated.
+    * @throws SessionIllegalState      If the operation is not allowed in this state.
+    * @throws SessionLost              If this method is interrupted for any reason,
+    *                                  including timeout, while waiting for the server to respond. The session is still
+    *                                  considered terminated when this happens.
     */
    void terminate(int responseTimeout, TimeUnit responseTimeoutUnit)
    throws SessionLost, SessionIllegalState;
 
-   interface ConnectionLostListener {
-      void onConnectionLost(String reason);
-   }
 }

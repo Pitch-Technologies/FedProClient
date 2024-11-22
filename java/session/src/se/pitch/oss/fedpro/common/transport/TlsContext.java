@@ -62,6 +62,9 @@ public class TlsContext {
          TlsKeysImpl tlsKeys,
          boolean trustAllServers)
    {
+      if (tlsKeys == null) {
+         throw new IllegalArgumentException("Failed to provide SSL context since the provided TLS keys object is null."); // or something better
+      }
       KeyStore keyStore = tlsKeys.getKeyStore();
       char[] password = tlsKeys.getPassword();
 

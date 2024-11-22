@@ -16,10 +16,6 @@
 
 package se.pitch.oss.chat1516e;
 
-/*
- * Chat sample for Federate Protocol.
- */
-
 import hla.rti1516e.*;
 import hla.rti1516e.encoding.DecoderException;
 import hla.rti1516e.encoding.EncoderFactory;
@@ -34,6 +30,9 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * HLA Evolved Chat sample for Federate Protocol.
+ */
 class Chat extends NullFederateAmbassador {
    private RTIambassador _rtiAmbassador;
    private final String[] _args;
@@ -88,10 +87,9 @@ class Chat extends NullFederateAmbassador {
          if (_args.length > 0) {
             rtiHost = _args[0];
          } else {
-            System.out.println("Enter the FedPro server and CRC address, such as");
-            System.out.println("'localhost;;localhost', 'localhost:15164;;localhost:8989', '192.168.1.62;;localhost'.");
-            System.out.println("Or if FedPro server is hosted on the same machine as CRC, only the CRC address, such as");
-            System.out.println("'localhost', '192.168.1.62'.");
+            System.out.println("Enter the Federate Protocol server address, such as");
+            System.out.println("'localhost', 'localhost:15164', '192.168.1.62'");
+            System.out.println("If no value is provided, defaults will be used.");
             System.out.println();
             System.out.print("[localhost]: ");
             rtiHost = in.readLine();
@@ -100,8 +98,8 @@ class Chat extends NullFederateAmbassador {
             }
          }
 
+         RtiFactory rtiFactory = RtiFactoryFactory.getRtiFactory("Federate Protocol");
          try {
-            RtiFactory rtiFactory = RtiFactoryFactory.getRtiFactory("Federate Protocol");
             _rtiAmbassador = rtiFactory.getRtiAmbassador();
             _encoderFactory = rtiFactory.getEncoderFactory();
          } catch (Exception e) {
@@ -109,8 +107,7 @@ class Chat extends NullFederateAmbassador {
             return;
          }
 
-         String settingsDesignator = rtiHost;
-
+         String settingsDesignator = "crcAddress=" + rtiHost;
          _rtiAmbassador.connect(this, CallbackModel.HLA_IMMEDIATE, settingsDesignator);
 
          try {

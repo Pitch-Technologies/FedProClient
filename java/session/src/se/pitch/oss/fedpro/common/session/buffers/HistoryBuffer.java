@@ -28,6 +28,7 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
    private final SequenceNumber _sequenceNumberAllocator;
    private final BufferReader<QueueableMessage> _messageQueue;
    private final CircularBuffer<EncodedMessage> _history;
+   private EncodedMessage _currentControlMessage;
 
    public HistoryBuffer(
          BufferReader<QueueableMessage> messageQueue,
@@ -52,7 +53,7 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
    {
       synchronized (_lock) {
          waitAndPollIntoHistory();
-         return _history.poll();
+         return internalPoll();
       }
    }
 
@@ -62,7 +63,7 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
    {
       synchronized (_lock) {
          waitAndPollIntoHistory();
-         return _history.peek();
+         return internalPeek();
       }
    }
 
@@ -71,7 +72,7 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
    {
       synchronized (_lock) {
          pollIntoHistory();
-         return _history.poll();
+         return internalPoll();
       }
    }
 
@@ -80,7 +81,29 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
    {
       synchronized (_lock) {
          pollIntoHistory();
+         return internalPeek();
+      }
+   }
+
+   @GuardedBy("_lock")
+   private EncodedMessage internalPeek()
+   {
+      if (_currentControlMessage == null) {
          return _history.peek();
+      } else {
+         return _currentControlMessage;
+      }
+   }
+
+   @GuardedBy("_lock")
+   private EncodedMessage internalPoll()
+   {
+      if (_currentControlMessage == null) {
+         return _history.poll();
+      } else {
+         EncodedMessage message = _currentControlMessage;
+         _currentControlMessage = null;
+         return message;
       }
    }
 
@@ -88,26 +111,37 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
    private void waitAndPollIntoHistory()
    throws InterruptedException
    {
-      if (_history.isEmpty()) {
-         _history.insert(_messageQueue.waitAndPoll().createEncodedMessage(nextSequenceNumber()));
+      if (_history.isEmpty() && _currentControlMessage == null) {
+         QueueableMessage message = _messageQueue.waitAndPoll();
+         internalInsertIntoHistory(message.createEncodedMessage(nextSequenceNumber()));
       }
    }
 
    @GuardedBy("_lock")
    private void pollIntoHistory()
    {
-      if (_history.isEmpty()) {
+      if (_history.isEmpty() && _currentControlMessage == null) {
          QueueableMessage message = _messageQueue.poll();
          if (message != null) {
-            _history.insert(message.createEncodedMessage(nextSequenceNumber()));
+            internalInsertIntoHistory(message.createEncodedMessage(nextSequenceNumber()));
          }
+      }
+   }
+
+   @GuardedBy("_lock")
+   private void internalInsertIntoHistory(EncodedMessage encodedMessage)
+   {
+      if (!encodedMessage.isControl) {
+         _history.insert(encodedMessage);
+      } else {
+         _currentControlMessage = encodedMessage;
       }
    }
 
    @Override
    public int size()
    {
-      return _history.size() + _messageQueue.size();
+      return _history.size() + _messageQueue.size() + (_currentControlMessage == null ? 0 : 1);
    }
 
    @Override
@@ -129,26 +163,21 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
       return _messageQueue.waitUntilEmpty(timeoutMillis);
    }
 
-   private void insertIntoHistory(EncodedMessage element)
-   {
-      _history.insert(element);
-   }
-
-   // NOTE: This method is NOT thread-safe relative to read operations!
-   public void rewindBy(int rewindBy)
-   {
-      synchronized (_lock) {
-         _history.rewindBy(rewindBy);
-      }
-   }
-
    public void rewindTo(SequenceNumber sequenceNumber)
    {
       _history.rewindTo(object -> object != null && sequenceNumber.get() == object.sequenceNumber);
+      _currentControlMessage = null;
+   }
+
+   public void rewindToFirst()
+   {
+      _history.rewindToFirst();
+      _currentControlMessage = null;
    }
 
    public int getOldestAddedSequenceNumber()
    {
+      // Intentionally skipping control messages
       synchronized (_lock) {
          EncodedMessage message = _history.peekOldest();
          return message != null ? message.sequenceNumber : SequenceNumber.NO_SEQUENCE_NUMBER;
@@ -157,6 +186,7 @@ public class HistoryBuffer implements BufferReader<EncodedMessage> {
 
    public int getNewestAddedSequenceNumber()
    {
+      // Intentionally skipping control messages
       synchronized (_lock) {
          EncodedMessage message = _history.peekNewest();
          return message != null ? message.sequenceNumber : SequenceNumber.NO_SEQUENCE_NUMBER;

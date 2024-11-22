@@ -23,9 +23,6 @@ import "datatypes.proto";
 message ConnectionLost {
       string faultDescription = 1;
 }
-message FederateResigned {
-      string reasonForResignDescription = 1;
-}
 message ReportFederationExecutions {
       FederationExecutionInformationSet report = 1;
 }
@@ -35,6 +32,9 @@ message ReportFederationExecutionMembers {
 }
 message ReportFederationExecutionDoesNotExist {
       string federationName = 1;
+}
+message FederateResigned {
+      string reasonForResignDescription = 1;
 }
 message SynchronizationPointRegistrationSucceeded {
       string synchronizationPointLabel = 1;
@@ -222,14 +222,14 @@ message ConfirmAttributeTransportationTypeChange {
       AttributeHandleSet attributes = 2;
       TransportationTypeHandle transportationType = 3;
 }
-message ConfirmInteractionTransportationTypeChange {
-      InteractionClassHandle interactionClass = 1;
-      TransportationTypeHandle transportationType = 2;
-}
 message ReportAttributeTransportationType {
       ObjectInstanceHandle objectInstance = 1;
       AttributeHandle attribute = 2;
       TransportationTypeHandle transportationType = 3;
+}
+message ConfirmInteractionTransportationTypeChange {
+      InteractionClassHandle interactionClass = 1;
+      TransportationTypeHandle transportationType = 2;
 }
 message ReportInteractionTransportationType {
       FederateHandle federate = 1;
@@ -301,10 +301,10 @@ message CallbackSucceeded {
 message CallbackRequest {
    oneof callbackRequest {
       ConnectionLost connectionLost = 1;
-      FederateResigned federateResigned = 2;
-      ReportFederationExecutions reportFederationExecutions = 3;
-      ReportFederationExecutionMembers reportFederationExecutionMembers = 4;
-      ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 5;
+      ReportFederationExecutions reportFederationExecutions = 2;
+      ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
+      ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
+      FederateResigned federateResigned = 5;
       SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
       SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
       AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
@@ -345,8 +345,8 @@ message CallbackRequest {
       TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
       TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
       ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
-      ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 46;
-      ReportAttributeTransportationType reportAttributeTransportationType = 47;
+      ReportAttributeTransportationType reportAttributeTransportationType = 46;
+      ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
       ReportInteractionTransportationType reportInteractionTransportationType = 48;
       RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
       RequestDivestitureConfirmation requestDivestitureConfirmation = 50;

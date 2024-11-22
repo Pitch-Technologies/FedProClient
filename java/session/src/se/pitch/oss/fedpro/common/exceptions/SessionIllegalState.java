@@ -16,6 +16,10 @@
 
 package se.pitch.oss.fedpro.common.exceptions;
 
+/**
+ * Session layer exception thrown when calling a member method but the session state does
+ * not allow for the operation to be performed.
+ */
 public class SessionIllegalState extends Exception {
 
    public SessionIllegalState()

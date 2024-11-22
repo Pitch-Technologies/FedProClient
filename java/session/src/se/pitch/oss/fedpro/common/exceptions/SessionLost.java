@@ -16,6 +16,10 @@
 
 package se.pitch.oss.fedpro.common.exceptions;
 
+/**
+ * Session layer exception indicating that the session cannot continue for some reason.
+ * The session is unusable once this exception is thrown.
+ */
 public class SessionLost extends Exception {
 
    public SessionLost(String message)

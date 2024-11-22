@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="IEEE 202X APIs" pattern="file[cpp]:api/HLA_1516-202X/*" />
+</component>

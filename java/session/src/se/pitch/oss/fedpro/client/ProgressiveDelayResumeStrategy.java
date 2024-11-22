@@ -21,15 +21,19 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
- * This resume strategy can be customized to attempt session resume at progressively longer intervals.
- * {@link #withLimit(long, long)} may be called any number of times; each call adds a limit - from the time the session
- * was dropped - before which a certain retry delay will be used.
+ * This resume strategy can be customized to attempt session resume at progressively
+ * longer intervals.
+ * {@link #withLimit(long, long)} may be called any number of times. Each call adds a
+ * limit, from the time the session was dropped, before which a certain retry delay will
+ * be used.
  * <p>
  * Example:
  * {@code progressiveDelayResumeStrategy.withLimit(1_000, 10_000).withLimit(5_000, 60_000)}
- * In this example, the resume attempts will first be made every second for the first ten seconds, then every five
- * seconds until a minute has passed since disconnect, after which the session will be deemed lost. The order of the
- * calls to {@link #withLimit(long, long)} can be changed with changing the resulting strategy.
+ * <p>
+ * In the example above, the resume attempts will first be made every second for the first
+ * ten seconds, then every five seconds until a minute has passed since disconnection,
+ * after which the session will be deemed lost. The order of the calls to
+ * {@link #withLimit(long, long)} can be changed with changing the resulting strategy.
  */
 public class ProgressiveDelayResumeStrategy implements ResumeStrategy {
 

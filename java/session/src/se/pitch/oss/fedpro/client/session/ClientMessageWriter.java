@@ -25,24 +25,27 @@ import se.pitch.oss.fedpro.client.session.msg.*;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
+import static se.pitch.oss.fedpro.client.session.msg.ByteInfo.INT32_SIZE;
+
+// Not thread-safe
 public class ClientMessageWriter extends MessageWriter {
 
    public ClientMessageWriter(
          long sessionId,
-         GenericBuffer<QueueableMessage> messageQueue,
-         Object sessionLock)
+         GenericBuffer<QueueableMessage> messageQueue)
    {
-      super(sessionId, messageQueue, sessionLock);
+      super(sessionId, messageQueue);
    }
 
-   public void writeNewSessionMessage(int protocolVersion)
-   throws InterruptedException
+   public static EncodedMessage createNewSessionMessage()
    {
-      addMessage(
-            4,
+      NewSessionMessage message = new NewSessionMessage(NewSessionMessage.FEDERATE_PROTOCOL_VERSION);
+      return EncodedMessage.create(MessageHeader.with(
+            INT32_SIZE,
+            SequenceNumber.INITIAL_SEQUENCE_NUMBER,
+            MessageHeader.NO_SESSION_ID,
             SequenceNumber.NO_SEQUENCE_NUMBER,
-            MessageType.CTRL_NEW_SESSION,
-            new NewSessionMessage(protocolVersion));
+            MessageType.CTRL_NEW_SESSION), message);
    }
 
    public CompletableFuture<byte[]> writeHeartbeatMessage(
@@ -57,14 +60,14 @@ public class ClientMessageWriter extends MessageWriter {
          int lastReceivedSequenceNumber,
          int oldestAvailableSequenceNumber)
    {
-      return EncodedMessage.create(
-            MessageHeader.with(
-                  4 + 4,
-                  SequenceNumber.NO_SEQUENCE_NUMBER,
-                  sessionId,
-                  lastReceivedSequenceNumber,
-                  MessageType.CTRL_RESUME_REQUEST),
-            new ResumeRequestMessage(lastReceivedSequenceNumber, oldestAvailableSequenceNumber));
+      ResumeRequestMessage message =
+            new ResumeRequestMessage(lastReceivedSequenceNumber, oldestAvailableSequenceNumber);
+      return EncodedMessage.create(MessageHeader.with(
+            INT32_SIZE * 2,
+            SequenceNumber.NO_SEQUENCE_NUMBER,
+            sessionId,
+            lastReceivedSequenceNumber,
+            MessageType.CTRL_RESUME_REQUEST), message);
    }
 
    public void writeTerminateMessage(int lastReceivedSequenceNumber)
@@ -93,7 +96,7 @@ public class ClientMessageWriter extends MessageWriter {
    throws InterruptedException
    {
       addMessage(
-            4 + encodedResponse.length,
+            INT32_SIZE + encodedResponse.length,
             lastReceivedSequenceNumber,
             MessageType.HLA_CALLBACK_RESPONSE,
             new HlaCallbackResponseMessage(responseToSequenceNumber, encodedResponse));
