@@ -24,7 +24,7 @@ jobs:
     - name: Build with Ant
       env:
         JDK11_HOME: ${{ env.JAVA_HOME }}
-      run: ant -noinput -buildfile build.xml
+      run: ant -noinput -buildfile java/build.xml
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
