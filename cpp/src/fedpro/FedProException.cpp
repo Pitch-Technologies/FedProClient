@@ -40,7 +40,7 @@ namespace FedPro
       // Always null-terminated
       const char * exceptionName = typeid(*this).name();
 
-      uint32_t prefixLength = std::strlen(prefix);
+      size_t prefixLength = std::strlen(prefix);
       if (std::strlen(exceptionName) >= prefixLength && std::strncmp(exceptionName, prefix, prefixLength) == 0) {
          exceptionName += prefixLength;
       }

@@ -76,8 +76,11 @@ namespace FedPro
          int32_t lastReceivedSequenceNumber,
          ConcurrentHashMap<int32_t, std::promise<ByteSequence>> * futuresMap)
    {
+      if (hlaServiceCallWithParams.size() > std::numeric_limits<uint32_t>::max()) {
+         throw std::ios_base::failure{"writeHlaCallRequest fail. Request size exceed payload limit. "};
+      }
       return addRequest(
-            hlaServiceCallWithParams.size(),
+            static_cast<uint32_t>(hlaServiceCallWithParams.size()),
             lastReceivedSequenceNumber,
             MessageType::HLA_CALL_REQUEST,
             std::make_unique<HlaCallRequestMessage>(hlaServiceCallWithParams),
@@ -89,8 +92,11 @@ namespace FedPro
          const ByteSequence & encodedResponse,
          int32_t lastReceivedSequenceNumber)
    {
+      if (encodedResponse.size() > std::numeric_limits<uint32_t>::max() - INT32_SIZE) {
+         throw std::ios_base::failure{"writeHlaCallbackResponse fail. Response size exceed payload limit. "};
+      }
       addMessage(
-            INT32_SIZE + encodedResponse.size(),
+            static_cast<uint32_t>(INT32_SIZE + encodedResponse.size()),
             lastReceivedSequenceNumber,
             MessageType::HLA_CALLBACK_RESPONSE,
             std::make_unique<HlaCallbackResponseMessage>(responseToSequenceNumber, encodedResponse));
@@ -118,7 +124,7 @@ namespace FedPro
    }
 
    void MessageWriter::addMessage(
-         uint64_t payloadSize,
+         uint32_t payloadSize,
          int32_t lastReceivedSequenceNumber,
          MessageType messageType,
          std::unique_ptr<EncodableMessage> payload)
@@ -140,7 +146,7 @@ namespace FedPro
    }
 
    std::future<ByteSequence> MessageWriter::addRequest(
-         uint64_t payloadSize,
+         uint32_t payloadSize,
          int32_t lastReceivedSequenceNumber,
          MessageType messageType,
          std::unique_ptr<EncodableMessage> payload,

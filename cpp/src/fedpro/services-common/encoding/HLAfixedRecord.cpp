@@ -100,7 +100,7 @@ namespace RTI_NAMESPACE
 
    // Adds a copy of the dataElement instance to this fixed array all array elements
    // must have same type
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedRecord &
 #else
    void
@@ -109,14 +109,14 @@ namespace RTI_NAMESPACE
          const DataElement & dataElement)
    {
       _impl->elements.emplace_back(true, dataElement.clone().release());
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
    // Adds a pointer to a dataElement instance to this fixed array all array elements
    // must have same type
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedRecord &
 #else
    void
@@ -125,7 +125,7 @@ namespace RTI_NAMESPACE
          DataElement * dataElement)
    {
       _impl->elements.emplace_back(false, dataElement);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -144,7 +144,7 @@ namespace RTI_NAMESPACE
    // Sets the element at the given index to a copy of the given element instance
    // Element must match prototype.
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedRecord &
 #else
    void
@@ -161,14 +161,14 @@ namespace RTI_NAMESPACE
       } else {
          throw EncoderException(L"Non-matching type");
       }
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
    // Sets the element at the given index to a copy of the given element instance
    // Element must match prototype.
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedRecord &
 #else
    void
@@ -185,7 +185,7 @@ namespace RTI_NAMESPACE
       } else {
          throw EncoderException(L"Non-matching type");
       }
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -251,7 +251,7 @@ namespace RTI_NAMESPACE
    }
 
    // Decodes this element from the ByteWrapper.
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedRecord &
 #else
    void
@@ -261,7 +261,7 @@ namespace RTI_NAMESPACE
    {
       std::vector<Octet> buffer((char *) inData.data(), (char *) inData.data() + inData.size());
       decodeFrom(buffer, 0);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }

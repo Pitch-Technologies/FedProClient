@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/sample/fedproclient_sample.iml" filepath="$PROJECT_DIR$/sample/fedproclient_sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample_evolved/fedproclient_sample_evolved.iml" filepath="$PROJECT_DIR$/sample_evolved/fedproclient_sample_evolved.iml" />
       <module fileurl="file://$PROJECT_DIR$/session/fedproclient_session.iml" filepath="$PROJECT_DIR$/session/fedproclient_session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/fedproclient_test.iml" filepath="$PROJECT_DIR$/test/fedproclient_test.iml" />
     </modules>
   </component>
 </project>

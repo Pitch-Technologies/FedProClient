@@ -135,7 +135,7 @@ namespace RTI_NAMESPACE
    // pointed to is valid for the lifetime of this object, or past
    // the next time this object is given new data.
    // A null value will revert instance to use internal storage
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAopaqueData &
 #else
    void
@@ -147,7 +147,7 @@ namespace RTI_NAMESPACE
    {
       delete _impl;
       _impl = new HLAopaqueDataImplementation(inDataBuffer, bufferSize, dataSize);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -170,7 +170,7 @@ namespace RTI_NAMESPACE
       return static_cast<const Octet *>(_impl->data);
    }
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAopaqueData &
 #else
    void
@@ -181,7 +181,7 @@ namespace RTI_NAMESPACE
    {
       delete _impl;
       _impl = new HLAopaqueDataImplementation(inData, dataSize);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -224,7 +224,7 @@ namespace RTI_NAMESPACE
    }
 
    // Decodes this element from the ByteWrapper.
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAopaqueData &
 #else
    void
@@ -234,7 +234,7 @@ namespace RTI_NAMESPACE
    {
       std::vector<Octet> buffer((char *) inData.data(), (char *) inData.data() + inData.size());
       decodeFrom(buffer, 0);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }

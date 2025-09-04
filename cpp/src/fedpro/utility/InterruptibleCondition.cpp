@@ -57,4 +57,12 @@ namespace FedPro
       return false;
    }
 
+   InterruptibleConditionState::InterruptibleConditionState() = default;
+
+   void InterruptibleConditionState::interrupt()
+   {
+      std::lock_guard<std::mutex> lockGuard{_mutex};
+      _condition.interruptOne();
+   }
+
 } // FedPro

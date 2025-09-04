@@ -17,6 +17,7 @@
 package se.pitch.oss.fedpro.client.transport;
 
 import se.pitch.oss.fedpro.client.TypedProperties;
+import se.pitch.oss.fedpro.common.Protocol;
 import se.pitch.oss.fedpro.common.transport.FedProSocket;
 import se.pitch.oss.fedpro.common.transport.websockets.WebSocketSocket;
 
@@ -32,12 +33,15 @@ import static se.pitch.oss.fedpro.common.Ports.DEFAULT_PORT_WS;
 
 public class WebSocketTransport extends TransportBase {
 
-   public WebSocketTransport(String host, int port)
+   private final String _protocolName;
+
+   public WebSocketTransport(String host, int port, String protocolName)
    {
       super(host, port);
+      _protocolName = protocolName;
    }
 
-   public WebSocketTransport(TypedProperties settings)
+   public WebSocketTransport(TypedProperties settings, String protocolName)
    {
       super(
             settings == null ?
@@ -47,6 +51,7 @@ public class WebSocketTransport extends TransportBase {
                   DEFAULT_PORT_WS :
                   settings.getInt(SETTING_NAME_CONNECTION_PORT, DEFAULT_PORT_WS));
 
+      _protocolName = protocolName;
       TypedProperties allTransportSettingsUsed = new TypedProperties();
       allTransportSettingsUsed.setString(SETTING_NAME_CONNECTION_HOST, _host);
       allTransportSettingsUsed.setInt(SETTING_NAME_CONNECTION_PORT, _port);
@@ -84,7 +89,7 @@ public class WebSocketTransport extends TransportBase {
          }
       } catch (InterruptedException ignore) {
       }
-      return new WebSocketSocket(impl);
+      return new WebSocketSocket(impl, _protocolName);
    }
 
    WebSocketClientImpl createWebSocketClient(URI uri)

@@ -23,15 +23,15 @@ namespace FedPro
 {
    // These methods assume that elements of the passed container works with operator<<.
 
-   template<typename E>
+   template<typename E, typename SizeType>
    std::string sequenceToString(
          E * sequence,
-         uint32_t size)
+         SizeType size)
    {
       std::ostringstream oss;
       oss << "[";
       bool first = true;
-      for (uint32_t i = 0; i < size; i++) {
+      for (SizeType i = 0; i < size; i++) {
          if (!first) {
             oss << ", ";
          } else {

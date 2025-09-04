@@ -16,11 +16,10 @@
 
 #pragma once
 
-#include <condition_variable>
+#include <fedpro/Aliases.h>
+
 #include <functional>
-#include <mutex>
-#include <queue>
-#include <thread>
+#include <memory>
 
 namespace FedPro
 {
@@ -30,6 +29,9 @@ namespace FedPro
 
       explicit ThreadPool(uint32_t numberOfThreads);
 
+      /**
+       * @brief Destroy a ThreadPool, but do not wait for job termination.
+       */
       ~ThreadPool();
 
       void start();
@@ -38,18 +40,29 @@ namespace FedPro
 
       void clearJobs();
 
-      void stop(bool processRemainingJobs);
+      /**
+       * @Brief Instruct threads to terminate, but do not wait for job termination.
+       */
+      void shutdown(bool processRemainingJobs);
+
+      bool isShutdown() const;
+
+      /**
+       * @Brief Wait for all threads to terminate, following a call to shutdown().
+       */
+      void waitTermination();
+
+      /**
+       * @Brief Wait for all threads to terminate, following a call to shutdown().
+       */
+      bool waitTermination(FedProDuration timeout);
+
+      bool isTerminated() const;
 
    private:
-      void threadLoop();
+      class State;
 
-      bool _stop{false};
-      bool _processJobsOnStop{false};
-      std::mutex _queueMutex;
-      std::condition_variable _condition;
-      std::vector<std::thread> _threads;
-      std::queue<std::function<void()>> _jobs;
-      uint32_t _numberOfThreads;
+      std::shared_ptr<State> _state;
    };
 
 } // FedPro

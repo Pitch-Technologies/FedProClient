@@ -18,6 +18,8 @@
 
 namespace FedPro
 {
+   ProgressiveDelayResumeStrategy::ProgressiveDelayResumeStrategy() = default;
+
    ProgressiveDelayResumeStrategy & ProgressiveDelayResumeStrategy::withLimit(
          FedProDuration delayBeforeLimit,
          FedProDuration limit)

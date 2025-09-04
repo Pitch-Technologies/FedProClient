@@ -17,6 +17,7 @@
 #include "TransportImplBase.h"
 
 #include <fedpro/Settings.h>
+#include <fedpro/Socket.h>
 
 #include <spdlog/spdlog.h>
 
@@ -45,9 +46,14 @@ namespace FedPro
          return socket;
       } catch (const std::ios_base::failure & e) {
          throw e;
-      } catch (...) {
-         // If throwing any exception other than std::ios_base::failure,
-         // catch it and re-throw with a generic error message.
+      }
+      // If throwing any exception other than std::ios_base::failure,
+      // catch it and re-throw with a generic error message.
+      catch (const std::exception & e)
+      {
+         throw std::ios_base::failure(std::string {"Could not connect: "} + e.what());
+      }
+      catch (...) {
          throw std::ios_base::failure("Could not connect");
       }
    }

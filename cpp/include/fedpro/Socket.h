@@ -56,7 +56,7 @@ namespace FedPro
        * @param minByteCount Minimum number of bytes to read.
        * @param maxByteCount Maximum number of bytes to read.
        */
-      int recv(
+      uint32_t recv(
             char * buf,
             uint32_t minByteCount,
             uint32_t maxByteCount) const;

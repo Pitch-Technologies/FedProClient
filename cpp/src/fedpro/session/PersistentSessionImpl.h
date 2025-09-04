@@ -36,6 +36,8 @@ namespace FedPro
        *                               layer.
        * @param connectionLostListener The listener to be called when the session is
        *                               terminally lost due to connection issues.
+       * @param sessionTerminatedListener The listener to be called when the session terminates
+       *                                  for any reason.
        * @param resumeStrategy         An unique pointer to the ResumeStrategy that will
        *                               control when, how often and for how long
        *                               reconnection attempts will be made.
@@ -45,14 +47,21 @@ namespace FedPro
       explicit PersistentSessionImpl(
             std::unique_ptr<Transport> transportProtocol,
             ConnectionLostListener onConnectionLost,
+            SessionTerminatedListener sessionTerminatedListener,
             const Properties & settings,
             std::unique_ptr<ResumeStrategy> resumeStrategy);
 
       ~PersistentSessionImpl() override;
 
+      void waitListeners() noexcept(false) override;
+
       FedProDuration getHeartbeatInterval() const noexcept override;
 
       uint64_t getId() const noexcept override;
+
+      void prettyPrintPerSecondStats(std::ostream & stream) override;
+
+      void prettyPrintStats(std::ostream & stream) override;
 
       void start(Session::HlaCallbackRequestListener onHlaCallbackRequest) override;
 
@@ -74,6 +83,8 @@ namespace FedPro
 
    private:
       ConnectionLostListener _onConnectionLost;
+
+      SessionTerminatedListener _sessionTerminatedListener;
 
       // Session layer settings
       FedProDuration _heartbeatInterval;

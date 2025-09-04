@@ -97,7 +97,6 @@ public class SocketWriter {
    public void socketWriterLoop()
    {
       assert !isDirectOnly();
-      _run = true;
       try {
          while (_run) {
             // This loop sometimes waits in non-interruptible I/O, which will not stop blocking unless the socket is closed.
@@ -197,6 +196,11 @@ public class SocketWriter {
    {
       assert !isDirectOnly();
       _socket = socket;
+   }
+
+   public void enableWriterLoop()
+   {
+      _run = true;
    }
 
    private void logSentMessage(EncodedMessage message)

@@ -26,6 +26,7 @@ public class SessionSettings
    static final long DEFAULT_CONNECTION_TIMEOUT_MILLIS = DEFAULT_RESPONSE_TIMEOUT_MILLIS;
    static final int DEFAULT_MESSAGE_QUEUE_SIZE = 2000;
    static final boolean DEFAULT_RATE_LIMIT_ENABLED = false;
+   public static final int DEFAULT_PRINT_STATS_INTERVAL_MILLIS =  60_000;
 
    // Non settings related default values.
    static final long DEFAULT_RECONNECT_DELAY_MILLIS = 5_000L;

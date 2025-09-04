@@ -16,6 +16,8 @@
 
 package se.pitch.oss.fedpro.common.session;
 
+import java.util.concurrent.TimeUnit;
+
 public class LogUtil {
 
    private static final int NUMBER_LENGTH = 3;
@@ -36,6 +38,13 @@ public class LogUtil {
       return caller + " Session " + sessionIdString;
    }
 
+   public static String timePeriodToString(long timeMillis) {
+      long timeDays = TimeUnit.MILLISECONDS.toDays(timeMillis);
+      long timeHours = TimeUnit.MILLISECONDS.toHours(timeMillis) - TimeUnit.DAYS.toHours(timeDays);
+      long timeMins = TimeUnit.MILLISECONDS.toMinutes(timeMillis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(timeMillis));
+      return String.format("%d days, %d hours, %d minutes", timeDays, timeHours, timeMins);
+   }
+
    public static String padNumString(int nr)
    {
       return padNumString(String.valueOf(nr));
@@ -50,5 +59,32 @@ public class LogUtil {
    {
       String format = String.format("%016x", sessionId);
       return format.substring(0, 4) + "-" + format.substring(4, 8) + "-" + format.substring(8, 12) + "-" + format.substring(12, 16);
+   }
+
+   public static long parseSessionId(String formattedSessionId)
+   throws NumberFormatException
+   {
+      String sessionIdWithoutSeparators = formattedSessionId.replaceAll("-", "");
+      return Long.parseUnsignedLong(sessionIdWithoutSeparators, 16);
+   }
+
+   public static String printStatInt(int n) {
+      return String.format("%11d", n);
+   }
+
+   public static String printStatLong(long n) {
+      return String.format("%11d", n);
+   }
+
+   public static String printStatFloat(float f) {
+      return String.format("%11.2f", f);
+   }
+
+   public static String padStat() {
+      return padStat(1);
+   }
+
+   public static String padStat(int n) {
+      return String.format("%" + (11*n) + "s", "");
    }
 }

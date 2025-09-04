@@ -16,15 +16,15 @@
 
 package se.pitch.oss.fedpro.client.hla.time;
 
-import hla.rti1516_202X.encoding.ByteWrapper;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderException;
-import hla.rti1516_202X.encoding.HLAinteger64BE;
-import hla.rti1516_202X.exceptions.CouldNotDecode;
-import hla.rti1516_202X.exceptions.CouldNotEncode;
-import hla.rti1516_202X.exceptions.IllegalTimeArithmetic;
-import hla.rti1516_202X.time.HLAinteger64Interval;
-import hla.rti1516_202X.time.HLAinteger64Time;
+import hla.rti1516_2025.encoding.ByteWrapper;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderException;
+import hla.rti1516_2025.encoding.HLAinteger64BE;
+import hla.rti1516_2025.exceptions.CouldNotDecode;
+import hla.rti1516_2025.exceptions.CouldNotEncode;
+import hla.rti1516_2025.exceptions.IllegalTimeArithmetic;
+import hla.rti1516_2025.time.HLAinteger64Interval;
+import hla.rti1516_2025.time.HLAinteger64Time;
 import se.pitch.oss.fedpro.client.hla.encoders.OmtEncoderFactory;
 
 

@@ -27,8 +27,12 @@ import java.io.InputStream;
 import java.net.URI;
 import java.nio.ByteBuffer;
 import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 class WebSocketClientImpl extends WebSocketClient implements WebSocketSender {
+
+   private static final Logger LOGGER = Logger.getLogger(WebSocketClientImpl.class.getName());
 
    private final WebSocketInputStream _webSocketInputStream = new WebSocketInputStream();
 
@@ -71,12 +75,19 @@ class WebSocketClientImpl extends WebSocketClient implements WebSocketSender {
 
    @Override
    public void onClose(
-         int i,
-         String s,
-         boolean b)
+         int statusCode,
+         String reason,
+         boolean remote)
    {
       try {
          _webSocketInputStream.close();
+         // Report positive status codes only. Negative values are not valid status codes,
+         // and Java-WebSocket internally use such invalid values that have no meaning to the outside world.
+         if (statusCode >= 0) {
+            // 1000 is CLOSE_NORMAL as per RFE 6455 https://www.rfc-editor.org/rfc/rfc6455.html#section-7.4.1
+            Level logLevel = (statusCode == 1000) ? Level.INFO : Level.WARNING;
+            LOGGER.log(logLevel, String.format("WebSocket closed with status code %d: %s", statusCode, reason));
+         }
       } catch (IOException ignore) {
       }
    }
@@ -86,6 +97,7 @@ class WebSocketClientImpl extends WebSocketClient implements WebSocketSender {
    {
       try {
          _webSocketInputStream.close();
+         LOGGER.warning("WebSocket error: " + e);
       } catch (IOException ignored) {
       }
    }

@@ -21,6 +21,9 @@
 //   See also RTIambassadorClient.cpp for the rest of the implementation.
 //
 
+// Silence clang-tidy issues reported for standard HLA exception.
+// NOLINTBEGIN(hicpp-exception-baseclass)
+
 #include "RTIambassadorClient.h"
 
 #include "FederateAmbassadorDispatcher.h"
@@ -35,85 +38,95 @@ namespace FedPro
          : RTIambassadorClientGenericBase(std::move(clientConverter))
    {
    }
-   rti1516_202X::fedpro::ConfigurationResult RTIambassadorClient::connect(
-         string_view inputSettings,
+
+   RTI_NAMESPACE::ConfigurationResult RTIambassadorClient::connect(
+         const Properties & clientSettings,
          RTI_NAMESPACE::FederateAmbassador & federateAmbassador,
          RTI_NAMESPACE::CallbackModel callbackModel,
-         std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> rtiConfiguration,
+         const RTI_NAMESPACE::RtiConfiguration * rtiConfiguration,
          const RTI_NAMESPACE::Credentials * credentials)
    {
       throwIfInCallback(__func__);
+      // This holds the session resulting from a failed connection attempt. doConnect may assign a pointer to this.
+      // When the method returns or throws, this local variable and the corresponding session are destroyed.
+      // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks,
+      // since the session may use the lock upon destruction.
+      std::unique_ptr<PersistentSession> failedSession;
 
       std::lock_guard<std::mutex> guard(_connectionStateLock);
 
       throwIfAlreadyConnected();
       try {
-         createPersistentSession(inputSettings);
+         createPersistentSession(clientSettings);
       } catch (const std::invalid_argument & e) {
          throw RTI_NAMESPACE::ConnectionFailed(toWString(e.what()));
       }
 
-      rti1516_202X::fedpro::CallRequest callRequest;
-#if (RTI_HLA_VERSION >= 2024)
+      rti1516_2025::fedpro::CallRequest callRequest;
+#if (RTI_HLA_VERSION >= 2025)
       if (rtiConfiguration && credentials) {
-         auto * request = new rti1516_202X::fedpro::ConnectWithConfigurationAndCredentialsRequest();
-         request->set_allocated_rticonfiguration(rtiConfiguration.release());
+         auto * request = new rti1516_2025::fedpro::ConnectWithConfigurationAndCredentialsRequest();
+         request->set_allocated_rticonfiguration(_clientConverter->convertFromHla(*rtiConfiguration));
          request->set_allocated_credentials(_clientConverter->convertFromHla(*credentials));
 
          callRequest.set_allocated_connectwithconfigurationandcredentialsrequest(request);
 
-         rti1516_202X::fedpro::CallResponse callResponse = doConnect(federateAmbassador, callbackModel, callRequest);
+         rti1516_2025::fedpro::CallResponse callResponse =
+               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
          if (!callResponse.has_connectwithconfigurationandcredentialsresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
 
-         const rti1516_202X::fedpro::ConnectWithConfigurationAndCredentialsResponse
+         const rti1516_2025::fedpro::ConnectWithConfigurationAndCredentialsResponse
                & response = callResponse.connectwithconfigurationandcredentialsresponse();
-         return response.configurationresult();
+         return _clientConverter->convertToHla(response.configurationresult());
       } else if (credentials) {
-         auto * request = new rti1516_202X::fedpro::ConnectWithCredentialsRequest();
+         auto * request = new rti1516_2025::fedpro::ConnectWithCredentialsRequest();
          request->set_allocated_credentials(_clientConverter->convertFromHla(*credentials));
 
          callRequest.set_allocated_connectwithcredentialsrequest(request);
 
-         rti1516_202X::fedpro::CallResponse callResponse = doConnect(federateAmbassador, callbackModel, callRequest);
+         rti1516_2025::fedpro::CallResponse callResponse =
+               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
          if (!callResponse.has_connectwithcredentialsresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
 
-         const rti1516_202X::fedpro::ConnectWithCredentialsResponse
+         const rti1516_2025::fedpro::ConnectWithCredentialsResponse
                & response = callResponse.connectwithcredentialsresponse();
-         return response.configurationresult();
+         return _clientConverter->convertToHla(response.configurationresult());
 #else
          if (credentials) {
             throw RTI_NAMESPACE::RTIinternalError(L"Unexpected credentials in pre-HLA4 federate");
 #endif
       } else if (rtiConfiguration) {
-         auto * request = new rti1516_202X::fedpro::ConnectWithConfigurationRequest();
-         request->set_allocated_rticonfiguration(rtiConfiguration.release());
+         auto * request = new rti1516_2025::fedpro::ConnectWithConfigurationRequest();
+         request->set_allocated_rticonfiguration(_clientConverter->convertFromHla(*rtiConfiguration));
 
          callRequest.set_allocated_connectwithconfigurationrequest(request);
 
-         rti1516_202X::fedpro::CallResponse callResponse = doConnect(federateAmbassador, callbackModel, callRequest);
+         rti1516_2025::fedpro::CallResponse callResponse =
+               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
          if (!callResponse.has_connectwithconfigurationresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
 
-         const rti1516_202X::fedpro::ConnectWithConfigurationResponse
+         const rti1516_2025::fedpro::ConnectWithConfigurationResponse
                & response = callResponse.connectwithconfigurationresponse();
-         return response.configurationresult();
+         return _clientConverter->convertToHla(response.configurationresult());
       } else {
-         auto * request = new rti1516_202X::fedpro::ConnectRequest();
+         auto * request = new rti1516_2025::fedpro::ConnectRequest();
 
          callRequest.set_allocated_connectrequest(request);
 
-         rti1516_202X::fedpro::CallResponse callResponse = doConnect(federateAmbassador, callbackModel, callRequest);
+         rti1516_2025::fedpro::CallResponse callResponse =
+               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
          if (!callResponse.has_connectresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
 
-         const rti1516_202X::fedpro::ConnectResponse & response = callResponse.connectresponse();
-         return response.configurationresult();
+         const rti1516_2025::fedpro::ConnectResponse & response = callResponse.connectresponse();
+         return _clientConverter->convertToHla(response.configurationresult());
       }
    }
 
@@ -173,3 +186,5 @@ namespace FedPro
    }
 
 } // FedPro
+
+// NOLINTEND(hicpp-exception-baseclass)

@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.client.hla.encoders;
 
-import hla.rti1516_202X.encoding.ByteWrapper;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderException;
-import hla.rti1516_202X.encoding.HLAunsignedInteger16LE;
+import hla.rti1516_2025.encoding.ByteWrapper;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderException;
+import hla.rti1516_2025.encoding.HLAunsignedInteger16LE;
 
 class OmtHLAunsignedInteger16LE extends AbstractDataElement implements HLAunsignedInteger16LE {
    private short _value;

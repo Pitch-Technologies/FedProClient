@@ -16,7 +16,7 @@
 
 package se.pitch.oss.fedpro.client_evolved.hla;
 
-import hla.rti1516_202X.fedpro.*;
+import hla.rti1516_2025.fedpro.*;
 import hla.rti1516e.exceptions.*;
 
 import java.util.Collections;
@@ -64,9 +64,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesAndTimeRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesAndTimeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesAndTimeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesAndTimeRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesAndTimeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesAndTimeRequest.newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModules(_clientConverter.convertFromHla(fomModules));
@@ -99,9 +99,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMAndTimeRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMAndTimeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMAndTimeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMAndTimeRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMAndTimeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMAndTimeRequest.newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModules(_clientConverter.convertFromHla(fomModules));
@@ -126,9 +126,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DestroyFederationExecutionRequest request;
-      hla.rti1516_202X.fedpro.DestroyFederationExecutionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.DestroyFederationExecutionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.DestroyFederationExecutionRequest request;
+      hla.rti1516_2025.fedpro.DestroyFederationExecutionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.DestroyFederationExecutionRequest.newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
 
@@ -147,8 +147,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ListFederationExecutionsRequest request;
-      request = hla.rti1516_202X.fedpro.ListFederationExecutionsRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.ListFederationExecutionsRequest request;
+      request = hla.rti1516_2025.fedpro.ListFederationExecutionsRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setListFederationExecutionsRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -171,9 +171,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          RTIinternalError
    {
       throwIfInCallback("joinFederationExecution");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.JoinFederationExecutionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.JoinFederationExecutionRequest.newBuilder();
 
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
@@ -183,7 +183,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionResponse response =
+      hla.rti1516_2025.fedpro.JoinFederationExecutionResponse response =
             callResponse.getJoinFederationExecutionResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -205,9 +205,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          RTIinternalError
    {
       throwIfInCallback("joinFederationExecutionWithName");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameRequest.newBuilder();
 
       builder.setFederateName(_clientConverter.convertFromHla(federateName));
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
@@ -218,7 +218,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionWithNameResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameResponse response =
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameResponse response =
             callResponse.getJoinFederationExecutionWithNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -244,9 +244,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          RTIinternalError
    {
       throwIfInCallback("joinFederationExecutionWithNameAndModules");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesRequest.newBuilder();
 
       builder.setFederateName(_clientConverter.convertFromHla(federateName));
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
@@ -259,7 +259,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionWithNameAndModulesResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesResponse response =
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesResponse response =
             callResponse.getJoinFederationExecutionWithNameAndModulesResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -283,9 +283,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          RTIinternalError
    {
       throwIfInCallback("joinFederationExecutionWithModules");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesRequest.newBuilder();
 
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
@@ -296,7 +296,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionWithModulesResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesResponse response =
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesResponse response =
             callResponse.getJoinFederationExecutionWithModulesResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -314,9 +314,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          RTIinternalError
    {
       throwIfInCallback("resignFederationExecution");
-      hla.rti1516_202X.fedpro.ResignFederationExecutionRequest request;
-      hla.rti1516_202X.fedpro.ResignFederationExecutionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ResignFederationExecutionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ResignFederationExecutionRequest request;
+      hla.rti1516_2025.fedpro.ResignFederationExecutionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ResignFederationExecutionRequest.newBuilder();
 
       builder.setResignAction(_clientConverter.convertFromHla(resignAction));
 
@@ -339,9 +339,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointRequest request;
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointRequest request;
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointRequest.newBuilder();
 
       builder.setSynchronizationPointLabel(_clientConverter.convertFromHla(synchronizationPointLabel));
       builder.setUserSuppliedTag(_clientConverter.convertFromHla(userSuppliedTag));
@@ -368,9 +368,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointWithSetRequest request;
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointWithSetRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointWithSetRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointWithSetRequest request;
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointWithSetRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointWithSetRequest.newBuilder();
 
       builder.setSynchronizationPointLabel(_clientConverter.convertFromHla(synchronizationPointLabel));
       builder.setUserSuppliedTag(_clientConverter.convertFromHla(userSuppliedTag));
@@ -397,9 +397,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SynchronizationPointAchievedRequest request;
-      hla.rti1516_202X.fedpro.SynchronizationPointAchievedRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SynchronizationPointAchievedRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SynchronizationPointAchievedRequest request;
+      hla.rti1516_2025.fedpro.SynchronizationPointAchievedRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SynchronizationPointAchievedRequest.newBuilder();
 
       builder.setSynchronizationPointLabel(_clientConverter.convertFromHla(synchronizationPointLabel));
       builder.setSuccessfully(_clientConverter.convertFromHla(successIndicator));
@@ -422,9 +422,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestFederationSaveRequest request;
-      hla.rti1516_202X.fedpro.RequestFederationSaveRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestFederationSaveRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestFederationSaveRequest request;
+      hla.rti1516_2025.fedpro.RequestFederationSaveRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestFederationSaveRequest.newBuilder();
 
       builder.setLabel(_clientConverter.convertFromHla(label));
 
@@ -450,9 +450,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestFederationSaveWithTimeRequest request;
-      hla.rti1516_202X.fedpro.RequestFederationSaveWithTimeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestFederationSaveWithTimeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestFederationSaveWithTimeRequest request;
+      hla.rti1516_2025.fedpro.RequestFederationSaveWithTimeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestFederationSaveWithTimeRequest.newBuilder();
 
       builder.setLabel(_clientConverter.convertFromHla(label));
       builder.setTime(_clientConverter.convertFromHla(theTime));
@@ -475,8 +475,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.FederateSaveBegunRequest request;
-      request = hla.rti1516_202X.fedpro.FederateSaveBegunRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateSaveBegunRequest request;
+      request = hla.rti1516_2025.fedpro.FederateSaveBegunRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateSaveBegunRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -494,8 +494,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.FederateSaveCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateSaveCompleteRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateSaveCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateSaveCompleteRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateSaveCompleteRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -513,8 +513,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.FederateSaveNotCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateSaveNotCompleteRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateSaveNotCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateSaveNotCompleteRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateSaveNotCompleteRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -531,8 +531,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.AbortFederationSaveRequest request;
-      request = hla.rti1516_202X.fedpro.AbortFederationSaveRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.AbortFederationSaveRequest request;
+      request = hla.rti1516_2025.fedpro.AbortFederationSaveRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setAbortFederationSaveRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -549,8 +549,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryFederationSaveStatusRequest request;
-      request = hla.rti1516_202X.fedpro.QueryFederationSaveStatusRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryFederationSaveStatusRequest request;
+      request = hla.rti1516_2025.fedpro.QueryFederationSaveStatusRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryFederationSaveStatusRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -568,9 +568,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestFederationRestoreRequest request;
-      hla.rti1516_202X.fedpro.RequestFederationRestoreRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestFederationRestoreRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestFederationRestoreRequest request;
+      hla.rti1516_2025.fedpro.RequestFederationRestoreRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestFederationRestoreRequest.newBuilder();
 
       builder.setLabel(_clientConverter.convertFromHla(label));
 
@@ -592,8 +592,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.FederateRestoreCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateRestoreCompleteRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateRestoreCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateRestoreCompleteRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateRestoreCompleteRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -611,8 +611,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.FederateRestoreNotCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateRestoreNotCompleteRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateRestoreNotCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateRestoreNotCompleteRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateRestoreNotCompleteRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -629,8 +629,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.AbortFederationRestoreRequest request;
-      request = hla.rti1516_202X.fedpro.AbortFederationRestoreRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.AbortFederationRestoreRequest request;
+      request = hla.rti1516_2025.fedpro.AbortFederationRestoreRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setAbortFederationRestoreRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -647,8 +647,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryFederationRestoreStatusRequest request;
-      request = hla.rti1516_202X.fedpro.QueryFederationRestoreStatusRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryFederationRestoreStatusRequest request;
+      request = hla.rti1516_2025.fedpro.QueryFederationRestoreStatusRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryFederationRestoreStatusRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -669,9 +669,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.PublishObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.PublishObjectClassAttributesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.PublishObjectClassAttributesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.PublishObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.PublishObjectClassAttributesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.PublishObjectClassAttributesRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(attributeList));
@@ -696,9 +696,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnpublishObjectClassRequest request;
-      hla.rti1516_202X.fedpro.UnpublishObjectClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnpublishObjectClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishObjectClassRequest request;
+      hla.rti1516_2025.fedpro.UnpublishObjectClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnpublishObjectClassRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
 
@@ -724,9 +724,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnpublishObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.UnpublishObjectClassAttributesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnpublishObjectClassAttributesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.UnpublishObjectClassAttributesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnpublishObjectClassAttributesRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(attributeList));
@@ -750,9 +750,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.PublishInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.PublishInteractionClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.PublishInteractionClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.PublishInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.PublishInteractionClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.PublishInteractionClassRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theInteraction));
 
@@ -775,9 +775,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnpublishInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.UnpublishInteractionClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnpublishInteractionClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.UnpublishInteractionClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnpublishInteractionClassRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theInteraction));
 
@@ -802,9 +802,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(attributeList));
@@ -832,9 +832,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRateRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRateRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRateRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRateRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRateRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRateRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(attributeList));
@@ -862,9 +862,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(attributeList));
@@ -893,9 +893,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(attributeList));
@@ -921,9 +921,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnsubscribeObjectClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnsubscribeObjectClassRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
 
@@ -948,9 +948,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(attributeList));
@@ -975,9 +975,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeInteractionClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeInteractionClassRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theClass));
 
@@ -1001,9 +1001,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest request;
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassPassivelyRequest request;
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassPassivelyRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeInteractionClassPassivelyRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theClass));
 
@@ -1026,9 +1026,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnsubscribeInteractionClassRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theClass));
 
@@ -1051,9 +1051,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ReserveObjectInstanceNameRequest request;
+      hla.rti1516_2025.fedpro.ReserveObjectInstanceNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ReserveObjectInstanceNameRequest.newBuilder();
 
       builder.setObjectInstanceName(_clientConverter.convertFromHla(theObjectName));
 
@@ -1076,9 +1076,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ReleaseObjectInstanceNameRequest request;
+      hla.rti1516_2025.fedpro.ReleaseObjectInstanceNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ReleaseObjectInstanceNameRequest.newBuilder();
 
       builder.setObjectInstanceName(_clientConverter.convertFromHla(theObjectInstanceName));
 
@@ -1102,9 +1102,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest request;
-      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ReserveMultipleObjectInstanceNamesRequest request;
+      hla.rti1516_2025.fedpro.ReserveMultipleObjectInstanceNamesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ReserveMultipleObjectInstanceNamesRequest.newBuilder();
 
       builder.addAllObjectInstanceNames(_clientConverter.convertFromHla(theObjectNames));
 
@@ -1127,9 +1127,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest request;
-      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ReleaseMultipleObjectInstanceNamesRequest request;
+      hla.rti1516_2025.fedpro.ReleaseMultipleObjectInstanceNamesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ReleaseMultipleObjectInstanceNamesRequest.newBuilder();
 
       builder.addAllObjectInstanceNames(_clientConverter.convertFromHla(theObjectNames));
 
@@ -1153,9 +1153,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
 
@@ -1164,7 +1164,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasRegisterObjectInstanceResponse();
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceResponse response = callResponse.getRegisterObjectInstanceResponse();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceResponse response = callResponse.getRegisterObjectInstanceResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -1183,9 +1183,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setObjectInstanceName(_clientConverter.convertFromHla(theObjectName));
@@ -1195,7 +1195,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasRegisterObjectInstanceWithNameResponse();
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameResponse response =
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameResponse response =
             callResponse.getRegisterObjectInstanceWithNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -1215,9 +1215,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesRequest request;
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UpdateAttributeValuesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesRequest request;
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UpdateAttributeValuesRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributeValues(_clientConverter.convertFromHla(theAttributes));
@@ -1226,9 +1226,11 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       request = builder.build();
       CallRequest callRequest = CallRequest.newBuilder().setUpdateAttributeValuesRequest(request).build();
       if (_asyncUpdates) {
+         countAsyncUpdateForStats();
          doAsyncHlaCall(callRequest);
          return;
       }
+      countSyncUpdateForStats();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasUpdateAttributeValuesResponse();
@@ -1252,9 +1254,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest request;
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeRequest request;
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributeValues(_clientConverter.convertFromHla(theAttributes));
@@ -1263,10 +1265,11 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
 
       request = builder.build();
       CallRequest callRequest = CallRequest.newBuilder().setUpdateAttributeValuesWithTimeRequest(request).build();
+      countSyncUpdateForStats();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasUpdateAttributeValuesWithTimeResponse();
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeResponse response =
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeResponse response =
             callResponse.getUpdateAttributeValuesWithTimeResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -1286,9 +1289,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SendInteractionRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SendInteractionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SendInteractionRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theInteraction));
       builder.setParameterValues(_clientConverter.convertFromHla(theParameters));
@@ -1297,9 +1300,11 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       request = builder.build();
       CallRequest callRequest = CallRequest.newBuilder().setSendInteractionRequest(request).build();
       if (_asyncUpdates) {
+         countAsyncSentInteractionForStats();
          doAsyncHlaCall(callRequest);
          return;
       }
+      countSyncSentInteractionForStats();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasSendInteractionResponse();
@@ -1323,9 +1328,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SendInteractionWithTimeRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionWithTimeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SendInteractionWithTimeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionWithTimeRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionWithTimeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SendInteractionWithTimeRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theInteraction));
       builder.setParameterValues(_clientConverter.convertFromHla(theParameters));
@@ -1334,10 +1339,11 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
 
       request = builder.build();
       CallRequest callRequest = CallRequest.newBuilder().setSendInteractionWithTimeRequest(request).build();
+      countSyncSentInteractionForStats();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasSendInteractionWithTimeResponse();
-      hla.rti1516_202X.fedpro.SendInteractionWithTimeResponse response =
+      hla.rti1516_2025.fedpro.SendInteractionWithTimeResponse response =
             callResponse.getSendInteractionWithTimeResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -1355,9 +1361,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceRequest request;
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceRequest.Builder builder =
-            hla.rti1516_202X.fedpro.DeleteObjectInstanceRequest.newBuilder();
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceRequest request;
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceRequest.Builder builder =
+            hla.rti1516_2025.fedpro.DeleteObjectInstanceRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(objectHandle));
       builder.setUserSuppliedTag(_clientConverter.convertFromHla(userSuppliedTag));
@@ -1385,9 +1391,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest request;
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeRequest request;
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(objectHandle));
       builder.setUserSuppliedTag(_clientConverter.convertFromHla(userSuppliedTag));
@@ -1398,7 +1404,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasDeleteObjectInstanceWithTimeResponse();
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeResponse response =
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeResponse response =
             callResponse.getDeleteObjectInstanceWithTimeResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -1416,9 +1422,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest request;
-      hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest.Builder builder =
-            hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest.newBuilder();
+      hla.rti1516_2025.fedpro.LocalDeleteObjectInstanceRequest request;
+      hla.rti1516_2025.fedpro.LocalDeleteObjectInstanceRequest.Builder builder =
+            hla.rti1516_2025.fedpro.LocalDeleteObjectInstanceRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(objectHandle));
 
@@ -1444,9 +1450,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest request;
-      hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestInstanceAttributeValueUpdateRequest request;
+      hla.rti1516_2025.fedpro.RequestInstanceAttributeValueUpdateRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestInstanceAttributeValueUpdateRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1474,9 +1480,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest request;
-      hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestClassAttributeValueUpdateRequest request;
+      hla.rti1516_2025.fedpro.RequestClassAttributeValueUpdateRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestClassAttributeValueUpdateRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1507,9 +1513,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest request;
-      hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestAttributeTransportationTypeChangeRequest request;
+      hla.rti1516_2025.fedpro.RequestAttributeTransportationTypeChangeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestAttributeTransportationTypeChangeRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1537,9 +1543,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest request;
-      hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.QueryAttributeTransportationTypeRequest request;
+      hla.rti1516_2025.fedpro.QueryAttributeTransportationTypeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.QueryAttributeTransportationTypeRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttribute(_clientConverter.convertFromHla(theAttribute));
@@ -1567,9 +1573,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest request;
-      hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestInteractionTransportationTypeChangeRequest request;
+      hla.rti1516_2025.fedpro.RequestInteractionTransportationTypeChangeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestInteractionTransportationTypeChangeRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theClass));
       builder.setTransportationType(_clientConverter.convertFromHla(theType));
@@ -1595,9 +1601,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest request;
-      hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.QueryInteractionTransportationTypeRequest request;
+      hla.rti1516_2025.fedpro.QueryInteractionTransportationTypeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.QueryInteractionTransportationTypeRequest.newBuilder();
 
       builder.setFederate(_clientConverter.convertFromHla(theFederate));
       builder.setInteractionClass(_clientConverter.convertFromHla(theInteraction));
@@ -1624,9 +1630,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest request;
-      hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnconditionalAttributeOwnershipDivestitureRequest request;
+      hla.rti1516_2025.fedpro.UnconditionalAttributeOwnershipDivestitureRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnconditionalAttributeOwnershipDivestitureRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1656,9 +1662,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest request;
-      hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest.Builder builder =
-            hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest.newBuilder();
+      hla.rti1516_2025.fedpro.NegotiatedAttributeOwnershipDivestitureRequest request;
+      hla.rti1516_2025.fedpro.NegotiatedAttributeOwnershipDivestitureRequest.Builder builder =
+            hla.rti1516_2025.fedpro.NegotiatedAttributeOwnershipDivestitureRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1690,9 +1696,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ConfirmDivestitureRequest request;
-      hla.rti1516_202X.fedpro.ConfirmDivestitureRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ConfirmDivestitureRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ConfirmDivestitureRequest request;
+      hla.rti1516_2025.fedpro.ConfirmDivestitureRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ConfirmDivestitureRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setConfirmedAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1723,9 +1729,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setDesiredAttributes(_clientConverter.convertFromHla(desiredAttributes));
@@ -1756,9 +1762,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest.Builder builder =
-            hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest.Builder builder =
+            hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setDesiredAttributes(_clientConverter.convertFromHla(desiredAttributes));
@@ -1786,9 +1792,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest.Builder builder =
-            hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipReleaseDeniedRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipReleaseDeniedRequest.Builder builder =
+            hla.rti1516_2025.fedpro.AttributeOwnershipReleaseDeniedRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1815,9 +1821,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest.Builder builder =
-            hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedRequest.Builder builder =
+            hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1828,7 +1834,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasAttributeOwnershipDivestitureIfWantedResponse();
-      hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedResponse response =
+      hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedResponse response =
             callResponse.getAttributeOwnershipDivestitureIfWantedResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -1848,9 +1854,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest request;
-      hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest.Builder builder =
-            hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest.newBuilder();
+      hla.rti1516_2025.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest request;
+      hla.rti1516_2025.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest.Builder builder =
+            hla.rti1516_2025.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1879,9 +1885,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest request;
-      hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.CancelAttributeOwnershipAcquisitionRequest request;
+      hla.rti1516_2025.fedpro.CancelAttributeOwnershipAcquisitionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.CancelAttributeOwnershipAcquisitionRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -1907,9 +1913,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequest request;
-      hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequest.Builder builder =
-            hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequest.newBuilder();
+      hla.rti1516_2025.fedpro.QueryAttributeOwnershipRequest request;
+      hla.rti1516_2025.fedpro.QueryAttributeOwnershipRequest.Builder builder =
+            hla.rti1516_2025.fedpro.QueryAttributeOwnershipRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHlaToSet(theAttribute));
@@ -1935,9 +1941,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest request;
-      hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest.Builder builder =
-            hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest.newBuilder();
+      hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateRequest request;
+      hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateRequest.Builder builder =
+            hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttribute(_clientConverter.convertFromHla(theAttribute));
@@ -1947,7 +1953,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasIsAttributeOwnedByFederateResponse();
-      hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateResponse response =
+      hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateResponse response =
             callResponse.getIsAttributeOwnedByFederateResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -1966,9 +1972,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.EnableTimeRegulationRequest request;
-      hla.rti1516_202X.fedpro.EnableTimeRegulationRequest.Builder builder =
-            hla.rti1516_202X.fedpro.EnableTimeRegulationRequest.newBuilder();
+      hla.rti1516_2025.fedpro.EnableTimeRegulationRequest request;
+      hla.rti1516_2025.fedpro.EnableTimeRegulationRequest.Builder builder =
+            hla.rti1516_2025.fedpro.EnableTimeRegulationRequest.newBuilder();
 
       builder.setLookahead(_clientConverter.convertFromHla(theLookahead));
 
@@ -1991,8 +1997,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DisableTimeRegulationRequest request;
-      request = hla.rti1516_202X.fedpro.DisableTimeRegulationRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.DisableTimeRegulationRequest request;
+      request = hla.rti1516_2025.fedpro.DisableTimeRegulationRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setDisableTimeRegulationRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -2013,8 +2019,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.EnableTimeConstrainedRequest request;
-      request = hla.rti1516_202X.fedpro.EnableTimeConstrainedRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.EnableTimeConstrainedRequest request;
+      request = hla.rti1516_2025.fedpro.EnableTimeConstrainedRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setEnableTimeConstrainedRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -2033,8 +2039,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DisableTimeConstrainedRequest request;
-      request = hla.rti1516_202X.fedpro.DisableTimeConstrainedRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.DisableTimeConstrainedRequest request;
+      request = hla.rti1516_2025.fedpro.DisableTimeConstrainedRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setDisableTimeConstrainedRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -2057,9 +2063,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestRequest request;
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestRequest.Builder builder =
-            hla.rti1516_202X.fedpro.TimeAdvanceRequestRequest.newBuilder();
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestRequest request;
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestRequest.Builder builder =
+            hla.rti1516_2025.fedpro.TimeAdvanceRequestRequest.newBuilder();
 
       builder.setTime(_clientConverter.convertFromHla(theTime));
 
@@ -2086,9 +2092,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest request;
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest.Builder builder =
-            hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest.newBuilder();
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestAvailableRequest request;
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestAvailableRequest.Builder builder =
+            hla.rti1516_2025.fedpro.TimeAdvanceRequestAvailableRequest.newBuilder();
 
       builder.setTime(_clientConverter.convertFromHla(theTime));
 
@@ -2115,9 +2121,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.NextMessageRequestRequest request;
-      hla.rti1516_202X.fedpro.NextMessageRequestRequest.Builder builder =
-            hla.rti1516_202X.fedpro.NextMessageRequestRequest.newBuilder();
+      hla.rti1516_2025.fedpro.NextMessageRequestRequest request;
+      hla.rti1516_2025.fedpro.NextMessageRequestRequest.Builder builder =
+            hla.rti1516_2025.fedpro.NextMessageRequestRequest.newBuilder();
 
       builder.setTime(_clientConverter.convertFromHla(theTime));
 
@@ -2144,9 +2150,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequest request;
-      hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequest.Builder builder =
-            hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequest.newBuilder();
+      hla.rti1516_2025.fedpro.NextMessageRequestAvailableRequest request;
+      hla.rti1516_2025.fedpro.NextMessageRequestAvailableRequest.Builder builder =
+            hla.rti1516_2025.fedpro.NextMessageRequestAvailableRequest.newBuilder();
 
       builder.setTime(_clientConverter.convertFromHla(theTime));
 
@@ -2173,9 +2179,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.FlushQueueRequestRequest request;
-      hla.rti1516_202X.fedpro.FlushQueueRequestRequest.Builder builder =
-            hla.rti1516_202X.fedpro.FlushQueueRequestRequest.newBuilder();
+      hla.rti1516_2025.fedpro.FlushQueueRequestRequest request;
+      hla.rti1516_2025.fedpro.FlushQueueRequestRequest.Builder builder =
+            hla.rti1516_2025.fedpro.FlushQueueRequestRequest.newBuilder();
 
       builder.setTime(_clientConverter.convertFromHla(theTime));
 
@@ -2198,8 +2204,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest request;
-      request = hla.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.EnableAsynchronousDeliveryRequest request;
+      request = hla.rti1516_2025.fedpro.EnableAsynchronousDeliveryRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setEnableAsynchronousDeliveryRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -2218,8 +2224,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest request;
-      request = hla.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.DisableAsynchronousDeliveryRequest request;
+      request = hla.rti1516_2025.fedpro.DisableAsynchronousDeliveryRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setDisableAsynchronousDeliveryRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
@@ -2237,13 +2243,13 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryGALTRequest request;
-      request = hla.rti1516_202X.fedpro.QueryGALTRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryGALTRequest request;
+      request = hla.rti1516_2025.fedpro.QueryGALTRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryGALTRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasQueryGALTResponse();
-      hla.rti1516_202X.fedpro.QueryGALTResponse response = callResponse.getQueryGALTResponse();
+      hla.rti1516_2025.fedpro.QueryGALTResponse response = callResponse.getQueryGALTResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -2257,13 +2263,13 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryLogicalTimeRequest request;
-      request = hla.rti1516_202X.fedpro.QueryLogicalTimeRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryLogicalTimeRequest request;
+      request = hla.rti1516_2025.fedpro.QueryLogicalTimeRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryLogicalTimeRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasQueryLogicalTimeResponse();
-      hla.rti1516_202X.fedpro.QueryLogicalTimeResponse response = callResponse.getQueryLogicalTimeResponse();
+      hla.rti1516_2025.fedpro.QueryLogicalTimeResponse response = callResponse.getQueryLogicalTimeResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -2277,13 +2283,13 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryLITSRequest request;
-      request = hla.rti1516_202X.fedpro.QueryLITSRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryLITSRequest request;
+      request = hla.rti1516_2025.fedpro.QueryLITSRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryLITSRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasQueryLITSResponse();
-      hla.rti1516_202X.fedpro.QueryLITSResponse response = callResponse.getQueryLITSResponse();
+      hla.rti1516_2025.fedpro.QueryLITSResponse response = callResponse.getQueryLITSResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -2300,9 +2306,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ModifyLookaheadRequest request;
-      hla.rti1516_202X.fedpro.ModifyLookaheadRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ModifyLookaheadRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ModifyLookaheadRequest request;
+      hla.rti1516_2025.fedpro.ModifyLookaheadRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ModifyLookaheadRequest.newBuilder();
 
       builder.setLookahead(_clientConverter.convertFromHla(theLookahead));
 
@@ -2325,13 +2331,13 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.QueryLookaheadRequest request;
-      request = hla.rti1516_202X.fedpro.QueryLookaheadRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryLookaheadRequest request;
+      request = hla.rti1516_2025.fedpro.QueryLookaheadRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryLookaheadRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasQueryLookaheadResponse();
-      hla.rti1516_202X.fedpro.QueryLookaheadResponse response = callResponse.getQueryLookaheadResponse();
+      hla.rti1516_2025.fedpro.QueryLookaheadResponse response = callResponse.getQueryLookaheadResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -2348,8 +2354,8 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RetractRequest request;
-      hla.rti1516_202X.fedpro.RetractRequest.Builder builder = hla.rti1516_202X.fedpro.RetractRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RetractRequest request;
+      hla.rti1516_2025.fedpro.RetractRequest.Builder builder = hla.rti1516_2025.fedpro.RetractRequest.newBuilder();
 
       builder.setRetraction(_clientConverter.convertFromHla(theHandle));
 
@@ -2376,9 +2382,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest request;
-      hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ChangeAttributeOrderTypeRequest request;
+      hla.rti1516_2025.fedpro.ChangeAttributeOrderTypeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ChangeAttributeOrderTypeRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributes(_clientConverter.convertFromHla(theAttributes));
@@ -2405,9 +2411,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest request;
-      hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.ChangeInteractionOrderTypeRequest request;
+      hla.rti1516_2025.fedpro.ChangeInteractionOrderTypeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.ChangeInteractionOrderTypeRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theClass));
       builder.setOrderType(_clientConverter.convertFromHla(theType));
@@ -2431,9 +2437,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateRegionRequest request;
-      hla.rti1516_202X.fedpro.CreateRegionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.CreateRegionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.CreateRegionRequest request;
+      hla.rti1516_2025.fedpro.CreateRegionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.CreateRegionRequest.newBuilder();
 
       builder.setDimensions(_clientConverter.convertFromHla(dimensions));
 
@@ -2442,7 +2448,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasCreateRegionResponse();
-      hla.rti1516_202X.fedpro.CreateRegionResponse response = callResponse.getCreateRegionResponse();
+      hla.rti1516_2025.fedpro.CreateRegionResponse response = callResponse.getCreateRegionResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -2458,9 +2464,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CommitRegionModificationsRequest request;
-      hla.rti1516_202X.fedpro.CommitRegionModificationsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.CommitRegionModificationsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.CommitRegionModificationsRequest request;
+      hla.rti1516_2025.fedpro.CommitRegionModificationsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.CommitRegionModificationsRequest.newBuilder();
 
       builder.setRegions(_clientConverter.convertFromHla(regions));
 
@@ -2485,9 +2491,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DeleteRegionRequest request;
-      hla.rti1516_202X.fedpro.DeleteRegionRequest.Builder builder =
-            hla.rti1516_202X.fedpro.DeleteRegionRequest.newBuilder();
+      hla.rti1516_2025.fedpro.DeleteRegionRequest request;
+      hla.rti1516_2025.fedpro.DeleteRegionRequest.Builder builder =
+            hla.rti1516_2025.fedpro.DeleteRegionRequest.newBuilder();
 
       builder.setRegion(_clientConverter.convertFromHla(theRegion));
 
@@ -2517,9 +2523,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2529,7 +2535,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasRegisterObjectInstanceWithRegionsResponse();
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsResponse response =
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsResponse response =
             callResponse.getRegisterObjectInstanceWithRegionsResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -2555,9 +2561,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2569,7 +2575,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasRegisterObjectInstanceWithNameAndRegionsResponse();
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsResponse response =
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsResponse response =
             callResponse.getRegisterObjectInstanceWithNameAndRegionsResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -2590,9 +2596,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest request;
-      hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.AssociateRegionsForUpdatesRequest request;
+      hla.rti1516_2025.fedpro.AssociateRegionsForUpdatesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.AssociateRegionsForUpdatesRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2620,9 +2626,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest request;
-      hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnassociateRegionsForUpdatesRequest request;
+      hla.rti1516_2025.fedpro.UnassociateRegionsForUpdatesRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnassociateRegionsForUpdatesRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2652,9 +2658,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2688,9 +2694,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2721,9 +2727,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2754,9 +2760,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassWithRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SubscribeInteractionClassWithRegionsRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theClass));
       builder.setActive(_clientConverter.convertFromHla(active));
@@ -2785,9 +2791,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassWithRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.UnsubscribeInteractionClassWithRegionsRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theClass));
       builder.setRegions(_clientConverter.convertFromHla(regions));
@@ -2820,9 +2826,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SendInteractionWithRegionsRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theInteraction));
       builder.setParameterValues(_clientConverter.convertFromHla(theParameters));
@@ -2858,9 +2864,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theInteraction));
       builder.setParameterValues(_clientConverter.convertFromHla(theParameters));
@@ -2873,7 +2879,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasSendInteractionWithRegionsAndTimeResponse();
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeResponse response =
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeResponse response =
             callResponse.getSendInteractionWithRegionsAndTimeResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -2895,9 +2901,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.RequestAttributeValueUpdateWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.RequestAttributeValueUpdateWithRegionsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.RequestAttributeValueUpdateWithRegionsRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theClass));
       builder.setAttributesAndRegions(_clientConverter.convertFromHla(attributesAndRegions));
@@ -2920,13 +2926,13 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest request;
-      request = hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest.getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetAutomaticResignDirectiveRequest request;
+      request = hla.rti1516_2025.fedpro.GetAutomaticResignDirectiveRequest.getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetAutomaticResignDirectiveRequest(request).build();
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetAutomaticResignDirectiveResponse();
-      hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveResponse response =
+      hla.rti1516_2025.fedpro.GetAutomaticResignDirectiveResponse response =
             callResponse.getGetAutomaticResignDirectiveResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -2940,9 +2946,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest request;
-      hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SetAutomaticResignDirectiveRequest request;
+      hla.rti1516_2025.fedpro.SetAutomaticResignDirectiveRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SetAutomaticResignDirectiveRequest.newBuilder();
 
       builder.setValue(_clientConverter.convertFromHla(resignAction));
 
@@ -2963,9 +2969,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetFederateHandleRequest request;
-      hla.rti1516_202X.fedpro.GetFederateHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetFederateHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetFederateHandleRequest request;
+      hla.rti1516_2025.fedpro.GetFederateHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetFederateHandleRequest.newBuilder();
 
       builder.setFederateName(_clientConverter.convertFromHla(theName));
 
@@ -2974,7 +2980,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetFederateHandleResponse();
-      hla.rti1516_202X.fedpro.GetFederateHandleResponse response = callResponse.getGetFederateHandleResponse();
+      hla.rti1516_2025.fedpro.GetFederateHandleResponse response = callResponse.getGetFederateHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -2988,9 +2994,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetFederateNameRequest request;
-      hla.rti1516_202X.fedpro.GetFederateNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetFederateNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetFederateNameRequest request;
+      hla.rti1516_2025.fedpro.GetFederateNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetFederateNameRequest.newBuilder();
 
       builder.setFederate(_clientConverter.convertFromHla(theHandle));
 
@@ -2999,7 +3005,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetFederateNameResponse();
-      hla.rti1516_202X.fedpro.GetFederateNameResponse response = callResponse.getGetFederateNameResponse();
+      hla.rti1516_2025.fedpro.GetFederateNameResponse response = callResponse.getGetFederateNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3012,9 +3018,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetObjectClassHandleRequest request;
-      hla.rti1516_202X.fedpro.GetObjectClassHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetObjectClassHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectClassHandleRequest request;
+      hla.rti1516_2025.fedpro.GetObjectClassHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetObjectClassHandleRequest.newBuilder();
 
       builder.setObjectClassName(_clientConverter.convertFromHla(theName));
 
@@ -3023,7 +3029,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetObjectClassHandleResponse();
-      hla.rti1516_202X.fedpro.GetObjectClassHandleResponse response = callResponse.getGetObjectClassHandleResponse();
+      hla.rti1516_2025.fedpro.GetObjectClassHandleResponse response = callResponse.getGetObjectClassHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3036,9 +3042,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetObjectClassNameRequest request;
-      hla.rti1516_202X.fedpro.GetObjectClassNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetObjectClassNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectClassNameRequest request;
+      hla.rti1516_2025.fedpro.GetObjectClassNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetObjectClassNameRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(theHandle));
 
@@ -3047,7 +3053,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetObjectClassNameResponse();
-      hla.rti1516_202X.fedpro.GetObjectClassNameResponse response = callResponse.getGetObjectClassNameResponse();
+      hla.rti1516_2025.fedpro.GetObjectClassNameResponse response = callResponse.getGetObjectClassNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3060,9 +3066,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest request;
-      hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetKnownObjectClassHandleRequest request;
+      hla.rti1516_2025.fedpro.GetKnownObjectClassHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetKnownObjectClassHandleRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
 
@@ -3071,7 +3077,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetKnownObjectClassHandleResponse();
-      hla.rti1516_202X.fedpro.GetKnownObjectClassHandleResponse response =
+      hla.rti1516_2025.fedpro.GetKnownObjectClassHandleResponse response =
             callResponse.getGetKnownObjectClassHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3085,9 +3091,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequest request;
-      hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectInstanceHandleRequest request;
+      hla.rti1516_2025.fedpro.GetObjectInstanceHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetObjectInstanceHandleRequest.newBuilder();
 
       builder.setObjectInstanceName(_clientConverter.convertFromHla(theName));
 
@@ -3096,7 +3102,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetObjectInstanceHandleResponse();
-      hla.rti1516_202X.fedpro.GetObjectInstanceHandleResponse response =
+      hla.rti1516_2025.fedpro.GetObjectInstanceHandleResponse response =
             callResponse.getGetObjectInstanceHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3110,9 +3116,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.GetObjectInstanceNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetObjectInstanceNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectInstanceNameRequest request;
+      hla.rti1516_2025.fedpro.GetObjectInstanceNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetObjectInstanceNameRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theHandle));
 
@@ -3121,7 +3127,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetObjectInstanceNameResponse();
-      hla.rti1516_202X.fedpro.GetObjectInstanceNameResponse response = callResponse.getGetObjectInstanceNameResponse();
+      hla.rti1516_2025.fedpro.GetObjectInstanceNameResponse response = callResponse.getGetObjectInstanceNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3136,9 +3142,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAttributeHandleRequest request;
-      hla.rti1516_202X.fedpro.GetAttributeHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetAttributeHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetAttributeHandleRequest request;
+      hla.rti1516_2025.fedpro.GetAttributeHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetAttributeHandleRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(whichClass));
       builder.setAttributeName(_clientConverter.convertFromHla(theName));
@@ -3148,7 +3154,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetAttributeHandleResponse();
-      hla.rti1516_202X.fedpro.GetAttributeHandleResponse response = callResponse.getGetAttributeHandleResponse();
+      hla.rti1516_2025.fedpro.GetAttributeHandleResponse response = callResponse.getGetAttributeHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3164,9 +3170,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAttributeNameRequest request;
-      hla.rti1516_202X.fedpro.GetAttributeNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetAttributeNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetAttributeNameRequest request;
+      hla.rti1516_2025.fedpro.GetAttributeNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetAttributeNameRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(whichClass));
       builder.setAttribute(_clientConverter.convertFromHla(theHandle));
@@ -3176,7 +3182,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetAttributeNameResponse();
-      hla.rti1516_202X.fedpro.GetAttributeNameResponse response = callResponse.getGetAttributeNameResponse();
+      hla.rti1516_2025.fedpro.GetAttributeNameResponse response = callResponse.getGetAttributeNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3189,9 +3195,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetUpdateRateValueRequest request;
-      hla.rti1516_202X.fedpro.GetUpdateRateValueRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetUpdateRateValueRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetUpdateRateValueRequest request;
+      hla.rti1516_2025.fedpro.GetUpdateRateValueRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetUpdateRateValueRequest.newBuilder();
 
       builder.setUpdateRateDesignator(_clientConverter.convertFromHla(updateRateDesignator));
 
@@ -3200,7 +3206,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetUpdateRateValueResponse();
-      hla.rti1516_202X.fedpro.GetUpdateRateValueResponse response = callResponse.getGetUpdateRateValueResponse();
+      hla.rti1516_2025.fedpro.GetUpdateRateValueResponse response = callResponse.getGetUpdateRateValueResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3215,9 +3221,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest request;
-      hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeRequest request;
+      hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeRequest.newBuilder();
 
       builder.setObjectInstance(_clientConverter.convertFromHla(theObject));
       builder.setAttribute(_clientConverter.convertFromHla(theAttribute));
@@ -3227,7 +3233,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetUpdateRateValueForAttributeResponse();
-      hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeResponse response =
+      hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeResponse response =
             callResponse.getGetUpdateRateValueForAttributeResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3241,9 +3247,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetInteractionClassHandleRequest request;
-      hla.rti1516_202X.fedpro.GetInteractionClassHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetInteractionClassHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetInteractionClassHandleRequest request;
+      hla.rti1516_2025.fedpro.GetInteractionClassHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetInteractionClassHandleRequest.newBuilder();
 
       builder.setInteractionClassName(_clientConverter.convertFromHla(theName));
 
@@ -3252,7 +3258,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetInteractionClassHandleResponse();
-      hla.rti1516_202X.fedpro.GetInteractionClassHandleResponse response =
+      hla.rti1516_2025.fedpro.GetInteractionClassHandleResponse response =
             callResponse.getGetInteractionClassHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3266,9 +3272,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetInteractionClassNameRequest request;
-      hla.rti1516_202X.fedpro.GetInteractionClassNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetInteractionClassNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetInteractionClassNameRequest request;
+      hla.rti1516_2025.fedpro.GetInteractionClassNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetInteractionClassNameRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theHandle));
 
@@ -3277,7 +3283,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetInteractionClassNameResponse();
-      hla.rti1516_202X.fedpro.GetInteractionClassNameResponse response =
+      hla.rti1516_2025.fedpro.GetInteractionClassNameResponse response =
             callResponse.getGetInteractionClassNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3293,9 +3299,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetParameterHandleRequest request;
-      hla.rti1516_202X.fedpro.GetParameterHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetParameterHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetParameterHandleRequest request;
+      hla.rti1516_2025.fedpro.GetParameterHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetParameterHandleRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(whichClass));
       builder.setParameterName(_clientConverter.convertFromHla(theName));
@@ -3305,7 +3311,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetParameterHandleResponse();
-      hla.rti1516_202X.fedpro.GetParameterHandleResponse response = callResponse.getGetParameterHandleResponse();
+      hla.rti1516_2025.fedpro.GetParameterHandleResponse response = callResponse.getGetParameterHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3321,9 +3327,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetParameterNameRequest request;
-      hla.rti1516_202X.fedpro.GetParameterNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetParameterNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetParameterNameRequest request;
+      hla.rti1516_2025.fedpro.GetParameterNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetParameterNameRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(whichClass));
       builder.setParameter(_clientConverter.convertFromHla(theHandle));
@@ -3333,7 +3339,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetParameterNameResponse();
-      hla.rti1516_202X.fedpro.GetParameterNameResponse response = callResponse.getGetParameterNameResponse();
+      hla.rti1516_2025.fedpro.GetParameterNameResponse response = callResponse.getGetParameterNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3346,9 +3352,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetOrderTypeRequest request;
-      hla.rti1516_202X.fedpro.GetOrderTypeRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetOrderTypeRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetOrderTypeRequest request;
+      hla.rti1516_2025.fedpro.GetOrderTypeRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetOrderTypeRequest.newBuilder();
 
       builder.setOrderTypeName(_clientConverter.convertFromHla(theName));
 
@@ -3357,7 +3363,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetOrderTypeResponse();
-      hla.rti1516_202X.fedpro.GetOrderTypeResponse response = callResponse.getGetOrderTypeResponse();
+      hla.rti1516_2025.fedpro.GetOrderTypeResponse response = callResponse.getGetOrderTypeResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3370,9 +3376,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetOrderNameRequest request;
-      hla.rti1516_202X.fedpro.GetOrderNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetOrderNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetOrderNameRequest request;
+      hla.rti1516_2025.fedpro.GetOrderNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetOrderNameRequest.newBuilder();
 
       builder.setOrderType(_clientConverter.convertFromHla(theType));
 
@@ -3381,7 +3387,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetOrderNameResponse();
-      hla.rti1516_202X.fedpro.GetOrderNameResponse response = callResponse.getGetOrderNameResponse();
+      hla.rti1516_2025.fedpro.GetOrderNameResponse response = callResponse.getGetOrderNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3394,9 +3400,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequest request;
-      hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetTransportationTypeHandleRequest request;
+      hla.rti1516_2025.fedpro.GetTransportationTypeHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetTransportationTypeHandleRequest.newBuilder();
 
       builder.setTransportationTypeName(_clientConverter.convertFromHla(theName));
 
@@ -3405,7 +3411,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetTransportationTypeHandleResponse();
-      hla.rti1516_202X.fedpro.GetTransportationTypeHandleResponse response =
+      hla.rti1516_2025.fedpro.GetTransportationTypeHandleResponse response =
             callResponse.getGetTransportationTypeHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3419,9 +3425,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetTransportationTypeNameRequest request;
-      hla.rti1516_202X.fedpro.GetTransportationTypeNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetTransportationTypeNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetTransportationTypeNameRequest request;
+      hla.rti1516_2025.fedpro.GetTransportationTypeNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetTransportationTypeNameRequest.newBuilder();
 
       builder.setTransportationType(_clientConverter.convertFromHla(theHandle));
 
@@ -3430,7 +3436,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetTransportationTypeNameResponse();
-      hla.rti1516_202X.fedpro.GetTransportationTypeNameResponse response =
+      hla.rti1516_2025.fedpro.GetTransportationTypeNameResponse response =
             callResponse.getGetTransportationTypeNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3447,9 +3453,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest request;
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassRequest request;
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassRequest.newBuilder();
 
       builder.setObjectClass(_clientConverter.convertFromHla(whichClass));
 
@@ -3459,7 +3465,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetAvailableDimensionsForObjectClassResponse();
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassResponse response =
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassResponse response =
             callResponse.getGetAvailableDimensionsForObjectClassResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3473,9 +3479,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassRequest.newBuilder();
 
       builder.setInteractionClass(_clientConverter.convertFromHla(theHandle));
 
@@ -3485,7 +3491,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetAvailableDimensionsForInteractionClassResponse();
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassResponse response =
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassResponse response =
             callResponse.getGetAvailableDimensionsForInteractionClassResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
@@ -3499,9 +3505,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetDimensionHandleRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetDimensionHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionHandleRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetDimensionHandleRequest.newBuilder();
 
       builder.setDimensionName(_clientConverter.convertFromHla(theName));
 
@@ -3510,7 +3516,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetDimensionHandleResponse();
-      hla.rti1516_202X.fedpro.GetDimensionHandleResponse response = callResponse.getGetDimensionHandleResponse();
+      hla.rti1516_2025.fedpro.GetDimensionHandleResponse response = callResponse.getGetDimensionHandleResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3523,9 +3529,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetDimensionNameRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionNameRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetDimensionNameRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionNameRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionNameRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetDimensionNameRequest.newBuilder();
 
       builder.setDimension(_clientConverter.convertFromHla(theHandle));
 
@@ -3534,7 +3540,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetDimensionNameResponse();
-      hla.rti1516_202X.fedpro.GetDimensionNameResponse response = callResponse.getGetDimensionNameResponse();
+      hla.rti1516_2025.fedpro.GetDimensionNameResponse response = callResponse.getGetDimensionNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3547,9 +3553,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionUpperBoundRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionUpperBoundRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetDimensionUpperBoundRequest.newBuilder();
 
       builder.setDimension(_clientConverter.convertFromHla(theHandle));
 
@@ -3558,7 +3564,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetDimensionUpperBoundResponse();
-      hla.rti1516_202X.fedpro.GetDimensionUpperBoundResponse response = callResponse.getGetDimensionUpperBoundResponse();
+      hla.rti1516_2025.fedpro.GetDimensionUpperBoundResponse response = callResponse.getGetDimensionUpperBoundResponse();
       return _clientConverter.convertToHla(Integer.toUnsignedLong(response.getResult()));
    }
 
@@ -3573,9 +3579,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetDimensionHandleSetRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionHandleSetRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetDimensionHandleSetRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionHandleSetRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionHandleSetRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetDimensionHandleSetRequest.newBuilder();
 
       builder.setRegion(_clientConverter.convertFromHla(region));
 
@@ -3584,7 +3590,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetDimensionHandleSetResponse();
-      hla.rti1516_202X.fedpro.GetDimensionHandleSetResponse response = callResponse.getGetDimensionHandleSetResponse();
+      hla.rti1516_2025.fedpro.GetDimensionHandleSetResponse response = callResponse.getGetDimensionHandleSetResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3601,9 +3607,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetRangeBoundsRequest request;
-      hla.rti1516_202X.fedpro.GetRangeBoundsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.GetRangeBoundsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.GetRangeBoundsRequest request;
+      hla.rti1516_2025.fedpro.GetRangeBoundsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.GetRangeBoundsRequest.newBuilder();
 
       builder.setRegion(_clientConverter.convertFromHla(region));
       builder.setDimension(_clientConverter.convertFromHla(dimension));
@@ -3613,7 +3619,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetRangeBoundsResponse();
-      hla.rti1516_202X.fedpro.GetRangeBoundsResponse response = callResponse.getGetRangeBoundsResponse();
+      hla.rti1516_2025.fedpro.GetRangeBoundsResponse response = callResponse.getGetRangeBoundsResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -3633,9 +3639,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SetRangeBoundsRequest request;
-      hla.rti1516_202X.fedpro.SetRangeBoundsRequest.Builder builder =
-            hla.rti1516_202X.fedpro.SetRangeBoundsRequest.newBuilder();
+      hla.rti1516_2025.fedpro.SetRangeBoundsRequest request;
+      hla.rti1516_2025.fedpro.SetRangeBoundsRequest.Builder builder =
+            hla.rti1516_2025.fedpro.SetRangeBoundsRequest.newBuilder();
 
       builder.setRegion(_clientConverter.convertFromHla(region));
       builder.setDimension(_clientConverter.convertFromHla(dimension));
@@ -3658,9 +3664,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.NormalizeFederateHandleRequest request;
-      hla.rti1516_202X.fedpro.NormalizeFederateHandleRequest.Builder builder =
-            hla.rti1516_202X.fedpro.NormalizeFederateHandleRequest.newBuilder();
+      hla.rti1516_2025.fedpro.NormalizeFederateHandleRequest request;
+      hla.rti1516_2025.fedpro.NormalizeFederateHandleRequest.Builder builder =
+            hla.rti1516_2025.fedpro.NormalizeFederateHandleRequest.newBuilder();
 
       builder.setFederate(_clientConverter.convertFromHla(federateHandle));
 
@@ -3669,7 +3675,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasNormalizeFederateHandleResponse();
-      hla.rti1516_202X.fedpro.NormalizeFederateHandleResponse response =
+      hla.rti1516_2025.fedpro.NormalizeFederateHandleResponse response =
             callResponse.getNormalizeFederateHandleResponse();
       return _clientConverter.convertToHla(Integer.toUnsignedLong(response.getResult()));
    }
@@ -3683,9 +3689,9 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
          NotConnected,
          RTIinternalError
    {
-      hla.rti1516_202X.fedpro.NormalizeServiceGroupRequest request;
-      hla.rti1516_202X.fedpro.NormalizeServiceGroupRequest.Builder builder =
-            hla.rti1516_202X.fedpro.NormalizeServiceGroupRequest.newBuilder();
+      hla.rti1516_2025.fedpro.NormalizeServiceGroupRequest request;
+      hla.rti1516_2025.fedpro.NormalizeServiceGroupRequest.Builder builder =
+            hla.rti1516_2025.fedpro.NormalizeServiceGroupRequest.newBuilder();
 
       builder.setServiceGroup(_clientConverter.convertFromHla(group));
 
@@ -3694,14 +3700,14 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasNormalizeServiceGroupResponse();
-      hla.rti1516_202X.fedpro.NormalizeServiceGroupResponse response = callResponse.getNormalizeServiceGroupResponse();
+      hla.rti1516_2025.fedpro.NormalizeServiceGroupResponse response = callResponse.getNormalizeServiceGroupResponse();
       return _clientConverter.convertToHla(Integer.toUnsignedLong(response.getResult()));
    }
 
    public boolean getObjectClassRelevanceAdvisorySwitch()
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest request;
       GetObjectClassRelevanceAdvisorySwitchRequest.Builder builder =
             GetObjectClassRelevanceAdvisorySwitchRequest.newBuilder();
 
@@ -3713,14 +3719,14 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetObjectClassRelevanceAdvisorySwitchResponse();
-      hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchResponse response = callResponse.getGetObjectClassRelevanceAdvisorySwitchResponse();
+      hla.rti1516_2025.fedpro.GetObjectClassRelevanceAdvisorySwitchResponse response = callResponse.getGetObjectClassRelevanceAdvisorySwitchResponse();
       return response.getResult();
    }
 
    public void setObjectClassRelevanceAdvisorySwitch(boolean value)
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest request;
       SetObjectClassRelevanceAdvisorySwitchRequest.Builder builder =
             SetObjectClassRelevanceAdvisorySwitchRequest.newBuilder();
 
@@ -3739,7 +3745,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
    public boolean getAttributeRelevanceAdvisorySwitch()
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.GetAttributeRelevanceAdvisorySwitchRequest request;
       GetAttributeRelevanceAdvisorySwitchRequest.Builder builder =
             GetAttributeRelevanceAdvisorySwitchRequest.newBuilder();
 
@@ -3751,14 +3757,14 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetAttributeRelevanceAdvisorySwitchResponse();
-      hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchResponse response = callResponse.getGetAttributeRelevanceAdvisorySwitchResponse();
+      hla.rti1516_2025.fedpro.GetAttributeRelevanceAdvisorySwitchResponse response = callResponse.getGetAttributeRelevanceAdvisorySwitchResponse();
       return response.getResult();
    }
 
    public void setAttributeRelevanceAdvisorySwitch(boolean value)
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetAttributeRelevanceAdvisorySwitchRequest request;
       SetAttributeRelevanceAdvisorySwitchRequest.Builder builder =
             SetAttributeRelevanceAdvisorySwitchRequest.newBuilder();
 
@@ -3777,7 +3783,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
    public boolean getAttributeScopeAdvisorySwitch()
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.GetAttributeScopeAdvisorySwitchRequest request;
       GetAttributeScopeAdvisorySwitchRequest.Builder builder =
             GetAttributeScopeAdvisorySwitchRequest.newBuilder();
 
@@ -3789,14 +3795,14 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetAttributeScopeAdvisorySwitchResponse();
-      hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchResponse response = callResponse.getGetAttributeScopeAdvisorySwitchResponse();
+      hla.rti1516_2025.fedpro.GetAttributeScopeAdvisorySwitchResponse response = callResponse.getGetAttributeScopeAdvisorySwitchResponse();
       return response.getResult();
    }
 
    public void setAttributeScopeAdvisorySwitch(boolean value)
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetAttributeScopeAdvisorySwitchRequest request;
       SetAttributeScopeAdvisorySwitchRequest.Builder builder =
             SetAttributeScopeAdvisorySwitchRequest.newBuilder();
 
@@ -3815,7 +3821,7 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
    public boolean getInteractionRelevanceAdvisorySwitch()
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.GetInteractionRelevanceAdvisorySwitchRequest request;
       GetInteractionRelevanceAdvisorySwitchRequest.Builder builder =
             GetInteractionRelevanceAdvisorySwitchRequest.newBuilder();
 
@@ -3827,14 +3833,14 @@ public class RTIambassadorClient extends RTIambassadorClientEvolvedBase {
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasGetInteractionRelevanceAdvisorySwitchResponse();
-      hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchResponse response = callResponse.getGetInteractionRelevanceAdvisorySwitchResponse();
+      hla.rti1516_2025.fedpro.GetInteractionRelevanceAdvisorySwitchResponse response = callResponse.getGetInteractionRelevanceAdvisorySwitchResponse();
       return response.getResult();
    }
 
    public void setInteractionRelevanceAdvisorySwitch(boolean value)
    throws SaveInProgress, RestoreInProgress, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
-      hla.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetInteractionRelevanceAdvisorySwitchRequest request;
       SetInteractionRelevanceAdvisorySwitchRequest.Builder builder =
             SetInteractionRelevanceAdvisorySwitchRequest.newBuilder();
 

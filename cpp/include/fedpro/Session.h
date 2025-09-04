@@ -17,10 +17,10 @@
 #pragma once
 
 #include <fedpro/Aliases.h>
-#include <fedpro/Properties.h>
 #include <fedpro/Config.h>
 
 #include <cstdint>
+#include <iosfwd>
 #include <functional>
 #include <future>
 #include <string>
@@ -137,6 +137,12 @@ namespace FedPro
       virtual void addStateListener(StateListener onStateTransition) = 0;
 
       /**
+       * @brief Wait for asynchronous StateListener callbacks to complete after a call to terminate().
+       * @throw SessionIllegalState if state is not TERMINATED.
+       */
+      virtual void waitStateListeners() noexcept(false) = 0;
+
+      /**
        * @brief A callback that is invoked every time a message is sent to the server. Can
        * be used to detect periods of inactivity and send heartbeats to keep the
        * connection alive.
@@ -145,6 +151,17 @@ namespace FedPro
        * @throws std::invalid_argument If onMessageSent is a nullptr.
        */
       virtual void setMessageSentListener(MessageSentListener onMessageSent) = 0;
+
+      /**
+       * @brief Pretty-print session statistics that are expressed in quantity per second,
+       * such as call count per second.
+       */
+      virtual void prettyPrintPerSecondStats(std::ostream & stream) = 0;
+
+      /**
+       * @brief Pretty-print session statistics that are expressed in others quantities, such as call time.
+       */
+      virtual void prettyPrintStats(std::ostream & stream) = 0;
 
       /**
        * @brief Start the session.

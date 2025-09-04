@@ -18,9 +18,11 @@
 
 #include "ClientConverter.h"
 #include "protobuf/generated/FederateAmbassador.pb.h"
+#include <utility/MovingStats.h>
 
 #include <RTI/FederateAmbassador.h>
 
+#include <functional>
 #include <memory>
 
 namespace FedPro
@@ -32,9 +34,12 @@ namespace FedPro
    class FederateAmbassadorDispatcher
    {
    public:
+      using MovingStatsSupplier = std::function<std::unique_ptr<MovingStats>()>;
+
       explicit FederateAmbassadorDispatcher(
             RTI_NAMESPACE::FederateAmbassador * federateReference,
-            std::shared_ptr<ClientConverter> clientConverter);
+            std::shared_ptr<ClientConverter> clientConverter,
+            const MovingStatsSupplier & movingStatsSupplier);
 
       ~FederateAmbassadorDispatcher();
 
@@ -45,16 +50,38 @@ namespace FedPro
        *
        * @param callback Callback to dispatch. This method consumes the callback and may leave it empty.
        */
-      void dispatchCallback(std::unique_ptr<rti1516_202X::fedpro::CallbackRequest> callback);
+      void dispatchCallback(std::unique_ptr<rti1516_2025::fedpro::CallbackRequest> callback);
+
+      MovingStats::Stats getReflectStats(MovingStats::SteadyTimePoint time) {
+         return _reflectStats->getStatsForTime(time);
+      }
+
+      MovingStats::Stats getReceivedInteractionStats(MovingStats::SteadyTimePoint time) {
+         return _receivedInteractionStats->getStatsForTime(time);
+      }
+
+      MovingStats::Stats getReceivedDirectedInteractionStats(MovingStats::SteadyTimePoint time) {
+         return _receivedDirectedInteractionStats->getStatsForTime(time);
+      }
+
+      MovingStats::Stats getCallbackTimeStats(MovingStats::SteadyTimePoint time) {
+         return _callbackTimeStats->getStatsForTime(time);
+      }
 
    private:
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       RTI_NAMESPACE::FederateAmbassador * _federateReference;
 #else
       std::unique_ptr<FederateAmbassadorAdapter> _federateReference;
 #endif
 
       std::shared_ptr<ClientConverter> _clientConverter;
+
+      std::unique_ptr<MovingStats> _reflectStats;
+      std::unique_ptr<MovingStats> _receivedInteractionStats;
+      std::unique_ptr<MovingStats> _receivedDirectedInteractionStats;
+      std::unique_ptr<MovingStats> _callbackTimeStats;
+
    };
 }

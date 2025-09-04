@@ -57,7 +57,7 @@ namespace FedPro
             int32_t lastReceivedSequenceNumber,
             MessageType messageType) noexcept;
 
-      uint64_t getPayloadSize() const noexcept;
+      uint32_t getPayloadSize() const noexcept;
 
       ByteSequence encode() const;
 

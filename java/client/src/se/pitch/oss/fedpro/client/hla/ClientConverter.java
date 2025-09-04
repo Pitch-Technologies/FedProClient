@@ -18,49 +18,49 @@ package se.pitch.oss.fedpro.client.hla;
 
 import com.google.protobuf.ByteString;
 import com.google.protobuf.ProtocolStringList;
-import hla.rti1516_202X.AdditionalSettingsResultCode;
-import hla.rti1516_202X.AttributeHandle;
-import hla.rti1516_202X.AttributeHandleSet;
-import hla.rti1516_202X.AttributeHandleValueMap;
-import hla.rti1516_202X.AttributeSetRegionSetPairList;
-import hla.rti1516_202X.ConfigurationResult;
-import hla.rti1516_202X.DimensionHandle;
-import hla.rti1516_202X.DimensionHandleSet;
-import hla.rti1516_202X.FederateHandle;
-import hla.rti1516_202X.FederateHandleSaveStatusPair;
-import hla.rti1516_202X.FederateHandleSet;
-import hla.rti1516_202X.FederateRestoreStatus;
-import hla.rti1516_202X.FederationExecutionInformation;
-import hla.rti1516_202X.FederationExecutionInformationSet;
-import hla.rti1516_202X.FederationExecutionMemberInformation;
-import hla.rti1516_202X.FederationExecutionMemberInformationSet;
-import hla.rti1516_202X.InteractionClassHandle;
-import hla.rti1516_202X.InteractionClassHandleSet;
-import hla.rti1516_202X.MessageRetractionHandle;
-import hla.rti1516_202X.MessageRetractionReturn;
-import hla.rti1516_202X.ObjectClassHandle;
-import hla.rti1516_202X.ObjectInstanceHandle;
-import hla.rti1516_202X.OrderType;
-import hla.rti1516_202X.ParameterHandle;
-import hla.rti1516_202X.ParameterHandleValueMap;
-import hla.rti1516_202X.RangeBounds;
-import hla.rti1516_202X.RegionHandle;
-import hla.rti1516_202X.RegionHandleSet;
-import hla.rti1516_202X.ResignAction;
-import hla.rti1516_202X.RestoreFailureReason;
-import hla.rti1516_202X.RestoreStatus;
-import hla.rti1516_202X.RtiConfiguration;
-import hla.rti1516_202X.SaveFailureReason;
-import hla.rti1516_202X.SaveStatus;
-import hla.rti1516_202X.ServiceGroup;
-import hla.rti1516_202X.SynchronizationPointFailureReason;
-import hla.rti1516_202X.TimeQueryReturn;
-import hla.rti1516_202X.TransportationTypeHandle;
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.encoding.ByteWrapper;
-import hla.rti1516_202X.exceptions.*;
-import hla.rti1516_202X.fedpro.*;
-import hla.rti1516_202X.time.LogicalTimeFactory;
+import hla.rti1516_2025.AdditionalSettingsResultCode;
+import hla.rti1516_2025.AttributeHandle;
+import hla.rti1516_2025.AttributeHandleSet;
+import hla.rti1516_2025.AttributeHandleValueMap;
+import hla.rti1516_2025.AttributeSetRegionSetPairList;
+import hla.rti1516_2025.ConfigurationResult;
+import hla.rti1516_2025.DimensionHandle;
+import hla.rti1516_2025.DimensionHandleSet;
+import hla.rti1516_2025.FederateHandle;
+import hla.rti1516_2025.FederateHandleSaveStatusPair;
+import hla.rti1516_2025.FederateHandleSet;
+import hla.rti1516_2025.FederateRestoreStatus;
+import hla.rti1516_2025.FederationExecutionInformation;
+import hla.rti1516_2025.FederationExecutionInformationSet;
+import hla.rti1516_2025.FederationExecutionMemberInformation;
+import hla.rti1516_2025.FederationExecutionMemberInformationSet;
+import hla.rti1516_2025.InteractionClassHandle;
+import hla.rti1516_2025.InteractionClassHandleSet;
+import hla.rti1516_2025.MessageRetractionHandle;
+import hla.rti1516_2025.MessageRetractionReturn;
+import hla.rti1516_2025.ObjectClassHandle;
+import hla.rti1516_2025.ObjectInstanceHandle;
+import hla.rti1516_2025.OrderType;
+import hla.rti1516_2025.ParameterHandle;
+import hla.rti1516_2025.ParameterHandleValueMap;
+import hla.rti1516_2025.RangeBounds;
+import hla.rti1516_2025.RegionHandle;
+import hla.rti1516_2025.RegionHandleSet;
+import hla.rti1516_2025.ResignAction;
+import hla.rti1516_2025.RestoreFailureReason;
+import hla.rti1516_2025.RestoreStatus;
+import hla.rti1516_2025.RtiConfiguration;
+import hla.rti1516_2025.SaveFailureReason;
+import hla.rti1516_2025.SaveStatus;
+import hla.rti1516_2025.ServiceGroup;
+import hla.rti1516_2025.SynchronizationPointFailureReason;
+import hla.rti1516_2025.TimeQueryReturn;
+import hla.rti1516_2025.TransportationTypeHandle;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.encoding.ByteWrapper;
+import hla.rti1516_2025.exceptions.*;
+import hla.rti1516_2025.fedpro.*;
+import hla.rti1516_2025.time.LogicalTimeFactory;
 
 import java.io.Serializable;
 import java.nio.ByteBuffer;
@@ -69,11 +69,11 @@ import java.util.*;
 public class ClientConverter {
    private LogicalTimeFactory<?, ?> _timeFactory;
 
-   ConfigurationResult convertToHla(hla.rti1516_202X.fedpro.ConfigurationResult configurationResult)
+   public ConfigurationResult convertToHla(hla.rti1516_2025.fedpro.ConfigurationResult configurationResult)
    {
       boolean configurationUsed = configurationResult.getConfigurationUsed();
       boolean addressUsed = configurationResult.getAddressUsed();
-      hla.rti1516_202X.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode =
+      hla.rti1516_2025.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode =
             configurationResult.getAdditionalSettingsResultCode();
       String message = configurationResult.getMessage();
       return new ConfigurationResult(
@@ -83,16 +83,16 @@ public class ClientConverter {
             message);
    }
 
-   hla.rti1516_202X.fedpro.RtiConfiguration.Builder convertFromHla(RtiConfiguration rtiConfiguration)
+   public hla.rti1516_2025.fedpro.RtiConfiguration.Builder convertFromHla(RtiConfiguration rtiConfiguration)
    {
-      hla.rti1516_202X.fedpro.RtiConfiguration.Builder builder = hla.rti1516_202X.fedpro.RtiConfiguration.newBuilder();
+      hla.rti1516_2025.fedpro.RtiConfiguration.Builder builder = hla.rti1516_2025.fedpro.RtiConfiguration.newBuilder();
       builder.setConfigurationName(rtiConfiguration.configurationName());
       builder.setRtiAddress(rtiConfiguration.rtiAddress());
       builder.setAdditionalSettings(rtiConfiguration.additionalSettings());
       return builder;
    }
 
-   Credentials.Builder convertFromHla(hla.rti1516_202X.auth.Credentials credentials)
+   Credentials.Builder convertFromHla(hla.rti1516_2025.auth.Credentials credentials)
    {
       Credentials.Builder credentialsBuilder = Credentials.newBuilder();
       String type = credentials.getType();
@@ -569,7 +569,7 @@ public class ClientConverter {
       _timeFactory = timeFactory;
    }
 
-   public JoinResult convertToHla(hla.rti1516_202X.fedpro.JoinResult result)
+   public JoinResult convertToHla(hla.rti1516_2025.fedpro.JoinResult result)
    {
       Objects.requireNonNull(result, "JoinResult must not be null");
       return new JoinResult(
@@ -577,13 +577,13 @@ public class ClientConverter {
             convertToHla(result.getLogicalTimeImplementationName()));
    }
 
-   public hla.rti1516_202X.fedpro.FomModule convertFromHla(FomModule fomModule)
+   public hla.rti1516_2025.fedpro.FomModule convertFromHla(FomModule fomModule)
    {
       Objects.requireNonNull(fomModule, "FomModule must not be null");
-      hla.rti1516_202X.fedpro.FomModule.Builder builder = hla.rti1516_202X.fedpro.FomModule.newBuilder();
+      hla.rti1516_2025.fedpro.FomModule.Builder builder = hla.rti1516_2025.fedpro.FomModule.newBuilder();
       switch (fomModule.getType()) {
          case FILE:
-            builder.setFile(hla.rti1516_202X.fedpro.FileFomModule.newBuilder()
+            builder.setFile(hla.rti1516_2025.fedpro.FileFomModule.newBuilder()
                   .setName(fomModule.getFileName())
                   .setContent(ByteString.copyFrom(fomModule.getFileContent())));
             break;
@@ -597,92 +597,92 @@ public class ClientConverter {
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.FomModuleSet convertFromHla(FomModuleSet fomModules)
+   public hla.rti1516_2025.fedpro.FomModuleSet convertFromHla(FomModuleSet fomModules)
    {
       Objects.requireNonNull(fomModules, "FomModuleSet must not be null");
-      hla.rti1516_202X.fedpro.FomModuleSet.Builder result = hla.rti1516_202X.fedpro.FomModuleSet.newBuilder();
+      hla.rti1516_2025.fedpro.FomModuleSet.Builder result = hla.rti1516_2025.fedpro.FomModuleSet.newBuilder();
       for (FomModule fomModule : fomModules) {
          result.addFomModule(convertFromHla(fomModule));
       }
       return result.build();
    }
 
-   public hla.rti1516_202X.fedpro.FederateHandle convertFromHla(FederateHandle result)
+   public hla.rti1516_2025.fedpro.FederateHandle convertFromHla(FederateHandle result)
    {
       Objects.requireNonNull(result, "FederateHandle must not be null");
-      hla.rti1516_202X.fedpro.FederateHandle.Builder builder = hla.rti1516_202X.fedpro.FederateHandle.newBuilder();
+      hla.rti1516_2025.fedpro.FederateHandle.Builder builder = hla.rti1516_2025.fedpro.FederateHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.InteractionClassHandle convertFromHla(InteractionClassHandle result)
+   public hla.rti1516_2025.fedpro.InteractionClassHandle convertFromHla(InteractionClassHandle result)
    {
       Objects.requireNonNull(result, "InteractionClassHandle must not be null");
-      hla.rti1516_202X.fedpro.InteractionClassHandle.Builder builder =
-            hla.rti1516_202X.fedpro.InteractionClassHandle.newBuilder();
+      hla.rti1516_2025.fedpro.InteractionClassHandle.Builder builder =
+            hla.rti1516_2025.fedpro.InteractionClassHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.ParameterHandle convertFromHla(ParameterHandle result)
+   public hla.rti1516_2025.fedpro.ParameterHandle convertFromHla(ParameterHandle result)
    {
       Objects.requireNonNull(result, "ParameterHandle must not be null");
-      hla.rti1516_202X.fedpro.ParameterHandle.Builder builder = hla.rti1516_202X.fedpro.ParameterHandle.newBuilder();
+      hla.rti1516_2025.fedpro.ParameterHandle.Builder builder = hla.rti1516_2025.fedpro.ParameterHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.ObjectClassHandle convertFromHla(ObjectClassHandle result)
+   public hla.rti1516_2025.fedpro.ObjectClassHandle convertFromHla(ObjectClassHandle result)
    {
       Objects.requireNonNull(result, "ObjectClassHandle must not be null");
-      hla.rti1516_202X.fedpro.ObjectClassHandle.Builder builder = hla.rti1516_202X.fedpro.ObjectClassHandle.newBuilder();
+      hla.rti1516_2025.fedpro.ObjectClassHandle.Builder builder = hla.rti1516_2025.fedpro.ObjectClassHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.ObjectInstanceHandle convertFromHla(ObjectInstanceHandle result)
+   public hla.rti1516_2025.fedpro.ObjectInstanceHandle convertFromHla(ObjectInstanceHandle result)
    {
       Objects.requireNonNull(result, "ObjectInstanceHandle must not be null");
-      hla.rti1516_202X.fedpro.ObjectInstanceHandle.Builder builder =
-            hla.rti1516_202X.fedpro.ObjectInstanceHandle.newBuilder();
+      hla.rti1516_2025.fedpro.ObjectInstanceHandle.Builder builder =
+            hla.rti1516_2025.fedpro.ObjectInstanceHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.AttributeHandle convertFromHla(AttributeHandle result)
+   public hla.rti1516_2025.fedpro.AttributeHandle convertFromHla(AttributeHandle result)
    {
       Objects.requireNonNull(result, "AttributeHandle must not be null");
-      hla.rti1516_202X.fedpro.AttributeHandle.Builder builder = hla.rti1516_202X.fedpro.AttributeHandle.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeHandle.Builder builder = hla.rti1516_2025.fedpro.AttributeHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.DimensionHandle convertFromHla(DimensionHandle result)
+   public hla.rti1516_2025.fedpro.DimensionHandle convertFromHla(DimensionHandle result)
    {
       Objects.requireNonNull(result, "DimensionHandle must not be null");
-      hla.rti1516_202X.fedpro.DimensionHandle.Builder builder = hla.rti1516_202X.fedpro.DimensionHandle.newBuilder();
+      hla.rti1516_2025.fedpro.DimensionHandle.Builder builder = hla.rti1516_2025.fedpro.DimensionHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.RegionHandle convertFromHla(RegionHandle result)
+   public hla.rti1516_2025.fedpro.RegionHandle convertFromHla(RegionHandle result)
    {
       Objects.requireNonNull(result, "RegionHandle must not be null");
-      hla.rti1516_202X.fedpro.RegionHandle.Builder builder = hla.rti1516_202X.fedpro.RegionHandle.newBuilder();
+      hla.rti1516_2025.fedpro.RegionHandle.Builder builder = hla.rti1516_2025.fedpro.RegionHandle.newBuilder();
       RegionHandleImpl impl = (RegionHandleImpl) result;
       byte[] buf = new byte[impl.encodedLength()];
       impl.encode(buf, 0);
@@ -690,45 +690,45 @@ public class ClientConverter {
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.AttributeHandleSet convertFromHla(AttributeHandleSet result)
+   public hla.rti1516_2025.fedpro.AttributeHandleSet convertFromHla(AttributeHandleSet result)
    throws AttributeNotDefined
    {
       if (result == null) {
          throw new AttributeNotDefined("AttributeHandleSet must not be null");
       }
-      hla.rti1516_202X.fedpro.AttributeHandleSet.Builder builder = hla.rti1516_202X.fedpro.AttributeHandleSet.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeHandleSet.Builder builder = hla.rti1516_2025.fedpro.AttributeHandleSet.newBuilder();
       for (AttributeHandle attributeHandle : result) {
          builder.addAttributeHandle(convertFromHla(attributeHandle));
       }
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.AttributeHandleSet convertFromHlaToSet(AttributeHandle result)
+   public hla.rti1516_2025.fedpro.AttributeHandleSet convertFromHlaToSet(AttributeHandle result)
    throws AttributeNotDefined
    {
       if (result == null) {
          throw new AttributeNotDefined("AttributeHandle must not be null");
       }
-      hla.rti1516_202X.fedpro.AttributeHandleSet.Builder builder = hla.rti1516_202X.fedpro.AttributeHandleSet.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeHandleSet.Builder builder = hla.rti1516_2025.fedpro.AttributeHandleSet.newBuilder();
       builder.addAttributeHandle(convertFromHla(result));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.MessageRetractionReturn convertFromHla(MessageRetractionReturn result)
+   public hla.rti1516_2025.fedpro.MessageRetractionReturn convertFromHla(MessageRetractionReturn result)
    {
       Objects.requireNonNull(result, "MessageRetractionReturn must not be null");
-      hla.rti1516_202X.fedpro.MessageRetractionReturn.Builder builder =
-            hla.rti1516_202X.fedpro.MessageRetractionReturn.newBuilder();
+      hla.rti1516_2025.fedpro.MessageRetractionReturn.Builder builder =
+            hla.rti1516_2025.fedpro.MessageRetractionReturn.newBuilder();
       builder.setRetractionHandleIsValid(convertFromHla(result.retractionHandleIsValid));
       builder.setMessageRetractionHandle(convertFromHla(result.handle));
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.TransportationTypeHandle convertFromHla(TransportationTypeHandle result)
+   public hla.rti1516_2025.fedpro.TransportationTypeHandle convertFromHla(TransportationTypeHandle result)
    {
       Objects.requireNonNull(result, "TransportationTypeHandle must not be null");
-      hla.rti1516_202X.fedpro.TransportationTypeHandle.Builder builder =
-            hla.rti1516_202X.fedpro.TransportationTypeHandle.newBuilder();
+      hla.rti1516_2025.fedpro.TransportationTypeHandle.Builder builder =
+            hla.rti1516_2025.fedpro.TransportationTypeHandle.newBuilder();
       byte[] buf = new byte[result.encodedLength()];
       result.encode(buf, 0);
       builder.setData(ByteString.copyFrom(buf));
@@ -756,12 +756,12 @@ public class ClientConverter {
       return l;
    }
 
-   public hla.rti1516_202X.fedpro.LogicalTime convertFromHla(hla.rti1516_202X.time.LogicalTime<?, ?> logicalTime)
+   public hla.rti1516_2025.fedpro.LogicalTime convertFromHla(hla.rti1516_2025.time.LogicalTime<?, ?> logicalTime)
    throws RTIinternalError
    {
       Objects.requireNonNull(logicalTime, "LogicalTime must not be null");
       try {
-         hla.rti1516_202X.fedpro.LogicalTime.Builder builder = hla.rti1516_202X.fedpro.LogicalTime.newBuilder();
+         hla.rti1516_2025.fedpro.LogicalTime.Builder builder = hla.rti1516_2025.fedpro.LogicalTime.newBuilder();
          byte[] buf = new byte[logicalTime.encodedLength()];
          logicalTime.encode(buf, 0);
          builder.setData(ByteString.copyFrom(buf));
@@ -771,13 +771,13 @@ public class ClientConverter {
       }
    }
 
-   public hla.rti1516_202X.fedpro.LogicalTimeInterval convertFromHla(hla.rti1516_202X.time.LogicalTimeInterval<?> logicalTimeInterval)
+   public hla.rti1516_2025.fedpro.LogicalTimeInterval convertFromHla(hla.rti1516_2025.time.LogicalTimeInterval<?> logicalTimeInterval)
    throws RTIinternalError
    {
       Objects.requireNonNull(logicalTimeInterval, "LogicalTimeInterval must not be null");
       try {
-         hla.rti1516_202X.fedpro.LogicalTimeInterval.Builder builder =
-               hla.rti1516_202X.fedpro.LogicalTimeInterval.newBuilder();
+         hla.rti1516_2025.fedpro.LogicalTimeInterval.Builder builder =
+               hla.rti1516_2025.fedpro.LogicalTimeInterval.newBuilder();
          byte[] buf = new byte[logicalTimeInterval.encodedLength()];
          logicalTimeInterval.encode(buf, 0);
          builder.setData(ByteString.copyFrom(buf));
@@ -802,32 +802,32 @@ public class ClientConverter {
       return byteString.toByteArray();
    }
 
-   public InteractionClassHandle convertToHla(hla.rti1516_202X.fedpro.InteractionClassHandle theInteraction)
+   public InteractionClassHandle convertToHla(hla.rti1516_2025.fedpro.InteractionClassHandle theInteraction)
    {
       return new InteractionClassHandleImpl(theInteraction.getData().toByteArray());
    }
 
-   public ObjectClassHandle convertToHla(hla.rti1516_202X.fedpro.ObjectClassHandle objectClassHandle)
+   public ObjectClassHandle convertToHla(hla.rti1516_2025.fedpro.ObjectClassHandle objectClassHandle)
    {
       return new ObjectClassHandleImpl(objectClassHandle.getData().toByteArray());
    }
 
-   public AttributeHandle convertToHla(hla.rti1516_202X.fedpro.AttributeHandle attributeHandle)
+   public AttributeHandle convertToHla(hla.rti1516_2025.fedpro.AttributeHandle attributeHandle)
    {
       return new AttributeHandleImpl(attributeHandle.getData().toByteArray());
    }
 
-   public ObjectInstanceHandle convertToHla(hla.rti1516_202X.fedpro.ObjectInstanceHandle objectInstanceHandle)
+   public ObjectInstanceHandle convertToHla(hla.rti1516_2025.fedpro.ObjectInstanceHandle objectInstanceHandle)
    {
       return new ObjectInstanceHandleImpl(objectInstanceHandle.getData().toByteArray());
    }
 
-   public ParameterHandle convertToHla(hla.rti1516_202X.fedpro.ParameterHandle parameterHandle)
+   public ParameterHandle convertToHla(hla.rti1516_2025.fedpro.ParameterHandle parameterHandle)
    {
       return new ParameterHandleImpl(parameterHandle.getData().toByteArray());
    }
 
-   public FederateHandle convertToHla(hla.rti1516_202X.fedpro.FederateHandle federateHandle)
+   public FederateHandle convertToHla(hla.rti1516_2025.fedpro.FederateHandle federateHandle)
    {
       byte[] encodedHandle = federateHandle.getData().toByteArray();
       if (encodedHandle.length == 0) {
@@ -836,49 +836,49 @@ public class ClientConverter {
       return new FederateHandleImpl(encodedHandle);
    }
 
-   public DimensionHandle convertToHla(hla.rti1516_202X.fedpro.DimensionHandle dimensionHandle)
+   public DimensionHandle convertToHla(hla.rti1516_2025.fedpro.DimensionHandle dimensionHandle)
    {
       return new DimensionHandleImpl(dimensionHandle.getData().toByteArray());
    }
 
-   public RegionHandle convertToHla(hla.rti1516_202X.fedpro.RegionHandle regionHandle)
+   public RegionHandle convertToHla(hla.rti1516_2025.fedpro.RegionHandle regionHandle)
    {
       return new RegionHandleImpl(regionHandle.getData().toByteArray());
    }
 
-   public FederateHandleSet convertToHla(hla.rti1516_202X.fedpro.FederateHandleSet federateHandleSet)
+   public FederateHandleSet convertToHla(hla.rti1516_2025.fedpro.FederateHandleSet federateHandleSet)
    {
       FederateHandleSet handleSet = getFederateHandleSetFactory().create();
-      for (hla.rti1516_202X.fedpro.FederateHandle federateHandle : federateHandleSet.getFederateHandleList()) {
+      for (hla.rti1516_2025.fedpro.FederateHandle federateHandle : federateHandleSet.getFederateHandleList()) {
          handleSet.add(convertToHla(federateHandle));
       }
       return handleSet;
    }
 
-   public InteractionClassHandleSet convertToHla(hla.rti1516_202X.fedpro.InteractionClassHandleSet interactionClassHandleSet)
+   public InteractionClassHandleSet convertToHla(hla.rti1516_2025.fedpro.InteractionClassHandleSet interactionClassHandleSet)
    {
       InteractionClassHandleSet handleSet = getInteractionClassHandleSetFactory().create();
-      for (hla.rti1516_202X.fedpro.InteractionClassHandle interactionClassHandle : interactionClassHandleSet.getInteractionClassHandleList()) {
+      for (hla.rti1516_2025.fedpro.InteractionClassHandle interactionClassHandle : interactionClassHandleSet.getInteractionClassHandleList()) {
          handleSet.add(convertToHla(interactionClassHandle));
       }
       return handleSet;
    }
 
-   public AttributeHandleSet convertToHla(hla.rti1516_202X.fedpro.AttributeHandleSet attributeHandleSet)
+   public AttributeHandleSet convertToHla(hla.rti1516_2025.fedpro.AttributeHandleSet attributeHandleSet)
    {
       AttributeHandleSet handleSet = getAttributeHandleSetFactory().create();
-      for (hla.rti1516_202X.fedpro.AttributeHandle attributeHandle : attributeHandleSet.getAttributeHandleList()) {
+      for (hla.rti1516_2025.fedpro.AttributeHandle attributeHandle : attributeHandleSet.getAttributeHandleList()) {
          handleSet.add(convertToHla(attributeHandle));
       }
       return handleSet;
    }
 
-   public DimensionHandleSet convertToHla(hla.rti1516_202X.fedpro.DimensionHandleSet dimensionHandleSet)
+   public DimensionHandleSet convertToHla(hla.rti1516_2025.fedpro.DimensionHandleSet dimensionHandleSet)
    throws RTIinternalError
    {
       try {
          DimensionHandleSet handleSet = getDimensionHandleSetFactory().create();
-         for (hla.rti1516_202X.fedpro.DimensionHandle dimensionHandle : dimensionHandleSet.getDimensionHandleList()) {
+         for (hla.rti1516_2025.fedpro.DimensionHandle dimensionHandle : dimensionHandleSet.getDimensionHandleList()) {
             handleSet.add(convertToHla(dimensionHandle));
          }
          return handleSet;
@@ -887,12 +887,12 @@ public class ClientConverter {
       }
    }
 
-   public RegionHandleSet convertToHla(hla.rti1516_202X.fedpro.RegionHandleSet regionHandleSet)
+   public RegionHandleSet convertToHla(hla.rti1516_2025.fedpro.RegionHandleSet regionHandleSet)
    throws RTIinternalError
    {
       try {
          RegionHandleSet handleSet = getRegionHandleSetFactory().create();
-         for (hla.rti1516_202X.fedpro.RegionHandle regionHandle : regionHandleSet.getRegionHandleList()) {
+         for (hla.rti1516_2025.fedpro.RegionHandle regionHandle : regionHandleSet.getRegionHandleList()) {
             handleSet.add(convertToHla(regionHandle));
          }
          return handleSet;
@@ -901,7 +901,7 @@ public class ClientConverter {
       }
    }
 
-   public AttributeHandleValueMap convertToHla(hla.rti1516_202X.fedpro.AttributeHandleValueMap attributeHandleValueMap)
+   public AttributeHandleValueMap convertToHla(hla.rti1516_2025.fedpro.AttributeHandleValueMap attributeHandleValueMap)
    {
       AttributeHandleValueMap result =
             getAttributeHandleValueMapFactory().create(attributeHandleValueMap.getAttributeHandleValueCount());
@@ -913,13 +913,13 @@ public class ClientConverter {
       return result;
    }
 
-   public ParameterHandleValueMap convertToHla(hla.rti1516_202X.fedpro.ParameterHandleValueMap parameterHandleValueMap)
+   public ParameterHandleValueMap convertToHla(hla.rti1516_2025.fedpro.ParameterHandleValueMap parameterHandleValueMap)
    throws RTIinternalError
    {
       try {
          ParameterHandleValueMap result =
                getParameterHandleValueMapFactory().create(parameterHandleValueMap.getParameterHandleValueCount());
-         for (hla.rti1516_202X.fedpro.ParameterHandleValue ParameterHandleValue : parameterHandleValueMap.getParameterHandleValueList()) {
+         for (hla.rti1516_2025.fedpro.ParameterHandleValue ParameterHandleValue : parameterHandleValueMap.getParameterHandleValueList()) {
             result.put(
                   convertToHla(ParameterHandleValue.getParameterHandle()),
                   convertToHla(ParameterHandleValue.getValue()));
@@ -930,7 +930,7 @@ public class ClientConverter {
       }
    }
 
-   public TransportationTypeHandle convertToHla(hla.rti1516_202X.fedpro.TransportationTypeHandle transportationTypeHandle)
+   public TransportationTypeHandle convertToHla(hla.rti1516_2025.fedpro.TransportationTypeHandle transportationTypeHandle)
    throws RTIinternalError
    {
       try {
@@ -940,7 +940,7 @@ public class ClientConverter {
       }
    }
 
-   public hla.rti1516_202X.time.LogicalTime<?, ?> convertToHla(hla.rti1516_202X.fedpro.LogicalTime logicalTime)
+   public hla.rti1516_2025.time.LogicalTime<?, ?> convertToHla(hla.rti1516_2025.fedpro.LogicalTime logicalTime)
    throws RTIinternalError
    {
       try {
@@ -950,7 +950,7 @@ public class ClientConverter {
       }
    }
 
-   public hla.rti1516_202X.time.LogicalTimeInterval<?> convertToHla(hla.rti1516_202X.fedpro.LogicalTimeInterval logicalTimeInterval)
+   public hla.rti1516_2025.time.LogicalTimeInterval<?> convertToHla(hla.rti1516_2025.fedpro.LogicalTimeInterval logicalTimeInterval)
    throws RTIinternalError
    {
       try {
@@ -960,7 +960,7 @@ public class ClientConverter {
       }
    }
 
-   public OrderType convertToHla(hla.rti1516_202X.fedpro.OrderType orderType)
+   public OrderType convertToHla(hla.rti1516_2025.fedpro.OrderType orderType)
    {
       switch (orderType) {
          case RECEIVE:
@@ -973,25 +973,25 @@ public class ClientConverter {
       return null;
    }
 
-   public hla.rti1516_202X.fedpro.OrderType convertFromHla(OrderType orderType)
+   public hla.rti1516_2025.fedpro.OrderType convertFromHla(OrderType orderType)
    {
       Objects.requireNonNull(orderType, "OrderType must not be null");
       switch (orderType) {
          case RECEIVE:
-            return hla.rti1516_202X.fedpro.OrderType.RECEIVE;
+            return hla.rti1516_2025.fedpro.OrderType.RECEIVE;
          case TIMESTAMP:
-            return hla.rti1516_202X.fedpro.OrderType.TIMESTAMP;
+            return hla.rti1516_2025.fedpro.OrderType.TIMESTAMP;
          default:
-            return hla.rti1516_202X.fedpro.OrderType.RECEIVE;
+            return hla.rti1516_2025.fedpro.OrderType.RECEIVE;
       }
    }
 
-   public MessageRetractionHandle convertToHla(hla.rti1516_202X.fedpro.MessageRetractionHandle retractionHandle)
+   public MessageRetractionHandle convertToHla(hla.rti1516_2025.fedpro.MessageRetractionHandle retractionHandle)
    {
       return new MessageRetractionHandleImpl(retractionHandle.getData().toByteArray());
    }
 
-   public ResignAction convertToHla(hla.rti1516_202X.fedpro.ResignAction resignAction)
+   public ResignAction convertToHla(hla.rti1516_2025.fedpro.ResignAction resignAction)
    {
       switch (resignAction) {
          case UNCONDITIONALLY_DIVEST_ATTRIBUTES:
@@ -1012,24 +1012,24 @@ public class ClientConverter {
       return null;
    }
 
-   public hla.rti1516_202X.fedpro.ResignAction convertFromHla(ResignAction resignAction)
+   public hla.rti1516_2025.fedpro.ResignAction convertFromHla(ResignAction resignAction)
    {
       Objects.requireNonNull(resignAction, "ResignAction must not be null");
       switch (resignAction) {
          case UNCONDITIONALLY_DIVEST_ATTRIBUTES:
-            return hla.rti1516_202X.fedpro.ResignAction.UNCONDITIONALLY_DIVEST_ATTRIBUTES;
+            return hla.rti1516_2025.fedpro.ResignAction.UNCONDITIONALLY_DIVEST_ATTRIBUTES;
          case DELETE_OBJECTS:
-            return hla.rti1516_202X.fedpro.ResignAction.DELETE_OBJECTS;
+            return hla.rti1516_2025.fedpro.ResignAction.DELETE_OBJECTS;
          case CANCEL_PENDING_OWNERSHIP_ACQUISITIONS:
-            return hla.rti1516_202X.fedpro.ResignAction.CANCEL_PENDING_OWNERSHIP_ACQUISITIONS;
+            return hla.rti1516_2025.fedpro.ResignAction.CANCEL_PENDING_OWNERSHIP_ACQUISITIONS;
          case DELETE_OBJECTS_THEN_DIVEST:
-            return hla.rti1516_202X.fedpro.ResignAction.DELETE_OBJECTS_THEN_DIVEST;
+            return hla.rti1516_2025.fedpro.ResignAction.DELETE_OBJECTS_THEN_DIVEST;
          case CANCEL_THEN_DELETE_THEN_DIVEST:
-            return hla.rti1516_202X.fedpro.ResignAction.CANCEL_THEN_DELETE_THEN_DIVEST;
+            return hla.rti1516_2025.fedpro.ResignAction.CANCEL_THEN_DELETE_THEN_DIVEST;
          case NO_ACTION:
-            return hla.rti1516_202X.fedpro.ResignAction.NO_ACTION;
+            return hla.rti1516_2025.fedpro.ResignAction.NO_ACTION;
       }
-      return hla.rti1516_202X.fedpro.ResignAction.UNRECOGNIZED;
+      return hla.rti1516_2025.fedpro.ResignAction.UNRECOGNIZED;
    }
 
    public Iterable<String> convertFromHla(Set<String> stringSet)
@@ -1043,32 +1043,32 @@ public class ClientConverter {
       return buf == null ? ByteString.EMPTY : ByteString.copyFrom(buf);
    }
 
-   public hla.rti1516_202X.fedpro.FederateHandleSet convertFromHla(FederateHandleSet federateHandleSet)
+   public hla.rti1516_2025.fedpro.FederateHandleSet convertFromHla(FederateHandleSet federateHandleSet)
    {
       Objects.requireNonNull(federateHandleSet, "FederateHandleSet must not be null");
-      hla.rti1516_202X.fedpro.FederateHandleSet.Builder builder = hla.rti1516_202X.fedpro.FederateHandleSet.newBuilder();
+      hla.rti1516_2025.fedpro.FederateHandleSet.Builder builder = hla.rti1516_2025.fedpro.FederateHandleSet.newBuilder();
       for (FederateHandle federateHandle : federateHandleSet) {
          builder.addFederateHandle(convertFromHla(federateHandle));
       }
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.InteractionClassHandleSet convertFromHla(InteractionClassHandleSet interactionClassHandleSet)
+   public hla.rti1516_2025.fedpro.InteractionClassHandleSet convertFromHla(InteractionClassHandleSet interactionClassHandleSet)
    {
       Objects.requireNonNull(interactionClassHandleSet, "interactionClassHandleSet must not be null");
-      hla.rti1516_202X.fedpro.InteractionClassHandleSet.Builder builder =
-            hla.rti1516_202X.fedpro.InteractionClassHandleSet.newBuilder();
+      hla.rti1516_2025.fedpro.InteractionClassHandleSet.Builder builder =
+            hla.rti1516_2025.fedpro.InteractionClassHandleSet.newBuilder();
       for (InteractionClassHandle interactionClassHandle : interactionClassHandleSet) {
          builder.addInteractionClassHandle(convertFromHla(interactionClassHandle));
       }
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.AttributeHandleValueMap convertFromHla(AttributeHandleValueMap attributeHandleValueMap)
+   public hla.rti1516_2025.fedpro.AttributeHandleValueMap convertFromHla(AttributeHandleValueMap attributeHandleValueMap)
    {
       Objects.requireNonNull(attributeHandleValueMap, "AttributeHandleValueMap must not be null");
-      hla.rti1516_202X.fedpro.AttributeHandleValueMap.Builder builder =
-            hla.rti1516_202X.fedpro.AttributeHandleValueMap.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeHandleValueMap.Builder builder =
+            hla.rti1516_2025.fedpro.AttributeHandleValueMap.newBuilder();
       for (Map.Entry<AttributeHandle, byte[]> attributeHandleEntry : attributeHandleValueMap.entrySet()) {
          AttributeHandleValue.Builder handleValueBuilder = AttributeHandleValue.newBuilder();
          handleValueBuilder.setAttributeHandle(convertFromHla(attributeHandleEntry.getKey()));
@@ -1078,11 +1078,11 @@ public class ClientConverter {
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.ParameterHandleValueMap convertFromHla(ParameterHandleValueMap parameterHandleValueMap)
+   public hla.rti1516_2025.fedpro.ParameterHandleValueMap convertFromHla(ParameterHandleValueMap parameterHandleValueMap)
    {
       Objects.requireNonNull(parameterHandleValueMap, "ParameterHandleValueMap must not be null");
-      hla.rti1516_202X.fedpro.ParameterHandleValueMap.Builder builder =
-            hla.rti1516_202X.fedpro.ParameterHandleValueMap.newBuilder();
+      hla.rti1516_2025.fedpro.ParameterHandleValueMap.Builder builder =
+            hla.rti1516_2025.fedpro.ParameterHandleValueMap.newBuilder();
       for (Map.Entry<ParameterHandle, byte[]> ParameterHandleEntry : parameterHandleValueMap.entrySet()) {
          ParameterHandleValue.Builder handleValueBuilder = ParameterHandleValue.newBuilder();
          handleValueBuilder.setParameterHandle(convertFromHla(ParameterHandleEntry.getKey()));
@@ -1092,14 +1092,14 @@ public class ClientConverter {
       return builder.build();
    }
 
-   public MessageRetractionReturn convertToHla(hla.rti1516_202X.fedpro.MessageRetractionReturn result)
+   public MessageRetractionReturn convertToHla(hla.rti1516_2025.fedpro.MessageRetractionReturn result)
    {
       boolean retractionHandleIsValid = result.getRetractionHandleIsValid();
       MessageRetractionHandle mrh = retractionHandleIsValid ? convertToHla(result.getMessageRetractionHandle()) : null;
       return new MessageRetractionReturn(convertToHla(retractionHandleIsValid), mrh);
    }
 
-   public TimeQueryReturn convertToHla(hla.rti1516_202X.fedpro.TimeQueryReturn result)
+   public TimeQueryReturn convertToHla(hla.rti1516_2025.fedpro.TimeQueryReturn result)
    throws RTIinternalError
    {
       return new TimeQueryReturn(
@@ -1107,11 +1107,11 @@ public class ClientConverter {
             result.hasLogicalTime() ? convertToHla(result.getLogicalTime()) : null);
    }
 
-   public hla.rti1516_202X.fedpro.MessageRetractionHandle convertFromHla(MessageRetractionHandle messageRetractionHandle)
+   public hla.rti1516_2025.fedpro.MessageRetractionHandle convertFromHla(MessageRetractionHandle messageRetractionHandle)
    {
       Objects.requireNonNull(messageRetractionHandle, "MessageRetractionHandle must not be null");
-      hla.rti1516_202X.fedpro.MessageRetractionHandle.Builder builder =
-            hla.rti1516_202X.fedpro.MessageRetractionHandle.newBuilder();
+      hla.rti1516_2025.fedpro.MessageRetractionHandle.Builder builder =
+            hla.rti1516_2025.fedpro.MessageRetractionHandle.newBuilder();
       MessageRetractionHandleImpl impl = (MessageRetractionHandleImpl) messageRetractionHandle;
       byte[] buf = new byte[impl.encodedLength()];
       impl.encode(buf, 0);
@@ -1119,40 +1119,40 @@ public class ClientConverter {
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.DimensionHandleSet convertFromHla(DimensionHandleSet dimensions)
+   public hla.rti1516_2025.fedpro.DimensionHandleSet convertFromHla(DimensionHandleSet dimensions)
    throws InvalidDimensionHandle
    {
       if (dimensions == null) {
          throw new InvalidDimensionHandle("DimensionHandleSet must not be null");
       }
-      hla.rti1516_202X.fedpro.DimensionHandleSet.Builder builder = hla.rti1516_202X.fedpro.DimensionHandleSet.newBuilder();
+      hla.rti1516_2025.fedpro.DimensionHandleSet.Builder builder = hla.rti1516_2025.fedpro.DimensionHandleSet.newBuilder();
       for (DimensionHandle dimensionHandle : dimensions) {
          builder.addDimensionHandle(convertFromHla(dimensionHandle));
       }
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.RegionHandleSet convertFromHla(RegionHandleSet regions)
+   public hla.rti1516_2025.fedpro.RegionHandleSet convertFromHla(RegionHandleSet regions)
    throws InvalidRegion
    {
       if (regions == null) {
          throw new InvalidRegion("RegionHandleSet must not be null");
       }
-      hla.rti1516_202X.fedpro.RegionHandleSet.Builder builder = hla.rti1516_202X.fedpro.RegionHandleSet.newBuilder();
+      hla.rti1516_2025.fedpro.RegionHandleSet.Builder builder = hla.rti1516_2025.fedpro.RegionHandleSet.newBuilder();
       for (RegionHandle regionHandle : regions) {
          builder.addRegionHandle(convertFromHla(regionHandle));
       }
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.AttributeSetRegionSetPairList convertFromHla(AttributeSetRegionSetPairList attributesAndRegions)
+   public hla.rti1516_2025.fedpro.AttributeSetRegionSetPairList convertFromHla(AttributeSetRegionSetPairList attributesAndRegions)
    throws InvalidRegion, AttributeNotDefined
    {
       if (attributesAndRegions == null) {
          throw new AttributeNotDefined("AttributeSetRegionSetPairList must not be null");
       }
-      hla.rti1516_202X.fedpro.AttributeSetRegionSetPairList.Builder builder =
-            hla.rti1516_202X.fedpro.AttributeSetRegionSetPairList.newBuilder();
+      hla.rti1516_2025.fedpro.AttributeSetRegionSetPairList.Builder builder =
+            hla.rti1516_2025.fedpro.AttributeSetRegionSetPairList.newBuilder();
       for (AttributeRegionAssociation attributesAndRegion : attributesAndRegions) {
          AttributeSetRegionSetPair.Builder pairBuilder = AttributeSetRegionSetPair.newBuilder();
          pairBuilder.setAttributeSet(convertFromHla(attributesAndRegion.ahset));
@@ -1162,7 +1162,7 @@ public class ClientConverter {
       return builder.build();
    }
 
-   public hla.rti1516_202X.fedpro.ServiceGroup convertFromHla(ServiceGroup group)
+   public hla.rti1516_2025.fedpro.ServiceGroup convertFromHla(ServiceGroup group)
    throws InvalidServiceGroup
    {
       if (group == null) {
@@ -1170,21 +1170,21 @@ public class ClientConverter {
       }
       switch (group) {
          case FEDERATION_MANAGEMENT:
-            return hla.rti1516_202X.fedpro.ServiceGroup.FEDERATION_MANAGEMENT;
+            return hla.rti1516_2025.fedpro.ServiceGroup.FEDERATION_MANAGEMENT;
          case DECLARATION_MANAGEMENT:
-            return hla.rti1516_202X.fedpro.ServiceGroup.DECLARATION_MANAGEMENT;
+            return hla.rti1516_2025.fedpro.ServiceGroup.DECLARATION_MANAGEMENT;
          case OBJECT_MANAGEMENT:
-            return hla.rti1516_202X.fedpro.ServiceGroup.OBJECT_MANAGEMENT;
+            return hla.rti1516_2025.fedpro.ServiceGroup.OBJECT_MANAGEMENT;
          case OWNERSHIP_MANAGEMENT:
-            return hla.rti1516_202X.fedpro.ServiceGroup.OWNERSHIP_MANAGEMENT;
+            return hla.rti1516_2025.fedpro.ServiceGroup.OWNERSHIP_MANAGEMENT;
          case TIME_MANAGEMENT:
-            return hla.rti1516_202X.fedpro.ServiceGroup.TIME_MANAGEMENT;
+            return hla.rti1516_2025.fedpro.ServiceGroup.TIME_MANAGEMENT;
          case DATA_DISTRIBUTION_MANAGEMENT:
-            return hla.rti1516_202X.fedpro.ServiceGroup.DATA_DISTRIBUTION_MANAGEMENT;
+            return hla.rti1516_2025.fedpro.ServiceGroup.DATA_DISTRIBUTION_MANAGEMENT;
          case SUPPORT_SERVICES:
-            return hla.rti1516_202X.fedpro.ServiceGroup.SUPPORT_SERVICES;
+            return hla.rti1516_2025.fedpro.ServiceGroup.SUPPORT_SERVICES;
       }
-      return hla.rti1516_202X.fedpro.ServiceGroup.UNRECOGNIZED;
+      return hla.rti1516_2025.fedpro.ServiceGroup.UNRECOGNIZED;
    }
 
    public long convertToHla(long result)
@@ -1197,18 +1197,18 @@ public class ClientConverter {
       return result;
    }
 
-   public RangeBounds convertToHla(hla.rti1516_202X.fedpro.RangeBounds result)
+   public RangeBounds convertToHla(hla.rti1516_2025.fedpro.RangeBounds result)
    {
       return new RangeBounds(Integer.toUnsignedLong(result.getLower()), Integer.toUnsignedLong(result.getUpper()));
    }
 
-   public hla.rti1516_202X.fedpro.RangeBounds convertFromHla(RangeBounds bounds)
+   public hla.rti1516_2025.fedpro.RangeBounds convertFromHla(RangeBounds bounds)
    throws InvalidRangeBound
    {
       if (bounds == null) {
          throw new InvalidRangeBound("RangeBounds must not be null");
       }
-      hla.rti1516_202X.fedpro.RangeBounds.Builder builder = hla.rti1516_202X.fedpro.RangeBounds.newBuilder();
+      hla.rti1516_2025.fedpro.RangeBounds.Builder builder = hla.rti1516_2025.fedpro.RangeBounds.newBuilder();
       builder.setLower((int) bounds.lower);
       builder.setUpper((int) bounds.upper);
       return builder.build();
@@ -1302,7 +1302,7 @@ public class ClientConverter {
       return new MyParameterHandleValueMapFactory();
    }
 
-   public SynchronizationPointFailureReason convertToHla(hla.rti1516_202X.fedpro.SynchronizationPointFailureReason reason)
+   public SynchronizationPointFailureReason convertToHla(hla.rti1516_2025.fedpro.SynchronizationPointFailureReason reason)
    {
       switch (reason) {
          case SYNCHRONIZATION_POINT_LABEL_NOT_UNIQUE:
@@ -1316,7 +1316,7 @@ public class ClientConverter {
       return null;
    }
 
-   public SaveFailureReason convertToHla(hla.rti1516_202X.fedpro.SaveFailureReason reason)
+   public SaveFailureReason convertToHla(hla.rti1516_2025.fedpro.SaveFailureReason reason)
    {
       switch (reason) {
          case RTI_UNABLE_TO_SAVE:
@@ -1337,7 +1337,7 @@ public class ClientConverter {
       return null;
    }
 
-   public RestoreFailureReason convertToHla(hla.rti1516_202X.fedpro.RestoreFailureReason reason)
+   public RestoreFailureReason convertToHla(hla.rti1516_2025.fedpro.RestoreFailureReason reason)
    {
       switch (reason) {
          case RTI_UNABLE_TO_RESTORE:
@@ -1356,10 +1356,10 @@ public class ClientConverter {
       return null;
    }
 
-   public FederationExecutionInformationSet convertToHla(hla.rti1516_202X.fedpro.FederationExecutionInformationSet theFederationExecutionInformationSet)
+   public FederationExecutionInformationSet convertToHla(hla.rti1516_2025.fedpro.FederationExecutionInformationSet theFederationExecutionInformationSet)
    {
       FederationExecutionInformationSet informationSet = new FederationExecutionInformationSetImpl();
-      for (hla.rti1516_202X.fedpro.FederationExecutionInformation info : theFederationExecutionInformationSet.getFederationExecutionInformationList()) {
+      for (hla.rti1516_2025.fedpro.FederationExecutionInformation info : theFederationExecutionInformationSet.getFederationExecutionInformationList()) {
          informationSet.add(convertToHla(info));
       }
       return informationSet;
@@ -1375,7 +1375,7 @@ public class ClientConverter {
       FederateRestoreStatus[] federateRestoreStatuses =
             new FederateRestoreStatus[federateRestoreStatusArray.getFederateRestoreStatusCount()];
       int i = 0;
-      for (hla.rti1516_202X.fedpro.FederateRestoreStatus federateRestoreStatus : federateRestoreStatusArray.getFederateRestoreStatusList()) {
+      for (hla.rti1516_2025.fedpro.FederateRestoreStatus federateRestoreStatus : federateRestoreStatusArray.getFederateRestoreStatusList()) {
          federateRestoreStatuses[i] = new FederateRestoreStatus(
                convertToHla(federateRestoreStatus.getPreRestoreHandle()),
                convertToHla(federateRestoreStatus.getPostRestoreHandle()),
@@ -1390,7 +1390,7 @@ public class ClientConverter {
       FederateHandleSaveStatusPair[] federateHandleSaveStatusPairs =
             new FederateHandleSaveStatusPair[federateHandleSaveStatusPairArray.getFederateHandleSaveStatusPairCount()];
       int i = 0;
-      for (hla.rti1516_202X.fedpro.FederateHandleSaveStatusPair saveStatusPair : federateHandleSaveStatusPairArray.getFederateHandleSaveStatusPairList()) {
+      for (hla.rti1516_2025.fedpro.FederateHandleSaveStatusPair saveStatusPair : federateHandleSaveStatusPairArray.getFederateHandleSaveStatusPairList()) {
          federateHandleSaveStatusPairs[i] = new FederateHandleSaveStatusPair(
                convertToHla(saveStatusPair.getFederateHandle()),
                convertToHla(saveStatusPair.getSaveStatus()));
@@ -1399,7 +1399,7 @@ public class ClientConverter {
       return federateHandleSaveStatusPairs;
    }
 
-   private RestoreStatus convertToHla(hla.rti1516_202X.fedpro.RestoreStatus restoreStatus)
+   private RestoreStatus convertToHla(hla.rti1516_2025.fedpro.RestoreStatus restoreStatus)
    {
       switch (restoreStatus) {
          case NO_RESTORE_IN_PROGRESS:
@@ -1420,7 +1420,7 @@ public class ClientConverter {
       return null;
    }
 
-   private SaveStatus convertToHla(hla.rti1516_202X.fedpro.SaveStatus saveStatus)
+   private SaveStatus convertToHla(hla.rti1516_2025.fedpro.SaveStatus saveStatus)
    {
       switch (saveStatus) {
          case NO_SAVE_IN_PROGRESS:
@@ -1437,7 +1437,7 @@ public class ClientConverter {
       return null;
    }
 
-   public AdditionalSettingsResultCode convertToHla(hla.rti1516_202X.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode)
+   public AdditionalSettingsResultCode convertToHla(hla.rti1516_2025.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode)
    {
       switch (additionalSettingsResultCode) {
          case SETTINGS_FAILED_TO_PARSE:
@@ -1452,7 +1452,7 @@ public class ClientConverter {
       return null;
    }
 
-   private FederationExecutionInformation convertToHla(hla.rti1516_202X.fedpro.FederationExecutionInformation info)
+   private FederationExecutionInformation convertToHla(hla.rti1516_2025.fedpro.FederationExecutionInformation info)
    {
       return new FederationExecutionInformation(
             info.getFederationExecutionName(),
@@ -1466,7 +1466,7 @@ public class ClientConverter {
       }
    }
 
-   private FederationExecutionMemberInformation convertToHla(hla.rti1516_202X.fedpro.FederationExecutionMemberInformation info)
+   private FederationExecutionMemberInformation convertToHla(hla.rti1516_2025.fedpro.FederationExecutionMemberInformation info)
    {
       return new FederationExecutionMemberInformation(info.getFederateName(), info.getFederateType());
    }
@@ -1478,10 +1478,10 @@ public class ClientConverter {
       }
    }
 
-   public FederationExecutionMemberInformationSet convertToHla(hla.rti1516_202X.fedpro.FederationExecutionMemberInformationSet federationExecutionMemberInformationSet)
+   public FederationExecutionMemberInformationSet convertToHla(hla.rti1516_2025.fedpro.FederationExecutionMemberInformationSet federationExecutionMemberInformationSet)
    {
       FederationExecutionMemberInformationSet informationSet = new FederationExecutionMemberInformationSetImpl();
-      for (hla.rti1516_202X.fedpro.FederationExecutionMemberInformation info : federationExecutionMemberInformationSet.getFederationExecutionMemberInformationList()) {
+      for (hla.rti1516_2025.fedpro.FederationExecutionMemberInformation info : federationExecutionMemberInformationSet.getFederationExecutionMemberInformationList()) {
          informationSet.add(convertToHla(info));
       }
       return informationSet;

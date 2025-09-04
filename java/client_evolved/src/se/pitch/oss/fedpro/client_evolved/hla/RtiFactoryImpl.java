@@ -45,6 +45,6 @@ public class RtiFactoryImpl implements RtiFactory {
 
    public String rtiVersion()
    {
-      return "1.1";
+      return "1.2";
    }
 }

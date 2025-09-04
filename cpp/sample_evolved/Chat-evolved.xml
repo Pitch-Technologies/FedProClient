@@ -1,54 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objectModel xmlns="http://www.sisostds.org/schemas/IEEE1516-2010"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://www.sisostds.org/schemas/IEEE1516-2010 http://www.sisostds.org/schemas/IEEE1516-DIF-2010.xsd">
+<objectModel xsi:schemaLocation="http://standards.ieee.org/IEEE1516-2010 http://standards.ieee.org/downloads/1516/1516.2-2010/IEEE1516-DIF-2010.xsd" 
+			 xmlns="http://standards.ieee.org/IEEE1516-2010"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <modelIdentification>
       <name>Chat-evolved.xml</name>
       <type>FOM</type>
       <version>1.0</version>
-      <modificationDate>2024-02-23</modificationDate>
-      <securityClassification>Undefined</securityClassification>
-      <purpose>Small demo of HLA usage.</purpose>
-      <applicationDomain>Samples</applicationDomain>
-      <description>Undefined</description>
-      <poc>
-         <pocType>Primary author</pocType>
-         <pocName>Pitch</pocName>
-         <pocOrg>Pitch Technologies AB</pocOrg>
-         <pocTelephone>na</pocTelephone>
-         <pocEmail>na</pocEmail>
-      </poc>
-      <poc>
-         <pocType>Sponsor</pocType>
-         <pocName>DMSO</pocName>
-      </poc>
-      <reference>
-         <type>Text</type>
-         <identification>http://www.dmso.mil/index.php?page=72</identification>
-      </reference>
-      <reference>
-         <type>HLA Evolved Conversion Tool</type>
-         <identification>Pitch Visual OMT 1516 v1.5.1</identification>
-      </reference>
-      <reference>
-         <type>Converted From</type>
-         <identification>Chat-evolved.xml</identification>
-      </reference>
+      <modificationDate>2024-11-18</modificationDate>
+      <securityClassification>unclassified</securityClassification>
+      <copyright>Pitch Technologies AB</copyright>
+      <purpose>Small demo of Evolved usage.</purpose>
+      <applicationDomain></applicationDomain>
+      <description>Allows for communication in a Chat Federation</description>
+      <useLimitation></useLimitation>
+      <other></other>
    </modelIdentification>
    <objects>
       <objectClass>
          <name>HLAobjectRoot</name>
          <objectClass>
             <name>Participant</name>
-            <sharing>Neither</sharing>
+            <sharing>PublishSubscribe</sharing>
+            <semantics>The user that connected to the Chat federation</semantics>
             <attribute>
                <name>Name</name>
                <dataType>HLAunicodeString</dataType>
-               <updateType>Conditional</updateType>
+               <updateType>Static</updateType>
+               <updateCondition>On creation</updateCondition>
                <ownership>DivestAcquire</ownership>
                <sharing>Neither</sharing>
                <transportation>HLAreliable</transportation>
                <order>Receive</order>
+               <semantics>The name of the participant</semantics>
             </attribute>
          </objectClass>
       </objectClass>
@@ -75,16 +58,6 @@
          </interactionClass>
       </interactionClass>
    </interactions>
-   <dimensions>
-   </dimensions>
-   <time>
-      <timeStamp>
-         <dataType>VerifierIntegerTime</dataType>
-      </timeStamp>
-      <lookahead>
-         <dataType>VerifierIntegerTime</dataType>
-      </lookahead>
-   </time>
    <tags>
       <updateReflectTag>
          <dataType>NA</dataType>
@@ -94,40 +67,8 @@
          <dataType>NA</dataType>
          <semantics>NA</semantics>
       </sendReceiveTag>
-      <deleteRemoveTag>
-         <dataType>NA</dataType>
-         <semantics>NA</semantics>
-      </deleteRemoveTag>
-      <divestitureRequestTag>
-         <dataType>NA</dataType>
-         <semantics>NA</semantics>
-      </divestitureRequestTag>
-      <divestitureCompletionTag>
-         <dataType>NA</dataType>
-         <semantics>NA</semantics>
-      </divestitureCompletionTag>
-      <acquisitionRequestTag>
-         <dataType>NA</dataType>
-         <semantics>NA</semantics>
-      </acquisitionRequestTag>
-      <requestUpdateTag>
-         <dataType>NA</dataType>
-         <semantics>NA</semantics>
-      </requestUpdateTag>
    </tags>
-   <synchronizations>
-      <synchronizationPoint>
-         <label>First</label>
-         <dataType>NA</dataType>
-         <capability>RegisterAchieve</capability>
-      </synchronizationPoint>
-      <synchronizationPoint>
-         <label>Second</label>
-         <dataType>NA</dataType>
-         <capability>RegisterAchieve</capability>
-      </synchronizationPoint>
-   </synchronizations>
-   <transportations/>
+   <dimensions/>
    <switches>
       <autoProvide isEnabled="false"/>
       <conveyRegionDesignatorSets isEnabled="false"/>
@@ -141,29 +82,5 @@
       <delaySubscriptionEvaluation isEnabled="false"/>
       <automaticResignAction resignAction="CancelThenDeleteThenDivest"/>
    </switches>
-   <dataTypes>
-      <basicDataRepresentations>
-         <basicData>
-            <name>UnsignedShort</name>
-            <size>16</size>
-            <interpretation>Integer in the range [0, 2^16 - 1]</interpretation>
-            <endian>Big</endian>
-            <encoding>16-bit unsigned integer.</encoding>
-         </basicData>
-      </basicDataRepresentations>
-      <simpleDataTypes>
-         <simpleData>
-            <name>VerfierIntegerTime</name>
-            <representation>HLAinteger64BE</representation>
-            <units>NA</units>
-            <resolution>1</resolution>
-            <accuracy>NA</accuracy>
-            <semantics>Time and time intervals</semantics>
-         </simpleData>
-      </simpleDataTypes>
-      <enumeratedDataTypes/>
-      <arrayDataTypes/>
-      <fixedRecordDataTypes/>
-      <variantRecordDataTypes/>
-   </dataTypes>
 </objectModel>
+

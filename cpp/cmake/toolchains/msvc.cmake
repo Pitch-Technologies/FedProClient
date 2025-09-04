@@ -12,6 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+
 # msvc.cmake
 
 # We have to pass FEDPRO_VC_TOOLSET through the environment because toolchain
@@ -22,6 +23,15 @@
 if (DEFINED ENV{FEDPRO_VC_TOOLSET})
    set(exact "EXACT")
 else ()
+   if (FEDPRO_REQUIRE_VC_TOOLSET)
+      message(FATAL_ERROR
+            " FEDPRO_VC_TOOLSET environment variable not defined.\n"
+            " This variable controls which version of Visual Studio will be used for the build.\n"
+            " Make sure you are using one of the presets defined in CMakePresets.json or that you are setting up the environment correctly.\n"
+            " Example:\n"
+            "     FEDPRO_VC_TOOLSET=140\n"
+      )
+   endif ()
    set(exact)
 endif ()
 

@@ -12,11 +12,12 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+
 # Default settings shared by all toolchains.
 
 # Search path for CMake modules to be loaded by the include() or find_package()
 # commands before checking the default modules that come with CMake.
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/..)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/..")
 
 # Require CMake projects to set the CMAKE_CXX_STANDARD variable.
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

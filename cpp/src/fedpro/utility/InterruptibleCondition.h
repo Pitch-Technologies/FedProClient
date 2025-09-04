@@ -136,4 +136,28 @@ namespace FedPro
 
    };
 
+   class InterruptibleConditionState
+   {
+   public:
+
+      InterruptibleConditionState();
+
+      void interrupt();
+
+      std::mutex & mutex()
+      {
+         return _mutex;
+      }
+
+      InterruptibleCondition & condition()
+      {
+         return _condition;
+      }
+
+   private:
+
+      std::mutex _mutex;
+      InterruptibleCondition _condition;
+   };
+
 } // FedPro

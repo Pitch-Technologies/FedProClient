@@ -143,19 +143,24 @@
   <!-- Project Libraries -->
   
   <path id="library.java-websocket.classpath">
-    <pathelement location="${basedir}/lib/Java-WebSocket-1.5.6.jar"/>
+    <pathelement location="${basedir}/lib/Java-WebSocket-1.6.0.jar"/>
   </path>
   
   <path id="library.jcip-annotations.classpath">
     <pathelement location="${basedir}/lib/jcip-annotations-1.0.jar"/>
   </path>
   
-  <path id="library.protobuf-java.classpath">
-    <pathelement location="${basedir}/lib/protobuf-java-3.21.7.jar"/>
+  <path id="library.junit4.classpath">
+    <pathelement location="${basedir}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/lib/junit-4.12.jar"/>
   </path>
   
-  <path id="library.slf4j-api-2.0.5.classpath">
-    <pathelement location="${basedir}/lib/slf4j-api-2.0.5.jar"/>
+  <path id="library.protobuf-java.classpath">
+    <pathelement location="${basedir}/lib/protobuf-java-4.29.1.jar"/>
+  </path>
+  
+  <path id="library.slf4j-api.classpath">
+    <pathelement location="${basedir}/lib/slf4j-api-2.0.17.jar"/>
   </path>
   
   
@@ -211,7 +216,7 @@
   
   <path id="fedproclient_hla_api.module.sourcepath">
     <dirset dir="${module.fedproclient_hla_api.basedir}/api">
-      <include name="HLA1516-202X/src"/>
+      <include name="HLA1516-2025/src"/>
     </dirset>
   </path>
   
@@ -229,7 +234,7 @@
     </javac>
     
     <copy todir="${fedproclient_hla_api.output.dir}">
-      <fileset dir="${module.fedproclient_hla_api.basedir}/api/HLA1516-202X/src">
+      <fileset dir="${module.fedproclient_hla_api.basedir}/api/HLA1516-2025/src">
         <patternset refid="compiler.resources"/>
         <type type="file"/>
       </fileset>
@@ -440,7 +445,7 @@
     <path refid="library.protobuf-java.classpath"/>
     <path refid="library.jcip-annotations.classpath"/>
     <pathelement location="${fedproclient_protobuf.output.dir}"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_client_common.runtime.production.module.classpath">
@@ -449,7 +454,7 @@
     <path refid="library.protobuf-java.classpath"/>
     <path refid="library.jcip-annotations.classpath"/>
     <path refid="fedproclient_protobuf.runtime.production.module.classpath"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_client_common.module.classpath">
@@ -461,7 +466,7 @@
     <path refid="library.jcip-annotations.classpath"/>
     <pathelement location="${fedproclient_protobuf.testoutput.dir}"/>
     <pathelement location="${fedproclient_protobuf.output.dir}"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_client_common.runtime.module.classpath">
@@ -471,7 +476,7 @@
     <path refid="library.protobuf-java.classpath"/>
     <path refid="library.jcip-annotations.classpath"/>
     <path refid="fedproclient_protobuf.runtime.module.classpath"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   
@@ -779,14 +784,14 @@
     <path refid="${module.jdk.classpath.fedproclient_sample}"/>
     <pathelement location="${fedproclient_client.output.dir}"/>
     <pathelement location="${fedproclient_hla_api.output.dir}"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_sample.runtime.production.module.classpath">
     <pathelement location="${fedproclient_sample.output.dir}"/>
     <path refid="fedproclient_client.runtime.production.module.classpath"/>
     <path refid="fedproclient_hla_api.runtime.production.module.classpath"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_sample.module.classpath">
@@ -796,7 +801,7 @@
     <pathelement location="${fedproclient_client.output.dir}"/>
     <pathelement location="${fedproclient_hla_api.testoutput.dir}"/>
     <pathelement location="${fedproclient_hla_api.output.dir}"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_sample.runtime.module.classpath">
@@ -804,7 +809,7 @@
     <pathelement location="${fedproclient_sample.output.dir}"/>
     <path refid="fedproclient_client.runtime.module.classpath"/>
     <path refid="fedproclient_hla_api.runtime.module.classpath"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   
@@ -872,13 +877,13 @@
   <path id="fedproclient_sample_evolved.module.production.classpath">
     <path refid="${module.jdk.classpath.fedproclient_sample_evolved}"/>
     <pathelement location="${fedproclient_client_evolved.output.dir}"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_sample_evolved.runtime.production.module.classpath">
     <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
     <path refid="fedproclient_client_evolved.runtime.production.module.classpath"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_sample_evolved.module.classpath">
@@ -886,14 +891,14 @@
     <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
     <pathelement location="${fedproclient_client_evolved.testoutput.dir}"/>
     <pathelement location="${fedproclient_client_evolved.output.dir}"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   <path id="fedproclient_sample_evolved.runtime.module.classpath">
     <pathelement location="${fedproclient_sample_evolved.testoutput.dir}"/>
     <pathelement location="${fedproclient_sample_evolved.output.dir}"/>
     <path refid="fedproclient_client_evolved.runtime.module.classpath"/>
-    <path refid="library.slf4j-api-2.0.5.classpath"/>
+    <path refid="library.slf4j-api.classpath"/>
   </path>
   
   
@@ -939,13 +944,131 @@
     <delete dir="${fedproclient_sample_evolved.testoutput.dir}"/>
   </target>
   
+  
+  <!-- Module fedproclient_test -->
+  
+  <dirname property="module.fedproclient_test.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.fedproclient_test" value="${jdk.home.11}"/>
+  <property name="module.jdk.bin.fedproclient_test" value="${jdk.bin.11}"/>
+  <property name="module.jdk.classpath.fedproclient_test" value="jdk.classpath.11"/>
+  
+  <property name="compiler.args.fedproclient_test" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="fedproclient_test.output.dir" value="${module.fedproclient_test.basedir}/out/production/fedproclient_test"/>
+  <property name="fedproclient_test.testoutput.dir" value="${module.fedproclient_test.basedir}/out/test/fedproclient_test"/>
+  
+  <path id="fedproclient_test.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fedproclient_test.module.production.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_test}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <pathelement location="${fedproclient_client.output.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+    <pathelement location="${fedproclient_client_common.output.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.junit4.classpath"/>
+  </path>
+  
+  <path id="fedproclient_test.runtime.production.module.classpath">
+    <pathelement location="${fedproclient_test.output.dir}"/>
+    <path refid="fedproclient_hla_api.runtime.production.module.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.production.module.classpath"/>
+    <path refid="fedproclient_client.runtime.production.module.classpath"/>
+    <path refid="fedproclient_client_evolved.runtime.production.module.classpath"/>
+    <path refid="fedproclient_client_common.runtime.production.module.classpath"/>
+    <path refid="fedproclient_session.runtime.production.module.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.junit4.classpath"/>
+  </path>
+  
+  <path id="fedproclient_test.module.classpath">
+    <path refid="${module.jdk.classpath.fedproclient_test}"/>
+    <pathelement location="${fedproclient_test.output.dir}"/>
+    <pathelement location="${fedproclient_hla_api.testoutput.dir}"/>
+    <pathelement location="${fedproclient_hla_api.output.dir}"/>
+    <pathelement location="${fedproclient_protobuf.testoutput.dir}"/>
+    <pathelement location="${fedproclient_protobuf.output.dir}"/>
+    <pathelement location="${fedproclient_client.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client.output.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_evolved.output.dir}"/>
+    <pathelement location="${fedproclient_client_common.testoutput.dir}"/>
+    <pathelement location="${fedproclient_client_common.output.dir}"/>
+    <pathelement location="${fedproclient_session.testoutput.dir}"/>
+    <pathelement location="${fedproclient_session.output.dir}"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.junit4.classpath"/>
+  </path>
+  
+  <path id="fedproclient_test.runtime.module.classpath">
+    <pathelement location="${fedproclient_test.testoutput.dir}"/>
+    <pathelement location="${fedproclient_test.output.dir}"/>
+    <path refid="fedproclient_hla_api.runtime.module.classpath"/>
+    <path refid="fedproclient_protobuf.runtime.module.classpath"/>
+    <path refid="fedproclient_client.runtime.module.classpath"/>
+    <path refid="fedproclient_client_evolved.runtime.module.classpath"/>
+    <path refid="fedproclient_client_common.runtime.module.classpath"/>
+    <path refid="fedproclient_session.runtime.module.classpath"/>
+    <path refid="library.protobuf-java.classpath"/>
+    <path refid="library.junit4.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fedproclient_test">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fedproclient_test">
+    <patternset refid="excluded.from.module.fedproclient_test"/>
+  </patternset>
+  
+  <path id="fedproclient_test.module.sourcepath">
+    <dirset dir="${module.fedproclient_test.basedir}/test">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fedproclient_test" depends="compile.module.fedproclient_test.production,compile.module.fedproclient_test.tests" description="Compile module fedproclient_test"/>
+  
+  <target name="compile.module.fedproclient_test.production" depends="compile.module.fedproclient_hla_api,compile.module.fedproclient_protobuf,compile.module.fedproclient_client,compile.module.fedproclient_client_evolved,compile.module.fedproclient_client_common,compile.module.fedproclient_session" description="Compile module fedproclient_test; production classes">
+    <mkdir dir="${fedproclient_test.output.dir}"/>
+    <javac destdir="${fedproclient_test.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fedproclient_test}/javac">
+      <compilerarg line="${compiler.args.fedproclient_test}"/>
+      <bootclasspath refid="fedproclient_test.module.bootclasspath"/>
+      <classpath refid="fedproclient_test.module.production.classpath"/>
+      <src refid="fedproclient_test.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fedproclient_test"/>
+    </javac>
+    
+    <copy todir="${fedproclient_test.output.dir}">
+      <fileset dir="${module.fedproclient_test.basedir}/test/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fedproclient_test.tests" depends="compile.module.fedproclient_test.production" description="compile module fedproclient_test; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fedproclient_test" description="cleanup module">
+    <delete dir="${fedproclient_test.output.dir}"/>
+    <delete dir="${fedproclient_test.testoutput.dir}"/>
+  </target>
+  
   <target name="init" description="Build initialization">
     <!-- Perform any build initialization in this target -->
   </target>
   
-  <target name="clean" depends="clean.module.fedproclient_hla_api, clean.module.fedproclient_protobuf, clean.module.fedproclient_session, clean.module.fedproclient_client_common, clean.module.fedproclient_client, clean.module.fedproclient_client_evolved, clean.module.fedproclient_sample, clean.module.fedproclient_sample_evolved" description="cleanup all"/>
+  <target name="clean" depends="clean.module.fedproclient_hla_api, clean.module.fedproclient_protobuf, clean.module.fedproclient_session, clean.module.fedproclient_client_common, clean.module.fedproclient_client, clean.module.fedproclient_client_evolved, clean.module.fedproclient_sample, clean.module.fedproclient_sample_evolved, clean.module.fedproclient_test" description="cleanup all"/>
   
-  <target name="build.modules" depends="init, clean, compile.module.fedproclient_hla_api, compile.module.fedproclient_protobuf, compile.module.fedproclient_session, compile.module.fedproclient_client_common, compile.module.fedproclient_client, compile.module.fedproclient_client_evolved, compile.module.fedproclient_sample, compile.module.fedproclient_sample_evolved" description="build all modules"/>
+  <target name="build.modules" depends="init, clean, compile.module.fedproclient_hla_api, compile.module.fedproclient_protobuf, compile.module.fedproclient_session, compile.module.fedproclient_client_common, compile.module.fedproclient_client, compile.module.fedproclient_client_evolved, compile.module.fedproclient_sample, compile.module.fedproclient_sample_evolved, compile.module.fedproclient_test" description="build all modules"/>
   
   <target name="all" depends="build.modules" description="build all"/>
 </project>

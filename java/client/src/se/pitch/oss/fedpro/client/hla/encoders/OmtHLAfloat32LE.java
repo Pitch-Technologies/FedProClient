@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.client.hla.encoders;
 
-import hla.rti1516_202X.encoding.ByteWrapper;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderException;
-import hla.rti1516_202X.encoding.HLAfloat32LE;
+import hla.rti1516_2025.encoding.ByteWrapper;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderException;
+import hla.rti1516_2025.encoding.HLAfloat32LE;
 
 import static java.lang.Float.*;
 

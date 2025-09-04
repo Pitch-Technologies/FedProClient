@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
-public interface Session extends AutoCloseable {
+public interface Session {
 
    /**
     * Enum representing the possible states a session may be in.
@@ -145,6 +145,12 @@ public interface Session extends AutoCloseable {
     * @throws NullPointerException If messageSentListener is null.
     */
    void setMessageSentListener(MessageSentListener messageSentListener);
+
+   /**
+    * Get pretty-printed session statistics that are expressed in quantity per second,
+    * such as call count per second.
+    */
+   String getPrettyPrintedPerSecondStats();
 
    /**
     * Start the session.

@@ -19,6 +19,7 @@ package se.pitch.oss.fedpro.client;
 import java.time.Duration;
 
 import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_RECONNECT_LIMIT;
+import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_RESUME_RETRY_DELAY_MILLIS;
 import static se.pitch.oss.fedpro.client.session.SessionSettings.*;
 
 /**
@@ -27,7 +28,7 @@ import static se.pitch.oss.fedpro.client.session.SessionSettings.*;
  */
 public class SimpleResumeStrategy implements ResumeStrategy {
 
-   private final long _reconnectDelayMillis = getDefaultReconnectDelayMillis();
+   private final long _reconnectDelayMillis;
    private final long _reconnectLimitMillis;
 
    public SimpleResumeStrategy()
@@ -42,8 +43,11 @@ public class SimpleResumeStrategy implements ResumeStrategy {
          _reconnectLimitMillis = settings.getDuration(
                      SETTING_NAME_RECONNECT_LIMIT, Duration.ofMillis(getDefaultReconnectLimitMillis()))
                .toMillis();
+         _reconnectDelayMillis = settings.getInt(SETTING_NAME_RESUME_RETRY_DELAY_MILLIS,
+               (int) getDefaultReconnectDelayMillis());
       } else {
          _reconnectLimitMillis = getDefaultReconnectLimitMillis();
+         _reconnectDelayMillis = getDefaultReconnectDelayMillis();
       }
    }
 

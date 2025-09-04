@@ -134,6 +134,12 @@ namespace FedPro
       _unsignedInt32Properties[toString(propertyName)] = value;
    }
 
+   bool Properties::empty() const
+   {
+      return _booleanProperties.empty() && _durationProperties.empty() && _intProperties.empty() &&
+             _stringProperties.empty() && _unsignedInt16Properties.empty() && _unsignedInt32Properties.empty();
+   }
+
    std::string Properties::toPrettyString() const
    {
       std::string string{};

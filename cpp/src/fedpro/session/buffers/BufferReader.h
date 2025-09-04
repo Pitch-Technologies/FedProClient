@@ -21,6 +21,7 @@
 #include "../SessionUtils.h"
 
 #include <atomic>
+#include <cstddef>
 #include <cstdint>
 #include <memory>
 #include <string>
@@ -33,7 +34,7 @@ namespace FedPro
    {
    public:
 
-      using size_type = uint32_t;
+      using size_type = size_t;
 
       using typename BufferPeeker<E>::peek_type;
 

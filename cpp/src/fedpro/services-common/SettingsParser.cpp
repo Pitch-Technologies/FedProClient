@@ -70,11 +70,13 @@ namespace FedPro
          const std::string & value)
    {
       if (key == SETTING_NAME_HEARTBEAT_INTERVAL || key == SETTING_NAME_RESPONSE_TIMEOUT ||
-          key == SETTING_NAME_RECONNECT_LIMIT || key == SETTING_NAME_CONNECTION_TIMEOUT) {
+          key == SETTING_NAME_RESUME_RETRY_DELAY_MILLIS || key == SETTING_NAME_RECONNECT_LIMIT ||
+          key == SETTING_NAME_CONNECTION_TIMEOUT || key == SETTING_NAME_PRINT_STATS_INTERVAL) {
          parseDuration(settings, key, value);
-      } else if (key == SETTING_NAME_ASYNC_UPDATES || key == SETTING_NAME_RATE_LIMIT_ENABLED) {
+      } else if (key == SETTING_NAME_ASYNC_UPDATES || key == SETTING_NAME_RATE_LIMIT_ENABLED ||
+                 key == SETTING_NAME_PRINT_STATS || key == SETTING_NAME_WARN_ON_LATE_STATE_LISTENER_SHUTDOWN) {
          parseBoolean(settings, key, value);
-      } else if (key == SETTING_NAME_CONNECTION_HOST) {
+      } else if (key == SETTING_NAME_CONNECTION_HOST || key == SETTING_NAME_HLA_API_VERSION) {
          settings.setString(key, value);
       } else if (key == SETTING_NAME_CONNECTION_PORT) {
          parseUnsignedInt16(settings, key, value);
@@ -99,7 +101,8 @@ namespace FedPro
       // It's ok to specify "true" or "false" case insensitively
       if (!equalInsensitive(TOKEN_TRUE, booleanAsString) && !equalInsensitive(TOKEN_FALSE, booleanAsString)) {
          throw std::invalid_argument{
-               "'" + booleanAsString + "' is not a valid boolean. Must be either '" + TOKEN_TRUE + "' or '" + TOKEN_FALSE + "'."};
+               "'" + booleanAsString + "' is not a valid boolean. Must be either '" + TOKEN_TRUE + "' or '" +
+               TOKEN_FALSE + "'."};
       }
       settings.setBoolean(settingName, equalInsensitive(TOKEN_TRUE, booleanAsString));
    }
@@ -130,7 +133,7 @@ namespace FedPro
          candidate = std::stoi(intAsString);
       } catch (const std::invalid_argument & e) {
          throw std::invalid_argument{"'" + intAsString + "' is not a valid integer: " + std::string{e.what()}};
-      } catch (const std::out_of_range & e) {
+      } catch (const std::out_of_range & ) {
          throw std::invalid_argument{
                "'" + intAsString + "' is not a valid integer: must be in range " + std::to_string(minAllowed) + "-" +
                std::to_string(maxAllowed) + "."};
@@ -229,7 +232,8 @@ namespace FedPro
                parseSetting(
                      settings, toString(settingKeyValuePair.first), toString(settingKeyValuePair.second));
             } catch (const std::invalid_argument & e) {
-               throw std::invalid_argument{std::string{"Setting '"} + setting + "' is invalid: " + std::string{e.what()}};
+               throw std::invalid_argument{
+                     std::string{"Setting '"} + setting + "' is invalid: " + std::string{e.what()}};
             }
          }
       }

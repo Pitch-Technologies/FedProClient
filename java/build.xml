@@ -14,42 +14,58 @@
 
    <property name="dist.dir" value="${basedir}/dist"/>
    <property name="out.dir" value="${basedir}/out"/>
-
-   <!-- Java libs -->
-   <property name="protobuf_lib.jar" value="protobuf-java-3.21.7.jar"/>
-   <property name="protobuf_lib.jar.location" value="lib/${protobuf_lib.jar}"/>
-   <property name="websocket_lib.jar" value="Java-WebSocket-1.5.6.jar"/>
-   <property name="websocket_lib.jar.location" value="lib/${websocket_lib.jar}"/>
-   <property name="slf4j-api.jar" value="slf4j-api-2.0.5.jar"/>
-   <property name="slf4j-api.jar.location" value="lib/${slf4j-api.jar}"/>
-   <property name="slf4j-nop.jar" value="slf4j-nop-2.0.5.jar"/>
-   <property name="slf4j-nop.jar.location" value="lib/${slf4j-nop.jar}"/>
+   <property name="lib.dir" value="${basedir}/lib/"/>
 
    <!-- External includes -->
    <include file="java.xml"/>
 
+   <path id="library.slf4j-nop.classpath">
+      <pathelement location="${basedir}/lib/slf4j-nop-2.0.17.jar"/>
+   </path>
+
+   <pathconvert property="protobuf-java.jars" refid="library.protobuf-java.classpath" pathsep=" ">
+      <map from="${lib.dir}" to=""/>
+   </pathconvert>
+   <pathconvert property="java-websocket.jars" refid="library.java-websocket.classpath" pathsep=" ">
+      <map from="${lib.dir}" to=""/>
+   </pathconvert>
+   <pathconvert property="slf4j-api.jars" refid="library.slf4j-api.classpath" pathsep=" ">
+      <map from="${lib.dir}" to=""/>
+   </pathconvert>
+   <pathconvert property="slf4j-nop.jars" refid="library.slf4j-nop.classpath" pathsep=" ">
+      <map from="${lib.dir}" to=""/>
+   </pathconvert>
+
    <!-- Moving files -->
-   <target name="copy.websocket.lib">
-      <copy file="${websocket_lib.jar.location}" todir="${dist.dir}"/>
+   <target name="copy.java-websocket.jars">
+      <copy todir="${dist.dir}" flatten="true">
+         <path refid="library.java-websocket.classpath"/>
+      </copy>
    </target>
 
-   <target name="copy.protobuf.lib">
-      <copy file="${protobuf_lib.jar.location}" todir="${dist.dir}"/>
+   <target name="copy.protobuf-java.jars">
+      <copy todir="${dist.dir}" flatten="true">
+         <path refid="library.protobuf-java.classpath"/>
+      </copy>
    </target>
 
-   <target name="copy.slf4j-api.jar">
-      <copy file="${slf4j-api.jar.location}" todir="${dist.dir}"/>
+   <target name="copy.slf4j-api.jars">
+      <copy todir="${dist.dir}" flatten="true">
+         <path refid="library.slf4j-api.classpath"/>
+      </copy>
    </target>
 
-   <target name="copy.slf4j-nop.jar">
-      <copy file="${slf4j-nop.jar.location}" todir="${dist.dir}"/>
+   <target name="copy.slf4j-nop.jars">
+      <copy todir="${dist.dir}" flatten="true">
+         <path refid="library.slf4j-nop.classpath"/>
+      </copy>
    </target>
 
    <!-- Jar targets -->
    <target name="session.jar" depends="java.compile.module.fedproclient_session.production">
       <jar destfile="${dist.dir}/fedpro-session.jar">
          <manifest>
-            <attribute name="Class-Path" value="${websocket_lib.jar}"/>
+            <attribute name="Class-Path" value="${java-websocket.jars}"/>
             <attribute name="Build-number" value="${build.number}"/>
          </manifest>
          <zipfileset dir="${fedproclient_session.output.dir}" includes="**"/>
@@ -59,7 +75,7 @@
    <target name="protobuf.jar" depends="java.compile.module.fedproclient_protobuf.production">
       <jar destfile="${dist.dir}/protobuf.jar">
          <manifest>
-            <attribute name="Class-Path" value="${protobuf_lib.jar}"/>
+            <attribute name="Class-Path" value="${protobuf-java.jars}"/>
             <attribute name="Build-number" value="${build.number}"/>
          </manifest>
          <zipfileset dir="${fedproclient_protobuf.output.dir}" includes="**"/>
@@ -69,7 +85,7 @@
    <target name="client.jar" depends="java.compile.module.fedproclient_client.production">
       <jar destfile="${dist.dir}/fedpro-client-hla4.jar">
          <manifest>
-            <attribute name="Class-Path" value="protobuf.jar fedpro-session.jar ${protobuf_lib.jar} ${websocket_lib.jar} ${slf4j-api.jar} ${slf4j-nop.jar}"/>
+            <attribute name="Class-Path" value="protobuf.jar fedpro-session.jar ${protobuf-java.jars} ${java-websocket.jars} ${slf4j-api.jars} ${slf4j-nop.jars}"/>
             <attribute name="Build-number" value="${build.number}"/>
          </manifest>
          <zipfileset dir="${fedproclient_client.output.dir}" includes="**"/>
@@ -84,7 +100,7 @@
    <target name="evolved_client.jar" depends="java.compile.module.fedproclient_client_evolved.production">
       <jar destfile="${dist.dir}/fedpro-client-evolved.jar">
          <manifest>
-            <attribute name="Class-Path" value="protobuf.jar fedpro-session.jar ${protobuf_lib.jar} ${websocket_lib.jar} ${slf4j-api.jar} ${slf4j-nop.jar}"/>
+            <attribute name="Class-Path" value="protobuf.jar fedpro-session.jar ${protobuf-java.jars} ${java-websocket.jars} ${slf4j-api.jars} ${slf4j-nop.jars}"/>
             <attribute name="Build-number" value="${build.number}"/>
          </manifest>
          <zipfileset dir="${fedproclient_client_evolved.output.dir}" includes="**"/>
@@ -102,15 +118,15 @@
    </target>
 
    <target name="java.session.dist"
-           depends="dist.init, session.jar, copy.websocket.lib"/>
+           depends="dist.init, session.jar, copy.java-websocket.jars"/>
    <target name="java.protobuf.dist"
-           depends="dist.init, protobuf.jar, copy.protobuf.lib"/>
+           depends="dist.init, protobuf.jar, copy.protobuf-java.jars"/>
    <target name="java.client.dist"
-           depends="dist.init, client.jar, copy.protobuf.lib, copy.websocket.lib"/>
+           depends="dist.init, client.jar, copy.protobuf-java.jars, copy.java-websocket.jars"/>
    <target name="java.client_evolved.dist"
            depends="dist.init, evolved_client.jar"/>
 
-   <target name="java.dist.sample" depends="java.compile.module.fedproclient_sample.production, java.compile.module.fedproclient_sample_evolved.production, copy.slf4j-api.jar, copy.slf4j-nop.jar">
+   <target name="java.dist.sample" depends="java.compile.module.fedproclient_sample.production, java.compile.module.fedproclient_sample_evolved.production, copy.slf4j-api.jars, copy.slf4j-nop.jars">
       <!-- Hla 4 sample -->
       <property name="dist.sample.dir" value="${dist.dir}/samples/chat-java-hla4-fedpro"/>
       <jar destfile="${dist.sample.dir}/chat-java-hla4-fedpro.jar">
@@ -126,7 +142,7 @@
          <fileset dir="sample/src" includes="**/Chat.java"/>
       </copy>
 
-      <copy file="sample/Chat-evolved.xml" todir="${dist.sample.dir}"/>
+      <copy file="sample/Chat-hla4.xml" todir="${dist.sample.dir}"/>
 
       <!-- Async HLA 4 sample -->
       <property name="dist.sample.async.dir" value="${dist.dir}/samples/chat-java-hla4-fedpro-async"/>
@@ -143,7 +159,7 @@
          <fileset dir="sample/src" includes="**/AsyncChat.java"/>
       </copy>
 
-      <copy file="sample/Chat-evolved.xml" todir="${dist.sample.async.dir}"/>
+      <copy file="sample/Chat-hla4.xml" todir="${dist.sample.async.dir}"/>
 
       <!-- Evolved sample -->
       <property name="dist.sample_evolved.dir" value="${dist.dir}/samples/chat-java-1516e-fedpro"/>

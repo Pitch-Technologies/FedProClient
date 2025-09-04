@@ -2,8 +2,8 @@
   <settings>
     <module2copyright>
       <element module="IEEE 2010 APIs" copyright="IEEE 2010" />
-      <element module="IEEE 202X APIs" copyright="IEEE 202X" />
       <element module="Pitch OSS" copyright="Apache 2" />
+      <element module="IEEE 2025 APIs" copyright="IEEE 2025" />
     </module2copyright>
   </settings>
 </component>

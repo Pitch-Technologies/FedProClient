@@ -1,7 +1,7 @@
 # Federate Protocol Java client
 
 _fedproclient-java_ is a Federate Protocol Java client library.
-It aims to implement the HLA4 wire protocol from the IEEE 1516-202X specification.
+It aims to implement the HLA4 wire protocol from the IEEE 1516-2025 specification.
 
 <!-- TODO: Finish merging with ../README.md and ../docs -->
 

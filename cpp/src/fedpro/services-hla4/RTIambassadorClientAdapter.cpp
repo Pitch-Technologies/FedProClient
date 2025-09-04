@@ -53,11 +53,10 @@ namespace RTI_NAMESPACE
          CallbackModel callbackModel)
    {
       try {
-         ConfigurationResult result = _clientConverter->convertToHla(
-               _rtiAmbassadorClient.connect(
-                     string_view{},
-                     federateAmbassador,
-                     callbackModel));
+         // ALWAYS parse settings, even if there is no input parameter,
+         // to ensure parsing of settings provided by environment variables.
+         const Properties clientSettings{SettingsParser::parse()};
+         ConfigurationResult result = _rtiAmbassadorClient.connect(clientSettings, federateAmbassador, callbackModel);
          _rtiAmbassadorClient.prefetch();
          return result;
       } catch (const std::exception & e) {
@@ -74,13 +73,13 @@ namespace RTI_NAMESPACE
             RTIambassadorClientGenericBase::splitFederateConnectSettings(configuration.additionalSettings());
       addServerAddressToList(inputValueList, configuration);
       const std::string
-            clientSettings = RTIambassadorClientGenericBase::extractAndRemoveClientSettings(inputValueList, false);
-      std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> parsedRtiConfiguration = parseRtiConfiguration(configuration, inputValueList);
+            clientSettingsLine = RTIambassadorClientGenericBase::extractAndRemoveClientSettings(inputValueList, false);
+      const RtiConfiguration parsedRtiConfiguration = parseRtiConfiguration(configuration, inputValueList);
 
       try {
-         ConfigurationResult result = _clientConverter->convertToHla(
-               _rtiAmbassadorClient.connect(
-                     clientSettings, federateAmbassador, callbackModel, std::move(parsedRtiConfiguration)));
+         const Properties clientSettings{SettingsParser::parse(clientSettingsLine)};
+         ConfigurationResult result = _rtiAmbassadorClient.connect(
+               clientSettings, federateAmbassador, callbackModel, &parsedRtiConfiguration);
          _rtiAmbassadorClient.prefetch();
          return result;
       } catch (const std::exception & e) {
@@ -94,8 +93,11 @@ namespace RTI_NAMESPACE
          const Credentials & credentials)
    {
       try {
-         ConfigurationResult result = _clientConverter->convertToHla(
-               _rtiAmbassadorClient.connect(string_view{}, federateAmbassador, callbackModel, nullptr, &credentials));
+         // ALWAYS parse settings, even if there is no input parameter,
+         // to ensure parsing of settings provided by environment variables.
+         const Properties clientSettings{SettingsParser::parse()};
+         ConfigurationResult result =
+               _rtiAmbassadorClient.connect(clientSettings, federateAmbassador, callbackModel, nullptr, &credentials);
          _rtiAmbassadorClient.prefetch();
          return result;
       } catch (const std::exception & e) {
@@ -114,11 +116,12 @@ namespace RTI_NAMESPACE
                RTIambassadorClientGenericBase::splitFederateConnectSettings(configuration.additionalSettings());
          addServerAddressToList(inputValueList, configuration);
          const std::string
-               clientSettings = RTIambassadorClientGenericBase::extractAndRemoveClientSettings(inputValueList, false);
-         std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> parsedRtiConfiguration = parseRtiConfiguration(configuration, inputValueList);
+               clientSettingsLine = RTIambassadorClientGenericBase::extractAndRemoveClientSettings(inputValueList, false);
+         const RtiConfiguration parsedRtiConfiguration = parseRtiConfiguration(configuration, inputValueList);
 
-         ConfigurationResult result = _clientConverter->convertToHla(_rtiAmbassadorClient.connect(
-               clientSettings, federateAmbassador, callbackModel, std::move(parsedRtiConfiguration), &credentials));
+         const Properties clientSettings{SettingsParser::parse(clientSettingsLine)};
+         ConfigurationResult result = _rtiAmbassadorClient.connect(
+               clientSettings, federateAmbassador, callbackModel, &parsedRtiConfiguration, &credentials);
          _rtiAmbassadorClient.prefetch();
          return result;
       } catch (const std::exception & e) {
@@ -247,7 +250,7 @@ namespace RTI_NAMESPACE
          const VariableLengthData & userSuppliedTag,
          FederateHandleSet const & synchronizationSet)
    {
-      _rtiAmbassadorClient.registerFederationSynchronizationPointWithSet(
+      _rtiAmbassadorClient.registerFederationSynchronizationPoint(
             _clientConverter->convertStringFromHla(synchronizationPointLabel), userSuppliedTag, synchronizationSet);
    }
 
@@ -269,7 +272,7 @@ namespace RTI_NAMESPACE
          std::wstring const & label,
          const LogicalTime & time)
    {
-      _rtiAmbassadorClient.requestFederationSaveWithTime(_clientConverter->convertStringFromHla(label), time);
+      _rtiAmbassadorClient.requestFederationSave(_clientConverter->convertStringFromHla(label), time);
    }
 
    void RTIambassadorClientAdapter::federateSaveBegun()
@@ -373,7 +376,7 @@ namespace RTI_NAMESPACE
       if (!objectClass.isValid()) {
          throw ObjectClassNotDefined(L"Invalid ObjectClassHandle");
       }
-      return _rtiAmbassadorClient.unpublishObjectClassDirectedInteractionsWithSet(objectClass, interactionClasses);
+      return _rtiAmbassadorClient.unpublishObjectClassDirectedInteractions(objectClass, interactionClasses);
    }
 
    void RTIambassadorClientAdapter::publishInteractionClass(const InteractionClassHandle & interactionClass)
@@ -406,7 +409,7 @@ namespace RTI_NAMESPACE
             return _rtiAmbassadorClient.subscribeObjectClassAttributes(
                   objectClass, attributes);
          } else {
-            return _rtiAmbassadorClient.subscribeObjectClassAttributesWithRate(
+            return _rtiAmbassadorClient.subscribeObjectClassAttributes(
                   objectClass, attributes, _clientConverter->convertStringFromHla(updateRateDesignator));
          }
       } else {
@@ -414,7 +417,7 @@ namespace RTI_NAMESPACE
             return _rtiAmbassadorClient.subscribeObjectClassAttributesPassively(
                   objectClass, attributes);
          } else {
-            return _rtiAmbassadorClient.subscribeObjectClassAttributesPassivelyWithRate(
+            return _rtiAmbassadorClient.subscribeObjectClassAttributesPassively(
                   objectClass, attributes, _clientConverter->convertStringFromHla(updateRateDesignator));
          }
       }
@@ -470,7 +473,7 @@ namespace RTI_NAMESPACE
       if (!objectClass.isValid()) {
          throw ObjectClassNotDefined(L"Invalid ObjectClassHandle");
       }
-      return _rtiAmbassadorClient.unsubscribeObjectClassDirectedInteractionsWithSet(objectClass, interactionClasses);
+      return _rtiAmbassadorClient.unsubscribeObjectClassDirectedInteractions(objectClass, interactionClasses);
    }
 
    void RTIambassadorClientAdapter::subscribeInteractionClass(
@@ -553,7 +556,7 @@ namespace RTI_NAMESPACE
          const VariableLengthData & userSuppliedTag,
          const LogicalTime & time)
    {
-      return _rtiAmbassadorClient.updateAttributeValuesWithTime(objectInstance, attributeValues, userSuppliedTag, time);
+      return _rtiAmbassadorClient.updateAttributeValues(objectInstance, attributeValues, userSuppliedTag, time);
    }
 
    void RTIambassadorClientAdapter::sendInteraction(
@@ -573,7 +576,7 @@ namespace RTI_NAMESPACE
       if (!interactionClass.isValid()) {
          throw InteractionClassNotDefined(L"Invalid InteractionClassHandle");
       }
-      return _rtiAmbassadorClient.sendInteractionWithTime(interactionClass, parameterValues, userSuppliedTag, time);
+      return _rtiAmbassadorClient.sendInteraction(interactionClass, parameterValues, userSuppliedTag, time);
    }
 
    void RTIambassadorClientAdapter::sendDirectedInteraction(
@@ -598,7 +601,7 @@ namespace RTI_NAMESPACE
       if (!interactionClass.isValid()) {
          throw InteractionClassNotDefined(L"Invalid InteractionClassHandle");
       }
-      return _rtiAmbassadorClient.sendDirectedInteractionWithTime(
+      return _rtiAmbassadorClient.sendDirectedInteraction(
             interactionClass, objectInstance, parameterValues, userSuppliedTag, time);
    }
 
@@ -614,7 +617,7 @@ namespace RTI_NAMESPACE
          const VariableLengthData & userSuppliedTag,
          LogicalTime const & time)
    {
-      return _rtiAmbassadorClient.deleteObjectInstanceWithTime(objectInstance, userSuppliedTag, time);
+      return _rtiAmbassadorClient.deleteObjectInstance(objectInstance, userSuppliedTag, time);
    }
 
    void RTIambassadorClientAdapter::localDeleteObjectInstance(const ObjectInstanceHandle & objectInstance)
@@ -627,7 +630,7 @@ namespace RTI_NAMESPACE
          const AttributeHandleSet & attributes,
          const VariableLengthData & userSuppliedTag)
    {
-      return _rtiAmbassadorClient.requestInstanceAttributeValueUpdate(objectInstance, attributes, userSuppliedTag);
+      return _rtiAmbassadorClient.requestAttributeValueUpdate(objectInstance, attributes, userSuppliedTag);
    }
 
    void RTIambassadorClientAdapter::requestAttributeValueUpdate(
@@ -635,7 +638,7 @@ namespace RTI_NAMESPACE
          const AttributeHandleSet & attributes,
          const VariableLengthData & userSuppliedTag)
    {
-      return _rtiAmbassadorClient.requestClassAttributeValueUpdate(objectClass, attributes, userSuppliedTag);
+      return _rtiAmbassadorClient.requestAttributeValueUpdate(objectClass, attributes, userSuppliedTag);
    }
 
    void RTIambassadorClientAdapter::requestAttributeTransportationTypeChange(
@@ -938,7 +941,7 @@ namespace RTI_NAMESPACE
       if (!objectClass.isValid()) {
          throw ObjectClassNotDefined(L"Invalid ObjectClassHandle");
       }
-      return _rtiAmbassadorClient.registerObjectInstanceWithNameAndRegions(
+      return _rtiAmbassadorClient.registerObjectInstanceWithRegions(
             objectClass, attributesAndRegions, _clientConverter->convertStringFromHla(objectInstanceName));
    }
 
@@ -975,7 +978,7 @@ namespace RTI_NAMESPACE
          _rtiAmbassadorClient.subscribeObjectClassAttributesWithRegions(
                objectClass, attributesAndRegions, active);
       } else {
-         _rtiAmbassadorClient.subscribeObjectClassAttributesWithRegionsAndRate(
+         _rtiAmbassadorClient.subscribeObjectClassAttributesWithRegions(
                objectClass, attributesAndRegions, active, _clientConverter->convertStringFromHla(updateRateDesignator));
       }
    }
@@ -1034,7 +1037,7 @@ namespace RTI_NAMESPACE
       if (!interactionClass.isValid()) {
          throw InteractionClassNotDefined(L"Invalid InteractionClassHandle");
       }
-      return _rtiAmbassadorClient.sendInteractionWithRegionsAndTime(
+      return _rtiAmbassadorClient.sendInteractionWithRegions(
             interactionClass, parameterValues, regions, userSuppliedTag, time);
    }
 
@@ -1533,17 +1536,15 @@ namespace RTI_NAMESPACE
       throw InvalidLogicalTime(L"Incorrect LogicalTime type");
    }
 
-   std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> RTIambassadorClientAdapter::parseRtiConfiguration(
+   RTI_NAMESPACE::RtiConfiguration RTIambassadorClientAdapter::parseRtiConfiguration(
          const RTI_NAMESPACE::RtiConfiguration & rtiConfiguration,
          const std::vector<std::wstring> & inputValueList)
    {
       // No need to set the rtiAddress since an LRC may specify the CRC address through the additional settings field
       // of the RtiConfiguration object, which is done in this method.
-      return std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration>(
-            _clientConverter->convertFromHla(
-                  RTI_NAMESPACE::RtiConfiguration::createConfiguration().withConfigurationName(
-                        rtiConfiguration.configurationName()).withAdditionalSettings(
-                        RTIambassadorClientGenericBase::toAdditionalSettingsString(inputValueList))));
+      return RTI_NAMESPACE::RtiConfiguration::createConfiguration().withConfigurationName(
+            rtiConfiguration.configurationName()).withAdditionalSettings(
+            RTIambassadorClientGenericBase::toAdditionalSettingsString(inputValueList));
    }
 
    void RTIambassadorClientAdapter::addServerAddressToList(

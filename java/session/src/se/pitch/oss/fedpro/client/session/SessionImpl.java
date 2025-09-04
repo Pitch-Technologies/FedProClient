@@ -17,7 +17,6 @@
 package se.pitch.oss.fedpro.client.session;
 
 import net.jcip.annotations.GuardedBy;
-import org.java_websocket.exceptions.WebsocketNotConnectedException;
 import se.pitch.oss.fedpro.client.TypedProperties;
 import se.pitch.oss.fedpro.client.Session;
 import se.pitch.oss.fedpro.client.Transport;
@@ -28,7 +27,6 @@ import se.pitch.oss.fedpro.common.exceptions.SessionAlreadyTerminated;
 import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionLost;
 import se.pitch.oss.fedpro.common.session.*;
-import se.pitch.oss.fedpro.common.session.buffers.GenericBuffer;
 import se.pitch.oss.fedpro.common.session.buffers.RoundRobinBuffer;
 import se.pitch.oss.fedpro.common.session.flowcontrol.ExponentialRateLimiter;
 import se.pitch.oss.fedpro.common.session.flowcontrol.NullRateLimiter;
@@ -38,7 +36,6 @@ import se.pitch.oss.fedpro.common.transport.FedProSocket;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.BindException;
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
@@ -56,8 +53,8 @@ public class SessionImpl implements Session {
 
    private static final Logger LOGGER = Logger.getLogger(SessionImpl.class.getName());
 
-   // TODO: Consider turning this into FedPro a setting.
-   private static final long STATE_LISTENER_TIMEOUT_MILLIS = 30;
+   // TODO: Consider turning this into a FedPro setting.
+   private static final long STATE_LISTENER_TIMEOUT_MILLIS = 100;
 
    private final TransportBase _transport;
    private ClientMessageWriter _messageWriter;
@@ -92,6 +89,13 @@ public class SessionImpl implements Session {
 
    private MessageSentListener _messageSentListener;
 
+   private RoundRobinBuffer<QueueableMessage> _roundRobinMessageQueue;
+   private final MovingStats _hlaCallStats;
+   private final MovingStats _hlaCallbackStats;
+   private final MovingStats _resumeCount;
+
+   private final boolean _warnOnLateStateListenerShutdown;
+
    public SessionImpl(
          Transport transport,
          TypedProperties settings)
@@ -109,6 +113,20 @@ public class SessionImpl implements Session {
          _connectionTimeoutMillis = settings.getDuration(
                SETTING_NAME_CONNECTION_TIMEOUT, Duration.ofMillis(DEFAULT_CONNECTION_TIMEOUT_MILLIS)).toMillis();
          _queueSize = settings.getInt(SETTING_NAME_MESSAGE_QUEUE_SIZE, DEFAULT_MESSAGE_QUEUE_SIZE);
+         boolean printStats = settings.getBoolean(SETTING_NAME_PRINT_STATS, false);
+         _warnOnLateStateListenerShutdown = settings.getBoolean(SETTING_NAME_WARN_ON_LATE_STATE_LISTENER_SHUTDOWN, true);
+         if (printStats) {
+            int statsIntervalMillis = (int) settings.getDuration(
+                  SETTING_NAME_PRINT_STATS_INTERVAL,
+                  Duration.ofMillis(DEFAULT_PRINT_STATS_INTERVAL_MILLIS)).toMillis();
+            _hlaCallStats = new StandAloneMovingStats(statsIntervalMillis);
+            _hlaCallbackStats = new StandAloneMovingStats(statsIntervalMillis);
+            _resumeCount = new StandAloneMovingStats(statsIntervalMillis);
+         } else {
+            _hlaCallbackStats = new MovingStatsNoOp();
+            _hlaCallStats = new MovingStatsNoOp();
+            _resumeCount = new MovingStatsNoOp();
+         }
       } else {
          // Initialize settings
          _sessionTimeoutMillis = DEFAULT_RESPONSE_TIMEOUT_MILLIS;
@@ -116,6 +134,10 @@ public class SessionImpl implements Session {
          _maxRetryConnectAttempts = DEFAULT_CONNECTION_MAX_RETRY_ATTEMPTS;
          _connectionTimeoutMillis = DEFAULT_CONNECTION_TIMEOUT_MILLIS;
          _queueSize = DEFAULT_MESSAGE_QUEUE_SIZE;
+         _hlaCallbackStats = new MovingStatsNoOp();
+         _hlaCallStats = new MovingStatsNoOp();
+         _resumeCount = new MovingStatsNoOp();
+         _warnOnLateStateListenerShutdown = false;
       }
 
       // Make the stateListenerExecutor tasks be daemons.
@@ -124,7 +146,7 @@ public class SessionImpl implements Session {
          // See ThreadFactory javadoc for more information
          Thread t = Executors.defaultThreadFactory().newThread(r);
          t.setDaemon(true);
-         t.setName("StateListenerThread-" + t.getName());
+         t.setName("FedPro Client State Listener Thread - " + t.getName());
          return t;
       });
    }
@@ -134,36 +156,44 @@ public class SessionImpl implements Session {
       // Add a poison task into the queue,
       // to request the executor to shut down itself after processing pending tasks.
       _stateListenerExecutor.execute(_stateListenerExecutor::shutdown);
-   }
-
-   @Override
-   public void close()
-   throws Exception
-   {
-      // Stop accepting task,
-      _stateListenerExecutor.shutdown();
-      // then await graceful termination.
-      if (!_stateListenerExecutor.awaitTermination(STATE_LISTENER_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)) {
-         LOGGER.severe(() -> String.format(
-               "%s: State Listener execution did not complete in %s ms",
-               logPrefix(),
-               STATE_LISTENER_TIMEOUT_MILLIS));
-         // Forcibly stop remaining tasks.
-         _stateListenerExecutor.shutdownNow();
+      // Warn if executor does not complete within time limit
+      // On separate thread so the state listener thread doesn't wait for itself.
+      if (_warnOnLateStateListenerShutdown) {
+         new Thread(() -> {
+            try {
+               if (!_stateListenerExecutor.awaitTermination(STATE_LISTENER_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS)) {
+                  LOGGER.warning(() -> String.format(
+                        "%s: State Listener execution did not complete in %s ms (set log.warnOnLateStateListenerShutdown to false to disable this warning)",
+                        logPrefix(),
+                        STATE_LISTENER_TIMEOUT_MILLIS));
+               }
+            } catch (InterruptedException ignored) {}
+         });
       }
    }
 
-   private FedProSocket connect(Transport transport)
-   throws IOException
+
+   @FunctionalInterface
+   private interface ConnectOperation {
+      void run()
+      throws IOException, BadMessage, SessionLost;
+   }
+
+   private void tryConnectOperation(ConnectOperation connectOperation)
+   throws IOException, BadMessage, SessionLost
    {
       int attempt = 0;
       while (true) {
          try {
-            return _transport.connect();
-         } catch (BindException lastException) {
-            // Probably caused by port starvation. Wait a bit and try again.
+            connectOperation.run();
+            return;
+         } catch (IOException lastException) {
+            // Retry is allowed if the connection break or times out.
+            // See IEEE 1516-2025 Federate Interface Specification, Figure 27—Federate Session Startup State Diagram.
             if (attempt < _maxRetryConnectAttempts) {
                try {
+                  // Close the socket and wait before retrying
+                  close(_socket);
                   Thread.sleep(300L);
                } catch (InterruptedException ex) {
                   // We were interrupted while waiting.
@@ -203,6 +233,23 @@ public class SessionImpl implements Session {
    public void setMessageSentListener(MessageSentListener messageSentListener)
    {
       _messageSentListener = messageSentListener;
+   }
+
+   @Override
+   public String getPrettyPrintedPerSecondStats() {
+      MovingStats.Stats hlaCallStats = _hlaCallStats.getStats();
+      MovingStats.Stats hlaCallBackStats = _hlaCallbackStats.getStats();
+      MovingStats.Stats resumeStats = _resumeCount.getStats();
+
+      // @formatter:off
+      return "                                                      Average/s      Max/s      Min/s      Total   All time" + "\n" +
+            "FedPro connection drop count:                       " + LogUtil.printStatFloat(resumeStats.averageBucket) + LogUtil.padStat(2) + LogUtil.printStatInt(resumeStats.sum) + LogUtil.printStatLong(resumeStats.historicTotal) + "\n" +
+            "FedPro call request queue length:                   " + LogUtil.padStat(3) + LogUtil.printStatInt(_roundRobinMessageQueue.primarySize()) + "\n" +
+            "FedPro callback response queue length:              " + LogUtil.padStat(3) + LogUtil.printStatInt(_roundRobinMessageQueue.alternateSize()) + "\n" +
+            "FedPro call requests awaiting response:             " + LogUtil.padStat(3) + LogUtil.printStatInt(_requestFutures.size()) + "\n" +
+            "HLA call count:                                     " + LogUtil.printStatFloat(hlaCallStats.averageBucket) + LogUtil.printStatInt(hlaCallStats.maxBucket) + LogUtil.printStatInt(hlaCallStats.minBucket) + LogUtil.printStatInt(hlaCallStats.sum) + LogUtil.printStatLong(hlaCallStats.historicTotal) + "\n" +
+            "HLA callback count:                                 " + LogUtil.printStatFloat(hlaCallBackStats.averageBucket) + LogUtil.printStatInt(hlaCallBackStats.maxBucket) + LogUtil.printStatInt(hlaCallBackStats.minBucket) + LogUtil.printStatInt(hlaCallBackStats.sum) + LogUtil.printStatLong(hlaCallBackStats.historicTotal);
+      // @formatter:on
    }
 
    private void waitForState(State state)
@@ -480,52 +527,50 @@ public class SessionImpl implements Session {
          limiter = new NullRateLimiter();
       }
 
-      GenericBuffer<QueueableMessage> messageQueue = new RoundRobinBuffer<>(
+      _roundRobinMessageQueue = new RoundRobinBuffer<>(
             _sessionLock,
             _queueSize,
             limiter,
             QueueableMessage::isHlaResponse);
       assert _messageWriter == null;
-      _messageWriter = new ClientMessageWriter(MessageHeader.NO_SESSION_ID, messageQueue);
+      _messageWriter = new ClientMessageWriter(MessageHeader.NO_SESSION_ID, _roundRobinMessageQueue);
 
       _hlaCallbackRequestListener = hlaCallbackRequestListener;
 
       try {
-         _socket = connect(_transport);
+         tryConnectOperation(() -> {
+            _socket = _transport.connect();
 
-         _socketWriter = SocketWriter.createSocketWriterForThread(
-               MessageHeader.NO_SESSION_ID,
-               getSocketWriterListener(),
-               messageQueue,
-               _socket,
-               true,
-               SequenceNumber.INITIAL_SEQUENCE_NUMBER + 1);
-         // The first sequence number that socket writer will expect is not INITIAL_SEQUENCE_NUMBER, since the first
-         // session message (CTRL_NEW_SESSION) will be sent directly to the socket and not stored in the message-sent
-         // history.
+            _socketWriter = SocketWriter.createSocketWriterForThread(
+                  MessageHeader.NO_SESSION_ID,
+                  getSocketWriterListener(),
+                  _roundRobinMessageQueue,
+                  _socket,
+                  true,
+                  SequenceNumber.INITIAL_SEQUENCE_NUMBER + 1);
+            // The first sequence number that socket writer will expect is not INITIAL_SEQUENCE_NUMBER, since the first
+            // session message (CTRL_NEW_SESSION) will be sent directly to the socket and not stored in the message-sent
+            // history.
 
-         _socketWriter.writeDirectMessage(ClientMessageWriter.createNewSessionMessage());
+            _socketWriter.writeDirectMessage(ClientMessageWriter.createNewSessionMessage());
 
-         final long connectionTimeoutMillis = TimeUnit.MILLISECONDS.convert(connectionTimeout, connectionTimeoutUnit);
-         final TimeoutTimer connectionTimeoutTimer = createLazyTimeoutTimer(
-               "Client Connection Timeout Timer",
-               connectionTimeoutMillis);
-         connectionTimeoutTimer.start(() -> doWhenTimedOut(connectionTimeoutTimer.getTimeoutDurationMillis()));
-         try {
-            _sessionId = readNewSessionStatus(_socket.getInputStream());
-            _sessionIdString = LogUtil.formatSessionId(_sessionId);
-         } finally {
-            connectionTimeoutTimer.cancel();
-         }
+            final long connectionTimeoutMillis = TimeUnit.MILLISECONDS.convert(connectionTimeout, connectionTimeoutUnit);
+            final TimeoutTimer connectionTimeoutTimer = createLazyTimeoutTimer(
+                  "FedPro Client Connection Timeout Timer",
+                  connectionTimeoutMillis);
+            connectionTimeoutTimer.start(() -> doWhenTimedOut(connectionTimeoutTimer.getTimeoutDurationMillis()));
+            try {
+               _sessionId = readNewSessionStatus(_socket.getInputStream());
+               _sessionIdString = LogUtil.formatSessionId(_sessionId);
+            } finally {
+               connectionTimeoutTimer.cancel();
+            }
+         });
 
          _messageWriter.setSessionId(_sessionId);
          _socketWriter.setSessionId(_sessionId);
 
-      } catch (IOException | BadMessage | WebsocketNotConnectedException e) {
-         // TODO: According to 12.17.4.7.1, Figure 27 in IEEE1516.2-202x_Feb2023.pdf, an IOException here means we should
-         //   retry sending the new session request. Does that make sense...?
-
-         // Todo For resuming we have ResumeStrategy, could we use something similar for connecting a new session?
+      } catch (IOException | BadMessage e) {
          compareAndSetState(State.STARTING, State.TERMINATED, e.toString());
          throw new SessionLost(e.getMessage(), e);
       } catch (SessionLost e) {
@@ -533,7 +578,7 @@ public class SessionImpl implements Session {
          throw e;
       }
 
-      _sessionTimeoutTimer = createLazyTimeoutTimer("Client Session Timeout Timer", _sessionTimeoutMillis);
+      _sessionTimeoutTimer = createLazyTimeoutTimer("FedPro Client Session Timeout Timer", _sessionTimeoutMillis);
       _sessionTimeoutTimer.start(() -> doWhenTimedOut(_sessionTimeoutTimer.getTimeoutDurationMillis()));
 
       compareAndSetState(State.STARTING, State.RUNNING);
@@ -609,7 +654,7 @@ public class SessionImpl implements Session {
       FedProSocket newSocket = null;
       try {
 
-         newSocket = connect(_transport);
+         newSocket = _transport.connect();
 
          SocketWriter directSocketWriter = SocketWriter.createDirectSocketWriter(_sessionId, newSocket, true);
          EncodedMessage resumeSessionMessage = ClientMessageWriter.createResumeSessionMessage(
@@ -643,6 +688,7 @@ public class SessionImpl implements Session {
          _socketWriter.setNewSocket(newSocket);
          _socket = newSocket;
 
+         _resumeCount.sample(1);
          compareAndSetState(State.RESUMING, State.RUNNING);
 
          return true;
@@ -673,10 +719,13 @@ public class SessionImpl implements Session {
    public CompletableFuture<byte[]> sendHlaCallRequest(byte[] encodedHlaCall)
    throws SessionIllegalState
    {
-      return doSessionOperation(() -> _messageWriter.writeHlaCallRequest(
-            encodedHlaCall,
-            _lastReceivedSequenceNumber.get(),
-            _requestFutures));
+      return doSessionOperation(() -> {
+         _hlaCallStats.sample(1);
+         return _messageWriter.writeHlaCallRequest(
+               encodedHlaCall,
+               _lastReceivedSequenceNumber.get(),
+               _requestFutures);
+      });
    }
 
    @Override
@@ -803,9 +852,10 @@ public class SessionImpl implements Session {
    @GuardedBy("_sessionLock")
    private void startWriterThread()
    {
+      _socketWriter.enableWriterLoop();
       _socketWriterThread = new Thread(
             _socketWriter::socketWriterLoop,
-            "Client Session " + _sessionIdString + " Writer Thread.");
+            "FedPro Client Session " + _sessionIdString + " Writer Thread.");
       _socketWriterThread.setDaemon(true);
       _socketWriterThread.start();
    }
@@ -815,7 +865,7 @@ public class SessionImpl implements Session {
    {
       Thread readerThread = new Thread(
             this::runMessageReaderLoop,
-            "Client Session " + _sessionIdString + " Reader Thread.");
+            "FedPro Client Session " + _sessionIdString + " Reader Thread.");
       readerThread.setDaemon(true);
       readerThread.start();
    }
@@ -836,6 +886,9 @@ public class SessionImpl implements Session {
             if (messageHeader.sessionId != _sessionId) {
                throw new BadMessage(
                      logPrefix() + ": Received wrong session ID " + LogUtil.formatSessionId(messageHeader.sessionId));
+            } else if (!SequenceNumber.isValidAsSequenceNumber(messageHeader.sequenceNumber)) {
+               throw new BadMessage(
+                     logPrefix() + ": Received invalid sequence number " + messageHeader.sequenceNumber);
             }
 
             switch (messageHeader.messageType) {
@@ -895,6 +948,7 @@ public class SessionImpl implements Session {
                   // The _hlaCallbackRequestListener may call back into `this` to send a CallbackResponse
                   // The _hlaCallbackRequestListener may block if the callback buffer becomes full
 
+                  _hlaCallbackStats.sample(1);
                   _hlaCallbackRequestListener.onHlaCallbackRequest(
                         messageHeader.sequenceNumber,
                         message.hlaServiceCallbackWithParams);
@@ -933,9 +987,9 @@ public class SessionImpl implements Session {
             LOGGER.warning(() -> String.format("%s: Failed to read from socket: %s", logPrefix(), e));
          }
       } catch (BadMessage e) {
-         // TODO: According to standard, we should terminate the session here.
-         compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
-         // Should not happen with a correct server
+         // 12.13.4.4 requires entering a fatal state when receiving a bad message, so schedule termination.
+         // Scheduling to better match the C++ client behavior.
+         scheduleBestEffortTerminate();
          LOGGER.severe(() -> String.format("%s: Received invalid message! %s", logPrefix(), e));
       } catch (RuntimeException e) {
          compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
@@ -944,6 +998,26 @@ public class SessionImpl implements Session {
                logPrefix(),
                e));
       }
+   }
+
+   private void scheduleBestEffortTerminate()
+   {
+      _stateListenerExecutor.execute(() -> {
+         try {
+            // Best effort terminate. Do not wait for a response.
+            final int responseTimeout = 0;
+            terminate(responseTimeout, TimeUnit.MILLISECONDS);
+         } catch (SessionLost ignored) {
+            // SessionLost is likely, as terminate() do not wait for a response.
+         } catch (SessionAlreadyTerminated ignored) {
+            // Desired state.
+         } catch (SessionIllegalState e) {
+            LOGGER.warning(() -> String.format(
+                  "%s: Unexpected stat during best-effort terminate. %s.",
+                  logPrefix(),
+                  e.getMessage()));
+         }
+      });
    }
 
    private void trackHlaMessageReceived(int sequenceNumber)

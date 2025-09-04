@@ -43,29 +43,47 @@ namespace FedPro
 
    FEDPRO_EXPORT std::unique_ptr<PersistentSession> createPersistentSession(
          std::unique_ptr<Transport> transportProtocol,
-         const PersistentSession::ConnectionLostListener & connectionLostListener)
+         PersistentSession::ConnectionLostListener connectionLostListener,
+         PersistentSession::SessionTerminatedListener sessionTerminatedListener)
    {
-      return createPersistentSession(std::move(transportProtocol), connectionLostListener, Properties{});
+      return createPersistentSession(
+            std::move(transportProtocol),
+            std::move(connectionLostListener),
+            std::move(sessionTerminatedListener),
+            Properties{});
    }
 
    FEDPRO_EXPORT std::unique_ptr<PersistentSession> createPersistentSession(
          std::unique_ptr<Transport> transportProtocol,
-         const PersistentSession::ConnectionLostListener & connectionLostListener,
+         PersistentSession::ConnectionLostListener connectionLostListener,
+         PersistentSession::SessionTerminatedListener sessionTerminatedListener,
          const Properties & settings)
    {
       std::unique_ptr<ResumeStrategy> strategy = std::make_unique<SimpleResumeStrategy>();
       return createPersistentSession(
-            std::move(transportProtocol), connectionLostListener, settings, std::move(strategy));
+            std::move(transportProtocol),
+            std::move(connectionLostListener),
+            std::move(sessionTerminatedListener),
+            settings,
+            std::move(strategy));
    }
 
    FEDPRO_EXPORT std::unique_ptr<PersistentSession> createPersistentSession(
          std::unique_ptr<Transport> transportProtocol,
-         const PersistentSession::ConnectionLostListener & connectionLostListener,
+         PersistentSession::ConnectionLostListener connectionLostListener,
+         PersistentSession::SessionTerminatedListener sessionTerminatedListener,
          const Properties & settings,
          std::unique_ptr<ResumeStrategy> resumeStrategy)
    {
+      if (!transportProtocol) {
+         throw std::invalid_argument("Missing Transport object");
+      }
       return std::make_unique<PersistentSessionImpl>(
-            std::move(transportProtocol), connectionLostListener, settings, std::move(resumeStrategy));
+            std::move(transportProtocol),
+            std::move(connectionLostListener),
+            std::move(sessionTerminatedListener),
+            settings,
+            std::move(resumeStrategy));
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createTcpTransport(const Properties & settings)

@@ -27,9 +27,9 @@ namespace FedPro
 
       ~NullRateLimiter() noexcept override = default;
 
-      void preInsert(uint32_t size) noexcept override;
+      void preInsert(size_t size) noexcept override;
 
-      void postInsert(uint32_t size) noexcept override;
+      void postInsert(size_t size) noexcept override;
 
       std::string toString() noexcept override;
    };

@@ -18,12 +18,12 @@
 
 namespace FedPro
 {
-   void NullRateLimiter::preInsert(uint32_t) noexcept
+   void NullRateLimiter::preInsert(size_t) noexcept
    {
       // No-op
    }
 
-   void NullRateLimiter::postInsert(uint32_t) noexcept
+   void NullRateLimiter::postInsert(size_t) noexcept
    {
       // No-op
    }

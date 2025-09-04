@@ -3,10 +3,10 @@
     <option name="MAIN_CLASS_NAME" value="se.pitch.oss.chat1516e.Chat" />
     <module name="fedproclient_sample_evolved" />
     <option name="VM_PARAMETERS" value="-Djava.util.logging.config.file=../tools/FedProClient.logging" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sample_evolved" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="se.pitch.oss.chat1516e.*" />
+        <option name="PATTERN" value="se.pitch.chat1516e.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

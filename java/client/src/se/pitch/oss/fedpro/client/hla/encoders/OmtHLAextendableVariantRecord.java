@@ -16,7 +16,7 @@
 
 package se.pitch.oss.fedpro.client.hla.encoders;
 
-import hla.rti1516_202X.encoding.*;
+import hla.rti1516_2025.encoding.*;
 
 import java.util.HashMap;
 import java.util.Map;

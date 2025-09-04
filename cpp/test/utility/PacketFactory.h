@@ -24,5 +24,10 @@ public:
 
    static std::string createBadMessageType();
 
-   static std::string createNewSessionStatus(uint64_t sessionId = 42);
+   static std::string createNewSessionStatus(uint64_t sessionId);
+
+   static std::string createHeartbeatResponse(
+         uint64_t sessionId,
+         int32_t sequenceNumber,
+         int32_t responseTo = 42);
 };

@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.auth.Credentials;
-import hla.rti1516_202X.exceptions.*;
-import hla.rti1516_202X.time.*;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.auth.Credentials;
+import hla.rti1516_2025.exceptions.*;
+import hla.rti1516_2025.time.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -29,7 +29,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -46,6 +45,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       _clientConverter = new ClientConverter();
       _rtiAmbassadorClient = new RTIambassadorClient(_clientConverter);
       _asyncRTIambassador = AsyncHelper.getAsyncRTIambassador(_rtiAmbassadorClient);
+      System.setProperty("se.pitch.oss.fedpro", "true");
    }
 
    @Override
@@ -216,7 +216,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
             logicalTimeImplementationName);
    }
 
-   private FomModuleSet getFomModuleSet(String[] fomModules)
+   static FomModuleSet getFomModuleSet(String[] fomModules)
    throws CouldNotOpenFOM
    {
       FomModuleSet result = new FomModuleSet();
@@ -226,7 +226,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       return result;
    }
 
-   private FomModule getFomModule(String fomModule)
+   static FomModule getFomModule(String fomModule)
    throws CouldNotOpenFOM
    {
       // Never pass a file reference to server. All file references must be resolved locally
@@ -244,7 +244,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          // Try to load as resource, first from Thread.currentThread().getContextClassLoader(), then getClass().getClassLoader()
          URL resource = Thread.currentThread().getContextClassLoader().getResource(fomModule);
          if (resource == null) {
-            resource = getClass().getResource(fomModule);
+            resource = RTIambassadorClientAdapter.class.getResource(fomModule);
          }
          if (resource != null) {
             File file = new File(resource.toURI());
@@ -346,22 +346,17 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          Unauthorized,
          RTIinternalError
    {
+      FomModuleSet fomModuleSet = getFomModuleSet(fomModules);
+      FomModule mimModule1;
       try {
-         FomModuleSet fomModuleSet = getFomModuleSet(fomModules);
-         FomModule mimModule1;
-         try {
-            mimModule1 = getFomModule(mimModule);
-         } catch (CouldNotOpenFOM e) {
-            throw new CouldNotOpenMIM(e.getMessage());
-         }
-         _rtiAmbassadorClient.createFederationExecutionWithMIMAndTime(
-               federationName,
-               fomModuleSet,
-               mimModule1,
-               "HLAfloat64Time");
-      } catch (CouldNotCreateLogicalTimeFactory e) {
-         throw new RTIinternalError("Failed to create default time HLAfloat64Time");
+         mimModule1 = getFomModule(mimModule);
+      } catch (CouldNotOpenFOM e) {
+         throw new CouldNotOpenMIM(e.getMessage());
       }
+      _rtiAmbassadorClient.createFederationExecutionWithMIM(
+            federationName,
+            fomModuleSet,
+            mimModule1);
    }
 
    public void createFederationExecution(
@@ -555,7 +550,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.registerFederationSynchronizationPointWithSet(
+      _rtiAmbassadorClient.registerFederationSynchronizationPoint(
             synchronizationPointLabel,
             userSuppliedTag,
             synchronizationSet);
@@ -606,7 +601,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.requestFederationSaveWithTime(label, time);
+      _rtiAmbassadorClient.requestFederationSave(label, time);
    }
 
    public void federateSaveBegun()
@@ -773,7 +768,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new ObjectClassNotDefined("null");
       }
-      _rtiAmbassadorClient.unpublishObjectClassDirectedInteractionsWithSet(objectClass, interactionClasses);
+      _rtiAmbassadorClient.unpublishObjectClassDirectedInteractions(objectClass, interactionClasses);
    }
 
    public void publishInteractionClass(InteractionClassHandle interactionClass)
@@ -841,7 +836,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new ObjectClassNotDefined("null");
       }
-      _rtiAmbassadorClient.subscribeObjectClassAttributesWithRate(objectClass, attributes, updateRateDesignator);
+      _rtiAmbassadorClient.subscribeObjectClassAttributes(objectClass, attributes, updateRateDesignator);
    }
 
    public void subscribeObjectClassAttributesPassively(
@@ -879,7 +874,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new ObjectClassNotDefined("null");
       }
-      _rtiAmbassadorClient.subscribeObjectClassAttributesPassivelyWithRate(
+      _rtiAmbassadorClient.subscribeObjectClassAttributesPassively(
             objectClass,
             attributes,
             updateRateDesignator);
@@ -988,7 +983,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new ObjectClassNotDefined("null");
       }
-      _rtiAmbassadorClient.unsubscribeObjectClassDirectedInteractionsWithSet(objectClass, interactionClasses);
+      _rtiAmbassadorClient.unsubscribeObjectClassDirectedInteractions(objectClass, interactionClasses);
    }
 
    public void subscribeInteractionClass(InteractionClassHandle interactionClass)
@@ -1150,7 +1145,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      return _rtiAmbassadorClient.updateAttributeValuesWithTime(objectInstance, attributeValues, userSuppliedTag, time);
+      return _rtiAmbassadorClient.updateAttributeValues(objectInstance, attributeValues, userSuppliedTag, time);
    }
 
    public void sendInteraction(
@@ -1192,7 +1187,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (interactionClass == null) {
          throw new InteractionClassNotDefined("null");
       }
-      return _rtiAmbassadorClient.sendInteractionWithTime(interactionClass, parameterValues, userSuppliedTag, time);
+      return _rtiAmbassadorClient.sendInteraction(interactionClass, parameterValues, userSuppliedTag, time);
    }
 
    @Override
@@ -1240,7 +1235,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (interactionClass == null) {
          throw new InteractionClassNotDefined("null");
       }
-      return _rtiAmbassadorClient.sendDirectedInteractionWithTime(interactionClass, objectInstance, parameterValues, userSuppliedTag, time);
+      return _rtiAmbassadorClient.sendDirectedInteraction(interactionClass, objectInstance, parameterValues, userSuppliedTag, time);
    }
 
    public void deleteObjectInstance(
@@ -1272,7 +1267,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      return _rtiAmbassadorClient.deleteObjectInstanceWithTime(objectInstance, userSuppliedTag, time);
+      return _rtiAmbassadorClient.deleteObjectInstance(objectInstance, userSuppliedTag, time);
    }
 
    public void localDeleteObjectInstance(ObjectInstanceHandle objectInstance)
@@ -1302,7 +1297,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.requestInstanceAttributeValueUpdate(objectInstance, attributes, userSuppliedTag);
+      _rtiAmbassadorClient.requestAttributeValueUpdate(objectInstance, attributes, userSuppliedTag);
    }
 
    public void requestAttributeValueUpdate(
@@ -1318,7 +1313,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
          NotConnected,
          RTIinternalError
    {
-      _rtiAmbassadorClient.requestClassAttributeValueUpdate(objectClass, attributes, userSuppliedTag);
+      _rtiAmbassadorClient.requestAttributeValueUpdate(objectClass, attributes, userSuppliedTag);
    }
 
    public void requestAttributeTransportationTypeChange(
@@ -2016,7 +2011,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new ObjectClassNotDefined("null");
       }
-      return _rtiAmbassadorClient.registerObjectInstanceWithNameAndRegions(
+      return _rtiAmbassadorClient.registerObjectInstanceWithRegions(
             objectClass,
             attributesAndRegions,
             objectInstanceName);
@@ -2104,7 +2099,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new ObjectClassNotDefined("null");
       }
-      _rtiAmbassadorClient.subscribeObjectClassAttributesWithRegionsAndRate(
+      _rtiAmbassadorClient.subscribeObjectClassAttributesWithRegions(
             objectClass,
             attributesAndRegions,
             true,
@@ -2152,7 +2147,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (objectClass == null) {
          throw new ObjectClassNotDefined("null");
       }
-      _rtiAmbassadorClient.subscribeObjectClassAttributesWithRegionsAndRate(
+      _rtiAmbassadorClient.subscribeObjectClassAttributesWithRegions(
             objectClass,
             attributesAndRegions,
             false,
@@ -2287,7 +2282,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
       if (interactionClass == null) {
          throw new NullPointerException("null");
       }
-      return _rtiAmbassadorClient.sendInteractionWithRegionsAndTime(
+      return _rtiAmbassadorClient.sendInteractionWithRegions(
             interactionClass,
             parameterValues,
             regions,
@@ -2435,12 +2430,6 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
    throws NameNotFound, FederateNotExecutionMember, NotConnected, RTIinternalError
    {
       return _rtiAmbassadorClient.getInteractionClassHandle(interactionClassName);
-   }
-
-   public CompletableFuture<InteractionClassHandle> asyncGetInteractionClassHandle(String interactionClassName)
-   throws NameNotFound, FederateNotExecutionMember, NotConnected, RTIinternalError
-   {
-      return _rtiAmbassadorClient.asyncGetInteractionClassHandle(interactionClassName);
    }
 
    public String getInteractionClassName(InteractionClassHandle interactionClass)
@@ -2963,7 +2952,7 @@ public class RTIambassadorClientAdapter implements RTIambassadorEx {
 
    public String getHLAversion()
    {
-      return "IEEE 1516-202X";
+      return "IEEE 1516-2025";
    }
 
    public LogicalTimeFactory<?, ?> getTimeFactory()

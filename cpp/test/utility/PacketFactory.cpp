@@ -18,6 +18,7 @@
 
 #include "session/msg/MessageHeader.h"
 #include "session/msg/NewSessionStatusMessage.h"
+#include "session/msg/HeartbeatResponseMessage.h"
 
 #include "protobuf/generated/RTIambassador.pb.h"
 
@@ -38,6 +39,20 @@ std::string PacketFactory::createNewSessionStatus(uint64_t sessionId)
 
    MessageHeader header = MessageHeader::with(
          payload.size(), 0, sessionId, 0, MessageType::CTRL_NEW_SESSION_STATUS);
+
+   return header.encode() + payload;
+}
+
+std::string PacketFactory::createHeartbeatResponse(
+      uint64_t sessionId,
+      int32_t sequenceNumber,
+      int32_t responseTo)
+{
+   HeartbeatResponseMessage message{responseTo};
+   std::string payload{message.encode()};
+
+   MessageHeader header = MessageHeader::with(
+         payload.size(), sequenceNumber, sessionId, 0, MessageType::CTRL_HEARTBEAT_RESPONSE);
 
    return header.encode() + payload;
 }

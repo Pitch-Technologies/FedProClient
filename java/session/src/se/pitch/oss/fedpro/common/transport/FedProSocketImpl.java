@@ -25,10 +25,12 @@ import java.net.SocketException;
 public class FedProSocketImpl implements FedProSocket {
 
    private final java.net.Socket _socket;
+   private final String _protocolName;
 
-   public FedProSocketImpl(java.net.Socket socket)
+   public FedProSocketImpl(java.net.Socket socket, String protocolName)
    {
       _socket = socket;
+      _protocolName = protocolName;
    }
 
    @Override
@@ -83,5 +85,10 @@ public class FedProSocketImpl implements FedProSocket {
    public String toString()
    {
       return _socket.toString();
+   }
+
+   @Override
+   public String getProtocolName() {
+      return _protocolName;
    }
 }

@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.client.hla.time;
 
-import hla.rti1516_202X.exceptions.CouldNotDecode;
-import hla.rti1516_202X.time.HLAfloat64Interval;
-import hla.rti1516_202X.time.HLAfloat64Time;
-import hla.rti1516_202X.time.HLAfloat64TimeFactory;
+import hla.rti1516_2025.exceptions.CouldNotDecode;
+import hla.rti1516_2025.time.HLAfloat64Interval;
+import hla.rti1516_2025.time.HLAfloat64Time;
+import hla.rti1516_2025.time.HLAfloat64TimeFactory;
 
 
 public class HLAfloat64TimeFactoryImpl implements HLAfloat64TimeFactory {

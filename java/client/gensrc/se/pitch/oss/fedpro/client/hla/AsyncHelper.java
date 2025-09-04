@@ -16,9 +16,9 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.time.LogicalTime;
-import hla.rti1516_202X.time.LogicalTimeInterval;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.time.LogicalTime;
+import hla.rti1516_2025.time.LogicalTimeInterval;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -53,12 +53,12 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<Void> registerFederationSynchronizationPointWithSet(
+         public CompletableFuture<Void> registerFederationSynchronizationPoint(
                String synchronizationPointLabel, 
                byte[] userSuppliedTag, 
                FederateHandleSet synchronizationSet)
          {
-            return rtiAmbassadorClient.asyncRegisterFederationSynchronizationPointWithSet(
+            return rtiAmbassadorClient.asyncRegisterFederationSynchronizationPoint(
                   synchronizationPointLabel, 
                   userSuppliedTag, 
                   synchronizationSet);
@@ -83,11 +83,11 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<Void> requestFederationSaveWithTime(
+         public CompletableFuture<Void> requestFederationSave(
                String label, 
                LogicalTime<?, ?> time)
          {
-            return rtiAmbassadorClient.asyncRequestFederationSaveWithTime(
+            return rtiAmbassadorClient.asyncRequestFederationSave(
                   label, 
                   time);
          }
@@ -217,11 +217,11 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<Void> unpublishObjectClassDirectedInteractionsWithSet(
+         public CompletableFuture<Void> unpublishObjectClassDirectedInteractions(
                ObjectClassHandle objectClass, 
                InteractionClassHandleSet interactionClasses)
          {
-            return rtiAmbassadorClient.asyncUnpublishObjectClassDirectedInteractionsWithSet(
+            return rtiAmbassadorClient.asyncUnpublishObjectClassDirectedInteractions(
                   objectClass, 
                   interactionClasses);
          }
@@ -237,12 +237,12 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<Void> subscribeObjectClassAttributesWithRate(
+         public CompletableFuture<Void> subscribeObjectClassAttributes(
                ObjectClassHandle objectClass, 
                AttributeHandleSet attributes, 
                String updateRateDesignator)
          {
-            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesWithRate(
+            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributes(
                   objectClass, 
                   attributes, 
                   updateRateDesignator);
@@ -259,12 +259,12 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<Void> subscribeObjectClassAttributesPassivelyWithRate(
+         public CompletableFuture<Void> subscribeObjectClassAttributesPassively(
                ObjectClassHandle objectClass, 
                AttributeHandleSet attributes, 
                String updateRateDesignator)
          {
-            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesPassivelyWithRate(
+            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesPassively(
                   objectClass, 
                   attributes, 
                   updateRateDesignator);
@@ -341,11 +341,11 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<Void> unsubscribeObjectClassDirectedInteractionsWithSet(
+         public CompletableFuture<Void> unsubscribeObjectClassDirectedInteractions(
                ObjectClassHandle objectClass, 
                InteractionClassHandleSet interactionClasses)
          {
-            return rtiAmbassadorClient.asyncUnsubscribeObjectClassDirectedInteractionsWithSet(
+            return rtiAmbassadorClient.asyncUnsubscribeObjectClassDirectedInteractions(
                   objectClass, 
                   interactionClasses);
          }
@@ -406,6 +406,7 @@ public class AsyncHelper {
                AttributeHandleValueMap attributeValues, 
                byte[] userSuppliedTag)
          {
+            rtiAmbassadorClient.countAsyncUpdateForStats();
             return rtiAmbassadorClient.asyncUpdateAttributeValues(
                   objectInstance, 
                   attributeValues, 
@@ -413,13 +414,14 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<MessageRetractionReturn> updateAttributeValuesWithTime(
+         public CompletableFuture<MessageRetractionReturn> updateAttributeValues(
                ObjectInstanceHandle objectInstance, 
                AttributeHandleValueMap attributeValues, 
                byte[] userSuppliedTag, 
                LogicalTime<?, ?> time)
          {
-            return rtiAmbassadorClient.asyncUpdateAttributeValuesWithTime(
+            rtiAmbassadorClient.countAsyncUpdateForStats();
+            return rtiAmbassadorClient.asyncUpdateAttributeValues(
                   objectInstance, 
                   attributeValues, 
                   userSuppliedTag, 
@@ -432,6 +434,7 @@ public class AsyncHelper {
                ParameterHandleValueMap parameterValues, 
                byte[] userSuppliedTag)
          {
+            rtiAmbassadorClient.countAsyncSentInteractionForStats();
             return rtiAmbassadorClient.asyncSendInteraction(
                   interactionClass, 
                   parameterValues, 
@@ -439,13 +442,14 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<MessageRetractionReturn> sendInteractionWithTime(
+         public CompletableFuture<MessageRetractionReturn> sendInteraction(
                InteractionClassHandle interactionClass, 
                ParameterHandleValueMap parameterValues, 
                byte[] userSuppliedTag, 
                LogicalTime<?, ?> time)
          {
-            return rtiAmbassadorClient.asyncSendInteractionWithTime(
+            rtiAmbassadorClient.countAsyncSentInteractionForStats();
+            return rtiAmbassadorClient.asyncSendInteraction(
                   interactionClass, 
                   parameterValues, 
                   userSuppliedTag, 
@@ -459,6 +463,7 @@ public class AsyncHelper {
                ParameterHandleValueMap parameterValues, 
                byte[] userSuppliedTag)
          {
+            rtiAmbassadorClient.countAsyncSentDirectedInteractionForStats();
             return rtiAmbassadorClient.asyncSendDirectedInteraction(
                   interactionClass, 
                   objectInstance, 
@@ -467,14 +472,15 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<MessageRetractionReturn> sendDirectedInteractionWithTime(
+         public CompletableFuture<MessageRetractionReturn> sendDirectedInteraction(
                InteractionClassHandle interactionClass, 
                ObjectInstanceHandle objectInstance, 
                ParameterHandleValueMap parameterValues, 
                byte[] userSuppliedTag, 
                LogicalTime<?, ?> time)
          {
-            return rtiAmbassadorClient.asyncSendDirectedInteractionWithTime(
+            rtiAmbassadorClient.countAsyncSentDirectedInteractionForStats();
+            return rtiAmbassadorClient.asyncSendDirectedInteraction(
                   interactionClass, 
                   objectInstance, 
                   parameterValues, 
@@ -493,12 +499,12 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<MessageRetractionReturn> deleteObjectInstanceWithTime(
+         public CompletableFuture<MessageRetractionReturn> deleteObjectInstance(
                ObjectInstanceHandle objectInstance, 
                byte[] userSuppliedTag, 
                LogicalTime<?, ?> time)
          {
-            return rtiAmbassadorClient.asyncDeleteObjectInstanceWithTime(
+            return rtiAmbassadorClient.asyncDeleteObjectInstance(
                   objectInstance, 
                   userSuppliedTag, 
                   time);
@@ -513,24 +519,24 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<Void> requestInstanceAttributeValueUpdate(
+         public CompletableFuture<Void> requestAttributeValueUpdate(
                ObjectInstanceHandle objectInstance, 
                AttributeHandleSet attributes, 
                byte[] userSuppliedTag)
          {
-            return rtiAmbassadorClient.asyncRequestInstanceAttributeValueUpdate(
+            return rtiAmbassadorClient.asyncRequestAttributeValueUpdate(
                   objectInstance, 
                   attributes, 
                   userSuppliedTag);
          }
 
          @Override
-         public CompletableFuture<Void> requestClassAttributeValueUpdate(
+         public CompletableFuture<Void> requestAttributeValueUpdate(
                ObjectClassHandle objectClass, 
                AttributeHandleSet attributes, 
                byte[] userSuppliedTag)
          {
-            return rtiAmbassadorClient.asyncRequestClassAttributeValueUpdate(
+            return rtiAmbassadorClient.asyncRequestAttributeValueUpdate(
                   objectClass, 
                   attributes, 
                   userSuppliedTag);
@@ -901,12 +907,12 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<ObjectInstanceHandle> registerObjectInstanceWithNameAndRegions(
+         public CompletableFuture<ObjectInstanceHandle> registerObjectInstanceWithRegions(
                ObjectClassHandle objectClass, 
                AttributeSetRegionSetPairList attributesAndRegions, 
                String objectInstanceName)
          {
-            return rtiAmbassadorClient.asyncRegisterObjectInstanceWithNameAndRegions(
+            return rtiAmbassadorClient.asyncRegisterObjectInstanceWithRegions(
                   objectClass, 
                   attributesAndRegions, 
                   objectInstanceName);
@@ -935,26 +941,48 @@ public class AsyncHelper {
          @Override
          public CompletableFuture<Void> subscribeObjectClassAttributesWithRegions(
                ObjectClassHandle objectClass, 
-               AttributeSetRegionSetPairList attributesAndRegions, 
-               boolean active)
+               AttributeSetRegionSetPairList attributesAndRegions)
          {
             return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesWithRegions(
                   objectClass, 
                   attributesAndRegions, 
-                  active);
+                  true);
          }
 
          @Override
-         public CompletableFuture<Void> subscribeObjectClassAttributesWithRegionsAndRate(
+         public CompletableFuture<Void> subscribeObjectClassAttributesPassivelyWithRegions(
                ObjectClassHandle objectClass, 
-               AttributeSetRegionSetPairList attributesAndRegions, 
-               boolean active, 
-               String updateRateDesignator)
+               AttributeSetRegionSetPairList attributesAndRegions)
          {
-            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesWithRegionsAndRate(
+            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesWithRegions(
                   objectClass, 
                   attributesAndRegions, 
-                  active, 
+                  false);
+         }
+
+         @Override
+         public CompletableFuture<Void> subscribeObjectClassAttributesWithRegions(
+               ObjectClassHandle objectClass, 
+               AttributeSetRegionSetPairList attributesAndRegions, 
+               String updateRateDesignator)
+         {
+            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesWithRegions(
+                  objectClass, 
+                  attributesAndRegions, 
+                  true, 
+                  updateRateDesignator);
+         }
+
+         @Override
+         public CompletableFuture<Void> subscribeObjectClassAttributesPassivelyWithRegions(
+               ObjectClassHandle objectClass, 
+               AttributeSetRegionSetPairList attributesAndRegions, 
+               String updateRateDesignator)
+         {
+            return rtiAmbassadorClient.asyncSubscribeObjectClassAttributesWithRegions(
+                  objectClass, 
+                  attributesAndRegions, 
+                  false, 
                   updateRateDesignator);
          }
 
@@ -971,12 +999,22 @@ public class AsyncHelper {
          @Override
          public CompletableFuture<Void> subscribeInteractionClassWithRegions(
                InteractionClassHandle interactionClass, 
-               boolean active, 
                RegionHandleSet regions)
          {
             return rtiAmbassadorClient.asyncSubscribeInteractionClassWithRegions(
                   interactionClass, 
-                  active, 
+                  true, 
+                  regions);
+         }
+
+         @Override
+         public CompletableFuture<Void> subscribeInteractionClassPassivelyWithRegions(
+               InteractionClassHandle interactionClass, 
+               RegionHandleSet regions)
+         {
+            return rtiAmbassadorClient.asyncSubscribeInteractionClassWithRegions(
+                  interactionClass, 
+                  false, 
                   regions);
          }
 
@@ -997,6 +1035,7 @@ public class AsyncHelper {
                RegionHandleSet regions, 
                byte[] userSuppliedTag)
          {
+            rtiAmbassadorClient.countAsyncSentInteractionForStats();
             return rtiAmbassadorClient.asyncSendInteractionWithRegions(
                   interactionClass, 
                   parameterValues, 
@@ -1005,14 +1044,15 @@ public class AsyncHelper {
          }
 
          @Override
-         public CompletableFuture<MessageRetractionReturn> sendInteractionWithRegionsAndTime(
+         public CompletableFuture<MessageRetractionReturn> sendInteractionWithRegions(
                InteractionClassHandle interactionClass, 
                ParameterHandleValueMap parameterValues, 
                RegionHandleSet regions, 
                byte[] userSuppliedTag, 
                LogicalTime<?, ?> time)
          {
-            return rtiAmbassadorClient.asyncSendInteractionWithRegionsAndTime(
+            rtiAmbassadorClient.countAsyncSentInteractionForStats();
+            return rtiAmbassadorClient.asyncSendInteractionWithRegions(
                   interactionClass, 
                   parameterValues, 
                   regions, 

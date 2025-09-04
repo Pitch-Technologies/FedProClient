@@ -18,7 +18,7 @@
 
 #include <RTI/Handle.h>
 
-#if (RTI_HLA_VERSION < 2024)
+#if (RTI_HLA_VERSION < 2025)
 namespace RTI_NAMESPACE
 {
    // Define TransportationTypeHandle for internal use.

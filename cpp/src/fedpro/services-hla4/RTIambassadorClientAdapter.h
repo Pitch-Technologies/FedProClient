@@ -2378,7 +2378,7 @@ namespace RTI_NAMESPACE
       RegionHandle decodeRegionHandle (
             const VariableLengthData & encodedValue) const override;
 
-      std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> parseRtiConfiguration(const RTI_NAMESPACE::RtiConfiguration & rtiConfiguration, const std::vector<std::wstring> & inputValueList);
+      static RTI_NAMESPACE::RtiConfiguration parseRtiConfiguration(const RTI_NAMESPACE::RtiConfiguration & rtiConfiguration, const std::vector<std::wstring> & inputValueList);
 
    private:
 

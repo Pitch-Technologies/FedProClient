@@ -75,6 +75,14 @@ public class TypedProperties {
       _stringProperties.put(propertyName, value);
    }
 
+   public boolean isEmpty()
+   {
+      return _booleanProperties.isEmpty() &&
+            _durationProperties.isEmpty() &&
+            _intProperties.isEmpty() &&
+            _stringProperties.isEmpty();
+   }
+
    public String toPrettyString()
    {
       StringBuilder sb = new StringBuilder();

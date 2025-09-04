@@ -34,11 +34,10 @@ if (UNIX)
 endif ()
 
 get_filename_component(HLA_1516_2010_FEDPRO_INCLUDE "api/HLA_1516-2010" ABSOLUTE)
-get_filename_component(HLA_1516_202X_FEDPRO_INCLUDE "api/HLA_1516-202X" ABSOLUTE)
+get_filename_component(HLA_1516_2025_FEDPRO_INCLUDE "api/HLA_1516-2025" ABSOLUTE)
 
 # Adds library source files
 add_subdirectory(src)
-target_include_directories(fedpro_librti1516_4 PRIVATE third_party)
 
 # Chat Samples
 add_subdirectory(sample)
@@ -46,22 +45,15 @@ add_subdirectory(sample_evolved)
 
 # Tests
 add_subdirectory(test)
-add_subdirectory(third_party/googletest googletest)
 
 # CMake Install steps - moves all the files to the 'dist' directory
 
+# Get an ABI identifier, with platform and compiler information, to name libraries directories.
+include(cmake/FedProAppHelpers.cmake)
+get_cpp_abi_id(cpp_api_id)
+
+install(TARGETS fedpro_librti1516e DESTINATION "$<CONFIG>/lib/${cpp_api_id}")
+install(TARGETS fedpro_libfedtime1516e DESTINATION "$<CONFIG>/lib/${cpp_api_id}")
+
 install(TARGETS fedpro_librti1516_4 DESTINATION "$<CONFIG>/lib")
 install(TARGETS fedpro_libfedtime1516_4 DESTINATION "$<CONFIG>/lib")
-
-install(TARGETS fedpro_librti1516e DESTINATION "$<CONFIG>/lib")
-install(TARGETS fedpro_libfedtime1516e DESTINATION "$<CONFIG>/lib")
-
-set(SAMPLE_PATH_4 "$<CONFIG>/samples/chat-cpp-hla4-fedpro")
-install(TARGETS chat-cpp-hla4-fedpro DESTINATION ${SAMPLE_PATH_4})
-install(FILES "sample/Chat-evolved.xml" DESTINATION ${SAMPLE_PATH_4})
-install(FILES "sample/Chat.cpp" DESTINATION "${SAMPLE_PATH_4}/src")
-
-set(SAMPLE_PATH_E "$<CONFIG>/samples/chat-cpp-1516e-fedpro")
-install(TARGETS chat-cpp-1516e-fedpro DESTINATION ${SAMPLE_PATH_E})
-install(FILES "sample_evolved/Chat-evolved.xml" DESTINATION ${SAMPLE_PATH_E})
-install(FILES "sample_evolved/Chat.cpp" DESTINATION "${SAMPLE_PATH_E}/src")

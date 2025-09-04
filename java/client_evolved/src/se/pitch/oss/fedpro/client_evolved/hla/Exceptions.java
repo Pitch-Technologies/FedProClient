@@ -193,6 +193,7 @@ public class Exceptions {
       Constructor<? extends RTIexception> constructor = Init.CONSTRUCTORS.get(exceptionName);
       if (constructor != null) {
          try {
+            // sneakyThrow(..) throws RTIexception
             sneakyThrow(constructor.newInstance(details));
          } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
             throw new FedProRtiInternalError("Failed to create exception", e);

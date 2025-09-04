@@ -139,7 +139,7 @@ namespace RTI_NAMESPACE
 
    // Adds a copy of the dataElement instance to this fixed array all array elements
    // must have same type
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariantRecord &
 #else
    void
@@ -149,7 +149,7 @@ namespace RTI_NAMESPACE
          const DataElement & valuePrototype) RTI_THROW(EncoderException)
    {
       _impl->elements[discriminant.hash()] = pair<bool, DataElement *>(true, valuePrototype.clone().release());
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -157,7 +157,7 @@ namespace RTI_NAMESPACE
    // Adds a pointer to a dataElement instance to this fixed array all array elements
    // must have same type
    // Ownership is transferred
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariantRecord &
 #else
    void
@@ -167,14 +167,14 @@ namespace RTI_NAMESPACE
          DataElement * valuePtr) RTI_THROW(EncoderException)
    {
       _impl->elements[discriminant.hash()] = pair<bool, DataElement *>(false, valuePtr);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
    // Sets the variant with the given discriminant to a copy of the given value
    // Discriminant must match prototype and value must match its variant
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariantRecord &
 #else
    void
@@ -184,14 +184,14 @@ namespace RTI_NAMESPACE
          DataElement const & value) RTI_THROW(EncoderException)
    {
       _impl->setVariant(discriminant, true, value.clone().release());
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
    // Sets the variant with the given discriminant to the given value
    // Discriminant must match prototype and value must match its variant
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariantRecord &
 #else
    void
@@ -201,12 +201,12 @@ namespace RTI_NAMESPACE
          DataElement * valuePtr) RTI_THROW(EncoderException)
    {
       _impl->setVariant(discriminant, false, valuePtr);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariantRecord &
 #else
    void
@@ -215,7 +215,7 @@ namespace RTI_NAMESPACE
          const DataElement & discriminant) RTI_THROW(EncoderException)
    {
       _impl->discriminant = discriminant.clone();
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -329,7 +329,7 @@ namespace RTI_NAMESPACE
    }
 
    // Decodes this element from the ByteWrapper.
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariantRecord &
 #else
    void
@@ -339,7 +339,7 @@ namespace RTI_NAMESPACE
    {
       vector<Octet> buffer((char *) inData.data(), (char *) inData.data() + inData.size());
       decodeFrom(buffer, 0);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }

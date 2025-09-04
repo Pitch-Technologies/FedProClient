@@ -26,19 +26,19 @@ namespace FedPro
     * @brief This resume strategy keeps trying to resume a dropped session at a fixed
     * interval, up to a specified limit.
     */
-   class FEDPRO_EXPORT SimpleResumeStrategy : public ResumeStrategy
+   class SimpleResumeStrategy : public ResumeStrategy
    {
    public:
 
-      explicit SimpleResumeStrategy();
+      FEDPRO_EXPORT explicit SimpleResumeStrategy();
 
-      explicit SimpleResumeStrategy(const Properties & settings);
+      FEDPRO_EXPORT explicit SimpleResumeStrategy(const Properties & settings);
 
-      bool shouldRetry(FedProDuration timeSinceDisconnect) noexcept override;
+      FEDPRO_EXPORT bool shouldRetry(FedProDuration timeSinceDisconnect) noexcept override;
 
-      FedProDuration getRetryDelay(FedProDuration timeSinceDisconnect) noexcept override;
+      FEDPRO_EXPORT FedProDuration getRetryDelay(FedProDuration timeSinceDisconnect) noexcept override;
 
-      FedProDuration getRetryLimit() noexcept override;
+      FEDPRO_EXPORT FedProDuration getRetryLimit() noexcept override;
 
    private:
       const FedProDuration _reconnectDelay;

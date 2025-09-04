@@ -18,11 +18,13 @@ package se.pitch.oss.fedpro.client_common;
 
 import se.pitch.oss.fedpro.client.TypedProperties;
 import se.pitch.oss.fedpro.client_common.exceptions.InvalidSetting;
+import se.pitch.oss.fedpro.common.Protocol;
 
 import java.nio.file.InvalidPathException;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.*;
+import java.util.logging.Logger;
 
 import static se.pitch.oss.fedpro.client.Settings.*;
 
@@ -40,6 +42,8 @@ import static se.pitch.oss.fedpro.client.Settings.*;
  * </ul>
  */
 public class SettingsParser {
+
+   private static final Logger LOGGER = Logger.getLogger(SettingsParser.class.getName());
 
    private static final String TRUE = "true";
    private static final String FALSE = "false";
@@ -130,11 +134,13 @@ public class SettingsParser {
          case SETTING_NAME_RESPONSE_TIMEOUT:
          case SETTING_NAME_RECONNECT_LIMIT:
          case SETTING_NAME_CONNECTION_TIMEOUT:
+         case SETTING_NAME_PRINT_STATS_INTERVAL:
             parseDuration(settings, key, value);
             break;
          case SETTING_NAME_ASYNC_UPDATES:
-         case SETTING_NAME_KEYSTORE_USE_DEFAULT:
          case SETTING_NAME_RATE_LIMIT_ENABLED:
+         case SETTING_NAME_PRINT_STATS:
+         case SETTING_NAME_WARN_ON_LATE_STATE_LISTENER_SHUTDOWN:
             parseBoolean(settings, key, value);
             break;
          case SETTING_NAME_CONNECTION_PORT:
@@ -147,6 +153,7 @@ public class SettingsParser {
             parsePath(settings, key, value);
             break;
          case SETTING_NAME_CONNECTION_MAX_RETRY_ATTEMPTS:
+         case SETTING_NAME_RESUME_RETRY_DELAY_MILLIS:
          case SETTING_NAME_MESSAGE_QUEUE_SIZE:
             parseUnsignedInt32(settings, key, value);
             break;
@@ -156,11 +163,12 @@ public class SettingsParser {
          case SETTING_NAME_KEYSTORE_TYPE:
          case SETTING_NAME_TLS_MODE:
          case SETTING_NAME_TLS_SNI:
+         case SETTING_NAME_HLA_API_VERSION:
             // Allowed to be any string
             settings.setString(key, value);
             break;
          default:
-            throw new InvalidSetting("'" + key + "' is not a valid setting name.");
+            LOGGER.warning("'" + key + "' is not a valid setting name.");
       }
    }
 
@@ -211,7 +219,7 @@ public class SettingsParser {
    throws InvalidSetting
    {
       // It's ok to specify the protocol case insensitively (tcp, TCP, TcP e.g.)
-      if (Arrays.stream(ALLOWED_PROTOCOLS).noneMatch(protocol::equalsIgnoreCase)) {
+      if (Arrays.stream(Protocol.ALLOWED_PROTOCOLS).noneMatch(protocol::equalsIgnoreCase)) {
          throw new InvalidSetting("'" + protocol + "' is not a supported transport protocol.");
       }
       settings.setString(SETTING_NAME_CONNECTION_PROTOCOL, protocol.toLowerCase());

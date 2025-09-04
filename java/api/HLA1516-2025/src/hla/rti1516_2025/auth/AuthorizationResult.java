@@ -1,0 +1,31 @@
+/*
+ * The IEEE hereby grants a general, royalty-free license to copy, distribute,
+ * display and make derivative works from this material, for all purposes,
+ * provided that any use of the material contains the following
+ * attribution: "Reprinted with permission from IEEE 1516.1(TM)-2025".
+ * Should you require additional information, contact the Manager, Standards
+ * Intellectual Property, IEEE Standards Association (stds-ipr@ieee.org).
+ */
+
+package hla.rti1516_2025.auth;
+
+public class AuthorizationResult {
+   public enum Code {
+      AUTHORIZED, UNAUTHORIZED, INVALID_CREDENTIALS, AUTHORIZATION_ERROR
+   }
+
+   public final Code code;
+   public final String message;
+
+   public AuthorizationResult(Code code, String message)
+   {
+      this.code = code;
+      this.message = message;
+   }
+
+   public AuthorizationResult(Code code)
+   {
+      this.code = code;
+      message = "";
+   }
+}

@@ -16,9 +16,9 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.time.LogicalTime;
-import hla.rti1516_202X.time.LogicalTimeInterval;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.time.LogicalTime;
+import hla.rti1516_2025.time.LogicalTimeInterval;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -33,7 +33,7 @@ public interface AsyncRTIambassador {
          String synchronizationPointLabel, 
          byte[] userSuppliedTag);
 
-   CompletableFuture<Void> registerFederationSynchronizationPointWithSet(
+   CompletableFuture<Void> registerFederationSynchronizationPoint(
          String synchronizationPointLabel, 
          byte[] userSuppliedTag, 
          FederateHandleSet synchronizationSet);
@@ -45,7 +45,7 @@ public interface AsyncRTIambassador {
    CompletableFuture<Void> requestFederationSave(
          String label);
 
-   CompletableFuture<Void> requestFederationSaveWithTime(
+   CompletableFuture<Void> requestFederationSave(
          String label, 
          LogicalTime<?, ?> time);
 
@@ -94,7 +94,7 @@ public interface AsyncRTIambassador {
    CompletableFuture<Void> unpublishObjectClassDirectedInteractions(
          ObjectClassHandle objectClass);
 
-   CompletableFuture<Void> unpublishObjectClassDirectedInteractionsWithSet(
+   CompletableFuture<Void> unpublishObjectClassDirectedInteractions(
          ObjectClassHandle objectClass, 
          InteractionClassHandleSet interactionClasses);
 
@@ -102,7 +102,7 @@ public interface AsyncRTIambassador {
          ObjectClassHandle objectClass, 
          AttributeHandleSet attributes);
 
-   CompletableFuture<Void> subscribeObjectClassAttributesWithRate(
+   CompletableFuture<Void> subscribeObjectClassAttributes(
          ObjectClassHandle objectClass, 
          AttributeHandleSet attributes, 
          String updateRateDesignator);
@@ -111,7 +111,7 @@ public interface AsyncRTIambassador {
          ObjectClassHandle objectClass, 
          AttributeHandleSet attributes);
 
-   CompletableFuture<Void> subscribeObjectClassAttributesPassivelyWithRate(
+   CompletableFuture<Void> subscribeObjectClassAttributesPassively(
          ObjectClassHandle objectClass, 
          AttributeHandleSet attributes, 
          String updateRateDesignator);
@@ -143,7 +143,7 @@ public interface AsyncRTIambassador {
    CompletableFuture<Void> unsubscribeObjectClassDirectedInteractions(
          ObjectClassHandle objectClass);
 
-   CompletableFuture<Void> unsubscribeObjectClassDirectedInteractionsWithSet(
+   CompletableFuture<Void> unsubscribeObjectClassDirectedInteractions(
          ObjectClassHandle objectClass, 
          InteractionClassHandleSet interactionClasses);
 
@@ -171,7 +171,7 @@ public interface AsyncRTIambassador {
          AttributeHandleValueMap attributeValues, 
          byte[] userSuppliedTag);
 
-   CompletableFuture<MessageRetractionReturn> updateAttributeValuesWithTime(
+   CompletableFuture<MessageRetractionReturn> updateAttributeValues(
          ObjectInstanceHandle objectInstance, 
          AttributeHandleValueMap attributeValues, 
          byte[] userSuppliedTag, 
@@ -182,7 +182,7 @@ public interface AsyncRTIambassador {
          ParameterHandleValueMap parameterValues, 
          byte[] userSuppliedTag);
 
-   CompletableFuture<MessageRetractionReturn> sendInteractionWithTime(
+   CompletableFuture<MessageRetractionReturn> sendInteraction(
          InteractionClassHandle interactionClass, 
          ParameterHandleValueMap parameterValues, 
          byte[] userSuppliedTag, 
@@ -194,7 +194,7 @@ public interface AsyncRTIambassador {
          ParameterHandleValueMap parameterValues, 
          byte[] userSuppliedTag);
 
-   CompletableFuture<MessageRetractionReturn> sendDirectedInteractionWithTime(
+   CompletableFuture<MessageRetractionReturn> sendDirectedInteraction(
          InteractionClassHandle interactionClass, 
          ObjectInstanceHandle objectInstance, 
          ParameterHandleValueMap parameterValues, 
@@ -205,7 +205,7 @@ public interface AsyncRTIambassador {
          ObjectInstanceHandle objectInstance, 
          byte[] userSuppliedTag);
 
-   CompletableFuture<MessageRetractionReturn> deleteObjectInstanceWithTime(
+   CompletableFuture<MessageRetractionReturn> deleteObjectInstance(
          ObjectInstanceHandle objectInstance, 
          byte[] userSuppliedTag, 
          LogicalTime<?, ?> time);
@@ -213,12 +213,12 @@ public interface AsyncRTIambassador {
    CompletableFuture<Void> localDeleteObjectInstance(
          ObjectInstanceHandle objectInstance);
 
-   CompletableFuture<Void> requestInstanceAttributeValueUpdate(
+   CompletableFuture<Void> requestAttributeValueUpdate(
          ObjectInstanceHandle objectInstance, 
          AttributeHandleSet attributes, 
          byte[] userSuppliedTag);
 
-   CompletableFuture<Void> requestClassAttributeValueUpdate(
+   CompletableFuture<Void> requestAttributeValueUpdate(
          ObjectClassHandle objectClass, 
          AttributeHandleSet attributes, 
          byte[] userSuppliedTag);
@@ -365,7 +365,7 @@ public interface AsyncRTIambassador {
          ObjectClassHandle objectClass, 
          AttributeSetRegionSetPairList attributesAndRegions);
 
-   CompletableFuture<ObjectInstanceHandle> registerObjectInstanceWithNameAndRegions(
+   CompletableFuture<ObjectInstanceHandle> registerObjectInstanceWithRegions(
          ObjectClassHandle objectClass, 
          AttributeSetRegionSetPairList attributesAndRegions, 
          String objectInstanceName);
@@ -380,13 +380,20 @@ public interface AsyncRTIambassador {
 
    CompletableFuture<Void> subscribeObjectClassAttributesWithRegions(
          ObjectClassHandle objectClass, 
-         AttributeSetRegionSetPairList attributesAndRegions, 
-         boolean active);
+         AttributeSetRegionSetPairList attributesAndRegions);
 
-   CompletableFuture<Void> subscribeObjectClassAttributesWithRegionsAndRate(
+   CompletableFuture<Void> subscribeObjectClassAttributesPassivelyWithRegions(
+         ObjectClassHandle objectClass, 
+         AttributeSetRegionSetPairList attributesAndRegions);
+
+   CompletableFuture<Void> subscribeObjectClassAttributesWithRegions(
          ObjectClassHandle objectClass, 
          AttributeSetRegionSetPairList attributesAndRegions, 
-         boolean active, 
+         String updateRateDesignator);
+
+   CompletableFuture<Void> subscribeObjectClassAttributesPassivelyWithRegions(
+         ObjectClassHandle objectClass, 
+         AttributeSetRegionSetPairList attributesAndRegions, 
          String updateRateDesignator);
 
    CompletableFuture<Void> unsubscribeObjectClassAttributesWithRegions(
@@ -395,7 +402,10 @@ public interface AsyncRTIambassador {
 
    CompletableFuture<Void> subscribeInteractionClassWithRegions(
          InteractionClassHandle interactionClass, 
-         boolean active, 
+         RegionHandleSet regions);
+
+   CompletableFuture<Void> subscribeInteractionClassPassivelyWithRegions(
+         InteractionClassHandle interactionClass, 
          RegionHandleSet regions);
 
    CompletableFuture<Void> unsubscribeInteractionClassWithRegions(
@@ -408,7 +418,7 @@ public interface AsyncRTIambassador {
          RegionHandleSet regions, 
          byte[] userSuppliedTag);
 
-   CompletableFuture<MessageRetractionReturn> sendInteractionWithRegionsAndTime(
+   CompletableFuture<MessageRetractionReturn> sendInteractionWithRegions(
          InteractionClassHandle interactionClass, 
          ParameterHandleValueMap parameterValues, 
          RegionHandleSet regions, 

@@ -133,7 +133,7 @@ namespace RTI_NAMESPACE
 
    // Sets the element at the given index to a copy of the given element instance
    // Element must match prototype.
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedArray &
 #else
    void
@@ -152,14 +152,14 @@ namespace RTI_NAMESPACE
          delete _impl->elements.at(index).second;
       }
       _impl->elements.at(index) = pair<bool, DataElement *>(true, dataElement.clone().release());
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
    // Sets the element at the given index to the given element instance
    // Caller maintains lifetime of element
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedArray &
 #else
    void
@@ -178,7 +178,7 @@ namespace RTI_NAMESPACE
          delete _impl->elements.at(index).second;
       }
       _impl->elements.at(index) = pair<bool, DataElement *>(false, dataElement);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -262,7 +262,7 @@ namespace RTI_NAMESPACE
 
    // Decodes this element from the ByteWrapper.
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAfixedArray &
 #else
    void
@@ -272,7 +272,7 @@ namespace RTI_NAMESPACE
    {
       vector<Octet> buffer((char *) inData.data(), (char *) inData.data() + inData.size());
       decodeFrom(buffer, 0);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }

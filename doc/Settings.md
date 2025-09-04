@@ -2,32 +2,27 @@
 
 ## How to provide settings
 
-Client libraries are configurable by passing settings through the `connect()` method of the `RTIambassador` class,
-through environment variables, and through Java System Properties.
+Client libraries are configurable by passing settings through the `connect()` method of the `RTIambassador` class, through environment variables, and through Java system properties.
 
-If the value for a certain setting is specified in more than one way,
-the value which is set through the most prioritized way will be used.
-The order of precedence is, from least to most prioritized:
+The order of precedence of the different methods is as follows:
 
-* Implementation defaults,
-* Environment variable `FEDPRO_CLIENT_SETTINGS`,
-* System property with prefix `FedPro.` (Java only),
-* `RTIambassador.connect()` parameter (local settings designator string in HLA Evolved, and `RtiConfiguration` instance in (HLA 4),
-
-* Environment variable `FEDPRO_CLIENT_OVERRIDES`,
-* System property with prefix `fedProOverrides.` (Java only).
+1. System property with prefix `FedProOverrides.` (Java only)
+2. Environment variable `FEDPRO_CLIENT_OVERRIDES`
+3. `RTIambassador.connect()` parameter (local settings designator string in HLA Evolved, and `RtiConfiguration` instance in HLA 4)
+4. System property with prefix `FedPro.` (Java only)
+5. Environment variable `FEDPRO_CLIENT_SETTINGS`
+6. Default values
 
 ### RtiConfiguration syntax (HLA 4)
 
-For HLA{nbsp}4 federates,
-one way to provide settings is to provide them through a `RtiConfiguration` object
-and then pass through to the `connect()` method of the `RTIambassador` class.
+Federates using the {hla4} API may provide settings in an `RtiConfiguration` object passed to the `connect()` method of the `RTIambassador` class.
 When doing so, the following applies:
 
-* All settings may be separated by either commas or line breaks
-* Both RTI-specific settings, and Federate Protocol client-specific settings may be provided through the additional settings field of the `RtiConfiguration` object
-* All Federate Protocol client setting names must be prefixed with `FedPro.`
-* The address for the Federate Protocol server to connect to may be specified through the RTI address field of the `RtiConfiguration` object
+* Both regular LRC settings and Federate Protocol client settings may be provided through the `additionalSettings` field of the `RtiConfiguration` object.
+* LRC settings provided this way will only apply if the Federate Protocol server is configured to trust them.
+* All settings may be separated by either commas or line breaks.
+* All Federate Protocol client setting names must be prefixed with `FedPro.`.
+* The address for the Federate Protocol server to connect to may be specified through the RTI address field of the `RtiConfiguration` object.
 
 C++ Example:
 ```
@@ -43,13 +38,14 @@ _rtiAmbassador->connect(*this, HLA_IMMEDIATE, rtiConfiguration);
 
 ### Local Settings Designator syntax (HLA Evolved)
 
-For HLA Evolved federates, for compatibility purpose,
-the following applies for the `localSettingsDesignator` parameter of the `connect()` method of the `RTIambassador` class:
+Federates using the HLA Evolved API may provide settings in the `localSettingsDesignator` string passed to the `connect()` method of the `RTIambassador` class.
+When doing so, the following applies:
 
-* All settings may be separated by either commas or line breaks
-* There may be both RTI-specific settings and Federate Protocol client-specific settings provided within it
-* All Federate Protocol client setting names must be prefixed with `FedPro.`
-* Exception: The setting 'crcAddress' is interpreted as the address of the FedPro server, not as an LRC setting.
+* The `localSettingsDesignator` may contain both regular LRC settings and Federate Protocol client settings.
+* LRC settings provided this way will only apply if the Federate Protocol Server is configured to trust them.
+* All settings may be separated by either commas or line breaks.
+* All Federate Protocol client setting names must be prefixed with `FedPro.`.
+* Exception: The setting `crcAddress` is interpreted as the address of the FedPro server, not as an LRC setting.
   This minimizes the changes required for existing Evolved federates when transitioning from a classic CRC connection to a Federate Protocol server connection.
 
 Example:
@@ -62,7 +58,7 @@ FedPro.connect.hostname=fedproserver.example,FedPro.connect.port=12345
 
 ### Environment variable syntax
 
-Environment variables `FEDPRO_CLIENT_SETTINGS` or `FEDPRO_CLIENT_OVERRIDES` should contain a list of desired settings as key-value pairs in the following format:
+Environment variables `FEDPRO_CLIENT_SETTINGS` and `FEDPRO_CLIENT_OVERRIDES` may contain a list of desired settings as key-value pairs in the following format:
 
 `<environmentVariable>=<setting1>=<value1>,<setting2>=<value2>,...`
 
@@ -72,134 +68,33 @@ Example:
 
 ## List of settings and defaults
 
-Note: Settings are case-sensitive.
-
-### Common settings
-
-* `FED_INT_HEART`
-
-  Heartbeat interval (seconds). 
-
-  Default: 600 seconds
-
-* `FED_TIMEOUT_HEART`
-
-  Missing RTI message timeout (seconds). 
-
-  Default: 180 seconds
-
-* `FED_TIMEOUT_RECONNECT`
-
-  Reconnect timeout (seconds). 
-
-  Default: 600 seconds
-* `asyncUpdates`
-
-  Set to true to ignore error responses for sent HLA updates, allowing non-blocking HLA update calls. True or false. 
-
-  Default: "false"
-
-* `connect.hostname`
-
-  Server hostname to use. 
-
-  Default: *localhost*
-
-* `connect.maxRetryAttempts`
-
-  Number of attempts for the client to retry to connect to the server if the first attempt fails. 
-
-  Default: *0*
-
-* `connect.port` 
-
-  Server port to use. 
-
-  Default: Depends on the protocol in use
-
-* `connect.protocol`
-
-  The network protocol to use to connect to the server. Can be one of `tcp`, `tls`, `websocket`, or `websocketsecure`.
-
-  Default: *tcp*
-
-* `connect.timeout`
-
-  Connection timeout (seconds) for session (re)start. 
-
-  Default: 5 seconds
-
-* `messageQueue.size`
-
-  Message history size, as number of messages. 
-
-  Default: 2000
-
-* `messageQueue.outgoing.limitedRate`
-
-  Use rate limiter for outgoing messages.
-
-  Default: *false*
-
-### C++-specific Settings
-
-* `log.console.level`
-
-  Severity level of log messages written to the console. See all levels [here](../cpp/README.md#Logging).
-
-  Default: *warn*
-
-* `log.rotatingFile.level`
-
-  Severity level of log messages written to rotating log files. See all levels [here](../cpp/README.md#Logging).
-
-  Default: *off*
-* `log.rotatingFile.path`
-
-  File path to where rotating logs will be written.
-
-  Default: *<working_dir>/FedProClientCppLogs/FedProClientCpp.log*
-
-### Java-specific Settings
-
-* `keystore.algorithm`
-
-  The name of the standard algorithm to use. 
-
-  Default: *SunX509*
-
-* `keystore.password.path`
-
-  Path to a file that contains the password to the keystore. 
-
-  Default: None
-
-* `keystore.path`
-
-  Path to a keystore file. 
-
-  Default: None
-
-* `keystore.type`
-
-  Type of keystore. 
-
-  Default: *JKS*
-
-* `keystore.useDefault`
-
-  Use Java default keystore. 
-
-  Default: *false*
-
-* `tls.mode`
-
-  Level of security, *SERVER_AUTH* or *ENCRYPTED*. 
-
-  Default: *SERVER_AUTH*
-
-* `tls.sniHostname`
-
-  Set to provide a Server Name Indication (SNI) to the server. 
-
-  Default: None
+The table below shows each setting and which of the two clients that supports it.
+Settings are case-sensitive.
+
+| Setting | Description | Default value | Java | C++
+|---|---|---|---|---|
+| `FED_INT_HEART` | Heartbeat interval (seconds). | 60 seconds | Yes | Yes
+| `FED_TIMEOUT_HEART` | Missing RTI message timeout. (seconds). | 180 seconds | Yes | Yes
+| `FED_TIMEOUT_RECONNECT` | Reconnect timeout (seconds). | 600 seconds | Yes | Yes
+| `asyncUpdates` | Set to true to ignore error responses for sent HLA updates, allowing non-blocking HLA update calls. True or false. | "false" | Yes | Yes
+| `connect.hostname` | Server hostname to use. | "localhost" | Yes | Yes
+| `connect.maxRetryAttempts` | Number of attempts for the client to retry to connect to the server if the first attempt fails. | "0" | Yes | Yes
+| `connect.port` | Server port to use. | Depends on the protocol used. | Yes | Yes
+| `connect.protocol` | The network protocol to use to connect to the server. Valid values are "tcp", "tls", "websocket", or "websocketsecure" | "tcp" | Yes | Yes
+| `connect.timeout` | Connection timeout (seconds) for session (re)start. | 5 seconds | Yes | Yes
+| `log.console.level` | Severity level of log messages written to the console. See the section on the C++ client for more info. | "warn" | | Yes
+| `log.rotatingFile.level` | Severity level of log messages written to rotating log files. | "off" | | Yes
+| `log.rotatingFile.path` | File path to where rotating logs will be written. | In <work_dir>/FedProClientCppLogs | | Yes
+| `log.stats` | Set to true to have the client print statistics to log scope INFO at an interval set by `log.stats.interval`. | "false" | Yes | Yes
+| `log.stats.interval` | The interval, in seconds, at which statistics are logged when `log.stats` is set to true. | 60 | Yes | Yes
+| `keystore.algorithm` | The name of the standard algorithm to use. | "SunX509" | Yes |
+| `keystore.password.path` | Path to a file that contains the password to the keystore. | None | Yes |
+| `keystore.path` | Path to a keystore file. If none is provided, the client will use Java's default keystore. | None | Yes |
+| `keystore.type` | Type of keystore. | "JKS" | Yes |
+| `messageQueue.size` | Message history size, as number of messages. | 2000 messages | Yes | Yes
+| `messageQueue.outgoing.limitedRate` | Use rate limiter for outgoing messages. | "false" | Yes | Yes
+| `API.version` | Sends the specified value to the RTI by prepending `API.version=[value]` to the `RtiConfiguration` additional settings field. | "IEEE 1516-2010" for the Evolved adapter. | Yes | Yes
+| `tls.mode` | Level of security, "SERVER_AUTH" or "ENCRYPTED". | "SERVER_AUTH" | Yes |
+| `tls.sniHostname` | Set to provide a Server Name Indication (SNI) to the server. | None | Yes |
+
+Note that the Federate Protocol client settings do not affect timeout behavior on the Federate Protocol server side.

@@ -26,61 +26,63 @@
 namespace FedPro
 {
 
-   class FEDPRO_EXPORT Properties
+   class Properties
    {
    public:
 
-      Properties();
+      FEDPRO_EXPORT Properties();
 
-      bool getBoolean(
+      FEDPRO_EXPORT bool getBoolean(
             const std::string & propertyName,
             bool defaultValue) const;
 
-      FedProDuration getDuration(
+      FEDPRO_EXPORT FedProDuration getDuration(
             const std::string & settingName,
             FedProDuration defaultValue) const;
 
-      int getInt(
+      FEDPRO_EXPORT int getInt(
             const std::string & settingName,
             int defaultValue) const;
 
-      std::string getString(
+      FEDPRO_EXPORT std::string getString(
             const std::string & propertyName,
             const std::string & defaultValue) const;
 
-      uint16_t getUnsignedInt16(
+      FEDPRO_EXPORT uint16_t getUnsignedInt16(
             const std::string & settingName,
             uint16_t defaultValue) const;
 
-      uint32_t getUnsignedInt32(
+      FEDPRO_EXPORT uint32_t getUnsignedInt32(
             const std::string & propertyName,
             uint32_t defaultValue) const;
 
-      void setBoolean(
+      FEDPRO_EXPORT void setBoolean(
             const std::string & propertyName,
             bool value);
 
-      void setDuration(
+      FEDPRO_EXPORT void setDuration(
             const std::string & propertyName,
             FedProDuration value);
 
-      void setInt(
+      FEDPRO_EXPORT void setInt(
             const std::string & propertyName,
             int value);
 
-      void setString(
+      FEDPRO_EXPORT void setString(
             const std::string & propertyName,
             const std::string & value);
 
-      void setUnsignedInt16(
+      FEDPRO_EXPORT void setUnsignedInt16(
             const std::string & propertyName,
             uint16_t value);
 
-      void setUnsignedInt32(
+      FEDPRO_EXPORT void setUnsignedInt32(
             const std::string & propertyName,
             uint32_t value);
 
-      std::string toPrettyString() const;
+      FEDPRO_EXPORT bool empty() const;
+
+      FEDPRO_EXPORT std::string toPrettyString() const;
 
    private:
 

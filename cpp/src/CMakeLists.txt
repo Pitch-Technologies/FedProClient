@@ -16,6 +16,21 @@
 include(../cmake/FedProTargetHelpers.cmake)
 
 set(FEDPRO_SOURCES_COMMON
+      # API
+      ../include/FedPro.h
+      ../include/fedpro/Aliases.h
+      ../include/fedpro/Config.h
+      ../include/fedpro/EofException.h
+      ../include/fedpro/Logger.h
+      ../include/fedpro/PersistentSession.h
+      ../include/fedpro/ProgressiveDelayResumeStrategy.h
+      ../include/fedpro/Properties.h
+      ../include/fedpro/ResumeStrategy.h
+      ../include/fedpro/Session.h
+      ../include/fedpro/Settings.h
+      ../include/fedpro/SimpleResumeStrategy.h
+      ../include/fedpro/Socket.h
+      ../include/fedpro/Transport.h
       # Common
       fedpro/FedPro.cpp
       fedpro/FedProException.cpp
@@ -24,11 +39,21 @@ set(FEDPRO_SOURCES_COMMON
       fedpro/utility/final.h
       fedpro/utility/InterruptibleCondition.cpp
       fedpro/utility/InterruptibleCondition.h
+      fedpro/utility/FixedRateExecutor.h
+      fedpro/utility/FixedRateExecutor.cpp
+      fedpro/utility/Logger.cpp
       fedpro/utility/LoggerInitializer.cpp
       fedpro/utility/LoggerInitializer.h
+      fedpro/utility/MovingStats.h
+      fedpro/utility/MovingStats.cpp
+      fedpro/utility/MovingStatsNoOp.h
       fedpro/utility/NannyLock.cpp
       fedpro/utility/NannyLock.h
       fedpro/utility/Properties.cpp
+      fedpro/utility/StandAloneMovingStats.h
+      fedpro/utility/StandAloneMovingStats.cpp
+      fedpro/utility/StatsPrettyPrint.cpp
+      fedpro/utility/StatsPrettyPrint.h
       fedpro/utility/StringUtil.cpp
       fedpro/utility/StringUtil.h
       fedpro/utility/string_view.h
@@ -201,7 +226,12 @@ add_library(fedpro_librti1516e
       fedpro/services-2010/RTIambassadorClientAdapter.h
 )
 
-hla_get_target_suffix(2010 HLA_EVOLVED_LIB_SUFFIX)
+if (APPLE)
+   # lib-suffix shouldn't be provided for mac as it shouldn't end with "64"
+   set(HLA_EVOLVED_LIB_SUFFIX "")
+else ()
+   hla_get_target_suffix(2010 HLA_EVOLVED_LIB_SUFFIX)
+endif()
 
 # Define the actual library prefix and name
 set_target_properties(fedpro_librti1516e PROPERTIES PREFIX "")
@@ -251,17 +281,17 @@ add_library(fedpro_librti1516_4
       fedpro/services-hla4/RTIambassadorClientAdapter.h
 )
 
-hla_get_target_suffix(2024 HLA_4_LIB_SUFFIX)
+hla_get_target_suffix(2025 HLA_4_LIB_SUFFIX)
 
 # Define the actual library prefix and name
 set_target_properties(fedpro_librti1516_4 PROPERTIES PREFIX "")
-set_target_properties(fedpro_librti1516_4 PROPERTIES OUTPUT_NAME librti1516_202X${HLA_4_LIB_SUFFIX})
+set_target_properties(fedpro_librti1516_4 PROPERTIES OUTPUT_NAME librti1516_2025${HLA_4_LIB_SUFFIX})
 
 # Specify compiler and linker flags
 target_compile_options(fedpro_librti1516_4 PRIVATE ${FEDPRO_CXX_FLAGS_HLA4})
 
 # Define the RTI library target
-fedpro_set_librti_target_options(fedpro_librti1516_4 rti1516_202X 2024 ${HLA_1516_202X_FEDPRO_INCLUDE})
+fedpro_set_librti_target_options(fedpro_librti1516_4 rti1516_2025 2025 ${HLA_1516_2025_FEDPRO_INCLUDE})
 
 # Logical time library
 add_library(fedpro_libfedtime1516_4
@@ -271,20 +301,20 @@ add_library(fedpro_libfedtime1516_4
 )
 
 # Define include search directories for this target
-target_include_directories(fedpro_libfedtime1516_4 PRIVATE "${HLA_1516_202X_INCLUDE}")
+target_include_directories(fedpro_libfedtime1516_4 PRIVATE "${HLA_1516_2025_INCLUDE}")
 
 # Define macros
 target_compile_definitions(fedpro_libfedtime1516_4
       PRIVATE
       BUILDING_FEDTIME # Export fedtime symbols, including LogicalTimeFactoryFactory
       RTI_DISABLE_WARNINGS
-      RTI_NAMESPACE=rti1516_202X # Select RTI namespace
-      RTI_HLA_VERSION=2024
+      RTI_NAMESPACE=rti1516_2025 # Select RTI namespace
+      RTI_HLA_VERSION=2025
 )
 
 # Define the actual library name
 set_target_properties(fedpro_libfedtime1516_4 PROPERTIES PREFIX "")
-set_target_properties(fedpro_libfedtime1516_4 PROPERTIES OUTPUT_NAME libfedtime1516_202X${HLA_4_LIB_SUFFIX})
+set_target_properties(fedpro_libfedtime1516_4 PROPERTIES OUTPUT_NAME libfedtime1516_2025${HLA_4_LIB_SUFFIX})
 
 target_link_libraries(fedpro_libfedtime1516_4
       PRIVATE

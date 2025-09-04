@@ -30,6 +30,9 @@
 #include "msg/ResumeStatusMessage.h"
 #include "SequenceNumber.h"
 #include "TimeoutTimer.h"
+#include <utility/MovingStatsNoOp.h>
+#include <utility/StandAloneMovingStats.h>
+#include <utility/StatsPrettyPrint.h>
 
 #include "spdlog/spdlog.h"
 
@@ -40,7 +43,11 @@
 
 namespace FedPro
 {
-   static constexpr uint32_t NUM_OF_STATE_LISTENER_THREADS{1};
+   // TODO: Consider turning this into a FedPro setting.
+   static constexpr const FedProDuration STATE_LISTENER_TIMEOUT_MILLIS{100};
+
+   // TODO: 3 threads in stead of 1 seems to make the resume algorithm faster when compiled with gcc.
+   static constexpr const uint32_t NUM_OF_STATE_LISTENER_THREADS{1};
 
    SessionImpl::SessionImpl(
          std::unique_ptr<Transport> transportProtocol,
@@ -72,10 +79,26 @@ namespace FedPro
            _maxRetryConnectAttempts{settings.getUnsignedInt32(
                  SETTING_NAME_CONNECTION_MAX_RETRY_ATTEMPTS, DEFAULT_CONNECTION_MAX_RETRY_ATTEMPTS)},
            _connectionTimeout{settings.getDuration(SETTING_NAME_CONNECTION_TIMEOUT, DEFAULT_CONNECTION_TIMEOUT_MILLIS)},
-           _queueSize{settings.getUnsignedInt32(SETTING_NAME_MESSAGE_QUEUE_SIZE, DEFAULT_MESSAGE_QUEUE_SIZE)}
-
+           _queueSize{settings.getUnsignedInt32(SETTING_NAME_MESSAGE_QUEUE_SIZE, DEFAULT_MESSAGE_QUEUE_SIZE)},
+           _printStats{settings.getBoolean(SETTING_NAME_PRINT_STATS, false)},
+           _warnOnLateStateListenerShutdown{settings.getBoolean(SETTING_NAME_WARN_ON_LATE_STATE_LISTENER_SHUTDOWN, true)}
    {
       _stateListenerThreadPool.start();
+      if (_printStats) {
+         FedProDuration statsIntervalMillis = settings.getDuration(
+               SETTING_NAME_PRINT_STATS_INTERVAL,
+               DEFAULT_PRINT_STATS_INTERVAL_MILLIS);
+         _hlaCallStats = std::make_unique<StandAloneMovingStats>(statsIntervalMillis);
+         _hlaCallTimeStats = std::make_unique<StandAloneMovingStats>(statsIntervalMillis);
+         _hlaCallbackStats = std::make_unique<StandAloneMovingStats>(statsIntervalMillis);
+         _resumeCount = std::make_unique<StandAloneMovingStats>(statsIntervalMillis);
+      } else {
+         _hlaCallStats = std::make_unique<MovingStatsNoOp>();
+         _hlaCallTimeStats = std::make_unique<MovingStatsNoOp>();
+         _hlaCallbackStats = std::make_unique<MovingStatsNoOp>();
+         _resumeCount = std::make_unique<MovingStatsNoOp>();
+      }
+
    }
 
    SessionImpl::~SessionImpl()
@@ -94,8 +117,14 @@ namespace FedPro
          waitForReaderThread();
       }
 
-      // After terminating, stop pools and process remaining jobs to inform listeners about state changes.
-      _stateListenerThreadPool.stop(true);
+      // Stop executor, and process remaining jobs to inform listeners about state changes.
+      requestListenerExecutorShutdown();
+      waitStateListeners();
+   }
+
+   void SessionImpl::requestListenerExecutorShutdown()
+   {
+      _stateListenerThreadPool.shutdown(true);
    }
 
    uint64_t SessionImpl::getId() const noexcept
@@ -117,12 +146,52 @@ namespace FedPro
       _stateListeners.push_back(onStateTransition);
    }
 
+   void SessionImpl::waitStateListeners()
+   {
+      State state = getState();
+      if (state != State::TERMINATED) {
+         throw SessionIllegalState{"Cannot wait for listener for a session in state " + stateToString(state) +
+                                   ". Session must be TERMINATED. "};
+      }
+
+      if (!_stateListenerThreadPool.waitTermination(STATE_LISTENER_TIMEOUT_MILLIS)) {
+         if (_warnOnLateStateListenerShutdown) {
+            SPDLOG_WARN(
+                  "{}: State Listener execution did not complete in {} ms",
+                  logPrefix(),
+                  STATE_LISTENER_TIMEOUT_MILLIS.count());
+         }
+         _stateListenerThreadPool.waitTermination();
+      }
+   }
+
    void SessionImpl::setMessageSentListener(Session::MessageSentListener onMessageSent)
    {
       if (!onMessageSent) {
          throw std::invalid_argument{logPrefix() + ": The passed MessageSentListener is null."};
       }
       _onMessageSent = onMessageSent;
+   }
+
+   void SessionImpl::prettyPrintPerSecondStats(std::ostream & stream)
+   {
+      using namespace StatsPrettyPrint;
+      MovingStats::Stats hlaCallStats = _hlaCallStats->getStats();
+      MovingStats::Stats hlaCallBackStats = _hlaCallbackStats->getStats();
+      MovingStats::Stats resumeStats = _resumeCount->getStats();
+      stream << "FedPro connection drop count:                       " << setFormat << resumeStats._averageBucket << padStat << padStat << setFormat << resumeStats._sum << setFormat << resumeStats._historicTotal << "\n"
+             << "FedPro call request queue length:                   " << padStat << padStat << padStat << setFormat << _roundRobinMessageQueue->primarySize() << "\n"
+             << "FedPro callback response queue length:              " << padStat << padStat << padStat << setFormat << _roundRobinMessageQueue->alternateSize() << "\n"
+             << "FedPro call requests awaiting response:             " << padStat << padStat << padStat << setFormat << _requestFutures.size() << "\n"
+             << "HLA call count:                                     " << hlaCallStats << "\n"
+             << "HLA callback count:                                 " << hlaCallBackStats << "\n";
+   }
+
+   void SessionImpl::prettyPrintStats(std::ostream & stream)
+   {
+      using namespace StatsPrettyPrint;
+      MovingStats::Stats callTimeStats = _hlaCallTimeStats->getStats();
+      stream << "HLA call time (ms):                                 " << callTimeStats << "\n";
    }
 
    void SessionImpl::start(Session::HlaCallbackRequestListener onHlaCallbackRequest)
@@ -157,53 +226,52 @@ namespace FedPro
          limiter = std::make_shared<NullRateLimiter>();
       }
 
-      std::shared_ptr<RoundRobinBuffer<QueueableMessage>>
-            messageQueue = std::make_shared<RoundRobinBuffer<QueueableMessage>>(
+      _roundRobinMessageQueue = std::make_shared<RoundRobinBuffer<QueueableMessage>>(
             limiter,
             [](const QueueableMessage & message) { return message.isHlaResponse(); },
             _sessionMutex,
             _queueSize);
 
-      _messageWriter = std::make_unique<MessageWriter>(_sessionId, messageQueue);
+      _messageWriter = std::make_unique<MessageWriter>(_sessionId, _roundRobinMessageQueue);
 
       _hlaCallbackRequestListener = onHlaCallbackRequest;
 
-      std::unique_ptr<TimeoutTimer> connectionTimeoutTimer = TimeoutTimer::createLazyTimeoutTimer(connectionTimeout);
       try {
-         _socket = connect();
-         if (!_socket) {
-            throw std::ios_base::failure{"Transport could not connect"};
-         }
+         auto connectOperation = [this, connectionTimeout]() {
+            _socket = _transportProtocol->connect();
+            if (!_socket) {
+               throw std::ios_base::failure{"Transport could not connect"};
+            }
 
-         int32_t firstSocketWriterSequenceNumber = FedPro::SequenceNumber::INITIAL_SEQUENCE_NUMBER + 1;
-         // The first sequence number that socket writer will expect is INITIAL_SEQUENCE_NUMBER + 1 as the first
-         // session message (CTRL_NEW_SESSION) will be sent directly to the socket and not stored in the message history
+            int32_t firstSocketWriterSequenceNumber = FedPro::SequenceNumber::INITIAL_SEQUENCE_NUMBER + 1;
+            // The first sequence number that socket writer will expect is INITIAL_SEQUENCE_NUMBER + 1 as the first
+            // session message (CTRL_NEW_SESSION) will be sent directly to the socket and not stored in the message history
 
-         _socketWriter = SocketWriter::createSocketWriter(
-               _sessionId,
-               std::make_unique<SocketWriterListener>(this),
-               std::make_unique<HistoryBuffer>(
-                     _sessionMutex, messageQueue, firstSocketWriterSequenceNumber),
-               _socket,
-               firstSocketWriterSequenceNumber);
+            _socketWriter = SocketWriter::createSocketWriter(
+                  _sessionId,
+                  std::make_unique<SocketWriterListener>(this),
+                  std::make_unique<HistoryBuffer>(
+                        _sessionMutex, _roundRobinMessageQueue, firstSocketWriterSequenceNumber),
+                  _socket,
+                  firstSocketWriterSequenceNumber);
 
-         messageQueue.reset();
+            _socketWriter->writeDirectMessage(MessageWriter::createNewSessionMessage());
 
-         _socketWriter->writeDirectMessage(MessageWriter::createNewSessionMessage());
-
-         connectionTimeoutTimer->start(
-               [&connectionTimeoutTimer, this]() {
-                  doWhenTimedOut(connectionTimeoutTimer->getTimeoutDuration());
-               });
-         _sessionId = readNewSessionStatus();
-         _sessionIdString = LogUtil::formatSessionId(_sessionId);
-         connectionTimeoutTimer->cancel();
+            std::unique_ptr<TimeoutTimer> connectionTimeoutTimer = TimeoutTimer::createLazyTimeoutTimer(connectionTimeout);
+            connectionTimeoutTimer->start(
+                  [&connectionTimeoutTimer, this]() {
+                     doWhenTimedOut(connectionTimeoutTimer->getTimeoutDuration());
+                  });
+            _sessionId = readNewSessionStatus();
+            _sessionIdString = LogUtil::formatSessionId(_sessionId);
+            connectionTimeoutTimer->cancel();
+         };
+         tryConnectOperation(connectOperation);
 
          _messageWriter->setSessionId(_sessionId);
          _socketWriter->setSessionId(_sessionId);
 
       } catch (const std::exception & e) {
-         connectionTimeoutTimer->cancel();
          closeSocket();
          compareAndSetState(State::STARTING, State::TERMINATED, e.what());
          throw SessionLost{e.what()};
@@ -252,7 +320,7 @@ namespace FedPro
 
       std::shared_ptr<Socket> newSocket = nullptr;
       try {
-         newSocket = connect();
+         newSocket = _transportProtocol->connect();
 
          std::unique_ptr<SocketWriter> directSocketWriter = SocketWriter::createDirectSocketWriter(
                _sessionId, newSocket);
@@ -289,6 +357,7 @@ namespace FedPro
          startWriterThread();
          startReaderThread();
 
+         _resumeCount->sample(1);
          compareAndSetState(State::RESUMING, State::RUNNING);
          _stateCondition.notify_all();
          return true;
@@ -300,7 +369,7 @@ namespace FedPro
          terminateResumingSession(newSocket, e.what());
          rethrowAsSessionException();
       } catch (const std::ios_base::failure & e) {
-         _socketWriter->terminateCurrentWriterThread();
+         _socketWriter->stopWriterLoop();
          close(newSocket);
          compareAndSetState(State::RESUMING, State::DROPPED, e.what());
          _stateCondition.notify_all();
@@ -321,6 +390,7 @@ namespace FedPro
    {
       return doAsyncSessionOperation(
             [this, encodedHlaCall]() -> std::future<ByteSequence> {
+               _hlaCallStats->sample(1);
                return _messageWriter->writeHlaCallRequest(
                      encodedHlaCall, _lastReceivedSequenceNumber.get(), &_requestFutures);
             });
@@ -582,6 +652,9 @@ namespace FedPro
 
             // Could be that the resume strategy is executed, so the session mutex must be locked here.
             fireOnStateTransition(oldState, newState, reason);
+            if (newState == State::TERMINATED) {
+               requestListenerExecutorShutdown();
+            }
          }
          _stateCondition.notify_all();
       }
@@ -736,16 +809,20 @@ namespace FedPro
       closeSocket();
    }
 
-   std::shared_ptr<Socket> SessionImpl::connect()
+   void SessionImpl::tryConnectOperation(const ConnectOperation & connectOperation) noexcept(false)
    {
       uint32_t attempt{0};
       while (true) {
          try {
-            return _transportProtocol->connect();
+            connectOperation();
+            return;
          } catch (const std::ios_base::failure & lastException) {
-            // Probably caused by port starvation. Wait a bit and try again.
+            // Retry is allowed if the connection breaks or times out.
+            // See IEEE 1516-2025 Federate Interface Specification, Figure 27—Federate Session Startup State Diagram.
             if (attempt < _maxRetryConnectAttempts) {
                try {
+                  // Close the socket and wait before retrying
+                  closeSocket();
                   std::this_thread::sleep_for(std::chrono::milliseconds(300));
                } catch (const std::exception &) {
                   // We were interrupted while waiting.
@@ -814,6 +891,7 @@ namespace FedPro
          SPDLOG_ERROR("{}: Only allowed to start the socket writer thread in state STARTING or RESUMING", logPrefix());
          return;
       }
+      _socketWriter->enableWriterLoop();
       _socketWriterThread = std::thread{[this]() { _socketWriter->socketWriterLoop(); }};
    }
 
@@ -831,7 +909,7 @@ namespace FedPro
    void SessionImpl::stopAndWaitForWriterThread() noexcept
    {
       if (_socketWriter) {
-         _socketWriter->terminateCurrentWriterThread();
+         _socketWriter->stopWriterLoop();
       }
       if (_socketWriterThread.joinable()) {
          try {
@@ -869,7 +947,11 @@ namespace FedPro
             if (messageHeader.sessionId != _sessionId) {
                throw BadMessage{
                      logPrefix() + ": Received wrong session ID " + LogUtil::formatSessionId(messageHeader.sessionId)};
+            } else if (!SequenceNumber::isValidAsSequenceNumber(messageHeader.sequenceNumber)) {
+               throw BadMessage{
+                  logPrefix() + ": Received invalid sequence number " + std::to_string(messageHeader.sequenceNumber)};
             }
+
             switch (messageHeader.messageType) {
                case MessageType::CTRL_HEARTBEAT_RESPONSE: {
                   HeartbeatResponseMessage message = HeartbeatResponseMessage::decode(*_socket);
@@ -905,6 +987,12 @@ namespace FedPro
                         *_socket, messageHeader.getPayloadSize());
 
                   trackHlaMessageReceived(messageHeader.sequenceNumber);
+                  std::unique_ptr<MovingStats::SteadyTimePoint> requestTime = _requestTimes.remove(message.responseToSequenceNumber);
+                  if (requestTime) {
+                     auto callDurationMillis =
+                           std::chrono::duration_cast<FedProDuration>(MovingStats::nowMillis() - *requestTime).count();
+                     _hlaCallTimeStats->sample(static_cast<int>(callDurationMillis));
+                  }
                   std::unique_ptr<std::promise<ByteSequence>>
                         promise = _requestFutures.remove(message.responseToSequenceNumber);
                   if (promise) {
@@ -915,6 +1003,7 @@ namespace FedPro
                      SPDLOG_WARN("{}: Received unexpected HLA call response to sequence number {}.",
                                  logPrefix(),
                                  message.responseToSequenceNumber);
+                     // TODO decide whether to keep or remove this return statement
                      return;
                   }
                   break;
@@ -926,6 +1015,7 @@ namespace FedPro
                   // The _hlaCallbackRequestListener may call back into `this` to send a CallbackResponse
                   // The _hlaCallbackRequestListener may block if the callback buffer becomes full
 
+                  _hlaCallbackStats->sample(1);
                   _hlaCallbackRequestListener(
                         messageHeader.sequenceNumber, message.hlaServiceCallbackWithParams);
                   trackHlaMessageReceived(messageHeader.sequenceNumber);
@@ -962,9 +1052,9 @@ namespace FedPro
             SPDLOG_WARN("{}: Failed to read from socket: {}", logPrefix(), e.what());
          }
       } catch (const BadMessage & e) {
-         // TODO (from the java code): According to standard, we should terminate the session here.
-         dropSession(e);
-         // Should not happen with a correct server
+         // 12.13.4.4 requires entering a fatal state when receiving a bad message, so schedule termination.
+         // Scheduling is necessary as termination require waiting for the reader thread (ie this thread).
+         scheduleBestEffortTerminate();
          SPDLOG_ERROR("{}: Received an invalid message! {}", logPrefix(), e.what());
       } catch (const std::runtime_error & e) {
          dropSession(e);
@@ -972,13 +1062,39 @@ namespace FedPro
       }
    }
 
+   void SessionImpl::scheduleBestEffortTerminate() noexcept
+   {
+      _stateListenerThreadPool.queueJob(
+            [this]() {
+               try {
+                  // Best effort terminate. Do not wait for a response.
+                  FedProDuration responseTimeout{0};
+                  terminate(responseTimeout);
+               } catch (const SessionLost &) {
+                  // SessionLost is likely, as terminate() do not wait for a response.
+               } catch (const SessionAlreadyTerminated &) {
+                  // Desired state
+               } catch (const SessionIllegalState & e) {
+                  SPDLOG_ERROR("{}: Unexpected state during best-effort terminate. {}.", logPrefix(), e.what());
+               }
+            });
+   }
+
    Session::State SessionImpl::dropSession(const std::exception & e) noexcept
    {
       if (_socketWriter) {
-         _socketWriter->terminateCurrentWriterThread();
+         _socketWriter->stopWriterLoop();
       }
       closeSocket();
       return compareAndSetState(State::RUNNING, State::DROPPED, e.what());
+   }
+
+   void SessionImpl::trackMessageSent(int32_t sequenceNumber, bool isControl)
+   {
+      if (!isControl && _printStats) {
+         _requestTimes.moveAndInsert(sequenceNumber, MovingStats::nowMillis());
+      }
+      _onMessageSent();
    }
 
    void SessionImpl::trackHlaMessageReceived(int32_t sequenceNumber) noexcept
@@ -1076,9 +1192,9 @@ namespace FedPro
             Session::State::RUNNING, Session::State::DROPPED, "Failed to write to socket: " + std::string(e.what()));
    }
 
-   void SocketWriterListener::messageSent()
+   void SocketWriterListener::messageSent(int32_t sequenceNumber, bool isControl)
    {
-      _session->_onMessageSent();
+      _session->trackMessageSent(sequenceNumber, isControl);
    }
 
    // Export forceCloseConnection for tests, but do not expose in public headers.

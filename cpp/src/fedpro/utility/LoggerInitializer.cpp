@@ -22,6 +22,7 @@
 
 namespace FedPro
 {
+   std::shared_ptr<spdlog::sinks::sink> LoggerInitializer::_customSink;
 
    void LoggerInitializer::initialize(const Properties & settings)
    {
@@ -35,7 +36,7 @@ namespace FedPro
 
       // Create and link sinks (output destinations) with our logger.
       auto consoleSink = createConsoleSink(toLogSeverityLevel(consoleLevelInt));
-      spdlog::default_logger()->sinks().push_back(consoleSink);
+      fedProLogger->sinks().push_back(consoleSink);
 
       std::string pathToUse = path.empty() ? DEFAULT_ROTATING_FILE_LOG_PATH : path;
       LogLevel rotatingFileLevel = toLogSeverityLevel(rotatingFileLevelInt);
@@ -44,12 +45,16 @@ namespace FedPro
 
       if (rotatingFileLevel != spdlog::level::off) {
          auto rotatingFileSink = createRotatingFileSink(rotatingFileLevel, pathToUse);
-         spdlog::default_logger()->sinks().push_back(rotatingFileSink);
+         fedProLogger->sinks().push_back(rotatingFileSink);
          // No need to create lower severity level logs than what the sink with the lowest level creates.
          lowestLevel = getLowest({consoleSink->level(), rotatingFileSink->level()});
       }
 
-      spdlog::default_logger()->set_level(lowestLevel);
+      if (_customSink) {
+         fedProLogger->sinks().push_back(_customSink);
+      }
+
+      fedProLogger->set_level(lowestLevel);
       spdlog::set_pattern(DEFAULT_LOG_PATTERN);
 
       Properties settingsToLog;
@@ -57,6 +62,12 @@ namespace FedPro
       settingsToLog.setString(SETTING_NAME_ROTATING_FILE_LOG_LEVEL, toString(rotatingFileLevel));
       settingsToLog.setString(SETTING_NAME_ROTATING_FILE_LOG_PATH, pathToUse);
       SPDLOG_INFO("Federate Protocol client log settings used:\n" + settingsToLog.toPrettyString());
+   }
+
+   void LoggerInitializer::setSink(std::shared_ptr<spdlog::sinks::sink> sink)
+   {
+      _customSink = std::move(sink);
+      spdlog::default_logger()->sinks().push_back(_customSink);
    }
 
    LogLevel LoggerInitializer::getLowest(std::initializer_list<LogLevel> levels)

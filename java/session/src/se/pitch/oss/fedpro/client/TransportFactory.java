@@ -17,6 +17,7 @@
 package se.pitch.oss.fedpro.client;
 
 import se.pitch.oss.fedpro.client.transport.*;
+import se.pitch.oss.fedpro.common.Protocol;
 import se.pitch.oss.fedpro.common.TlsKeys;
 import se.pitch.oss.fedpro.common.transport.TlsKeysImpl;
 
@@ -128,7 +129,7 @@ public class TransportFactory {
     */
    public static Transport createWebSocketTransport(TypedProperties settings)
    {
-      return new WebSocketTransport(settings);
+      return new WebSocketTransport(settings, Protocol.WS);
    }
 
    /**

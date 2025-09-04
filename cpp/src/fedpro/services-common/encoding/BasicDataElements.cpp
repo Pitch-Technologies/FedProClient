@@ -22,7 +22,7 @@
 
 #include <functional>
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 #define DECLARE_ENCODING_SET_METHOD(EncodableDataType, SimpleDataType)                        \
 EncodableDataType & EncodableDataType::set(SimpleDataType rhs)                                \
 {                                                                                             \
@@ -296,7 +296,7 @@ namespace RTI_NAMESPACE
    DECLARE_ENCODING_HELPER_CLASS(HLAinteger32LE, Integer32, 0)
    DECLARE_ENCODING_HELPER_CLASS(HLAinteger64BE, Integer64, 0)
    DECLARE_ENCODING_HELPER_CLASS(HLAinteger64LE, Integer64, 0)
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    DECLARE_ENCODING_HELPER_CLASS(HLAunsignedInteger16LE, UnsignedInteger16, 0)
    DECLARE_ENCODING_HELPER_CLASS(HLAunsignedInteger16BE, UnsignedInteger16, 0)
    DECLARE_ENCODING_HELPER_CLASS(HLAunsignedInteger32BE, UnsignedInteger32, 0)

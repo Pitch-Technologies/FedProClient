@@ -18,8 +18,12 @@
 // NOLINTBEGIN(cppcoreguidelines-avoid-non-const-global-variables)
 
 #include <FedPro.h>
+#include <services-common/SettingsParser.h>
+#include "utility/BrokenSocket.h"
 #include "utility/MemoryTransport.h"
 #include "utility/PacketFactory.h"
+#include "utility/SocketSupplierTransport.h"
+#include "utility/StateWaiter.h"
 
 #include <gtest/gtest.h>
 
@@ -31,9 +35,23 @@ class TestSession : public ::testing::Test
 {
 public:
 
+   void SetUp() override
+   {
+      ::testing::Test::SetUp();
+      std::string settingsLine;
+      (settingsLine += SETTING_NAME_CONNECTION_MAX_RETRY_ATTEMPTS) += "=3";
+      _clientSettings = SettingsParser::parse(settingsLine);
+   }
+
+   void TearDown() override
+   {
+      _clientSettings = Properties{};
+      ::testing::Test::TearDown();
+   }
+
    std::unique_ptr<Session> createSession(std::unique_ptr<Transport> transport)
    {
-      return createSession(std::move(transport), Properties{});
+      return createSession(std::move(transport), _clientSettings);
    }
 
    std::unique_ptr<Session> createSession(std::unique_ptr<Transport> transport, const Properties & settings)
@@ -43,7 +61,8 @@ public:
             [this](
                   Session::State oldState,
                   Session::State newState,
-                  const std::string & reason) { onSessionStateChange(oldState, newState, reason); });
+                  const std::string & reason) { _stateWaiter.onStateTransition(oldState, newState, reason); });
+
       return session;
    }
 
@@ -52,27 +71,20 @@ public:
    {
    }
 
-   void onSessionStateChange(
-         Session::State /* oldState */,
-         Session::State newState,
-         const std::string & /* reason */)
-   {
-      if (newState == Session::State::TERMINATED) {
-         ++_stateTerminationCount;
-      }
-   }
+   const uint64_t _fakeSessionId{42};
 
-   std::atomic<size_t> _stateTerminationCount{0};
+   FedPro::Properties _clientSettings;
+
+   StateWaiter _stateWaiter;
 
 };
 
 TEST_F(TestSession, messageQueueFull)
 {
    auto transport = std::make_unique<MemoryTransport>();
-   transport->addInboundPacket(PacketFactory::createNewSessionStatus());
-   Properties settings;
-   settings.setUnsignedInt32(SETTING_NAME_MESSAGE_QUEUE_SIZE, 1);
-   auto session = createSession(std::move(transport), settings);
+   transport->addInboundPacket(PacketFactory::createNewSessionStatus(_fakeSessionId));
+   _clientSettings.setUnsignedInt32(SETTING_NAME_MESSAGE_QUEUE_SIZE, 1);
+   auto session = createSession(std::move(transport), _clientSettings);
 
    // Given
    session->start(
@@ -139,7 +151,56 @@ TEST_F(TestSession, two_sessions)
    // Destroy sessionA to ensure dispatching of all Session::State changes.
    sessionA.reset();
 
-   EXPECT_EQ(_stateTerminationCount.load(), 2);
+   EXPECT_EQ(_stateWaiter.count(Session::State::TERMINATED), 2);
 }
+
+TEST_F(TestSession, terminateSession_When_ReceiveInvalidSequenceNumber)
+{
+   auto transport = std::make_unique<MemoryTransport>();
+   transport->addInboundPacket(PacketFactory::createNewSessionStatus(_fakeSessionId));
+
+   // Given
+   const int32_t invalidSequenceNumber = std::numeric_limits<int32_t>::min();
+   transport->addInboundPacket(PacketFactory::createHeartbeatResponse(_fakeSessionId, invalidSequenceNumber));
+
+   // When
+   auto session = createSession(std::move(transport));
+   session->start(
+         [this](
+               int32_t sequenceNumber,
+               const ByteSequence & hlaCallback) { onHlaCallbackRequest(sequenceNumber, hlaCallback); });
+
+   // Then
+   EXPECT_EQ(std::cv_status::no_timeout, _stateWaiter.waitForState(Session::State::TERMINATED, std::chrono::seconds{4}));
+}
+
+TEST_F(TestSession, startSucceed_When_BrokenSocketOnFirstAttempt)
+{
+   std::atomic<int> connectionAttemptCount{0};
+   auto transport = std::make_unique<SocketSupplierTransport>(
+         [&connectionAttemptCount, this]() -> std::shared_ptr<Socket> {
+            // Given the first connect attempt produce a broken socket
+            if ((connectionAttemptCount++) == 0) {
+               return std::make_shared<BrokenSocket>();
+            } else {
+               auto socket = std::make_shared<MemorySocket>();
+               socket->addInboundPacket(PacketFactory::createNewSessionStatus(_fakeSessionId));
+               return socket;
+            }
+         });
+
+   // When
+   auto session = createSession(std::move(transport));
+   session->start(
+         [this](
+               int32_t sequenceNumber,
+               const ByteSequence & hlaCallback) { onHlaCallbackRequest(sequenceNumber, hlaCallback); });
+
+   // Then
+   EXPECT_EQ(std::cv_status::no_timeout, _stateWaiter.waitForState(Session::State::RUNNING, std::chrono::seconds{4}));
+   EXPECT_EQ(_fakeSessionId, session->getId());
+   EXPECT_GT(connectionAttemptCount, 1);
+}
+
 
 // NOLINTEND(cppcoreguidelines-avoid-non-const-global-variables)

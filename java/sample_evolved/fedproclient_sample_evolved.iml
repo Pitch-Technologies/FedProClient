@@ -8,6 +8,6 @@
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="fedproclient_client_evolved" />
-    <orderEntry type="library" name="slf4j-api-2.0.5" level="project" />
+    <orderEntry type="library" name="slf4j-api" level="project" />
   </component>
 </module>

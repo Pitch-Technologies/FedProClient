@@ -28,7 +28,7 @@ namespace RTI_NAMESPACE
 
    Exception & Exception::operator=(Exception const &) = default;
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    Exception::~Exception() noexcept = default;
 #else
    Exception::~Exception() = default;
@@ -51,7 +51,7 @@ namespace RTI_NAMESPACE
      A::what () const                     \
      noexcept { return _msg;};
 
-#if (RTI_HLA_VERSION < 2024)
+#if (RTI_HLA_VERSION < 2025)
 #define RTI_EXCEPTION(A)                  \
    RTI_EXCEPTION_2010(A)
 #else
@@ -63,7 +63,7 @@ namespace RTI_NAMESPACE
 #endif
 
 
-#if (RTI_HLA_VERSION < 2024)
+#if (RTI_HLA_VERSION < 2025)
    RTI_EXCEPTION(AttributeAcquisitionWasNotCanceled)
    RTI_EXCEPTION(AttributeNotRecognized)
    RTI_EXCEPTION(AttributeNotSubscribed)

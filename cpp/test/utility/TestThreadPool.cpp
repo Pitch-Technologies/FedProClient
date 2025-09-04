@@ -22,6 +22,7 @@
 #include <gtest/gtest.h>
 
 #include <cmath>
+#include <thread>
 
 using namespace FedPro;
 
@@ -49,18 +50,64 @@ TEST_F(TestThreadPool, queueJobThenStartThenStop)
    ThreadPool pool{1};
    pool.queueJob([&counter]() { ++counter; });
    pool.start();
-   pool.stop(true);
+   pool.shutdown(true);
+   pool.waitTermination();
    EXPECT_EQ(counter.load(), 1);
 }
 
-TEST_F(TestThreadPool, startThenQueueJobThenStop)
+TEST_F(TestThreadPool, startThenQueueJobThenStop_Given_1thread)
 {
    std::atomic<uint32_t> counter{0};
    ThreadPool pool{1};
    pool.start();
    pool.queueJob([&counter]() { ++counter; });
-   pool.stop(true);
+   pool.shutdown(true);
+   pool.waitTermination();
    EXPECT_EQ(counter.load(), 1);
+}
+
+TEST_F(TestThreadPool, startThenQueueJobsThenStop_Given_2threads)
+{
+   std::atomic<uint32_t> counter{0};
+   ThreadPool pool{2};
+   pool.start();
+   for (unsigned i = 0; i < 10; ++i) {
+      pool.queueJob([&counter]() { ++counter; });
+   }
+   pool.shutdown(true);
+   pool.waitTermination();
+   EXPECT_EQ(counter.load(), 10);
+}
+
+TEST_F(TestThreadPool, jobKeepRunning_Given_PoolDeleted)
+{
+   std::atomic<bool> jobRunning{false};
+   std::atomic<bool> completeJob{false};
+   {
+      // Given
+      ThreadPool pool{1};
+      pool.start();
+      pool.queueJob([&jobRunning, &completeJob]() {
+         jobRunning = true;
+         while(!completeJob) {
+            std::this_thread::yield();
+         }
+         jobRunning = false;
+      });
+
+      while(!jobRunning) {
+         std::this_thread::yield();
+      }
+      // When
+   }  // End of scope for ThreadPool.
+
+   ASSERT_FALSE(completeJob);
+
+   // Then
+   completeJob = true;
+   while(jobRunning) {
+      std::this_thread::yield();
+   }
 }
 
 TEST_F(TestThreadPool, clearJobsThenStartThenStop)
@@ -70,7 +117,8 @@ TEST_F(TestThreadPool, clearJobsThenStartThenStop)
    pool.queueJob([&counter]() { ++counter; });
    pool.clearJobs();
    pool.start();
-   pool.stop(true);
+   pool.shutdown(true);
+   pool.waitTermination();
    EXPECT_EQ(counter.load(), 0);
 }
 

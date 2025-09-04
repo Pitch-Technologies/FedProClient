@@ -39,19 +39,24 @@ namespace FedPro
    PersistentSessionImpl::PersistentSessionImpl(
          std::unique_ptr<Transport> transportProtocol,
          ConnectionLostListener onConnectionLost,
+         SessionTerminatedListener sessionTerminatedListener,
          const Properties & settings,
          std::unique_ptr<ResumeStrategy> resumeStrategy)
          : _onConnectionLost{std::move(onConnectionLost)},
+           _sessionTerminatedListener{std::move(sessionTerminatedListener)},
            _heartbeatInterval{settings.getDuration(SETTING_NAME_HEARTBEAT_INTERVAL, DEFAULT_HEARTBEAT_INTERVAL_MILLIS)},
            _resumeStrategy{std::move(resumeStrategy)},
            _session{std::move(transportProtocol), settings}
-{
+   {
       if (!_resumeStrategy) {
          throw std::invalid_argument(logPrefix() + ": The passed resume strategy is null.");
       }
 
       if (!_onConnectionLost) {
          _onConnectionLost = [](const std::string & reason) { /* No-op */ };
+      }
+      if (!_sessionTerminatedListener) {
+         _sessionTerminatedListener = [](uint64_t sessionId) { /* No-op */ };
       }
       _session.addStateListener(
             [this](
@@ -71,6 +76,11 @@ namespace FedPro
       }
    }
 
+   void PersistentSessionImpl::waitListeners() noexcept(false)
+   {
+      _session.waitStateListeners();
+   }
+
    FedProDuration PersistentSessionImpl::getHeartbeatInterval() const noexcept
    {
       return _heartbeatInterval;
@@ -79,6 +89,16 @@ namespace FedPro
    uint64_t PersistentSessionImpl::getId() const noexcept
    {
       return _session.getId();
+   }
+
+   void PersistentSessionImpl::prettyPrintPerSecondStats(std::ostream & stream)
+   {
+      _session.prettyPrintPerSecondStats(stream);
+   }
+
+   void PersistentSessionImpl::prettyPrintStats(std::ostream & stream)
+   {
+      _session.prettyPrintStats(stream);
    }
 
    void PersistentSessionImpl::start(Session::HlaCallbackRequestListener onHlaCallbackRequest)
@@ -112,17 +132,11 @@ namespace FedPro
 
    void PersistentSessionImpl::terminate()
    {
-      if (_sendHeartbeatTimer) {
-         _sendHeartbeatTimer->cancel();
-      }
       _session.terminate();
    }
 
    void PersistentSessionImpl::terminate(FedProDuration responseTimeout)
    {
-      if (_sendHeartbeatTimer) {
-         _sendHeartbeatTimer->cancel();
-      }
       _session.terminate(responseTimeout);
    }
 
@@ -153,7 +167,7 @@ namespace FedPro
       _sendHeartbeatTimer->resume();
       try {
          _session.sendHeartbeat();
-      } catch (const SessionIllegalState & e) {
+      } catch (const SessionIllegalState & ) {
          // session terminated or not initialized
       } catch (const std::runtime_error & e) {
          SPDLOG_CRITICAL("{}: Unexpected exception in session heartbeat timer. {}", logPrefix(), e.what());
@@ -168,6 +182,11 @@ namespace FedPro
       // Todo why would we want to pass reason here, if we not use it?
       if (oldState == Session::State::RUNNING && newState == Session::State::DROPPED) {
          runResumeStrategy();
+      } else if (newState == Session::State::TERMINATED) {
+         if (_sendHeartbeatTimer) {
+            _sendHeartbeatTimer->cancel();
+         }
+         _sessionTerminatedListener(_session.getId());
       }
    }
 

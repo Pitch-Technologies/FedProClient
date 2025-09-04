@@ -22,7 +22,7 @@
 
 namespace RTI_NAMESPACE
 {
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    template<class T>
    using unique_ptr = std::unique_ptr<T>;
 
@@ -84,11 +84,11 @@ namespace RTI_NAMESPACE
 #define RTI_THROW(...) noexcept(false)
 #endif
 
-// Macro RTI_IF_HLA_VERSION_2024_OR_LATER allows adding an extra qualifier for HLA 4 and above only.
+// Macro RTI_IF_HLA_VERSION_2025_OR_LATER allows adding an extra qualifier for HLA 4 and above only.
 // For instance, if a return type is const in HLA 4, and non-const in HLA Evolved:
-// RTI_IF_HLA_VERSION_2024_OR_LATER(const) int multiply(int a, int b)
-#if (RTI_HLA_VERSION >= 2024)
-#define RTI_IF_HLA_VERSION_2024_OR_LATER(CODE) CODE
+// RTI_IF_HLA_VERSION_2025_OR_LATER(const) int multiply(int a, int b)
+#if (RTI_HLA_VERSION >= 2025)
+#define RTI_IF_HLA_VERSION_2025_OR_LATER(CODE) CODE
 #else
-#define RTI_IF_HLA_VERSION_2024_OR_LATER(CODE)
+#define RTI_IF_HLA_VERSION_2025_OR_LATER(CODE)
 #endif

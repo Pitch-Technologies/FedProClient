@@ -34,7 +34,7 @@ public:
    using Integer32 = RTI_NAMESPACE::Integer32;
    using Integer64 = RTI_NAMESPACE::Integer64;
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    using UnsignedInteger16 = RTI_NAMESPACE::UnsignedInteger16;
    using UnsignedInteger32 = RTI_NAMESPACE::UnsignedInteger32;
    using UnsignedInteger64 = RTI_NAMESPACE::UnsignedInteger64;
@@ -449,7 +449,7 @@ public:
       return 8;
    }
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 //-------------------------------------------------------------------------
    static void encodeHLAunsignedInteger16LE(UnsignedInteger16 value, const void *buffer)
    {
@@ -681,7 +681,7 @@ public:
    {
       return 8;
    }
-#endif // (RTI_HLA_VERSION >= 2024)
+#endif // (RTI_HLA_VERSION >= 2025)
 
 //-------------------------------------------------------------------------
    static void encodeHLAfloat32LE(float value, const void *buffer)

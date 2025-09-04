@@ -57,9 +57,9 @@ public class SessionFactory {
     * @return A new PersistentSession instance.
     */
    public static PersistentSession createPersistentSession(
-         Transport transportProtocol, PersistentSession.ConnectionLostListener connectionLostListener)
+         Transport transportProtocol, PersistentSession.ConnectionLostListener connectionLostListener, PersistentSession.SessionTerminatedListener sessionTerminatedListener)
    {
-      return createPersistentSession(transportProtocol, connectionLostListener, null);
+      return createPersistentSession(transportProtocol, connectionLostListener, sessionTerminatedListener, null);
    }
 
    /**
@@ -77,9 +77,10 @@ public class SessionFactory {
    public static PersistentSession createPersistentSession(
          Transport transportProtocol,
          PersistentSession.ConnectionLostListener connectionLostListener,
+         PersistentSession.SessionTerminatedListener sessionTerminatedListener,
          TypedProperties settings)
    {
-      return createPersistentSession(transportProtocol, connectionLostListener, settings, new SimpleResumeStrategy());
+      return createPersistentSession(transportProtocol, connectionLostListener, sessionTerminatedListener, settings, new SimpleResumeStrategy());
    }
 
    /**
@@ -101,10 +102,11 @@ public class SessionFactory {
    public static PersistentSession createPersistentSession(
          Transport transportProtocol,
          PersistentSession.ConnectionLostListener connectionLostListener,
+         PersistentSession.SessionTerminatedListener sessionTerminatedListener,
          TypedProperties settings,
          ResumeStrategy resumeStrategy)
    {
-      return new PersistentSessionImpl(transportProtocol, connectionLostListener, settings, resumeStrategy);
+      return new PersistentSessionImpl(transportProtocol, connectionLostListener, sessionTerminatedListener, settings, resumeStrategy);
    }
 
 }

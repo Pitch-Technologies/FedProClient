@@ -16,13 +16,13 @@
 # This is the internal build script for the sample.
 
 # Get useful system information used for naming the chat sample executable.
-include(../cmake/FedProTargetHelpers.cmake)
-hla_get_target_suffix(2024 HLA_2010_SUFFIX)
+include(../cmake/FedProAppHelpers.cmake)
+get_cpp_abi_id(cpp_api_id)
 
 # Create a chat sample federate executable.
-add_executable(chat-cpp-1516e-fedpro Chat.cpp)
+add_executable(chat-cpp-1516e-fedpro src/Chat.cpp)
 
-# Link the executable with the specified HLA library.
+# Link against a fedpro client library which exposes the standard HLA Evolved C++ API.
 target_link_libraries(chat-cpp-1516e-fedpro PRIVATE fedpro_librti1516e)
 
 # Signed binaries on macOS ignore all environment variables starting with DYLD.
@@ -30,9 +30,12 @@ target_link_libraries(chat-cpp-1516e-fedpro PRIVATE fedpro_librti1516e)
 # installed layout.
 set_target_properties(chat-cpp-1516e-fedpro
       PROPERTIES
-      OUTPUT_NAME chat-cpp-1516e-fedpro_${HLA_2010_SUFFIX}
-      INSTALL_RPATH "${RPATH_BASE}/../../fedpro/lib;${RPATH_BASE}/../../lib"
+      OUTPUT_NAME chat-cpp-1516e-fedpro_${cpp_api_id}
+      INSTALL_RPATH "${RPATH_BASE}/../../fedpro/lib/${cpp_api_id};${RPATH_BASE}/../../lib"
 )
+
+# Specify compiler and linker flags
+target_compile_options(chat-cpp-1516e-fedpro PRIVATE ${FEDPRO_CXX_FLAGS_EVOLVED})
 
 # Some files need to be placed in the same directory as where the executable is placed.
 # The following determines the path of this directory.
@@ -58,3 +61,25 @@ if (WIN32)
          fedpro_librti1516e
    )
 endif ()
+
+set(sample_path_1516e "$<CONFIG>/samples/chat-cpp-1516e-fedpro")
+install(
+      TARGETS chat-cpp-1516e-fedpro
+      DESTINATION ${sample_path_1516e}
+      COMPONENT fedproclient_samples OPTIONAL EXCLUDE_FROM_ALL
+)
+install(
+      FILES "Chat-evolved.xml"
+      DESTINATION ${sample_path_1516e}
+      COMPONENT fedproclient_samples OPTIONAL EXCLUDE_FROM_ALL
+)
+install(
+      FILES "src/Chat.cpp"
+      DESTINATION "${sample_path_1516e}/src"
+      COMPONENT fedproclient_samples OPTIONAL EXCLUDE_FROM_ALL
+)
+install(
+      FILES "Readme.md"
+      DESTINATION "${sample_path_1516e}"
+      COMPONENT fedproclient_samples OPTIONAL EXCLUDE_FROM_ALL
+)

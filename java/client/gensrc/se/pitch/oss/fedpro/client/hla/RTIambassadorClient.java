@@ -16,11 +16,11 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.time.*;
-import hla.rti1516_202X.exceptions.*;
-import hla.rti1516_202X.fedpro.CallRequest;
-import hla.rti1516_202X.fedpro.CallResponse;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.time.*;
+import hla.rti1516_2025.exceptions.*;
+import hla.rti1516_2025.fedpro.CallRequest;
+import hla.rti1516_2025.fedpro.CallResponse;
 
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.CompletableFuture;
@@ -47,8 +47,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       NotConnected,
       RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionRequest. Builder builder = hla.rti1516_202X.fedpro.CreateFederationExecutionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionRequest. Builder builder = hla.rti1516_2025.fedpro.CreateFederationExecutionRequest. newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModule(_clientConverter.convertFromHla(fomModule));
@@ -77,8 +77,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       NotConnected,
       RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithTimeRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithTimeRequest. Builder builder = hla.rti1516_202X.fedpro.CreateFederationExecutionWithTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithTimeRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithTimeRequest. Builder builder = hla.rti1516_2025.fedpro.CreateFederationExecutionWithTimeRequest. newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModule(_clientConverter.convertFromHla(fomModule));
@@ -106,8 +106,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       NotConnected,
       RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesRequest. Builder builder = hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesRequest. Builder builder = hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesRequest. newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModules(_clientConverter.convertFromHla(fomModules));
@@ -136,8 +136,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       NotConnected,
       RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesAndTimeRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesAndTimeRequest. Builder builder = hla.rti1516_202X.fedpro.CreateFederationExecutionWithModulesAndTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesAndTimeRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesAndTimeRequest. Builder builder = hla.rti1516_2025.fedpro.CreateFederationExecutionWithModulesAndTimeRequest. newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModules(_clientConverter.convertFromHla(fomModules));
@@ -170,8 +170,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       NotConnected,
       RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMRequest. Builder builder = hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMRequest. Builder builder = hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMRequest. newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModules(_clientConverter.convertFromHla(fomModules));
@@ -206,8 +206,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       NotConnected,
       RTIinternalError
    {
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMAndTimeRequest request;
-      hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMAndTimeRequest. Builder builder = hla.rti1516_202X.fedpro.CreateFederationExecutionWithMIMAndTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMAndTimeRequest request;
+      hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMAndTimeRequest. Builder builder = hla.rti1516_2025.fedpro.CreateFederationExecutionWithMIMAndTimeRequest. newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
       builder.setFomModules(_clientConverter.convertFromHla(fomModules));
@@ -232,8 +232,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       NotConnected,
       RTIinternalError
    {
-      hla.rti1516_202X.fedpro.DestroyFederationExecutionRequest request;
-      hla.rti1516_202X.fedpro.DestroyFederationExecutionRequest. Builder builder = hla.rti1516_202X.fedpro.DestroyFederationExecutionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.DestroyFederationExecutionRequest request;
+      hla.rti1516_2025.fedpro.DestroyFederationExecutionRequest. Builder builder = hla.rti1516_2025.fedpro.DestroyFederationExecutionRequest. newBuilder();
 
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
 
@@ -270,8 +270,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.ListFederationExecutionsRequest request;
-      request = hla.rti1516_202X.fedpro.ListFederationExecutionsRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.ListFederationExecutionsRequest request;
+      request = hla.rti1516_2025.fedpro.ListFederationExecutionsRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setListFederationExecutionsRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -309,8 +309,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String federationName
    )
    {
-      hla.rti1516_202X.fedpro.ListFederationExecutionMembersRequest request;
-      hla.rti1516_202X.fedpro.ListFederationExecutionMembersRequest. Builder builder = hla.rti1516_202X.fedpro.ListFederationExecutionMembersRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ListFederationExecutionMembersRequest request;
+      hla.rti1516_2025.fedpro.ListFederationExecutionMembersRequest. Builder builder = hla.rti1516_2025.fedpro.ListFederationExecutionMembersRequest. newBuilder();
 
       try {
          builder.setFederationName(_clientConverter.convertFromHla(federationName));
@@ -347,8 +347,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       RTIinternalError
    {
       throwIfInCallback("joinFederationExecution");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionRequest. Builder builder = hla.rti1516_202X.fedpro.JoinFederationExecutionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionRequest. Builder builder = hla.rti1516_2025.fedpro.JoinFederationExecutionRequest. newBuilder();
 
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
@@ -358,7 +358,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionResponse response = callResponse.getJoinFederationExecutionResponse();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionResponse response = callResponse.getJoinFederationExecutionResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -383,8 +383,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       RTIinternalError
    {
       throwIfInCallback("joinFederationExecutionWithModules");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesRequest. Builder builder = hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesRequest. Builder builder = hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesRequest. newBuilder();
 
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
       builder.setFederationName(_clientConverter.convertFromHla(federationName));
@@ -395,7 +395,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionWithModulesResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithModulesResponse response = callResponse.getJoinFederationExecutionWithModulesResponse();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithModulesResponse response = callResponse.getJoinFederationExecutionWithModulesResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -417,8 +417,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       RTIinternalError
    {
       throwIfInCallback("joinFederationExecutionWithName");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameRequest. Builder builder = hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameRequest. Builder builder = hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameRequest. newBuilder();
 
       builder.setFederateName(_clientConverter.convertFromHla(federateName));
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
@@ -429,7 +429,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionWithNameResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameResponse response = callResponse.getJoinFederationExecutionWithNameResponse();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameResponse response = callResponse.getJoinFederationExecutionWithNameResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
@@ -456,8 +456,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       RTIinternalError
    {
       throwIfInCallback("joinFederationExecutionWithNameAndModules");
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesRequest request;
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesRequest. Builder builder = hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesRequest request;
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesRequest. Builder builder = hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesRequest. newBuilder();
 
       builder.setFederateName(_clientConverter.convertFromHla(federateName));
       builder.setFederateType(_clientConverter.convertFromHla(federateType));
@@ -469,12 +469,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       CallResponse callResponse = doHlaCall(callRequest);
 
       assert callResponse.hasJoinFederationExecutionWithNameAndModulesResponse();
-      hla.rti1516_202X.fedpro.JoinFederationExecutionWithNameAndModulesResponse response = callResponse.getJoinFederationExecutionWithNameAndModulesResponse();
+      hla.rti1516_2025.fedpro.JoinFederationExecutionWithNameAndModulesResponse response = callResponse.getJoinFederationExecutionWithNameAndModulesResponse();
       return _clientConverter.convertToHla(response.getResult());
    }
 
    public void resignFederationExecution(
-      hla.rti1516_202X.ResignAction resignAction
+      hla.rti1516_2025.ResignAction resignAction
    )
    throws
       InvalidResignAction,
@@ -486,8 +486,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       RTIinternalError
    {
       throwIfInCallback("resignFederationExecution");
-      hla.rti1516_202X.fedpro.ResignFederationExecutionRequest request;
-      hla.rti1516_202X.fedpro.ResignFederationExecutionRequest. Builder builder = hla.rti1516_202X.fedpro.ResignFederationExecutionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ResignFederationExecutionRequest request;
+      hla.rti1516_2025.fedpro.ResignFederationExecutionRequest. Builder builder = hla.rti1516_2025.fedpro.ResignFederationExecutionRequest. newBuilder();
 
       builder.setResignAction(_clientConverter.convertFromHla(resignAction));
 
@@ -530,8 +530,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointRequest request;
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointRequest. Builder builder = hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointRequest request;
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointRequest. Builder builder = hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointRequest. newBuilder();
 
       try {
          builder.setSynchronizationPointLabel(_clientConverter.convertFromHla(synchronizationPointLabel));
@@ -553,10 +553,10 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void registerFederationSynchronizationPointWithSet(
+   public void registerFederationSynchronizationPoint(
       java.lang.String synchronizationPointLabel,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.FederateHandleSet synchronizationSet
+      hla.rti1516_2025.FederateHandleSet synchronizationSet
    )
    throws
       InvalidFederateHandle,
@@ -568,7 +568,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncRegisterFederationSynchronizationPointWithSet(
+            asyncRegisterFederationSynchronizationPoint(
                synchronizationPointLabel,
                userSuppliedTag,
                synchronizationSet
@@ -582,14 +582,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncRegisterFederationSynchronizationPointWithSet(
+   public CompletableFuture<Void> asyncRegisterFederationSynchronizationPoint(
       java.lang.String synchronizationPointLabel,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.FederateHandleSet synchronizationSet
+      hla.rti1516_2025.FederateHandleSet synchronizationSet
    )
    {
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointWithSetRequest request;
-      hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointWithSetRequest. Builder builder = hla.rti1516_202X.fedpro.RegisterFederationSynchronizationPointWithSetRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointWithSetRequest request;
+      hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointWithSetRequest. Builder builder = hla.rti1516_2025.fedpro.RegisterFederationSynchronizationPointWithSetRequest. newBuilder();
 
       try {
          builder.setSynchronizationPointLabel(_clientConverter.convertFromHla(synchronizationPointLabel));
@@ -644,8 +644,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean successfully
    )
    {
-      hla.rti1516_202X.fedpro.SynchronizationPointAchievedRequest request;
-      hla.rti1516_202X.fedpro.SynchronizationPointAchievedRequest. Builder builder = hla.rti1516_202X.fedpro.SynchronizationPointAchievedRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SynchronizationPointAchievedRequest request;
+      hla.rti1516_2025.fedpro.SynchronizationPointAchievedRequest. Builder builder = hla.rti1516_2025.fedpro.SynchronizationPointAchievedRequest. newBuilder();
 
       try {
          builder.setSynchronizationPointLabel(_clientConverter.convertFromHla(synchronizationPointLabel));
@@ -695,8 +695,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String label
    )
    {
-      hla.rti1516_202X.fedpro.RequestFederationSaveRequest request;
-      hla.rti1516_202X.fedpro.RequestFederationSaveRequest. Builder builder = hla.rti1516_202X.fedpro.RequestFederationSaveRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestFederationSaveRequest request;
+      hla.rti1516_2025.fedpro.RequestFederationSaveRequest. Builder builder = hla.rti1516_2025.fedpro.RequestFederationSaveRequest. newBuilder();
 
       try {
          builder.setLabel(_clientConverter.convertFromHla(label));
@@ -717,9 +717,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void requestFederationSaveWithTime(
+   public void requestFederationSave(
       java.lang.String label,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       LogicalTimeAlreadyPassed,
@@ -733,7 +733,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncRequestFederationSaveWithTime(
+            asyncRequestFederationSave(
                label,
                time
             );
@@ -746,13 +746,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncRequestFederationSaveWithTime(
+   public CompletableFuture<Void> asyncRequestFederationSave(
       java.lang.String label,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.RequestFederationSaveWithTimeRequest request;
-      hla.rti1516_202X.fedpro.RequestFederationSaveWithTimeRequest. Builder builder = hla.rti1516_202X.fedpro.RequestFederationSaveWithTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestFederationSaveWithTimeRequest request;
+      hla.rti1516_2025.fedpro.RequestFederationSaveWithTimeRequest. Builder builder = hla.rti1516_2025.fedpro.RequestFederationSaveWithTimeRequest. newBuilder();
 
       try {
          builder.setLabel(_clientConverter.convertFromHla(label));
@@ -802,8 +802,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.FederateSaveBegunRequest request;
-      request = hla.rti1516_202X.fedpro.FederateSaveBegunRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateSaveBegunRequest request;
+      request = hla.rti1516_2025.fedpro.FederateSaveBegunRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateSaveBegunRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -844,8 +844,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.FederateSaveCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateSaveCompleteRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateSaveCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateSaveCompleteRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateSaveCompleteRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -886,8 +886,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.FederateSaveNotCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateSaveNotCompleteRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateSaveNotCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateSaveNotCompleteRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateSaveNotCompleteRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -927,8 +927,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.AbortFederationSaveRequest request;
-      request = hla.rti1516_202X.fedpro.AbortFederationSaveRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.AbortFederationSaveRequest request;
+      request = hla.rti1516_2025.fedpro.AbortFederationSaveRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setAbortFederationSaveRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -968,8 +968,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.QueryFederationSaveStatusRequest request;
-      request = hla.rti1516_202X.fedpro.QueryFederationSaveStatusRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryFederationSaveStatusRequest request;
+      request = hla.rti1516_2025.fedpro.QueryFederationSaveStatusRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryFederationSaveStatusRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -1010,8 +1010,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String label
    )
    {
-      hla.rti1516_202X.fedpro.RequestFederationRestoreRequest request;
-      hla.rti1516_202X.fedpro.RequestFederationRestoreRequest. Builder builder = hla.rti1516_202X.fedpro.RequestFederationRestoreRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestFederationRestoreRequest request;
+      hla.rti1516_2025.fedpro.RequestFederationRestoreRequest. Builder builder = hla.rti1516_2025.fedpro.RequestFederationRestoreRequest. newBuilder();
 
       try {
          builder.setLabel(_clientConverter.convertFromHla(label));
@@ -1060,8 +1060,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.FederateRestoreCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateRestoreCompleteRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateRestoreCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateRestoreCompleteRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateRestoreCompleteRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -1102,8 +1102,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.FederateRestoreNotCompleteRequest request;
-      request = hla.rti1516_202X.fedpro.FederateRestoreNotCompleteRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.FederateRestoreNotCompleteRequest request;
+      request = hla.rti1516_2025.fedpro.FederateRestoreNotCompleteRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setFederateRestoreNotCompleteRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -1143,8 +1143,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.AbortFederationRestoreRequest request;
-      request = hla.rti1516_202X.fedpro.AbortFederationRestoreRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.AbortFederationRestoreRequest request;
+      request = hla.rti1516_2025.fedpro.AbortFederationRestoreRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setAbortFederationRestoreRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -1184,8 +1184,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.QueryFederationRestoreStatusRequest request;
-      request = hla.rti1516_202X.fedpro.QueryFederationRestoreStatusRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryFederationRestoreStatusRequest request;
+      request = hla.rti1516_2025.fedpro.QueryFederationRestoreStatusRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryFederationRestoreStatusRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -1199,8 +1199,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void publishObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       AttributeNotDefined,
@@ -1227,12 +1227,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncPublishObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.PublishObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.PublishObjectClassAttributesRequest. Builder builder = hla.rti1516_202X.fedpro.PublishObjectClassAttributesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.PublishObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.PublishObjectClassAttributesRequest. Builder builder = hla.rti1516_2025.fedpro.PublishObjectClassAttributesRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1255,7 +1255,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unpublishObjectClass(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       OwnershipAcquisitionPending,
@@ -1281,11 +1281,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnpublishObjectClass(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.UnpublishObjectClassRequest request;
-      hla.rti1516_202X.fedpro.UnpublishObjectClassRequest. Builder builder = hla.rti1516_202X.fedpro.UnpublishObjectClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishObjectClassRequest request;
+      hla.rti1516_2025.fedpro.UnpublishObjectClassRequest. Builder builder = hla.rti1516_2025.fedpro.UnpublishObjectClassRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1307,8 +1307,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unpublishObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       OwnershipAcquisitionPending,
@@ -1336,12 +1336,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnpublishObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.UnpublishObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.UnpublishObjectClassAttributesRequest. Builder builder = hla.rti1516_202X.fedpro.UnpublishObjectClassAttributesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.UnpublishObjectClassAttributesRequest. Builder builder = hla.rti1516_2025.fedpro.UnpublishObjectClassAttributesRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1364,7 +1364,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void publishInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       InteractionClassNotDefined,
@@ -1389,11 +1389,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncPublishInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.PublishInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.PublishInteractionClassRequest. Builder builder = hla.rti1516_202X.fedpro.PublishInteractionClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.PublishInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.PublishInteractionClassRequest. Builder builder = hla.rti1516_2025.fedpro.PublishInteractionClassRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -1415,7 +1415,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unpublishInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       InteractionClassNotDefined,
@@ -1440,11 +1440,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnpublishInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.UnpublishInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.UnpublishInteractionClassRequest. Builder builder = hla.rti1516_202X.fedpro.UnpublishInteractionClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.UnpublishInteractionClassRequest. Builder builder = hla.rti1516_2025.fedpro.UnpublishInteractionClassRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -1466,8 +1466,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void publishObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    throws
       InteractionClassNotDefined,
@@ -1494,12 +1494,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncPublishObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    {
-      hla.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest request;
-      hla.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_202X.fedpro.PublishObjectClassDirectedInteractionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.PublishObjectClassDirectedInteractionsRequest request;
+      hla.rti1516_2025.fedpro.PublishObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_2025.fedpro.PublishObjectClassDirectedInteractionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1522,7 +1522,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unpublishObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       ObjectClassNotDefined,
@@ -1547,11 +1547,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnpublishObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest request;
-      hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishObjectClassDirectedInteractionsRequest request;
+      hla.rti1516_2025.fedpro.UnpublishObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_2025.fedpro.UnpublishObjectClassDirectedInteractionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1572,9 +1572,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void unpublishObjectClassDirectedInteractionsWithSet(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+   public void unpublishObjectClassDirectedInteractions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    throws
       InteractionClassNotDefined,
@@ -1587,7 +1587,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncUnpublishObjectClassDirectedInteractionsWithSet(
+            asyncUnpublishObjectClassDirectedInteractions(
                objectClass,
                interactionClasses
             );
@@ -1600,13 +1600,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncUnpublishObjectClassDirectedInteractionsWithSet(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+   public CompletableFuture<Void> asyncUnpublishObjectClassDirectedInteractions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    {
-      hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest request;
-      hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest. Builder builder = hla.rti1516_202X.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest request;
+      hla.rti1516_2025.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest. Builder builder = hla.rti1516_2025.fedpro.UnpublishObjectClassDirectedInteractionsWithSetRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1629,8 +1629,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       AttributeNotDefined,
@@ -1657,12 +1657,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1684,9 +1684,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void subscribeObjectClassAttributesWithRate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public void subscribeObjectClassAttributes(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       java.lang.String updateRateDesignator
    )
    throws
@@ -1701,7 +1701,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncSubscribeObjectClassAttributesWithRate(
+            asyncSubscribeObjectClassAttributes(
                objectClass,
                attributes,
                updateRateDesignator
@@ -1715,14 +1715,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncSubscribeObjectClassAttributesWithRate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public CompletableFuture<Void> asyncSubscribeObjectClassAttributes(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       java.lang.String updateRateDesignator
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRateRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRateRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRateRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRateRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRateRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRateRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1746,8 +1746,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeObjectClassAttributesPassively(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       AttributeNotDefined,
@@ -1774,12 +1774,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeObjectClassAttributesPassively(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1801,9 +1801,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void subscribeObjectClassAttributesPassivelyWithRate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public void subscribeObjectClassAttributesPassively(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       java.lang.String updateRateDesignator
    )
    throws
@@ -1818,7 +1818,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncSubscribeObjectClassAttributesPassivelyWithRate(
+            asyncSubscribeObjectClassAttributesPassively(
                objectClass,
                attributes,
                updateRateDesignator
@@ -1832,14 +1832,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncSubscribeObjectClassAttributesPassivelyWithRate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public CompletableFuture<Void> asyncSubscribeObjectClassAttributesPassively(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       java.lang.String updateRateDesignator
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesPassivelyWithRateRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1863,7 +1863,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unsubscribeObjectClass(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       ObjectClassNotDefined,
@@ -1888,11 +1888,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnsubscribeObjectClass(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassRequest. Builder builder = hla.rti1516_202X.fedpro.UnsubscribeObjectClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassRequest. Builder builder = hla.rti1516_2025.fedpro.UnsubscribeObjectClassRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1914,8 +1914,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unsubscribeObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       AttributeNotDefined,
@@ -1942,12 +1942,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnsubscribeObjectClassAttributes(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesRequest. Builder builder = hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesRequest. Builder builder = hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -1970,7 +1970,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       FederateServiceInvocationsAreBeingReportedViaMOM,
@@ -1996,11 +1996,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeInteractionClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeInteractionClassRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -2022,7 +2022,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeInteractionClassPassively(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       FederateServiceInvocationsAreBeingReportedViaMOM,
@@ -2048,11 +2048,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeInteractionClassPassively(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest request;
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeInteractionClassPassivelyRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassPassivelyRequest request;
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassPassivelyRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeInteractionClassPassivelyRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -2074,7 +2074,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unsubscribeInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       InteractionClassNotDefined,
@@ -2099,11 +2099,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnsubscribeInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest. Builder builder = hla.rti1516_202X.fedpro.UnsubscribeInteractionClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassRequest. Builder builder = hla.rti1516_2025.fedpro.UnsubscribeInteractionClassRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -2125,8 +2125,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    throws
       InteractionClassNotDefined,
@@ -2153,12 +2153,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassDirectedInteractionsRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassDirectedInteractionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -2181,8 +2181,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeObjectClassDirectedInteractionsUniversally(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    throws
       InteractionClassNotDefined,
@@ -2209,12 +2209,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeObjectClassDirectedInteractionsUniversally(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassDirectedInteractionsUniversallyRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -2237,7 +2237,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unsubscribeObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       ObjectClassNotDefined,
@@ -2262,11 +2262,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnsubscribeObjectClassDirectedInteractions(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest. Builder builder = hla.rti1516_2025.fedpro.UnsubscribeObjectClassDirectedInteractionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -2287,9 +2287,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void unsubscribeObjectClassDirectedInteractionsWithSet(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+   public void unsubscribeObjectClassDirectedInteractions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    throws
       InteractionClassNotDefined,
@@ -2302,7 +2302,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncUnsubscribeObjectClassDirectedInteractionsWithSet(
+            asyncUnsubscribeObjectClassDirectedInteractions(
                objectClass,
                interactionClasses
             );
@@ -2315,13 +2315,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncUnsubscribeObjectClassDirectedInteractionsWithSet(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.InteractionClassHandleSet interactionClasses
+   public CompletableFuture<Void> asyncUnsubscribeObjectClassDirectedInteractions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.InteractionClassHandleSet interactionClasses
    )
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest. Builder builder = hla.rti1516_202X.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest. Builder builder = hla.rti1516_2025.fedpro.UnsubscribeObjectClassDirectedInteractionsWithSetRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -2372,8 +2372,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String objectInstanceName
    )
    {
-      hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest. Builder builder = hla.rti1516_202X.fedpro.ReserveObjectInstanceNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ReserveObjectInstanceNameRequest request;
+      hla.rti1516_2025.fedpro.ReserveObjectInstanceNameRequest. Builder builder = hla.rti1516_2025.fedpro.ReserveObjectInstanceNameRequest. newBuilder();
 
       try {
          builder.setObjectInstanceName(_clientConverter.convertFromHla(objectInstanceName));
@@ -2423,8 +2423,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String objectInstanceName
    )
    {
-      hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest. Builder builder = hla.rti1516_202X.fedpro.ReleaseObjectInstanceNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ReleaseObjectInstanceNameRequest request;
+      hla.rti1516_2025.fedpro.ReleaseObjectInstanceNameRequest. Builder builder = hla.rti1516_2025.fedpro.ReleaseObjectInstanceNameRequest. newBuilder();
 
       try {
          builder.setObjectInstanceName(_clientConverter.convertFromHla(objectInstanceName));
@@ -2475,8 +2475,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.util.Set<java.lang.String> objectInstanceNames
    )
    {
-      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest request;
-      hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest. Builder builder = hla.rti1516_202X.fedpro.ReserveMultipleObjectInstanceNamesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ReserveMultipleObjectInstanceNamesRequest request;
+      hla.rti1516_2025.fedpro.ReserveMultipleObjectInstanceNamesRequest. Builder builder = hla.rti1516_2025.fedpro.ReserveMultipleObjectInstanceNamesRequest. newBuilder();
 
       try {
          builder.addAllObjectInstanceNames(_clientConverter.convertFromHla(objectInstanceNames));
@@ -2526,8 +2526,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.util.Set<java.lang.String> objectInstanceNames
    )
    {
-      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest request;
-      hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest. Builder builder = hla.rti1516_202X.fedpro.ReleaseMultipleObjectInstanceNamesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ReleaseMultipleObjectInstanceNamesRequest request;
+      hla.rti1516_2025.fedpro.ReleaseMultipleObjectInstanceNamesRequest. Builder builder = hla.rti1516_2025.fedpro.ReleaseMultipleObjectInstanceNamesRequest. newBuilder();
 
       try {
          builder.addAllObjectInstanceNames(_clientConverter.convertFromHla(objectInstanceNames));
@@ -2548,8 +2548,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ObjectInstanceHandle registerObjectInstance(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+   public hla.rti1516_2025.ObjectInstanceHandle registerObjectInstance(
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       ObjectClassNotPublished,
@@ -2575,11 +2575,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<ObjectInstanceHandle> asyncRegisterObjectInstance(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceRequest. Builder builder = hla.rti1516_202X.fedpro.RegisterObjectInstanceRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceRequest. Builder builder = hla.rti1516_2025.fedpro.RegisterObjectInstanceRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -2597,7 +2597,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.REGISTEROBJECTINSTANCERESPONSE);
             }
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceResponse response = callResponse.getRegisterObjectInstanceResponse();
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceResponse response = callResponse.getRegisterObjectInstanceResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -2605,8 +2605,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ObjectInstanceHandle registerObjectInstanceWithName(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
+   public hla.rti1516_2025.ObjectInstanceHandle registerObjectInstanceWithName(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
       java.lang.String objectInstanceName
    )
    throws
@@ -2636,12 +2636,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<ObjectInstanceHandle> asyncRegisterObjectInstanceWithName(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
+      hla.rti1516_2025.ObjectClassHandle objectClass,
       java.lang.String objectInstanceName
    )
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest. Builder builder = hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameRequest. Builder builder = hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -2660,7 +2660,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.REGISTEROBJECTINSTANCEWITHNAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameResponse response = callResponse.getRegisterObjectInstanceWithNameResponse();
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameResponse response = callResponse.getRegisterObjectInstanceWithNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -2669,8 +2669,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void updateAttributeValues(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleValueMap attributeValues,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleValueMap attributeValues,
       byte[] userSuppliedTag
    )
    throws
@@ -2691,8 +2691,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                userSuppliedTag
             );
          if (_asyncUpdates) {
+            countAsyncUpdateForStats();
             // Ignore future result
             return;
+         } else {
+            countSyncUpdateForStats();
          }
          future.join();
       } catch (CancellationException e) {
@@ -2704,13 +2707,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUpdateAttributeValues(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleValueMap attributeValues,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleValueMap attributeValues,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesRequest request;
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesRequest. Builder builder = hla.rti1516_202X.fedpro.UpdateAttributeValuesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesRequest request;
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesRequest. Builder builder = hla.rti1516_2025.fedpro.UpdateAttributeValuesRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -2733,11 +2736,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.MessageRetractionReturn updateAttributeValuesWithTime(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleValueMap attributeValues,
+   public hla.rti1516_2025.MessageRetractionReturn updateAttributeValues(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleValueMap attributeValues,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       InvalidLogicalTime,
@@ -2752,12 +2755,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<MessageRetractionReturn> future =
-            asyncUpdateAttributeValuesWithTime(
+            asyncUpdateAttributeValues(
                objectInstance,
                attributeValues,
                userSuppliedTag,
                time
             );
+         countSyncUpdateForStats();
          return future.join();
       } catch (CancellationException e) {
          throw new RTIinternalError("Call was cancelled '" + e);
@@ -2767,15 +2771,15 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<MessageRetractionReturn> asyncUpdateAttributeValuesWithTime(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleValueMap attributeValues,
+   public CompletableFuture<MessageRetractionReturn> asyncUpdateAttributeValues(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleValueMap attributeValues,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest request;
-      hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest. Builder builder = hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeRequest request;
+      hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeRequest. Builder builder = hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -2796,7 +2800,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.UPDATEATTRIBUTEVALUESWITHTIMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.UpdateAttributeValuesWithTimeResponse response = callResponse.getUpdateAttributeValuesWithTimeResponse();
+            hla.rti1516_2025.fedpro.UpdateAttributeValuesWithTimeResponse response = callResponse.getUpdateAttributeValuesWithTimeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -2805,8 +2809,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void sendInteraction(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag
    )
    throws
@@ -2827,8 +2831,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                userSuppliedTag
             );
          if (_asyncUpdates) {
+            countAsyncSentInteractionForStats();
             // Ignore future result
             return;
+         } else {
+            countSyncSentInteractionForStats();
          }
          future.join();
       } catch (CancellationException e) {
@@ -2840,13 +2847,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSendInteraction(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.SendInteractionRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionRequest. Builder builder = hla.rti1516_202X.fedpro.SendInteractionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionRequest. Builder builder = hla.rti1516_2025.fedpro.SendInteractionRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -2869,11 +2876,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.MessageRetractionReturn sendInteractionWithTime(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+   public hla.rti1516_2025.MessageRetractionReturn sendInteraction(
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       InvalidLogicalTime,
@@ -2888,12 +2895,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<MessageRetractionReturn> future =
-            asyncSendInteractionWithTime(
+            asyncSendInteraction(
                interactionClass,
                parameterValues,
                userSuppliedTag,
                time
             );
+         countSyncSentInteractionForStats();
          return future.join();
       } catch (CancellationException e) {
          throw new RTIinternalError("Call was cancelled '" + e);
@@ -2903,15 +2911,15 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<MessageRetractionReturn> asyncSendInteractionWithTime(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+   public CompletableFuture<MessageRetractionReturn> asyncSendInteraction(
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.SendInteractionWithTimeRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionWithTimeRequest. Builder builder = hla.rti1516_202X.fedpro.SendInteractionWithTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionWithTimeRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionWithTimeRequest. Builder builder = hla.rti1516_2025.fedpro.SendInteractionWithTimeRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -2932,7 +2940,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.SENDINTERACTIONWITHTIMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.SendInteractionWithTimeResponse response = callResponse.getSendInteractionWithTimeResponse();
+            hla.rti1516_2025.fedpro.SendInteractionWithTimeResponse response = callResponse.getSendInteractionWithTimeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -2941,9 +2949,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void sendDirectedInteraction(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag
    )
    throws
@@ -2966,8 +2974,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                userSuppliedTag
             );
          if (_asyncUpdates) {
+            countAsyncSentDirectedInteractionForStats();
             // Ignore future result
             return;
+         } else {
+            countSyncSentDirectedInteractionForStats();
          }
          future.join();
       } catch (CancellationException e) {
@@ -2979,14 +2990,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSendDirectedInteraction(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.SendDirectedInteractionRequest request;
-      hla.rti1516_202X.fedpro.SendDirectedInteractionRequest. Builder builder = hla.rti1516_202X.fedpro.SendDirectedInteractionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SendDirectedInteractionRequest request;
+      hla.rti1516_2025.fedpro.SendDirectedInteractionRequest. Builder builder = hla.rti1516_2025.fedpro.SendDirectedInteractionRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -3010,12 +3021,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.MessageRetractionReturn sendDirectedInteractionWithTime(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+   public hla.rti1516_2025.MessageRetractionReturn sendDirectedInteraction(
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       InvalidLogicalTime,
@@ -3031,13 +3042,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<MessageRetractionReturn> future =
-            asyncSendDirectedInteractionWithTime(
+            asyncSendDirectedInteraction(
                interactionClass,
                objectInstance,
                parameterValues,
                userSuppliedTag,
                time
             );
+         countSyncSentDirectedInteractionForStats();
          return future.join();
       } catch (CancellationException e) {
          throw new RTIinternalError("Call was cancelled '" + e);
@@ -3047,16 +3059,16 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<MessageRetractionReturn> asyncSendDirectedInteractionWithTime(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
+   public CompletableFuture<MessageRetractionReturn> asyncSendDirectedInteraction(
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest request;
-      hla.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest. Builder builder = hla.rti1516_202X.fedpro.SendDirectedInteractionWithTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SendDirectedInteractionWithTimeRequest request;
+      hla.rti1516_2025.fedpro.SendDirectedInteractionWithTimeRequest. Builder builder = hla.rti1516_2025.fedpro.SendDirectedInteractionWithTimeRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -3078,7 +3090,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.SENDDIRECTEDINTERACTIONWITHTIMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.SendDirectedInteractionWithTimeResponse response = callResponse.getSendDirectedInteractionWithTimeResponse();
+            hla.rti1516_2025.fedpro.SendDirectedInteractionWithTimeResponse response = callResponse.getSendDirectedInteractionWithTimeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -3087,7 +3099,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void deleteObjectInstance(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
       byte[] userSuppliedTag
    )
    throws
@@ -3115,12 +3127,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncDeleteObjectInstance(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceRequest request;
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceRequest. Builder builder = hla.rti1516_202X.fedpro.DeleteObjectInstanceRequest. newBuilder();
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceRequest request;
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceRequest. Builder builder = hla.rti1516_2025.fedpro.DeleteObjectInstanceRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3142,10 +3154,10 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.MessageRetractionReturn deleteObjectInstanceWithTime(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
+   public hla.rti1516_2025.MessageRetractionReturn deleteObjectInstance(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       InvalidLogicalTime,
@@ -3159,7 +3171,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<MessageRetractionReturn> future =
-            asyncDeleteObjectInstanceWithTime(
+            asyncDeleteObjectInstance(
                objectInstance,
                userSuppliedTag,
                time
@@ -3173,14 +3185,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<MessageRetractionReturn> asyncDeleteObjectInstanceWithTime(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
+   public CompletableFuture<MessageRetractionReturn> asyncDeleteObjectInstance(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest request;
-      hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest. Builder builder = hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeRequest request;
+      hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeRequest. Builder builder = hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3200,7 +3212,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.DELETEOBJECTINSTANCEWITHTIMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.DeleteObjectInstanceWithTimeResponse response = callResponse.getDeleteObjectInstanceWithTimeResponse();
+            hla.rti1516_2025.fedpro.DeleteObjectInstanceWithTimeResponse response = callResponse.getDeleteObjectInstanceWithTimeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -3209,7 +3221,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void localDeleteObjectInstance(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    throws
       OwnershipAcquisitionPending,
@@ -3236,11 +3248,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncLocalDeleteObjectInstance(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    {
-      hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest request;
-      hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest. Builder builder = hla.rti1516_202X.fedpro.LocalDeleteObjectInstanceRequest. newBuilder();
+      hla.rti1516_2025.fedpro.LocalDeleteObjectInstanceRequest request;
+      hla.rti1516_2025.fedpro.LocalDeleteObjectInstanceRequest. Builder builder = hla.rti1516_2025.fedpro.LocalDeleteObjectInstanceRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3261,9 +3273,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void requestInstanceAttributeValueUpdate(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public void requestAttributeValueUpdate(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    throws
@@ -3277,7 +3289,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncRequestInstanceAttributeValueUpdate(
+            asyncRequestAttributeValueUpdate(
                objectInstance,
                attributes,
                userSuppliedTag
@@ -3291,14 +3303,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncRequestInstanceAttributeValueUpdate(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public CompletableFuture<Void> asyncRequestAttributeValueUpdate(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest request;
-      hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest. Builder builder = hla.rti1516_202X.fedpro.RequestInstanceAttributeValueUpdateRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestInstanceAttributeValueUpdateRequest request;
+      hla.rti1516_2025.fedpro.RequestInstanceAttributeValueUpdateRequest. Builder builder = hla.rti1516_2025.fedpro.RequestInstanceAttributeValueUpdateRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3321,9 +3333,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void requestClassAttributeValueUpdate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public void requestAttributeValueUpdate(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    throws
@@ -3337,7 +3349,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncRequestClassAttributeValueUpdate(
+            asyncRequestAttributeValueUpdate(
                objectClass,
                attributes,
                userSuppliedTag
@@ -3351,14 +3363,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncRequestClassAttributeValueUpdate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public CompletableFuture<Void> asyncRequestAttributeValueUpdate(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest request;
-      hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest. Builder builder = hla.rti1516_202X.fedpro.RequestClassAttributeValueUpdateRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestClassAttributeValueUpdateRequest request;
+      hla.rti1516_2025.fedpro.RequestClassAttributeValueUpdateRequest. Builder builder = hla.rti1516_2025.fedpro.RequestClassAttributeValueUpdateRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -3382,9 +3394,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void requestAttributeTransportationTypeChange(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    throws
       AttributeAlreadyBeingChanged,
@@ -3415,13 +3427,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncRequestAttributeTransportationTypeChange(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    {
-      hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest request;
-      hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest. Builder builder = hla.rti1516_202X.fedpro.RequestAttributeTransportationTypeChangeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestAttributeTransportationTypeChangeRequest request;
+      hla.rti1516_2025.fedpro.RequestAttributeTransportationTypeChangeRequest. Builder builder = hla.rti1516_2025.fedpro.RequestAttributeTransportationTypeChangeRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3445,9 +3457,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void changeDefaultAttributeTransportationType(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    throws
       AttributeNotDefined,
@@ -3476,13 +3488,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncChangeDefaultAttributeTransportationType(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    {
-      hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest request;
-      hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest. Builder builder = hla.rti1516_202X.fedpro.ChangeDefaultAttributeTransportationTypeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ChangeDefaultAttributeTransportationTypeRequest request;
+      hla.rti1516_2025.fedpro.ChangeDefaultAttributeTransportationTypeRequest. Builder builder = hla.rti1516_2025.fedpro.ChangeDefaultAttributeTransportationTypeRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -3506,8 +3518,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void queryAttributeTransportationType(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    throws
       AttributeNotDefined,
@@ -3534,12 +3546,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncQueryAttributeTransportationType(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    {
-      hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest request;
-      hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest. Builder builder = hla.rti1516_202X.fedpro.QueryAttributeTransportationTypeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.QueryAttributeTransportationTypeRequest request;
+      hla.rti1516_2025.fedpro.QueryAttributeTransportationTypeRequest. Builder builder = hla.rti1516_2025.fedpro.QueryAttributeTransportationTypeRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3562,8 +3574,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void requestInteractionTransportationTypeChange(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    throws
       InteractionClassAlreadyBeingChanged,
@@ -3592,12 +3604,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncRequestInteractionTransportationTypeChange(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    {
-      hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest request;
-      hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest. Builder builder = hla.rti1516_202X.fedpro.RequestInteractionTransportationTypeChangeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestInteractionTransportationTypeChangeRequest request;
+      hla.rti1516_2025.fedpro.RequestInteractionTransportationTypeChangeRequest. Builder builder = hla.rti1516_2025.fedpro.RequestInteractionTransportationTypeChangeRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -3620,8 +3632,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void queryInteractionTransportationType(
-      hla.rti1516_202X.FederateHandle federate,
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.FederateHandle federate,
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       InteractionClassNotDefined,
@@ -3647,12 +3659,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncQueryInteractionTransportationType(
-      hla.rti1516_202X.FederateHandle federate,
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.FederateHandle federate,
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest request;
-      hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest. Builder builder = hla.rti1516_202X.fedpro.QueryInteractionTransportationTypeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.QueryInteractionTransportationTypeRequest request;
+      hla.rti1516_2025.fedpro.QueryInteractionTransportationTypeRequest. Builder builder = hla.rti1516_2025.fedpro.QueryInteractionTransportationTypeRequest. newBuilder();
 
       try {
          builder.setFederate(_clientConverter.convertFromHla(federate));
@@ -3675,8 +3687,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unconditionalAttributeOwnershipDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    throws
@@ -3706,13 +3718,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnconditionalAttributeOwnershipDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest request;
-      hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest. Builder builder = hla.rti1516_202X.fedpro.UnconditionalAttributeOwnershipDivestitureRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnconditionalAttributeOwnershipDivestitureRequest request;
+      hla.rti1516_2025.fedpro.UnconditionalAttributeOwnershipDivestitureRequest. Builder builder = hla.rti1516_2025.fedpro.UnconditionalAttributeOwnershipDivestitureRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3736,8 +3748,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void negotiatedAttributeOwnershipDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    throws
@@ -3768,13 +3780,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncNegotiatedAttributeOwnershipDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest request;
-      hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest. Builder builder = hla.rti1516_202X.fedpro.NegotiatedAttributeOwnershipDivestitureRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NegotiatedAttributeOwnershipDivestitureRequest request;
+      hla.rti1516_2025.fedpro.NegotiatedAttributeOwnershipDivestitureRequest. Builder builder = hla.rti1516_2025.fedpro.NegotiatedAttributeOwnershipDivestitureRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3798,8 +3810,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void confirmDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet confirmedAttributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet confirmedAttributes,
       byte[] userSuppliedTag
    )
    throws
@@ -3831,13 +3843,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncConfirmDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet confirmedAttributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet confirmedAttributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.ConfirmDivestitureRequest request;
-      hla.rti1516_202X.fedpro.ConfirmDivestitureRequest. Builder builder = hla.rti1516_202X.fedpro.ConfirmDivestitureRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ConfirmDivestitureRequest request;
+      hla.rti1516_2025.fedpro.ConfirmDivestitureRequest. Builder builder = hla.rti1516_2025.fedpro.ConfirmDivestitureRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3861,8 +3873,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void attributeOwnershipAcquisition(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet desiredAttributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet desiredAttributes,
       byte[] userSuppliedTag
    )
    throws
@@ -3894,13 +3906,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncAttributeOwnershipAcquisition(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet desiredAttributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet desiredAttributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest. Builder builder = hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionRequest. Builder builder = hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3924,8 +3936,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void attributeOwnershipAcquisitionIfAvailable(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet desiredAttributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet desiredAttributes,
       byte[] userSuppliedTag
    )
    throws
@@ -3958,13 +3970,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncAttributeOwnershipAcquisitionIfAvailable(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet desiredAttributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet desiredAttributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest. Builder builder = hla.rti1516_202X.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest. newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest. Builder builder = hla.rti1516_2025.fedpro.AttributeOwnershipAcquisitionIfAvailableRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -3988,8 +4000,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void attributeOwnershipReleaseDenied(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    throws
@@ -4019,13 +4031,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncAttributeOwnershipReleaseDenied(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest. Builder builder = hla.rti1516_202X.fedpro.AttributeOwnershipReleaseDeniedRequest. newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipReleaseDeniedRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipReleaseDeniedRequest. Builder builder = hla.rti1516_2025.fedpro.AttributeOwnershipReleaseDeniedRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -4048,9 +4060,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.AttributeHandleSet attributeOwnershipDivestitureIfWanted(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+   public hla.rti1516_2025.AttributeHandleSet attributeOwnershipDivestitureIfWanted(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    throws
@@ -4080,13 +4092,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<AttributeHandleSet> asyncAttributeOwnershipDivestitureIfWanted(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest request;
-      hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest. Builder builder = hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedRequest. newBuilder();
+      hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedRequest request;
+      hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedRequest. Builder builder = hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -4106,7 +4118,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.ATTRIBUTEOWNERSHIPDIVESTITUREIFWANTEDRESPONSE);
             }
-            hla.rti1516_202X.fedpro.AttributeOwnershipDivestitureIfWantedResponse response = callResponse.getAttributeOwnershipDivestitureIfWantedResponse();
+            hla.rti1516_2025.fedpro.AttributeOwnershipDivestitureIfWantedResponse response = callResponse.getAttributeOwnershipDivestitureIfWantedResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -4115,8 +4127,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void cancelNegotiatedAttributeOwnershipDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       AttributeDivestitureWasNotRequested,
@@ -4145,12 +4157,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncCancelNegotiatedAttributeOwnershipDivestiture(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest request;
-      hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest. Builder builder = hla.rti1516_202X.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest request;
+      hla.rti1516_2025.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest. Builder builder = hla.rti1516_2025.fedpro.CancelNegotiatedAttributeOwnershipDivestitureRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -4173,8 +4185,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void cancelAttributeOwnershipAcquisition(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       AttributeAcquisitionWasNotRequested,
@@ -4203,12 +4215,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncCancelAttributeOwnershipAcquisition(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest request;
-      hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest. Builder builder = hla.rti1516_202X.fedpro.CancelAttributeOwnershipAcquisitionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CancelAttributeOwnershipAcquisitionRequest request;
+      hla.rti1516_2025.fedpro.CancelAttributeOwnershipAcquisitionRequest. Builder builder = hla.rti1516_2025.fedpro.CancelAttributeOwnershipAcquisitionRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -4231,8 +4243,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void queryAttributeOwnership(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    throws
       AttributeNotDefined,
@@ -4259,12 +4271,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncQueryAttributeOwnership(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes
    )
    {
-      hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequest request;
-      hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequest. Builder builder = hla.rti1516_202X.fedpro.QueryAttributeOwnershipRequest. newBuilder();
+      hla.rti1516_2025.fedpro.QueryAttributeOwnershipRequest request;
+      hla.rti1516_2025.fedpro.QueryAttributeOwnershipRequest. Builder builder = hla.rti1516_2025.fedpro.QueryAttributeOwnershipRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -4287,8 +4299,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public boolean isAttributeOwnedByFederate(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    throws
       AttributeNotDefined,
@@ -4315,12 +4327,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Boolean> asyncIsAttributeOwnedByFederate(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    {
-      hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest request;
-      hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest. Builder builder = hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateRequest. newBuilder();
+      hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateRequest request;
+      hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateRequest. Builder builder = hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -4339,7 +4351,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.ISATTRIBUTEOWNEDBYFEDERATERESPONSE);
             }
-            hla.rti1516_202X.fedpro.IsAttributeOwnedByFederateResponse response = callResponse.getIsAttributeOwnedByFederateResponse();
+            hla.rti1516_2025.fedpro.IsAttributeOwnedByFederateResponse response = callResponse.getIsAttributeOwnedByFederateResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -4348,7 +4360,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void enableTimeRegulation(
-      hla.rti1516_202X.time.LogicalTimeInterval<?> lookahead
+      hla.rti1516_2025.time.LogicalTimeInterval<?> lookahead
    )
    throws
       InvalidLookahead,
@@ -4376,11 +4388,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncEnableTimeRegulation(
-      hla.rti1516_202X.time.LogicalTimeInterval<?> lookahead
+      hla.rti1516_2025.time.LogicalTimeInterval<?> lookahead
    )
    {
-      hla.rti1516_202X.fedpro.EnableTimeRegulationRequest request;
-      hla.rti1516_202X.fedpro.EnableTimeRegulationRequest. Builder builder = hla.rti1516_202X.fedpro.EnableTimeRegulationRequest. newBuilder();
+      hla.rti1516_2025.fedpro.EnableTimeRegulationRequest request;
+      hla.rti1516_2025.fedpro.EnableTimeRegulationRequest. Builder builder = hla.rti1516_2025.fedpro.EnableTimeRegulationRequest. newBuilder();
 
       try {
          builder.setLookahead(_clientConverter.convertFromHla(lookahead));
@@ -4430,8 +4442,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.DisableTimeRegulationRequest request;
-      request = hla.rti1516_202X.fedpro.DisableTimeRegulationRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.DisableTimeRegulationRequest request;
+      request = hla.rti1516_2025.fedpro.DisableTimeRegulationRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setDisableTimeRegulationRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -4475,8 +4487,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.EnableTimeConstrainedRequest request;
-      request = hla.rti1516_202X.fedpro.EnableTimeConstrainedRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.EnableTimeConstrainedRequest request;
+      request = hla.rti1516_2025.fedpro.EnableTimeConstrainedRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setEnableTimeConstrainedRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -4518,8 +4530,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.DisableTimeConstrainedRequest request;
-      request = hla.rti1516_202X.fedpro.DisableTimeConstrainedRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.DisableTimeConstrainedRequest request;
+      request = hla.rti1516_2025.fedpro.DisableTimeConstrainedRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setDisableTimeConstrainedRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -4533,7 +4545,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void timeAdvanceRequest(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       LogicalTimeAlreadyPassed,
@@ -4562,11 +4574,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncTimeAdvanceRequest(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestRequest request;
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestRequest. Builder builder = hla.rti1516_202X.fedpro.TimeAdvanceRequestRequest. newBuilder();
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestRequest request;
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestRequest. Builder builder = hla.rti1516_2025.fedpro.TimeAdvanceRequestRequest. newBuilder();
 
       try {
          builder.setTime(_clientConverter.convertFromHla(time));
@@ -4588,7 +4600,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void timeAdvanceRequestAvailable(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       LogicalTimeAlreadyPassed,
@@ -4617,11 +4629,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncTimeAdvanceRequestAvailable(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest request;
-      hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest. Builder builder = hla.rti1516_202X.fedpro.TimeAdvanceRequestAvailableRequest. newBuilder();
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestAvailableRequest request;
+      hla.rti1516_2025.fedpro.TimeAdvanceRequestAvailableRequest. Builder builder = hla.rti1516_2025.fedpro.TimeAdvanceRequestAvailableRequest. newBuilder();
 
       try {
          builder.setTime(_clientConverter.convertFromHla(time));
@@ -4643,7 +4655,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void nextMessageRequest(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       LogicalTimeAlreadyPassed,
@@ -4672,11 +4684,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncNextMessageRequest(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.NextMessageRequestRequest request;
-      hla.rti1516_202X.fedpro.NextMessageRequestRequest. Builder builder = hla.rti1516_202X.fedpro.NextMessageRequestRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NextMessageRequestRequest request;
+      hla.rti1516_2025.fedpro.NextMessageRequestRequest. Builder builder = hla.rti1516_2025.fedpro.NextMessageRequestRequest. newBuilder();
 
       try {
          builder.setTime(_clientConverter.convertFromHla(time));
@@ -4698,7 +4710,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void nextMessageRequestAvailable(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       LogicalTimeAlreadyPassed,
@@ -4727,11 +4739,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncNextMessageRequestAvailable(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequest request;
-      hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequest. Builder builder = hla.rti1516_202X.fedpro.NextMessageRequestAvailableRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NextMessageRequestAvailableRequest request;
+      hla.rti1516_2025.fedpro.NextMessageRequestAvailableRequest. Builder builder = hla.rti1516_2025.fedpro.NextMessageRequestAvailableRequest. newBuilder();
 
       try {
          builder.setTime(_clientConverter.convertFromHla(time));
@@ -4753,7 +4765,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void flushQueueRequest(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       LogicalTimeAlreadyPassed,
@@ -4782,11 +4794,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncFlushQueueRequest(
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.FlushQueueRequestRequest request;
-      hla.rti1516_202X.fedpro.FlushQueueRequestRequest. Builder builder = hla.rti1516_202X.fedpro.FlushQueueRequestRequest. newBuilder();
+      hla.rti1516_2025.fedpro.FlushQueueRequestRequest request;
+      hla.rti1516_2025.fedpro.FlushQueueRequestRequest. Builder builder = hla.rti1516_2025.fedpro.FlushQueueRequestRequest. newBuilder();
 
       try {
          builder.setTime(_clientConverter.convertFromHla(time));
@@ -4836,8 +4848,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest request;
-      request = hla.rti1516_202X.fedpro.EnableAsynchronousDeliveryRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.EnableAsynchronousDeliveryRequest request;
+      request = hla.rti1516_2025.fedpro.EnableAsynchronousDeliveryRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setEnableAsynchronousDeliveryRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -4879,8 +4891,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest request;
-      request = hla.rti1516_202X.fedpro.DisableAsynchronousDeliveryRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.DisableAsynchronousDeliveryRequest request;
+      request = hla.rti1516_2025.fedpro.DisableAsynchronousDeliveryRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setDisableAsynchronousDeliveryRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -4893,7 +4905,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.TimeQueryReturn queryGALT(
+   public hla.rti1516_2025.TimeQueryReturn queryGALT(
 
    )
    throws
@@ -4921,8 +4933,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.QueryGALTRequest request;
-      request = hla.rti1516_202X.fedpro.QueryGALTRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryGALTRequest request;
+      request = hla.rti1516_2025.fedpro.QueryGALTRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryGALTRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -4932,7 +4944,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.QUERYGALTRESPONSE);
             }
-            hla.rti1516_202X.fedpro.QueryGALTResponse response = callResponse.getQueryGALTResponse();
+            hla.rti1516_2025.fedpro.QueryGALTResponse response = callResponse.getQueryGALTResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -4940,7 +4952,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.time.LogicalTime<?, ?> queryLogicalTime(
+   public hla.rti1516_2025.time.LogicalTime<?, ?> queryLogicalTime(
 
    )
    throws
@@ -4968,8 +4980,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.QueryLogicalTimeRequest request;
-      request = hla.rti1516_202X.fedpro.QueryLogicalTimeRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryLogicalTimeRequest request;
+      request = hla.rti1516_2025.fedpro.QueryLogicalTimeRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryLogicalTimeRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -4979,7 +4991,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.QUERYLOGICALTIMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.QueryLogicalTimeResponse response = callResponse.getQueryLogicalTimeResponse();
+            hla.rti1516_2025.fedpro.QueryLogicalTimeResponse response = callResponse.getQueryLogicalTimeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -4987,7 +4999,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.TimeQueryReturn queryLITS(
+   public hla.rti1516_2025.TimeQueryReturn queryLITS(
 
    )
    throws
@@ -5015,8 +5027,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.QueryLITSRequest request;
-      request = hla.rti1516_202X.fedpro.QueryLITSRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryLITSRequest request;
+      request = hla.rti1516_2025.fedpro.QueryLITSRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryLITSRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -5026,7 +5038,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.QUERYLITSRESPONSE);
             }
-            hla.rti1516_202X.fedpro.QueryLITSResponse response = callResponse.getQueryLITSResponse();
+            hla.rti1516_2025.fedpro.QueryLITSResponse response = callResponse.getQueryLITSResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -5035,7 +5047,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void modifyLookahead(
-      hla.rti1516_202X.time.LogicalTimeInterval<?> lookahead
+      hla.rti1516_2025.time.LogicalTimeInterval<?> lookahead
    )
    throws
       InvalidLookahead,
@@ -5062,11 +5074,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncModifyLookahead(
-      hla.rti1516_202X.time.LogicalTimeInterval<?> lookahead
+      hla.rti1516_2025.time.LogicalTimeInterval<?> lookahead
    )
    {
-      hla.rti1516_202X.fedpro.ModifyLookaheadRequest request;
-      hla.rti1516_202X.fedpro.ModifyLookaheadRequest. Builder builder = hla.rti1516_202X.fedpro.ModifyLookaheadRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ModifyLookaheadRequest request;
+      hla.rti1516_2025.fedpro.ModifyLookaheadRequest. Builder builder = hla.rti1516_2025.fedpro.ModifyLookaheadRequest. newBuilder();
 
       try {
          builder.setLookahead(_clientConverter.convertFromHla(lookahead));
@@ -5087,7 +5099,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.time.LogicalTimeInterval<?> queryLookahead(
+   public hla.rti1516_2025.time.LogicalTimeInterval<?> queryLookahead(
 
    )
    throws
@@ -5116,8 +5128,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.QueryLookaheadRequest request;
-      request = hla.rti1516_202X.fedpro.QueryLookaheadRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.QueryLookaheadRequest request;
+      request = hla.rti1516_2025.fedpro.QueryLookaheadRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setQueryLookaheadRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -5127,7 +5139,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.QUERYLOOKAHEADRESPONSE);
             }
-            hla.rti1516_202X.fedpro.QueryLookaheadResponse response = callResponse.getQueryLookaheadResponse();
+            hla.rti1516_2025.fedpro.QueryLookaheadResponse response = callResponse.getQueryLookaheadResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -5136,7 +5148,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void retract(
-      hla.rti1516_202X.MessageRetractionHandle retraction
+      hla.rti1516_2025.MessageRetractionHandle retraction
    )
    throws
       MessageCanNoLongerBeRetracted,
@@ -5163,11 +5175,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncRetract(
-      hla.rti1516_202X.MessageRetractionHandle retraction
+      hla.rti1516_2025.MessageRetractionHandle retraction
    )
    {
-      hla.rti1516_202X.fedpro.RetractRequest request;
-      hla.rti1516_202X.fedpro.RetractRequest. Builder builder = hla.rti1516_202X.fedpro.RetractRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RetractRequest request;
+      hla.rti1516_2025.fedpro.RetractRequest. Builder builder = hla.rti1516_2025.fedpro.RetractRequest. newBuilder();
 
       try {
          builder.setRetraction(_clientConverter.convertFromHla(retraction));
@@ -5189,9 +5201,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void changeAttributeOrderType(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.OrderType orderType
    )
    throws
       AttributeNotOwned,
@@ -5220,13 +5232,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncChangeAttributeOrderType(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.OrderType orderType
    )
    {
-      hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest request;
-      hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest. Builder builder = hla.rti1516_202X.fedpro.ChangeAttributeOrderTypeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ChangeAttributeOrderTypeRequest request;
+      hla.rti1516_2025.fedpro.ChangeAttributeOrderTypeRequest. Builder builder = hla.rti1516_2025.fedpro.ChangeAttributeOrderTypeRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -5250,9 +5262,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void changeDefaultAttributeOrderType(
-      hla.rti1516_202X.ObjectClassHandle theObjectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.ObjectClassHandle theObjectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.OrderType orderType
    )
    throws
       AttributeNotDefined,
@@ -5280,13 +5292,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncChangeDefaultAttributeOrderType(
-      hla.rti1516_202X.ObjectClassHandle theObjectClass,
-      hla.rti1516_202X.AttributeHandleSet attributes,
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.ObjectClassHandle theObjectClass,
+      hla.rti1516_2025.AttributeHandleSet attributes,
+      hla.rti1516_2025.OrderType orderType
    )
    {
-      hla.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest request;
-      hla.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest. Builder builder = hla.rti1516_202X.fedpro.ChangeDefaultAttributeOrderTypeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ChangeDefaultAttributeOrderTypeRequest request;
+      hla.rti1516_2025.fedpro.ChangeDefaultAttributeOrderTypeRequest. Builder builder = hla.rti1516_2025.fedpro.ChangeDefaultAttributeOrderTypeRequest. newBuilder();
 
       try {
          builder.setTheObjectClass(_clientConverter.convertFromHla(theObjectClass));
@@ -5310,8 +5322,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void changeInteractionOrderType(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.OrderType orderType
    )
    throws
       InteractionClassNotPublished,
@@ -5338,12 +5350,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncChangeInteractionOrderType(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.OrderType orderType
    )
    {
-      hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest request;
-      hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest. Builder builder = hla.rti1516_202X.fedpro.ChangeInteractionOrderTypeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.ChangeInteractionOrderTypeRequest request;
+      hla.rti1516_2025.fedpro.ChangeInteractionOrderTypeRequest. Builder builder = hla.rti1516_2025.fedpro.ChangeInteractionOrderTypeRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -5365,8 +5377,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.RegionHandle createRegion(
-      hla.rti1516_202X.DimensionHandleSet dimensions
+   public hla.rti1516_2025.RegionHandle createRegion(
+      hla.rti1516_2025.DimensionHandleSet dimensions
    )
    throws
       InvalidDimensionHandle,
@@ -5391,11 +5403,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<RegionHandle> asyncCreateRegion(
-      hla.rti1516_202X.DimensionHandleSet dimensions
+      hla.rti1516_2025.DimensionHandleSet dimensions
    )
    {
-      hla.rti1516_202X.fedpro.CreateRegionRequest request;
-      hla.rti1516_202X.fedpro.CreateRegionRequest. Builder builder = hla.rti1516_202X.fedpro.CreateRegionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CreateRegionRequest request;
+      hla.rti1516_2025.fedpro.CreateRegionRequest. Builder builder = hla.rti1516_2025.fedpro.CreateRegionRequest. newBuilder();
 
       try {
          builder.setDimensions(_clientConverter.convertFromHla(dimensions));
@@ -5413,7 +5425,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.CREATEREGIONRESPONSE);
             }
-            hla.rti1516_202X.fedpro.CreateRegionResponse response = callResponse.getCreateRegionResponse();
+            hla.rti1516_2025.fedpro.CreateRegionResponse response = callResponse.getCreateRegionResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -5422,7 +5434,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void commitRegionModifications(
-      hla.rti1516_202X.RegionHandleSet regions
+      hla.rti1516_2025.RegionHandleSet regions
    )
    throws
       RegionNotCreatedByThisFederate,
@@ -5448,11 +5460,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncCommitRegionModifications(
-      hla.rti1516_202X.RegionHandleSet regions
+      hla.rti1516_2025.RegionHandleSet regions
    )
    {
-      hla.rti1516_202X.fedpro.CommitRegionModificationsRequest request;
-      hla.rti1516_202X.fedpro.CommitRegionModificationsRequest. Builder builder = hla.rti1516_202X.fedpro.CommitRegionModificationsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.CommitRegionModificationsRequest request;
+      hla.rti1516_2025.fedpro.CommitRegionModificationsRequest. Builder builder = hla.rti1516_2025.fedpro.CommitRegionModificationsRequest. newBuilder();
 
       try {
          builder.setRegions(_clientConverter.convertFromHla(regions));
@@ -5474,7 +5486,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void deleteRegion(
-      hla.rti1516_202X.RegionHandle region
+      hla.rti1516_2025.RegionHandle region
    )
    throws
       RegionInUseForUpdateOrSubscription,
@@ -5501,11 +5513,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncDeleteRegion(
-      hla.rti1516_202X.RegionHandle region
+      hla.rti1516_2025.RegionHandle region
    )
    {
-      hla.rti1516_202X.fedpro.DeleteRegionRequest request;
-      hla.rti1516_202X.fedpro.DeleteRegionRequest. Builder builder = hla.rti1516_202X.fedpro.DeleteRegionRequest. newBuilder();
+      hla.rti1516_2025.fedpro.DeleteRegionRequest request;
+      hla.rti1516_2025.fedpro.DeleteRegionRequest. Builder builder = hla.rti1516_2025.fedpro.DeleteRegionRequest. newBuilder();
 
       try {
          builder.setRegion(_clientConverter.convertFromHla(region));
@@ -5526,9 +5538,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ObjectInstanceHandle registerObjectInstanceWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+   public hla.rti1516_2025.ObjectInstanceHandle registerObjectInstanceWithRegions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    throws
       InvalidRegionContext,
@@ -5560,12 +5572,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<ObjectInstanceHandle> asyncRegisterObjectInstanceWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -5584,7 +5596,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.REGISTEROBJECTINSTANCEWITHREGIONSRESPONSE);
             }
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceWithRegionsResponse response = callResponse.getRegisterObjectInstanceWithRegionsResponse();
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceWithRegionsResponse response = callResponse.getRegisterObjectInstanceWithRegionsResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -5592,9 +5604,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ObjectInstanceHandle registerObjectInstanceWithNameAndRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+   public hla.rti1516_2025.ObjectInstanceHandle registerObjectInstanceWithRegions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       java.lang.String objectInstanceName
    )
    throws
@@ -5615,7 +5627,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<ObjectInstanceHandle> future =
-            asyncRegisterObjectInstanceWithNameAndRegions(
+            asyncRegisterObjectInstanceWithRegions(
                objectClass,
                attributesAndRegions,
                objectInstanceName
@@ -5629,14 +5641,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<ObjectInstanceHandle> asyncRegisterObjectInstanceWithNameAndRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+   public CompletableFuture<ObjectInstanceHandle> asyncRegisterObjectInstanceWithRegions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       java.lang.String objectInstanceName
    )
    {
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest request;
-      hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest request;
+      hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -5656,7 +5668,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.REGISTEROBJECTINSTANCEWITHNAMEANDREGIONSRESPONSE);
             }
-            hla.rti1516_202X.fedpro.RegisterObjectInstanceWithNameAndRegionsResponse response = callResponse.getRegisterObjectInstanceWithNameAndRegionsResponse();
+            hla.rti1516_2025.fedpro.RegisterObjectInstanceWithNameAndRegionsResponse response = callResponse.getRegisterObjectInstanceWithNameAndRegionsResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -5665,8 +5677,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void associateRegionsForUpdates(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    throws
       InvalidRegionContext,
@@ -5696,12 +5708,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncAssociateRegionsForUpdates(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    {
-      hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest request;
-      hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest. Builder builder = hla.rti1516_202X.fedpro.AssociateRegionsForUpdatesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.AssociateRegionsForUpdatesRequest request;
+      hla.rti1516_2025.fedpro.AssociateRegionsForUpdatesRequest. Builder builder = hla.rti1516_2025.fedpro.AssociateRegionsForUpdatesRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -5724,8 +5736,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unassociateRegionsForUpdates(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    throws
       RegionNotCreatedByThisFederate,
@@ -5754,12 +5766,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnassociateRegionsForUpdates(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    {
-      hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest request;
-      hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest. Builder builder = hla.rti1516_202X.fedpro.UnassociateRegionsForUpdatesRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnassociateRegionsForUpdatesRequest request;
+      hla.rti1516_2025.fedpro.UnassociateRegionsForUpdatesRequest. Builder builder = hla.rti1516_2025.fedpro.UnassociateRegionsForUpdatesRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -5782,8 +5794,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeObjectClassAttributesWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       boolean active
    )
    throws
@@ -5815,13 +5827,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeObjectClassAttributesWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       boolean active
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -5844,9 +5856,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public void subscribeObjectClassAttributesWithRegionsAndRate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+   public void subscribeObjectClassAttributesWithRegions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       boolean active,
       java.lang.String updateRateDesignator
    )
@@ -5865,7 +5877,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<Void> future =
-            asyncSubscribeObjectClassAttributesWithRegionsAndRate(
+            asyncSubscribeObjectClassAttributesWithRegions(
                objectClass,
                attributesAndRegions,
                active,
@@ -5880,15 +5892,15 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<Void> asyncSubscribeObjectClassAttributesWithRegionsAndRate(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+   public CompletableFuture<Void> asyncSubscribeObjectClassAttributesWithRegions(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       boolean active,
       java.lang.String updateRateDesignator
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest request;
-      hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest request;
+      hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeObjectClassAttributesWithRegionsAndRateRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -5913,8 +5925,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unsubscribeObjectClassAttributesWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    throws
       RegionNotCreatedByThisFederate,
@@ -5943,12 +5955,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnsubscribeObjectClassAttributesWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions
    )
    {
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.UnsubscribeObjectClassAttributesWithRegionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -5971,9 +5983,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void subscribeInteractionClassWithRegions(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
       boolean active,
-      hla.rti1516_202X.RegionHandleSet regions
+      hla.rti1516_2025.RegionHandleSet regions
    )
    throws
       FederateServiceInvocationsAreBeingReportedViaMOM,
@@ -6004,13 +6016,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSubscribeInteractionClassWithRegions(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
       boolean active,
-      hla.rti1516_202X.RegionHandleSet regions
+      hla.rti1516_2025.RegionHandleSet regions
    )
    {
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.SubscribeInteractionClassWithRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.SubscribeInteractionClassWithRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.SubscribeInteractionClassWithRegionsRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -6034,8 +6046,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void unsubscribeInteractionClassWithRegions(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.RegionHandleSet regions
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.RegionHandleSet regions
    )
    throws
       RegionNotCreatedByThisFederate,
@@ -6063,12 +6075,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncUnsubscribeInteractionClassWithRegions(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.RegionHandleSet regions
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.RegionHandleSet regions
    )
    {
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.UnsubscribeInteractionClassWithRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.UnsubscribeInteractionClassWithRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.UnsubscribeInteractionClassWithRegionsRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -6091,9 +6103,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void sendInteractionWithRegions(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
-      hla.rti1516_202X.RegionHandleSet regions,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.RegionHandleSet regions,
       byte[] userSuppliedTag
    )
    throws
@@ -6117,6 +6129,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                regions,
                userSuppliedTag
             );
+         countSyncSentInteractionForStats();
          future.join();
       } catch (CancellationException e) {
          throw new RTIinternalError("Call was cancelled '" + e);
@@ -6127,14 +6140,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSendInteractionWithRegions(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
-      hla.rti1516_202X.RegionHandleSet regions,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.RegionHandleSet regions,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.SendInteractionWithRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.SendInteractionWithRegionsRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -6158,12 +6171,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.MessageRetractionReturn sendInteractionWithRegionsAndTime(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
-      hla.rti1516_202X.RegionHandleSet regions,
+   public hla.rti1516_2025.MessageRetractionReturn sendInteractionWithRegions(
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.RegionHandleSet regions,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    throws
       InvalidLogicalTime,
@@ -6181,13 +6194,14 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    {
       try {
          CompletableFuture<MessageRetractionReturn> future =
-            asyncSendInteractionWithRegionsAndTime(
+            asyncSendInteractionWithRegions(
                interactionClass,
                parameterValues,
                regions,
                userSuppliedTag,
                time
             );
+         countSyncSentInteractionForStats();
          return future.join();
       } catch (CancellationException e) {
          throw new RTIinternalError("Call was cancelled '" + e);
@@ -6197,16 +6211,16 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       }
    }
 
-   public CompletableFuture<MessageRetractionReturn> asyncSendInteractionWithRegionsAndTime(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandleValueMap parameterValues,
-      hla.rti1516_202X.RegionHandleSet regions,
+   public CompletableFuture<MessageRetractionReturn> asyncSendInteractionWithRegions(
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandleValueMap parameterValues,
+      hla.rti1516_2025.RegionHandleSet regions,
       byte[] userSuppliedTag,
-      hla.rti1516_202X.time.LogicalTime<?, ?> time
+      hla.rti1516_2025.time.LogicalTime<?, ?> time
    )
    {
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest request;
-      hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest. Builder builder = hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeRequest request;
+      hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeRequest. Builder builder = hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -6228,7 +6242,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.SENDINTERACTIONWITHREGIONSANDTIMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.SendInteractionWithRegionsAndTimeResponse response = callResponse.getSendInteractionWithRegionsAndTimeResponse();
+            hla.rti1516_2025.fedpro.SendInteractionWithRegionsAndTimeResponse response = callResponse.getSendInteractionWithRegionsAndTimeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6237,8 +6251,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void requestAttributeValueUpdateWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       byte[] userSuppliedTag
    )
    throws
@@ -6270,13 +6284,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncRequestAttributeValueUpdateWithRegions(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeSetRegionSetPairList attributesAndRegions,
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeSetRegionSetPairList attributesAndRegions,
       byte[] userSuppliedTag
    )
    {
-      hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest request;
-      hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest. Builder builder = hla.rti1516_202X.fedpro.RequestAttributeValueUpdateWithRegionsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.RequestAttributeValueUpdateWithRegionsRequest request;
+      hla.rti1516_2025.fedpro.RequestAttributeValueUpdateWithRegionsRequest. Builder builder = hla.rti1516_2025.fedpro.RequestAttributeValueUpdateWithRegionsRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -6299,7 +6313,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.FederateHandle getFederateHandle(
+   public hla.rti1516_2025.FederateHandle getFederateHandle(
       java.lang.String federateName
    )
    throws
@@ -6326,8 +6340,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String federateName
    )
    {
-      hla.rti1516_202X.fedpro.GetFederateHandleRequest request;
-      hla.rti1516_202X.fedpro.GetFederateHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetFederateHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetFederateHandleRequest request;
+      hla.rti1516_2025.fedpro.GetFederateHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetFederateHandleRequest. newBuilder();
 
       try {
          builder.setFederateName(_clientConverter.convertFromHla(federateName));
@@ -6345,7 +6359,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETFEDERATEHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetFederateHandleResponse response = callResponse.getGetFederateHandleResponse();
+            hla.rti1516_2025.fedpro.GetFederateHandleResponse response = callResponse.getGetFederateHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6354,7 +6368,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getFederateName(
-      hla.rti1516_202X.FederateHandle federate
+      hla.rti1516_2025.FederateHandle federate
    )
    throws
       InvalidFederateHandle,
@@ -6378,11 +6392,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetFederateName(
-      hla.rti1516_202X.FederateHandle federate
+      hla.rti1516_2025.FederateHandle federate
    )
    {
-      hla.rti1516_202X.fedpro.GetFederateNameRequest request;
-      hla.rti1516_202X.fedpro.GetFederateNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetFederateNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetFederateNameRequest request;
+      hla.rti1516_2025.fedpro.GetFederateNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetFederateNameRequest. newBuilder();
 
       try {
          builder.setFederate(_clientConverter.convertFromHla(federate));
@@ -6400,7 +6414,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETFEDERATENAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetFederateNameResponse response = callResponse.getGetFederateNameResponse();
+            hla.rti1516_2025.fedpro.GetFederateNameResponse response = callResponse.getGetFederateNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6408,7 +6422,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ObjectClassHandle getObjectClassHandle(
+   public hla.rti1516_2025.ObjectClassHandle getObjectClassHandle(
       java.lang.String objectClassName
    )
    throws
@@ -6435,8 +6449,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String objectClassName
    )
    {
-      hla.rti1516_202X.fedpro.GetObjectClassHandleRequest request;
-      hla.rti1516_202X.fedpro.GetObjectClassHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetObjectClassHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectClassHandleRequest request;
+      hla.rti1516_2025.fedpro.GetObjectClassHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetObjectClassHandleRequest. newBuilder();
 
       try {
          builder.setObjectClassName(_clientConverter.convertFromHla(objectClassName));
@@ -6454,7 +6468,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETOBJECTCLASSHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetObjectClassHandleResponse response = callResponse.getGetObjectClassHandleResponse();
+            hla.rti1516_2025.fedpro.GetObjectClassHandleResponse response = callResponse.getGetObjectClassHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6463,7 +6477,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getObjectClassName(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       InvalidObjectClassHandle,
@@ -6486,11 +6500,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetObjectClassName(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.GetObjectClassNameRequest request;
-      hla.rti1516_202X.fedpro.GetObjectClassNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetObjectClassNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectClassNameRequest request;
+      hla.rti1516_2025.fedpro.GetObjectClassNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetObjectClassNameRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -6508,7 +6522,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETOBJECTCLASSNAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetObjectClassNameResponse response = callResponse.getGetObjectClassNameResponse();
+            hla.rti1516_2025.fedpro.GetObjectClassNameResponse response = callResponse.getGetObjectClassNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6516,8 +6530,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ObjectClassHandle getKnownObjectClassHandle(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+   public hla.rti1516_2025.ObjectClassHandle getKnownObjectClassHandle(
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    throws
       ObjectInstanceNotKnown,
@@ -6540,11 +6554,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<ObjectClassHandle> asyncGetKnownObjectClassHandle(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    {
-      hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest request;
-      hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetKnownObjectClassHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetKnownObjectClassHandleRequest request;
+      hla.rti1516_2025.fedpro.GetKnownObjectClassHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetKnownObjectClassHandleRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -6562,7 +6576,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETKNOWNOBJECTCLASSHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetKnownObjectClassHandleResponse response = callResponse.getGetKnownObjectClassHandleResponse();
+            hla.rti1516_2025.fedpro.GetKnownObjectClassHandleResponse response = callResponse.getGetKnownObjectClassHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6570,7 +6584,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ObjectInstanceHandle getObjectInstanceHandle(
+   public hla.rti1516_2025.ObjectInstanceHandle getObjectInstanceHandle(
       java.lang.String objectInstanceName
    )
    throws
@@ -6597,8 +6611,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String objectInstanceName
    )
    {
-      hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequest request;
-      hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetObjectInstanceHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectInstanceHandleRequest request;
+      hla.rti1516_2025.fedpro.GetObjectInstanceHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetObjectInstanceHandleRequest. newBuilder();
 
       try {
          builder.setObjectInstanceName(_clientConverter.convertFromHla(objectInstanceName));
@@ -6616,7 +6630,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETOBJECTINSTANCEHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetObjectInstanceHandleResponse response = callResponse.getGetObjectInstanceHandleResponse();
+            hla.rti1516_2025.fedpro.GetObjectInstanceHandleResponse response = callResponse.getGetObjectInstanceHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6625,7 +6639,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getObjectInstanceName(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    throws
       ObjectInstanceNotKnown,
@@ -6648,11 +6662,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetObjectInstanceName(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    {
-      hla.rti1516_202X.fedpro.GetObjectInstanceNameRequest request;
-      hla.rti1516_202X.fedpro.GetObjectInstanceNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetObjectInstanceNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetObjectInstanceNameRequest request;
+      hla.rti1516_2025.fedpro.GetObjectInstanceNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetObjectInstanceNameRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -6670,7 +6684,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETOBJECTINSTANCENAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetObjectInstanceNameResponse response = callResponse.getGetObjectInstanceNameResponse();
+            hla.rti1516_2025.fedpro.GetObjectInstanceNameResponse response = callResponse.getGetObjectInstanceNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6678,8 +6692,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.AttributeHandle getAttributeHandle(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
+   public hla.rti1516_2025.AttributeHandle getAttributeHandle(
+      hla.rti1516_2025.ObjectClassHandle objectClass,
       java.lang.String attributeName
    )
    throws
@@ -6705,12 +6719,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<AttributeHandle> asyncGetAttributeHandle(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
+      hla.rti1516_2025.ObjectClassHandle objectClass,
       java.lang.String attributeName
    )
    {
-      hla.rti1516_202X.fedpro.GetAttributeHandleRequest request;
-      hla.rti1516_202X.fedpro.GetAttributeHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetAttributeHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetAttributeHandleRequest request;
+      hla.rti1516_2025.fedpro.GetAttributeHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetAttributeHandleRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -6729,7 +6743,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETATTRIBUTEHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAttributeHandleResponse response = callResponse.getGetAttributeHandleResponse();
+            hla.rti1516_2025.fedpro.GetAttributeHandleResponse response = callResponse.getGetAttributeHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6738,8 +6752,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getAttributeName(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    throws
       AttributeNotDefined,
@@ -6765,12 +6779,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetAttributeName(
-      hla.rti1516_202X.ObjectClassHandle objectClass,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectClassHandle objectClass,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    {
-      hla.rti1516_202X.fedpro.GetAttributeNameRequest request;
-      hla.rti1516_202X.fedpro.GetAttributeNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetAttributeNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetAttributeNameRequest request;
+      hla.rti1516_2025.fedpro.GetAttributeNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetAttributeNameRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -6789,7 +6803,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETATTRIBUTENAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAttributeNameResponse response = callResponse.getGetAttributeNameResponse();
+            hla.rti1516_2025.fedpro.GetAttributeNameResponse response = callResponse.getGetAttributeNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6824,8 +6838,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String updateRateDesignator
    )
    {
-      hla.rti1516_202X.fedpro.GetUpdateRateValueRequest request;
-      hla.rti1516_202X.fedpro.GetUpdateRateValueRequest. Builder builder = hla.rti1516_202X.fedpro.GetUpdateRateValueRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetUpdateRateValueRequest request;
+      hla.rti1516_2025.fedpro.GetUpdateRateValueRequest. Builder builder = hla.rti1516_2025.fedpro.GetUpdateRateValueRequest. newBuilder();
 
       try {
          builder.setUpdateRateDesignator(_clientConverter.convertFromHla(updateRateDesignator));
@@ -6843,7 +6857,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETUPDATERATEVALUERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetUpdateRateValueResponse response = callResponse.getGetUpdateRateValueResponse();
+            hla.rti1516_2025.fedpro.GetUpdateRateValueResponse response = callResponse.getGetUpdateRateValueResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6852,8 +6866,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public double getUpdateRateValueForAttribute(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    throws
       ObjectInstanceNotKnown,
@@ -6878,12 +6892,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Double> asyncGetUpdateRateValueForAttribute(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance,
-      hla.rti1516_202X.AttributeHandle attribute
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance,
+      hla.rti1516_2025.AttributeHandle attribute
    )
    {
-      hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest request;
-      hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest. Builder builder = hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeRequest request;
+      hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeRequest. Builder builder = hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -6902,7 +6916,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETUPDATERATEVALUEFORATTRIBUTERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetUpdateRateValueForAttributeResponse response = callResponse.getGetUpdateRateValueForAttributeResponse();
+            hla.rti1516_2025.fedpro.GetUpdateRateValueForAttributeResponse response = callResponse.getGetUpdateRateValueForAttributeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6910,7 +6924,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.InteractionClassHandle getInteractionClassHandle(
+   public hla.rti1516_2025.InteractionClassHandle getInteractionClassHandle(
       java.lang.String interactionClassName
    )
    throws
@@ -6937,8 +6951,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String interactionClassName
    )
    {
-      hla.rti1516_202X.fedpro.GetInteractionClassHandleRequest request;
-      hla.rti1516_202X.fedpro.GetInteractionClassHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetInteractionClassHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetInteractionClassHandleRequest request;
+      hla.rti1516_2025.fedpro.GetInteractionClassHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetInteractionClassHandleRequest. newBuilder();
 
       try {
          builder.setInteractionClassName(_clientConverter.convertFromHla(interactionClassName));
@@ -6956,7 +6970,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETINTERACTIONCLASSHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetInteractionClassHandleResponse response = callResponse.getGetInteractionClassHandleResponse();
+            hla.rti1516_2025.fedpro.GetInteractionClassHandleResponse response = callResponse.getGetInteractionClassHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -6965,7 +6979,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getInteractionClassName(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       InvalidInteractionClassHandle,
@@ -6988,11 +7002,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetInteractionClassName(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.GetInteractionClassNameRequest request;
-      hla.rti1516_202X.fedpro.GetInteractionClassNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetInteractionClassNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetInteractionClassNameRequest request;
+      hla.rti1516_2025.fedpro.GetInteractionClassNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetInteractionClassNameRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -7010,7 +7024,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETINTERACTIONCLASSNAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetInteractionClassNameResponse response = callResponse.getGetInteractionClassNameResponse();
+            hla.rti1516_2025.fedpro.GetInteractionClassNameResponse response = callResponse.getGetInteractionClassNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7018,8 +7032,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ParameterHandle getParameterHandle(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
+   public hla.rti1516_2025.ParameterHandle getParameterHandle(
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
       java.lang.String parameterName
    )
    throws
@@ -7045,12 +7059,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<ParameterHandle> asyncGetParameterHandle(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
       java.lang.String parameterName
    )
    {
-      hla.rti1516_202X.fedpro.GetParameterHandleRequest request;
-      hla.rti1516_202X.fedpro.GetParameterHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetParameterHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetParameterHandleRequest request;
+      hla.rti1516_2025.fedpro.GetParameterHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetParameterHandleRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -7069,7 +7083,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETPARAMETERHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetParameterHandleResponse response = callResponse.getGetParameterHandleResponse();
+            hla.rti1516_2025.fedpro.GetParameterHandleResponse response = callResponse.getGetParameterHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7078,8 +7092,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getParameterName(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandle parameter
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandle parameter
    )
    throws
       InteractionParameterNotDefined,
@@ -7105,12 +7119,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetParameterName(
-      hla.rti1516_202X.InteractionClassHandle interactionClass,
-      hla.rti1516_202X.ParameterHandle parameter
+      hla.rti1516_2025.InteractionClassHandle interactionClass,
+      hla.rti1516_2025.ParameterHandle parameter
    )
    {
-      hla.rti1516_202X.fedpro.GetParameterNameRequest request;
-      hla.rti1516_202X.fedpro.GetParameterNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetParameterNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetParameterNameRequest request;
+      hla.rti1516_2025.fedpro.GetParameterNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetParameterNameRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -7129,7 +7143,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETPARAMETERNAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetParameterNameResponse response = callResponse.getGetParameterNameResponse();
+            hla.rti1516_2025.fedpro.GetParameterNameResponse response = callResponse.getGetParameterNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7137,7 +7151,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.OrderType getOrderType(
+   public hla.rti1516_2025.OrderType getOrderType(
       java.lang.String orderTypeName
    )
    throws
@@ -7164,8 +7178,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String orderTypeName
    )
    {
-      hla.rti1516_202X.fedpro.GetOrderTypeRequest request;
-      hla.rti1516_202X.fedpro.GetOrderTypeRequest. Builder builder = hla.rti1516_202X.fedpro.GetOrderTypeRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetOrderTypeRequest request;
+      hla.rti1516_2025.fedpro.GetOrderTypeRequest. Builder builder = hla.rti1516_2025.fedpro.GetOrderTypeRequest. newBuilder();
 
       try {
          builder.setOrderTypeName(_clientConverter.convertFromHla(orderTypeName));
@@ -7183,7 +7197,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETORDERTYPERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetOrderTypeResponse response = callResponse.getGetOrderTypeResponse();
+            hla.rti1516_2025.fedpro.GetOrderTypeResponse response = callResponse.getGetOrderTypeResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7192,7 +7206,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getOrderName(
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.OrderType orderType
    )
    throws
       InvalidOrderType,
@@ -7215,11 +7229,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetOrderName(
-      hla.rti1516_202X.OrderType orderType
+      hla.rti1516_2025.OrderType orderType
    )
    {
-      hla.rti1516_202X.fedpro.GetOrderNameRequest request;
-      hla.rti1516_202X.fedpro.GetOrderNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetOrderNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetOrderNameRequest request;
+      hla.rti1516_2025.fedpro.GetOrderNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetOrderNameRequest. newBuilder();
 
       try {
          builder.setOrderType(_clientConverter.convertFromHla(orderType));
@@ -7237,7 +7251,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETORDERNAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetOrderNameResponse response = callResponse.getGetOrderNameResponse();
+            hla.rti1516_2025.fedpro.GetOrderNameResponse response = callResponse.getGetOrderNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7245,7 +7259,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.TransportationTypeHandle getTransportationTypeHandle(
+   public hla.rti1516_2025.TransportationTypeHandle getTransportationTypeHandle(
       java.lang.String transportationTypeName
    )
    throws
@@ -7272,8 +7286,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String transportationTypeName
    )
    {
-      hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequest request;
-      hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetTransportationTypeHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetTransportationTypeHandleRequest request;
+      hla.rti1516_2025.fedpro.GetTransportationTypeHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetTransportationTypeHandleRequest. newBuilder();
 
       try {
          builder.setTransportationTypeName(_clientConverter.convertFromHla(transportationTypeName));
@@ -7291,7 +7305,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETTRANSPORTATIONTYPEHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetTransportationTypeHandleResponse response = callResponse.getGetTransportationTypeHandleResponse();
+            hla.rti1516_2025.fedpro.GetTransportationTypeHandleResponse response = callResponse.getGetTransportationTypeHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7300,7 +7314,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getTransportationTypeName(
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    throws
       InvalidTransportationTypeHandle,
@@ -7323,11 +7337,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetTransportationTypeName(
-      hla.rti1516_202X.TransportationTypeHandle transportationType
+      hla.rti1516_2025.TransportationTypeHandle transportationType
    )
    {
-      hla.rti1516_202X.fedpro.GetTransportationTypeNameRequest request;
-      hla.rti1516_202X.fedpro.GetTransportationTypeNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetTransportationTypeNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetTransportationTypeNameRequest request;
+      hla.rti1516_2025.fedpro.GetTransportationTypeNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetTransportationTypeNameRequest. newBuilder();
 
       try {
          builder.setTransportationType(_clientConverter.convertFromHla(transportationType));
@@ -7345,7 +7359,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETTRANSPORTATIONTYPENAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetTransportationTypeNameResponse response = callResponse.getGetTransportationTypeNameResponse();
+            hla.rti1516_2025.fedpro.GetTransportationTypeNameResponse response = callResponse.getGetTransportationTypeNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7353,8 +7367,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.DimensionHandleSet getAvailableDimensionsForObjectClass(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+   public hla.rti1516_2025.DimensionHandleSet getAvailableDimensionsForObjectClass(
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       InvalidObjectClassHandle,
@@ -7377,11 +7391,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<DimensionHandleSet> asyncGetAvailableDimensionsForObjectClass(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest request;
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest. Builder builder = hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassRequest request;
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassRequest. Builder builder = hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -7399,7 +7413,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETAVAILABLEDIMENSIONSFOROBJECTCLASSRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAvailableDimensionsForObjectClassResponse response = callResponse.getGetAvailableDimensionsForObjectClassResponse();
+            hla.rti1516_2025.fedpro.GetAvailableDimensionsForObjectClassResponse response = callResponse.getGetAvailableDimensionsForObjectClassResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7407,8 +7421,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.DimensionHandleSet getAvailableDimensionsForInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+   public hla.rti1516_2025.DimensionHandleSet getAvailableDimensionsForInteractionClass(
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       InvalidInteractionClassHandle,
@@ -7431,11 +7445,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<DimensionHandleSet> asyncGetAvailableDimensionsForInteractionClass(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest request;
-      hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest. Builder builder = hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassRequest request;
+      hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassRequest. Builder builder = hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -7453,7 +7467,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETAVAILABLEDIMENSIONSFORINTERACTIONCLASSRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAvailableDimensionsForInteractionClassResponse response = callResponse.getGetAvailableDimensionsForInteractionClassResponse();
+            hla.rti1516_2025.fedpro.GetAvailableDimensionsForInteractionClassResponse response = callResponse.getGetAvailableDimensionsForInteractionClassResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7461,7 +7475,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.DimensionHandle getDimensionHandle(
+   public hla.rti1516_2025.DimensionHandle getDimensionHandle(
       java.lang.String dimensionName
    )
    throws
@@ -7488,8 +7502,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       java.lang.String dimensionName
    )
    {
-      hla.rti1516_202X.fedpro.GetDimensionHandleRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionHandleRequest. Builder builder = hla.rti1516_202X.fedpro.GetDimensionHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionHandleRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionHandleRequest. Builder builder = hla.rti1516_2025.fedpro.GetDimensionHandleRequest. newBuilder();
 
       try {
          builder.setDimensionName(_clientConverter.convertFromHla(dimensionName));
@@ -7507,7 +7521,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETDIMENSIONHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetDimensionHandleResponse response = callResponse.getGetDimensionHandleResponse();
+            hla.rti1516_2025.fedpro.GetDimensionHandleResponse response = callResponse.getGetDimensionHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7516,7 +7530,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public java.lang.String getDimensionName(
-      hla.rti1516_202X.DimensionHandle dimension
+      hla.rti1516_2025.DimensionHandle dimension
    )
    throws
       InvalidDimensionHandle,
@@ -7539,11 +7553,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<String> asyncGetDimensionName(
-      hla.rti1516_202X.DimensionHandle dimension
+      hla.rti1516_2025.DimensionHandle dimension
    )
    {
-      hla.rti1516_202X.fedpro.GetDimensionNameRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionNameRequest. Builder builder = hla.rti1516_202X.fedpro.GetDimensionNameRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionNameRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionNameRequest. Builder builder = hla.rti1516_2025.fedpro.GetDimensionNameRequest. newBuilder();
 
       try {
          builder.setDimension(_clientConverter.convertFromHla(dimension));
@@ -7561,7 +7575,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETDIMENSIONNAMERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetDimensionNameResponse response = callResponse.getGetDimensionNameResponse();
+            hla.rti1516_2025.fedpro.GetDimensionNameResponse response = callResponse.getGetDimensionNameResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7570,7 +7584,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public long getDimensionUpperBound(
-      hla.rti1516_202X.DimensionHandle dimension
+      hla.rti1516_2025.DimensionHandle dimension
    )
    throws
       InvalidDimensionHandle,
@@ -7593,11 +7607,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Long> asyncGetDimensionUpperBound(
-      hla.rti1516_202X.DimensionHandle dimension
+      hla.rti1516_2025.DimensionHandle dimension
    )
    {
-      hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequest. Builder builder = hla.rti1516_202X.fedpro.GetDimensionUpperBoundRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionUpperBoundRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionUpperBoundRequest. Builder builder = hla.rti1516_2025.fedpro.GetDimensionUpperBoundRequest. newBuilder();
 
       try {
          builder.setDimension(_clientConverter.convertFromHla(dimension));
@@ -7615,7 +7629,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETDIMENSIONUPPERBOUNDRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetDimensionUpperBoundResponse response = callResponse.getGetDimensionUpperBoundResponse();
+            hla.rti1516_2025.fedpro.GetDimensionUpperBoundResponse response = callResponse.getGetDimensionUpperBoundResponse();
             return _clientConverter.convertToHla(Integer.toUnsignedLong(response.getResult()));
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7623,8 +7637,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.DimensionHandleSet getDimensionHandleSet(
-      hla.rti1516_202X.RegionHandle region
+   public hla.rti1516_2025.DimensionHandleSet getDimensionHandleSet(
+      hla.rti1516_2025.RegionHandle region
    )
    throws
       InvalidRegion,
@@ -7649,11 +7663,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<DimensionHandleSet> asyncGetDimensionHandleSet(
-      hla.rti1516_202X.RegionHandle region
+      hla.rti1516_2025.RegionHandle region
    )
    {
-      hla.rti1516_202X.fedpro.GetDimensionHandleSetRequest request;
-      hla.rti1516_202X.fedpro.GetDimensionHandleSetRequest. Builder builder = hla.rti1516_202X.fedpro.GetDimensionHandleSetRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetDimensionHandleSetRequest request;
+      hla.rti1516_2025.fedpro.GetDimensionHandleSetRequest. Builder builder = hla.rti1516_2025.fedpro.GetDimensionHandleSetRequest. newBuilder();
 
       try {
          builder.setRegion(_clientConverter.convertFromHla(region));
@@ -7671,7 +7685,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETDIMENSIONHANDLESETRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetDimensionHandleSetResponse response = callResponse.getGetDimensionHandleSetResponse();
+            hla.rti1516_2025.fedpro.GetDimensionHandleSetResponse response = callResponse.getGetDimensionHandleSetResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7679,9 +7693,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.RangeBounds getRangeBounds(
-      hla.rti1516_202X.RegionHandle region,
-      hla.rti1516_202X.DimensionHandle dimension
+   public hla.rti1516_2025.RangeBounds getRangeBounds(
+      hla.rti1516_2025.RegionHandle region,
+      hla.rti1516_2025.DimensionHandle dimension
    )
    throws
       RegionDoesNotContainSpecifiedDimension,
@@ -7708,12 +7722,12 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<RangeBounds> asyncGetRangeBounds(
-      hla.rti1516_202X.RegionHandle region,
-      hla.rti1516_202X.DimensionHandle dimension
+      hla.rti1516_2025.RegionHandle region,
+      hla.rti1516_2025.DimensionHandle dimension
    )
    {
-      hla.rti1516_202X.fedpro.GetRangeBoundsRequest request;
-      hla.rti1516_202X.fedpro.GetRangeBoundsRequest. Builder builder = hla.rti1516_202X.fedpro.GetRangeBoundsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.GetRangeBoundsRequest request;
+      hla.rti1516_2025.fedpro.GetRangeBoundsRequest. Builder builder = hla.rti1516_2025.fedpro.GetRangeBoundsRequest. newBuilder();
 
       try {
          builder.setRegion(_clientConverter.convertFromHla(region));
@@ -7732,7 +7746,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETRANGEBOUNDSRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetRangeBoundsResponse response = callResponse.getGetRangeBoundsResponse();
+            hla.rti1516_2025.fedpro.GetRangeBoundsResponse response = callResponse.getGetRangeBoundsResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7741,9 +7755,9 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void setRangeBounds(
-      hla.rti1516_202X.RegionHandle region,
-      hla.rti1516_202X.DimensionHandle dimension,
-      hla.rti1516_202X.RangeBounds rangeBounds
+      hla.rti1516_2025.RegionHandle region,
+      hla.rti1516_2025.DimensionHandle dimension,
+      hla.rti1516_2025.RangeBounds rangeBounds
    )
    throws
       InvalidRangeBound,
@@ -7773,13 +7787,13 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSetRangeBounds(
-      hla.rti1516_202X.RegionHandle region,
-      hla.rti1516_202X.DimensionHandle dimension,
-      hla.rti1516_202X.RangeBounds rangeBounds
+      hla.rti1516_2025.RegionHandle region,
+      hla.rti1516_2025.DimensionHandle dimension,
+      hla.rti1516_2025.RangeBounds rangeBounds
    )
    {
-      hla.rti1516_202X.fedpro.SetRangeBoundsRequest request;
-      hla.rti1516_202X.fedpro.SetRangeBoundsRequest. Builder builder = hla.rti1516_202X.fedpro.SetRangeBoundsRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetRangeBoundsRequest request;
+      hla.rti1516_2025.fedpro.SetRangeBoundsRequest. Builder builder = hla.rti1516_2025.fedpro.SetRangeBoundsRequest. newBuilder();
 
       try {
          builder.setRegion(_clientConverter.convertFromHla(region));
@@ -7803,7 +7817,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public long normalizeServiceGroup(
-      hla.rti1516_202X.ServiceGroup serviceGroup
+      hla.rti1516_2025.ServiceGroup serviceGroup
    )
    throws
       InvalidServiceGroup,
@@ -7826,11 +7840,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Long> asyncNormalizeServiceGroup(
-      hla.rti1516_202X.ServiceGroup serviceGroup
+      hla.rti1516_2025.ServiceGroup serviceGroup
    )
    {
-      hla.rti1516_202X.fedpro.NormalizeServiceGroupRequest request;
-      hla.rti1516_202X.fedpro.NormalizeServiceGroupRequest. Builder builder = hla.rti1516_202X.fedpro.NormalizeServiceGroupRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NormalizeServiceGroupRequest request;
+      hla.rti1516_2025.fedpro.NormalizeServiceGroupRequest. Builder builder = hla.rti1516_2025.fedpro.NormalizeServiceGroupRequest. newBuilder();
 
       try {
          builder.setServiceGroup(_clientConverter.convertFromHla(serviceGroup));
@@ -7848,7 +7862,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.NORMALIZESERVICEGROUPRESPONSE);
             }
-            hla.rti1516_202X.fedpro.NormalizeServiceGroupResponse response = callResponse.getNormalizeServiceGroupResponse();
+            hla.rti1516_2025.fedpro.NormalizeServiceGroupResponse response = callResponse.getNormalizeServiceGroupResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7857,7 +7871,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public long normalizeFederateHandle(
-      hla.rti1516_202X.FederateHandle federate
+      hla.rti1516_2025.FederateHandle federate
    )
    throws
       InvalidFederateHandle,
@@ -7880,11 +7894,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Long> asyncNormalizeFederateHandle(
-      hla.rti1516_202X.FederateHandle federate
+      hla.rti1516_2025.FederateHandle federate
    )
    {
-      hla.rti1516_202X.fedpro.NormalizeFederateHandleRequest request;
-      hla.rti1516_202X.fedpro.NormalizeFederateHandleRequest. Builder builder = hla.rti1516_202X.fedpro.NormalizeFederateHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NormalizeFederateHandleRequest request;
+      hla.rti1516_2025.fedpro.NormalizeFederateHandleRequest. Builder builder = hla.rti1516_2025.fedpro.NormalizeFederateHandleRequest. newBuilder();
 
       try {
          builder.setFederate(_clientConverter.convertFromHla(federate));
@@ -7902,7 +7916,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.NORMALIZEFEDERATEHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.NormalizeFederateHandleResponse response = callResponse.getNormalizeFederateHandleResponse();
+            hla.rti1516_2025.fedpro.NormalizeFederateHandleResponse response = callResponse.getNormalizeFederateHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7911,7 +7925,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public long normalizeObjectClassHandle(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    throws
       InvalidObjectClassHandle,
@@ -7934,11 +7948,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Long> asyncNormalizeObjectClassHandle(
-      hla.rti1516_202X.ObjectClassHandle objectClass
+      hla.rti1516_2025.ObjectClassHandle objectClass
    )
    {
-      hla.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest request;
-      hla.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest. Builder builder = hla.rti1516_202X.fedpro.NormalizeObjectClassHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NormalizeObjectClassHandleRequest request;
+      hla.rti1516_2025.fedpro.NormalizeObjectClassHandleRequest. Builder builder = hla.rti1516_2025.fedpro.NormalizeObjectClassHandleRequest. newBuilder();
 
       try {
          builder.setObjectClass(_clientConverter.convertFromHla(objectClass));
@@ -7956,7 +7970,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.NORMALIZEOBJECTCLASSHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.NormalizeObjectClassHandleResponse response = callResponse.getNormalizeObjectClassHandleResponse();
+            hla.rti1516_2025.fedpro.NormalizeObjectClassHandleResponse response = callResponse.getNormalizeObjectClassHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -7965,7 +7979,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public long normalizeInteractionClassHandle(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    throws
       InvalidInteractionClassHandle,
@@ -7988,11 +8002,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Long> asyncNormalizeInteractionClassHandle(
-      hla.rti1516_202X.InteractionClassHandle interactionClass
+      hla.rti1516_2025.InteractionClassHandle interactionClass
    )
    {
-      hla.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest request;
-      hla.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest. Builder builder = hla.rti1516_202X.fedpro.NormalizeInteractionClassHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NormalizeInteractionClassHandleRequest request;
+      hla.rti1516_2025.fedpro.NormalizeInteractionClassHandleRequest. Builder builder = hla.rti1516_2025.fedpro.NormalizeInteractionClassHandleRequest. newBuilder();
 
       try {
          builder.setInteractionClass(_clientConverter.convertFromHla(interactionClass));
@@ -8010,7 +8024,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.NORMALIZEINTERACTIONCLASSHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.NormalizeInteractionClassHandleResponse response = callResponse.getNormalizeInteractionClassHandleResponse();
+            hla.rti1516_2025.fedpro.NormalizeInteractionClassHandleResponse response = callResponse.getNormalizeInteractionClassHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8019,7 +8033,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public long normalizeObjectInstanceHandle(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    throws
       InvalidObjectInstanceHandle,
@@ -8042,11 +8056,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Long> asyncNormalizeObjectInstanceHandle(
-      hla.rti1516_202X.ObjectInstanceHandle objectInstance
+      hla.rti1516_2025.ObjectInstanceHandle objectInstance
    )
    {
-      hla.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest request;
-      hla.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest. Builder builder = hla.rti1516_202X.fedpro.NormalizeObjectInstanceHandleRequest. newBuilder();
+      hla.rti1516_2025.fedpro.NormalizeObjectInstanceHandleRequest request;
+      hla.rti1516_2025.fedpro.NormalizeObjectInstanceHandleRequest. Builder builder = hla.rti1516_2025.fedpro.NormalizeObjectInstanceHandleRequest. newBuilder();
 
       try {
          builder.setObjectInstance(_clientConverter.convertFromHla(objectInstance));
@@ -8064,7 +8078,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.NORMALIZEOBJECTINSTANCEHANDLERESPONSE);
             }
-            hla.rti1516_202X.fedpro.NormalizeObjectInstanceHandleResponse response = callResponse.getNormalizeObjectInstanceHandleResponse();
+            hla.rti1516_2025.fedpro.NormalizeObjectInstanceHandleResponse response = callResponse.getNormalizeObjectInstanceHandleResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8100,8 +8114,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetObjectClassRelevanceAdvisorySwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetObjectClassRelevanceAdvisorySwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8111,7 +8125,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETOBJECTCLASSRELEVANCEADVISORYSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetObjectClassRelevanceAdvisorySwitchResponse response = callResponse.getGetObjectClassRelevanceAdvisorySwitchResponse();
+            hla.rti1516_2025.fedpro.GetObjectClassRelevanceAdvisorySwitchResponse response = callResponse.getGetObjectClassRelevanceAdvisorySwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8147,8 +8161,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest request;
-      hla.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetObjectClassRelevanceAdvisorySwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8197,8 +8211,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetAttributeRelevanceAdvisorySwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetAttributeRelevanceAdvisorySwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetAttributeRelevanceAdvisorySwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8208,7 +8222,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETATTRIBUTERELEVANCEADVISORYSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAttributeRelevanceAdvisorySwitchResponse response = callResponse.getGetAttributeRelevanceAdvisorySwitchResponse();
+            hla.rti1516_2025.fedpro.GetAttributeRelevanceAdvisorySwitchResponse response = callResponse.getGetAttributeRelevanceAdvisorySwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8244,8 +8258,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest request;
-      hla.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetAttributeRelevanceAdvisorySwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetAttributeRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetAttributeRelevanceAdvisorySwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetAttributeRelevanceAdvisorySwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8294,8 +8308,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetAttributeScopeAdvisorySwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetAttributeScopeAdvisorySwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetAttributeScopeAdvisorySwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8305,7 +8319,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETATTRIBUTESCOPEADVISORYSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAttributeScopeAdvisorySwitchResponse response = callResponse.getGetAttributeScopeAdvisorySwitchResponse();
+            hla.rti1516_2025.fedpro.GetAttributeScopeAdvisorySwitchResponse response = callResponse.getGetAttributeScopeAdvisorySwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8341,8 +8355,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest request;
-      hla.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetAttributeScopeAdvisorySwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetAttributeScopeAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetAttributeScopeAdvisorySwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetAttributeScopeAdvisorySwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8391,8 +8405,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetInteractionRelevanceAdvisorySwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetInteractionRelevanceAdvisorySwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetInteractionRelevanceAdvisorySwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8402,7 +8416,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETINTERACTIONRELEVANCEADVISORYSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetInteractionRelevanceAdvisorySwitchResponse response = callResponse.getGetInteractionRelevanceAdvisorySwitchResponse();
+            hla.rti1516_2025.fedpro.GetInteractionRelevanceAdvisorySwitchResponse response = callResponse.getGetInteractionRelevanceAdvisorySwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8438,8 +8452,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest request;
-      hla.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetInteractionRelevanceAdvisorySwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetInteractionRelevanceAdvisorySwitchRequest request;
+      hla.rti1516_2025.fedpro.SetInteractionRelevanceAdvisorySwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetInteractionRelevanceAdvisorySwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8488,8 +8502,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetConveyRegionDesignatorSetsSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetConveyRegionDesignatorSetsSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetConveyRegionDesignatorSetsSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8499,7 +8513,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETCONVEYREGIONDESIGNATORSETSSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetConveyRegionDesignatorSetsSwitchResponse response = callResponse.getGetConveyRegionDesignatorSetsSwitchResponse();
+            hla.rti1516_2025.fedpro.GetConveyRegionDesignatorSetsSwitchResponse response = callResponse.getGetConveyRegionDesignatorSetsSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8535,8 +8549,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequest request;
-      hla.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetConveyRegionDesignatorSetsSwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetConveyRegionDesignatorSetsSwitchRequest request;
+      hla.rti1516_2025.fedpro.SetConveyRegionDesignatorSetsSwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetConveyRegionDesignatorSetsSwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8557,7 +8571,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       });
    }
 
-   public hla.rti1516_202X.ResignAction getAutomaticResignDirective(
+   public hla.rti1516_2025.ResignAction getAutomaticResignDirective(
 
    )
    throws
@@ -8585,8 +8599,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest request;
-      request = hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetAutomaticResignDirectiveRequest request;
+      request = hla.rti1516_2025.fedpro.GetAutomaticResignDirectiveRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetAutomaticResignDirectiveRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8596,7 +8610,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETAUTOMATICRESIGNDIRECTIVERESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAutomaticResignDirectiveResponse response = callResponse.getGetAutomaticResignDirectiveResponse();
+            hla.rti1516_2025.fedpro.GetAutomaticResignDirectiveResponse response = callResponse.getGetAutomaticResignDirectiveResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8605,7 +8619,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public void setAutomaticResignDirective(
-      hla.rti1516_202X.ResignAction value
+      hla.rti1516_2025.ResignAction value
    )
    throws
       SaveInProgress,
@@ -8629,11 +8643,11 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
    }
 
    public CompletableFuture<Void> asyncSetAutomaticResignDirective(
-      hla.rti1516_202X.ResignAction value
+      hla.rti1516_2025.ResignAction value
    )
    {
-      hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest request;
-      hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest. Builder builder = hla.rti1516_202X.fedpro.SetAutomaticResignDirectiveRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetAutomaticResignDirectiveRequest request;
+      hla.rti1516_2025.fedpro.SetAutomaticResignDirectiveRequest. Builder builder = hla.rti1516_2025.fedpro.SetAutomaticResignDirectiveRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8682,8 +8696,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetServiceReportingSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetServiceReportingSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetServiceReportingSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetServiceReportingSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetServiceReportingSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8693,7 +8707,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETSERVICEREPORTINGSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetServiceReportingSwitchResponse response = callResponse.getGetServiceReportingSwitchResponse();
+            hla.rti1516_2025.fedpro.GetServiceReportingSwitchResponse response = callResponse.getGetServiceReportingSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8730,8 +8744,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetServiceReportingSwitchRequest request;
-      hla.rti1516_202X.fedpro.SetServiceReportingSwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetServiceReportingSwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetServiceReportingSwitchRequest request;
+      hla.rti1516_2025.fedpro.SetServiceReportingSwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetServiceReportingSwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8780,8 +8794,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetExceptionReportingSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetExceptionReportingSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetExceptionReportingSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetExceptionReportingSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetExceptionReportingSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8791,7 +8805,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETEXCEPTIONREPORTINGSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetExceptionReportingSwitchResponse response = callResponse.getGetExceptionReportingSwitchResponse();
+            hla.rti1516_2025.fedpro.GetExceptionReportingSwitchResponse response = callResponse.getGetExceptionReportingSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8827,8 +8841,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetExceptionReportingSwitchRequest request;
-      hla.rti1516_202X.fedpro.SetExceptionReportingSwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetExceptionReportingSwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetExceptionReportingSwitchRequest request;
+      hla.rti1516_2025.fedpro.SetExceptionReportingSwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetExceptionReportingSwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8877,8 +8891,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetSendServiceReportsToFileSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetSendServiceReportsToFileSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetSendServiceReportsToFileSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8888,7 +8902,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETSENDSERVICEREPORTSTOFILESWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetSendServiceReportsToFileSwitchResponse response = callResponse.getGetSendServiceReportsToFileSwitchResponse();
+            hla.rti1516_2025.fedpro.GetSendServiceReportsToFileSwitchResponse response = callResponse.getGetSendServiceReportsToFileSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -8924,8 +8938,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
       boolean value
    )
    {
-      hla.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequest request;
-      hla.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequest. Builder builder = hla.rti1516_202X.fedpro.SetSendServiceReportsToFileSwitchRequest. newBuilder();
+      hla.rti1516_2025.fedpro.SetSendServiceReportsToFileSwitchRequest request;
+      hla.rti1516_2025.fedpro.SetSendServiceReportsToFileSwitchRequest. Builder builder = hla.rti1516_2025.fedpro.SetSendServiceReportsToFileSwitchRequest. newBuilder();
 
       try {
          builder.setValue(_clientConverter.convertFromHla(value));
@@ -8974,8 +8988,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetAutoProvideSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetAutoProvideSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetAutoProvideSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetAutoProvideSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetAutoProvideSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -8985,7 +8999,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETAUTOPROVIDESWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAutoProvideSwitchResponse response = callResponse.getGetAutoProvideSwitchResponse();
+            hla.rti1516_2025.fedpro.GetAutoProvideSwitchResponse response = callResponse.getGetAutoProvideSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -9021,8 +9035,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetDelaySubscriptionEvaluationSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetDelaySubscriptionEvaluationSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetDelaySubscriptionEvaluationSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -9032,7 +9046,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETDELAYSUBSCRIPTIONEVALUATIONSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetDelaySubscriptionEvaluationSwitchResponse response = callResponse.getGetDelaySubscriptionEvaluationSwitchResponse();
+            hla.rti1516_2025.fedpro.GetDelaySubscriptionEvaluationSwitchResponse response = callResponse.getGetDelaySubscriptionEvaluationSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -9068,8 +9082,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetAdvisoriesUseKnownClassSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetAdvisoriesUseKnownClassSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetAdvisoriesUseKnownClassSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -9079,7 +9093,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETADVISORIESUSEKNOWNCLASSSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAdvisoriesUseKnownClassSwitchResponse response = callResponse.getGetAdvisoriesUseKnownClassSwitchResponse();
+            hla.rti1516_2025.fedpro.GetAdvisoriesUseKnownClassSwitchResponse response = callResponse.getGetAdvisoriesUseKnownClassSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -9115,8 +9129,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetAllowRelaxedDDMSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetAllowRelaxedDDMSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetAllowRelaxedDDMSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -9126,7 +9140,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETALLOWRELAXEDDDMSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetAllowRelaxedDDMSwitchResponse response = callResponse.getGetAllowRelaxedDDMSwitchResponse();
+            hla.rti1516_2025.fedpro.GetAllowRelaxedDDMSwitchResponse response = callResponse.getGetAllowRelaxedDDMSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));
@@ -9162,8 +9176,8 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
 
    )
    {
-      hla.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchRequest request;
-      request = hla.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchRequest. getDefaultInstance();
+      hla.rti1516_2025.fedpro.GetNonRegulatedGrantSwitchRequest request;
+      request = hla.rti1516_2025.fedpro.GetNonRegulatedGrantSwitchRequest. getDefaultInstance();
       CallRequest callRequest = CallRequest.newBuilder().setGetNonRegulatedGrantSwitchRequest(request).build();
 
       return doAsyncHlaCall(callRequest).thenApply(callResponse -> {
@@ -9173,7 +9187,7 @@ public class RTIambassadorClient extends RTIambassadorClientHla4Base
                   "Got: " + callResponse.getCallResponseCase() + ", " +
                   "expected " + CallResponse.CallResponseCase.GETNONREGULATEDGRANTSWITCHRESPONSE);
             }
-            hla.rti1516_202X.fedpro.GetNonRegulatedGrantSwitchResponse response = callResponse.getGetNonRegulatedGrantSwitchResponse();
+            hla.rti1516_2025.fedpro.GetNonRegulatedGrantSwitchResponse response = callResponse.getGetNonRegulatedGrantSwitchResponse();
             return _clientConverter.convertToHla(response.getResult());
         } catch (Exception e) {
             throw new CompletionException(asRuntimeOrRtiException(e));

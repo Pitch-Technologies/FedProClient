@@ -57,8 +57,6 @@ namespace FedPro
    void SocketWriter::socketWriterLoop()
    {
       assert(!isDirectOnly());
-      _run = true;
-      _historyBuffer->interrupt(false);
       try {
          while (_run) {
             // This loop contains non-interruptible I/O, which means we have to close the socket to be sure the thread
@@ -68,6 +66,7 @@ namespace FedPro
          }
       } catch (const std::exception & e) {
          // End the thread
+         SPDLOG_DEBUG("{}: {}", logPrefix(), e.what());
       } catch (...) {
          SPDLOG_ERROR("{}: Unexpected exception.", logPrefix());
       }
@@ -102,7 +101,7 @@ namespace FedPro
       _expectedNextSequenceNumber.increment();
 
       _historyBuffer->poll();
-      _listener->messageSent();
+      _listener->messageSent(message->sequenceNumber, message->isControl);
    }
 
    void SocketWriter::writeDirectMessage(const EncodedMessage & message)
@@ -160,7 +159,13 @@ namespace FedPro
       _socket = std::move(socket);
    }
 
-   void SocketWriter::terminateCurrentWriterThread()
+   void SocketWriter::enableWriterLoop()
+   {
+      _run = true;
+      _historyBuffer->interrupt(false);
+   }
+
+   void SocketWriter::stopWriterLoop()
    {
       // not really needed, but could save an iteration in the loop.
       _run = false;
@@ -200,7 +205,7 @@ namespace FedPro
    {
       constexpr const size_t maxMessageSize{(std::numeric_limits<uint32_t>::max)()};
       if (message.data.size() <= maxMessageSize) {
-         _socket->send(&message.data[0], message.data.length());
+         _socket->send(&message.data[0], static_cast<uint32_t>(message.data.length()));
       } else {
          throw std::ios_base::failure(
                "Failed to write message because its size exceed " + std::to_string(maxMessageSize));

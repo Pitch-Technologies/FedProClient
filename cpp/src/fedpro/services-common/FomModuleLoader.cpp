@@ -39,7 +39,7 @@ namespace FedPro
       if (file.is_open()) {
          try {
             return getFomModuleFromFile(fomModule, file);
-         } catch (const std::exception & e) {
+         } catch (const std::exception & ) {
             // Ignore file I/O errors, fallback to URI
          }
       }

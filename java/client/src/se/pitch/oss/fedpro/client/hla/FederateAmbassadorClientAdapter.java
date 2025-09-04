@@ -16,9 +16,9 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.exceptions.FederateInternalError;
-import hla.rti1516_202X.time.LogicalTime;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.exceptions.FederateInternalError;
+import hla.rti1516_2025.time.LogicalTime;
 
 import java.util.Set;
 

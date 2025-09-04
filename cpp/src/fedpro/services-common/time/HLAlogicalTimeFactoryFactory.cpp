@@ -16,7 +16,7 @@
 
 #include "services-common/RTIcompat.h"
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/time/HLAlogicalTimeFactoryFactory.h>
 #include <RTI/time/LogicalTimeFactory.h>
 #else

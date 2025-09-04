@@ -32,20 +32,23 @@ public class WebSocketSocket implements FedProSocket {
    private final InputStream _inputStream;
    private final OutputStream _outputStream;
    private InetSocketAddress _remoteSocketAddress;
+   private final String _protocolName;
 
-   public WebSocketSocket(WebSocketSender webSocketSender)
+   public WebSocketSocket(WebSocketSender webSocketSender, String protocolName)
    {
-      this(webSocketSender, null);
+      this(webSocketSender, null, protocolName);
    }
 
    public WebSocketSocket(
          WebSocketSender webSocketSender,
-         WebSocket webSocket)
+         WebSocket webSocket,
+         String protocolName)
    {
       _webSocketSender = webSocketSender;
       _webSocket = webSocket;
       _inputStream = _webSocketSender.getInputStream(webSocket);
       _outputStream = new WebSocketOutputStream(_webSocketSender, webSocket);
+      _protocolName = protocolName;
    }
 
    @Override
@@ -101,5 +104,10 @@ public class WebSocketSocket implements FedProSocket {
       // Socket timeout is not used by the client side.
       // Server-side socket overrides this method to implement timeout.
       return 0;
+   }
+
+   @Override
+   public String getProtocolName() {
+      return _protocolName;
    }
 }

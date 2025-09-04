@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.RTIambassador;
-import hla.rti1516_202X.RtiFactory;
-import hla.rti1516_202X.encoding.EncoderFactory;
-import hla.rti1516_202X.exceptions.RTIinternalError;
+import hla.rti1516_2025.RTIambassador;
+import hla.rti1516_2025.RtiFactory;
+import hla.rti1516_2025.encoding.EncoderFactory;
+import hla.rti1516_2025.exceptions.RTIinternalError;
 import se.pitch.oss.fedpro.client.hla.encoders.OmtEncoderFactory;
 
 /**
@@ -45,6 +45,6 @@ public class RtiFactoryImpl implements RtiFactory {
 
    public String rtiVersion()
    {
-      return "1.1";
+      return "1.2";
    }
 }

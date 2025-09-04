@@ -15,7 +15,7 @@
  **********************************************************************/
 
 #include "RtiConfiguration.h"
-#if (RTI_HLA_VERSION >= 2024)
+
 namespace RTI_NAMESPACE
 {
    RtiConfiguration RtiConfiguration::createConfiguration()
@@ -57,4 +57,3 @@ namespace RTI_NAMESPACE
    }
 
 }
-#endif // RTI_HLA_VERSION >= 2024

@@ -16,6 +16,7 @@
 
 #include "WebsocketSecureTransport.h"
 
+#include <fedpro/Socket.h>
 #include "TransportSettings.h"
 
 #include <memory>

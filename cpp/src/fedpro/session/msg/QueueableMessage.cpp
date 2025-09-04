@@ -27,7 +27,7 @@
 namespace FedPro
 {
    QueueableMessage::QueueableMessage(
-         uint64_t payloadSize,
+         uint32_t payloadSize,
          int32_t lastReceivedSequenceNumber,
          uint64_t sessionId,
          MessageType messageType,

@@ -24,6 +24,8 @@
 
 #include <spdlog/spdlog.h>
 
+#include <memory>
+
 namespace FedPro
 {
 
@@ -38,6 +40,8 @@ namespace FedPro
    public:
 
       static void initialize(const Properties & settings);
+
+      static void setSink(std::shared_ptr<spdlog::sinks::sink> sink);
 
       static LogLevel getLowest(std::initializer_list<LogLevel> levels);
 
@@ -59,6 +63,8 @@ namespace FedPro
       static std::shared_ptr<spdlog::sinks::sink> createRotatingFileSink(
             const LogLevel & level,
             const std::string & path);
+
+      static std::shared_ptr<spdlog::sinks::sink> _customSink;
    };
 
 } // FedPro

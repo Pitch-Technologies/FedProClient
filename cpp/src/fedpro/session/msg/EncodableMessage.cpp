@@ -31,7 +31,7 @@ namespace FedPro
       // Always null-terminated
       const char * messageName = typeid(message).name();
 
-      uint32_t prefixLength = std::strlen(prefix);
+      size_t prefixLength = std::strlen(prefix);
       if (std::strlen(messageName) >= prefixLength && std::strncmp(messageName, prefix, prefixLength) == 0) {
          messageName += prefixLength;
       }

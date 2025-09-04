@@ -53,22 +53,22 @@ function(get_current_output_dir _var)
    # The following determines the default target output directory.
    if (CMAKE_CONFIGURATION_TYPES)
       # The path of the output directory contains the name of the configuration used (e.g., "Release" or "Debug").
-      set(${_var} "${CMAKE_CURRENT_BINARY_DIR}/$<CONFIG>/${FILENAME}" PARENT_SCOPE)
+      set(${_var} "${CMAKE_CURRENT_BINARY_DIR}/$<CONFIG>" PARENT_SCOPE)
    else ()
       # The path of the output directory does not contain the name of the configuration used.
-      set(${_var} "${CMAKE_CURRENT_BINARY_DIR}/${FILENAME}" PARENT_SCOPE)
+      set(${_var} "${CMAKE_CURRENT_BINARY_DIR}" PARENT_SCOPE)
    endif ()
 endfunction()
 
 function(hla_get_target_suffix _rti_hla_version output_suffix)
    string(TOLOWER "${CMAKE_SYSTEM_PROCESSOR}" _processor_lower)
-   if (${_rti_hla_version} LESS 2024)
+   if (${_rti_hla_version} LESS 2025)
       if (_processor_lower MATCHES "^(x86_64|amd64|x64)$")
          set(${output_suffix} "64" PARENT_SCOPE)
       else ()
          set(${output_suffix} "" PARENT_SCOPE)
       endif ()
-   else () # _rti_hla_version >= 2024
+   else () # _rti_hla_version >= 2025
       if (_processor_lower MATCHES "^(x86_64|amd64|x64)$")
          set(arch_suffix "")
       else ()
@@ -82,15 +82,15 @@ endfunction()
 function(add_copy_file_to_binary_dir _target _file_src_path)
    # Some files need to be placed in the same directory as where the executable is placed.
    # The following determines the path of this directory.
-   get_current_output_dir(OUTPUT_PATH)
+   get_current_output_dir(_output_path)
    get_filename_component(FILENAME ${_file_src_path} NAME)
    set(fedpro_file_copy_target ${_target}_copy_${FILENAME})
    add_custom_target(${fedpro_file_copy_target}
-         COMMAND ${CMAKE_COMMAND} -E copy_if_different "${_file_src_path}" "${OUTPUT_PATH}/${FILENAME}"
+         COMMAND ${CMAKE_COMMAND} -E copy_if_different "${_file_src_path}" "${_output_path}/${FILENAME}"
          DEPENDS "${_file_src_path}"
-         BYPRODUCTS "${OUTPUT_PATH}/${FILENAME}"
+         BYPRODUCTS "${_output_path}/${FILENAME}"
          COMMAND_EXPAND_LISTS
-         COMMENT "Copying FILE ${FILENAME} to ${OUTPUT_PATH}"
+         COMMENT "Copying FILE ${FILENAME} to ${_output_path}"
    )
    add_dependencies(${_target} ${fedpro_file_copy_target})
 endfunction()
@@ -98,13 +98,13 @@ endfunction()
 function(add_copy_target_to_binary_dir _target _src_target)
    # Some files need to be placed in the same directory as where the executable is placed.
    # The following determines the path of this directory.
-   get_current_output_dir(OUTPUT_PATH)
+   get_current_output_dir(_output_path)
    set(fedpro_file_copy_target ${_target}_copy_${_src_target})
    add_custom_target(${fedpro_file_copy_target}
-         COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:${_src_target}>" "${OUTPUT_PATH}"
+         COMMAND ${CMAKE_COMMAND} -E copy_if_different "$<TARGET_FILE:${_src_target}>" "${_output_path}"
          DEPENDS ${_src_target}
          COMMAND_EXPAND_LISTS
-         COMMENT "Copying TARGET ${_src_target} to ${OUTPUT_PATH}"
+         COMMENT "Copying TARGET ${_src_target} to ${_output_path}"
    )
    add_dependencies(${_target} ${fedpro_file_copy_target})
 endfunction()
@@ -142,6 +142,10 @@ function(fedpro_set_target_compile_options _target _rti_include_path)
          ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/../src
          ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/../src/fedpro
          ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/../include
+   )
+   # Add include directory as SYSTEM to silence warnings in third party headers.
+   target_include_directories(${_target}
+         SYSTEM PRIVATE
          ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/../third_party
          ${_rti_include_path}
    )
@@ -184,6 +188,10 @@ function(fedpro_set_librti_target_options _target _rti_namespace _rti_hla_versio
    target_include_directories(${_target}
          INTERFACE
          ${CMAKE_CURRENT_FUNCTION_LIST_DIR}/../include
+   )
+   # Add RTI include directory as SYSTEM to silence depreciation warnings in third party headers.
+   target_include_directories(${_target}
+         SYSTEM INTERFACE
          ${_rti_include_path}
    )
 

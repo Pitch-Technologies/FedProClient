@@ -29,7 +29,7 @@ public class TransportSettings {
    static final String DEFAULT_KEYSTORE_PASSWORD_PATH = null;
    static final String DEFAULT_KEYSTORE_PATH = null;
    static final String DEFAULT_KEYSTORE_TYPE = "JKS";
-   static final boolean DEFAULT_KEYSTORE_USE_DEFAULT = false;
+   static final boolean DEFAULT_KEYSTORE_USE_DEFAULT = true;
    static final TlsMode DEFAULT_TLS_MODE = TlsMode.DEFAULT;
    static final String DEFAULT_TLS_SNI = null;
 

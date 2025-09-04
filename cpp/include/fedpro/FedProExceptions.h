@@ -26,23 +26,23 @@ namespace FedPro
    /**
     * @brief Base class for custom exceptions in the FedPro application.
     */
-   class FEDPRO_EXPORT FedProException : public std::exception
+   class FedProException : public std::exception
    {
    public:
 
-      explicit FedProException(std::string message) noexcept;
+      FEDPRO_EXPORT explicit FedProException(std::string message) noexcept;
 
       /**
        * @brief Returns the exception message.
        * @return A const char pointer to the exception message.
        */
-      const char * what() const noexcept override;
+      FEDPRO_EXPORT const char * what() const noexcept override;
 
       /**
        * @brief Returns the raw name of the exception.
        * @return A char pointer to the exception name.
        */
-      const char * getName() const noexcept;
+      FEDPRO_EXPORT const char * getName() const noexcept;
 
    private:
       std::string _message;
@@ -51,60 +51,60 @@ namespace FedPro
    /**
     * @brief Session layer exception that indicates that a received message is invalid.
     */
-   class FEDPRO_EXPORT BadMessage : public FedProException
+   class BadMessage : public FedProException
    {
    public:
-      explicit BadMessage(std::string message);
+      FEDPRO_EXPORT explicit BadMessage(std::string message);
    };
 
    /**
     * @brief Service layer exception thrown when the current thread is interrupted by
     * another one.
     */
-   class FEDPRO_EXPORT InterruptedException : public FedProException
+   class InterruptedException : public FedProException
    {
    public:
-      explicit InterruptedException(std::string message);
+      FEDPRO_EXPORT explicit InterruptedException(std::string message);
    };
 
    /**
     * @brief Session layer exception that may be thrown when failing to insert a message
     * into a queue with no free allocated space left.
     */
-   class FEDPRO_EXPORT MessageQueueFull : public FedProException
+   class MessageQueueFull : public FedProException
    {
    public:
-      explicit MessageQueueFull(std::string message);
+      FEDPRO_EXPORT explicit MessageQueueFull(std::string message);
    };
 
    /**
     * @brief Session layer exception thrown when the state prohibits the intended
     * operation.
     */
-   class FEDPRO_EXPORT SessionIllegalState : public FedProException
+   class SessionIllegalState : public FedProException
    {
    public:
-      explicit SessionIllegalState(std::string message);
+      FEDPRO_EXPORT explicit SessionIllegalState(std::string message);
    };
 
    /**
     * @brief Session layer exception thrown when calling a member function but the session
     * has terminated.
     */
-   class FEDPRO_EXPORT SessionAlreadyTerminated : public SessionIllegalState
+   class SessionAlreadyTerminated : public SessionIllegalState
    {
    public:
-      explicit SessionAlreadyTerminated(std::string message);
+      FEDPRO_EXPORT explicit SessionAlreadyTerminated(std::string message);
    };
 
    /**
     * @brief Session layer exception indicating that the session cannot continue for some
     * reason. The session is unusable once this exception is thrown.
     */
-   class FEDPRO_EXPORT SessionLost : public FedProException
+   class SessionLost : public FedProException
    {
    public:
-      explicit SessionLost(std::string message);
+      FEDPRO_EXPORT explicit SessionLost(std::string message);
    };
 
 } // FedPro

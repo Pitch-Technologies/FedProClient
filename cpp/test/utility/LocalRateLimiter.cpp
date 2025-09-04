@@ -25,14 +25,14 @@ LocalRateLimiter::LocalRateLimiter(
 {
 }
 
-void LocalRateLimiter::preInsert(uint32_t size) noexcept
+void LocalRateLimiter::preInsert(size_t size) noexcept
 {
    if (_preInsertLock != nullptr) {
       std::unique_lock<std::mutex> lock(*_preInsertLock);
    }
 }
 
-void LocalRateLimiter::postInsert(uint32_t size) noexcept
+void LocalRateLimiter::postInsert(size_t size) noexcept
 {
    if (_postInsertLock != nullptr) {
       std::unique_lock<std::mutex> lock(*_postInsertLock);

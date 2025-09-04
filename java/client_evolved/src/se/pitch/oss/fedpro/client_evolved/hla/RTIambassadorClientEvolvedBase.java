@@ -16,15 +16,22 @@
 
 package se.pitch.oss.fedpro.client_evolved.hla;
 
-import hla.rti1516_202X.fedpro.*;
+import hla.rti1516_2025.fedpro.*;
 import hla.rti1516e.CallbackModel;
 import hla.rti1516e.FederateAmbassador;
 import hla.rti1516e.exceptions.*;
 import net.jcip.annotations.GuardedBy;
+import se.pitch.oss.fedpro.client.TypedProperties;
 import se.pitch.oss.fedpro.client_common.RTIambassadorClientGenericBase;
+import se.pitch.oss.fedpro.client_common.SettingsParser;
 import se.pitch.oss.fedpro.client_common.exceptions.*;
+import se.pitch.oss.fedpro.common.session.MovingStats;
+import se.pitch.oss.fedpro.common.session.MovingStatsNoOp;
+import se.pitch.oss.fedpro.common.session.StandAloneMovingStats;
 
 import java.util.ArrayList;
+
+import static se.pitch.oss.fedpro.client.Settings.SETTING_NAME_HLA_API_VERSION;
 
 public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBase {
 
@@ -179,10 +186,19 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
          throwIfAlreadyConnected();
 
          ArrayList<String> inputValueList = splitFederateConnectSettings(localSettingsDesignator);
-         final String clientSettings = extractAndRemoveClientSettings(inputValueList, true);
-         final RtiConfiguration parsedRtiConfiguration = createRtiConfiguration(inputValueList);
+         final String clientSettingsLine = extractAndRemoveClientSettings(inputValueList, true);
+         final RtiConfiguration.Builder parsedRtiConfiguration = createRtiConfiguration(inputValueList);
 
          try {
+            TypedProperties clientSettings = SettingsParser.parse(clientSettingsLine);
+            // API.version is a nonstandard setting supported by Pitch pRTI to improve handling of Evolved federates that use HLA 4's federate protocol.
+            // Other RTIs will simply ignore it and interpret that the federate is HLA 4 compliant.
+            String prtiApiVersion = clientSettings.getString(SETTING_NAME_HLA_API_VERSION, "IEEE 1516-2010");
+            if (!prtiApiVersion.isEmpty()) {
+               parsedRtiConfiguration.setAdditionalSettings(
+                     "API.version=" + prtiApiVersion + "\n" + parsedRtiConfiguration.getAdditionalSettings());
+            }
+
             _persistentSession = createPersistentSession(clientSettings);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
@@ -190,7 +206,11 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
             throw new RTIinternalError(e.getMessage());
          }
 
-         _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter);
+         if (_printStats) {
+            _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter, () -> new StandAloneMovingStats(_printStatsIntervalMillis));
+         } else {
+            _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter, MovingStatsNoOp::new);
+         }
 
          CallRequest.Builder callRequest = CallRequest.newBuilder().setConnectWithConfigurationRequest(
                ConnectWithConfigurationRequest.newBuilder().setRtiConfiguration(parsedRtiConfiguration));
@@ -200,6 +220,7 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
             CallResponse callResponse = doHlaCall(callRequest);
             // Todo - I don't see how we need throwOnException() here? remove?
             throwOnException(callResponse);
+            startStatPrinting();
             if (callbackModel == CallbackModel.HLA_IMMEDIATE) {
                startCallbackThread();
             }
@@ -213,11 +234,11 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
       }
    }
 
-   public static RtiConfiguration createRtiConfiguration(ArrayList<String> inputValueList)
+   public static RtiConfiguration.Builder createRtiConfiguration(ArrayList<String> inputValueList)
    {
       RtiConfiguration.Builder builder = RtiConfiguration.newBuilder();
       if (inputValueList.isEmpty()) {
-         return builder.build();
+         return builder;
       }
 
       String firstLine = inputValueList.get(0);
@@ -230,7 +251,7 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
 
       // No need to set the rtiAddress since an LRC may specify the CRC address through the additional settings field
       // of the RtiConfiguration object, which is done in this method.
-      return builder.build();
+      return builder;
    }
 
    public void disconnect()
@@ -241,9 +262,31 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
       try {
          disconnectBase();
       } catch (FedProRtiInternalError | RuntimeException e) {
-         // TODO: What happens in the standard API when we call disconnect before the RTIambassador is connected?
          throw new RTIinternalError("" + e, e);
       }
    }
 
+   @Override
+   protected MovingStats.Stats getReflectStats(long time)
+   {
+      return _federateAmbassadorDispatcher.getReflectStats(time);
+   }
+
+   @Override
+   protected MovingStats.Stats getReceivedInteractionStats(long time)
+   {
+      return _federateAmbassadorDispatcher.getReceivedInteractionStats(time);
+   }
+
+   @Override
+   protected MovingStats.Stats getReceivedDirectedInteractionStats(long time)
+   {
+      return _federateAmbassadorDispatcher.getReceivedDirectedInteractionStats(time);
+   }
+
+   @Override
+   protected MovingStats.Stats getCallbackTimeStats(long time)
+   {
+      return _federateAmbassadorDispatcher.getCallbackTimeStats(time);
+   }
 }

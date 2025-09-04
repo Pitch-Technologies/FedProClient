@@ -12,6 +12,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+
 include(${CMAKE_CURRENT_LIST_DIR}/common.cmake)
 
 set(CMAKE_SYSTEM_NAME Linux)
@@ -30,10 +31,8 @@ set(CMAKE_CXX_FLAGS "-m32 ${CMAKE_CXX_FLAGS}")
 
 # Set flags that are compiler specific
 set(FEDPRO_CXX_FLAGS_EVOLVED
-      # -w # Uncomment if you want to suppress all warnings
-      -Wl,--no-as-needed
+      -Wno-deprecated-declarations # Suppress warnings about deprecated declarations
 )
 set(FEDPRO_CXX_FLAGS_HLA4
-      -fvisibility=hidden
-      # -Werror # Uncomment if you want to treat warnings as errors
+      -Werror # Treats all warnings as errors
 )

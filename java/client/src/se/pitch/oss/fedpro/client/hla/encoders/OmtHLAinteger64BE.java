@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.client.hla.encoders;
 
-import hla.rti1516_202X.encoding.ByteWrapper;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderException;
-import hla.rti1516_202X.encoding.HLAinteger64BE;
+import hla.rti1516_2025.encoding.ByteWrapper;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderException;
+import hla.rti1516_2025.encoding.HLAinteger64BE;
 
 class OmtHLAinteger64BE extends AbstractDataElement implements HLAinteger64BE {
    private long _value;

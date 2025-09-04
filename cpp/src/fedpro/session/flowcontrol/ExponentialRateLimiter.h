@@ -23,18 +23,18 @@ namespace FedPro
    class ExponentialRateLimiter : public RateLimiter
    {
    public:
-      explicit ExponentialRateLimiter(uint32_t queueSize) noexcept;
+      explicit ExponentialRateLimiter(size_t queueSize) noexcept;
 
       ~ExponentialRateLimiter() noexcept override = default;
 
-      void preInsert(uint32_t size) noexcept override;
+      void preInsert(size_t size) noexcept override;
 
-      void postInsert(uint32_t size) noexcept override;
+      void postInsert(size_t size) noexcept override;
 
       std::string toString() noexcept override;
 
    private:
-      const uint32_t _cutoff;
+      const size_t _cutoff;
    };
 
 } // FedPro

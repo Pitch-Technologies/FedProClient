@@ -17,7 +17,7 @@
 // Silence clang-tidy issues reported for standard HLA exception.
 // NOLINTBEGIN(hicpp-exception-baseclass)
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 
 #include "Encoder.h"
 

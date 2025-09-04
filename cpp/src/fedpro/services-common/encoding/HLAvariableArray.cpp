@@ -118,7 +118,7 @@ namespace RTI_NAMESPACE
 
    // Adds a copy of the dataElement instance to this variable array all array elements
    // must have same type
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariableArray &
 #else
    void
@@ -127,14 +127,14 @@ namespace RTI_NAMESPACE
          const DataElement & dataElement) RTI_THROW(EncoderException)
    {
       _impl->elements.push_back(pair<bool, DataElement *>(true, dataElement.clone().release()));
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
    // Adds a copy of the dataElement instance to this variable array all array elements
    // must have same type
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariableArray &
 #else
    void
@@ -143,7 +143,7 @@ namespace RTI_NAMESPACE
          DataElement * dataElement) RTI_THROW(EncoderException)
    {
       _impl->elements.push_back(pair<bool, DataElement *>(false, dataElement));
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -165,7 +165,7 @@ namespace RTI_NAMESPACE
       return *(_impl->elements[index].second);
    }
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariableArray &
 #else
    void
@@ -184,12 +184,12 @@ namespace RTI_NAMESPACE
          delete _impl->elements.at(index).second;
       }
       _impl->elements.at(index) = pair<bool, DataElement *>(true, dataElement.clone().release());
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariableArray &
 #else
    void
@@ -208,7 +208,7 @@ namespace RTI_NAMESPACE
          delete _impl->elements.at(index).second;
       }
       _impl->elements.at(index) = pair<bool, DataElement *>(false, dataElement);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }
@@ -288,7 +288,7 @@ namespace RTI_NAMESPACE
    }
 
    // Decodes this element from the ByteWrapper.
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAvariableArray &
 #else
    void
@@ -298,7 +298,7 @@ namespace RTI_NAMESPACE
    {
       vector<Octet> buffer((char *) inData.data(), (char *) inData.data() + inData.size());
       decodeFrom(buffer, 0);
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       return *this;
 #endif
    }

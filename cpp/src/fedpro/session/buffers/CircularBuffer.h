@@ -20,10 +20,12 @@
 
 #include <chrono>
 #include <condition_variable>
+#include <cstddef>
 #include <cstdint>
 #include <functional>
 #include <memory>
 #include <mutex>
+#include <stdexcept>
 
 namespace FedPro
 {
@@ -35,7 +37,7 @@ namespace FedPro
    {
    public:
 
-      using size_type = uint32_t;
+      using size_type = size_t;
 
       using Predicate = std::function<bool(const E &)>;
 
@@ -44,11 +46,7 @@ namespace FedPro
               _condition{},
               _interrupted{false},
               _capacity{capacity},
-              _data{new E[capacity]},
-              _writeIndex{-1},
-              _count{0},
-              _hasRotated{},
-              _hasWrittenAfterRotate{}
+              _data{new E[capacity]}
       {
       }
 
@@ -60,13 +58,12 @@ namespace FedPro
       bool insert(E && element) noexcept override
       {
          std::lock_guard<std::mutex> lock(_mutex);
-         size_type nextWriteIndex = inc(_writeIndex);
-         _data[nextWriteIndex] = std::move(element);
-         _writeIndex = static_cast<int64_t>(nextWriteIndex);
+         _data[_headIndex] = std::move(element);
+         _headIndex = inc(_headIndex);
          if (_hasRotated && !_hasWrittenAfterRotate) {
             _hasWrittenAfterRotate = true;
          }
-         if (_writeIndex >= (static_cast<int64_t>(_capacity) - 1)) {
+         if (_headIndex == 0) {
             _hasRotated = true;
          }
          if (_count < _capacity) {
@@ -79,7 +76,7 @@ namespace FedPro
       std::unique_ptr<E> peekOldest()
       {
          std::lock_guard<std::mutex> lock(_mutex);
-         if (_writeIndex > -1) {
+         if (_headIndex > 0) {
             return std::make_unique<E>(_data[oldestIndex()]);
          }
          return nullptr;
@@ -88,8 +85,8 @@ namespace FedPro
       std::unique_ptr<E> peekNewest()
       {
          std::lock_guard<std::mutex> lock(_mutex);
-         if (_writeIndex > -1) {
-            return std::make_unique<E>(_data[_writeIndex]);
+         if (_headIndex > 0) {
+            return std::make_unique<E>(_data[_headIndex - 1]);
          }
          return nullptr;
       }
@@ -133,7 +130,7 @@ namespace FedPro
          if (_hasRotated) {
             _count = _capacity;
          } else {
-            _count = _writeIndex + 1;
+            _count = _headIndex;
          }
       }
 
@@ -222,7 +219,7 @@ namespace FedPro
          result += "\tInterrupted = " + std::to_string(_interrupted) + ",\n";
          result += "\tCapacity = " + std::to_string(_capacity) + ",\n";
          result += "\tData = " + sequenceToString(_data, _count) + "\n";
-         result += "\tWrite index = " + std::to_string(_writeIndex) + ",\n";
+         result += "\tHead index (next write) = " + std::to_string(_headIndex) + ",\n";
          result += "\tCount = " + std::to_string(_count) + ",\n";
          std::string hasRotated = _hasRotated ? "true" : "false";
          result += "\tRotated = " + hasRotated + "\n";
@@ -238,15 +235,15 @@ namespace FedPro
 
       const size_type _capacity;
       E * _data;
-      int64_t _writeIndex;
-      size_type _count;
-      bool _hasRotated;
-      bool _hasWrittenAfterRotate;
+      size_type _headIndex{0};
+      size_type _count{0};
+      bool _hasRotated{false};
+      bool _hasWrittenAfterRotate{false};
 
       // Requires mutex to be held when called.
-      size_type inc(int64_t index) const noexcept
+      size_type inc(size_type index) const noexcept
       {
-         return static_cast<size_type>((index + 1) % _capacity);
+         return (1 + (index % _capacity)) % _capacity;
       }
 
       // Requires mutex to be held when called.
@@ -279,17 +276,17 @@ namespace FedPro
       // Requires mutex to be held when called.
       size_type oldestIndex() const noexcept
       {
-         return _hasRotated ? inc(_writeIndex) : 0;
+         return _hasRotated ? _headIndex : 0;
       }
 
       // Requires mutex to be held when called.
       size_type readIndex() const noexcept
       {
-         int64_t readIndex = _writeIndex - (static_cast<int64_t>(_count) - 1);
-         if (readIndex < 0) {
-            readIndex += static_cast<int64_t>(_capacity);
+         if (_headIndex > _count) {
+            return (_headIndex - _count) % _capacity;
+         } else {
+            return ((_capacity + _headIndex) - _count) % _capacity;
          }
-         return static_cast<size_type>(readIndex % _capacity);
       }
    };
 

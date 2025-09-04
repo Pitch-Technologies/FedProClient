@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include <cstdint>
+#include <cstddef>
 #include <string>
 
 namespace FedPro
@@ -28,9 +28,9 @@ namespace FedPro
 
       virtual ~RateLimiter() = default;
 
-      virtual void preInsert(uint32_t size) noexcept = 0;
+      virtual void preInsert(size_t size) noexcept = 0;
 
-      virtual void postInsert(uint32_t size) noexcept = 0;
+      virtual void postInsert(size_t size) noexcept = 0;
 
       virtual std::string toString() noexcept = 0;
    };

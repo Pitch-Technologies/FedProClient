@@ -18,7 +18,6 @@
 
 namespace RTI_NAMESPACE
 {
-#if (RTI_HLA_VERSION >= 2024)
    ConfigurationResult::ConfigurationResult()
          : configurationUsed{false},
            addressUsed{false},
@@ -39,6 +38,7 @@ namespace RTI_NAMESPACE
    {
    }
 
+#if (RTI_HLA_VERSION >= 2025)
    FederateRestoreStatus::FederateRestoreStatus() :
       preRestoreHandle{},
       postRestoreHandle{},
@@ -57,7 +57,7 @@ namespace RTI_NAMESPACE
    {
    }
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    FederationExecutionInformation::FederationExecutionInformation() = default;
 #endif
 
@@ -69,7 +69,7 @@ namespace RTI_NAMESPACE
    {
    }
 
-#if (RTI_HLA_VERSION < 2024)
+#if (RTI_HLA_VERSION < 2025)
    SupplementalReflectInfo::SupplementalReflectInfo()
          : hasProducingFederate{false},
            hasSentRegions{false}
@@ -142,7 +142,7 @@ namespace RTI_NAMESPACE
    }
 #endif
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    FederationExecutionMemberInformation::FederationExecutionMemberInformation() = default;
 
    FederationExecutionMemberInformation::FederationExecutionMemberInformation(

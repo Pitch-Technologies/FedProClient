@@ -14,13 +14,16 @@
  limitations under the License.
  **********************************************************************/
 
+// Silence clang-tidy issues reported for standard HLA exception.
+// NOLINTBEGIN(hicpp-exception-baseclass)
+
 #include "ClientConverter.h"
 
 #include "HandleImplementation.h"
 #include "RegionHandleImplementation.h"
 #include "utility/StringUtil.h"
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/time/LogicalTime.h>
 #include <RTI/time/LogicalTimeInterval.h>
 #else
@@ -40,249 +43,248 @@ namespace FedPro
    //
    // Enumerations
    //
-#if RTI_HLA_VERSION >= 2024
-   RTI_NAMESPACE::AdditionalSettingsResultCode ClientConverter::convertToHla(rti1516_202X::fedpro::AdditionalSettingsResultCode fedproResultCode) const
+
+   RTI_NAMESPACE::AdditionalSettingsResultCode ClientConverter::convertToHla(rti1516_2025::fedpro::AdditionalSettingsResultCode fedproResultCode) const
    {
       switch (fedproResultCode) {
-         case rti1516_202X::fedpro::SETTINGS_IGNORED:
+         case rti1516_2025::fedpro::SETTINGS_IGNORED:
             return RTI_NAMESPACE::SETTINGS_IGNORED;
-         case rti1516_202X::fedpro::SETTINGS_FAILED_TO_PARSE:
+         case rti1516_2025::fedpro::SETTINGS_FAILED_TO_PARSE:
             return RTI_NAMESPACE::SETTINGS_FAILED_TO_PARSE;
-         case rti1516_202X::fedpro::SETTINGS_APPLIED:
+         case rti1516_2025::fedpro::SETTINGS_APPLIED:
             return RTI_NAMESPACE::SETTINGS_APPLIED;
          default:
             throw std::invalid_argument("Invalid AdditionalSettingsResultCode value");
       }
    }
-#endif
 
-   RTI_NAMESPACE::OrderType ClientConverter::convertToHla(const rti1516_202X::fedpro::OrderType fedproOrderType) const
+   RTI_NAMESPACE::OrderType ClientConverter::convertToHla(const rti1516_2025::fedpro::OrderType fedproOrderType) const
    {
       switch (fedproOrderType) {
-         case rti1516_202X::fedpro::RECEIVE:
+         case rti1516_2025::fedpro::RECEIVE:
             return RTI_NAMESPACE::RECEIVE;
-         case rti1516_202X::fedpro::TIMESTAMP:
+         case rti1516_2025::fedpro::TIMESTAMP:
             return RTI_NAMESPACE::TIMESTAMP;
          default:
             throw std::invalid_argument("Invalid OrderType value");
       }
    }
 
-   rti1516_202X::fedpro::OrderType ClientConverter::convertFromHla(const RTI_NAMESPACE::OrderType rtiOrderType) const
+   rti1516_2025::fedpro::OrderType ClientConverter::convertFromHla(const RTI_NAMESPACE::OrderType rtiOrderType) const
    {
       switch (rtiOrderType) {
          case RTI_NAMESPACE::RECEIVE:
-            return rti1516_202X::fedpro::RECEIVE;
+            return rti1516_2025::fedpro::RECEIVE;
          case RTI_NAMESPACE::TIMESTAMP:
-            return rti1516_202X::fedpro::TIMESTAMP;
+            return rti1516_2025::fedpro::TIMESTAMP;
          default:
             throw std::invalid_argument("Invalid OrderType value");
       }
    }
 
-   RTI_NAMESPACE::ResignAction ClientConverter::convertToHla(const rti1516_202X::fedpro::ResignAction fedproResignAction) const
+   RTI_NAMESPACE::ResignAction ClientConverter::convertToHla(const rti1516_2025::fedpro::ResignAction fedproResignAction) const
    {
       switch (fedproResignAction) {
-         case rti1516_202X::fedpro::UNCONDITIONALLY_DIVEST_ATTRIBUTES:
+         case rti1516_2025::fedpro::UNCONDITIONALLY_DIVEST_ATTRIBUTES:
             return RTI_NAMESPACE::UNCONDITIONALLY_DIVEST_ATTRIBUTES;
-         case rti1516_202X::fedpro::DELETE_OBJECTS:
+         case rti1516_2025::fedpro::DELETE_OBJECTS:
             return RTI_NAMESPACE::DELETE_OBJECTS;
-         case rti1516_202X::fedpro::CANCEL_PENDING_OWNERSHIP_ACQUISITIONS:
+         case rti1516_2025::fedpro::CANCEL_PENDING_OWNERSHIP_ACQUISITIONS:
             return RTI_NAMESPACE::CANCEL_PENDING_OWNERSHIP_ACQUISITIONS;
-         case rti1516_202X::fedpro::DELETE_OBJECTS_THEN_DIVEST:
+         case rti1516_2025::fedpro::DELETE_OBJECTS_THEN_DIVEST:
             return RTI_NAMESPACE::DELETE_OBJECTS_THEN_DIVEST;
-         case rti1516_202X::fedpro::CANCEL_THEN_DELETE_THEN_DIVEST:
+         case rti1516_2025::fedpro::CANCEL_THEN_DELETE_THEN_DIVEST:
             return RTI_NAMESPACE::CANCEL_THEN_DELETE_THEN_DIVEST;
-         case rti1516_202X::fedpro::NO_ACTION:
+         case rti1516_2025::fedpro::NO_ACTION:
             return RTI_NAMESPACE::NO_ACTION;
          default:
             throw std::invalid_argument("Invalid ResignAction value");
       }
    }
 
-   rti1516_202X::fedpro::ResignAction ClientConverter::convertFromHla(const RTI_NAMESPACE::ResignAction rtiResignAction) const
+   rti1516_2025::fedpro::ResignAction ClientConverter::convertFromHla(const RTI_NAMESPACE::ResignAction rtiResignAction) const
    {
       switch (rtiResignAction) {
          case RTI_NAMESPACE::UNCONDITIONALLY_DIVEST_ATTRIBUTES:
-            return rti1516_202X::fedpro::UNCONDITIONALLY_DIVEST_ATTRIBUTES;
+            return rti1516_2025::fedpro::UNCONDITIONALLY_DIVEST_ATTRIBUTES;
          case RTI_NAMESPACE::DELETE_OBJECTS:
-            return rti1516_202X::fedpro::DELETE_OBJECTS;
+            return rti1516_2025::fedpro::DELETE_OBJECTS;
          case RTI_NAMESPACE::CANCEL_PENDING_OWNERSHIP_ACQUISITIONS:
-            return rti1516_202X::fedpro::CANCEL_PENDING_OWNERSHIP_ACQUISITIONS;
+            return rti1516_2025::fedpro::CANCEL_PENDING_OWNERSHIP_ACQUISITIONS;
          case RTI_NAMESPACE::DELETE_OBJECTS_THEN_DIVEST:
-            return rti1516_202X::fedpro::DELETE_OBJECTS_THEN_DIVEST;
+            return rti1516_2025::fedpro::DELETE_OBJECTS_THEN_DIVEST;
          case RTI_NAMESPACE::CANCEL_THEN_DELETE_THEN_DIVEST:
-            return rti1516_202X::fedpro::CANCEL_THEN_DELETE_THEN_DIVEST;
+            return rti1516_2025::fedpro::CANCEL_THEN_DELETE_THEN_DIVEST;
          case RTI_NAMESPACE::NO_ACTION:
-            return rti1516_202X::fedpro::NO_ACTION;
+            return rti1516_2025::fedpro::NO_ACTION;
          default:
             throw std::invalid_argument("Invalid ResignAction value");
       }
    }
 
-   RTI_NAMESPACE::RestoreFailureReason ClientConverter::convertToHla(const rti1516_202X::fedpro::RestoreFailureReason fedproFailureReason) const
+   RTI_NAMESPACE::RestoreFailureReason ClientConverter::convertToHla(const rti1516_2025::fedpro::RestoreFailureReason fedproFailureReason) const
    {
       switch (fedproFailureReason) {
-         case rti1516_202X::fedpro::RTI_UNABLE_TO_RESTORE:
+         case rti1516_2025::fedpro::RTI_UNABLE_TO_RESTORE:
             return RTI_NAMESPACE::RTI_UNABLE_TO_RESTORE;
-         case rti1516_202X::fedpro::FEDERATE_REPORTED_FAILURE_DURING_RESTORE:
+         case rti1516_2025::fedpro::FEDERATE_REPORTED_FAILURE_DURING_RESTORE:
             return RTI_NAMESPACE::FEDERATE_REPORTED_FAILURE_DURING_RESTORE;
-         case rti1516_202X::fedpro::FEDERATE_RESIGNED_DURING_RESTORE:
+         case rti1516_2025::fedpro::FEDERATE_RESIGNED_DURING_RESTORE:
             return RTI_NAMESPACE::FEDERATE_RESIGNED_DURING_RESTORE;
-         case rti1516_202X::fedpro::RTI_DETECTED_FAILURE_DURING_RESTORE:
+         case rti1516_2025::fedpro::RTI_DETECTED_FAILURE_DURING_RESTORE:
             return RTI_NAMESPACE::RTI_DETECTED_FAILURE_DURING_RESTORE;
-         case rti1516_202X::fedpro::RESTORE_ABORTED:
+         case rti1516_2025::fedpro::RESTORE_ABORTED:
             return RTI_NAMESPACE::RESTORE_ABORTED;
          default:
             throw std::invalid_argument("Invalid RestoreFailureReason value");
       }
    }
 
-   rti1516_202X::fedpro::RestoreFailureReason ClientConverter::convertFromHla(const RTI_NAMESPACE::RestoreFailureReason rtiFailureReason) const
+   rti1516_2025::fedpro::RestoreFailureReason ClientConverter::convertFromHla(const RTI_NAMESPACE::RestoreFailureReason rtiFailureReason) const
    {
       switch (rtiFailureReason) {
          case RTI_NAMESPACE::RTI_UNABLE_TO_RESTORE:
-            return rti1516_202X::fedpro::RTI_UNABLE_TO_RESTORE;
+            return rti1516_2025::fedpro::RTI_UNABLE_TO_RESTORE;
          case RTI_NAMESPACE::FEDERATE_REPORTED_FAILURE_DURING_RESTORE:
-            return rti1516_202X::fedpro::FEDERATE_REPORTED_FAILURE_DURING_RESTORE;
+            return rti1516_2025::fedpro::FEDERATE_REPORTED_FAILURE_DURING_RESTORE;
          case RTI_NAMESPACE::FEDERATE_RESIGNED_DURING_RESTORE:
-            return rti1516_202X::fedpro::FEDERATE_RESIGNED_DURING_RESTORE;
+            return rti1516_2025::fedpro::FEDERATE_RESIGNED_DURING_RESTORE;
          case RTI_NAMESPACE::RTI_DETECTED_FAILURE_DURING_RESTORE:
-            return rti1516_202X::fedpro::RTI_DETECTED_FAILURE_DURING_RESTORE;
+            return rti1516_2025::fedpro::RTI_DETECTED_FAILURE_DURING_RESTORE;
          case RTI_NAMESPACE::RESTORE_ABORTED:
-            return rti1516_202X::fedpro::RESTORE_ABORTED;
+            return rti1516_2025::fedpro::RESTORE_ABORTED;
          default:
             throw std::invalid_argument("Invalid RestoreFailureReason value");
       }
    }
 
-   RTI_NAMESPACE::RestoreStatus ClientConverter::convertToHla(rti1516_202X::fedpro::RestoreStatus fedproStatus) const
+   RTI_NAMESPACE::RestoreStatus ClientConverter::convertToHla(rti1516_2025::fedpro::RestoreStatus fedproStatus) const
    {
       switch (fedproStatus) {
-         case rti1516_202X::fedpro::NO_RESTORE_IN_PROGRESS:
+         case rti1516_2025::fedpro::NO_RESTORE_IN_PROGRESS:
             return RTI_NAMESPACE::NO_RESTORE_IN_PROGRESS;
-         case rti1516_202X::fedpro::FEDERATE_RESTORE_REQUEST_PENDING:
+         case rti1516_2025::fedpro::FEDERATE_RESTORE_REQUEST_PENDING:
             return RTI_NAMESPACE::FEDERATE_RESTORE_REQUEST_PENDING;
-         case rti1516_202X::fedpro::FEDERATE_WAITING_FOR_RESTORE_TO_BEGIN:
+         case rti1516_2025::fedpro::FEDERATE_WAITING_FOR_RESTORE_TO_BEGIN:
             return RTI_NAMESPACE::FEDERATE_WAITING_FOR_RESTORE_TO_BEGIN;
-         case rti1516_202X::fedpro::FEDERATE_PREPARED_TO_RESTORE:
+         case rti1516_2025::fedpro::FEDERATE_PREPARED_TO_RESTORE:
             return RTI_NAMESPACE::FEDERATE_PREPARED_TO_RESTORE;
-         case rti1516_202X::fedpro::FEDERATE_RESTORING:
+         case rti1516_2025::fedpro::FEDERATE_RESTORING:
             return RTI_NAMESPACE::FEDERATE_RESTORING;
-         case rti1516_202X::fedpro::FEDERATE_WAITING_FOR_FEDERATION_TO_RESTORE:
+         case rti1516_2025::fedpro::FEDERATE_WAITING_FOR_FEDERATION_TO_RESTORE:
             return RTI_NAMESPACE::FEDERATE_WAITING_FOR_FEDERATION_TO_RESTORE;
          default:
             throw std::invalid_argument("Invalid RestoreStatus value");
       }
    }
 
-   RTI_NAMESPACE::SaveFailureReason ClientConverter::convertToHla(const rti1516_202X::fedpro::SaveFailureReason fedproFailureReason) const
+   RTI_NAMESPACE::SaveFailureReason ClientConverter::convertToHla(const rti1516_2025::fedpro::SaveFailureReason fedproFailureReason) const
    {
       switch (fedproFailureReason) {
-         case rti1516_202X::fedpro::RTI_UNABLE_TO_SAVE:
+         case rti1516_2025::fedpro::RTI_UNABLE_TO_SAVE:
             return RTI_NAMESPACE::RTI_UNABLE_TO_SAVE;
-         case rti1516_202X::fedpro::FEDERATE_REPORTED_FAILURE_DURING_SAVE:
+         case rti1516_2025::fedpro::FEDERATE_REPORTED_FAILURE_DURING_SAVE:
             return RTI_NAMESPACE::FEDERATE_REPORTED_FAILURE_DURING_SAVE;
-         case rti1516_202X::fedpro::FEDERATE_RESIGNED_DURING_SAVE:
+         case rti1516_2025::fedpro::FEDERATE_RESIGNED_DURING_SAVE:
             return RTI_NAMESPACE::FEDERATE_RESIGNED_DURING_SAVE;
-         case rti1516_202X::fedpro::RTI_DETECTED_FAILURE_DURING_SAVE:
+         case rti1516_2025::fedpro::RTI_DETECTED_FAILURE_DURING_SAVE:
             return RTI_NAMESPACE::RTI_DETECTED_FAILURE_DURING_SAVE;
-         case rti1516_202X::fedpro::SAVE_TIME_CANNOT_BE_HONORED:
+         case rti1516_2025::fedpro::SAVE_TIME_CANNOT_BE_HONORED:
             return RTI_NAMESPACE::SAVE_TIME_CANNOT_BE_HONORED;
-         case rti1516_202X::fedpro::SAVE_ABORTED:
+         case rti1516_2025::fedpro::SAVE_ABORTED:
             return RTI_NAMESPACE::SAVE_ABORTED;
          default:
             throw std::invalid_argument("Invalid SaveFailureReason value");
       }
    }
 
-   rti1516_202X::fedpro::SaveFailureReason ClientConverter::convertFromHla(const RTI_NAMESPACE::SaveFailureReason rtiFailureReason) const
+   rti1516_2025::fedpro::SaveFailureReason ClientConverter::convertFromHla(const RTI_NAMESPACE::SaveFailureReason rtiFailureReason) const
    {
 
       switch (rtiFailureReason) {
          case RTI_NAMESPACE::RTI_UNABLE_TO_SAVE:
-            return rti1516_202X::fedpro::RTI_UNABLE_TO_SAVE;
+            return rti1516_2025::fedpro::RTI_UNABLE_TO_SAVE;
          case RTI_NAMESPACE::FEDERATE_REPORTED_FAILURE_DURING_SAVE:
-            return rti1516_202X::fedpro::FEDERATE_REPORTED_FAILURE_DURING_SAVE;
+            return rti1516_2025::fedpro::FEDERATE_REPORTED_FAILURE_DURING_SAVE;
          case RTI_NAMESPACE::FEDERATE_RESIGNED_DURING_SAVE:
-            return rti1516_202X::fedpro::FEDERATE_RESIGNED_DURING_SAVE;
+            return rti1516_2025::fedpro::FEDERATE_RESIGNED_DURING_SAVE;
          case RTI_NAMESPACE::RTI_DETECTED_FAILURE_DURING_SAVE:
-            return rti1516_202X::fedpro::RTI_DETECTED_FAILURE_DURING_SAVE;
+            return rti1516_2025::fedpro::RTI_DETECTED_FAILURE_DURING_SAVE;
          case RTI_NAMESPACE::SAVE_TIME_CANNOT_BE_HONORED:
-            return rti1516_202X::fedpro::SAVE_TIME_CANNOT_BE_HONORED;
+            return rti1516_2025::fedpro::SAVE_TIME_CANNOT_BE_HONORED;
          case RTI_NAMESPACE::SAVE_ABORTED:
-            return rti1516_202X::fedpro::SAVE_ABORTED;
+            return rti1516_2025::fedpro::SAVE_ABORTED;
          default:
             throw std::invalid_argument("Invalid SaveFailureReason value");
       }
    }
 
-   RTI_NAMESPACE::SaveStatus ClientConverter::convertToHla(rti1516_202X::fedpro::SaveStatus fedproStatus) const
+   RTI_NAMESPACE::SaveStatus ClientConverter::convertToHla(rti1516_2025::fedpro::SaveStatus fedproStatus) const
    {
       switch (fedproStatus) {
-         case rti1516_202X::fedpro::NO_SAVE_IN_PROGRESS:
+         case rti1516_2025::fedpro::NO_SAVE_IN_PROGRESS:
             return RTI_NAMESPACE::NO_SAVE_IN_PROGRESS;
-         case rti1516_202X::fedpro::FEDERATE_INSTRUCTED_TO_SAVE:
+         case rti1516_2025::fedpro::FEDERATE_INSTRUCTED_TO_SAVE:
             return RTI_NAMESPACE::FEDERATE_INSTRUCTED_TO_SAVE;
-         case rti1516_202X::fedpro::FEDERATE_SAVING:
+         case rti1516_2025::fedpro::FEDERATE_SAVING:
             return RTI_NAMESPACE::FEDERATE_SAVING;
-         case rti1516_202X::fedpro::FEDERATE_WAITING_FOR_FEDERATION_TO_SAVE:
+         case rti1516_2025::fedpro::FEDERATE_WAITING_FOR_FEDERATION_TO_SAVE:
             return RTI_NAMESPACE::FEDERATE_WAITING_FOR_FEDERATION_TO_SAVE;
          default:
             throw std::invalid_argument("Invalid SaveStatus value");
       }
    }
 
-   RTI_NAMESPACE::ServiceGroup ClientConverter::convertToHla(const rti1516_202X::fedpro::ServiceGroup fedproServiceGroup) const
+   RTI_NAMESPACE::ServiceGroup ClientConverter::convertToHla(const rti1516_2025::fedpro::ServiceGroup fedproServiceGroup) const
    {
       switch (fedproServiceGroup) {
-         case rti1516_202X::fedpro::FEDERATION_MANAGEMENT:
+         case rti1516_2025::fedpro::FEDERATION_MANAGEMENT:
             return RTI_NAMESPACE::FEDERATION_MANAGEMENT;
-         case rti1516_202X::fedpro::DECLARATION_MANAGEMENT:
+         case rti1516_2025::fedpro::DECLARATION_MANAGEMENT:
             return RTI_NAMESPACE::DECLARATION_MANAGEMENT;
-         case rti1516_202X::fedpro::OBJECT_MANAGEMENT:
+         case rti1516_2025::fedpro::OBJECT_MANAGEMENT:
             return RTI_NAMESPACE::OBJECT_MANAGEMENT;
-         case rti1516_202X::fedpro::OWNERSHIP_MANAGEMENT:
+         case rti1516_2025::fedpro::OWNERSHIP_MANAGEMENT:
             return RTI_NAMESPACE::OWNERSHIP_MANAGEMENT;
-         case rti1516_202X::fedpro::TIME_MANAGEMENT:
+         case rti1516_2025::fedpro::TIME_MANAGEMENT:
             return RTI_NAMESPACE::TIME_MANAGEMENT;
-         case rti1516_202X::fedpro::DATA_DISTRIBUTION_MANAGEMENT:
+         case rti1516_2025::fedpro::DATA_DISTRIBUTION_MANAGEMENT:
             return RTI_NAMESPACE::DATA_DISTRIBUTION_MANAGEMENT;
-         case rti1516_202X::fedpro::SUPPORT_SERVICES:
+         case rti1516_2025::fedpro::SUPPORT_SERVICES:
             return RTI_NAMESPACE::SUPPORT_SERVICES;
          default:
             throw std::invalid_argument("Invalid ServiceGroup value");
       }
    }
 
-   rti1516_202X::fedpro::ServiceGroup ClientConverter::convertFromHla(const RTI_NAMESPACE::ServiceGroup rtiServiceGroup) const
+   rti1516_2025::fedpro::ServiceGroup ClientConverter::convertFromHla(const RTI_NAMESPACE::ServiceGroup rtiServiceGroup) const
    {
       switch (rtiServiceGroup) {
          case RTI_NAMESPACE::FEDERATION_MANAGEMENT:
-            return rti1516_202X::fedpro::FEDERATION_MANAGEMENT;
+            return rti1516_2025::fedpro::FEDERATION_MANAGEMENT;
          case RTI_NAMESPACE::DECLARATION_MANAGEMENT:
-            return rti1516_202X::fedpro::DECLARATION_MANAGEMENT;
+            return rti1516_2025::fedpro::DECLARATION_MANAGEMENT;
          case RTI_NAMESPACE::OBJECT_MANAGEMENT:
-            return rti1516_202X::fedpro::OBJECT_MANAGEMENT;
+            return rti1516_2025::fedpro::OBJECT_MANAGEMENT;
          case RTI_NAMESPACE::OWNERSHIP_MANAGEMENT:
-            return rti1516_202X::fedpro::OWNERSHIP_MANAGEMENT;
+            return rti1516_2025::fedpro::OWNERSHIP_MANAGEMENT;
          case RTI_NAMESPACE::TIME_MANAGEMENT:
-            return rti1516_202X::fedpro::TIME_MANAGEMENT;
+            return rti1516_2025::fedpro::TIME_MANAGEMENT;
          case RTI_NAMESPACE::DATA_DISTRIBUTION_MANAGEMENT:
-            return rti1516_202X::fedpro::DATA_DISTRIBUTION_MANAGEMENT;
+            return rti1516_2025::fedpro::DATA_DISTRIBUTION_MANAGEMENT;
          case RTI_NAMESPACE::SUPPORT_SERVICES:
-            return rti1516_202X::fedpro::SUPPORT_SERVICES;
+            return rti1516_2025::fedpro::SUPPORT_SERVICES;
          default:
             throw std::invalid_argument("Invalid ServiceGroup value");
       }
    }
 
-   RTI_NAMESPACE::SynchronizationPointFailureReason ClientConverter::convertToHla(const rti1516_202X::fedpro::SynchronizationPointFailureReason fedproFailureReason) const
+   RTI_NAMESPACE::SynchronizationPointFailureReason ClientConverter::convertToHla(const rti1516_2025::fedpro::SynchronizationPointFailureReason fedproFailureReason) const
    {
       switch (fedproFailureReason) {
-         case rti1516_202X::fedpro::SYNCHRONIZATION_POINT_LABEL_NOT_UNIQUE:
+         case rti1516_2025::fedpro::SYNCHRONIZATION_POINT_LABEL_NOT_UNIQUE:
             return RTI_NAMESPACE::SYNCHRONIZATION_POINT_LABEL_NOT_UNIQUE;
-         case rti1516_202X::fedpro::SYNCHRONIZATION_SET_MEMBER_NOT_JOINED:
+         case rti1516_2025::fedpro::SYNCHRONIZATION_SET_MEMBER_NOT_JOINED:
             return RTI_NAMESPACE::SYNCHRONIZATION_SET_MEMBER_NOT_JOINED;
          default:
             throw std::invalid_argument("Invalid SynchronizationPointFailureReason value");
@@ -358,83 +360,83 @@ namespace FedPro
       }
    }
 
-   RTI_NAMESPACE::FederateHandle ClientConverter::convertToHla(rti1516_202X::fedpro::FederateHandle && fedproFederateHandle) const
+   RTI_NAMESPACE::FederateHandle ClientConverter::convertToHla(rti1516_2025::fedpro::FederateHandle && fedproFederateHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::FederateHandle>(fedproFederateHandle);
    }
 
-   rti1516_202X::fedpro::FederateHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::FederateHandle & federateHandle) const
+   rti1516_2025::fedpro::FederateHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::FederateHandle & federateHandle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::FederateHandle>(federateHandle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::FederateHandle>(federateHandle);
    }
 
-   RTI_NAMESPACE::ObjectClassHandle ClientConverter::convertToHla(rti1516_202X::fedpro::ObjectClassHandle && fedproClassHandle) const
+   RTI_NAMESPACE::ObjectClassHandle ClientConverter::convertToHla(rti1516_2025::fedpro::ObjectClassHandle && fedproClassHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::ObjectClassHandle>(fedproClassHandle);
    }
 
-   rti1516_202X::fedpro::ObjectClassHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::ObjectClassHandle & handle) const
+   rti1516_2025::fedpro::ObjectClassHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::ObjectClassHandle & handle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::ObjectClassHandle>(handle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::ObjectClassHandle>(handle);
    }
 
-   RTI_NAMESPACE::InteractionClassHandle ClientConverter::convertToHla(rti1516_202X::fedpro::InteractionClassHandle && fedproInteractionHandle) const
+   RTI_NAMESPACE::InteractionClassHandle ClientConverter::convertToHla(rti1516_2025::fedpro::InteractionClassHandle && fedproInteractionHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::InteractionClassHandle>(fedproInteractionHandle);
    }
 
-   rti1516_202X::fedpro::InteractionClassHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::InteractionClassHandle & handle) const
+   rti1516_2025::fedpro::InteractionClassHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::InteractionClassHandle & handle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::InteractionClassHandle>(handle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::InteractionClassHandle>(handle);
    }
 
-   RTI_NAMESPACE::ObjectInstanceHandle ClientConverter::convertToHla(rti1516_202X::fedpro::ObjectInstanceHandle && fedproObjectHandle) const
+   RTI_NAMESPACE::ObjectInstanceHandle ClientConverter::convertToHla(rti1516_2025::fedpro::ObjectInstanceHandle && fedproObjectHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::ObjectInstanceHandle>(fedproObjectHandle);
    }
 
-   rti1516_202X::fedpro::ObjectInstanceHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::ObjectInstanceHandle & handle) const
+   rti1516_2025::fedpro::ObjectInstanceHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::ObjectInstanceHandle & handle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::ObjectInstanceHandle>(handle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::ObjectInstanceHandle>(handle);
    }
 
-   RTI_NAMESPACE::AttributeHandle ClientConverter::convertToHla(rti1516_202X::fedpro::AttributeHandle && fedproAttribHandle) const
+   RTI_NAMESPACE::AttributeHandle ClientConverter::convertToHla(rti1516_2025::fedpro::AttributeHandle && fedproAttribHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::AttributeHandle>(fedproAttribHandle);
    }
 
-   rti1516_202X::fedpro::AttributeHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandle & attributeHandle) const
+   rti1516_2025::fedpro::AttributeHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandle & attributeHandle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::AttributeHandle>(attributeHandle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::AttributeHandle>(attributeHandle);
    }
 
-   RTI_NAMESPACE::ParameterHandle ClientConverter::convertToHla(rti1516_202X::fedpro::ParameterHandle && fedproParamHandle) const
+   RTI_NAMESPACE::ParameterHandle ClientConverter::convertToHla(rti1516_2025::fedpro::ParameterHandle && fedproParamHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::ParameterHandle>(fedproParamHandle);
    }
 
-   rti1516_202X::fedpro::ParameterHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::ParameterHandle & handle) const
+   rti1516_2025::fedpro::ParameterHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::ParameterHandle & handle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::ParameterHandle>(handle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::ParameterHandle>(handle);
    }
 
-   RTI_NAMESPACE::DimensionHandle ClientConverter::convertToHla(rti1516_202X::fedpro::DimensionHandle && fedproDimensionHandle) const
+   RTI_NAMESPACE::DimensionHandle ClientConverter::convertToHla(rti1516_2025::fedpro::DimensionHandle && fedproDimensionHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::DimensionHandle>(fedproDimensionHandle);
    }
 
-   rti1516_202X::fedpro::DimensionHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::DimensionHandle & dimensionHandle) const
+   rti1516_2025::fedpro::DimensionHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::DimensionHandle & dimensionHandle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::DimensionHandle>(dimensionHandle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::DimensionHandle>(dimensionHandle);
    }
 
-   RTI_UNIQUE_PTR<RTI_NAMESPACE::MessageRetractionHandle> ClientConverter::convertToHla(rti1516_202X::fedpro::MessageRetractionHandle && fedproRetractHandle) const
+   RTI_UNIQUE_PTR<RTI_NAMESPACE::MessageRetractionHandle> ClientConverter::convertToHla(rti1516_2025::fedpro::MessageRetractionHandle && fedproRetractHandle) const
    {
       auto rtiRetractHandle = convertToHlaHandle<RTI_NAMESPACE::MessageRetractionHandle>(fedproRetractHandle);
       return RTI_NAMESPACE::make_unique<RTI_NAMESPACE::MessageRetractionHandle>(std::move(rtiRetractHandle));
    }
 
-   RTI_NAMESPACE::MessageRetractionHandle ClientConverter::convertToHla(rti1516_202X::fedpro::MessageRetractionReturn && fedproRetractReturn) const
+   RTI_NAMESPACE::MessageRetractionHandle ClientConverter::convertToHla(rti1516_2025::fedpro::MessageRetractionReturn && fedproRetractReturn) const
    {
       auto fedproRetractHandle = fedproRetractReturn.mutable_messageretractionhandle();
       if (fedproRetractHandle) {
@@ -444,35 +446,34 @@ namespace FedPro
       }
    }
 
-   rti1516_202X::fedpro::MessageRetractionHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::MessageRetractionHandle & rtiRetractHandle) const
+   rti1516_2025::fedpro::MessageRetractionHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::MessageRetractionHandle & rtiRetractHandle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::MessageRetractionHandle>(rtiRetractHandle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::MessageRetractionHandle>(rtiRetractHandle);
    }
 
-   RTI_NAMESPACE::RegionHandle ClientConverter::convertToHla(rti1516_202X::fedpro::RegionHandle && fedproRegionHandle) const
+   RTI_NAMESPACE::RegionHandle ClientConverter::convertToHla(rti1516_2025::fedpro::RegionHandle && fedproRegionHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::RegionHandle>(fedproRegionHandle);
    }
 
-   rti1516_202X::fedpro::RegionHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::RegionHandle & handle) const
+   rti1516_2025::fedpro::RegionHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::RegionHandle & handle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::RegionHandle>(handle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::RegionHandle>(handle);
    }
 
-   RTI_NAMESPACE::TransportationTypeHandle ClientConverter::convertToHla(rti1516_202X::fedpro::TransportationTypeHandle && fedproTransportHandle) const
+   RTI_NAMESPACE::TransportationTypeHandle ClientConverter::convertToHla(rti1516_2025::fedpro::TransportationTypeHandle && fedproTransportHandle) const
    {
       return convertToHlaHandle<RTI_NAMESPACE::TransportationTypeHandle>(fedproTransportHandle);
    }
 
-   rti1516_202X::fedpro::TransportationTypeHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::TransportationTypeHandle & handle) const
+   rti1516_2025::fedpro::TransportationTypeHandle * ClientConverter::convertFromHla(const RTI_NAMESPACE::TransportationTypeHandle & handle) const
    {
-      return convertFromHlaHandle<rti1516_202X::fedpro::TransportationTypeHandle>(handle);
+      return convertFromHlaHandle<rti1516_2025::fedpro::TransportationTypeHandle>(handle);
    }
 
    // Objects
 
-#if RTI_HLA_VERSION >= 2024
-   RTI_NAMESPACE::RtiConfiguration ClientConverter::convertToHla(const rti1516_202X::fedpro::RtiConfiguration & fedProConfig) const
+   RTI_NAMESPACE::RtiConfiguration ClientConverter::convertToHla(const rti1516_2025::fedpro::RtiConfiguration & fedProConfig) const
    {
       RTI_NAMESPACE::RtiConfiguration rtiConfig;
       rtiConfig.withConfigurationName(convertToHla(fedProConfig.configurationname()));
@@ -481,16 +482,16 @@ namespace FedPro
       return rtiConfig;
    }
 
-   rti1516_202X::fedpro::RtiConfiguration * ClientConverter::convertFromHla(const RTI_NAMESPACE::RtiConfiguration & configuration) const
+   rti1516_2025::fedpro::RtiConfiguration * ClientConverter::convertFromHla(const RTI_NAMESPACE::RtiConfiguration & configuration) const
    {
-      auto * rtiConfig = new rti1516_202X::fedpro::RtiConfiguration;
+      auto * rtiConfig = new rti1516_2025::fedpro::RtiConfiguration;
       rtiConfig->set_allocated_configurationname(convertFromHla(configuration.configurationName()));
       rtiConfig->set_allocated_rtiaddress(convertFromHla(configuration.rtiAddress()));
       rtiConfig->set_allocated_additionalsettings(convertFromHla(configuration.additionalSettings()));
       return rtiConfig;
    }
 
-   RTI_NAMESPACE::ConfigurationResult ClientConverter::convertToHla(const rti1516_202X::fedpro::ConfigurationResult & decodedResponse) const
+   RTI_NAMESPACE::ConfigurationResult ClientConverter::convertToHla(const rti1516_2025::fedpro::ConfigurationResult & decodedResponse) const
    {
       bool configurationUsed = decodedResponse.configurationused();
       bool addressUsed = decodedResponse.addressused();
@@ -499,43 +500,44 @@ namespace FedPro
       return {configurationUsed, addressUsed, additionalSettingsResultCode, message};
    }
 
-   rti1516_202X::fedpro::Credentials * ClientConverter::convertFromHla(const RTI_NAMESPACE::Credentials & credentials) const
+#if (RTI_HLA_VERSION >= 2025)
+   rti1516_2025::fedpro::Credentials * ClientConverter::convertFromHla(const RTI_NAMESPACE::Credentials & credentials) const
    {
-      auto * fedproCredentials = new rti1516_202X::fedpro::Credentials;
+      auto * fedproCredentials = new rti1516_2025::fedpro::Credentials;
       fedproCredentials->set_type(toString(credentials.getType()));
       fedproCredentials->set_data(convertFromHla(credentials.getData()));
       return fedproCredentials;
    }
 #endif
 
-   RTI_NAMESPACE::FederationExecutionInformation ClientConverter::convertToHla(const rti1516_202X::fedpro::FederationExecutionInformation & obj) const
+   RTI_NAMESPACE::FederationExecutionInformation ClientConverter::convertToHla(const rti1516_2025::fedpro::FederationExecutionInformation & obj) const
    {
       return RTI_NAMESPACE::FederationExecutionInformation{convertToHla(obj.federationexecutionname()),
                                                           convertToHla(obj.logicaltimeimplementationname())};
    }
 
-#if (RTI_HLA_VERSION >= 2024)
-   RTI_NAMESPACE::FederationExecutionMemberInformation ClientConverter::convertToHla(const rti1516_202X::fedpro::FederationExecutionMemberInformation & obj) const
+#if (RTI_HLA_VERSION >= 2025)
+   RTI_NAMESPACE::FederationExecutionMemberInformation ClientConverter::convertToHla(const rti1516_2025::fedpro::FederationExecutionMemberInformation & obj) const
    {
       return RTI_NAMESPACE::FederationExecutionMemberInformation{convertToHla(obj.federatename()),
                                                                 convertToHla(obj.federatetype())};
    }
 #endif
 
-   RTI_NAMESPACE::FederateRestoreStatus ClientConverter::convertToHla(rti1516_202X::fedpro::FederateRestoreStatus && fedproRestoreStatus) const
+   RTI_NAMESPACE::FederateRestoreStatus ClientConverter::convertToHla(rti1516_2025::fedpro::FederateRestoreStatus && fedproRestoreStatus) const
    {
       return RTI_NAMESPACE::FederateRestoreStatus{convertToHlaAndDelete(fedproRestoreStatus.release_prerestorehandle()),
                                                  convertToHlaAndDelete(fedproRestoreStatus.release_postrestorehandle()),
                                                  convertToHla(fedproRestoreStatus.restorestatus())};
    }
 
-   rti1516_202X::fedpro::FomModule * ClientConverter::convertFromHla(const FedPro::FomModule & fomModule) const
+   rti1516_2025::fedpro::FomModule * ClientConverter::convertFromHla(const FedPro::FomModule & fomModule) const
    {
-      auto fedProObj = new rti1516_202X::fedpro::FomModule();
+      auto fedProObj = new rti1516_2025::fedpro::FomModule();
       switch (fomModule.getType()) {
          case FedPro::FomModule::Type::FILE:
          {
-            auto fomModuleFile = new rti1516_202X::fedpro::FileFomModule;
+            auto fomModuleFile = new rti1516_2025::fedpro::FileFomModule;
             fomModuleFile->set_allocated_name(convertFromHla(fomModule.getFileName()));
             fomModuleFile->set_content(fomModule.getFileContent());
             fedProObj->set_allocated_file(fomModuleFile);
@@ -552,7 +554,7 @@ namespace FedPro
       return fedProObj;
    }
 
-   FedPro::JoinResult ClientConverter::convertToHla(rti1516_202X::fedpro::JoinResult && joinResult) const
+   FedPro::JoinResult ClientConverter::convertToHla(rti1516_2025::fedpro::JoinResult && joinResult) const
    {
       if (!joinResult.has_federatehandle()) {
          throw RTI_NAMESPACE::RTIinternalError(L"Missing FederateHandle in Federate Protocol JoinResult");
@@ -561,7 +563,7 @@ namespace FedPro
               convertToHla(joinResult.logicaltimeimplementationname())};
    }
 
-   RTI_UNIQUE_PTR<RTI_NAMESPACE::LogicalTime> ClientConverter::convertToHla(const rti1516_202X::fedpro::LogicalTime & logicalTime) const
+   RTI_UNIQUE_PTR<RTI_NAMESPACE::LogicalTime> ClientConverter::convertToHla(const rti1516_2025::fedpro::LogicalTime & logicalTime) const
    {
       if (!_timeFactory)
          throw RTI_NAMESPACE::RTIinternalError(L"Error in LogicalTime conversion due to missing factory");
@@ -573,22 +575,22 @@ namespace FedPro
       }
    }
 
-   rti1516_202X::fedpro::LogicalTime * ClientConverter::convertFromHla(const RTI_NAMESPACE::LogicalTime & rtiLogicalTime) const
+   rti1516_2025::fedpro::LogicalTime * ClientConverter::convertFromHla(const RTI_NAMESPACE::LogicalTime & rtiLogicalTime) const
    {
       std::string data;
       data.resize(rtiLogicalTime.encodedLength());
       try {
          rtiLogicalTime.encode(&data.front(), data.size());
       } catch (const RTI_NAMESPACE::CouldNotEncode & e) {
-         throw RTI_NAMESPACE::RTIinternalError(L"Error in LogicalTime conversion");
+         throw RTI_NAMESPACE::RTIinternalError(L"Error in LogicalTime conversion: "  + e.what());
       }
 
-      auto logicalTime = new rti1516_202X::fedpro::LogicalTime;
+      auto logicalTime = new rti1516_2025::fedpro::LogicalTime;
       logicalTime->set_data(std::move(data));
       return logicalTime;
    }
 
-   RTI_UNIQUE_PTR<RTI_NAMESPACE::LogicalTimeInterval> ClientConverter::convertToHla(const rti1516_202X::fedpro::LogicalTimeInterval & logicalTimeInterval) const
+   RTI_UNIQUE_PTR<RTI_NAMESPACE::LogicalTimeInterval> ClientConverter::convertToHla(const rti1516_2025::fedpro::LogicalTimeInterval & logicalTimeInterval) const
    {
       if (!_timeFactory)
          throw RTI_NAMESPACE::RTIinternalError(L"Error in LogicalTimeInterval conversion due to missing factory");
@@ -602,35 +604,35 @@ namespace FedPro
       }
    }
 
-   rti1516_202X::fedpro::LogicalTimeInterval * ClientConverter::convertFromHla(const RTI_NAMESPACE::LogicalTimeInterval & rtiLogicalTimeInterval) const
+   rti1516_2025::fedpro::LogicalTimeInterval * ClientConverter::convertFromHla(const RTI_NAMESPACE::LogicalTimeInterval & rtiLogicalTimeInterval) const
    {
       std::string data;
       data.resize(rtiLogicalTimeInterval.encodedLength());
       try {
          rtiLogicalTimeInterval.encode(&data.front(), data.size());
       } catch (const RTI_NAMESPACE::CouldNotEncode & e) {
-         throw RTI_NAMESPACE::RTIinternalError(L"Error in LogicalTimeInterval conversion");
+         throw RTI_NAMESPACE::RTIinternalError(L"Error in LogicalTimeInterval conversion: " + e.what());
       }
 
-      auto logicalTimeInterval = new rti1516_202X::fedpro::LogicalTimeInterval;
+      auto logicalTimeInterval = new rti1516_2025::fedpro::LogicalTimeInterval;
       logicalTimeInterval->set_data(std::move(data));
       return logicalTimeInterval;
    }
 
-   RTI_NAMESPACE::RangeBounds ClientConverter::convertToHla(const rti1516_202X::fedpro::RangeBounds & obj) const
+   RTI_NAMESPACE::RangeBounds ClientConverter::convertToHla(const rti1516_2025::fedpro::RangeBounds & obj) const
    {
       return RTI_NAMESPACE::RangeBounds{obj.lower(), obj.upper()};
    }
 
-   rti1516_202X::fedpro::RangeBounds * ClientConverter::convertFromHla(const RTI_NAMESPACE::RangeBounds & rangeBounds) const
+   rti1516_2025::fedpro::RangeBounds * ClientConverter::convertFromHla(const RTI_NAMESPACE::RangeBounds & rangeBounds) const
    {
-      auto obj = new rti1516_202X::fedpro::RangeBounds;
+      auto obj = new rti1516_2025::fedpro::RangeBounds;
       obj->set_lower(rangeBounds.getLowerBound());
       obj->set_upper(rangeBounds.getUpperBound());
       return obj;
    }
 
-   std::pair<bool, std::unique_ptr<RTI_NAMESPACE::LogicalTime>> ClientConverter::convertToHla(const rti1516_202X::fedpro::TimeQueryReturn & timeQueryReturn) const
+   std::pair<bool, std::unique_ptr<RTI_NAMESPACE::LogicalTime>> ClientConverter::convertToHla(const rti1516_2025::fedpro::TimeQueryReturn & timeQueryReturn) const
    {
       // Return type is pair<bool, std::unique_ptr> instead of pair<bool, RTI_UNIQUE_PTR>
       // because RTI_UNIQUE_PTR may be std::auto_ptr, which is incompatible with std::pair.
@@ -639,29 +641,29 @@ namespace FedPro
 
    // Vectors
 
-   RTI_NAMESPACE::FederateRestoreStatusVector ClientConverter::convertToHla(rti1516_202X::fedpro::FederateRestoreStatusArray && federateRestoreStatusArray) const
+   RTI_NAMESPACE::FederateRestoreStatusVector ClientConverter::convertToHla(rti1516_2025::fedpro::FederateRestoreStatusArray && federateRestoreStatusArray) const
    {
       auto * fedproSequence = federateRestoreStatusArray.mutable_federaterestorestatus();
       return convertToHlaVector(std::move(*fedproSequence));
    }
 
-   RTI_NAMESPACE::FederationExecutionInformationVector ClientConverter::convertToHla(rti1516_202X::fedpro::FederationExecutionInformationSet && federationExecutionInformationSet) const
+   RTI_NAMESPACE::FederationExecutionInformationVector ClientConverter::convertToHla(rti1516_2025::fedpro::FederationExecutionInformationSet && federationExecutionInformationSet) const
    {
       return convertToHlaVector(federationExecutionInformationSet.federationexecutioninformation());
    }
 
-#if (RTI_HLA_VERSION >= 2024)
-   RTI_NAMESPACE::FederationExecutionMemberInformationVector ClientConverter::convertToHla(rti1516_202X::fedpro::FederationExecutionMemberInformationSet && federationExecutionMemberInformationSet) const
+#if (RTI_HLA_VERSION >= 2025)
+   RTI_NAMESPACE::FederationExecutionMemberInformationVector ClientConverter::convertToHla(rti1516_2025::fedpro::FederationExecutionMemberInformationSet && federationExecutionMemberInformationSet) const
    {
       return convertToHlaVector(federationExecutionMemberInformationSet.federationexecutionmemberinformation());
    }
 #endif
 
-   rti1516_202X::fedpro::AttributeSetRegionSetPairList * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributeHandleSetRegionHandleSetPairVector) const
+   rti1516_2025::fedpro::AttributeSetRegionSetPairList * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributeHandleSetRegionHandleSetPairVector) const
    {
-      auto fedproVector = new rti1516_202X::fedpro::AttributeSetRegionSetPairList;
+      auto fedproVector = new rti1516_2025::fedpro::AttributeSetRegionSetPairList;
       for (const auto & element : attributeHandleSetRegionHandleSetPairVector) {
-         rti1516_202X::fedpro::AttributeSetRegionSetPair * fedproPair = fedproVector->add_attributesetregionsetpair();
+         rti1516_2025::fedpro::AttributeSetRegionSetPair * fedproPair = fedproVector->add_attributesetregionsetpair();
          fedproPair->set_allocated_attributeset(convertFromHla(element.first));
          fedproPair->set_allocated_regionset(convertFromHla(element.second));
       }
@@ -671,7 +673,7 @@ namespace FedPro
 
    // Maps
 
-   RTI_NAMESPACE::AttributeHandleValueMap ClientConverter::convertToHla(rti1516_202X::fedpro::AttributeHandleValueMap && attributeHandleValueMap) const
+   RTI_NAMESPACE::AttributeHandleValueMap ClientConverter::convertToHla(rti1516_2025::fedpro::AttributeHandleValueMap && attributeHandleValueMap) const
    {
       RTI_NAMESPACE::AttributeHandleValueMap handleMap;
       for (auto & entry : *attributeHandleValueMap.mutable_attributehandlevalue()) {
@@ -682,13 +684,13 @@ namespace FedPro
       return handleMap;
    }
 
-   rti1516_202X::fedpro::AttributeHandleValueMap * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandleValueMap & attributeHandleValueMap) const
+   rti1516_2025::fedpro::AttributeHandleValueMap * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandleValueMap & attributeHandleValueMap) const
    {
-      auto handleValueMap = new rti1516_202X::fedpro::AttributeHandleValueMap;
+      auto handleValueMap = new rti1516_2025::fedpro::AttributeHandleValueMap;
       for (const auto & handleValuePair : attributeHandleValueMap) {
-         rti1516_202X::fedpro::AttributeHandle * handle = convertFromHla(handleValuePair.first);
+         rti1516_2025::fedpro::AttributeHandle * handle = convertFromHla(handleValuePair.first);
          std::string encodedValue{convertFromHla(handleValuePair.second)};
-         rti1516_202X::fedpro::AttributeHandleValue * handleValue = handleValueMap->add_attributehandlevalue();
+         rti1516_2025::fedpro::AttributeHandleValue * handleValue = handleValueMap->add_attributehandlevalue();
          handleValue->set_allocated_attributehandle(handle);
          handleValue->set_value(std::move(encodedValue));
       }
@@ -696,7 +698,7 @@ namespace FedPro
       return handleValueMap;
    }
 
-   RTI_NAMESPACE::ParameterHandleValueMap ClientConverter::convertToHla(rti1516_202X::fedpro::ParameterHandleValueMap && parameterHandleValueMap) const
+   RTI_NAMESPACE::ParameterHandleValueMap ClientConverter::convertToHla(rti1516_2025::fedpro::ParameterHandleValueMap && parameterHandleValueMap) const
    {
       RTI_NAMESPACE::ParameterHandleValueMap handleMap;
       for (auto & entry : *parameterHandleValueMap.mutable_parameterhandlevalue()) {
@@ -707,13 +709,13 @@ namespace FedPro
       return handleMap;
    }
 
-   rti1516_202X::fedpro::ParameterHandleValueMap * ClientConverter::convertFromHla(const RTI_NAMESPACE::ParameterHandleValueMap & parameterHandleValueMap) const
+   rti1516_2025::fedpro::ParameterHandleValueMap * ClientConverter::convertFromHla(const RTI_NAMESPACE::ParameterHandleValueMap & parameterHandleValueMap) const
    {
-      auto handleValueMap = new rti1516_202X::fedpro::ParameterHandleValueMap;
+      auto handleValueMap = new rti1516_2025::fedpro::ParameterHandleValueMap;
       for (const auto & handleValuePair : parameterHandleValueMap) {
-         rti1516_202X::fedpro::ParameterHandle * handle = convertFromHla(handleValuePair.first);
+         rti1516_2025::fedpro::ParameterHandle * handle = convertFromHla(handleValuePair.first);
          std::string encodedValue{convertFromHla(handleValuePair.second)};
-         rti1516_202X::fedpro::ParameterHandleValue * handleValue = handleValueMap->add_parameterhandlevalue();
+         rti1516_2025::fedpro::ParameterHandleValue * handleValue = handleValueMap->add_parameterhandlevalue();
          handleValue->set_allocated_parameterhandle(handle);
          handleValue->set_value(std::move(encodedValue));
       }
@@ -723,43 +725,43 @@ namespace FedPro
 
    // Sets
 
-   RTI_NAMESPACE::AttributeHandleSet ClientConverter::convertToHla(rti1516_202X::fedpro::AttributeHandleSet && attributeHandleSet) const
+   RTI_NAMESPACE::AttributeHandleSet ClientConverter::convertToHla(rti1516_2025::fedpro::AttributeHandleSet && attributeHandleSet) const
    {
       auto* fedproHandleSequence = attributeHandleSet.mutable_attributehandle();
       return convertToHlaSet(std::move(*fedproHandleSequence));
    }
 
-   rti1516_202X::fedpro::AttributeHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandleSet & hlaHandleSet) const
+   rti1516_2025::fedpro::AttributeHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::AttributeHandleSet & hlaHandleSet) const
    {
-      auto handleSet = new rti1516_202X::fedpro::AttributeHandleSet;
+      auto handleSet = new rti1516_2025::fedpro::AttributeHandleSet;
       for (const auto & hlaHandle : hlaHandleSet) {
          std::string encodedHandle{RTI_NAMESPACE::serialize(hlaHandle)};
-         rti1516_202X::fedpro::AttributeHandle * handle = handleSet->add_attributehandle();
+         rti1516_2025::fedpro::AttributeHandle * handle = handleSet->add_attributehandle();
          handle->set_data(std::move(encodedHandle));
       }
 
       return handleSet;
    }
 
-   RTI_NAMESPACE::DimensionHandleSet ClientConverter::convertToHla(rti1516_202X::fedpro::DimensionHandleSet && fedproHandleSet) const
+   RTI_NAMESPACE::DimensionHandleSet ClientConverter::convertToHla(rti1516_2025::fedpro::DimensionHandleSet && fedproHandleSet) const
    {
       auto * fedproHandleSequence = fedproHandleSet.mutable_dimensionhandle();
       return convertToHlaSet(std::move(*fedproHandleSequence));
    }
 
-   rti1516_202X::fedpro::DimensionHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::DimensionHandleSet & hlaHandleSet) const
+   rti1516_2025::fedpro::DimensionHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::DimensionHandleSet & hlaHandleSet) const
    {
-      auto handleSet = new rti1516_202X::fedpro::DimensionHandleSet;
+      auto handleSet = new rti1516_2025::fedpro::DimensionHandleSet;
       for (const auto & hlaHandle : hlaHandleSet) {
          std::string encodedHandle{RTI_NAMESPACE::serialize(hlaHandle)};
-         rti1516_202X::fedpro::DimensionHandle * handle = handleSet->add_dimensionhandle();
+         rti1516_2025::fedpro::DimensionHandle * handle = handleSet->add_dimensionhandle();
          handle->set_data(std::move(encodedHandle));
       }
 
       return handleSet;
    }
 
-   RTI_NAMESPACE::FederateHandleSaveStatusPairVector ClientConverter::convertToHla(rti1516_202X::fedpro::FederateHandleSaveStatusPairArray && federateHandleSaveStatusPairArray) const
+   RTI_NAMESPACE::FederateHandleSaveStatusPairVector ClientConverter::convertToHla(rti1516_2025::fedpro::FederateHandleSaveStatusPairArray && federateHandleSaveStatusPairArray) const
    {
       RTI_NAMESPACE::FederateHandleSaveStatusPairVector statusPairVector;
       statusPairVector.reserve(federateHandleSaveStatusPairArray.federatehandlesavestatuspair_size());
@@ -771,37 +773,37 @@ namespace FedPro
       return statusPairVector;
    }
 
-   RTI_NAMESPACE::FederateHandleSet ClientConverter::convertToHla(rti1516_202X::fedpro::FederateHandleSet && fedproHandleSet) const
+   RTI_NAMESPACE::FederateHandleSet ClientConverter::convertToHla(rti1516_2025::fedpro::FederateHandleSet && fedproHandleSet) const
    {
       auto * fedproHandleSequence = fedproHandleSet.mutable_federatehandle();
       return convertToHlaSet(std::move(*fedproHandleSequence));
    }
 
-   rti1516_202X::fedpro::FederateHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::FederateHandleSet & hlaHandleSet) const
+   rti1516_2025::fedpro::FederateHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::FederateHandleSet & hlaHandleSet) const
    {
-      auto handleSet = new rti1516_202X::fedpro::FederateHandleSet;
+      auto handleSet = new rti1516_2025::fedpro::FederateHandleSet;
       for (const auto & hlaHandle : hlaHandleSet) {
          std::string encodedHandle{RTI_NAMESPACE::serialize(hlaHandle)};
-         rti1516_202X::fedpro::FederateHandle * handle = handleSet->add_federatehandle();
+         rti1516_2025::fedpro::FederateHandle * handle = handleSet->add_federatehandle();
          handle->set_data(std::move(encodedHandle));
       }
 
       return handleSet;
    }
 
-#if (RTI_HLA_VERSION >= 2024)
-   RTI_NAMESPACE::InteractionClassHandleSet ClientConverter::convertToHla(rti1516_202X::fedpro::InteractionClassHandleSet && fedproHandleSet) const
+#if (RTI_HLA_VERSION >= 2025)
+   RTI_NAMESPACE::InteractionClassHandleSet ClientConverter::convertToHla(rti1516_2025::fedpro::InteractionClassHandleSet && fedproHandleSet) const
    {
       auto * fedproHandleSequence = fedproHandleSet.mutable_interactionclasshandle();
       return convertToHlaSet(std::move(*fedproHandleSequence));
    }
 
-   rti1516_202X::fedpro::InteractionClassHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::InteractionClassHandleSet & hlaHandleSet) const
+   rti1516_2025::fedpro::InteractionClassHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::InteractionClassHandleSet & hlaHandleSet) const
    {
-      auto handleSet = new rti1516_202X::fedpro::InteractionClassHandleSet;
+      auto handleSet = new rti1516_2025::fedpro::InteractionClassHandleSet;
       for (const auto & hlaHandle : hlaHandleSet) {
          std::string encodedHandle{RTI_NAMESPACE::serialize(hlaHandle)};
-         rti1516_202X::fedpro::InteractionClassHandle * handle = handleSet->add_interactionclasshandle();
+         rti1516_2025::fedpro::InteractionClassHandle * handle = handleSet->add_interactionclasshandle();
          handle->set_data(std::move(encodedHandle));
       }
 
@@ -809,7 +811,7 @@ namespace FedPro
    }
 #endif
 
-   RTI_NAMESPACE::RegionHandleSet * ClientConverter::convertToHla(rti1516_202X::fedpro::ConveyedRegionSet && conveyedRegionSet) const
+   RTI_NAMESPACE::RegionHandleSet * ClientConverter::convertToHla(rti1516_2025::fedpro::ConveyedRegionSet && conveyedRegionSet) const
    {
       auto * hlaSet = new RTI_NAMESPACE::RegionHandleSet;
       for (auto & conveyedRegion : *conveyedRegionSet.mutable_conveyedregions()) {
@@ -827,11 +829,11 @@ namespace FedPro
       return hlaSet;
    }
 
-   rti1516_202X::fedpro::RegionHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::RegionHandleSet & rtiHandleSet) const
+   rti1516_2025::fedpro::RegionHandleSet * ClientConverter::convertFromHla(const RTI_NAMESPACE::RegionHandleSet & rtiHandleSet) const
    {
-      auto regionHandleSet = new rti1516_202X::fedpro::RegionHandleSet;
+      auto regionHandleSet = new rti1516_2025::fedpro::RegionHandleSet;
       for (const auto & rtiHandle : rtiHandleSet) {
-         rti1516_202X::fedpro::RegionHandle * regionHandle = regionHandleSet->add_regionhandle();
+         rti1516_2025::fedpro::RegionHandle * regionHandle = regionHandleSet->add_regionhandle();
          regionHandle->set_data(RTI_NAMESPACE::serialize(rtiHandle));
       }
 
@@ -853,12 +855,12 @@ namespace FedPro
       return stringSequence;
    }
 
-   rti1516_202X::fedpro::FomModuleSet * ClientConverter::convertFromHla(const FedPro::FomModuleSet & rtiFomModuleSet) const
+   rti1516_2025::fedpro::FomModuleSet * ClientConverter::convertFromHla(const FedPro::FomModuleSet & rtiFomModuleSet) const
    {
-      auto fomModuleSet = new rti1516_202X::fedpro::FomModuleSet;
+      auto fomModuleSet = new rti1516_2025::fedpro::FomModuleSet;
       for (const auto & rtiFomModule : rtiFomModuleSet) {
-         rti1516_202X::fedpro::FomModule * fomModule = fomModuleSet->add_fommodule();
-         rti1516_202X::fedpro::FomModule * tmpFomModule = convertFromHla(rtiFomModule);
+         rti1516_2025::fedpro::FomModule * fomModule = fomModuleSet->add_fommodule();
+         rti1516_2025::fedpro::FomModule * tmpFomModule = convertFromHla(rtiFomModule);
          if (tmpFomModule)
             *fomModule = std::move(*tmpFomModule);
          delete tmpFomModule;
@@ -868,3 +870,5 @@ namespace FedPro
    }
 
 }
+
+// NOLINTEND(hicpp-exception-baseclass)

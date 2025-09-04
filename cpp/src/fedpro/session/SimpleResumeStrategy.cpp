@@ -27,7 +27,7 @@ namespace FedPro
    }
 
    SimpleResumeStrategy::SimpleResumeStrategy(const Properties & settings)
-         : _reconnectDelay{DEFAULT_RECONNECT_DELAY_MILLIS},
+         : _reconnectDelay{settings.getDuration(SETTING_NAME_RESUME_RETRY_DELAY_MILLIS, DEFAULT_RECONNECT_DELAY_MILLIS)},
            _reconnectLimit{settings.getDuration(SETTING_NAME_RECONNECT_LIMIT, DEFAULT_RECONNECT_LIMIT_MILLIS)}
    {
    }

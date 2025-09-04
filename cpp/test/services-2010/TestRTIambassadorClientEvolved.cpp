@@ -84,45 +84,42 @@ TEST(TestRTIambassadorClientEvolved, rtiConfigurationParseCorrectly_When_NoSetti
 {
    // Given
    std::vector<std::wstring> inputList;
-   RTIambassadorClientAdapter clientAdapter {};
-   
+
    // When
-   std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> rtiConfiguration = clientAdapter.createRtiConfiguration(inputList);
+   RtiConfiguration rtiConfiguration = RTIambassadorClientAdapter::createRtiConfiguration(inputList);
 
    // Then
-   EXPECT_EQ(rtiConfiguration->rtiaddress(), "");
-   EXPECT_EQ(rtiConfiguration->configurationname(), "");
-   EXPECT_EQ(rtiConfiguration->additionalsettings(), "");
+   EXPECT_EQ(rtiConfiguration.rtiAddress(), L"");
+   EXPECT_EQ(rtiConfiguration.configurationName(), L"");
+   EXPECT_EQ(rtiConfiguration.additionalSettings(), L"");
 }
 
 TEST(TestRTIambassadorClientEvolved, RtiConfigurationParseCorrectly_When_OnlySettingsAreProvided)
 {
    // Given
    std::vector<std::wstring> inputList{L"crcHost=rti.test.local", L"LRC.skipVersionCheck=false"};
-   RTIambassadorClientAdapter clientAdapter {};
 
    // When
-   std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> rtiConfiguration = clientAdapter.createRtiConfiguration(inputList);
+   RtiConfiguration rtiConfiguration = RTIambassadorClientAdapter::createRtiConfiguration(inputList);
 
    // Then
-   EXPECT_EQ(rtiConfiguration->rtiaddress(), "");
-   EXPECT_EQ(rtiConfiguration->configurationname(), "");
-   EXPECT_EQ(rtiConfiguration->additionalsettings(), "crcHost=rti.test.local\nLRC.skipVersionCheck=false");
+   EXPECT_EQ(rtiConfiguration.rtiAddress(), L"");
+   EXPECT_EQ(rtiConfiguration.configurationName(), L"");
+   EXPECT_EQ(rtiConfiguration.additionalSettings(), L"crcHost=rti.test.local\nLRC.skipVersionCheck=false");
 }
 
 TEST(TestRTIambassadorClientEvolved, RtiConfigurationParseCorrectly_When_OnlyConfigNameIsProvided)
 {
    // Given
    std::vector<std::wstring> inputList{L"iosConfiguration"};
-   RTIambassadorClientAdapter clientAdapter {};
 
    // When
-   std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> rtiConfiguration = clientAdapter.createRtiConfiguration(inputList);
+   RtiConfiguration rtiConfiguration = RTIambassadorClientAdapter::createRtiConfiguration(inputList);
 
    // Then
-   EXPECT_EQ(rtiConfiguration->rtiaddress(), "");
-   EXPECT_EQ(rtiConfiguration->configurationname(), "iosConfiguration");
-   EXPECT_EQ(rtiConfiguration->additionalsettings(), "");
+   EXPECT_EQ(rtiConfiguration.rtiAddress(), L"");
+   EXPECT_EQ(rtiConfiguration.configurationName(), L"iosConfiguration");
+   EXPECT_EQ(rtiConfiguration.additionalSettings(), L"");
 }
 
 TEST(TestRTIambassadorClientEvolved, RtiConfigurationParseCorrectly_When_ConfigNameAndSettingsAreProvided)
@@ -131,16 +128,15 @@ TEST(TestRTIambassadorClientEvolved, RtiConfigurationParseCorrectly_When_ConfigN
    std::vector<std::wstring> inputList
          {L"iosConfiguration", L"FedPro.connect.timeout=10,", L"LRC.skipVersionCheck=false",
           L"FedPro.connect.hostname=localhost"};
-   RTIambassadorClientAdapter clientAdapter {};
 
    // When
-   std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> rtiConfiguration = clientAdapter.createRtiConfiguration(inputList);
+   RtiConfiguration rtiConfiguration = RTIambassadorClientAdapter::createRtiConfiguration(inputList);
 
    // Then
-   EXPECT_EQ(rtiConfiguration->rtiaddress(), "");
-   EXPECT_EQ(rtiConfiguration->configurationname(), "iosConfiguration");
-   EXPECT_EQ(rtiConfiguration->additionalsettings(),
-             "FedPro.connect.timeout=10,\nLRC.skipVersionCheck=false\nFedPro.connect.hostname=localhost");
+   EXPECT_EQ(rtiConfiguration.rtiAddress(), L"");
+   EXPECT_EQ(rtiConfiguration.configurationName(), L"iosConfiguration");
+   EXPECT_EQ(rtiConfiguration.additionalSettings(),
+             L"FedPro.connect.timeout=10,\nLRC.skipVersionCheck=false\nFedPro.connect.hostname=localhost");
 }
 
 // NOLINTEND(cppcoreguidelines-avoid-non-const-global-variables)

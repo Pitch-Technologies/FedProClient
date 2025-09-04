@@ -17,7 +17,7 @@
 // Silence clang-tidy issues reported for standard HLA exception usage.
 // NOLINTBEGIN(hicpp-exception-baseclass)
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 
 #include "Encoder.h"
 
@@ -113,7 +113,7 @@ namespace RTI_NAMESPACE
       return std::make_unique<HLAextendableVariantRecord>(*this);
    }
 
-   bool HLAextendableVariantRecord::isSameTypeAs(const rti1516_202X::DataElement & inData) const
+   bool HLAextendableVariantRecord::isSameTypeAs(const rti1516_2025::DataElement & inData) const
    {
       return typeid(*this) == typeid(inData);
    }

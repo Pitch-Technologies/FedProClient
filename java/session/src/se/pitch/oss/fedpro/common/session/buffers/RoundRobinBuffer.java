@@ -158,6 +158,14 @@ public class RoundRobinBuffer<E> implements GenericBuffer<E> {
       return Math.max(_primaryQueue.size(), _alternateQueue.size());
    }
 
+   public int primarySize() {
+      return _primaryQueue.size();
+   }
+
+   public int alternateSize() {
+      return _alternateQueue.size();
+   }
+
    @Override
    public boolean isEmpty()
    {

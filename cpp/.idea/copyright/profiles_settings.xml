@@ -2,7 +2,7 @@
   <settings>
     <module2copyright>
       <element module="IEEE 2010 APIs" copyright="IEEE 2010" />
-      <element module="IEEE 202X APIs" copyright="IEEE 202X" />
+      <element module="IEEE 2025 APIs" copyright="IEEE 2025" />
       <element module="Pitch OSS" copyright="Apache 2" />
     </module2copyright>
     <LanguageOptions name="ObjectiveC">

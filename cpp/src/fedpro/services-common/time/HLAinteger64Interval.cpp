@@ -89,7 +89,7 @@ namespace RTI_NAMESPACE
       return _impl->_time == 1;
    }
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
    HLAinteger64Interval &
 #else
    LogicalTimeInterval &
@@ -202,7 +202,7 @@ namespace RTI_NAMESPACE
    }
 
    void HLAinteger64Interval::decode(
-         RTI_IF_HLA_VERSION_2024_OR_LATER(const) void * buffer,
+         RTI_IF_HLA_VERSION_2025_OR_LATER(const) void * buffer,
          size_t bufferSize) RTI_THROW(InternalError, CouldNotDecode)
    {
       if (encodedLength() > bufferSize) {

@@ -29,14 +29,28 @@ if (NOT DEFINED CMAKE_CXX_COMPILER)
    set(CMAKE_CXX_COMPILER cl.exe)
 endif ()
 
-# Set flags that are compiler specific
-set(CXX_FLAGS_FEDPRO_EVOLVED
+set(FEDPRO_CXX_FLAGS_EVOLVED
+      # Sets the level of Microsoft Visual C++ (MSVC) messages to warning level 3
       /W3
-      # /WX # Uncomment if you want to treat warnings as errors
+      # C4275: An exported class was derived from a class that wasn't exported.
+      # It is safe to ignore since we require building libraries and applications using the same compiler and settings.
+      /wd4275
+      # C4800: A value is implicitly converted into type bool.
+      # Silence this warning coming from protobuf-generated code.
+      /wd4800
+      # C4996: Use a function, class member, variable, or typedef that's marked deprecated.
+      # Silence this warning since the HLA Evolved API includes std::auto_ptr and others marked deprecated.
+      /wd4996
 )
 set(FEDPRO_CXX_FLAGS_HLA4
+      # Sets the level of Microsoft Visual C++ (MSVC) messages to warning level 3
       /W3
-      # /WX # Uncomment if you want to treat warnings as errors
+      # C4275: An exported class was derived from a class that wasn't exported.
+      # It is safe to ignore since we require building libraries and applications using the same compiler and settings.
+      /wd4275
+      # C4996: Use a function, class member, variable, or typedef that's marked deprecated.
+      # Silence this warning since the HLA Evolved API includes std::auto_ptr and others marked deprecated.
+      /wd4800
 )
 
 

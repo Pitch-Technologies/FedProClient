@@ -22,10 +22,12 @@
 #include <fedpro/Session.h>
 #include <fedpro/Transport.h>
 #include "protobuf_util.h"
-#include "ServiceSettings.h"
 #include "protobuf/generated/RTIambassador.pb.h"
-#include "utility/InterruptibleCondition.h"
-#include "utility/string_view.h"
+#include "ServiceSettings.h"
+#include "session/ThreadPool.h"
+#include <utility/InterruptibleCondition.h>
+#include <utility/MovingStats.h>
+#include <utility/string_view.h>
 
 #include <condition_variable>
 #include <future>
@@ -39,7 +41,7 @@ namespace RTI_NAMESPACE
    class FederateAmbassador;
 }
 
-namespace rti1516_202X
+namespace rti1516_2025
 {
    namespace fedpro
    {
@@ -49,27 +51,21 @@ namespace rti1516_202X
 
 namespace FedPro
 {
-
    class FederateAmbassadorDispatcher;
 
    class RTIambassadorClientGenericBase
    {
    public:
 
-      using CallRequest = ::rti1516_202X::fedpro::CallRequest;
-      using CallResponse = ::rti1516_202X::fedpro::CallResponse;
-      using CallbackRequest = ::rti1516_202X::fedpro::CallbackRequest;
+      using CallRequest = ::rti1516_2025::fedpro::CallRequest;
+      using CallResponse = ::rti1516_2025::fedpro::CallResponse;
+      using CallbackRequest = ::rti1516_2025::fedpro::CallbackRequest;
 
       using SequenceNumber = int32_t;
 
       explicit RTIambassadorClientGenericBase(std::shared_ptr<ClientConverter> clientConverter);
 
       virtual ~RTIambassadorClientGenericBase();
-
-      CallResponse doConnect(
-            RTI_NAMESPACE::FederateAmbassador & federateReference,
-            RTI_NAMESPACE::CallbackModel callbackModel,
-            const CallRequest & callRequest);
 
       bool isConnected() const
       {
@@ -79,21 +75,13 @@ namespace FedPro
       /**
        * Create the PersistentSession instance using the provided settings.
        *
-       * @param settingsLine A line containing settings seperated by the ',' character.
-       * Each setting must be specified in the format <setting_name>=<setting_value>.
+       * @param settings A Properties object produced by SettingsParser::parse().
        * Example: "FED_INT_HEART=600,connect.port=tcp".
        *
        * @throw std::invalid_argument If any setting is provided through an invalid format
        * @throw std::runtime_error
        */
-      void createPersistentSession(string_view settingsLine);
-
-      /**
-       * Start the session using the provided timeout settings and callback listener.
-       *
-       * @throw FedPro::ConnectionFailed
-       */
-      void startPersistentSession(const Session::HlaCallbackRequestListener & hlaCallbackListener);
+      void createPersistentSession(const Properties & settings);
 
       virtual void enableCallbacks();
 
@@ -120,6 +108,17 @@ namespace FedPro
       static CallResponse decodeHlaCallResponse(const ByteSequence & encodedResponse);
 
       /**
+       * @brief Start the session, and send the provided connect request.
+       * @param callRequest A connect request
+       * @param failedSession If the call fails, the method assign the failed session instance to this output parameter.
+       */
+      CallResponse doConnect(
+            RTI_NAMESPACE::FederateAmbassador & federateReference,
+            RTI_NAMESPACE::CallbackModel callbackModel,
+            const CallRequest & callRequest,
+            std::unique_ptr<PersistentSession> & failedSession) noexcept(false); // REQUIRES(_connectionStateLock)
+
+      /**
        * Submit an HLA call, wait for the response, and decode the response.
        *
        * @throw RTI_NAMESPACE::NotConnected
@@ -141,6 +140,30 @@ namespace FedPro
       void startCallbackThread();
 
       void stopCallbackThread();
+
+      void startStatsPrinting();
+
+      void stopStatsPrinting();
+
+      void countSyncUpdateForStats();
+
+      void countAsyncUpdateForStats();
+
+      void countSyncSentInteractionForStats();
+
+      void countAsyncSentInteractionForStats();
+
+      void countSyncSentDirectedInteractionForStats();
+
+      void countAsyncSentDirectedInteractionForStats();
+
+      MovingStats::Stats getReflectStats(MovingStats::SteadyTimePoint time);
+
+      MovingStats::Stats getReceivedInteractionStats(MovingStats::SteadyTimePoint time);
+
+      MovingStats::Stats getReceivedDirectedInteractionStats(MovingStats::SteadyTimePoint time);
+
+      MovingStats::Stats getCallbackTimeStats(MovingStats::SteadyTimePoint time);
 
       bool evokeCallbackBase(double approximateMinimumTimeInSeconds);
 
@@ -226,12 +249,18 @@ namespace FedPro
             SequenceNumber sequenceNumber,
             ByteSequence && encodedHlaResponse);
 
+      void printStats() noexcept;
+
       // Parse a callback and add it to the queue.
       void hlaCallbackRequest(
             SequenceNumber sequenceNumber,
             const ByteSequence & hlaCallback);
 
       void lostConnection(std::string reason);
+
+      void sessionTerminated(uint64_t sessionId);
+
+      void cleanUpTerminatingSession();
 
       std::unique_ptr<Transport> createTransportConfiguration(const Properties & settings);
 
@@ -249,7 +278,24 @@ namespace FedPro
 
       bool _callbacksEnabled{true}; // GUARDED_BY(_callbackLock)
 
-      std::unique_ptr<PersistentSession> _persistentSession;
+      std::unique_ptr<MovingStats> _hlaSyncUpdateStats;
+      std::unique_ptr<MovingStats> _hlaAsyncUpdateStats;
+      std::unique_ptr<MovingStats> _hlaSyncSentInteraction;
+      std::unique_ptr<MovingStats> _hlaAsyncSentInteraction;
+      std::unique_ptr<MovingStats> _hlaSyncSentDirectedInteraction;
+      std::unique_ptr<MovingStats> _hlaAsyncSentDirectedInteraction;
+
+      bool _printStats{false};
+
+      FedProDuration _printStatsIntervalMillis{};
+
+      std::thread _statPrintingExecutor;
+
+      std::shared_ptr<InterruptibleConditionState> _printStatsInterrupt;
+
+      std::unique_ptr<PersistentSession> _persistentSession; // GUARDED_BY(_connectionStateLock)
+
+      bool _shutdownInProgress{false}; // GUARDED_BY(_connectionStateLock)
 
       std::unique_ptr<std::thread> _callbackThread; // GUARDED_BY(_connectionStateLock)
    };

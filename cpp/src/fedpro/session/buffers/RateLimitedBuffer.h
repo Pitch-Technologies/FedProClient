@@ -23,6 +23,7 @@
 #include "../flowcontrol/RateLimiter.h"
 
 #include <condition_variable>
+#include <cstddef>
 #include <mutex>
 #include <queue>
 #include <utility>
@@ -38,7 +39,7 @@ namespace FedPro
 
       using peek_type = typename GenericBuffer<E>::peek_type;
 
-      using size_type = uint32_t;
+      using size_type = size_t;
 
       /**
       * @param mutex Used to signal the instance of this class to stop waiting for insertion or poll.

@@ -19,8 +19,8 @@
 #include <fedpro/Aliases.h>
 
 #include <cstdint>
+#include <initializer_list>
 #include <string>
-#include <vector>
 
 namespace FedPro
 {
@@ -45,7 +45,7 @@ namespace FedPro
    static constexpr const char * TLS{"tls"};
    static constexpr const char * WS{"websocket"};
    static constexpr const char * WSS{"websocketsecure"};
-   static const std::vector<std::string> ALLOWED_PROTOCOLS = {TCP, TLS, WS, WSS};
+   static const std::initializer_list<const char *> ALLOWED_PROTOCOLS = {TCP, TLS, WS, WSS};
 
    /**
     * @brief HLA standard settings.
@@ -60,13 +60,19 @@ namespace FedPro
    static constexpr const char * SETTING_NAME_ASYNC_UPDATES{"asyncUpdates"};  // Service
    static constexpr const char * SETTING_NAME_CONNECTION_HOST{"connect.hostname"}; // Transport
    static constexpr const char * SETTING_NAME_CONNECTION_MAX_RETRY_ATTEMPTS{"connect.maxRetryAttempts"}; // Session
+   static constexpr const char * SETTING_NAME_RESUME_RETRY_DELAY_MILLIS{"resume.retryDelayMillis"}; // Session
    static constexpr const char * SETTING_NAME_CONNECTION_PORT{"connect.port"}; // Transport
    static constexpr const char * SETTING_NAME_CONNECTION_PROTOCOL{"connect.protocol"}; // Service
    static constexpr const char * SETTING_NAME_CONNECTION_TIMEOUT{"connect.timeout"}; // Session
    static constexpr const char * SETTING_NAME_CONSOLE_LOG_LEVEL{"log.console.level"}; // Log
    static constexpr const char * SETTING_NAME_ROTATING_FILE_LOG_LEVEL{"log.rotatingFile.level"}; // Log
    static constexpr const char * SETTING_NAME_ROTATING_FILE_LOG_PATH{"log.rotatingFile.path"}; // Log
+   static constexpr const char * SETTING_NAME_PRINT_STATS{"log.stats"}; // Session, Service
+   static constexpr const char * SETTING_NAME_PRINT_STATS_INTERVAL{"log.stats.interval"}; // Session, Service
+   static constexpr const char
+         * SETTING_NAME_WARN_ON_LATE_STATE_LISTENER_SHUTDOWN{"log.warnOnLateStateListenerShutdown"};
    static constexpr const char * SETTING_NAME_MESSAGE_QUEUE_SIZE{"messageQueue.size"}; // Session
    static constexpr const char * SETTING_NAME_RATE_LIMIT_ENABLED{"messageQueue.outgoing.limitedRate"}; // Session
+   static constexpr const char * SETTING_NAME_HLA_API_VERSION{"API.version"}; // Service
 
 } // FedPro

@@ -16,11 +16,11 @@
 
 package se.pitch.oss.chat1516_4;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderFactory;
-import hla.rti1516_202X.encoding.HLAunicodeString;
-import hla.rti1516_202X.exceptions.*;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderFactory;
+import hla.rti1516_2025.encoding.HLAunicodeString;
+import hla.rti1516_2025.exceptions.*;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -35,13 +35,17 @@ import java.util.Map;
  * HLA 4 Chat sample for Federate Protocol.
  */
 class Chat extends NullFederateAmbassador {
-   private RTIambassador _rtiAmbassador;
    private final List<String> _args;
+   private final BufferedReader _systemInput;
+
+   private RTIambassador _rtiAmbassador;
+
    private InteractionClassHandle _messageId;
    private ParameterHandle _parameterIdText;
    private ParameterHandle _parameterIdSender;
    private ObjectInstanceHandle _userId;
    private AttributeHandle _attributeIdName;
+   private AttributeHandleSet _attributeHandleSet;
    private String _username;
 
    private volatile boolean _reservationComplete;
@@ -51,13 +55,21 @@ class Chat extends NullFederateAmbassador {
    private EncoderFactory _encoderFactory;
 
    private final Map<ObjectInstanceHandle, Participant> _knownObjects = new HashMap<>();
+   private final Map<String, Participant> _knownParticipants = new HashMap<>();
 
    private static class Participant {
       private final String _name;
+      private final ObjectInstanceHandle _objectInstanceHandle;
 
-      Participant(String name)
+      Participant(String name, ObjectInstanceHandle objectInstanceHandle)
       {
          _name = name;
+         _objectInstanceHandle = objectInstanceHandle;
+      }
+
+      public ObjectInstanceHandle getObjectInstanceHandle()
+      {
+         return _objectInstanceHandle;
       }
 
       @Override
@@ -69,153 +81,245 @@ class Chat extends NullFederateAmbassador {
 
    public static void main(String[] args)
    {
-      new Chat(args).run();
+      new Chat(args).tryRun();
    }
 
    private Chat(String[] args)
    {
       _args = new ArrayList<>(List.of(args));
+      _systemInput = new BufferedReader(new InputStreamReader(System.in));
+   }
+
+   private void tryRun()
+   {
+      try {
+         run();
+      } catch (RuntimeException e) {
+         System.err.println("Unexpected exception: " + e);
+         e.printStackTrace();
+         waitForEnterThenExit(1);
+      } catch (Exception e) {
+         System.err.println("" + e);
+         waitForEnterThenExit(1);
+      }
+   }
+
+   private void waitForEnterThenExit(int exitStatus)
+   {
+      try {
+         System.out.println("Press <ENTER> to exit");
+         _systemInput.readLine();
+      } catch (IOException ignored) {
+      }
+      System.exit(exitStatus);
    }
 
    private void run()
+   throws Exception
    {
-      try {
-         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+      String rtiHost;
 
-         String rtiHost;
-
-         if (!_args.isEmpty()) {
-            rtiHost = _args.get(0);
-         } else {
-            System.out.println("Enter the Federate Protocol server address, such as");
-            System.out.println("'localhost', 'localhost:15164', '192.168.1.62'");
-            System.out.println("If no value is provided, defaults will be used.");
-            System.out.println();
-            System.out.print("[localhost]: ");
-            rtiHost = in.readLine();
-            if (rtiHost.isEmpty()) {
-               rtiHost = "localhost";
-            }
-         }
-
-         RtiFactory rtiFactory = RtiFactoryFactory.getRtiFactory("Federate Protocol");
-         try {
-            _rtiAmbassador = rtiFactory.getRtiAmbassador();
-            _encoderFactory = rtiFactory.getEncoderFactory();
-         } catch (Exception e) {
-            System.out.println("Unable to create RTI ambassador.");
-            return;
-         }
-
-         RtiConfiguration rtiConfiguration = RtiConfiguration.createConfiguration()
-               .withRtiAddress(rtiHost);
-         try {
-            _rtiAmbassador.connect(this, CallbackModel.HLA_IMMEDIATE, rtiConfiguration);
-         } catch (Unauthorized e) {
-            System.out.println(e.getMessage());
-         }
-
-         try {
-            // Clean up old federation
-            _rtiAmbassador.destroyFederationExecution(FEDERATION_NAME);
-         } catch (FederatesCurrentlyJoined | FederationExecutionDoesNotExist ignored) {
-         }
-         File fddFile = new File("Chat-evolved.xml");
-         try {
-            _rtiAmbassador.createFederationExecution(
-                  FEDERATION_NAME,
-                  new String[] {fddFile.getPath()},
-                  "HLAfloat64Time");
-         } catch (FederationExecutionAlreadyExists ignored) {
-         }
-
-         _rtiAmbassador.joinFederationExecution("Chat", FEDERATION_NAME, new String[] {fddFile.getPath()});
-
-         // Subscribe and publish interactions
-         _messageId = _rtiAmbassador.getInteractionClassHandle("Communication");
-         _parameterIdText = _rtiAmbassador.getParameterHandle(_messageId, "Message");
-         _parameterIdSender = _rtiAmbassador.getParameterHandle(_messageId, "Sender");
-
-         _rtiAmbassador.subscribeInteractionClass(_messageId);
-         _rtiAmbassador.publishInteractionClass(_messageId);
-
-         // Subscribe and publish objects
-         ObjectClassHandle participantId = _rtiAmbassador.getObjectClassHandle("Participant");
-         _attributeIdName = _rtiAmbassador.getAttributeHandle(participantId, "Name");
-
-         AttributeHandleSet attributeSet = _rtiAmbassador.getAttributeHandleSetFactory().create();
-         attributeSet.add(_attributeIdName);
-
-         _rtiAmbassador.subscribeObjectClassAttributes(participantId, attributeSet);
-         _rtiAmbassador.publishObjectClassAttributes(participantId, attributeSet);
-
-         // Reserve object instance name and register object instance
-         do {
-            System.out.print("Enter your name: ");
-            _username = in.readLine();
-
-            try {
-               _reservationComplete = false;
-               _rtiAmbassador.reserveObjectInstanceName(_username);
-               synchronized (_reservationSemaphore) {
-                  // Wait for response from RTI
-                  while (!_reservationComplete) {
-                     try {
-                        _reservationSemaphore.wait();
-                     } catch (InterruptedException ignored) {
-                     }
-                  }
-               }
-               if (!_reservationSucceeded) {
-                  System.out.println("Name already taken, try again.");
-               }
-            } catch (IllegalName e) {
-               System.out.println("Illegal name. Try again.");
-            } catch (RTIexception e) {
-               System.out.println("RTI exception when reserving name: " + e.getMessage());
-               return;
-            }
-         } while (!_reservationSucceeded);
-
-         _userId = _rtiAmbassador.registerObjectInstance(participantId, _username);
-         AttributeHandleValueMap attributeValues = _rtiAmbassador.getAttributeHandleValueMapFactory().create(1);
-         HLAunicodeString nameEncoder = _encoderFactory.createHLAunicodeString(_username);
-         attributeValues.put(_attributeIdName, nameEncoder.toByteArray());
-         _rtiAmbassador.updateAttributeValues(_userId, attributeValues, null);
-
-         System.out.println("Type messages you want to send. To exit, type . <ENTER>");
-         while (true) {
-            System.out.print("> ");
-            String message = in.readLine();
-
-            if (message.equals(".")) {
-               break;
-            }
-            ParameterHandleValueMap parameters = _rtiAmbassador.getParameterHandleValueMapFactory().create(1);
-            HLAunicodeString messageEncoder = _encoderFactory.createHLAunicodeString();
-            messageEncoder.setValue(message);
-            parameters.put(_parameterIdText, messageEncoder.toByteArray());
-            parameters.put(_parameterIdSender, nameEncoder.toByteArray());
-
-            _rtiAmbassador.sendInteraction(_messageId, parameters, null);
-         }
-
-         _rtiAmbassador.resignFederationExecution(ResignAction.DELETE_OBJECTS_THEN_DIVEST);
-         try {
-            _rtiAmbassador.destroyFederationExecution(FEDERATION_NAME);
-         } catch (FederatesCurrentlyJoined ignored) {
-         }
-         _rtiAmbassador.disconnect();
-         _rtiAmbassador = null;
-      } catch (Exception e) {
-         e.printStackTrace();
-         try {
-            System.out.println("Press <ENTER> to shutdown");
-            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-            in.readLine();
-         } catch (IOException ignored) {
+      if (!_args.isEmpty()) {
+         rtiHost = _args.get(0);
+      } else {
+         System.out.println("Enter the Federate Protocol server address, such as");
+         System.out.println("'localhost', 'localhost:15164', '192.168.1.62'");
+         System.out.println("If no value is provided, defaults will be used.");
+         System.out.println();
+         System.out.print("[localhost]: ");
+         rtiHost = _systemInput.readLine();
+         if (rtiHost.isEmpty()) {
+            rtiHost = "localhost";
          }
       }
+
+      RtiFactory rtiFactory = RtiFactoryFactory.getRtiFactory("Federate Protocol");
+      try {
+         _rtiAmbassador = rtiFactory.getRtiAmbassador();
+         _encoderFactory = rtiFactory.getEncoderFactory();
+      } catch (Exception e) {
+         throw new Exception("Unable to create RTI ambassador: " + e);
+      }
+
+      RtiConfiguration rtiConfiguration = RtiConfiguration.createConfiguration()
+            .withRtiAddress(rtiHost);
+      try {
+         _rtiAmbassador.connect(this, CallbackModel.HLA_IMMEDIATE, rtiConfiguration);
+      } catch (Unauthorized e) {
+         System.err.println(e.getMessage());
+      }
+
+      try {
+         // Clean up old federation
+         _rtiAmbassador.destroyFederationExecution(FEDERATION_NAME);
+      } catch (FederatesCurrentlyJoined | FederationExecutionDoesNotExist ignored) {
+      }
+      File fddFile = new File("Chat-hla4.xml");
+      try {
+         _rtiAmbassador.createFederationExecution(
+               FEDERATION_NAME,
+               new String[] {fddFile.getPath()},
+               "HLAfloat64Time");
+      } catch (FederationExecutionAlreadyExists ignored) {
+      }
+
+      _rtiAmbassador.joinFederationExecution("Chat", FEDERATION_NAME, new String[] {fddFile.getPath()});
+
+      // Subscribe and publish interactions
+      _messageId = _rtiAmbassador.getInteractionClassHandle("Communication");
+      _parameterIdText = _rtiAmbassador.getParameterHandle(_messageId, "Message");
+      _parameterIdSender = _rtiAmbassador.getParameterHandle(_messageId, "Sender");
+
+      _rtiAmbassador.subscribeInteractionClass(_messageId);
+      _rtiAmbassador.publishInteractionClass(_messageId);
+
+      // Subscribe and publish objects
+      ObjectClassHandle participantId = _rtiAmbassador.getObjectClassHandle("Participant");
+      _attributeIdName = _rtiAmbassador.getAttributeHandle(participantId, "Name");
+
+      InteractionClassHandleSet interactions = _rtiAmbassador.getInteractionClassHandleSetFactory().create();
+      interactions.add(_messageId);
+
+      _rtiAmbassador.subscribeObjectClassDirectedInteractions(participantId, interactions);
+      _rtiAmbassador.publishObjectClassDirectedInteractions(participantId, interactions);
+
+      _attributeHandleSet = _rtiAmbassador.getAttributeHandleSetFactory().create();
+      _attributeHandleSet.add(_attributeIdName);
+
+      _rtiAmbassador.subscribeObjectClassAttributes(participantId, _attributeHandleSet);
+      _rtiAmbassador.publishObjectClassAttributes(participantId, _attributeHandleSet);
+
+      // Reserve object instance name and register object instance
+      do {
+         System.out.print("Enter your name: ");
+         _username = _systemInput.readLine();
+
+         try {
+            _reservationComplete = false;
+            _rtiAmbassador.reserveObjectInstanceName(_username);
+            synchronized (_reservationSemaphore) {
+               // Wait for response from RTI
+               while (!_reservationComplete) {
+                  try {
+                     _reservationSemaphore.wait();
+                  } catch (InterruptedException ignored) {
+                  }
+               }
+            }
+            if (!_reservationSucceeded) {
+               System.out.println("Name already taken, try again.");
+            }
+         } catch (IllegalName e) {
+            System.out.println("Illegal name. Try again.");
+         } catch (RTIexception e) {
+            System.err.println("RTI exception when reserving name: " + e.getMessage());
+            return;
+         }
+      } while (!_reservationSucceeded);
+
+      _userId = _rtiAmbassador.registerObjectInstance(participantId, _username);
+      AttributeHandleValueMap attributeValues = _rtiAmbassador.getAttributeHandleValueMapFactory().create(1);
+      HLAunicodeString nameEncoder = _encoderFactory.createHLAunicodeString(_username);
+      attributeValues.put(_attributeIdName, nameEncoder.toByteArray());
+      _rtiAmbassador.updateAttributeValues(_userId, attributeValues, null);
+
+      System.out.println("Type messages you want to send.");
+      System.out.println("To send a private message, type \"<Participant Name>: <Message>\"");
+      System.out.println("To exit, type . <ENTER>");
+      while (true) {
+         System.out.print("> ");
+         String message = _systemInput.readLine();
+         if (message == null || message.equals(".")) {
+            break;
+         }
+
+         String[] splitMessage = message.split(": ", 2);
+
+         Participant recipient = null;
+         if (splitMessage.length == 2) {
+            String recipientName = splitMessage[0];
+
+            recipient = _knownParticipants.get(recipientName);
+
+            if (recipient == null) {
+               System.err.println("Unknown receiver of private message \"" + recipientName + "\"");
+               continue;
+            }
+
+            message = splitMessage[1];
+         }
+
+         ParameterHandleValueMap parameters = _rtiAmbassador.getParameterHandleValueMapFactory().create(1);
+         HLAunicodeString messageEncoder = _encoderFactory.createHLAunicodeString();
+         messageEncoder.setValue(message);
+         parameters.put(_parameterIdText, messageEncoder.toByteArray());
+         parameters.put(_parameterIdSender, nameEncoder.toByteArray());
+
+         if (recipient == null) {
+            _rtiAmbassador.sendInteraction(_messageId, parameters, null);
+         } else {
+            _rtiAmbassador.sendDirectedInteraction(
+                  _messageId,
+                  recipient.getObjectInstanceHandle(),
+                  parameters,
+                  null);
+         }
+      }
+
+      _rtiAmbassador.resignFederationExecution(ResignAction.DELETE_OBJECTS_THEN_DIVEST);
+      try {
+         _rtiAmbassador.destroyFederationExecution(FEDERATION_NAME);
+      } catch (FederatesCurrentlyJoined ignored) {
+      }
+      _rtiAmbassador.disconnect();
+      _rtiAmbassador = null;
+   }
+
+   private void printMessage(
+         InteractionClassHandle interactionClass,
+         ParameterHandleValueMap parameterValues,
+         boolean directedInteraction)
+   {
+      if (interactionClass.equals(_messageId)) {
+         if (!parameterValues.containsKey(_parameterIdText)) {
+            System.err.println("Bad message received: No text.");
+            return;
+         }
+         if (!parameterValues.containsKey(_parameterIdSender)) {
+            System.err.println("Bad message received: No sender.");
+            return;
+         }
+         try {
+            HLAunicodeString messageDecoder = _encoderFactory.createHLAunicodeString();
+            HLAunicodeString senderDecoder = _encoderFactory.createHLAunicodeString();
+            messageDecoder.decode(parameterValues.get(_parameterIdText));
+            senderDecoder.decode(parameterValues.get(_parameterIdSender));
+            String message = messageDecoder.getValue();
+            String sender = senderDecoder.getValue();
+
+            if (directedInteraction) {
+               System.out.println("Private message from " + sender + ": " + message);
+            } else {
+               System.out.println(sender + ": " + message);
+            }
+            System.out.print("> ");
+         } catch (DecoderException e) {
+            System.err.println("Failed to decode incoming interaction");
+         }
+      }
+   }
+
+   @Override
+   public void receiveDirectedInteraction(
+         InteractionClassHandle interactionClass,
+         ObjectInstanceHandle objectInstance,
+         ParameterHandleValueMap parameterValues,
+         byte[] userSuppliedTag,
+         TransportationTypeHandle transportationType,
+         FederateHandle producingFederate)
+   throws FederateInternalError
+   {
+      printMessage(interactionClass, parameterValues, true);
    }
 
    @Override
@@ -228,29 +332,7 @@ class Chat extends NullFederateAmbassador {
          RegionHandleSet optionalSentRegions)
    throws FederateInternalError
    {
-      if (interactionClass.equals(_messageId)) {
-         if (!parameterValues.containsKey(_parameterIdText)) {
-            System.out.println("Bad message received: No text.");
-            return;
-         }
-         if (!parameterValues.containsKey(_parameterIdSender)) {
-            System.out.println("Bad message received: No sender.");
-            return;
-         }
-         try {
-            HLAunicodeString messageDecoder = _encoderFactory.createHLAunicodeString();
-            HLAunicodeString senderDecoder = _encoderFactory.createHLAunicodeString();
-            messageDecoder.decode(parameterValues.get(_parameterIdText));
-            senderDecoder.decode(parameterValues.get(_parameterIdSender));
-            String message = messageDecoder.getValue();
-            String sender = senderDecoder.getValue();
-
-            System.out.println(sender + ": " + message);
-            System.out.print("> ");
-         } catch (DecoderException e) {
-            System.out.println("Failed to decode incoming interaction");
-         }
-      }
+      printMessage(interactionClass, parameterValues, false);
    }
 
    @Override
@@ -282,6 +364,7 @@ class Chat extends NullFederateAmbassador {
    {
       Participant member = _knownObjects.remove(objectInstance);
       if (member != null) {
+         _knownParticipants.remove(member._name);
          System.out.println("[" + member + " has left]");
       }
    }
@@ -302,12 +385,13 @@ class Chat extends NullFederateAmbassador {
                final HLAunicodeString usernameDecoder = _encoderFactory.createHLAunicodeString();
                usernameDecoder.decode(attributeValues.get(_attributeIdName));
                String memberName = usernameDecoder.getValue();
-               Participant member = new Participant(memberName);
+               Participant member = new Participant(memberName, objectInstance);
                System.out.println("[" + member + " has joined]");
                System.out.print("> ");
                _knownObjects.put(objectInstance, member);
+               _knownParticipants.put(memberName, member);
             } catch (DecoderException e) {
-               System.out.println("Failed to decode incoming attribute");
+               System.err.println("Failed to decode incoming attribute");
             }
          }
       }
@@ -327,6 +411,20 @@ class Chat extends NullFederateAmbassador {
             _rtiAmbassador.updateAttributeValues(_userId, attributeValues, null);
          } catch (RTIexception ignored) {
          }
+      }
+   }
+
+   @Override
+   public void discoverObjectInstance(
+         ObjectInstanceHandle objectInstance,
+         ObjectClassHandle objectClass,
+         String objectInstanceName,
+         FederateHandle producingFederate)
+   throws FederateInternalError
+   {
+      try {
+         _rtiAmbassador.requestAttributeValueUpdate(objectInstance, _attributeHandleSet, null);
+      } catch (RTIexception ignored) {
       }
    }
 }

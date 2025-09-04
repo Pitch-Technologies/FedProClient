@@ -17,16 +17,23 @@
 package se.pitch.oss.fedpro.client_common;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import hla.rti1516_202X.fedpro.*;
+import hla.rti1516_2025.fedpro.*;
 import net.jcip.annotations.GuardedBy;
 import se.pitch.oss.fedpro.client.*;
 import se.pitch.oss.fedpro.client.SimpleResumeStrategy;
+import se.pitch.oss.fedpro.client.session.SessionSettings;
+import se.pitch.oss.fedpro.common.Protocol;
 import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionAlreadyTerminated;
 import se.pitch.oss.fedpro.common.exceptions.SessionLost;
 import se.pitch.oss.fedpro.client_common.exceptions.*;
+import se.pitch.oss.fedpro.common.session.LogUtil;
+import se.pitch.oss.fedpro.common.session.MovingStats;
+import se.pitch.oss.fedpro.common.session.StandAloneMovingStats;
+import se.pitch.oss.fedpro.common.session.MovingStatsNoOp;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -44,6 +51,13 @@ public abstract class RTIambassadorClientGenericBase {
 
    protected static final String crcAddressPrefix = "crcAddress=";
 
+   private final ScheduledExecutorService _statPrintingExecutor = Executors.newSingleThreadScheduledExecutor(r -> {
+      Thread thread = Executors.defaultThreadFactory().newThread(r);
+      thread.setName("FedPro Client Stat printing");
+      thread.setDaemon(true);
+      return thread;
+   });
+
    @GuardedBy("_connectionStateLock")
    protected PersistentSession _persistentSession;
    private final BlockingQueue<QueuedCallback> _callbackQueue = new LinkedBlockingQueue<>();
@@ -60,9 +74,23 @@ public abstract class RTIambassadorClientGenericBase {
    //  thread-safe further down, in the Session classes.
    protected final Object _connectionStateLock = new Object();
 
+   @GuardedBy("_connectionStateLock")
+   private boolean _shutdownInProgress = false;
+
    // Service layer settings
    protected boolean _asyncUpdates = DEFAULT_ASYNC_UPDATES;
    private String _protocol;
+
+   private MovingStats _hlaSyncUpdateStats;
+   private MovingStats _hlaAsyncUpdateStats;
+   private MovingStats _hlaSyncSentInteraction;
+   private MovingStats _hlaAsyncSentInteraction;
+   private MovingStats _hlaSyncSentDirectedInteraction;
+   private MovingStats _hlaAsyncSentDirectedInteraction;
+   private MovingStats _hlaCallTimeStats;
+
+   protected boolean _printStats;
+   protected int _printStatsIntervalMillis;
 
    private static class QueuedCallback {
       final CallbackRequest callbackRequest;
@@ -237,7 +265,7 @@ public abstract class RTIambassadorClientGenericBase {
                }
                if (queuedCallback == PLACEHOLDER) {
                   // Wakeup from enableCallbacks/disableCallbacks. Loop around and start over
-                  return !_callbackQueue.isEmpty();
+                  continue;
                }
                if (queuedCallback == POISON) {
                   return false;
@@ -257,7 +285,7 @@ public abstract class RTIambassadorClientGenericBase {
 
    private void dispatchCallback(QueuedCallback queuedCallback)
    {
-      PersistentSession session = getSession();
+      PersistentSession session = _persistentSession;
 
       try {
          _callbackInProgressThread.set(Thread.currentThread());
@@ -356,10 +384,12 @@ public abstract class RTIambassadorClientGenericBase {
          if (session == null) {
             throw new FedProNotConnected("Federate is not connected");
          }
+         long sendtime = MovingStats.validTimeMillis();
          CompletableFuture<byte[]> call = session.sendHlaCallRequest(callRequest.toByteArray());
 
          // TODO: Handle CancellationException and CompletionException
          byte[] response = call.join();
+         _hlaCallTimeStats.sample((int) (MovingStats.validTimeMillis() - sendtime));
 
          return decodeHlaCallResponse(response);
       } catch (IOException e) {
@@ -378,12 +408,17 @@ public abstract class RTIambassadorClientGenericBase {
             throw new FedProNotConnected("Adapter not connected");
          }
 
-         return session.sendHlaCallRequest(callRequest.toByteArray());
+         long sendtime = MovingStats.validTimeMillis();
+         return session.sendHlaCallRequest(callRequest.toByteArray()).thenApply(bytes -> {
+            _hlaCallTimeStats.sample((int) (MovingStats.validTimeMillis() - sendtime));
+            return bytes;
+         });
       } catch (SessionIllegalState e) {
          throw new FedProNotConnected("HLA call without a federate protocol session.", e);
       }
    }
 
+   // Derived classes sneakily throw API-specific RTIexception
    protected abstract void throwOnException(CallResponse callResponse)
    throws FedProRtiInternalError;
 
@@ -445,27 +480,16 @@ public abstract class RTIambassadorClientGenericBase {
    }
 
    @GuardedBy("_connectionStateLock")
-   protected PersistentSession createPersistentSession()
+   protected PersistentSession createPersistentSession(TypedProperties settings)
    throws FedProRtiInternalError, InvalidSetting
    {
-      return createPersistentSession(null);
-   }
-
-   @GuardedBy("_connectionStateLock")
-   protected PersistentSession createPersistentSession(String settingsLine)
-   throws FedProRtiInternalError, InvalidSetting
-   {
-      // Settings always need to be fully parsed at the beginning of this method.
-      // If the input parameter is null, and we create an empty TypedSettings instance,
-      // then we forget to parse environment variables and java system properties.
-      TypedProperties settings = SettingsParser.parse(settingsLine);
-
       // Always assign to honor changes in settings between successive connect/disconnect calls.
       _asyncUpdates = settings.getBoolean(SETTING_NAME_ASYNC_UPDATES, DEFAULT_ASYNC_UPDATES);
 
       PersistentSession persistentSession = SessionFactory.createPersistentSession(
             createTransportConfiguration(settings),
             this::lostConnection,
+            this::sessionTerminated,
             settings,
             new SimpleResumeStrategy(settings));
 
@@ -475,6 +499,25 @@ public abstract class RTIambassadorClientGenericBase {
       LOGGER.config(() -> String.format(
             "Federate Protocol client service layer settings used:\n%s",
             allServiceSettingsUsed.toPrettyString()));
+      _printStatsIntervalMillis = (int) settings.getDuration(SETTING_NAME_PRINT_STATS_INTERVAL, Duration.ofMillis(SessionSettings.DEFAULT_PRINT_STATS_INTERVAL_MILLIS)).toMillis();
+      _printStats = settings.getBoolean(SETTING_NAME_PRINT_STATS, false);
+      if (_printStats) {
+         _hlaSyncUpdateStats = new StandAloneMovingStats(_printStatsIntervalMillis);
+         _hlaAsyncUpdateStats = new StandAloneMovingStats(_printStatsIntervalMillis);
+         _hlaSyncSentInteraction = new StandAloneMovingStats(_printStatsIntervalMillis);
+         _hlaAsyncSentInteraction = new StandAloneMovingStats(_printStatsIntervalMillis);
+         _hlaSyncSentDirectedInteraction = new StandAloneMovingStats(_printStatsIntervalMillis);
+         _hlaAsyncSentDirectedInteraction = new StandAloneMovingStats(_printStatsIntervalMillis);
+         _hlaCallTimeStats = new StandAloneMovingStats(_printStatsIntervalMillis);
+      } else {
+         _hlaSyncUpdateStats = new MovingStatsNoOp();
+         _hlaAsyncUpdateStats = new MovingStatsNoOp();
+         _hlaSyncSentInteraction = new MovingStatsNoOp();
+         _hlaAsyncSentInteraction = new MovingStatsNoOp();
+         _hlaSyncSentDirectedInteraction = new MovingStatsNoOp();
+         _hlaAsyncSentDirectedInteraction = new MovingStatsNoOp();
+         _hlaCallTimeStats = new MovingStatsNoOp();
+      }
       return persistentSession;
    }
 
@@ -483,13 +526,13 @@ public abstract class RTIambassadorClientGenericBase {
    {
       _protocol = settings.getString(SETTING_NAME_CONNECTION_PROTOCOL, DEFAULT_CONNECTION_PROTOCOL);
       switch (_protocol.toLowerCase()) {
-         case TLS:
+         case Protocol.TLS:
             return TransportFactory.createTlsTransport(settings);
-         case WS:
+         case Protocol.WS:
             return TransportFactory.createWebSocketTransport(settings);
-         case WSS:
+         case Protocol.WSS:
             return TransportFactory.createWebSocketSecureTransport(settings);
-         case TCP:
+         case Protocol.TCP:
             return TransportFactory.createTcpTransport(settings);
          default:
             throw new FedProRtiInternalError(String.format("Invalid network protocol '%s' in settings", _protocol));
@@ -513,7 +556,7 @@ public abstract class RTIambassadorClientGenericBase {
    protected void startCallbackThread()
    {
       _callbackThread = new Thread(this::callbackLoop);
-      _callbackThread.setName("Callback Thread " + _persistentSession.getId());
+      _callbackThread.setName("FedPro Client Session " + LogUtil.formatSessionId(_persistentSession.getId()) + " Callback Thread");
       _callbackThread.setDaemon(true);
       _callbackThread.start();
    }
@@ -522,6 +565,9 @@ public abstract class RTIambassadorClientGenericBase {
    throws FedProRtiInternalError
    {
       synchronized (_connectionStateLock) {
+         if (_persistentSession == null || _shutdownInProgress) {
+            return;
+         }
          try {
             CallResponse callResponse =
                   doHlaCallBase(CallRequest.newBuilder().setDisconnectRequest(DisconnectRequest.newBuilder()));
@@ -534,10 +580,13 @@ public abstract class RTIambassadorClientGenericBase {
          }
 
          terminatePersistentSession();
-
+         _shutdownInProgress = true;
       }
-
-      stopCallbackThread();
+      cleanUpTerminatingSession();
+      synchronized (_connectionStateLock) {
+         _shutdownInProgress = false;
+         _persistentSession = null;
+      }
    }
 
    @GuardedBy("_connectionStateLock")
@@ -548,14 +597,32 @@ public abstract class RTIambassadorClientGenericBase {
          _persistentSession.terminate();
       } catch (SessionLost e) {
          LOGGER.fine(() -> String.format("Exception while trying to disconnect: %s", e));
-         // Termination request did not complete. Still need cleanup below.
+         // Termination request did not complete.
       } catch (SessionAlreadyTerminated e) {
          LOGGER.fine(() -> String.format("Call to disconnect while not connected: %s", e));
          // Already disconnected. Just ignore.
       } catch (SessionIllegalState | RuntimeException e) {
-         // TODO: What happens in the standard API when we call disconnect before the RTIambassador is connected?
          throw new FedProRtiInternalError("" + e, e);
       }
+   }
+
+   private void sessionTerminated(long sessionId) {
+      synchronized (_connectionStateLock) {
+         if (_persistentSession == null || _persistentSession.getId() != sessionId || _shutdownInProgress) {
+            return;
+         }
+         _shutdownInProgress = true;
+      }
+      cleanUpTerminatingSession();
+      synchronized (_connectionStateLock) {
+         _shutdownInProgress = false;
+         _persistentSession = null;
+      }
+   }
+
+   private void cleanUpTerminatingSession() {
+      stopStatPrinting();
+      stopCallbackThread();
    }
 
    private void stopCallbackThread()
@@ -584,15 +651,104 @@ public abstract class RTIambassadorClientGenericBase {
       } catch (InterruptedException ignored) {
       }
       synchronized (_connectionStateLock) {
-         try {
-            _persistentSession.close();
-         } catch (Exception e) {
-            LOGGER.log(Level.WARNING, e, () -> "Exception during PersistentSession cleanup");
-         }
-         _persistentSession = null;
          _callbackThread = null;
       }
    }
+
+   private ScheduledFuture<?> _statPrintingFuture;
+
+   protected void startStatPrinting() {
+      if (_printStats) {
+         stopStatPrinting();
+         _statPrintingFuture = _statPrintingExecutor.scheduleAtFixedRate(this::printStats, _printStatsIntervalMillis, _printStatsIntervalMillis, TimeUnit.MILLISECONDS);
+      }
+   }
+
+   private void stopStatPrinting() {
+      if (_statPrintingFuture != null) {
+         _statPrintingFuture.cancel(false);
+         _statPrintingFuture = null;
+      }
+   }
+
+   protected void countSyncUpdateForStats() {
+      _hlaSyncUpdateStats.sample(1);
+   }
+
+   public void countAsyncUpdateForStats() {
+      _hlaAsyncUpdateStats.sample(1);
+   }
+
+   protected void countSyncSentInteractionForStats() {
+      _hlaSyncSentInteraction.sample(1);
+   }
+
+   public void countAsyncSentInteractionForStats() {
+      _hlaAsyncSentInteraction.sample(1);
+   }
+
+   protected void countSyncSentDirectedInteractionForStats() {
+      _hlaSyncSentDirectedInteraction.sample(1);
+   }
+
+   public void countAsyncSentDirectedInteractionForStats() {
+      _hlaAsyncSentDirectedInteraction.sample(1);
+   }
+
+   private void printStats() {
+      try {
+
+         long time = MovingStats.validTimeMillis();
+
+         MovingStats.Stats syncUpdates = _hlaSyncUpdateStats.getStatsForTime(time);
+         MovingStats.Stats asyncUpdates = _hlaAsyncUpdateStats.getStatsForTime(time);
+         MovingStats.Stats syncInteractions = _hlaSyncSentInteraction.getStatsForTime(time);
+         MovingStats.Stats asyncInteractions = _hlaAsyncSentInteraction.getStatsForTime(time);
+         MovingStats.Stats syncDirInteractions = _hlaSyncSentDirectedInteraction.getStatsForTime(time);
+         MovingStats.Stats asyncDirInteractions = _hlaAsyncSentDirectedInteraction.getStatsForTime(time);
+         MovingStats.Stats reflectStats = getReflectStats(time);
+         MovingStats.Stats receivedInteractionStats = getReceivedInteractionStats(time);
+         MovingStats.Stats receivedDirInteractionStats = getReceivedDirectedInteractionStats(time);
+         MovingStats.Stats callbackTimeStats = getCallbackTimeStats(time);
+         MovingStats.Stats callTimeStats = _hlaCallTimeStats.getStatsForTime(time);
+
+         // The stats we are accessing have their own lock, and have no bearing on the session state.
+         // @formatter:off
+         // noinspection FieldAccessNotGuarded
+         LOGGER.info("FedPro client stats for the last " + (int)(_printStatsIntervalMillis / 1000.0) + " seconds.\n" +
+               "Session " + LogUtil.formatSessionId(_persistentSession.getId()) + "\n" +
+               _persistentSession.getPrettyPrintedPerSecondStats() + "\n" +
+               "HLA callbacks in queue:                             " + LogUtil.padStat(3) + LogUtil.printStatInt(_callbackQueue.size()) + "\n" +
+               "\n" +
+               "Updates sent (sync):                                " + LogUtil.printStatFloat(syncUpdates.averageBucket) + LogUtil.printStatInt(syncUpdates.maxBucket) + LogUtil.printStatInt(syncUpdates.minBucket) + LogUtil.printStatInt(syncUpdates.sum) + LogUtil.printStatLong(syncUpdates.historicTotal) + "\n" +
+               "Updates sent (async):                               " + LogUtil.printStatFloat(asyncUpdates.averageBucket) + LogUtil.printStatInt(asyncUpdates.maxBucket) + LogUtil.printStatInt(asyncUpdates.minBucket) + LogUtil.printStatInt(asyncUpdates.sum) + LogUtil.printStatLong(asyncUpdates.historicTotal) + "\n" +
+               "Updates received:                                   " + LogUtil.printStatFloat(reflectStats.averageBucket) + LogUtil.printStatInt(reflectStats.maxBucket) + LogUtil.printStatInt(reflectStats.minBucket) + LogUtil.printStatInt(reflectStats.sum) + LogUtil.printStatLong(reflectStats.historicTotal) + "\n" +
+               "\n" +
+               "Interactions sent (sync):                           " + LogUtil.printStatFloat(syncInteractions.averageBucket) + LogUtil.printStatInt(syncInteractions.maxBucket) + LogUtil.printStatInt(syncInteractions.minBucket) + LogUtil.printStatInt(syncInteractions.sum) + LogUtil.printStatLong(syncInteractions.historicTotal) + "\n" +
+               "Interactions sent (async):                          " + LogUtil.printStatFloat(asyncInteractions.averageBucket) + LogUtil.printStatInt(asyncInteractions.maxBucket) + LogUtil.printStatInt(asyncInteractions.minBucket) + LogUtil.printStatInt(asyncInteractions.sum) + LogUtil.printStatLong(asyncInteractions.historicTotal) + "\n" +
+               "Interactions received:                              " + LogUtil.printStatFloat(receivedInteractionStats.averageBucket) + LogUtil.printStatInt(receivedInteractionStats.maxBucket) + LogUtil.printStatInt(receivedInteractionStats.minBucket) + LogUtil.printStatInt(receivedInteractionStats.sum) + LogUtil.printStatLong(receivedInteractionStats.historicTotal) + "\n" +
+               "\n" +
+               "Directed Interactions sent (sync):                  " + LogUtil.printStatFloat(syncDirInteractions.averageBucket) + LogUtil.printStatInt(syncDirInteractions.maxBucket) + LogUtil.printStatInt(syncDirInteractions.minBucket) + LogUtil.printStatInt(syncDirInteractions.sum) + LogUtil.printStatLong(syncDirInteractions.historicTotal) + "\n" +
+               "Directed Interactions sent (async):                 " + LogUtil.printStatFloat(asyncDirInteractions.averageBucket) + LogUtil.printStatInt(asyncDirInteractions.maxBucket) + LogUtil.printStatInt(asyncDirInteractions.minBucket) + LogUtil.printStatInt(asyncDirInteractions.sum) + LogUtil.printStatLong(asyncDirInteractions.historicTotal) + "\n" +
+               "Directed Interactions received:                     " + LogUtil.printStatFloat(receivedDirInteractionStats.averageBucket) + LogUtil.printStatInt(receivedDirInteractionStats.maxBucket) + LogUtil.printStatInt(receivedDirInteractionStats.minBucket) + LogUtil.printStatInt(receivedDirInteractionStats.sum) + LogUtil.printStatLong(receivedDirInteractionStats.historicTotal) + "\n" +
+               "\n" +
+               "                                                        Average        Max        Min      Total   All time" + "\n" +
+               // Call time, from the client's POV, is round-trip time to server plus time in queue in server plus actual HLA call time to the RTI
+               "HLA call times (ms):                                " + LogUtil.printStatFloat(callTimeStats.averageSample) + LogUtil.printStatInt(callTimeStats.maxSampleWithDefault(0)) + LogUtil.printStatInt(callTimeStats.minSampleWithDefault(0)) + LogUtil.printStatInt(callTimeStats.sum) + LogUtil.printStatLong(callTimeStats.historicTotal) + "\n" +
+               // Callback time, from the client's POV, is just time spent in federate code during callbacks
+               "HLA callback times (ms):                            " + LogUtil.printStatFloat(callbackTimeStats.averageSample) + LogUtil.printStatInt(callbackTimeStats.maxSampleWithDefault(0)) + LogUtil.printStatInt(callbackTimeStats.minSampleWithDefault(0)) + LogUtil.printStatInt(callbackTimeStats.sum) + LogUtil.printStatLong(callbackTimeStats.historicTotal)
+         );
+         // @formatter:on
+
+      } catch (RuntimeException e) {
+         LOGGER.warning("Unexpected exception in stat printing thread: " + e);
+      }
+   }
+
+   protected abstract MovingStats.Stats getReflectStats(long time);
+   protected abstract MovingStats.Stats getReceivedInteractionStats(long time);
+   protected abstract MovingStats.Stats getReceivedDirectedInteractionStats(long time);
+   protected abstract MovingStats.Stats getCallbackTimeStats(long time);
 
    public static ArrayList<String> splitFederateConnectSettings(String inputString)
    {

@@ -26,12 +26,12 @@ namespace FedPro
 
    Socket::~Socket() = default;
 
-   int Socket::recv(
+   uint32_t Socket::recv(
          char * firstBytePos,
          uint32_t minByteCount,
          uint32_t maxByteCount) const
    {
-      int readInTotal = 0;
+      uint32_t readInTotal = 0;
 
       while (readInTotal < minByteCount) {
          // Blocks when there is nothing to read, unless there is a std::ios_base::failure or EofException.

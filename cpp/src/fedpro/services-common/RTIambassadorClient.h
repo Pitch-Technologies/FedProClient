@@ -39,6 +39,8 @@ namespace RTI_NAMESPACE
 
 namespace FedPro
 {
+   class Properties;
+
    class RTIambassadorClient : public RTIambassadorClientGenericBase
    {
    public:
@@ -76,11 +78,11 @@ namespace FedPro
 
       // Connect to a Federate Protocol Server.
       // The caller is responsible for parsing clientSettings and rtiConfiguration.
-      rti1516_202X::fedpro::ConfigurationResult connect(
-            string_view clientSettings,
+      RTI_NAMESPACE::ConfigurationResult connect(
+            const Properties & clientSettings,
             RTI_NAMESPACE::FederateAmbassador & federateAmbassador,
             RTI_NAMESPACE::CallbackModel callbackModel,
-            std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> rtiConfiguration = nullptr,
+            const RTI_NAMESPACE::RtiConfiguration * rtiConfiguration = nullptr,
             const RTI_NAMESPACE::Credentials * credentials = nullptr);
 
       void disconnect();
@@ -140,7 +142,7 @@ namespace FedPro
       GetResponseFunc<void> asyncListFederationExecutions(
 );
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       void listFederationExecutionMembers(
          std::string const & federationName);
 
@@ -179,12 +181,12 @@ namespace FedPro
          std::string const & synchronizationPointLabel,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      void registerFederationSynchronizationPointWithSet(
+      void registerFederationSynchronizationPoint(
          std::string const & synchronizationPointLabel,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::FederateHandleSet & synchronizationSet);
 
-      GetResponseFunc<void> asyncRegisterFederationSynchronizationPointWithSet(
+      GetResponseFunc<void> asyncRegisterFederationSynchronizationPoint(
          std::string const & synchronizationPointLabel,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::FederateHandleSet & synchronizationSet);
@@ -203,11 +205,11 @@ namespace FedPro
       GetResponseFunc<void> asyncRequestFederationSave(
          std::string const & label);
 
-      void requestFederationSaveWithTime(
+      void requestFederationSave(
          std::string const & label,
          const RTI_NAMESPACE::LogicalTime & time);
 
-      GetResponseFunc<void> asyncRequestFederationSaveWithTime(
+      GetResponseFunc<void> asyncRequestFederationSave(
          std::string const & label,
          const RTI_NAMESPACE::LogicalTime & time);
 
@@ -305,7 +307,7 @@ namespace FedPro
       GetResponseFunc<void> asyncUnpublishInteractionClass(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass);
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       void publishObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
@@ -315,7 +317,7 @@ namespace FedPro
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
 #endif // RTI_HLA_VERSION
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       void unpublishObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass);
 
@@ -323,12 +325,12 @@ namespace FedPro
          const RTI_NAMESPACE::ObjectClassHandle & objectClass);
 #endif // RTI_HLA_VERSION
 
-#if (RTI_HLA_VERSION >= 2024)
-      void unpublishObjectClassDirectedInteractionsWithSet(
+#if (RTI_HLA_VERSION >= 2025)
+      void unpublishObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
 
-      GetResponseFunc<void> asyncUnpublishObjectClassDirectedInteractionsWithSet(
+      GetResponseFunc<void> asyncUnpublishObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
 #endif // RTI_HLA_VERSION
@@ -341,12 +343,12 @@ namespace FedPro
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes);
 
-      void subscribeObjectClassAttributesWithRate(
+      void subscribeObjectClassAttributes(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          std::string const & updateRateDesignator);
 
-      GetResponseFunc<void> asyncSubscribeObjectClassAttributesWithRate(
+      GetResponseFunc<void> asyncSubscribeObjectClassAttributes(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          std::string const & updateRateDesignator);
@@ -359,12 +361,12 @@ namespace FedPro
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes);
 
-      void subscribeObjectClassAttributesPassivelyWithRate(
+      void subscribeObjectClassAttributesPassively(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          std::string const & updateRateDesignator);
 
-      GetResponseFunc<void> asyncSubscribeObjectClassAttributesPassivelyWithRate(
+      GetResponseFunc<void> asyncSubscribeObjectClassAttributesPassively(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          std::string const & updateRateDesignator);
@@ -401,7 +403,7 @@ namespace FedPro
       GetResponseFunc<void> asyncUnsubscribeInteractionClass(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass);
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       void subscribeObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
@@ -411,7 +413,7 @@ namespace FedPro
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
 #endif // RTI_HLA_VERSION
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       void subscribeObjectClassDirectedInteractionsUniversally(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
@@ -421,7 +423,7 @@ namespace FedPro
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
 #endif // RTI_HLA_VERSION
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
       void unsubscribeObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass);
 
@@ -429,12 +431,12 @@ namespace FedPro
          const RTI_NAMESPACE::ObjectClassHandle & objectClass);
 #endif // RTI_HLA_VERSION
 
-#if (RTI_HLA_VERSION >= 2024)
-      void unsubscribeObjectClassDirectedInteractionsWithSet(
+#if (RTI_HLA_VERSION >= 2025)
+      void unsubscribeObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
 
-      GetResponseFunc<void> asyncUnsubscribeObjectClassDirectedInteractionsWithSet(
+      GetResponseFunc<void> asyncUnsubscribeObjectClassDirectedInteractions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::InteractionClassHandleSet & interactionClasses);
 #endif // RTI_HLA_VERSION
@@ -487,13 +489,13 @@ namespace FedPro
          const RTI_NAMESPACE::AttributeHandleValueMap & attributeValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      RTI_NAMESPACE::MessageRetractionHandle updateAttributeValuesWithTime(
+      RTI_NAMESPACE::MessageRetractionHandle updateAttributeValues(
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::AttributeHandleValueMap & attributeValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::LogicalTime & time);
 
-      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncUpdateAttributeValuesWithTime(
+      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncUpdateAttributeValues(
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::AttributeHandleValueMap & attributeValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
@@ -509,13 +511,13 @@ namespace FedPro
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      RTI_NAMESPACE::MessageRetractionHandle sendInteractionWithTime(
+      RTI_NAMESPACE::MessageRetractionHandle sendInteraction(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass,
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::LogicalTime & time);
 
-      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncSendInteractionWithTime(
+      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncSendInteraction(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass,
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
@@ -533,14 +535,14 @@ namespace FedPro
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      RTI_NAMESPACE::MessageRetractionHandle sendDirectedInteractionWithTime(
+      RTI_NAMESPACE::MessageRetractionHandle sendDirectedInteraction(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass,
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::LogicalTime & time);
 
-      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncSendDirectedInteractionWithTime(
+      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncSendDirectedInteraction(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass,
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
@@ -555,12 +557,12 @@ namespace FedPro
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      RTI_NAMESPACE::MessageRetractionHandle deleteObjectInstanceWithTime(
+      RTI_NAMESPACE::MessageRetractionHandle deleteObjectInstance(
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::LogicalTime & time);
 
-      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncDeleteObjectInstanceWithTime(
+      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncDeleteObjectInstance(
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::LogicalTime & time);
@@ -571,22 +573,22 @@ namespace FedPro
       GetResponseFunc<void> asyncLocalDeleteObjectInstance(
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance);
 
-      void requestInstanceAttributeValueUpdate(
+      void requestAttributeValueUpdate(
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      GetResponseFunc<void> asyncRequestInstanceAttributeValueUpdate(
+      GetResponseFunc<void> asyncRequestAttributeValueUpdate(
          const RTI_NAMESPACE::ObjectInstanceHandle & objectInstance,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      void requestClassAttributeValueUpdate(
+      void requestAttributeValueUpdate(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      GetResponseFunc<void> asyncRequestClassAttributeValueUpdate(
+      GetResponseFunc<void> asyncRequestAttributeValueUpdate(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSet & attributes,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
@@ -893,12 +895,12 @@ namespace FedPro
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributesAndRegions);
 
-      RTI_NAMESPACE::ObjectInstanceHandle registerObjectInstanceWithNameAndRegions(
+      RTI_NAMESPACE::ObjectInstanceHandle registerObjectInstanceWithRegions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributesAndRegions,
          std::string const & objectInstanceName);
 
-      GetResponseFunc<RTI_NAMESPACE::ObjectInstanceHandle> asyncRegisterObjectInstanceWithNameAndRegions(
+      GetResponseFunc<RTI_NAMESPACE::ObjectInstanceHandle> asyncRegisterObjectInstanceWithRegions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributesAndRegions,
          std::string const & objectInstanceName);
@@ -929,13 +931,13 @@ namespace FedPro
          const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributesAndRegions,
          bool active);
 
-      void subscribeObjectClassAttributesWithRegionsAndRate(
+      void subscribeObjectClassAttributesWithRegions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributesAndRegions,
          bool active,
          std::string const & updateRateDesignator);
 
-      GetResponseFunc<void> asyncSubscribeObjectClassAttributesWithRegionsAndRate(
+      GetResponseFunc<void> asyncSubscribeObjectClassAttributesWithRegions(
          const RTI_NAMESPACE::ObjectClassHandle & objectClass,
          const RTI_NAMESPACE::AttributeHandleSetRegionHandleSetPairVector & attributesAndRegions,
          bool active,
@@ -979,14 +981,14 @@ namespace FedPro
          const RTI_NAMESPACE::RegionHandleSet & regions,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag);
 
-      RTI_NAMESPACE::MessageRetractionHandle sendInteractionWithRegionsAndTime(
+      RTI_NAMESPACE::MessageRetractionHandle sendInteractionWithRegions(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass,
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
          const RTI_NAMESPACE::RegionHandleSet & regions,
          const RTI_NAMESPACE::VariableLengthData & userSuppliedTag,
          const RTI_NAMESPACE::LogicalTime & time);
 
-      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncSendInteractionWithRegionsAndTime(
+      GetResponseFunc<RTI_NAMESPACE::MessageRetractionHandle> asyncSendInteractionWithRegions(
          const RTI_NAMESPACE::InteractionClassHandle & interactionClass,
          const RTI_NAMESPACE::ParameterHandleValueMap & parameterValues,
          const RTI_NAMESPACE::RegionHandleSet & regions,

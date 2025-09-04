@@ -45,7 +45,7 @@ struct TableStruct_datatypes_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_datatypes_2eproto;
-namespace rti1516_202X {
+namespace rti1516_2025 {
 namespace fedpro {
 class AttributeHandle;
 struct AttributeHandleDefaultTypeInternal;
@@ -189,57 +189,57 @@ class TransportationTypeHandle;
 struct TransportationTypeHandleDefaultTypeInternal;
 extern TransportationTypeHandleDefaultTypeInternal _TransportationTypeHandle_default_instance_;
 }  // namespace fedpro
-}  // namespace rti1516_202X
+}  // namespace rti1516_2025
 PROTOBUF_NAMESPACE_OPEN
-template<> ::rti1516_202X::fedpro::AttributeHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::AttributeHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::AttributeHandleSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::AttributeHandleSet>(Arena*);
-template<> ::rti1516_202X::fedpro::AttributeHandleValue* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::AttributeHandleValue>(Arena*);
-template<> ::rti1516_202X::fedpro::AttributeHandleValueMap* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::AttributeHandleValueMap>(Arena*);
-template<> ::rti1516_202X::fedpro::AttributeSetRegionSetPair* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::AttributeSetRegionSetPair>(Arena*);
-template<> ::rti1516_202X::fedpro::AttributeSetRegionSetPairList* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::AttributeSetRegionSetPairList>(Arena*);
-template<> ::rti1516_202X::fedpro::ConfigurationResult* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ConfigurationResult>(Arena*);
-template<> ::rti1516_202X::fedpro::ConveyedRegion* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ConveyedRegion>(Arena*);
-template<> ::rti1516_202X::fedpro::ConveyedRegionSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ConveyedRegionSet>(Arena*);
-template<> ::rti1516_202X::fedpro::Credentials* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::Credentials>(Arena*);
-template<> ::rti1516_202X::fedpro::DimensionAndRange* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::DimensionAndRange>(Arena*);
-template<> ::rti1516_202X::fedpro::DimensionHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::DimensionHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::DimensionHandleSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::DimensionHandleSet>(Arena*);
-template<> ::rti1516_202X::fedpro::ExceptionData* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ExceptionData>(Arena*);
-template<> ::rti1516_202X::fedpro::FederateHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandleSaveStatusPair>(Arena*);
-template<> ::rti1516_202X::fedpro::FederateHandleSaveStatusPairArray* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandleSaveStatusPairArray>(Arena*);
-template<> ::rti1516_202X::fedpro::FederateHandleSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandleSet>(Arena*);
-template<> ::rti1516_202X::fedpro::FederateRestoreStatus* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederateRestoreStatus>(Arena*);
-template<> ::rti1516_202X::fedpro::FederateRestoreStatusArray* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederateRestoreStatusArray>(Arena*);
-template<> ::rti1516_202X::fedpro::FederationExecutionInformation* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederationExecutionInformation>(Arena*);
-template<> ::rti1516_202X::fedpro::FederationExecutionInformationSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederationExecutionInformationSet>(Arena*);
-template<> ::rti1516_202X::fedpro::FederationExecutionMemberInformation* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederationExecutionMemberInformation>(Arena*);
-template<> ::rti1516_202X::fedpro::FederationExecutionMemberInformationSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FederationExecutionMemberInformationSet>(Arena*);
-template<> ::rti1516_202X::fedpro::FileFomModule* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FileFomModule>(Arena*);
-template<> ::rti1516_202X::fedpro::FomModule* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FomModule>(Arena*);
-template<> ::rti1516_202X::fedpro::FomModuleSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::FomModuleSet>(Arena*);
-template<> ::rti1516_202X::fedpro::InteractionClassHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::InteractionClassHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::InteractionClassHandleSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::InteractionClassHandleSet>(Arena*);
-template<> ::rti1516_202X::fedpro::JoinResult* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::JoinResult>(Arena*);
-template<> ::rti1516_202X::fedpro::LogicalTime* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::LogicalTime>(Arena*);
-template<> ::rti1516_202X::fedpro::LogicalTimeInterval* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::LogicalTimeInterval>(Arena*);
-template<> ::rti1516_202X::fedpro::MessageRetractionHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::MessageRetractionHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::MessageRetractionReturn* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::MessageRetractionReturn>(Arena*);
-template<> ::rti1516_202X::fedpro::ObjectClassHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ObjectClassHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::ObjectInstanceHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ObjectInstanceHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::ParameterHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ParameterHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::ParameterHandleValue* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ParameterHandleValue>(Arena*);
-template<> ::rti1516_202X::fedpro::ParameterHandleValueMap* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::ParameterHandleValueMap>(Arena*);
-template<> ::rti1516_202X::fedpro::RangeBounds* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::RangeBounds>(Arena*);
-template<> ::rti1516_202X::fedpro::RegionHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::RegionHandle>(Arena*);
-template<> ::rti1516_202X::fedpro::RegionHandleSet* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::RegionHandleSet>(Arena*);
-template<> ::rti1516_202X::fedpro::RtiConfiguration* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::RtiConfiguration>(Arena*);
-template<> ::rti1516_202X::fedpro::SupplementalReceiveInfo* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::SupplementalReceiveInfo>(Arena*);
-template<> ::rti1516_202X::fedpro::SupplementalReflectInfo* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::SupplementalReflectInfo>(Arena*);
-template<> ::rti1516_202X::fedpro::TimeQueryReturn* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::TimeQueryReturn>(Arena*);
-template<> ::rti1516_202X::fedpro::TransportationTypeHandle* Arena::CreateMaybeMessage<::rti1516_202X::fedpro::TransportationTypeHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::AttributeHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::AttributeHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::AttributeHandleSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::AttributeHandleSet>(Arena*);
+template<> ::rti1516_2025::fedpro::AttributeHandleValue* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::AttributeHandleValue>(Arena*);
+template<> ::rti1516_2025::fedpro::AttributeHandleValueMap* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::AttributeHandleValueMap>(Arena*);
+template<> ::rti1516_2025::fedpro::AttributeSetRegionSetPair* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::AttributeSetRegionSetPair>(Arena*);
+template<> ::rti1516_2025::fedpro::AttributeSetRegionSetPairList* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::AttributeSetRegionSetPairList>(Arena*);
+template<> ::rti1516_2025::fedpro::ConfigurationResult* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ConfigurationResult>(Arena*);
+template<> ::rti1516_2025::fedpro::ConveyedRegion* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ConveyedRegion>(Arena*);
+template<> ::rti1516_2025::fedpro::ConveyedRegionSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ConveyedRegionSet>(Arena*);
+template<> ::rti1516_2025::fedpro::Credentials* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::Credentials>(Arena*);
+template<> ::rti1516_2025::fedpro::DimensionAndRange* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::DimensionAndRange>(Arena*);
+template<> ::rti1516_2025::fedpro::DimensionHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::DimensionHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::DimensionHandleSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::DimensionHandleSet>(Arena*);
+template<> ::rti1516_2025::fedpro::ExceptionData* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ExceptionData>(Arena*);
+template<> ::rti1516_2025::fedpro::FederateHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandleSaveStatusPair>(Arena*);
+template<> ::rti1516_2025::fedpro::FederateHandleSaveStatusPairArray* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandleSaveStatusPairArray>(Arena*);
+template<> ::rti1516_2025::fedpro::FederateHandleSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandleSet>(Arena*);
+template<> ::rti1516_2025::fedpro::FederateRestoreStatus* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederateRestoreStatus>(Arena*);
+template<> ::rti1516_2025::fedpro::FederateRestoreStatusArray* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederateRestoreStatusArray>(Arena*);
+template<> ::rti1516_2025::fedpro::FederationExecutionInformation* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederationExecutionInformation>(Arena*);
+template<> ::rti1516_2025::fedpro::FederationExecutionInformationSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederationExecutionInformationSet>(Arena*);
+template<> ::rti1516_2025::fedpro::FederationExecutionMemberInformation* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederationExecutionMemberInformation>(Arena*);
+template<> ::rti1516_2025::fedpro::FederationExecutionMemberInformationSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FederationExecutionMemberInformationSet>(Arena*);
+template<> ::rti1516_2025::fedpro::FileFomModule* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FileFomModule>(Arena*);
+template<> ::rti1516_2025::fedpro::FomModule* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FomModule>(Arena*);
+template<> ::rti1516_2025::fedpro::FomModuleSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::FomModuleSet>(Arena*);
+template<> ::rti1516_2025::fedpro::InteractionClassHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::InteractionClassHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::InteractionClassHandleSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::InteractionClassHandleSet>(Arena*);
+template<> ::rti1516_2025::fedpro::JoinResult* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::JoinResult>(Arena*);
+template<> ::rti1516_2025::fedpro::LogicalTime* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::LogicalTime>(Arena*);
+template<> ::rti1516_2025::fedpro::LogicalTimeInterval* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::LogicalTimeInterval>(Arena*);
+template<> ::rti1516_2025::fedpro::MessageRetractionHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::MessageRetractionHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::MessageRetractionReturn* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::MessageRetractionReturn>(Arena*);
+template<> ::rti1516_2025::fedpro::ObjectClassHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ObjectClassHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::ObjectInstanceHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ObjectInstanceHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::ParameterHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ParameterHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::ParameterHandleValue* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ParameterHandleValue>(Arena*);
+template<> ::rti1516_2025::fedpro::ParameterHandleValueMap* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::ParameterHandleValueMap>(Arena*);
+template<> ::rti1516_2025::fedpro::RangeBounds* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::RangeBounds>(Arena*);
+template<> ::rti1516_2025::fedpro::RegionHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::RegionHandle>(Arena*);
+template<> ::rti1516_2025::fedpro::RegionHandleSet* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::RegionHandleSet>(Arena*);
+template<> ::rti1516_2025::fedpro::RtiConfiguration* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::RtiConfiguration>(Arena*);
+template<> ::rti1516_2025::fedpro::SupplementalReceiveInfo* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::SupplementalReceiveInfo>(Arena*);
+template<> ::rti1516_2025::fedpro::SupplementalReflectInfo* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::SupplementalReflectInfo>(Arena*);
+template<> ::rti1516_2025::fedpro::TimeQueryReturn* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::TimeQueryReturn>(Arena*);
+template<> ::rti1516_2025::fedpro::TransportationTypeHandle* Arena::CreateMaybeMessage<::rti1516_2025::fedpro::TransportationTypeHandle>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace rti1516_202X {
+namespace rti1516_2025 {
 namespace fedpro {
 
 enum AdditionalSettingsResultCode : int {
@@ -518,7 +518,7 @@ inline bool ServiceGroup_Parse(
 // ===================================================================
 
 class ExceptionData final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ExceptionData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ExceptionData) */ {
  public:
   inline ExceptionData() : ExceptionData(nullptr) {}
   ~ExceptionData() override;
@@ -621,7 +621,7 @@ class ExceptionData final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ExceptionData";
+    return "rti1516_2025.fedpro.ExceptionData";
   }
   protected:
   explicit ExceptionData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -669,7 +669,7 @@ class ExceptionData final :
   std::string* _internal_mutable_details();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ExceptionData)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ExceptionData)
  private:
   class _Internal;
 
@@ -687,7 +687,7 @@ class ExceptionData final :
 // -------------------------------------------------------------------
 
 class RtiConfiguration final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.RtiConfiguration) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.RtiConfiguration) */ {
  public:
   inline RtiConfiguration() : RtiConfiguration(nullptr) {}
   ~RtiConfiguration() override;
@@ -790,7 +790,7 @@ class RtiConfiguration final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.RtiConfiguration";
+    return "rti1516_2025.fedpro.RtiConfiguration";
   }
   protected:
   explicit RtiConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -853,7 +853,7 @@ class RtiConfiguration final :
   std::string* _internal_mutable_additionalsettings();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.RtiConfiguration)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.RtiConfiguration)
  private:
   class _Internal;
 
@@ -872,7 +872,7 @@ class RtiConfiguration final :
 // -------------------------------------------------------------------
 
 class ConfigurationResult final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ConfigurationResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ConfigurationResult) */ {
  public:
   inline ConfigurationResult() : ConfigurationResult(nullptr) {}
   ~ConfigurationResult() override;
@@ -975,7 +975,7 @@ class ConfigurationResult final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ConfigurationResult";
+    return "rti1516_2025.fedpro.ConfigurationResult";
   }
   protected:
   explicit ConfigurationResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1029,16 +1029,16 @@ class ConfigurationResult final :
   void _internal_set_addressused(bool value);
   public:
 
-  // .rti1516_202X.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode = 3;
+  // .rti1516_2025.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode = 3;
   void clear_additionalsettingsresultcode();
-  ::rti1516_202X::fedpro::AdditionalSettingsResultCode additionalsettingsresultcode() const;
-  void set_additionalsettingsresultcode(::rti1516_202X::fedpro::AdditionalSettingsResultCode value);
+  ::rti1516_2025::fedpro::AdditionalSettingsResultCode additionalsettingsresultcode() const;
+  void set_additionalsettingsresultcode(::rti1516_2025::fedpro::AdditionalSettingsResultCode value);
   private:
-  ::rti1516_202X::fedpro::AdditionalSettingsResultCode _internal_additionalsettingsresultcode() const;
-  void _internal_set_additionalsettingsresultcode(::rti1516_202X::fedpro::AdditionalSettingsResultCode value);
+  ::rti1516_2025::fedpro::AdditionalSettingsResultCode _internal_additionalsettingsresultcode() const;
+  void _internal_set_additionalsettingsresultcode(::rti1516_2025::fedpro::AdditionalSettingsResultCode value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ConfigurationResult)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ConfigurationResult)
  private:
   class _Internal;
 
@@ -1058,7 +1058,7 @@ class ConfigurationResult final :
 // -------------------------------------------------------------------
 
 class Credentials final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.Credentials) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.Credentials) */ {
  public:
   inline Credentials() : Credentials(nullptr) {}
   ~Credentials() override;
@@ -1161,7 +1161,7 @@ class Credentials final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.Credentials";
+    return "rti1516_2025.fedpro.Credentials";
   }
   protected:
   explicit Credentials(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1209,7 +1209,7 @@ class Credentials final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.Credentials)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.Credentials)
  private:
   class _Internal;
 
@@ -1227,7 +1227,7 @@ class Credentials final :
 // -------------------------------------------------------------------
 
 class FederateRestoreStatus final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederateRestoreStatus) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederateRestoreStatus) */ {
  public:
   inline FederateRestoreStatus() : FederateRestoreStatus(nullptr) {}
   ~FederateRestoreStatus() override;
@@ -1330,7 +1330,7 @@ class FederateRestoreStatus final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederateRestoreStatus";
+    return "rti1516_2025.fedpro.FederateRestoreStatus";
   }
   protected:
   explicit FederateRestoreStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1351,52 +1351,52 @@ class FederateRestoreStatus final :
     kPostRestoreHandleFieldNumber = 2,
     kRestoreStatusFieldNumber = 3,
   };
-  // .rti1516_202X.fedpro.FederateHandle preRestoreHandle = 1;
+  // .rti1516_2025.fedpro.FederateHandle preRestoreHandle = 1;
   bool has_prerestorehandle() const;
   private:
   bool _internal_has_prerestorehandle() const;
   public:
   void clear_prerestorehandle();
-  const ::rti1516_202X::fedpro::FederateHandle& prerestorehandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::FederateHandle* release_prerestorehandle();
-  ::rti1516_202X::fedpro::FederateHandle* mutable_prerestorehandle();
-  void set_allocated_prerestorehandle(::rti1516_202X::fedpro::FederateHandle* prerestorehandle);
+  const ::rti1516_2025::fedpro::FederateHandle& prerestorehandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::FederateHandle* release_prerestorehandle();
+  ::rti1516_2025::fedpro::FederateHandle* mutable_prerestorehandle();
+  void set_allocated_prerestorehandle(::rti1516_2025::fedpro::FederateHandle* prerestorehandle);
   private:
-  const ::rti1516_202X::fedpro::FederateHandle& _internal_prerestorehandle() const;
-  ::rti1516_202X::fedpro::FederateHandle* _internal_mutable_prerestorehandle();
+  const ::rti1516_2025::fedpro::FederateHandle& _internal_prerestorehandle() const;
+  ::rti1516_2025::fedpro::FederateHandle* _internal_mutable_prerestorehandle();
   public:
   void unsafe_arena_set_allocated_prerestorehandle(
-      ::rti1516_202X::fedpro::FederateHandle* prerestorehandle);
-  ::rti1516_202X::fedpro::FederateHandle* unsafe_arena_release_prerestorehandle();
+      ::rti1516_2025::fedpro::FederateHandle* prerestorehandle);
+  ::rti1516_2025::fedpro::FederateHandle* unsafe_arena_release_prerestorehandle();
 
-  // .rti1516_202X.fedpro.FederateHandle postRestoreHandle = 2;
+  // .rti1516_2025.fedpro.FederateHandle postRestoreHandle = 2;
   bool has_postrestorehandle() const;
   private:
   bool _internal_has_postrestorehandle() const;
   public:
   void clear_postrestorehandle();
-  const ::rti1516_202X::fedpro::FederateHandle& postrestorehandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::FederateHandle* release_postrestorehandle();
-  ::rti1516_202X::fedpro::FederateHandle* mutable_postrestorehandle();
-  void set_allocated_postrestorehandle(::rti1516_202X::fedpro::FederateHandle* postrestorehandle);
+  const ::rti1516_2025::fedpro::FederateHandle& postrestorehandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::FederateHandle* release_postrestorehandle();
+  ::rti1516_2025::fedpro::FederateHandle* mutable_postrestorehandle();
+  void set_allocated_postrestorehandle(::rti1516_2025::fedpro::FederateHandle* postrestorehandle);
   private:
-  const ::rti1516_202X::fedpro::FederateHandle& _internal_postrestorehandle() const;
-  ::rti1516_202X::fedpro::FederateHandle* _internal_mutable_postrestorehandle();
+  const ::rti1516_2025::fedpro::FederateHandle& _internal_postrestorehandle() const;
+  ::rti1516_2025::fedpro::FederateHandle* _internal_mutable_postrestorehandle();
   public:
   void unsafe_arena_set_allocated_postrestorehandle(
-      ::rti1516_202X::fedpro::FederateHandle* postrestorehandle);
-  ::rti1516_202X::fedpro::FederateHandle* unsafe_arena_release_postrestorehandle();
+      ::rti1516_2025::fedpro::FederateHandle* postrestorehandle);
+  ::rti1516_2025::fedpro::FederateHandle* unsafe_arena_release_postrestorehandle();
 
-  // .rti1516_202X.fedpro.RestoreStatus restoreStatus = 3;
+  // .rti1516_2025.fedpro.RestoreStatus restoreStatus = 3;
   void clear_restorestatus();
-  ::rti1516_202X::fedpro::RestoreStatus restorestatus() const;
-  void set_restorestatus(::rti1516_202X::fedpro::RestoreStatus value);
+  ::rti1516_2025::fedpro::RestoreStatus restorestatus() const;
+  void set_restorestatus(::rti1516_2025::fedpro::RestoreStatus value);
   private:
-  ::rti1516_202X::fedpro::RestoreStatus _internal_restorestatus() const;
-  void _internal_set_restorestatus(::rti1516_202X::fedpro::RestoreStatus value);
+  ::rti1516_2025::fedpro::RestoreStatus _internal_restorestatus() const;
+  void _internal_set_restorestatus(::rti1516_2025::fedpro::RestoreStatus value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederateRestoreStatus)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederateRestoreStatus)
  private:
   class _Internal;
 
@@ -1404,8 +1404,8 @@ class FederateRestoreStatus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::FederateHandle* prerestorehandle_;
-    ::rti1516_202X::fedpro::FederateHandle* postrestorehandle_;
+    ::rti1516_2025::fedpro::FederateHandle* prerestorehandle_;
+    ::rti1516_2025::fedpro::FederateHandle* postrestorehandle_;
     int restorestatus_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1415,7 +1415,7 @@ class FederateRestoreStatus final :
 // -------------------------------------------------------------------
 
 class FederateRestoreStatusArray final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederateRestoreStatusArray) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederateRestoreStatusArray) */ {
  public:
   inline FederateRestoreStatusArray() : FederateRestoreStatusArray(nullptr) {}
   ~FederateRestoreStatusArray() override;
@@ -1518,7 +1518,7 @@ class FederateRestoreStatusArray final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederateRestoreStatusArray";
+    return "rti1516_2025.fedpro.FederateRestoreStatusArray";
   }
   protected:
   explicit FederateRestoreStatusArray(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1537,25 +1537,25 @@ class FederateRestoreStatusArray final :
   enum : int {
     kFederateRestoreStatusFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.FederateRestoreStatus federateRestoreStatus = 1;
+  // repeated .rti1516_2025.fedpro.FederateRestoreStatus federateRestoreStatus = 1;
   int federaterestorestatus_size() const;
   private:
   int _internal_federaterestorestatus_size() const;
   public:
   void clear_federaterestorestatus();
-  ::rti1516_202X::fedpro::FederateRestoreStatus* mutable_federaterestorestatus(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateRestoreStatus >*
+  ::rti1516_2025::fedpro::FederateRestoreStatus* mutable_federaterestorestatus(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateRestoreStatus >*
       mutable_federaterestorestatus();
   private:
-  const ::rti1516_202X::fedpro::FederateRestoreStatus& _internal_federaterestorestatus(int index) const;
-  ::rti1516_202X::fedpro::FederateRestoreStatus* _internal_add_federaterestorestatus();
+  const ::rti1516_2025::fedpro::FederateRestoreStatus& _internal_federaterestorestatus(int index) const;
+  ::rti1516_2025::fedpro::FederateRestoreStatus* _internal_add_federaterestorestatus();
   public:
-  const ::rti1516_202X::fedpro::FederateRestoreStatus& federaterestorestatus(int index) const;
-  ::rti1516_202X::fedpro::FederateRestoreStatus* add_federaterestorestatus();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateRestoreStatus >&
+  const ::rti1516_2025::fedpro::FederateRestoreStatus& federaterestorestatus(int index) const;
+  ::rti1516_2025::fedpro::FederateRestoreStatus* add_federaterestorestatus();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateRestoreStatus >&
       federaterestorestatus() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederateRestoreStatusArray)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederateRestoreStatusArray)
  private:
   class _Internal;
 
@@ -1563,7 +1563,7 @@ class FederateRestoreStatusArray final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateRestoreStatus > federaterestorestatus_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateRestoreStatus > federaterestorestatus_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1572,7 +1572,7 @@ class FederateRestoreStatusArray final :
 // -------------------------------------------------------------------
 
 class FederationExecutionInformation final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederationExecutionInformation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederationExecutionInformation) */ {
  public:
   inline FederationExecutionInformation() : FederationExecutionInformation(nullptr) {}
   ~FederationExecutionInformation() override;
@@ -1675,7 +1675,7 @@ class FederationExecutionInformation final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederationExecutionInformation";
+    return "rti1516_2025.fedpro.FederationExecutionInformation";
   }
   protected:
   explicit FederationExecutionInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1723,7 +1723,7 @@ class FederationExecutionInformation final :
   std::string* _internal_mutable_logicaltimeimplementationname();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederationExecutionInformation)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederationExecutionInformation)
  private:
   class _Internal;
 
@@ -1741,7 +1741,7 @@ class FederationExecutionInformation final :
 // -------------------------------------------------------------------
 
 class FederationExecutionInformationSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederationExecutionInformationSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederationExecutionInformationSet) */ {
  public:
   inline FederationExecutionInformationSet() : FederationExecutionInformationSet(nullptr) {}
   ~FederationExecutionInformationSet() override;
@@ -1844,7 +1844,7 @@ class FederationExecutionInformationSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederationExecutionInformationSet";
+    return "rti1516_2025.fedpro.FederationExecutionInformationSet";
   }
   protected:
   explicit FederationExecutionInformationSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1863,25 +1863,25 @@ class FederationExecutionInformationSet final :
   enum : int {
     kFederationExecutionInformationFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.FederationExecutionInformation federationExecutionInformation = 1;
+  // repeated .rti1516_2025.fedpro.FederationExecutionInformation federationExecutionInformation = 1;
   int federationexecutioninformation_size() const;
   private:
   int _internal_federationexecutioninformation_size() const;
   public:
   void clear_federationexecutioninformation();
-  ::rti1516_202X::fedpro::FederationExecutionInformation* mutable_federationexecutioninformation(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionInformation >*
+  ::rti1516_2025::fedpro::FederationExecutionInformation* mutable_federationexecutioninformation(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionInformation >*
       mutable_federationexecutioninformation();
   private:
-  const ::rti1516_202X::fedpro::FederationExecutionInformation& _internal_federationexecutioninformation(int index) const;
-  ::rti1516_202X::fedpro::FederationExecutionInformation* _internal_add_federationexecutioninformation();
+  const ::rti1516_2025::fedpro::FederationExecutionInformation& _internal_federationexecutioninformation(int index) const;
+  ::rti1516_2025::fedpro::FederationExecutionInformation* _internal_add_federationexecutioninformation();
   public:
-  const ::rti1516_202X::fedpro::FederationExecutionInformation& federationexecutioninformation(int index) const;
-  ::rti1516_202X::fedpro::FederationExecutionInformation* add_federationexecutioninformation();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionInformation >&
+  const ::rti1516_2025::fedpro::FederationExecutionInformation& federationexecutioninformation(int index) const;
+  ::rti1516_2025::fedpro::FederationExecutionInformation* add_federationexecutioninformation();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionInformation >&
       federationexecutioninformation() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederationExecutionInformationSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederationExecutionInformationSet)
  private:
   class _Internal;
 
@@ -1889,7 +1889,7 @@ class FederationExecutionInformationSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionInformation > federationexecutioninformation_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionInformation > federationexecutioninformation_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1898,7 +1898,7 @@ class FederationExecutionInformationSet final :
 // -------------------------------------------------------------------
 
 class FederationExecutionMemberInformation final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederationExecutionMemberInformation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederationExecutionMemberInformation) */ {
  public:
   inline FederationExecutionMemberInformation() : FederationExecutionMemberInformation(nullptr) {}
   ~FederationExecutionMemberInformation() override;
@@ -2001,7 +2001,7 @@ class FederationExecutionMemberInformation final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederationExecutionMemberInformation";
+    return "rti1516_2025.fedpro.FederationExecutionMemberInformation";
   }
   protected:
   explicit FederationExecutionMemberInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2049,7 +2049,7 @@ class FederationExecutionMemberInformation final :
   std::string* _internal_mutable_federatetype();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederationExecutionMemberInformation)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederationExecutionMemberInformation)
  private:
   class _Internal;
 
@@ -2067,7 +2067,7 @@ class FederationExecutionMemberInformation final :
 // -------------------------------------------------------------------
 
 class FederationExecutionMemberInformationSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederationExecutionMemberInformationSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederationExecutionMemberInformationSet) */ {
  public:
   inline FederationExecutionMemberInformationSet() : FederationExecutionMemberInformationSet(nullptr) {}
   ~FederationExecutionMemberInformationSet() override;
@@ -2170,7 +2170,7 @@ class FederationExecutionMemberInformationSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederationExecutionMemberInformationSet";
+    return "rti1516_2025.fedpro.FederationExecutionMemberInformationSet";
   }
   protected:
   explicit FederationExecutionMemberInformationSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2189,25 +2189,25 @@ class FederationExecutionMemberInformationSet final :
   enum : int {
     kFederationExecutionMemberInformationFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.FederationExecutionMemberInformation federationExecutionMemberInformation = 1;
+  // repeated .rti1516_2025.fedpro.FederationExecutionMemberInformation federationExecutionMemberInformation = 1;
   int federationexecutionmemberinformation_size() const;
   private:
   int _internal_federationexecutionmemberinformation_size() const;
   public:
   void clear_federationexecutionmemberinformation();
-  ::rti1516_202X::fedpro::FederationExecutionMemberInformation* mutable_federationexecutionmemberinformation(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionMemberInformation >*
+  ::rti1516_2025::fedpro::FederationExecutionMemberInformation* mutable_federationexecutionmemberinformation(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionMemberInformation >*
       mutable_federationexecutionmemberinformation();
   private:
-  const ::rti1516_202X::fedpro::FederationExecutionMemberInformation& _internal_federationexecutionmemberinformation(int index) const;
-  ::rti1516_202X::fedpro::FederationExecutionMemberInformation* _internal_add_federationexecutionmemberinformation();
+  const ::rti1516_2025::fedpro::FederationExecutionMemberInformation& _internal_federationexecutionmemberinformation(int index) const;
+  ::rti1516_2025::fedpro::FederationExecutionMemberInformation* _internal_add_federationexecutionmemberinformation();
   public:
-  const ::rti1516_202X::fedpro::FederationExecutionMemberInformation& federationexecutionmemberinformation(int index) const;
-  ::rti1516_202X::fedpro::FederationExecutionMemberInformation* add_federationexecutionmemberinformation();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionMemberInformation >&
+  const ::rti1516_2025::fedpro::FederationExecutionMemberInformation& federationexecutionmemberinformation(int index) const;
+  ::rti1516_2025::fedpro::FederationExecutionMemberInformation* add_federationexecutionmemberinformation();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionMemberInformation >&
       federationexecutionmemberinformation() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederationExecutionMemberInformationSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederationExecutionMemberInformationSet)
  private:
   class _Internal;
 
@@ -2215,7 +2215,7 @@ class FederationExecutionMemberInformationSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionMemberInformation > federationexecutionmemberinformation_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionMemberInformation > federationexecutionmemberinformation_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2224,7 +2224,7 @@ class FederationExecutionMemberInformationSet final :
 // -------------------------------------------------------------------
 
 class FederateHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederateHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederateHandle) */ {
  public:
   inline FederateHandle() : FederateHandle(nullptr) {}
   ~FederateHandle() override;
@@ -2327,7 +2327,7 @@ class FederateHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederateHandle";
+    return "rti1516_2025.fedpro.FederateHandle";
   }
   protected:
   explicit FederateHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2360,7 +2360,7 @@ class FederateHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederateHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederateHandle)
  private:
   class _Internal;
 
@@ -2377,7 +2377,7 @@ class FederateHandle final :
 // -------------------------------------------------------------------
 
 class FederateHandleSaveStatusPair final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederateHandleSaveStatusPair) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederateHandleSaveStatusPair) */ {
  public:
   inline FederateHandleSaveStatusPair() : FederateHandleSaveStatusPair(nullptr) {}
   ~FederateHandleSaveStatusPair() override;
@@ -2480,7 +2480,7 @@ class FederateHandleSaveStatusPair final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederateHandleSaveStatusPair";
+    return "rti1516_2025.fedpro.FederateHandleSaveStatusPair";
   }
   protected:
   explicit FederateHandleSaveStatusPair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2500,34 +2500,34 @@ class FederateHandleSaveStatusPair final :
     kFederateHandleFieldNumber = 1,
     kSaveStatusFieldNumber = 2,
   };
-  // .rti1516_202X.fedpro.FederateHandle federateHandle = 1;
+  // .rti1516_2025.fedpro.FederateHandle federateHandle = 1;
   bool has_federatehandle() const;
   private:
   bool _internal_has_federatehandle() const;
   public:
   void clear_federatehandle();
-  const ::rti1516_202X::fedpro::FederateHandle& federatehandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::FederateHandle* release_federatehandle();
-  ::rti1516_202X::fedpro::FederateHandle* mutable_federatehandle();
-  void set_allocated_federatehandle(::rti1516_202X::fedpro::FederateHandle* federatehandle);
+  const ::rti1516_2025::fedpro::FederateHandle& federatehandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::FederateHandle* release_federatehandle();
+  ::rti1516_2025::fedpro::FederateHandle* mutable_federatehandle();
+  void set_allocated_federatehandle(::rti1516_2025::fedpro::FederateHandle* federatehandle);
   private:
-  const ::rti1516_202X::fedpro::FederateHandle& _internal_federatehandle() const;
-  ::rti1516_202X::fedpro::FederateHandle* _internal_mutable_federatehandle();
+  const ::rti1516_2025::fedpro::FederateHandle& _internal_federatehandle() const;
+  ::rti1516_2025::fedpro::FederateHandle* _internal_mutable_federatehandle();
   public:
   void unsafe_arena_set_allocated_federatehandle(
-      ::rti1516_202X::fedpro::FederateHandle* federatehandle);
-  ::rti1516_202X::fedpro::FederateHandle* unsafe_arena_release_federatehandle();
+      ::rti1516_2025::fedpro::FederateHandle* federatehandle);
+  ::rti1516_2025::fedpro::FederateHandle* unsafe_arena_release_federatehandle();
 
-  // .rti1516_202X.fedpro.SaveStatus saveStatus = 2;
+  // .rti1516_2025.fedpro.SaveStatus saveStatus = 2;
   void clear_savestatus();
-  ::rti1516_202X::fedpro::SaveStatus savestatus() const;
-  void set_savestatus(::rti1516_202X::fedpro::SaveStatus value);
+  ::rti1516_2025::fedpro::SaveStatus savestatus() const;
+  void set_savestatus(::rti1516_2025::fedpro::SaveStatus value);
   private:
-  ::rti1516_202X::fedpro::SaveStatus _internal_savestatus() const;
-  void _internal_set_savestatus(::rti1516_202X::fedpro::SaveStatus value);
+  ::rti1516_2025::fedpro::SaveStatus _internal_savestatus() const;
+  void _internal_set_savestatus(::rti1516_2025::fedpro::SaveStatus value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederateHandleSaveStatusPair)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederateHandleSaveStatusPair)
  private:
   class _Internal;
 
@@ -2535,7 +2535,7 @@ class FederateHandleSaveStatusPair final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::FederateHandle* federatehandle_;
+    ::rti1516_2025::fedpro::FederateHandle* federatehandle_;
     int savestatus_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -2545,7 +2545,7 @@ class FederateHandleSaveStatusPair final :
 // -------------------------------------------------------------------
 
 class FederateHandleSaveStatusPairArray final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederateHandleSaveStatusPairArray) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederateHandleSaveStatusPairArray) */ {
  public:
   inline FederateHandleSaveStatusPairArray() : FederateHandleSaveStatusPairArray(nullptr) {}
   ~FederateHandleSaveStatusPairArray() override;
@@ -2648,7 +2648,7 @@ class FederateHandleSaveStatusPairArray final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederateHandleSaveStatusPairArray";
+    return "rti1516_2025.fedpro.FederateHandleSaveStatusPairArray";
   }
   protected:
   explicit FederateHandleSaveStatusPairArray(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2667,25 +2667,25 @@ class FederateHandleSaveStatusPairArray final :
   enum : int {
     kFederateHandleSaveStatusPairFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.FederateHandleSaveStatusPair federateHandleSaveStatusPair = 1;
+  // repeated .rti1516_2025.fedpro.FederateHandleSaveStatusPair federateHandleSaveStatusPair = 1;
   int federatehandlesavestatuspair_size() const;
   private:
   int _internal_federatehandlesavestatuspair_size() const;
   public:
   void clear_federatehandlesavestatuspair();
-  ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* mutable_federatehandlesavestatuspair(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandleSaveStatusPair >*
+  ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* mutable_federatehandlesavestatuspair(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandleSaveStatusPair >*
       mutable_federatehandlesavestatuspair();
   private:
-  const ::rti1516_202X::fedpro::FederateHandleSaveStatusPair& _internal_federatehandlesavestatuspair(int index) const;
-  ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* _internal_add_federatehandlesavestatuspair();
+  const ::rti1516_2025::fedpro::FederateHandleSaveStatusPair& _internal_federatehandlesavestatuspair(int index) const;
+  ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* _internal_add_federatehandlesavestatuspair();
   public:
-  const ::rti1516_202X::fedpro::FederateHandleSaveStatusPair& federatehandlesavestatuspair(int index) const;
-  ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* add_federatehandlesavestatuspair();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandleSaveStatusPair >&
+  const ::rti1516_2025::fedpro::FederateHandleSaveStatusPair& federatehandlesavestatuspair(int index) const;
+  ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* add_federatehandlesavestatuspair();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandleSaveStatusPair >&
       federatehandlesavestatuspair() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederateHandleSaveStatusPairArray)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederateHandleSaveStatusPairArray)
  private:
   class _Internal;
 
@@ -2693,7 +2693,7 @@ class FederateHandleSaveStatusPairArray final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandleSaveStatusPair > federatehandlesavestatuspair_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandleSaveStatusPair > federatehandlesavestatuspair_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2702,7 +2702,7 @@ class FederateHandleSaveStatusPairArray final :
 // -------------------------------------------------------------------
 
 class ObjectClassHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ObjectClassHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ObjectClassHandle) */ {
  public:
   inline ObjectClassHandle() : ObjectClassHandle(nullptr) {}
   ~ObjectClassHandle() override;
@@ -2805,7 +2805,7 @@ class ObjectClassHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ObjectClassHandle";
+    return "rti1516_2025.fedpro.ObjectClassHandle";
   }
   protected:
   explicit ObjectClassHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2838,7 +2838,7 @@ class ObjectClassHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ObjectClassHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ObjectClassHandle)
  private:
   class _Internal;
 
@@ -2855,7 +2855,7 @@ class ObjectClassHandle final :
 // -------------------------------------------------------------------
 
 class AttributeHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.AttributeHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.AttributeHandle) */ {
  public:
   inline AttributeHandle() : AttributeHandle(nullptr) {}
   ~AttributeHandle() override;
@@ -2958,7 +2958,7 @@ class AttributeHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.AttributeHandle";
+    return "rti1516_2025.fedpro.AttributeHandle";
   }
   protected:
   explicit AttributeHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2991,7 +2991,7 @@ class AttributeHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.AttributeHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.AttributeHandle)
  private:
   class _Internal;
 
@@ -3008,7 +3008,7 @@ class AttributeHandle final :
 // -------------------------------------------------------------------
 
 class InteractionClassHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.InteractionClassHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.InteractionClassHandle) */ {
  public:
   inline InteractionClassHandle() : InteractionClassHandle(nullptr) {}
   ~InteractionClassHandle() override;
@@ -3111,7 +3111,7 @@ class InteractionClassHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.InteractionClassHandle";
+    return "rti1516_2025.fedpro.InteractionClassHandle";
   }
   protected:
   explicit InteractionClassHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3144,7 +3144,7 @@ class InteractionClassHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.InteractionClassHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.InteractionClassHandle)
  private:
   class _Internal;
 
@@ -3161,7 +3161,7 @@ class InteractionClassHandle final :
 // -------------------------------------------------------------------
 
 class ParameterHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ParameterHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ParameterHandle) */ {
  public:
   inline ParameterHandle() : ParameterHandle(nullptr) {}
   ~ParameterHandle() override;
@@ -3264,7 +3264,7 @@ class ParameterHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ParameterHandle";
+    return "rti1516_2025.fedpro.ParameterHandle";
   }
   protected:
   explicit ParameterHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3297,7 +3297,7 @@ class ParameterHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ParameterHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ParameterHandle)
  private:
   class _Internal;
 
@@ -3314,7 +3314,7 @@ class ParameterHandle final :
 // -------------------------------------------------------------------
 
 class ObjectInstanceHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ObjectInstanceHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ObjectInstanceHandle) */ {
  public:
   inline ObjectInstanceHandle() : ObjectInstanceHandle(nullptr) {}
   ~ObjectInstanceHandle() override;
@@ -3417,7 +3417,7 @@ class ObjectInstanceHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ObjectInstanceHandle";
+    return "rti1516_2025.fedpro.ObjectInstanceHandle";
   }
   protected:
   explicit ObjectInstanceHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3450,7 +3450,7 @@ class ObjectInstanceHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ObjectInstanceHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ObjectInstanceHandle)
  private:
   class _Internal;
 
@@ -3467,7 +3467,7 @@ class ObjectInstanceHandle final :
 // -------------------------------------------------------------------
 
 class AttributeHandleValue final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.AttributeHandleValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.AttributeHandleValue) */ {
  public:
   inline AttributeHandleValue() : AttributeHandleValue(nullptr) {}
   ~AttributeHandleValue() override;
@@ -3570,7 +3570,7 @@ class AttributeHandleValue final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.AttributeHandleValue";
+    return "rti1516_2025.fedpro.AttributeHandleValue";
   }
   protected:
   explicit AttributeHandleValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3604,25 +3604,25 @@ class AttributeHandleValue final :
   std::string* _internal_mutable_value();
   public:
 
-  // .rti1516_202X.fedpro.AttributeHandle attributeHandle = 1;
+  // .rti1516_2025.fedpro.AttributeHandle attributeHandle = 1;
   bool has_attributehandle() const;
   private:
   bool _internal_has_attributehandle() const;
   public:
   void clear_attributehandle();
-  const ::rti1516_202X::fedpro::AttributeHandle& attributehandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::AttributeHandle* release_attributehandle();
-  ::rti1516_202X::fedpro::AttributeHandle* mutable_attributehandle();
-  void set_allocated_attributehandle(::rti1516_202X::fedpro::AttributeHandle* attributehandle);
+  const ::rti1516_2025::fedpro::AttributeHandle& attributehandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::AttributeHandle* release_attributehandle();
+  ::rti1516_2025::fedpro::AttributeHandle* mutable_attributehandle();
+  void set_allocated_attributehandle(::rti1516_2025::fedpro::AttributeHandle* attributehandle);
   private:
-  const ::rti1516_202X::fedpro::AttributeHandle& _internal_attributehandle() const;
-  ::rti1516_202X::fedpro::AttributeHandle* _internal_mutable_attributehandle();
+  const ::rti1516_2025::fedpro::AttributeHandle& _internal_attributehandle() const;
+  ::rti1516_2025::fedpro::AttributeHandle* _internal_mutable_attributehandle();
   public:
   void unsafe_arena_set_allocated_attributehandle(
-      ::rti1516_202X::fedpro::AttributeHandle* attributehandle);
-  ::rti1516_202X::fedpro::AttributeHandle* unsafe_arena_release_attributehandle();
+      ::rti1516_2025::fedpro::AttributeHandle* attributehandle);
+  ::rti1516_2025::fedpro::AttributeHandle* unsafe_arena_release_attributehandle();
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.AttributeHandleValue)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.AttributeHandleValue)
  private:
   class _Internal;
 
@@ -3631,7 +3631,7 @@ class AttributeHandleValue final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
-    ::rti1516_202X::fedpro::AttributeHandle* attributehandle_;
+    ::rti1516_2025::fedpro::AttributeHandle* attributehandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3640,7 +3640,7 @@ class AttributeHandleValue final :
 // -------------------------------------------------------------------
 
 class AttributeHandleValueMap final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.AttributeHandleValueMap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.AttributeHandleValueMap) */ {
  public:
   inline AttributeHandleValueMap() : AttributeHandleValueMap(nullptr) {}
   ~AttributeHandleValueMap() override;
@@ -3743,7 +3743,7 @@ class AttributeHandleValueMap final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.AttributeHandleValueMap";
+    return "rti1516_2025.fedpro.AttributeHandleValueMap";
   }
   protected:
   explicit AttributeHandleValueMap(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3762,25 +3762,25 @@ class AttributeHandleValueMap final :
   enum : int {
     kAttributeHandleValueFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.AttributeHandleValue attributeHandleValue = 1;
+  // repeated .rti1516_2025.fedpro.AttributeHandleValue attributeHandleValue = 1;
   int attributehandlevalue_size() const;
   private:
   int _internal_attributehandlevalue_size() const;
   public:
   void clear_attributehandlevalue();
-  ::rti1516_202X::fedpro::AttributeHandleValue* mutable_attributehandlevalue(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandleValue >*
+  ::rti1516_2025::fedpro::AttributeHandleValue* mutable_attributehandlevalue(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandleValue >*
       mutable_attributehandlevalue();
   private:
-  const ::rti1516_202X::fedpro::AttributeHandleValue& _internal_attributehandlevalue(int index) const;
-  ::rti1516_202X::fedpro::AttributeHandleValue* _internal_add_attributehandlevalue();
+  const ::rti1516_2025::fedpro::AttributeHandleValue& _internal_attributehandlevalue(int index) const;
+  ::rti1516_2025::fedpro::AttributeHandleValue* _internal_add_attributehandlevalue();
   public:
-  const ::rti1516_202X::fedpro::AttributeHandleValue& attributehandlevalue(int index) const;
-  ::rti1516_202X::fedpro::AttributeHandleValue* add_attributehandlevalue();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandleValue >&
+  const ::rti1516_2025::fedpro::AttributeHandleValue& attributehandlevalue(int index) const;
+  ::rti1516_2025::fedpro::AttributeHandleValue* add_attributehandlevalue();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandleValue >&
       attributehandlevalue() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.AttributeHandleValueMap)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.AttributeHandleValueMap)
  private:
   class _Internal;
 
@@ -3788,7 +3788,7 @@ class AttributeHandleValueMap final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandleValue > attributehandlevalue_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandleValue > attributehandlevalue_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3797,7 +3797,7 @@ class AttributeHandleValueMap final :
 // -------------------------------------------------------------------
 
 class ParameterHandleValue final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ParameterHandleValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ParameterHandleValue) */ {
  public:
   inline ParameterHandleValue() : ParameterHandleValue(nullptr) {}
   ~ParameterHandleValue() override;
@@ -3900,7 +3900,7 @@ class ParameterHandleValue final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ParameterHandleValue";
+    return "rti1516_2025.fedpro.ParameterHandleValue";
   }
   protected:
   explicit ParameterHandleValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3934,25 +3934,25 @@ class ParameterHandleValue final :
   std::string* _internal_mutable_value();
   public:
 
-  // .rti1516_202X.fedpro.ParameterHandle parameterHandle = 1;
+  // .rti1516_2025.fedpro.ParameterHandle parameterHandle = 1;
   bool has_parameterhandle() const;
   private:
   bool _internal_has_parameterhandle() const;
   public:
   void clear_parameterhandle();
-  const ::rti1516_202X::fedpro::ParameterHandle& parameterhandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::ParameterHandle* release_parameterhandle();
-  ::rti1516_202X::fedpro::ParameterHandle* mutable_parameterhandle();
-  void set_allocated_parameterhandle(::rti1516_202X::fedpro::ParameterHandle* parameterhandle);
+  const ::rti1516_2025::fedpro::ParameterHandle& parameterhandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::ParameterHandle* release_parameterhandle();
+  ::rti1516_2025::fedpro::ParameterHandle* mutable_parameterhandle();
+  void set_allocated_parameterhandle(::rti1516_2025::fedpro::ParameterHandle* parameterhandle);
   private:
-  const ::rti1516_202X::fedpro::ParameterHandle& _internal_parameterhandle() const;
-  ::rti1516_202X::fedpro::ParameterHandle* _internal_mutable_parameterhandle();
+  const ::rti1516_2025::fedpro::ParameterHandle& _internal_parameterhandle() const;
+  ::rti1516_2025::fedpro::ParameterHandle* _internal_mutable_parameterhandle();
   public:
   void unsafe_arena_set_allocated_parameterhandle(
-      ::rti1516_202X::fedpro::ParameterHandle* parameterhandle);
-  ::rti1516_202X::fedpro::ParameterHandle* unsafe_arena_release_parameterhandle();
+      ::rti1516_2025::fedpro::ParameterHandle* parameterhandle);
+  ::rti1516_2025::fedpro::ParameterHandle* unsafe_arena_release_parameterhandle();
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ParameterHandleValue)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ParameterHandleValue)
  private:
   class _Internal;
 
@@ -3961,7 +3961,7 @@ class ParameterHandleValue final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
-    ::rti1516_202X::fedpro::ParameterHandle* parameterhandle_;
+    ::rti1516_2025::fedpro::ParameterHandle* parameterhandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3970,7 +3970,7 @@ class ParameterHandleValue final :
 // -------------------------------------------------------------------
 
 class ParameterHandleValueMap final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ParameterHandleValueMap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ParameterHandleValueMap) */ {
  public:
   inline ParameterHandleValueMap() : ParameterHandleValueMap(nullptr) {}
   ~ParameterHandleValueMap() override;
@@ -4073,7 +4073,7 @@ class ParameterHandleValueMap final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ParameterHandleValueMap";
+    return "rti1516_2025.fedpro.ParameterHandleValueMap";
   }
   protected:
   explicit ParameterHandleValueMap(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4092,25 +4092,25 @@ class ParameterHandleValueMap final :
   enum : int {
     kParameterHandleValueFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.ParameterHandleValue parameterHandleValue = 1;
+  // repeated .rti1516_2025.fedpro.ParameterHandleValue parameterHandleValue = 1;
   int parameterhandlevalue_size() const;
   private:
   int _internal_parameterhandlevalue_size() const;
   public:
   void clear_parameterhandlevalue();
-  ::rti1516_202X::fedpro::ParameterHandleValue* mutable_parameterhandlevalue(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ParameterHandleValue >*
+  ::rti1516_2025::fedpro::ParameterHandleValue* mutable_parameterhandlevalue(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ParameterHandleValue >*
       mutable_parameterhandlevalue();
   private:
-  const ::rti1516_202X::fedpro::ParameterHandleValue& _internal_parameterhandlevalue(int index) const;
-  ::rti1516_202X::fedpro::ParameterHandleValue* _internal_add_parameterhandlevalue();
+  const ::rti1516_2025::fedpro::ParameterHandleValue& _internal_parameterhandlevalue(int index) const;
+  ::rti1516_2025::fedpro::ParameterHandleValue* _internal_add_parameterhandlevalue();
   public:
-  const ::rti1516_202X::fedpro::ParameterHandleValue& parameterhandlevalue(int index) const;
-  ::rti1516_202X::fedpro::ParameterHandleValue* add_parameterhandlevalue();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ParameterHandleValue >&
+  const ::rti1516_2025::fedpro::ParameterHandleValue& parameterhandlevalue(int index) const;
+  ::rti1516_2025::fedpro::ParameterHandleValue* add_parameterhandlevalue();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ParameterHandleValue >&
       parameterhandlevalue() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ParameterHandleValueMap)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ParameterHandleValueMap)
  private:
   class _Internal;
 
@@ -4118,7 +4118,7 @@ class ParameterHandleValueMap final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ParameterHandleValue > parameterhandlevalue_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ParameterHandleValue > parameterhandlevalue_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4127,7 +4127,7 @@ class ParameterHandleValueMap final :
 // -------------------------------------------------------------------
 
 class MessageRetractionHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.MessageRetractionHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.MessageRetractionHandle) */ {
  public:
   inline MessageRetractionHandle() : MessageRetractionHandle(nullptr) {}
   ~MessageRetractionHandle() override;
@@ -4230,7 +4230,7 @@ class MessageRetractionHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.MessageRetractionHandle";
+    return "rti1516_2025.fedpro.MessageRetractionHandle";
   }
   protected:
   explicit MessageRetractionHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4263,7 +4263,7 @@ class MessageRetractionHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.MessageRetractionHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.MessageRetractionHandle)
  private:
   class _Internal;
 
@@ -4280,7 +4280,7 @@ class MessageRetractionHandle final :
 // -------------------------------------------------------------------
 
 class MessageRetractionReturn final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.MessageRetractionReturn) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.MessageRetractionReturn) */ {
  public:
   inline MessageRetractionReturn() : MessageRetractionReturn(nullptr) {}
   ~MessageRetractionReturn() override;
@@ -4383,7 +4383,7 @@ class MessageRetractionReturn final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.MessageRetractionReturn";
+    return "rti1516_2025.fedpro.MessageRetractionReturn";
   }
   protected:
   explicit MessageRetractionReturn(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4403,23 +4403,23 @@ class MessageRetractionReturn final :
     kMessageRetractionHandleFieldNumber = 2,
     kRetractionHandleIsValidFieldNumber = 1,
   };
-  // .rti1516_202X.fedpro.MessageRetractionHandle messageRetractionHandle = 2;
+  // .rti1516_2025.fedpro.MessageRetractionHandle messageRetractionHandle = 2;
   bool has_messageretractionhandle() const;
   private:
   bool _internal_has_messageretractionhandle() const;
   public:
   void clear_messageretractionhandle();
-  const ::rti1516_202X::fedpro::MessageRetractionHandle& messageretractionhandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::MessageRetractionHandle* release_messageretractionhandle();
-  ::rti1516_202X::fedpro::MessageRetractionHandle* mutable_messageretractionhandle();
-  void set_allocated_messageretractionhandle(::rti1516_202X::fedpro::MessageRetractionHandle* messageretractionhandle);
+  const ::rti1516_2025::fedpro::MessageRetractionHandle& messageretractionhandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::MessageRetractionHandle* release_messageretractionhandle();
+  ::rti1516_2025::fedpro::MessageRetractionHandle* mutable_messageretractionhandle();
+  void set_allocated_messageretractionhandle(::rti1516_2025::fedpro::MessageRetractionHandle* messageretractionhandle);
   private:
-  const ::rti1516_202X::fedpro::MessageRetractionHandle& _internal_messageretractionhandle() const;
-  ::rti1516_202X::fedpro::MessageRetractionHandle* _internal_mutable_messageretractionhandle();
+  const ::rti1516_2025::fedpro::MessageRetractionHandle& _internal_messageretractionhandle() const;
+  ::rti1516_2025::fedpro::MessageRetractionHandle* _internal_mutable_messageretractionhandle();
   public:
   void unsafe_arena_set_allocated_messageretractionhandle(
-      ::rti1516_202X::fedpro::MessageRetractionHandle* messageretractionhandle);
-  ::rti1516_202X::fedpro::MessageRetractionHandle* unsafe_arena_release_messageretractionhandle();
+      ::rti1516_2025::fedpro::MessageRetractionHandle* messageretractionhandle);
+  ::rti1516_2025::fedpro::MessageRetractionHandle* unsafe_arena_release_messageretractionhandle();
 
   // bool retractionHandleIsValid = 1;
   void clear_retractionhandleisvalid();
@@ -4430,7 +4430,7 @@ class MessageRetractionReturn final :
   void _internal_set_retractionhandleisvalid(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.MessageRetractionReturn)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.MessageRetractionReturn)
  private:
   class _Internal;
 
@@ -4438,7 +4438,7 @@ class MessageRetractionReturn final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::MessageRetractionHandle* messageretractionhandle_;
+    ::rti1516_2025::fedpro::MessageRetractionHandle* messageretractionhandle_;
     bool retractionhandleisvalid_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -4448,7 +4448,7 @@ class MessageRetractionReturn final :
 // -------------------------------------------------------------------
 
 class LogicalTime final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.LogicalTime) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.LogicalTime) */ {
  public:
   inline LogicalTime() : LogicalTime(nullptr) {}
   ~LogicalTime() override;
@@ -4551,7 +4551,7 @@ class LogicalTime final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.LogicalTime";
+    return "rti1516_2025.fedpro.LogicalTime";
   }
   protected:
   explicit LogicalTime(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4584,7 +4584,7 @@ class LogicalTime final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.LogicalTime)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.LogicalTime)
  private:
   class _Internal;
 
@@ -4601,7 +4601,7 @@ class LogicalTime final :
 // -------------------------------------------------------------------
 
 class LogicalTimeInterval final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.LogicalTimeInterval) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.LogicalTimeInterval) */ {
  public:
   inline LogicalTimeInterval() : LogicalTimeInterval(nullptr) {}
   ~LogicalTimeInterval() override;
@@ -4704,7 +4704,7 @@ class LogicalTimeInterval final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.LogicalTimeInterval";
+    return "rti1516_2025.fedpro.LogicalTimeInterval";
   }
   protected:
   explicit LogicalTimeInterval(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4737,7 +4737,7 @@ class LogicalTimeInterval final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.LogicalTimeInterval)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.LogicalTimeInterval)
  private:
   class _Internal;
 
@@ -4754,7 +4754,7 @@ class LogicalTimeInterval final :
 // -------------------------------------------------------------------
 
 class TransportationTypeHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.TransportationTypeHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.TransportationTypeHandle) */ {
  public:
   inline TransportationTypeHandle() : TransportationTypeHandle(nullptr) {}
   ~TransportationTypeHandle() override;
@@ -4857,7 +4857,7 @@ class TransportationTypeHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.TransportationTypeHandle";
+    return "rti1516_2025.fedpro.TransportationTypeHandle";
   }
   protected:
   explicit TransportationTypeHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4890,7 +4890,7 @@ class TransportationTypeHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.TransportationTypeHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.TransportationTypeHandle)
  private:
   class _Internal;
 
@@ -4907,7 +4907,7 @@ class TransportationTypeHandle final :
 // -------------------------------------------------------------------
 
 class DimensionHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.DimensionHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.DimensionHandle) */ {
  public:
   inline DimensionHandle() : DimensionHandle(nullptr) {}
   ~DimensionHandle() override;
@@ -5010,7 +5010,7 @@ class DimensionHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.DimensionHandle";
+    return "rti1516_2025.fedpro.DimensionHandle";
   }
   protected:
   explicit DimensionHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5043,7 +5043,7 @@ class DimensionHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.DimensionHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.DimensionHandle)
  private:
   class _Internal;
 
@@ -5060,7 +5060,7 @@ class DimensionHandle final :
 // -------------------------------------------------------------------
 
 class RegionHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.RegionHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.RegionHandle) */ {
  public:
   inline RegionHandle() : RegionHandle(nullptr) {}
   ~RegionHandle() override;
@@ -5163,7 +5163,7 @@ class RegionHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.RegionHandle";
+    return "rti1516_2025.fedpro.RegionHandle";
   }
   protected:
   explicit RegionHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5196,7 +5196,7 @@ class RegionHandle final :
   std::string* _internal_mutable_data();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.RegionHandle)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.RegionHandle)
  private:
   class _Internal;
 
@@ -5213,7 +5213,7 @@ class RegionHandle final :
 // -------------------------------------------------------------------
 
 class TimeQueryReturn final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.TimeQueryReturn) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.TimeQueryReturn) */ {
  public:
   inline TimeQueryReturn() : TimeQueryReturn(nullptr) {}
   ~TimeQueryReturn() override;
@@ -5316,7 +5316,7 @@ class TimeQueryReturn final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.TimeQueryReturn";
+    return "rti1516_2025.fedpro.TimeQueryReturn";
   }
   protected:
   explicit TimeQueryReturn(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5336,23 +5336,23 @@ class TimeQueryReturn final :
     kLogicalTimeFieldNumber = 2,
     kLogicalTimeIsValidFieldNumber = 1,
   };
-  // .rti1516_202X.fedpro.LogicalTime logicalTime = 2;
+  // .rti1516_2025.fedpro.LogicalTime logicalTime = 2;
   bool has_logicaltime() const;
   private:
   bool _internal_has_logicaltime() const;
   public:
   void clear_logicaltime();
-  const ::rti1516_202X::fedpro::LogicalTime& logicaltime() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::LogicalTime* release_logicaltime();
-  ::rti1516_202X::fedpro::LogicalTime* mutable_logicaltime();
-  void set_allocated_logicaltime(::rti1516_202X::fedpro::LogicalTime* logicaltime);
+  const ::rti1516_2025::fedpro::LogicalTime& logicaltime() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::LogicalTime* release_logicaltime();
+  ::rti1516_2025::fedpro::LogicalTime* mutable_logicaltime();
+  void set_allocated_logicaltime(::rti1516_2025::fedpro::LogicalTime* logicaltime);
   private:
-  const ::rti1516_202X::fedpro::LogicalTime& _internal_logicaltime() const;
-  ::rti1516_202X::fedpro::LogicalTime* _internal_mutable_logicaltime();
+  const ::rti1516_2025::fedpro::LogicalTime& _internal_logicaltime() const;
+  ::rti1516_2025::fedpro::LogicalTime* _internal_mutable_logicaltime();
   public:
   void unsafe_arena_set_allocated_logicaltime(
-      ::rti1516_202X::fedpro::LogicalTime* logicaltime);
-  ::rti1516_202X::fedpro::LogicalTime* unsafe_arena_release_logicaltime();
+      ::rti1516_2025::fedpro::LogicalTime* logicaltime);
+  ::rti1516_2025::fedpro::LogicalTime* unsafe_arena_release_logicaltime();
 
   // bool logicalTimeIsValid = 1;
   void clear_logicaltimeisvalid();
@@ -5363,7 +5363,7 @@ class TimeQueryReturn final :
   void _internal_set_logicaltimeisvalid(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.TimeQueryReturn)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.TimeQueryReturn)
  private:
   class _Internal;
 
@@ -5371,7 +5371,7 @@ class TimeQueryReturn final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::LogicalTime* logicaltime_;
+    ::rti1516_2025::fedpro::LogicalTime* logicaltime_;
     bool logicaltimeisvalid_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -5381,7 +5381,7 @@ class TimeQueryReturn final :
 // -------------------------------------------------------------------
 
 class FederateHandleSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FederateHandleSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FederateHandleSet) */ {
  public:
   inline FederateHandleSet() : FederateHandleSet(nullptr) {}
   ~FederateHandleSet() override;
@@ -5484,7 +5484,7 @@ class FederateHandleSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FederateHandleSet";
+    return "rti1516_2025.fedpro.FederateHandleSet";
   }
   protected:
   explicit FederateHandleSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5503,25 +5503,25 @@ class FederateHandleSet final :
   enum : int {
     kFederateHandleFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.FederateHandle federateHandle = 1;
+  // repeated .rti1516_2025.fedpro.FederateHandle federateHandle = 1;
   int federatehandle_size() const;
   private:
   int _internal_federatehandle_size() const;
   public:
   void clear_federatehandle();
-  ::rti1516_202X::fedpro::FederateHandle* mutable_federatehandle(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandle >*
+  ::rti1516_2025::fedpro::FederateHandle* mutable_federatehandle(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandle >*
       mutable_federatehandle();
   private:
-  const ::rti1516_202X::fedpro::FederateHandle& _internal_federatehandle(int index) const;
-  ::rti1516_202X::fedpro::FederateHandle* _internal_add_federatehandle();
+  const ::rti1516_2025::fedpro::FederateHandle& _internal_federatehandle(int index) const;
+  ::rti1516_2025::fedpro::FederateHandle* _internal_add_federatehandle();
   public:
-  const ::rti1516_202X::fedpro::FederateHandle& federatehandle(int index) const;
-  ::rti1516_202X::fedpro::FederateHandle* add_federatehandle();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandle >&
+  const ::rti1516_2025::fedpro::FederateHandle& federatehandle(int index) const;
+  ::rti1516_2025::fedpro::FederateHandle* add_federatehandle();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandle >&
       federatehandle() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FederateHandleSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FederateHandleSet)
  private:
   class _Internal;
 
@@ -5529,7 +5529,7 @@ class FederateHandleSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandle > federatehandle_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandle > federatehandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5538,7 +5538,7 @@ class FederateHandleSet final :
 // -------------------------------------------------------------------
 
 class DimensionHandleSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.DimensionHandleSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.DimensionHandleSet) */ {
  public:
   inline DimensionHandleSet() : DimensionHandleSet(nullptr) {}
   ~DimensionHandleSet() override;
@@ -5641,7 +5641,7 @@ class DimensionHandleSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.DimensionHandleSet";
+    return "rti1516_2025.fedpro.DimensionHandleSet";
   }
   protected:
   explicit DimensionHandleSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5660,25 +5660,25 @@ class DimensionHandleSet final :
   enum : int {
     kDimensionHandleFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.DimensionHandle dimensionHandle = 1;
+  // repeated .rti1516_2025.fedpro.DimensionHandle dimensionHandle = 1;
   int dimensionhandle_size() const;
   private:
   int _internal_dimensionhandle_size() const;
   public:
   void clear_dimensionhandle();
-  ::rti1516_202X::fedpro::DimensionHandle* mutable_dimensionhandle(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionHandle >*
+  ::rti1516_2025::fedpro::DimensionHandle* mutable_dimensionhandle(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionHandle >*
       mutable_dimensionhandle();
   private:
-  const ::rti1516_202X::fedpro::DimensionHandle& _internal_dimensionhandle(int index) const;
-  ::rti1516_202X::fedpro::DimensionHandle* _internal_add_dimensionhandle();
+  const ::rti1516_2025::fedpro::DimensionHandle& _internal_dimensionhandle(int index) const;
+  ::rti1516_2025::fedpro::DimensionHandle* _internal_add_dimensionhandle();
   public:
-  const ::rti1516_202X::fedpro::DimensionHandle& dimensionhandle(int index) const;
-  ::rti1516_202X::fedpro::DimensionHandle* add_dimensionhandle();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionHandle >&
+  const ::rti1516_2025::fedpro::DimensionHandle& dimensionhandle(int index) const;
+  ::rti1516_2025::fedpro::DimensionHandle* add_dimensionhandle();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionHandle >&
       dimensionhandle() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.DimensionHandleSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.DimensionHandleSet)
  private:
   class _Internal;
 
@@ -5686,7 +5686,7 @@ class DimensionHandleSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionHandle > dimensionhandle_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionHandle > dimensionhandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5695,7 +5695,7 @@ class DimensionHandleSet final :
 // -------------------------------------------------------------------
 
 class RegionHandleSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.RegionHandleSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.RegionHandleSet) */ {
  public:
   inline RegionHandleSet() : RegionHandleSet(nullptr) {}
   ~RegionHandleSet() override;
@@ -5798,7 +5798,7 @@ class RegionHandleSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.RegionHandleSet";
+    return "rti1516_2025.fedpro.RegionHandleSet";
   }
   protected:
   explicit RegionHandleSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5817,25 +5817,25 @@ class RegionHandleSet final :
   enum : int {
     kRegionHandleFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.RegionHandle regionHandle = 1;
+  // repeated .rti1516_2025.fedpro.RegionHandle regionHandle = 1;
   int regionhandle_size() const;
   private:
   int _internal_regionhandle_size() const;
   public:
   void clear_regionhandle();
-  ::rti1516_202X::fedpro::RegionHandle* mutable_regionhandle(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::RegionHandle >*
+  ::rti1516_2025::fedpro::RegionHandle* mutable_regionhandle(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::RegionHandle >*
       mutable_regionhandle();
   private:
-  const ::rti1516_202X::fedpro::RegionHandle& _internal_regionhandle(int index) const;
-  ::rti1516_202X::fedpro::RegionHandle* _internal_add_regionhandle();
+  const ::rti1516_2025::fedpro::RegionHandle& _internal_regionhandle(int index) const;
+  ::rti1516_2025::fedpro::RegionHandle* _internal_add_regionhandle();
   public:
-  const ::rti1516_202X::fedpro::RegionHandle& regionhandle(int index) const;
-  ::rti1516_202X::fedpro::RegionHandle* add_regionhandle();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::RegionHandle >&
+  const ::rti1516_2025::fedpro::RegionHandle& regionhandle(int index) const;
+  ::rti1516_2025::fedpro::RegionHandle* add_regionhandle();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::RegionHandle >&
       regionhandle() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.RegionHandleSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.RegionHandleSet)
  private:
   class _Internal;
 
@@ -5843,7 +5843,7 @@ class RegionHandleSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::RegionHandle > regionhandle_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::RegionHandle > regionhandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5852,7 +5852,7 @@ class RegionHandleSet final :
 // -------------------------------------------------------------------
 
 class AttributeHandleSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.AttributeHandleSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.AttributeHandleSet) */ {
  public:
   inline AttributeHandleSet() : AttributeHandleSet(nullptr) {}
   ~AttributeHandleSet() override;
@@ -5955,7 +5955,7 @@ class AttributeHandleSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.AttributeHandleSet";
+    return "rti1516_2025.fedpro.AttributeHandleSet";
   }
   protected:
   explicit AttributeHandleSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5974,25 +5974,25 @@ class AttributeHandleSet final :
   enum : int {
     kAttributeHandleFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.AttributeHandle attributeHandle = 1;
+  // repeated .rti1516_2025.fedpro.AttributeHandle attributeHandle = 1;
   int attributehandle_size() const;
   private:
   int _internal_attributehandle_size() const;
   public:
   void clear_attributehandle();
-  ::rti1516_202X::fedpro::AttributeHandle* mutable_attributehandle(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandle >*
+  ::rti1516_2025::fedpro::AttributeHandle* mutable_attributehandle(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandle >*
       mutable_attributehandle();
   private:
-  const ::rti1516_202X::fedpro::AttributeHandle& _internal_attributehandle(int index) const;
-  ::rti1516_202X::fedpro::AttributeHandle* _internal_add_attributehandle();
+  const ::rti1516_2025::fedpro::AttributeHandle& _internal_attributehandle(int index) const;
+  ::rti1516_2025::fedpro::AttributeHandle* _internal_add_attributehandle();
   public:
-  const ::rti1516_202X::fedpro::AttributeHandle& attributehandle(int index) const;
-  ::rti1516_202X::fedpro::AttributeHandle* add_attributehandle();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandle >&
+  const ::rti1516_2025::fedpro::AttributeHandle& attributehandle(int index) const;
+  ::rti1516_2025::fedpro::AttributeHandle* add_attributehandle();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandle >&
       attributehandle() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.AttributeHandleSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.AttributeHandleSet)
  private:
   class _Internal;
 
@@ -6000,7 +6000,7 @@ class AttributeHandleSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandle > attributehandle_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandle > attributehandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6009,7 +6009,7 @@ class AttributeHandleSet final :
 // -------------------------------------------------------------------
 
 class AttributeSetRegionSetPair final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.AttributeSetRegionSetPair) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.AttributeSetRegionSetPair) */ {
  public:
   inline AttributeSetRegionSetPair() : AttributeSetRegionSetPair(nullptr) {}
   ~AttributeSetRegionSetPair() override;
@@ -6112,7 +6112,7 @@ class AttributeSetRegionSetPair final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.AttributeSetRegionSetPair";
+    return "rti1516_2025.fedpro.AttributeSetRegionSetPair";
   }
   protected:
   explicit AttributeSetRegionSetPair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6132,43 +6132,43 @@ class AttributeSetRegionSetPair final :
     kAttributeSetFieldNumber = 1,
     kRegionSetFieldNumber = 2,
   };
-  // .rti1516_202X.fedpro.AttributeHandleSet attributeSet = 1;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributeSet = 1;
   bool has_attributeset() const;
   private:
   bool _internal_has_attributeset() const;
   public:
   void clear_attributeset();
-  const ::rti1516_202X::fedpro::AttributeHandleSet& attributeset() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::AttributeHandleSet* release_attributeset();
-  ::rti1516_202X::fedpro::AttributeHandleSet* mutable_attributeset();
-  void set_allocated_attributeset(::rti1516_202X::fedpro::AttributeHandleSet* attributeset);
+  const ::rti1516_2025::fedpro::AttributeHandleSet& attributeset() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::AttributeHandleSet* release_attributeset();
+  ::rti1516_2025::fedpro::AttributeHandleSet* mutable_attributeset();
+  void set_allocated_attributeset(::rti1516_2025::fedpro::AttributeHandleSet* attributeset);
   private:
-  const ::rti1516_202X::fedpro::AttributeHandleSet& _internal_attributeset() const;
-  ::rti1516_202X::fedpro::AttributeHandleSet* _internal_mutable_attributeset();
+  const ::rti1516_2025::fedpro::AttributeHandleSet& _internal_attributeset() const;
+  ::rti1516_2025::fedpro::AttributeHandleSet* _internal_mutable_attributeset();
   public:
   void unsafe_arena_set_allocated_attributeset(
-      ::rti1516_202X::fedpro::AttributeHandleSet* attributeset);
-  ::rti1516_202X::fedpro::AttributeHandleSet* unsafe_arena_release_attributeset();
+      ::rti1516_2025::fedpro::AttributeHandleSet* attributeset);
+  ::rti1516_2025::fedpro::AttributeHandleSet* unsafe_arena_release_attributeset();
 
-  // .rti1516_202X.fedpro.RegionHandleSet regionSet = 2;
+  // .rti1516_2025.fedpro.RegionHandleSet regionSet = 2;
   bool has_regionset() const;
   private:
   bool _internal_has_regionset() const;
   public:
   void clear_regionset();
-  const ::rti1516_202X::fedpro::RegionHandleSet& regionset() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::RegionHandleSet* release_regionset();
-  ::rti1516_202X::fedpro::RegionHandleSet* mutable_regionset();
-  void set_allocated_regionset(::rti1516_202X::fedpro::RegionHandleSet* regionset);
+  const ::rti1516_2025::fedpro::RegionHandleSet& regionset() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::RegionHandleSet* release_regionset();
+  ::rti1516_2025::fedpro::RegionHandleSet* mutable_regionset();
+  void set_allocated_regionset(::rti1516_2025::fedpro::RegionHandleSet* regionset);
   private:
-  const ::rti1516_202X::fedpro::RegionHandleSet& _internal_regionset() const;
-  ::rti1516_202X::fedpro::RegionHandleSet* _internal_mutable_regionset();
+  const ::rti1516_2025::fedpro::RegionHandleSet& _internal_regionset() const;
+  ::rti1516_2025::fedpro::RegionHandleSet* _internal_mutable_regionset();
   public:
   void unsafe_arena_set_allocated_regionset(
-      ::rti1516_202X::fedpro::RegionHandleSet* regionset);
-  ::rti1516_202X::fedpro::RegionHandleSet* unsafe_arena_release_regionset();
+      ::rti1516_2025::fedpro::RegionHandleSet* regionset);
+  ::rti1516_2025::fedpro::RegionHandleSet* unsafe_arena_release_regionset();
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.AttributeSetRegionSetPair)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.AttributeSetRegionSetPair)
  private:
   class _Internal;
 
@@ -6176,8 +6176,8 @@ class AttributeSetRegionSetPair final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::AttributeHandleSet* attributeset_;
-    ::rti1516_202X::fedpro::RegionHandleSet* regionset_;
+    ::rti1516_2025::fedpro::AttributeHandleSet* attributeset_;
+    ::rti1516_2025::fedpro::RegionHandleSet* regionset_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6186,7 +6186,7 @@ class AttributeSetRegionSetPair final :
 // -------------------------------------------------------------------
 
 class AttributeSetRegionSetPairList final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.AttributeSetRegionSetPairList) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.AttributeSetRegionSetPairList) */ {
  public:
   inline AttributeSetRegionSetPairList() : AttributeSetRegionSetPairList(nullptr) {}
   ~AttributeSetRegionSetPairList() override;
@@ -6289,7 +6289,7 @@ class AttributeSetRegionSetPairList final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.AttributeSetRegionSetPairList";
+    return "rti1516_2025.fedpro.AttributeSetRegionSetPairList";
   }
   protected:
   explicit AttributeSetRegionSetPairList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6308,25 +6308,25 @@ class AttributeSetRegionSetPairList final :
   enum : int {
     kAttributeSetRegionSetPairFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.AttributeSetRegionSetPair AttributeSetRegionSetPair = 1;
+  // repeated .rti1516_2025.fedpro.AttributeSetRegionSetPair AttributeSetRegionSetPair = 1;
   int attributesetregionsetpair_size() const;
   private:
   int _internal_attributesetregionsetpair_size() const;
   public:
   void clear_attributesetregionsetpair();
-  ::rti1516_202X::fedpro::AttributeSetRegionSetPair* mutable_attributesetregionsetpair(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeSetRegionSetPair >*
+  ::rti1516_2025::fedpro::AttributeSetRegionSetPair* mutable_attributesetregionsetpair(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeSetRegionSetPair >*
       mutable_attributesetregionsetpair();
   private:
-  const ::rti1516_202X::fedpro::AttributeSetRegionSetPair& _internal_attributesetregionsetpair(int index) const;
-  ::rti1516_202X::fedpro::AttributeSetRegionSetPair* _internal_add_attributesetregionsetpair();
+  const ::rti1516_2025::fedpro::AttributeSetRegionSetPair& _internal_attributesetregionsetpair(int index) const;
+  ::rti1516_2025::fedpro::AttributeSetRegionSetPair* _internal_add_attributesetregionsetpair();
   public:
-  const ::rti1516_202X::fedpro::AttributeSetRegionSetPair& attributesetregionsetpair(int index) const;
-  ::rti1516_202X::fedpro::AttributeSetRegionSetPair* add_attributesetregionsetpair();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeSetRegionSetPair >&
+  const ::rti1516_2025::fedpro::AttributeSetRegionSetPair& attributesetregionsetpair(int index) const;
+  ::rti1516_2025::fedpro::AttributeSetRegionSetPair* add_attributesetregionsetpair();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeSetRegionSetPair >&
       attributesetregionsetpair() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.AttributeSetRegionSetPairList)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.AttributeSetRegionSetPairList)
  private:
   class _Internal;
 
@@ -6334,7 +6334,7 @@ class AttributeSetRegionSetPairList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeSetRegionSetPair > attributesetregionsetpair_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeSetRegionSetPair > attributesetregionsetpair_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6343,7 +6343,7 @@ class AttributeSetRegionSetPairList final :
 // -------------------------------------------------------------------
 
 class InteractionClassHandleSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.InteractionClassHandleSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.InteractionClassHandleSet) */ {
  public:
   inline InteractionClassHandleSet() : InteractionClassHandleSet(nullptr) {}
   ~InteractionClassHandleSet() override;
@@ -6446,7 +6446,7 @@ class InteractionClassHandleSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.InteractionClassHandleSet";
+    return "rti1516_2025.fedpro.InteractionClassHandleSet";
   }
   protected:
   explicit InteractionClassHandleSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6465,25 +6465,25 @@ class InteractionClassHandleSet final :
   enum : int {
     kInteractionClassHandleFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.InteractionClassHandle interactionClassHandle = 1;
+  // repeated .rti1516_2025.fedpro.InteractionClassHandle interactionClassHandle = 1;
   int interactionclasshandle_size() const;
   private:
   int _internal_interactionclasshandle_size() const;
   public:
   void clear_interactionclasshandle();
-  ::rti1516_202X::fedpro::InteractionClassHandle* mutable_interactionclasshandle(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::InteractionClassHandle >*
+  ::rti1516_2025::fedpro::InteractionClassHandle* mutable_interactionclasshandle(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::InteractionClassHandle >*
       mutable_interactionclasshandle();
   private:
-  const ::rti1516_202X::fedpro::InteractionClassHandle& _internal_interactionclasshandle(int index) const;
-  ::rti1516_202X::fedpro::InteractionClassHandle* _internal_add_interactionclasshandle();
+  const ::rti1516_2025::fedpro::InteractionClassHandle& _internal_interactionclasshandle(int index) const;
+  ::rti1516_2025::fedpro::InteractionClassHandle* _internal_add_interactionclasshandle();
   public:
-  const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclasshandle(int index) const;
-  ::rti1516_202X::fedpro::InteractionClassHandle* add_interactionclasshandle();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::InteractionClassHandle >&
+  const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclasshandle(int index) const;
+  ::rti1516_2025::fedpro::InteractionClassHandle* add_interactionclasshandle();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::InteractionClassHandle >&
       interactionclasshandle() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.InteractionClassHandleSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.InteractionClassHandleSet)
  private:
   class _Internal;
 
@@ -6491,7 +6491,7 @@ class InteractionClassHandleSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::InteractionClassHandle > interactionclasshandle_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::InteractionClassHandle > interactionclasshandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6500,7 +6500,7 @@ class InteractionClassHandleSet final :
 // -------------------------------------------------------------------
 
 class RangeBounds final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.RangeBounds) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.RangeBounds) */ {
  public:
   inline RangeBounds() : RangeBounds(nullptr) {}
   ~RangeBounds() override;
@@ -6603,7 +6603,7 @@ class RangeBounds final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.RangeBounds";
+    return "rti1516_2025.fedpro.RangeBounds";
   }
   protected:
   explicit RangeBounds(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6641,7 +6641,7 @@ class RangeBounds final :
   void _internal_set_upper(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.RangeBounds)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.RangeBounds)
  private:
   class _Internal;
 
@@ -6659,7 +6659,7 @@ class RangeBounds final :
 // -------------------------------------------------------------------
 
 class DimensionAndRange final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.DimensionAndRange) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.DimensionAndRange) */ {
  public:
   inline DimensionAndRange() : DimensionAndRange(nullptr) {}
   ~DimensionAndRange() override;
@@ -6762,7 +6762,7 @@ class DimensionAndRange final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.DimensionAndRange";
+    return "rti1516_2025.fedpro.DimensionAndRange";
   }
   protected:
   explicit DimensionAndRange(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6782,43 +6782,43 @@ class DimensionAndRange final :
     kDimensionHandleFieldNumber = 1,
     kRangeBoundsFieldNumber = 2,
   };
-  // .rti1516_202X.fedpro.DimensionHandle dimensionHandle = 1;
+  // .rti1516_2025.fedpro.DimensionHandle dimensionHandle = 1;
   bool has_dimensionhandle() const;
   private:
   bool _internal_has_dimensionhandle() const;
   public:
   void clear_dimensionhandle();
-  const ::rti1516_202X::fedpro::DimensionHandle& dimensionhandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::DimensionHandle* release_dimensionhandle();
-  ::rti1516_202X::fedpro::DimensionHandle* mutable_dimensionhandle();
-  void set_allocated_dimensionhandle(::rti1516_202X::fedpro::DimensionHandle* dimensionhandle);
+  const ::rti1516_2025::fedpro::DimensionHandle& dimensionhandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::DimensionHandle* release_dimensionhandle();
+  ::rti1516_2025::fedpro::DimensionHandle* mutable_dimensionhandle();
+  void set_allocated_dimensionhandle(::rti1516_2025::fedpro::DimensionHandle* dimensionhandle);
   private:
-  const ::rti1516_202X::fedpro::DimensionHandle& _internal_dimensionhandle() const;
-  ::rti1516_202X::fedpro::DimensionHandle* _internal_mutable_dimensionhandle();
+  const ::rti1516_2025::fedpro::DimensionHandle& _internal_dimensionhandle() const;
+  ::rti1516_2025::fedpro::DimensionHandle* _internal_mutable_dimensionhandle();
   public:
   void unsafe_arena_set_allocated_dimensionhandle(
-      ::rti1516_202X::fedpro::DimensionHandle* dimensionhandle);
-  ::rti1516_202X::fedpro::DimensionHandle* unsafe_arena_release_dimensionhandle();
+      ::rti1516_2025::fedpro::DimensionHandle* dimensionhandle);
+  ::rti1516_2025::fedpro::DimensionHandle* unsafe_arena_release_dimensionhandle();
 
-  // .rti1516_202X.fedpro.RangeBounds rangeBounds = 2;
+  // .rti1516_2025.fedpro.RangeBounds rangeBounds = 2;
   bool has_rangebounds() const;
   private:
   bool _internal_has_rangebounds() const;
   public:
   void clear_rangebounds();
-  const ::rti1516_202X::fedpro::RangeBounds& rangebounds() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::RangeBounds* release_rangebounds();
-  ::rti1516_202X::fedpro::RangeBounds* mutable_rangebounds();
-  void set_allocated_rangebounds(::rti1516_202X::fedpro::RangeBounds* rangebounds);
+  const ::rti1516_2025::fedpro::RangeBounds& rangebounds() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::RangeBounds* release_rangebounds();
+  ::rti1516_2025::fedpro::RangeBounds* mutable_rangebounds();
+  void set_allocated_rangebounds(::rti1516_2025::fedpro::RangeBounds* rangebounds);
   private:
-  const ::rti1516_202X::fedpro::RangeBounds& _internal_rangebounds() const;
-  ::rti1516_202X::fedpro::RangeBounds* _internal_mutable_rangebounds();
+  const ::rti1516_2025::fedpro::RangeBounds& _internal_rangebounds() const;
+  ::rti1516_2025::fedpro::RangeBounds* _internal_mutable_rangebounds();
   public:
   void unsafe_arena_set_allocated_rangebounds(
-      ::rti1516_202X::fedpro::RangeBounds* rangebounds);
-  ::rti1516_202X::fedpro::RangeBounds* unsafe_arena_release_rangebounds();
+      ::rti1516_2025::fedpro::RangeBounds* rangebounds);
+  ::rti1516_2025::fedpro::RangeBounds* unsafe_arena_release_rangebounds();
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.DimensionAndRange)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.DimensionAndRange)
  private:
   class _Internal;
 
@@ -6826,8 +6826,8 @@ class DimensionAndRange final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::DimensionHandle* dimensionhandle_;
-    ::rti1516_202X::fedpro::RangeBounds* rangebounds_;
+    ::rti1516_2025::fedpro::DimensionHandle* dimensionhandle_;
+    ::rti1516_2025::fedpro::RangeBounds* rangebounds_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6836,7 +6836,7 @@ class DimensionAndRange final :
 // -------------------------------------------------------------------
 
 class ConveyedRegion final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ConveyedRegion) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ConveyedRegion) */ {
  public:
   inline ConveyedRegion() : ConveyedRegion(nullptr) {}
   ~ConveyedRegion() override;
@@ -6939,7 +6939,7 @@ class ConveyedRegion final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ConveyedRegion";
+    return "rti1516_2025.fedpro.ConveyedRegion";
   }
   protected:
   explicit ConveyedRegion(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6958,25 +6958,25 @@ class ConveyedRegion final :
   enum : int {
     kDimensionAndRangeFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.DimensionAndRange dimensionAndRange = 1;
+  // repeated .rti1516_2025.fedpro.DimensionAndRange dimensionAndRange = 1;
   int dimensionandrange_size() const;
   private:
   int _internal_dimensionandrange_size() const;
   public:
   void clear_dimensionandrange();
-  ::rti1516_202X::fedpro::DimensionAndRange* mutable_dimensionandrange(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionAndRange >*
+  ::rti1516_2025::fedpro::DimensionAndRange* mutable_dimensionandrange(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionAndRange >*
       mutable_dimensionandrange();
   private:
-  const ::rti1516_202X::fedpro::DimensionAndRange& _internal_dimensionandrange(int index) const;
-  ::rti1516_202X::fedpro::DimensionAndRange* _internal_add_dimensionandrange();
+  const ::rti1516_2025::fedpro::DimensionAndRange& _internal_dimensionandrange(int index) const;
+  ::rti1516_2025::fedpro::DimensionAndRange* _internal_add_dimensionandrange();
   public:
-  const ::rti1516_202X::fedpro::DimensionAndRange& dimensionandrange(int index) const;
-  ::rti1516_202X::fedpro::DimensionAndRange* add_dimensionandrange();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionAndRange >&
+  const ::rti1516_2025::fedpro::DimensionAndRange& dimensionandrange(int index) const;
+  ::rti1516_2025::fedpro::DimensionAndRange* add_dimensionandrange();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionAndRange >&
       dimensionandrange() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ConveyedRegion)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ConveyedRegion)
  private:
   class _Internal;
 
@@ -6984,7 +6984,7 @@ class ConveyedRegion final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionAndRange > dimensionandrange_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionAndRange > dimensionandrange_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6993,7 +6993,7 @@ class ConveyedRegion final :
 // -------------------------------------------------------------------
 
 class ConveyedRegionSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.ConveyedRegionSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.ConveyedRegionSet) */ {
  public:
   inline ConveyedRegionSet() : ConveyedRegionSet(nullptr) {}
   ~ConveyedRegionSet() override;
@@ -7096,7 +7096,7 @@ class ConveyedRegionSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.ConveyedRegionSet";
+    return "rti1516_2025.fedpro.ConveyedRegionSet";
   }
   protected:
   explicit ConveyedRegionSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7115,25 +7115,25 @@ class ConveyedRegionSet final :
   enum : int {
     kConveyedRegionsFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.ConveyedRegion conveyedRegions = 1;
+  // repeated .rti1516_2025.fedpro.ConveyedRegion conveyedRegions = 1;
   int conveyedregions_size() const;
   private:
   int _internal_conveyedregions_size() const;
   public:
   void clear_conveyedregions();
-  ::rti1516_202X::fedpro::ConveyedRegion* mutable_conveyedregions(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ConveyedRegion >*
+  ::rti1516_2025::fedpro::ConveyedRegion* mutable_conveyedregions(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ConveyedRegion >*
       mutable_conveyedregions();
   private:
-  const ::rti1516_202X::fedpro::ConveyedRegion& _internal_conveyedregions(int index) const;
-  ::rti1516_202X::fedpro::ConveyedRegion* _internal_add_conveyedregions();
+  const ::rti1516_2025::fedpro::ConveyedRegion& _internal_conveyedregions(int index) const;
+  ::rti1516_2025::fedpro::ConveyedRegion* _internal_add_conveyedregions();
   public:
-  const ::rti1516_202X::fedpro::ConveyedRegion& conveyedregions(int index) const;
-  ::rti1516_202X::fedpro::ConveyedRegion* add_conveyedregions();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ConveyedRegion >&
+  const ::rti1516_2025::fedpro::ConveyedRegion& conveyedregions(int index) const;
+  ::rti1516_2025::fedpro::ConveyedRegion* add_conveyedregions();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ConveyedRegion >&
       conveyedregions() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.ConveyedRegionSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.ConveyedRegionSet)
  private:
   class _Internal;
 
@@ -7141,7 +7141,7 @@ class ConveyedRegionSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ConveyedRegion > conveyedregions_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ConveyedRegion > conveyedregions_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7150,7 +7150,7 @@ class ConveyedRegionSet final :
 // -------------------------------------------------------------------
 
 class SupplementalReflectInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.SupplementalReflectInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.SupplementalReflectInfo) */ {
  public:
   inline SupplementalReflectInfo() : SupplementalReflectInfo(nullptr) {}
   ~SupplementalReflectInfo() override;
@@ -7253,7 +7253,7 @@ class SupplementalReflectInfo final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.SupplementalReflectInfo";
+    return "rti1516_2025.fedpro.SupplementalReflectInfo";
   }
   protected:
   explicit SupplementalReflectInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7274,41 +7274,41 @@ class SupplementalReflectInfo final :
     kConveyedRegionsFieldNumber = 3,
     kConveyedRegionsIsValidFieldNumber = 2,
   };
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 1;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 1;
   bool has_producingfederate() const;
   private:
   bool _internal_has_producingfederate() const;
   public:
   void clear_producingfederate();
-  const ::rti1516_202X::fedpro::FederateHandle& producingfederate() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::FederateHandle* release_producingfederate();
-  ::rti1516_202X::fedpro::FederateHandle* mutable_producingfederate();
-  void set_allocated_producingfederate(::rti1516_202X::fedpro::FederateHandle* producingfederate);
+  const ::rti1516_2025::fedpro::FederateHandle& producingfederate() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::FederateHandle* release_producingfederate();
+  ::rti1516_2025::fedpro::FederateHandle* mutable_producingfederate();
+  void set_allocated_producingfederate(::rti1516_2025::fedpro::FederateHandle* producingfederate);
   private:
-  const ::rti1516_202X::fedpro::FederateHandle& _internal_producingfederate() const;
-  ::rti1516_202X::fedpro::FederateHandle* _internal_mutable_producingfederate();
+  const ::rti1516_2025::fedpro::FederateHandle& _internal_producingfederate() const;
+  ::rti1516_2025::fedpro::FederateHandle* _internal_mutable_producingfederate();
   public:
   void unsafe_arena_set_allocated_producingfederate(
-      ::rti1516_202X::fedpro::FederateHandle* producingfederate);
-  ::rti1516_202X::fedpro::FederateHandle* unsafe_arena_release_producingfederate();
+      ::rti1516_2025::fedpro::FederateHandle* producingfederate);
+  ::rti1516_2025::fedpro::FederateHandle* unsafe_arena_release_producingfederate();
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet conveyedRegions = 3;
+  // .rti1516_2025.fedpro.ConveyedRegionSet conveyedRegions = 3;
   bool has_conveyedregions() const;
   private:
   bool _internal_has_conveyedregions() const;
   public:
   void clear_conveyedregions();
-  const ::rti1516_202X::fedpro::ConveyedRegionSet& conveyedregions() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::ConveyedRegionSet* release_conveyedregions();
-  ::rti1516_202X::fedpro::ConveyedRegionSet* mutable_conveyedregions();
-  void set_allocated_conveyedregions(::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions);
+  const ::rti1516_2025::fedpro::ConveyedRegionSet& conveyedregions() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::ConveyedRegionSet* release_conveyedregions();
+  ::rti1516_2025::fedpro::ConveyedRegionSet* mutable_conveyedregions();
+  void set_allocated_conveyedregions(::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions);
   private:
-  const ::rti1516_202X::fedpro::ConveyedRegionSet& _internal_conveyedregions() const;
-  ::rti1516_202X::fedpro::ConveyedRegionSet* _internal_mutable_conveyedregions();
+  const ::rti1516_2025::fedpro::ConveyedRegionSet& _internal_conveyedregions() const;
+  ::rti1516_2025::fedpro::ConveyedRegionSet* _internal_mutable_conveyedregions();
   public:
   void unsafe_arena_set_allocated_conveyedregions(
-      ::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions);
-  ::rti1516_202X::fedpro::ConveyedRegionSet* unsafe_arena_release_conveyedregions();
+      ::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions);
+  ::rti1516_2025::fedpro::ConveyedRegionSet* unsafe_arena_release_conveyedregions();
 
   // bool conveyedRegionsIsValid = 2;
   void clear_conveyedregionsisvalid();
@@ -7319,7 +7319,7 @@ class SupplementalReflectInfo final :
   void _internal_set_conveyedregionsisvalid(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.SupplementalReflectInfo)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.SupplementalReflectInfo)
  private:
   class _Internal;
 
@@ -7327,8 +7327,8 @@ class SupplementalReflectInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::FederateHandle* producingfederate_;
-    ::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions_;
+    ::rti1516_2025::fedpro::FederateHandle* producingfederate_;
+    ::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions_;
     bool conveyedregionsisvalid_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -7338,7 +7338,7 @@ class SupplementalReflectInfo final :
 // -------------------------------------------------------------------
 
 class SupplementalReceiveInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.SupplementalReceiveInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.SupplementalReceiveInfo) */ {
  public:
   inline SupplementalReceiveInfo() : SupplementalReceiveInfo(nullptr) {}
   ~SupplementalReceiveInfo() override;
@@ -7441,7 +7441,7 @@ class SupplementalReceiveInfo final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.SupplementalReceiveInfo";
+    return "rti1516_2025.fedpro.SupplementalReceiveInfo";
   }
   protected:
   explicit SupplementalReceiveInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7462,41 +7462,41 @@ class SupplementalReceiveInfo final :
     kConveyedRegionsFieldNumber = 3,
     kConveyedRegionsIsValidFieldNumber = 2,
   };
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 1;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 1;
   bool has_producingfederate() const;
   private:
   bool _internal_has_producingfederate() const;
   public:
   void clear_producingfederate();
-  const ::rti1516_202X::fedpro::FederateHandle& producingfederate() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::FederateHandle* release_producingfederate();
-  ::rti1516_202X::fedpro::FederateHandle* mutable_producingfederate();
-  void set_allocated_producingfederate(::rti1516_202X::fedpro::FederateHandle* producingfederate);
+  const ::rti1516_2025::fedpro::FederateHandle& producingfederate() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::FederateHandle* release_producingfederate();
+  ::rti1516_2025::fedpro::FederateHandle* mutable_producingfederate();
+  void set_allocated_producingfederate(::rti1516_2025::fedpro::FederateHandle* producingfederate);
   private:
-  const ::rti1516_202X::fedpro::FederateHandle& _internal_producingfederate() const;
-  ::rti1516_202X::fedpro::FederateHandle* _internal_mutable_producingfederate();
+  const ::rti1516_2025::fedpro::FederateHandle& _internal_producingfederate() const;
+  ::rti1516_2025::fedpro::FederateHandle* _internal_mutable_producingfederate();
   public:
   void unsafe_arena_set_allocated_producingfederate(
-      ::rti1516_202X::fedpro::FederateHandle* producingfederate);
-  ::rti1516_202X::fedpro::FederateHandle* unsafe_arena_release_producingfederate();
+      ::rti1516_2025::fedpro::FederateHandle* producingfederate);
+  ::rti1516_2025::fedpro::FederateHandle* unsafe_arena_release_producingfederate();
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet conveyedRegions = 3;
+  // .rti1516_2025.fedpro.ConveyedRegionSet conveyedRegions = 3;
   bool has_conveyedregions() const;
   private:
   bool _internal_has_conveyedregions() const;
   public:
   void clear_conveyedregions();
-  const ::rti1516_202X::fedpro::ConveyedRegionSet& conveyedregions() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::ConveyedRegionSet* release_conveyedregions();
-  ::rti1516_202X::fedpro::ConveyedRegionSet* mutable_conveyedregions();
-  void set_allocated_conveyedregions(::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions);
+  const ::rti1516_2025::fedpro::ConveyedRegionSet& conveyedregions() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::ConveyedRegionSet* release_conveyedregions();
+  ::rti1516_2025::fedpro::ConveyedRegionSet* mutable_conveyedregions();
+  void set_allocated_conveyedregions(::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions);
   private:
-  const ::rti1516_202X::fedpro::ConveyedRegionSet& _internal_conveyedregions() const;
-  ::rti1516_202X::fedpro::ConveyedRegionSet* _internal_mutable_conveyedregions();
+  const ::rti1516_2025::fedpro::ConveyedRegionSet& _internal_conveyedregions() const;
+  ::rti1516_2025::fedpro::ConveyedRegionSet* _internal_mutable_conveyedregions();
   public:
   void unsafe_arena_set_allocated_conveyedregions(
-      ::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions);
-  ::rti1516_202X::fedpro::ConveyedRegionSet* unsafe_arena_release_conveyedregions();
+      ::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions);
+  ::rti1516_2025::fedpro::ConveyedRegionSet* unsafe_arena_release_conveyedregions();
 
   // bool conveyedRegionsIsValid = 2;
   void clear_conveyedregionsisvalid();
@@ -7507,7 +7507,7 @@ class SupplementalReceiveInfo final :
   void _internal_set_conveyedregionsisvalid(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.SupplementalReceiveInfo)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.SupplementalReceiveInfo)
  private:
   class _Internal;
 
@@ -7515,8 +7515,8 @@ class SupplementalReceiveInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::rti1516_202X::fedpro::FederateHandle* producingfederate_;
-    ::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions_;
+    ::rti1516_2025::fedpro::FederateHandle* producingfederate_;
+    ::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions_;
     bool conveyedregionsisvalid_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -7526,7 +7526,7 @@ class SupplementalReceiveInfo final :
 // -------------------------------------------------------------------
 
 class FomModule final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FomModule) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FomModule) */ {
  public:
   inline FomModule() : FomModule(nullptr) {}
   ~FomModule() override;
@@ -7636,7 +7636,7 @@ class FomModule final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FomModule";
+    return "rti1516_2025.fedpro.FomModule";
   }
   protected:
   explicit FomModule(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7657,23 +7657,23 @@ class FomModule final :
     kCompressedModuleFieldNumber = 2,
     kUrlFieldNumber = 3,
   };
-  // .rti1516_202X.fedpro.FileFomModule file = 1;
+  // .rti1516_2025.fedpro.FileFomModule file = 1;
   bool has_file() const;
   private:
   bool _internal_has_file() const;
   public:
   void clear_file();
-  const ::rti1516_202X::fedpro::FileFomModule& file() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::FileFomModule* release_file();
-  ::rti1516_202X::fedpro::FileFomModule* mutable_file();
-  void set_allocated_file(::rti1516_202X::fedpro::FileFomModule* file);
+  const ::rti1516_2025::fedpro::FileFomModule& file() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::FileFomModule* release_file();
+  ::rti1516_2025::fedpro::FileFomModule* mutable_file();
+  void set_allocated_file(::rti1516_2025::fedpro::FileFomModule* file);
   private:
-  const ::rti1516_202X::fedpro::FileFomModule& _internal_file() const;
-  ::rti1516_202X::fedpro::FileFomModule* _internal_mutable_file();
+  const ::rti1516_2025::fedpro::FileFomModule& _internal_file() const;
+  ::rti1516_2025::fedpro::FileFomModule* _internal_mutable_file();
   public:
   void unsafe_arena_set_allocated_file(
-      ::rti1516_202X::fedpro::FileFomModule* file);
-  ::rti1516_202X::fedpro::FileFomModule* unsafe_arena_release_file();
+      ::rti1516_2025::fedpro::FileFomModule* file);
+  ::rti1516_2025::fedpro::FileFomModule* unsafe_arena_release_file();
 
   // bytes compressedModule = 2;
   bool has_compressedmodule() const;
@@ -7713,7 +7713,7 @@ class FomModule final :
 
   void clear_fomModule();
   FomModuleCase fomModule_case() const;
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FomModule)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FomModule)
  private:
   class _Internal;
   void set_has_file();
@@ -7730,7 +7730,7 @@ class FomModule final :
     union FomModuleUnion {
       constexpr FomModuleUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::rti1516_202X::fedpro::FileFomModule* file_;
+      ::rti1516_2025::fedpro::FileFomModule* file_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compressedmodule_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
     } fomModule_;
@@ -7744,7 +7744,7 @@ class FomModule final :
 // -------------------------------------------------------------------
 
 class FileFomModule final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FileFomModule) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FileFomModule) */ {
  public:
   inline FileFomModule() : FileFomModule(nullptr) {}
   ~FileFomModule() override;
@@ -7847,7 +7847,7 @@ class FileFomModule final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FileFomModule";
+    return "rti1516_2025.fedpro.FileFomModule";
   }
   protected:
   explicit FileFomModule(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -7895,7 +7895,7 @@ class FileFomModule final :
   std::string* _internal_mutable_content();
   public:
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FileFomModule)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FileFomModule)
  private:
   class _Internal;
 
@@ -7913,7 +7913,7 @@ class FileFomModule final :
 // -------------------------------------------------------------------
 
 class FomModuleSet final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.FomModuleSet) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.FomModuleSet) */ {
  public:
   inline FomModuleSet() : FomModuleSet(nullptr) {}
   ~FomModuleSet() override;
@@ -8016,7 +8016,7 @@ class FomModuleSet final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.FomModuleSet";
+    return "rti1516_2025.fedpro.FomModuleSet";
   }
   protected:
   explicit FomModuleSet(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8035,25 +8035,25 @@ class FomModuleSet final :
   enum : int {
     kFomModuleFieldNumber = 1,
   };
-  // repeated .rti1516_202X.fedpro.FomModule fomModule = 1;
+  // repeated .rti1516_2025.fedpro.FomModule fomModule = 1;
   int fommodule_size() const;
   private:
   int _internal_fommodule_size() const;
   public:
   void clear_fommodule();
-  ::rti1516_202X::fedpro::FomModule* mutable_fommodule(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FomModule >*
+  ::rti1516_2025::fedpro::FomModule* mutable_fommodule(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FomModule >*
       mutable_fommodule();
   private:
-  const ::rti1516_202X::fedpro::FomModule& _internal_fommodule(int index) const;
-  ::rti1516_202X::fedpro::FomModule* _internal_add_fommodule();
+  const ::rti1516_2025::fedpro::FomModule& _internal_fommodule(int index) const;
+  ::rti1516_2025::fedpro::FomModule* _internal_add_fommodule();
   public:
-  const ::rti1516_202X::fedpro::FomModule& fommodule(int index) const;
-  ::rti1516_202X::fedpro::FomModule* add_fommodule();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FomModule >&
+  const ::rti1516_2025::fedpro::FomModule& fommodule(int index) const;
+  ::rti1516_2025::fedpro::FomModule* add_fommodule();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FomModule >&
       fommodule() const;
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.FomModuleSet)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.FomModuleSet)
  private:
   class _Internal;
 
@@ -8061,7 +8061,7 @@ class FomModuleSet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FomModule > fommodule_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FomModule > fommodule_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8070,7 +8070,7 @@ class FomModuleSet final :
 // -------------------------------------------------------------------
 
 class JoinResult final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_202X.fedpro.JoinResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:rti1516_2025.fedpro.JoinResult) */ {
  public:
   inline JoinResult() : JoinResult(nullptr) {}
   ~JoinResult() override;
@@ -8173,7 +8173,7 @@ class JoinResult final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "rti1516_202X.fedpro.JoinResult";
+    return "rti1516_2025.fedpro.JoinResult";
   }
   protected:
   explicit JoinResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -8207,25 +8207,25 @@ class JoinResult final :
   std::string* _internal_mutable_logicaltimeimplementationname();
   public:
 
-  // .rti1516_202X.fedpro.FederateHandle federateHandle = 1;
+  // .rti1516_2025.fedpro.FederateHandle federateHandle = 1;
   bool has_federatehandle() const;
   private:
   bool _internal_has_federatehandle() const;
   public:
   void clear_federatehandle();
-  const ::rti1516_202X::fedpro::FederateHandle& federatehandle() const;
-  PROTOBUF_NODISCARD ::rti1516_202X::fedpro::FederateHandle* release_federatehandle();
-  ::rti1516_202X::fedpro::FederateHandle* mutable_federatehandle();
-  void set_allocated_federatehandle(::rti1516_202X::fedpro::FederateHandle* federatehandle);
+  const ::rti1516_2025::fedpro::FederateHandle& federatehandle() const;
+  PROTOBUF_NODISCARD ::rti1516_2025::fedpro::FederateHandle* release_federatehandle();
+  ::rti1516_2025::fedpro::FederateHandle* mutable_federatehandle();
+  void set_allocated_federatehandle(::rti1516_2025::fedpro::FederateHandle* federatehandle);
   private:
-  const ::rti1516_202X::fedpro::FederateHandle& _internal_federatehandle() const;
-  ::rti1516_202X::fedpro::FederateHandle* _internal_mutable_federatehandle();
+  const ::rti1516_2025::fedpro::FederateHandle& _internal_federatehandle() const;
+  ::rti1516_2025::fedpro::FederateHandle* _internal_mutable_federatehandle();
   public:
   void unsafe_arena_set_allocated_federatehandle(
-      ::rti1516_202X::fedpro::FederateHandle* federatehandle);
-  ::rti1516_202X::fedpro::FederateHandle* unsafe_arena_release_federatehandle();
+      ::rti1516_2025::fedpro::FederateHandle* federatehandle);
+  ::rti1516_2025::fedpro::FederateHandle* unsafe_arena_release_federatehandle();
 
-  // @@protoc_insertion_point(class_scope:rti1516_202X.fedpro.JoinResult)
+  // @@protoc_insertion_point(class_scope:rti1516_2025.fedpro.JoinResult)
  private:
   class _Internal;
 
@@ -8234,7 +8234,7 @@ class JoinResult final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr logicaltimeimplementationname_;
-    ::rti1516_202X::fedpro::FederateHandle* federatehandle_;
+    ::rti1516_2025::fedpro::FederateHandle* federatehandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8256,7 +8256,7 @@ inline void ExceptionData::clear_exceptionname() {
   _impl_.exceptionname_.ClearToEmpty();
 }
 inline const std::string& ExceptionData::exceptionname() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ExceptionData.exceptionName)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ExceptionData.exceptionName)
   return _internal_exceptionname();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8264,11 +8264,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void ExceptionData::set_exceptionname(ArgT0&& arg0, ArgT... args) {
  
  _impl_.exceptionname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ExceptionData.exceptionName)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ExceptionData.exceptionName)
 }
 inline std::string* ExceptionData::mutable_exceptionname() {
   std::string* _s = _internal_mutable_exceptionname();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ExceptionData.exceptionName)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ExceptionData.exceptionName)
   return _s;
 }
 inline const std::string& ExceptionData::_internal_exceptionname() const {
@@ -8283,7 +8283,7 @@ inline std::string* ExceptionData::_internal_mutable_exceptionname() {
   return _impl_.exceptionname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ExceptionData::release_exceptionname() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ExceptionData.exceptionName)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ExceptionData.exceptionName)
   return _impl_.exceptionname_.Release();
 }
 inline void ExceptionData::set_allocated_exceptionname(std::string* exceptionname) {
@@ -8298,7 +8298,7 @@ inline void ExceptionData::set_allocated_exceptionname(std::string* exceptionnam
     _impl_.exceptionname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ExceptionData.exceptionName)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ExceptionData.exceptionName)
 }
 
 // string details = 2;
@@ -8306,7 +8306,7 @@ inline void ExceptionData::clear_details() {
   _impl_.details_.ClearToEmpty();
 }
 inline const std::string& ExceptionData::details() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ExceptionData.details)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ExceptionData.details)
   return _internal_details();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8314,11 +8314,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void ExceptionData::set_details(ArgT0&& arg0, ArgT... args) {
  
  _impl_.details_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ExceptionData.details)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ExceptionData.details)
 }
 inline std::string* ExceptionData::mutable_details() {
   std::string* _s = _internal_mutable_details();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ExceptionData.details)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ExceptionData.details)
   return _s;
 }
 inline const std::string& ExceptionData::_internal_details() const {
@@ -8333,7 +8333,7 @@ inline std::string* ExceptionData::_internal_mutable_details() {
   return _impl_.details_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ExceptionData::release_details() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ExceptionData.details)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ExceptionData.details)
   return _impl_.details_.Release();
 }
 inline void ExceptionData::set_allocated_details(std::string* details) {
@@ -8348,7 +8348,7 @@ inline void ExceptionData::set_allocated_details(std::string* details) {
     _impl_.details_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ExceptionData.details)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ExceptionData.details)
 }
 
 // -------------------------------------------------------------------
@@ -8360,7 +8360,7 @@ inline void RtiConfiguration::clear_configurationname() {
   _impl_.configurationname_.ClearToEmpty();
 }
 inline const std::string& RtiConfiguration::configurationname() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.RtiConfiguration.configurationName)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.RtiConfiguration.configurationName)
   return _internal_configurationname();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8368,11 +8368,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void RtiConfiguration::set_configurationname(ArgT0&& arg0, ArgT... args) {
  
  _impl_.configurationname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.RtiConfiguration.configurationName)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.RtiConfiguration.configurationName)
 }
 inline std::string* RtiConfiguration::mutable_configurationname() {
   std::string* _s = _internal_mutable_configurationname();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.RtiConfiguration.configurationName)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.RtiConfiguration.configurationName)
   return _s;
 }
 inline const std::string& RtiConfiguration::_internal_configurationname() const {
@@ -8387,7 +8387,7 @@ inline std::string* RtiConfiguration::_internal_mutable_configurationname() {
   return _impl_.configurationname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RtiConfiguration::release_configurationname() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.RtiConfiguration.configurationName)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.RtiConfiguration.configurationName)
   return _impl_.configurationname_.Release();
 }
 inline void RtiConfiguration::set_allocated_configurationname(std::string* configurationname) {
@@ -8402,7 +8402,7 @@ inline void RtiConfiguration::set_allocated_configurationname(std::string* confi
     _impl_.configurationname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.RtiConfiguration.configurationName)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.RtiConfiguration.configurationName)
 }
 
 // string rtiAddress = 2;
@@ -8410,7 +8410,7 @@ inline void RtiConfiguration::clear_rtiaddress() {
   _impl_.rtiaddress_.ClearToEmpty();
 }
 inline const std::string& RtiConfiguration::rtiaddress() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.RtiConfiguration.rtiAddress)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.RtiConfiguration.rtiAddress)
   return _internal_rtiaddress();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8418,11 +8418,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void RtiConfiguration::set_rtiaddress(ArgT0&& arg0, ArgT... args) {
  
  _impl_.rtiaddress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.RtiConfiguration.rtiAddress)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.RtiConfiguration.rtiAddress)
 }
 inline std::string* RtiConfiguration::mutable_rtiaddress() {
   std::string* _s = _internal_mutable_rtiaddress();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.RtiConfiguration.rtiAddress)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.RtiConfiguration.rtiAddress)
   return _s;
 }
 inline const std::string& RtiConfiguration::_internal_rtiaddress() const {
@@ -8437,7 +8437,7 @@ inline std::string* RtiConfiguration::_internal_mutable_rtiaddress() {
   return _impl_.rtiaddress_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RtiConfiguration::release_rtiaddress() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.RtiConfiguration.rtiAddress)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.RtiConfiguration.rtiAddress)
   return _impl_.rtiaddress_.Release();
 }
 inline void RtiConfiguration::set_allocated_rtiaddress(std::string* rtiaddress) {
@@ -8452,7 +8452,7 @@ inline void RtiConfiguration::set_allocated_rtiaddress(std::string* rtiaddress) 
     _impl_.rtiaddress_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.RtiConfiguration.rtiAddress)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.RtiConfiguration.rtiAddress)
 }
 
 // string additionalSettings = 3;
@@ -8460,7 +8460,7 @@ inline void RtiConfiguration::clear_additionalsettings() {
   _impl_.additionalsettings_.ClearToEmpty();
 }
 inline const std::string& RtiConfiguration::additionalsettings() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.RtiConfiguration.additionalSettings)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.RtiConfiguration.additionalSettings)
   return _internal_additionalsettings();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8468,11 +8468,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void RtiConfiguration::set_additionalsettings(ArgT0&& arg0, ArgT... args) {
  
  _impl_.additionalsettings_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.RtiConfiguration.additionalSettings)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.RtiConfiguration.additionalSettings)
 }
 inline std::string* RtiConfiguration::mutable_additionalsettings() {
   std::string* _s = _internal_mutable_additionalsettings();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.RtiConfiguration.additionalSettings)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.RtiConfiguration.additionalSettings)
   return _s;
 }
 inline const std::string& RtiConfiguration::_internal_additionalsettings() const {
@@ -8487,7 +8487,7 @@ inline std::string* RtiConfiguration::_internal_mutable_additionalsettings() {
   return _impl_.additionalsettings_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RtiConfiguration::release_additionalsettings() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.RtiConfiguration.additionalSettings)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.RtiConfiguration.additionalSettings)
   return _impl_.additionalsettings_.Release();
 }
 inline void RtiConfiguration::set_allocated_additionalsettings(std::string* additionalsettings) {
@@ -8502,7 +8502,7 @@ inline void RtiConfiguration::set_allocated_additionalsettings(std::string* addi
     _impl_.additionalsettings_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.RtiConfiguration.additionalSettings)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.RtiConfiguration.additionalSettings)
 }
 
 // -------------------------------------------------------------------
@@ -8517,7 +8517,7 @@ inline bool ConfigurationResult::_internal_configurationused() const {
   return _impl_.configurationused_;
 }
 inline bool ConfigurationResult::configurationused() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ConfigurationResult.configurationUsed)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ConfigurationResult.configurationUsed)
   return _internal_configurationused();
 }
 inline void ConfigurationResult::_internal_set_configurationused(bool value) {
@@ -8526,7 +8526,7 @@ inline void ConfigurationResult::_internal_set_configurationused(bool value) {
 }
 inline void ConfigurationResult::set_configurationused(bool value) {
   _internal_set_configurationused(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ConfigurationResult.configurationUsed)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ConfigurationResult.configurationUsed)
 }
 
 // bool addressUsed = 2;
@@ -8537,7 +8537,7 @@ inline bool ConfigurationResult::_internal_addressused() const {
   return _impl_.addressused_;
 }
 inline bool ConfigurationResult::addressused() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ConfigurationResult.addressUsed)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ConfigurationResult.addressUsed)
   return _internal_addressused();
 }
 inline void ConfigurationResult::_internal_set_addressused(bool value) {
@@ -8546,27 +8546,27 @@ inline void ConfigurationResult::_internal_set_addressused(bool value) {
 }
 inline void ConfigurationResult::set_addressused(bool value) {
   _internal_set_addressused(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ConfigurationResult.addressUsed)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ConfigurationResult.addressUsed)
 }
 
-// .rti1516_202X.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode = 3;
+// .rti1516_2025.fedpro.AdditionalSettingsResultCode additionalSettingsResultCode = 3;
 inline void ConfigurationResult::clear_additionalsettingsresultcode() {
   _impl_.additionalsettingsresultcode_ = 0;
 }
-inline ::rti1516_202X::fedpro::AdditionalSettingsResultCode ConfigurationResult::_internal_additionalsettingsresultcode() const {
-  return static_cast< ::rti1516_202X::fedpro::AdditionalSettingsResultCode >(_impl_.additionalsettingsresultcode_);
+inline ::rti1516_2025::fedpro::AdditionalSettingsResultCode ConfigurationResult::_internal_additionalsettingsresultcode() const {
+  return static_cast< ::rti1516_2025::fedpro::AdditionalSettingsResultCode >(_impl_.additionalsettingsresultcode_);
 }
-inline ::rti1516_202X::fedpro::AdditionalSettingsResultCode ConfigurationResult::additionalsettingsresultcode() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ConfigurationResult.additionalSettingsResultCode)
+inline ::rti1516_2025::fedpro::AdditionalSettingsResultCode ConfigurationResult::additionalsettingsresultcode() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ConfigurationResult.additionalSettingsResultCode)
   return _internal_additionalsettingsresultcode();
 }
-inline void ConfigurationResult::_internal_set_additionalsettingsresultcode(::rti1516_202X::fedpro::AdditionalSettingsResultCode value) {
+inline void ConfigurationResult::_internal_set_additionalsettingsresultcode(::rti1516_2025::fedpro::AdditionalSettingsResultCode value) {
   
   _impl_.additionalsettingsresultcode_ = value;
 }
-inline void ConfigurationResult::set_additionalsettingsresultcode(::rti1516_202X::fedpro::AdditionalSettingsResultCode value) {
+inline void ConfigurationResult::set_additionalsettingsresultcode(::rti1516_2025::fedpro::AdditionalSettingsResultCode value) {
   _internal_set_additionalsettingsresultcode(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ConfigurationResult.additionalSettingsResultCode)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ConfigurationResult.additionalSettingsResultCode)
 }
 
 // string message = 4;
@@ -8574,7 +8574,7 @@ inline void ConfigurationResult::clear_message() {
   _impl_.message_.ClearToEmpty();
 }
 inline const std::string& ConfigurationResult::message() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ConfigurationResult.message)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ConfigurationResult.message)
   return _internal_message();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8582,11 +8582,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void ConfigurationResult::set_message(ArgT0&& arg0, ArgT... args) {
  
  _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ConfigurationResult.message)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ConfigurationResult.message)
 }
 inline std::string* ConfigurationResult::mutable_message() {
   std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ConfigurationResult.message)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ConfigurationResult.message)
   return _s;
 }
 inline const std::string& ConfigurationResult::_internal_message() const {
@@ -8601,7 +8601,7 @@ inline std::string* ConfigurationResult::_internal_mutable_message() {
   return _impl_.message_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ConfigurationResult::release_message() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ConfigurationResult.message)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ConfigurationResult.message)
   return _impl_.message_.Release();
 }
 inline void ConfigurationResult::set_allocated_message(std::string* message) {
@@ -8616,7 +8616,7 @@ inline void ConfigurationResult::set_allocated_message(std::string* message) {
     _impl_.message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ConfigurationResult.message)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ConfigurationResult.message)
 }
 
 // -------------------------------------------------------------------
@@ -8628,7 +8628,7 @@ inline void Credentials::clear_type() {
   _impl_.type_.ClearToEmpty();
 }
 inline const std::string& Credentials::type() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.Credentials.type)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.Credentials.type)
   return _internal_type();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8636,11 +8636,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void Credentials::set_type(ArgT0&& arg0, ArgT... args) {
  
  _impl_.type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.Credentials.type)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.Credentials.type)
 }
 inline std::string* Credentials::mutable_type() {
   std::string* _s = _internal_mutable_type();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.Credentials.type)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.Credentials.type)
   return _s;
 }
 inline const std::string& Credentials::_internal_type() const {
@@ -8655,7 +8655,7 @@ inline std::string* Credentials::_internal_mutable_type() {
   return _impl_.type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Credentials::release_type() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.Credentials.type)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.Credentials.type)
   return _impl_.type_.Release();
 }
 inline void Credentials::set_allocated_type(std::string* type) {
@@ -8670,7 +8670,7 @@ inline void Credentials::set_allocated_type(std::string* type) {
     _impl_.type_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.Credentials.type)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.Credentials.type)
 }
 
 // bytes data = 2;
@@ -8678,7 +8678,7 @@ inline void Credentials::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& Credentials::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.Credentials.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.Credentials.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8686,11 +8686,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void Credentials::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.Credentials.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.Credentials.data)
 }
 inline std::string* Credentials::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.Credentials.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.Credentials.data)
   return _s;
 }
 inline const std::string& Credentials::_internal_data() const {
@@ -8705,7 +8705,7 @@ inline std::string* Credentials::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Credentials::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.Credentials.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.Credentials.data)
   return _impl_.data_.Release();
 }
 inline void Credentials::set_allocated_data(std::string* data) {
@@ -8720,14 +8720,14 @@ inline void Credentials::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.Credentials.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.Credentials.data)
 }
 
 // -------------------------------------------------------------------
 
 // FederateRestoreStatus
 
-// .rti1516_202X.fedpro.FederateHandle preRestoreHandle = 1;
+// .rti1516_2025.fedpro.FederateHandle preRestoreHandle = 1;
 inline bool FederateRestoreStatus::_internal_has_prerestorehandle() const {
   return this != internal_default_instance() && _impl_.prerestorehandle_ != nullptr;
 }
@@ -8740,17 +8740,17 @@ inline void FederateRestoreStatus::clear_prerestorehandle() {
   }
   _impl_.prerestorehandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateRestoreStatus::_internal_prerestorehandle() const {
-  const ::rti1516_202X::fedpro::FederateHandle* p = _impl_.prerestorehandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::FederateHandle&>(
-      ::rti1516_202X::fedpro::_FederateHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateRestoreStatus::_internal_prerestorehandle() const {
+  const ::rti1516_2025::fedpro::FederateHandle* p = _impl_.prerestorehandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::FederateHandle&>(
+      ::rti1516_2025::fedpro::_FederateHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateRestoreStatus::prerestorehandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateRestoreStatus.preRestoreHandle)
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateRestoreStatus::prerestorehandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateRestoreStatus.preRestoreHandle)
   return _internal_prerestorehandle();
 }
 inline void FederateRestoreStatus::unsafe_arena_set_allocated_prerestorehandle(
-    ::rti1516_202X::fedpro::FederateHandle* prerestorehandle) {
+    ::rti1516_2025::fedpro::FederateHandle* prerestorehandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.prerestorehandle_);
   }
@@ -8760,11 +8760,11 @@ inline void FederateRestoreStatus::unsafe_arena_set_allocated_prerestorehandle(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.FederateRestoreStatus.preRestoreHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.FederateRestoreStatus.preRestoreHandle)
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::release_prerestorehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::release_prerestorehandle() {
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.prerestorehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.prerestorehandle_;
   _impl_.prerestorehandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -8777,27 +8777,27 @@ inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::release_pr
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::unsafe_arena_release_prerestorehandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederateRestoreStatus.preRestoreHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::unsafe_arena_release_prerestorehandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederateRestoreStatus.preRestoreHandle)
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.prerestorehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.prerestorehandle_;
   _impl_.prerestorehandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::_internal_mutable_prerestorehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::_internal_mutable_prerestorehandle() {
   
   if (_impl_.prerestorehandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandle>(GetArenaForAllocation());
     _impl_.prerestorehandle_ = p;
   }
   return _impl_.prerestorehandle_;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::mutable_prerestorehandle() {
-  ::rti1516_202X::fedpro::FederateHandle* _msg = _internal_mutable_prerestorehandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederateRestoreStatus.preRestoreHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::mutable_prerestorehandle() {
+  ::rti1516_2025::fedpro::FederateHandle* _msg = _internal_mutable_prerestorehandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederateRestoreStatus.preRestoreHandle)
   return _msg;
 }
-inline void FederateRestoreStatus::set_allocated_prerestorehandle(::rti1516_202X::fedpro::FederateHandle* prerestorehandle) {
+inline void FederateRestoreStatus::set_allocated_prerestorehandle(::rti1516_2025::fedpro::FederateHandle* prerestorehandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.prerestorehandle_;
@@ -8814,10 +8814,10 @@ inline void FederateRestoreStatus::set_allocated_prerestorehandle(::rti1516_202X
     
   }
   _impl_.prerestorehandle_ = prerestorehandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederateRestoreStatus.preRestoreHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederateRestoreStatus.preRestoreHandle)
 }
 
-// .rti1516_202X.fedpro.FederateHandle postRestoreHandle = 2;
+// .rti1516_2025.fedpro.FederateHandle postRestoreHandle = 2;
 inline bool FederateRestoreStatus::_internal_has_postrestorehandle() const {
   return this != internal_default_instance() && _impl_.postrestorehandle_ != nullptr;
 }
@@ -8830,17 +8830,17 @@ inline void FederateRestoreStatus::clear_postrestorehandle() {
   }
   _impl_.postrestorehandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateRestoreStatus::_internal_postrestorehandle() const {
-  const ::rti1516_202X::fedpro::FederateHandle* p = _impl_.postrestorehandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::FederateHandle&>(
-      ::rti1516_202X::fedpro::_FederateHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateRestoreStatus::_internal_postrestorehandle() const {
+  const ::rti1516_2025::fedpro::FederateHandle* p = _impl_.postrestorehandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::FederateHandle&>(
+      ::rti1516_2025::fedpro::_FederateHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateRestoreStatus::postrestorehandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateRestoreStatus.postRestoreHandle)
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateRestoreStatus::postrestorehandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateRestoreStatus.postRestoreHandle)
   return _internal_postrestorehandle();
 }
 inline void FederateRestoreStatus::unsafe_arena_set_allocated_postrestorehandle(
-    ::rti1516_202X::fedpro::FederateHandle* postrestorehandle) {
+    ::rti1516_2025::fedpro::FederateHandle* postrestorehandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.postrestorehandle_);
   }
@@ -8850,11 +8850,11 @@ inline void FederateRestoreStatus::unsafe_arena_set_allocated_postrestorehandle(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.FederateRestoreStatus.postRestoreHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.FederateRestoreStatus.postRestoreHandle)
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::release_postrestorehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::release_postrestorehandle() {
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.postrestorehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.postrestorehandle_;
   _impl_.postrestorehandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -8867,27 +8867,27 @@ inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::release_po
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::unsafe_arena_release_postrestorehandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederateRestoreStatus.postRestoreHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::unsafe_arena_release_postrestorehandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederateRestoreStatus.postRestoreHandle)
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.postrestorehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.postrestorehandle_;
   _impl_.postrestorehandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::_internal_mutable_postrestorehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::_internal_mutable_postrestorehandle() {
   
   if (_impl_.postrestorehandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandle>(GetArenaForAllocation());
     _impl_.postrestorehandle_ = p;
   }
   return _impl_.postrestorehandle_;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateRestoreStatus::mutable_postrestorehandle() {
-  ::rti1516_202X::fedpro::FederateHandle* _msg = _internal_mutable_postrestorehandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederateRestoreStatus.postRestoreHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateRestoreStatus::mutable_postrestorehandle() {
+  ::rti1516_2025::fedpro::FederateHandle* _msg = _internal_mutable_postrestorehandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederateRestoreStatus.postRestoreHandle)
   return _msg;
 }
-inline void FederateRestoreStatus::set_allocated_postrestorehandle(::rti1516_202X::fedpro::FederateHandle* postrestorehandle) {
+inline void FederateRestoreStatus::set_allocated_postrestorehandle(::rti1516_2025::fedpro::FederateHandle* postrestorehandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.postrestorehandle_;
@@ -8904,34 +8904,34 @@ inline void FederateRestoreStatus::set_allocated_postrestorehandle(::rti1516_202
     
   }
   _impl_.postrestorehandle_ = postrestorehandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederateRestoreStatus.postRestoreHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederateRestoreStatus.postRestoreHandle)
 }
 
-// .rti1516_202X.fedpro.RestoreStatus restoreStatus = 3;
+// .rti1516_2025.fedpro.RestoreStatus restoreStatus = 3;
 inline void FederateRestoreStatus::clear_restorestatus() {
   _impl_.restorestatus_ = 0;
 }
-inline ::rti1516_202X::fedpro::RestoreStatus FederateRestoreStatus::_internal_restorestatus() const {
-  return static_cast< ::rti1516_202X::fedpro::RestoreStatus >(_impl_.restorestatus_);
+inline ::rti1516_2025::fedpro::RestoreStatus FederateRestoreStatus::_internal_restorestatus() const {
+  return static_cast< ::rti1516_2025::fedpro::RestoreStatus >(_impl_.restorestatus_);
 }
-inline ::rti1516_202X::fedpro::RestoreStatus FederateRestoreStatus::restorestatus() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateRestoreStatus.restoreStatus)
+inline ::rti1516_2025::fedpro::RestoreStatus FederateRestoreStatus::restorestatus() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateRestoreStatus.restoreStatus)
   return _internal_restorestatus();
 }
-inline void FederateRestoreStatus::_internal_set_restorestatus(::rti1516_202X::fedpro::RestoreStatus value) {
+inline void FederateRestoreStatus::_internal_set_restorestatus(::rti1516_2025::fedpro::RestoreStatus value) {
   
   _impl_.restorestatus_ = value;
 }
-inline void FederateRestoreStatus::set_restorestatus(::rti1516_202X::fedpro::RestoreStatus value) {
+inline void FederateRestoreStatus::set_restorestatus(::rti1516_2025::fedpro::RestoreStatus value) {
   _internal_set_restorestatus(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FederateRestoreStatus.restoreStatus)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FederateRestoreStatus.restoreStatus)
 }
 
 // -------------------------------------------------------------------
 
 // FederateRestoreStatusArray
 
-// repeated .rti1516_202X.fedpro.FederateRestoreStatus federateRestoreStatus = 1;
+// repeated .rti1516_2025.fedpro.FederateRestoreStatus federateRestoreStatus = 1;
 inline int FederateRestoreStatusArray::_internal_federaterestorestatus_size() const {
   return _impl_.federaterestorestatus_.size();
 }
@@ -8941,33 +8941,33 @@ inline int FederateRestoreStatusArray::federaterestorestatus_size() const {
 inline void FederateRestoreStatusArray::clear_federaterestorestatus() {
   _impl_.federaterestorestatus_.Clear();
 }
-inline ::rti1516_202X::fedpro::FederateRestoreStatus* FederateRestoreStatusArray::mutable_federaterestorestatus(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
+inline ::rti1516_2025::fedpro::FederateRestoreStatus* FederateRestoreStatusArray::mutable_federaterestorestatus(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
   return _impl_.federaterestorestatus_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateRestoreStatus >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateRestoreStatus >*
 FederateRestoreStatusArray::mutable_federaterestorestatus() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
   return &_impl_.federaterestorestatus_;
 }
-inline const ::rti1516_202X::fedpro::FederateRestoreStatus& FederateRestoreStatusArray::_internal_federaterestorestatus(int index) const {
+inline const ::rti1516_2025::fedpro::FederateRestoreStatus& FederateRestoreStatusArray::_internal_federaterestorestatus(int index) const {
   return _impl_.federaterestorestatus_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::FederateRestoreStatus& FederateRestoreStatusArray::federaterestorestatus(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
+inline const ::rti1516_2025::fedpro::FederateRestoreStatus& FederateRestoreStatusArray::federaterestorestatus(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
   return _internal_federaterestorestatus(index);
 }
-inline ::rti1516_202X::fedpro::FederateRestoreStatus* FederateRestoreStatusArray::_internal_add_federaterestorestatus() {
+inline ::rti1516_2025::fedpro::FederateRestoreStatus* FederateRestoreStatusArray::_internal_add_federaterestorestatus() {
   return _impl_.federaterestorestatus_.Add();
 }
-inline ::rti1516_202X::fedpro::FederateRestoreStatus* FederateRestoreStatusArray::add_federaterestorestatus() {
-  ::rti1516_202X::fedpro::FederateRestoreStatus* _add = _internal_add_federaterestorestatus();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
+inline ::rti1516_2025::fedpro::FederateRestoreStatus* FederateRestoreStatusArray::add_federaterestorestatus() {
+  ::rti1516_2025::fedpro::FederateRestoreStatus* _add = _internal_add_federaterestorestatus();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateRestoreStatus >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateRestoreStatus >&
 FederateRestoreStatusArray::federaterestorestatus() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.FederateRestoreStatusArray.federateRestoreStatus)
   return _impl_.federaterestorestatus_;
 }
 
@@ -8980,7 +8980,7 @@ inline void FederationExecutionInformation::clear_federationexecutionname() {
   _impl_.federationexecutionname_.ClearToEmpty();
 }
 inline const std::string& FederationExecutionInformation::federationexecutionname() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederationExecutionInformation.federationExecutionName)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederationExecutionInformation.federationExecutionName)
   return _internal_federationexecutionname();
 }
 template <typename ArgT0, typename... ArgT>
@@ -8988,11 +8988,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void FederationExecutionInformation::set_federationexecutionname(ArgT0&& arg0, ArgT... args) {
  
  _impl_.federationexecutionname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FederationExecutionInformation.federationExecutionName)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FederationExecutionInformation.federationExecutionName)
 }
 inline std::string* FederationExecutionInformation::mutable_federationexecutionname() {
   std::string* _s = _internal_mutable_federationexecutionname();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederationExecutionInformation.federationExecutionName)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederationExecutionInformation.federationExecutionName)
   return _s;
 }
 inline const std::string& FederationExecutionInformation::_internal_federationexecutionname() const {
@@ -9007,7 +9007,7 @@ inline std::string* FederationExecutionInformation::_internal_mutable_federation
   return _impl_.federationexecutionname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FederationExecutionInformation::release_federationexecutionname() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederationExecutionInformation.federationExecutionName)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederationExecutionInformation.federationExecutionName)
   return _impl_.federationexecutionname_.Release();
 }
 inline void FederationExecutionInformation::set_allocated_federationexecutionname(std::string* federationexecutionname) {
@@ -9022,7 +9022,7 @@ inline void FederationExecutionInformation::set_allocated_federationexecutionnam
     _impl_.federationexecutionname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederationExecutionInformation.federationExecutionName)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederationExecutionInformation.federationExecutionName)
 }
 
 // string logicalTimeImplementationName = 2;
@@ -9030,7 +9030,7 @@ inline void FederationExecutionInformation::clear_logicaltimeimplementationname(
   _impl_.logicaltimeimplementationname_.ClearToEmpty();
 }
 inline const std::string& FederationExecutionInformation::logicaltimeimplementationname() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
   return _internal_logicaltimeimplementationname();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9038,11 +9038,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void FederationExecutionInformation::set_logicaltimeimplementationname(ArgT0&& arg0, ArgT... args) {
  
  _impl_.logicaltimeimplementationname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
 }
 inline std::string* FederationExecutionInformation::mutable_logicaltimeimplementationname() {
   std::string* _s = _internal_mutable_logicaltimeimplementationname();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
   return _s;
 }
 inline const std::string& FederationExecutionInformation::_internal_logicaltimeimplementationname() const {
@@ -9057,7 +9057,7 @@ inline std::string* FederationExecutionInformation::_internal_mutable_logicaltim
   return _impl_.logicaltimeimplementationname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FederationExecutionInformation::release_logicaltimeimplementationname() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
   return _impl_.logicaltimeimplementationname_.Release();
 }
 inline void FederationExecutionInformation::set_allocated_logicaltimeimplementationname(std::string* logicaltimeimplementationname) {
@@ -9072,14 +9072,14 @@ inline void FederationExecutionInformation::set_allocated_logicaltimeimplementat
     _impl_.logicaltimeimplementationname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederationExecutionInformation.logicalTimeImplementationName)
 }
 
 // -------------------------------------------------------------------
 
 // FederationExecutionInformationSet
 
-// repeated .rti1516_202X.fedpro.FederationExecutionInformation federationExecutionInformation = 1;
+// repeated .rti1516_2025.fedpro.FederationExecutionInformation federationExecutionInformation = 1;
 inline int FederationExecutionInformationSet::_internal_federationexecutioninformation_size() const {
   return _impl_.federationexecutioninformation_.size();
 }
@@ -9089,33 +9089,33 @@ inline int FederationExecutionInformationSet::federationexecutioninformation_siz
 inline void FederationExecutionInformationSet::clear_federationexecutioninformation() {
   _impl_.federationexecutioninformation_.Clear();
 }
-inline ::rti1516_202X::fedpro::FederationExecutionInformation* FederationExecutionInformationSet::mutable_federationexecutioninformation(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
+inline ::rti1516_2025::fedpro::FederationExecutionInformation* FederationExecutionInformationSet::mutable_federationexecutioninformation(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
   return _impl_.federationexecutioninformation_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionInformation >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionInformation >*
 FederationExecutionInformationSet::mutable_federationexecutioninformation() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
   return &_impl_.federationexecutioninformation_;
 }
-inline const ::rti1516_202X::fedpro::FederationExecutionInformation& FederationExecutionInformationSet::_internal_federationexecutioninformation(int index) const {
+inline const ::rti1516_2025::fedpro::FederationExecutionInformation& FederationExecutionInformationSet::_internal_federationexecutioninformation(int index) const {
   return _impl_.federationexecutioninformation_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::FederationExecutionInformation& FederationExecutionInformationSet::federationexecutioninformation(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
+inline const ::rti1516_2025::fedpro::FederationExecutionInformation& FederationExecutionInformationSet::federationexecutioninformation(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
   return _internal_federationexecutioninformation(index);
 }
-inline ::rti1516_202X::fedpro::FederationExecutionInformation* FederationExecutionInformationSet::_internal_add_federationexecutioninformation() {
+inline ::rti1516_2025::fedpro::FederationExecutionInformation* FederationExecutionInformationSet::_internal_add_federationexecutioninformation() {
   return _impl_.federationexecutioninformation_.Add();
 }
-inline ::rti1516_202X::fedpro::FederationExecutionInformation* FederationExecutionInformationSet::add_federationexecutioninformation() {
-  ::rti1516_202X::fedpro::FederationExecutionInformation* _add = _internal_add_federationexecutioninformation();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
+inline ::rti1516_2025::fedpro::FederationExecutionInformation* FederationExecutionInformationSet::add_federationexecutioninformation() {
+  ::rti1516_2025::fedpro::FederationExecutionInformation* _add = _internal_add_federationexecutioninformation();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionInformation >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionInformation >&
 FederationExecutionInformationSet::federationexecutioninformation() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.FederationExecutionInformationSet.federationExecutionInformation)
   return _impl_.federationexecutioninformation_;
 }
 
@@ -9128,7 +9128,7 @@ inline void FederationExecutionMemberInformation::clear_federatename() {
   _impl_.federatename_.ClearToEmpty();
 }
 inline const std::string& FederationExecutionMemberInformation::federatename() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateName)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateName)
   return _internal_federatename();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9136,11 +9136,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void FederationExecutionMemberInformation::set_federatename(ArgT0&& arg0, ArgT... args) {
  
  _impl_.federatename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateName)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateName)
 }
 inline std::string* FederationExecutionMemberInformation::mutable_federatename() {
   std::string* _s = _internal_mutable_federatename();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateName)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateName)
   return _s;
 }
 inline const std::string& FederationExecutionMemberInformation::_internal_federatename() const {
@@ -9155,7 +9155,7 @@ inline std::string* FederationExecutionMemberInformation::_internal_mutable_fede
   return _impl_.federatename_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FederationExecutionMemberInformation::release_federatename() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateName)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateName)
   return _impl_.federatename_.Release();
 }
 inline void FederationExecutionMemberInformation::set_allocated_federatename(std::string* federatename) {
@@ -9170,7 +9170,7 @@ inline void FederationExecutionMemberInformation::set_allocated_federatename(std
     _impl_.federatename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateName)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateName)
 }
 
 // string federateType = 2;
@@ -9178,7 +9178,7 @@ inline void FederationExecutionMemberInformation::clear_federatetype() {
   _impl_.federatetype_.ClearToEmpty();
 }
 inline const std::string& FederationExecutionMemberInformation::federatetype() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateType)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateType)
   return _internal_federatetype();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9186,11 +9186,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void FederationExecutionMemberInformation::set_federatetype(ArgT0&& arg0, ArgT... args) {
  
  _impl_.federatetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateType)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateType)
 }
 inline std::string* FederationExecutionMemberInformation::mutable_federatetype() {
   std::string* _s = _internal_mutable_federatetype();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateType)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateType)
   return _s;
 }
 inline const std::string& FederationExecutionMemberInformation::_internal_federatetype() const {
@@ -9205,7 +9205,7 @@ inline std::string* FederationExecutionMemberInformation::_internal_mutable_fede
   return _impl_.federatetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FederationExecutionMemberInformation::release_federatetype() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateType)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateType)
   return _impl_.federatetype_.Release();
 }
 inline void FederationExecutionMemberInformation::set_allocated_federatetype(std::string* federatetype) {
@@ -9220,14 +9220,14 @@ inline void FederationExecutionMemberInformation::set_allocated_federatetype(std
     _impl_.federatetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederationExecutionMemberInformation.federateType)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederationExecutionMemberInformation.federateType)
 }
 
 // -------------------------------------------------------------------
 
 // FederationExecutionMemberInformationSet
 
-// repeated .rti1516_202X.fedpro.FederationExecutionMemberInformation federationExecutionMemberInformation = 1;
+// repeated .rti1516_2025.fedpro.FederationExecutionMemberInformation federationExecutionMemberInformation = 1;
 inline int FederationExecutionMemberInformationSet::_internal_federationexecutionmemberinformation_size() const {
   return _impl_.federationexecutionmemberinformation_.size();
 }
@@ -9237,33 +9237,33 @@ inline int FederationExecutionMemberInformationSet::federationexecutionmemberinf
 inline void FederationExecutionMemberInformationSet::clear_federationexecutionmemberinformation() {
   _impl_.federationexecutionmemberinformation_.Clear();
 }
-inline ::rti1516_202X::fedpro::FederationExecutionMemberInformation* FederationExecutionMemberInformationSet::mutable_federationexecutionmemberinformation(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
+inline ::rti1516_2025::fedpro::FederationExecutionMemberInformation* FederationExecutionMemberInformationSet::mutable_federationexecutionmemberinformation(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
   return _impl_.federationexecutionmemberinformation_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionMemberInformation >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionMemberInformation >*
 FederationExecutionMemberInformationSet::mutable_federationexecutionmemberinformation() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
   return &_impl_.federationexecutionmemberinformation_;
 }
-inline const ::rti1516_202X::fedpro::FederationExecutionMemberInformation& FederationExecutionMemberInformationSet::_internal_federationexecutionmemberinformation(int index) const {
+inline const ::rti1516_2025::fedpro::FederationExecutionMemberInformation& FederationExecutionMemberInformationSet::_internal_federationexecutionmemberinformation(int index) const {
   return _impl_.federationexecutionmemberinformation_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::FederationExecutionMemberInformation& FederationExecutionMemberInformationSet::federationexecutionmemberinformation(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
+inline const ::rti1516_2025::fedpro::FederationExecutionMemberInformation& FederationExecutionMemberInformationSet::federationexecutionmemberinformation(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
   return _internal_federationexecutionmemberinformation(index);
 }
-inline ::rti1516_202X::fedpro::FederationExecutionMemberInformation* FederationExecutionMemberInformationSet::_internal_add_federationexecutionmemberinformation() {
+inline ::rti1516_2025::fedpro::FederationExecutionMemberInformation* FederationExecutionMemberInformationSet::_internal_add_federationexecutionmemberinformation() {
   return _impl_.federationexecutionmemberinformation_.Add();
 }
-inline ::rti1516_202X::fedpro::FederationExecutionMemberInformation* FederationExecutionMemberInformationSet::add_federationexecutionmemberinformation() {
-  ::rti1516_202X::fedpro::FederationExecutionMemberInformation* _add = _internal_add_federationexecutionmemberinformation();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
+inline ::rti1516_2025::fedpro::FederationExecutionMemberInformation* FederationExecutionMemberInformationSet::add_federationexecutionmemberinformation() {
+  ::rti1516_2025::fedpro::FederationExecutionMemberInformation* _add = _internal_add_federationexecutionmemberinformation();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederationExecutionMemberInformation >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederationExecutionMemberInformation >&
 FederationExecutionMemberInformationSet::federationexecutionmemberinformation() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.FederationExecutionMemberInformationSet.federationExecutionMemberInformation)
   return _impl_.federationexecutionmemberinformation_;
 }
 
@@ -9276,7 +9276,7 @@ inline void FederateHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& FederateHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9284,11 +9284,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void FederateHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FederateHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FederateHandle.data)
 }
 inline std::string* FederateHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederateHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederateHandle.data)
   return _s;
 }
 inline const std::string& FederateHandle::_internal_data() const {
@@ -9303,7 +9303,7 @@ inline std::string* FederateHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FederateHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederateHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederateHandle.data)
   return _impl_.data_.Release();
 }
 inline void FederateHandle::set_allocated_data(std::string* data) {
@@ -9318,14 +9318,14 @@ inline void FederateHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederateHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederateHandle.data)
 }
 
 // -------------------------------------------------------------------
 
 // FederateHandleSaveStatusPair
 
-// .rti1516_202X.fedpro.FederateHandle federateHandle = 1;
+// .rti1516_2025.fedpro.FederateHandle federateHandle = 1;
 inline bool FederateHandleSaveStatusPair::_internal_has_federatehandle() const {
   return this != internal_default_instance() && _impl_.federatehandle_ != nullptr;
 }
@@ -9338,17 +9338,17 @@ inline void FederateHandleSaveStatusPair::clear_federatehandle() {
   }
   _impl_.federatehandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateHandleSaveStatusPair::_internal_federatehandle() const {
-  const ::rti1516_202X::fedpro::FederateHandle* p = _impl_.federatehandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::FederateHandle&>(
-      ::rti1516_202X::fedpro::_FederateHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateHandleSaveStatusPair::_internal_federatehandle() const {
+  const ::rti1516_2025::fedpro::FederateHandle* p = _impl_.federatehandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::FederateHandle&>(
+      ::rti1516_2025::fedpro::_FederateHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateHandleSaveStatusPair::federatehandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateHandleSaveStatusPair.federateHandle)
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateHandleSaveStatusPair::federatehandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateHandleSaveStatusPair.federateHandle)
   return _internal_federatehandle();
 }
 inline void FederateHandleSaveStatusPair::unsafe_arena_set_allocated_federatehandle(
-    ::rti1516_202X::fedpro::FederateHandle* federatehandle) {
+    ::rti1516_2025::fedpro::FederateHandle* federatehandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.federatehandle_);
   }
@@ -9358,11 +9358,11 @@ inline void FederateHandleSaveStatusPair::unsafe_arena_set_allocated_federatehan
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.FederateHandleSaveStatusPair.federateHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.FederateHandleSaveStatusPair.federateHandle)
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSaveStatusPair::release_federatehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* FederateHandleSaveStatusPair::release_federatehandle() {
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.federatehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.federatehandle_;
   _impl_.federatehandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -9375,27 +9375,27 @@ inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSaveStatusPair::rel
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSaveStatusPair::unsafe_arena_release_federatehandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FederateHandleSaveStatusPair.federateHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateHandleSaveStatusPair::unsafe_arena_release_federatehandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FederateHandleSaveStatusPair.federateHandle)
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.federatehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.federatehandle_;
   _impl_.federatehandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSaveStatusPair::_internal_mutable_federatehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* FederateHandleSaveStatusPair::_internal_mutable_federatehandle() {
   
   if (_impl_.federatehandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandle>(GetArenaForAllocation());
     _impl_.federatehandle_ = p;
   }
   return _impl_.federatehandle_;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSaveStatusPair::mutable_federatehandle() {
-  ::rti1516_202X::fedpro::FederateHandle* _msg = _internal_mutable_federatehandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederateHandleSaveStatusPair.federateHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateHandleSaveStatusPair::mutable_federatehandle() {
+  ::rti1516_2025::fedpro::FederateHandle* _msg = _internal_mutable_federatehandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederateHandleSaveStatusPair.federateHandle)
   return _msg;
 }
-inline void FederateHandleSaveStatusPair::set_allocated_federatehandle(::rti1516_202X::fedpro::FederateHandle* federatehandle) {
+inline void FederateHandleSaveStatusPair::set_allocated_federatehandle(::rti1516_2025::fedpro::FederateHandle* federatehandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.federatehandle_;
@@ -9412,34 +9412,34 @@ inline void FederateHandleSaveStatusPair::set_allocated_federatehandle(::rti1516
     
   }
   _impl_.federatehandle_ = federatehandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FederateHandleSaveStatusPair.federateHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FederateHandleSaveStatusPair.federateHandle)
 }
 
-// .rti1516_202X.fedpro.SaveStatus saveStatus = 2;
+// .rti1516_2025.fedpro.SaveStatus saveStatus = 2;
 inline void FederateHandleSaveStatusPair::clear_savestatus() {
   _impl_.savestatus_ = 0;
 }
-inline ::rti1516_202X::fedpro::SaveStatus FederateHandleSaveStatusPair::_internal_savestatus() const {
-  return static_cast< ::rti1516_202X::fedpro::SaveStatus >(_impl_.savestatus_);
+inline ::rti1516_2025::fedpro::SaveStatus FederateHandleSaveStatusPair::_internal_savestatus() const {
+  return static_cast< ::rti1516_2025::fedpro::SaveStatus >(_impl_.savestatus_);
 }
-inline ::rti1516_202X::fedpro::SaveStatus FederateHandleSaveStatusPair::savestatus() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateHandleSaveStatusPair.saveStatus)
+inline ::rti1516_2025::fedpro::SaveStatus FederateHandleSaveStatusPair::savestatus() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateHandleSaveStatusPair.saveStatus)
   return _internal_savestatus();
 }
-inline void FederateHandleSaveStatusPair::_internal_set_savestatus(::rti1516_202X::fedpro::SaveStatus value) {
+inline void FederateHandleSaveStatusPair::_internal_set_savestatus(::rti1516_2025::fedpro::SaveStatus value) {
   
   _impl_.savestatus_ = value;
 }
-inline void FederateHandleSaveStatusPair::set_savestatus(::rti1516_202X::fedpro::SaveStatus value) {
+inline void FederateHandleSaveStatusPair::set_savestatus(::rti1516_2025::fedpro::SaveStatus value) {
   _internal_set_savestatus(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FederateHandleSaveStatusPair.saveStatus)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FederateHandleSaveStatusPair.saveStatus)
 }
 
 // -------------------------------------------------------------------
 
 // FederateHandleSaveStatusPairArray
 
-// repeated .rti1516_202X.fedpro.FederateHandleSaveStatusPair federateHandleSaveStatusPair = 1;
+// repeated .rti1516_2025.fedpro.FederateHandleSaveStatusPair federateHandleSaveStatusPair = 1;
 inline int FederateHandleSaveStatusPairArray::_internal_federatehandlesavestatuspair_size() const {
   return _impl_.federatehandlesavestatuspair_.size();
 }
@@ -9449,33 +9449,33 @@ inline int FederateHandleSaveStatusPairArray::federatehandlesavestatuspair_size(
 inline void FederateHandleSaveStatusPairArray::clear_federatehandlesavestatuspair() {
   _impl_.federatehandlesavestatuspair_.Clear();
 }
-inline ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* FederateHandleSaveStatusPairArray::mutable_federatehandlesavestatuspair(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
+inline ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* FederateHandleSaveStatusPairArray::mutable_federatehandlesavestatuspair(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
   return _impl_.federatehandlesavestatuspair_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandleSaveStatusPair >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandleSaveStatusPair >*
 FederateHandleSaveStatusPairArray::mutable_federatehandlesavestatuspair() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
   return &_impl_.federatehandlesavestatuspair_;
 }
-inline const ::rti1516_202X::fedpro::FederateHandleSaveStatusPair& FederateHandleSaveStatusPairArray::_internal_federatehandlesavestatuspair(int index) const {
+inline const ::rti1516_2025::fedpro::FederateHandleSaveStatusPair& FederateHandleSaveStatusPairArray::_internal_federatehandlesavestatuspair(int index) const {
   return _impl_.federatehandlesavestatuspair_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::FederateHandleSaveStatusPair& FederateHandleSaveStatusPairArray::federatehandlesavestatuspair(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
+inline const ::rti1516_2025::fedpro::FederateHandleSaveStatusPair& FederateHandleSaveStatusPairArray::federatehandlesavestatuspair(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
   return _internal_federatehandlesavestatuspair(index);
 }
-inline ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* FederateHandleSaveStatusPairArray::_internal_add_federatehandlesavestatuspair() {
+inline ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* FederateHandleSaveStatusPairArray::_internal_add_federatehandlesavestatuspair() {
   return _impl_.federatehandlesavestatuspair_.Add();
 }
-inline ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* FederateHandleSaveStatusPairArray::add_federatehandlesavestatuspair() {
-  ::rti1516_202X::fedpro::FederateHandleSaveStatusPair* _add = _internal_add_federatehandlesavestatuspair();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
+inline ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* FederateHandleSaveStatusPairArray::add_federatehandlesavestatuspair() {
+  ::rti1516_2025::fedpro::FederateHandleSaveStatusPair* _add = _internal_add_federatehandlesavestatuspair();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandleSaveStatusPair >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandleSaveStatusPair >&
 FederateHandleSaveStatusPairArray::federatehandlesavestatuspair() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.FederateHandleSaveStatusPairArray.federateHandleSaveStatusPair)
   return _impl_.federatehandlesavestatuspair_;
 }
 
@@ -9488,7 +9488,7 @@ inline void ObjectClassHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& ObjectClassHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ObjectClassHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ObjectClassHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9496,11 +9496,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void ObjectClassHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ObjectClassHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ObjectClassHandle.data)
 }
 inline std::string* ObjectClassHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ObjectClassHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ObjectClassHandle.data)
   return _s;
 }
 inline const std::string& ObjectClassHandle::_internal_data() const {
@@ -9515,7 +9515,7 @@ inline std::string* ObjectClassHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ObjectClassHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ObjectClassHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ObjectClassHandle.data)
   return _impl_.data_.Release();
 }
 inline void ObjectClassHandle::set_allocated_data(std::string* data) {
@@ -9530,7 +9530,7 @@ inline void ObjectClassHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ObjectClassHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ObjectClassHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -9542,7 +9542,7 @@ inline void AttributeHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& AttributeHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9550,11 +9550,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void AttributeHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.AttributeHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.AttributeHandle.data)
 }
 inline std::string* AttributeHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeHandle.data)
   return _s;
 }
 inline const std::string& AttributeHandle::_internal_data() const {
@@ -9569,7 +9569,7 @@ inline std::string* AttributeHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* AttributeHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.AttributeHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.AttributeHandle.data)
   return _impl_.data_.Release();
 }
 inline void AttributeHandle::set_allocated_data(std::string* data) {
@@ -9584,7 +9584,7 @@ inline void AttributeHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.AttributeHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.AttributeHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -9596,7 +9596,7 @@ inline void InteractionClassHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& InteractionClassHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.InteractionClassHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.InteractionClassHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9604,11 +9604,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void InteractionClassHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.InteractionClassHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.InteractionClassHandle.data)
 }
 inline std::string* InteractionClassHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.InteractionClassHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.InteractionClassHandle.data)
   return _s;
 }
 inline const std::string& InteractionClassHandle::_internal_data() const {
@@ -9623,7 +9623,7 @@ inline std::string* InteractionClassHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InteractionClassHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.InteractionClassHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.InteractionClassHandle.data)
   return _impl_.data_.Release();
 }
 inline void InteractionClassHandle::set_allocated_data(std::string* data) {
@@ -9638,7 +9638,7 @@ inline void InteractionClassHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.InteractionClassHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.InteractionClassHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -9650,7 +9650,7 @@ inline void ParameterHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& ParameterHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ParameterHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ParameterHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9658,11 +9658,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void ParameterHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ParameterHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ParameterHandle.data)
 }
 inline std::string* ParameterHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ParameterHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ParameterHandle.data)
   return _s;
 }
 inline const std::string& ParameterHandle::_internal_data() const {
@@ -9677,7 +9677,7 @@ inline std::string* ParameterHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ParameterHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ParameterHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ParameterHandle.data)
   return _impl_.data_.Release();
 }
 inline void ParameterHandle::set_allocated_data(std::string* data) {
@@ -9692,7 +9692,7 @@ inline void ParameterHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ParameterHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ParameterHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -9704,7 +9704,7 @@ inline void ObjectInstanceHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& ObjectInstanceHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ObjectInstanceHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ObjectInstanceHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9712,11 +9712,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void ObjectInstanceHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ObjectInstanceHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ObjectInstanceHandle.data)
 }
 inline std::string* ObjectInstanceHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ObjectInstanceHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ObjectInstanceHandle.data)
   return _s;
 }
 inline const std::string& ObjectInstanceHandle::_internal_data() const {
@@ -9731,7 +9731,7 @@ inline std::string* ObjectInstanceHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ObjectInstanceHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ObjectInstanceHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ObjectInstanceHandle.data)
   return _impl_.data_.Release();
 }
 inline void ObjectInstanceHandle::set_allocated_data(std::string* data) {
@@ -9746,14 +9746,14 @@ inline void ObjectInstanceHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ObjectInstanceHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ObjectInstanceHandle.data)
 }
 
 // -------------------------------------------------------------------
 
 // AttributeHandleValue
 
-// .rti1516_202X.fedpro.AttributeHandle attributeHandle = 1;
+// .rti1516_2025.fedpro.AttributeHandle attributeHandle = 1;
 inline bool AttributeHandleValue::_internal_has_attributehandle() const {
   return this != internal_default_instance() && _impl_.attributehandle_ != nullptr;
 }
@@ -9766,17 +9766,17 @@ inline void AttributeHandleValue::clear_attributehandle() {
   }
   _impl_.attributehandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::AttributeHandle& AttributeHandleValue::_internal_attributehandle() const {
-  const ::rti1516_202X::fedpro::AttributeHandle* p = _impl_.attributehandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::AttributeHandle&>(
-      ::rti1516_202X::fedpro::_AttributeHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::AttributeHandle& AttributeHandleValue::_internal_attributehandle() const {
+  const ::rti1516_2025::fedpro::AttributeHandle* p = _impl_.attributehandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::AttributeHandle&>(
+      ::rti1516_2025::fedpro::_AttributeHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::AttributeHandle& AttributeHandleValue::attributehandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeHandleValue.attributeHandle)
+inline const ::rti1516_2025::fedpro::AttributeHandle& AttributeHandleValue::attributehandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeHandleValue.attributeHandle)
   return _internal_attributehandle();
 }
 inline void AttributeHandleValue::unsafe_arena_set_allocated_attributehandle(
-    ::rti1516_202X::fedpro::AttributeHandle* attributehandle) {
+    ::rti1516_2025::fedpro::AttributeHandle* attributehandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.attributehandle_);
   }
@@ -9786,11 +9786,11 @@ inline void AttributeHandleValue::unsafe_arena_set_allocated_attributehandle(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.AttributeHandleValue.attributeHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.AttributeHandleValue.attributeHandle)
 }
-inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleValue::release_attributehandle() {
+inline ::rti1516_2025::fedpro::AttributeHandle* AttributeHandleValue::release_attributehandle() {
   
-  ::rti1516_202X::fedpro::AttributeHandle* temp = _impl_.attributehandle_;
+  ::rti1516_2025::fedpro::AttributeHandle* temp = _impl_.attributehandle_;
   _impl_.attributehandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -9803,27 +9803,27 @@ inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleValue::release_at
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleValue::unsafe_arena_release_attributehandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.AttributeHandleValue.attributeHandle)
+inline ::rti1516_2025::fedpro::AttributeHandle* AttributeHandleValue::unsafe_arena_release_attributehandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.AttributeHandleValue.attributeHandle)
   
-  ::rti1516_202X::fedpro::AttributeHandle* temp = _impl_.attributehandle_;
+  ::rti1516_2025::fedpro::AttributeHandle* temp = _impl_.attributehandle_;
   _impl_.attributehandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleValue::_internal_mutable_attributehandle() {
+inline ::rti1516_2025::fedpro::AttributeHandle* AttributeHandleValue::_internal_mutable_attributehandle() {
   
   if (_impl_.attributehandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::AttributeHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::AttributeHandle>(GetArenaForAllocation());
     _impl_.attributehandle_ = p;
   }
   return _impl_.attributehandle_;
 }
-inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleValue::mutable_attributehandle() {
-  ::rti1516_202X::fedpro::AttributeHandle* _msg = _internal_mutable_attributehandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeHandleValue.attributeHandle)
+inline ::rti1516_2025::fedpro::AttributeHandle* AttributeHandleValue::mutable_attributehandle() {
+  ::rti1516_2025::fedpro::AttributeHandle* _msg = _internal_mutable_attributehandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeHandleValue.attributeHandle)
   return _msg;
 }
-inline void AttributeHandleValue::set_allocated_attributehandle(::rti1516_202X::fedpro::AttributeHandle* attributehandle) {
+inline void AttributeHandleValue::set_allocated_attributehandle(::rti1516_2025::fedpro::AttributeHandle* attributehandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.attributehandle_;
@@ -9840,7 +9840,7 @@ inline void AttributeHandleValue::set_allocated_attributehandle(::rti1516_202X::
     
   }
   _impl_.attributehandle_ = attributehandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.AttributeHandleValue.attributeHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.AttributeHandleValue.attributeHandle)
 }
 
 // bytes value = 2;
@@ -9848,7 +9848,7 @@ inline void AttributeHandleValue::clear_value() {
   _impl_.value_.ClearToEmpty();
 }
 inline const std::string& AttributeHandleValue::value() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeHandleValue.value)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeHandleValue.value)
   return _internal_value();
 }
 template <typename ArgT0, typename... ArgT>
@@ -9856,11 +9856,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void AttributeHandleValue::set_value(ArgT0&& arg0, ArgT... args) {
  
  _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.AttributeHandleValue.value)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.AttributeHandleValue.value)
 }
 inline std::string* AttributeHandleValue::mutable_value() {
   std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeHandleValue.value)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeHandleValue.value)
   return _s;
 }
 inline const std::string& AttributeHandleValue::_internal_value() const {
@@ -9875,7 +9875,7 @@ inline std::string* AttributeHandleValue::_internal_mutable_value() {
   return _impl_.value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* AttributeHandleValue::release_value() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.AttributeHandleValue.value)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.AttributeHandleValue.value)
   return _impl_.value_.Release();
 }
 inline void AttributeHandleValue::set_allocated_value(std::string* value) {
@@ -9890,14 +9890,14 @@ inline void AttributeHandleValue::set_allocated_value(std::string* value) {
     _impl_.value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.AttributeHandleValue.value)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.AttributeHandleValue.value)
 }
 
 // -------------------------------------------------------------------
 
 // AttributeHandleValueMap
 
-// repeated .rti1516_202X.fedpro.AttributeHandleValue attributeHandleValue = 1;
+// repeated .rti1516_2025.fedpro.AttributeHandleValue attributeHandleValue = 1;
 inline int AttributeHandleValueMap::_internal_attributehandlevalue_size() const {
   return _impl_.attributehandlevalue_.size();
 }
@@ -9907,33 +9907,33 @@ inline int AttributeHandleValueMap::attributehandlevalue_size() const {
 inline void AttributeHandleValueMap::clear_attributehandlevalue() {
   _impl_.attributehandlevalue_.Clear();
 }
-inline ::rti1516_202X::fedpro::AttributeHandleValue* AttributeHandleValueMap::mutable_attributehandlevalue(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeHandleValueMap.attributeHandleValue)
+inline ::rti1516_2025::fedpro::AttributeHandleValue* AttributeHandleValueMap::mutable_attributehandlevalue(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeHandleValueMap.attributeHandleValue)
   return _impl_.attributehandlevalue_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandleValue >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandleValue >*
 AttributeHandleValueMap::mutable_attributehandlevalue() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.AttributeHandleValueMap.attributeHandleValue)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.AttributeHandleValueMap.attributeHandleValue)
   return &_impl_.attributehandlevalue_;
 }
-inline const ::rti1516_202X::fedpro::AttributeHandleValue& AttributeHandleValueMap::_internal_attributehandlevalue(int index) const {
+inline const ::rti1516_2025::fedpro::AttributeHandleValue& AttributeHandleValueMap::_internal_attributehandlevalue(int index) const {
   return _impl_.attributehandlevalue_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::AttributeHandleValue& AttributeHandleValueMap::attributehandlevalue(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeHandleValueMap.attributeHandleValue)
+inline const ::rti1516_2025::fedpro::AttributeHandleValue& AttributeHandleValueMap::attributehandlevalue(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeHandleValueMap.attributeHandleValue)
   return _internal_attributehandlevalue(index);
 }
-inline ::rti1516_202X::fedpro::AttributeHandleValue* AttributeHandleValueMap::_internal_add_attributehandlevalue() {
+inline ::rti1516_2025::fedpro::AttributeHandleValue* AttributeHandleValueMap::_internal_add_attributehandlevalue() {
   return _impl_.attributehandlevalue_.Add();
 }
-inline ::rti1516_202X::fedpro::AttributeHandleValue* AttributeHandleValueMap::add_attributehandlevalue() {
-  ::rti1516_202X::fedpro::AttributeHandleValue* _add = _internal_add_attributehandlevalue();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.AttributeHandleValueMap.attributeHandleValue)
+inline ::rti1516_2025::fedpro::AttributeHandleValue* AttributeHandleValueMap::add_attributehandlevalue() {
+  ::rti1516_2025::fedpro::AttributeHandleValue* _add = _internal_add_attributehandlevalue();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.AttributeHandleValueMap.attributeHandleValue)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandleValue >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandleValue >&
 AttributeHandleValueMap::attributehandlevalue() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.AttributeHandleValueMap.attributeHandleValue)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.AttributeHandleValueMap.attributeHandleValue)
   return _impl_.attributehandlevalue_;
 }
 
@@ -9941,7 +9941,7 @@ AttributeHandleValueMap::attributehandlevalue() const {
 
 // ParameterHandleValue
 
-// .rti1516_202X.fedpro.ParameterHandle parameterHandle = 1;
+// .rti1516_2025.fedpro.ParameterHandle parameterHandle = 1;
 inline bool ParameterHandleValue::_internal_has_parameterhandle() const {
   return this != internal_default_instance() && _impl_.parameterhandle_ != nullptr;
 }
@@ -9954,17 +9954,17 @@ inline void ParameterHandleValue::clear_parameterhandle() {
   }
   _impl_.parameterhandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::ParameterHandle& ParameterHandleValue::_internal_parameterhandle() const {
-  const ::rti1516_202X::fedpro::ParameterHandle* p = _impl_.parameterhandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::ParameterHandle&>(
-      ::rti1516_202X::fedpro::_ParameterHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::ParameterHandle& ParameterHandleValue::_internal_parameterhandle() const {
+  const ::rti1516_2025::fedpro::ParameterHandle* p = _impl_.parameterhandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::ParameterHandle&>(
+      ::rti1516_2025::fedpro::_ParameterHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::ParameterHandle& ParameterHandleValue::parameterhandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ParameterHandleValue.parameterHandle)
+inline const ::rti1516_2025::fedpro::ParameterHandle& ParameterHandleValue::parameterhandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ParameterHandleValue.parameterHandle)
   return _internal_parameterhandle();
 }
 inline void ParameterHandleValue::unsafe_arena_set_allocated_parameterhandle(
-    ::rti1516_202X::fedpro::ParameterHandle* parameterhandle) {
+    ::rti1516_2025::fedpro::ParameterHandle* parameterhandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.parameterhandle_);
   }
@@ -9974,11 +9974,11 @@ inline void ParameterHandleValue::unsafe_arena_set_allocated_parameterhandle(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.ParameterHandleValue.parameterHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.ParameterHandleValue.parameterHandle)
 }
-inline ::rti1516_202X::fedpro::ParameterHandle* ParameterHandleValue::release_parameterhandle() {
+inline ::rti1516_2025::fedpro::ParameterHandle* ParameterHandleValue::release_parameterhandle() {
   
-  ::rti1516_202X::fedpro::ParameterHandle* temp = _impl_.parameterhandle_;
+  ::rti1516_2025::fedpro::ParameterHandle* temp = _impl_.parameterhandle_;
   _impl_.parameterhandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -9991,27 +9991,27 @@ inline ::rti1516_202X::fedpro::ParameterHandle* ParameterHandleValue::release_pa
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::ParameterHandle* ParameterHandleValue::unsafe_arena_release_parameterhandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ParameterHandleValue.parameterHandle)
+inline ::rti1516_2025::fedpro::ParameterHandle* ParameterHandleValue::unsafe_arena_release_parameterhandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ParameterHandleValue.parameterHandle)
   
-  ::rti1516_202X::fedpro::ParameterHandle* temp = _impl_.parameterhandle_;
+  ::rti1516_2025::fedpro::ParameterHandle* temp = _impl_.parameterhandle_;
   _impl_.parameterhandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::ParameterHandle* ParameterHandleValue::_internal_mutable_parameterhandle() {
+inline ::rti1516_2025::fedpro::ParameterHandle* ParameterHandleValue::_internal_mutable_parameterhandle() {
   
   if (_impl_.parameterhandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::ParameterHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::ParameterHandle>(GetArenaForAllocation());
     _impl_.parameterhandle_ = p;
   }
   return _impl_.parameterhandle_;
 }
-inline ::rti1516_202X::fedpro::ParameterHandle* ParameterHandleValue::mutable_parameterhandle() {
-  ::rti1516_202X::fedpro::ParameterHandle* _msg = _internal_mutable_parameterhandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ParameterHandleValue.parameterHandle)
+inline ::rti1516_2025::fedpro::ParameterHandle* ParameterHandleValue::mutable_parameterhandle() {
+  ::rti1516_2025::fedpro::ParameterHandle* _msg = _internal_mutable_parameterhandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ParameterHandleValue.parameterHandle)
   return _msg;
 }
-inline void ParameterHandleValue::set_allocated_parameterhandle(::rti1516_202X::fedpro::ParameterHandle* parameterhandle) {
+inline void ParameterHandleValue::set_allocated_parameterhandle(::rti1516_2025::fedpro::ParameterHandle* parameterhandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.parameterhandle_;
@@ -10028,7 +10028,7 @@ inline void ParameterHandleValue::set_allocated_parameterhandle(::rti1516_202X::
     
   }
   _impl_.parameterhandle_ = parameterhandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ParameterHandleValue.parameterHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ParameterHandleValue.parameterHandle)
 }
 
 // bytes value = 2;
@@ -10036,7 +10036,7 @@ inline void ParameterHandleValue::clear_value() {
   _impl_.value_.ClearToEmpty();
 }
 inline const std::string& ParameterHandleValue::value() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ParameterHandleValue.value)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ParameterHandleValue.value)
   return _internal_value();
 }
 template <typename ArgT0, typename... ArgT>
@@ -10044,11 +10044,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void ParameterHandleValue::set_value(ArgT0&& arg0, ArgT... args) {
  
  _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.ParameterHandleValue.value)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.ParameterHandleValue.value)
 }
 inline std::string* ParameterHandleValue::mutable_value() {
   std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ParameterHandleValue.value)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ParameterHandleValue.value)
   return _s;
 }
 inline const std::string& ParameterHandleValue::_internal_value() const {
@@ -10063,7 +10063,7 @@ inline std::string* ParameterHandleValue::_internal_mutable_value() {
   return _impl_.value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ParameterHandleValue::release_value() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.ParameterHandleValue.value)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.ParameterHandleValue.value)
   return _impl_.value_.Release();
 }
 inline void ParameterHandleValue::set_allocated_value(std::string* value) {
@@ -10078,14 +10078,14 @@ inline void ParameterHandleValue::set_allocated_value(std::string* value) {
     _impl_.value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.ParameterHandleValue.value)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.ParameterHandleValue.value)
 }
 
 // -------------------------------------------------------------------
 
 // ParameterHandleValueMap
 
-// repeated .rti1516_202X.fedpro.ParameterHandleValue parameterHandleValue = 1;
+// repeated .rti1516_2025.fedpro.ParameterHandleValue parameterHandleValue = 1;
 inline int ParameterHandleValueMap::_internal_parameterhandlevalue_size() const {
   return _impl_.parameterhandlevalue_.size();
 }
@@ -10095,33 +10095,33 @@ inline int ParameterHandleValueMap::parameterhandlevalue_size() const {
 inline void ParameterHandleValueMap::clear_parameterhandlevalue() {
   _impl_.parameterhandlevalue_.Clear();
 }
-inline ::rti1516_202X::fedpro::ParameterHandleValue* ParameterHandleValueMap::mutable_parameterhandlevalue(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ParameterHandleValueMap.parameterHandleValue)
+inline ::rti1516_2025::fedpro::ParameterHandleValue* ParameterHandleValueMap::mutable_parameterhandlevalue(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ParameterHandleValueMap.parameterHandleValue)
   return _impl_.parameterhandlevalue_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ParameterHandleValue >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ParameterHandleValue >*
 ParameterHandleValueMap::mutable_parameterhandlevalue() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.ParameterHandleValueMap.parameterHandleValue)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.ParameterHandleValueMap.parameterHandleValue)
   return &_impl_.parameterhandlevalue_;
 }
-inline const ::rti1516_202X::fedpro::ParameterHandleValue& ParameterHandleValueMap::_internal_parameterhandlevalue(int index) const {
+inline const ::rti1516_2025::fedpro::ParameterHandleValue& ParameterHandleValueMap::_internal_parameterhandlevalue(int index) const {
   return _impl_.parameterhandlevalue_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::ParameterHandleValue& ParameterHandleValueMap::parameterhandlevalue(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ParameterHandleValueMap.parameterHandleValue)
+inline const ::rti1516_2025::fedpro::ParameterHandleValue& ParameterHandleValueMap::parameterhandlevalue(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ParameterHandleValueMap.parameterHandleValue)
   return _internal_parameterhandlevalue(index);
 }
-inline ::rti1516_202X::fedpro::ParameterHandleValue* ParameterHandleValueMap::_internal_add_parameterhandlevalue() {
+inline ::rti1516_2025::fedpro::ParameterHandleValue* ParameterHandleValueMap::_internal_add_parameterhandlevalue() {
   return _impl_.parameterhandlevalue_.Add();
 }
-inline ::rti1516_202X::fedpro::ParameterHandleValue* ParameterHandleValueMap::add_parameterhandlevalue() {
-  ::rti1516_202X::fedpro::ParameterHandleValue* _add = _internal_add_parameterhandlevalue();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.ParameterHandleValueMap.parameterHandleValue)
+inline ::rti1516_2025::fedpro::ParameterHandleValue* ParameterHandleValueMap::add_parameterhandlevalue() {
+  ::rti1516_2025::fedpro::ParameterHandleValue* _add = _internal_add_parameterhandlevalue();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.ParameterHandleValueMap.parameterHandleValue)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ParameterHandleValue >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ParameterHandleValue >&
 ParameterHandleValueMap::parameterhandlevalue() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.ParameterHandleValueMap.parameterHandleValue)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.ParameterHandleValueMap.parameterHandleValue)
   return _impl_.parameterhandlevalue_;
 }
 
@@ -10134,7 +10134,7 @@ inline void MessageRetractionHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& MessageRetractionHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.MessageRetractionHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.MessageRetractionHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -10142,11 +10142,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void MessageRetractionHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.MessageRetractionHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.MessageRetractionHandle.data)
 }
 inline std::string* MessageRetractionHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.MessageRetractionHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.MessageRetractionHandle.data)
   return _s;
 }
 inline const std::string& MessageRetractionHandle::_internal_data() const {
@@ -10161,7 +10161,7 @@ inline std::string* MessageRetractionHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MessageRetractionHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.MessageRetractionHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.MessageRetractionHandle.data)
   return _impl_.data_.Release();
 }
 inline void MessageRetractionHandle::set_allocated_data(std::string* data) {
@@ -10176,7 +10176,7 @@ inline void MessageRetractionHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.MessageRetractionHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.MessageRetractionHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -10191,7 +10191,7 @@ inline bool MessageRetractionReturn::_internal_retractionhandleisvalid() const {
   return _impl_.retractionhandleisvalid_;
 }
 inline bool MessageRetractionReturn::retractionhandleisvalid() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.MessageRetractionReturn.retractionHandleIsValid)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.MessageRetractionReturn.retractionHandleIsValid)
   return _internal_retractionhandleisvalid();
 }
 inline void MessageRetractionReturn::_internal_set_retractionhandleisvalid(bool value) {
@@ -10200,10 +10200,10 @@ inline void MessageRetractionReturn::_internal_set_retractionhandleisvalid(bool 
 }
 inline void MessageRetractionReturn::set_retractionhandleisvalid(bool value) {
   _internal_set_retractionhandleisvalid(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.MessageRetractionReturn.retractionHandleIsValid)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.MessageRetractionReturn.retractionHandleIsValid)
 }
 
-// .rti1516_202X.fedpro.MessageRetractionHandle messageRetractionHandle = 2;
+// .rti1516_2025.fedpro.MessageRetractionHandle messageRetractionHandle = 2;
 inline bool MessageRetractionReturn::_internal_has_messageretractionhandle() const {
   return this != internal_default_instance() && _impl_.messageretractionhandle_ != nullptr;
 }
@@ -10216,17 +10216,17 @@ inline void MessageRetractionReturn::clear_messageretractionhandle() {
   }
   _impl_.messageretractionhandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::MessageRetractionHandle& MessageRetractionReturn::_internal_messageretractionhandle() const {
-  const ::rti1516_202X::fedpro::MessageRetractionHandle* p = _impl_.messageretractionhandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::MessageRetractionHandle&>(
-      ::rti1516_202X::fedpro::_MessageRetractionHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::MessageRetractionHandle& MessageRetractionReturn::_internal_messageretractionhandle() const {
+  const ::rti1516_2025::fedpro::MessageRetractionHandle* p = _impl_.messageretractionhandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::MessageRetractionHandle&>(
+      ::rti1516_2025::fedpro::_MessageRetractionHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::MessageRetractionHandle& MessageRetractionReturn::messageretractionhandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.MessageRetractionReturn.messageRetractionHandle)
+inline const ::rti1516_2025::fedpro::MessageRetractionHandle& MessageRetractionReturn::messageretractionhandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.MessageRetractionReturn.messageRetractionHandle)
   return _internal_messageretractionhandle();
 }
 inline void MessageRetractionReturn::unsafe_arena_set_allocated_messageretractionhandle(
-    ::rti1516_202X::fedpro::MessageRetractionHandle* messageretractionhandle) {
+    ::rti1516_2025::fedpro::MessageRetractionHandle* messageretractionhandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.messageretractionhandle_);
   }
@@ -10236,11 +10236,11 @@ inline void MessageRetractionReturn::unsafe_arena_set_allocated_messageretractio
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.MessageRetractionReturn.messageRetractionHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.MessageRetractionReturn.messageRetractionHandle)
 }
-inline ::rti1516_202X::fedpro::MessageRetractionHandle* MessageRetractionReturn::release_messageretractionhandle() {
+inline ::rti1516_2025::fedpro::MessageRetractionHandle* MessageRetractionReturn::release_messageretractionhandle() {
   
-  ::rti1516_202X::fedpro::MessageRetractionHandle* temp = _impl_.messageretractionhandle_;
+  ::rti1516_2025::fedpro::MessageRetractionHandle* temp = _impl_.messageretractionhandle_;
   _impl_.messageretractionhandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -10253,27 +10253,27 @@ inline ::rti1516_202X::fedpro::MessageRetractionHandle* MessageRetractionReturn:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::MessageRetractionHandle* MessageRetractionReturn::unsafe_arena_release_messageretractionhandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.MessageRetractionReturn.messageRetractionHandle)
+inline ::rti1516_2025::fedpro::MessageRetractionHandle* MessageRetractionReturn::unsafe_arena_release_messageretractionhandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.MessageRetractionReturn.messageRetractionHandle)
   
-  ::rti1516_202X::fedpro::MessageRetractionHandle* temp = _impl_.messageretractionhandle_;
+  ::rti1516_2025::fedpro::MessageRetractionHandle* temp = _impl_.messageretractionhandle_;
   _impl_.messageretractionhandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::MessageRetractionHandle* MessageRetractionReturn::_internal_mutable_messageretractionhandle() {
+inline ::rti1516_2025::fedpro::MessageRetractionHandle* MessageRetractionReturn::_internal_mutable_messageretractionhandle() {
   
   if (_impl_.messageretractionhandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::MessageRetractionHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::MessageRetractionHandle>(GetArenaForAllocation());
     _impl_.messageretractionhandle_ = p;
   }
   return _impl_.messageretractionhandle_;
 }
-inline ::rti1516_202X::fedpro::MessageRetractionHandle* MessageRetractionReturn::mutable_messageretractionhandle() {
-  ::rti1516_202X::fedpro::MessageRetractionHandle* _msg = _internal_mutable_messageretractionhandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.MessageRetractionReturn.messageRetractionHandle)
+inline ::rti1516_2025::fedpro::MessageRetractionHandle* MessageRetractionReturn::mutable_messageretractionhandle() {
+  ::rti1516_2025::fedpro::MessageRetractionHandle* _msg = _internal_mutable_messageretractionhandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.MessageRetractionReturn.messageRetractionHandle)
   return _msg;
 }
-inline void MessageRetractionReturn::set_allocated_messageretractionhandle(::rti1516_202X::fedpro::MessageRetractionHandle* messageretractionhandle) {
+inline void MessageRetractionReturn::set_allocated_messageretractionhandle(::rti1516_2025::fedpro::MessageRetractionHandle* messageretractionhandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.messageretractionhandle_;
@@ -10290,7 +10290,7 @@ inline void MessageRetractionReturn::set_allocated_messageretractionhandle(::rti
     
   }
   _impl_.messageretractionhandle_ = messageretractionhandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.MessageRetractionReturn.messageRetractionHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.MessageRetractionReturn.messageRetractionHandle)
 }
 
 // -------------------------------------------------------------------
@@ -10302,7 +10302,7 @@ inline void LogicalTime::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& LogicalTime::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.LogicalTime.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.LogicalTime.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -10310,11 +10310,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void LogicalTime::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.LogicalTime.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.LogicalTime.data)
 }
 inline std::string* LogicalTime::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.LogicalTime.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.LogicalTime.data)
   return _s;
 }
 inline const std::string& LogicalTime::_internal_data() const {
@@ -10329,7 +10329,7 @@ inline std::string* LogicalTime::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LogicalTime::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.LogicalTime.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.LogicalTime.data)
   return _impl_.data_.Release();
 }
 inline void LogicalTime::set_allocated_data(std::string* data) {
@@ -10344,7 +10344,7 @@ inline void LogicalTime::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.LogicalTime.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.LogicalTime.data)
 }
 
 // -------------------------------------------------------------------
@@ -10356,7 +10356,7 @@ inline void LogicalTimeInterval::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& LogicalTimeInterval::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.LogicalTimeInterval.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.LogicalTimeInterval.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -10364,11 +10364,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void LogicalTimeInterval::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.LogicalTimeInterval.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.LogicalTimeInterval.data)
 }
 inline std::string* LogicalTimeInterval::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.LogicalTimeInterval.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.LogicalTimeInterval.data)
   return _s;
 }
 inline const std::string& LogicalTimeInterval::_internal_data() const {
@@ -10383,7 +10383,7 @@ inline std::string* LogicalTimeInterval::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LogicalTimeInterval::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.LogicalTimeInterval.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.LogicalTimeInterval.data)
   return _impl_.data_.Release();
 }
 inline void LogicalTimeInterval::set_allocated_data(std::string* data) {
@@ -10398,7 +10398,7 @@ inline void LogicalTimeInterval::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.LogicalTimeInterval.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.LogicalTimeInterval.data)
 }
 
 // -------------------------------------------------------------------
@@ -10410,7 +10410,7 @@ inline void TransportationTypeHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& TransportationTypeHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.TransportationTypeHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.TransportationTypeHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -10418,11 +10418,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void TransportationTypeHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.TransportationTypeHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.TransportationTypeHandle.data)
 }
 inline std::string* TransportationTypeHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.TransportationTypeHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.TransportationTypeHandle.data)
   return _s;
 }
 inline const std::string& TransportationTypeHandle::_internal_data() const {
@@ -10437,7 +10437,7 @@ inline std::string* TransportationTypeHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TransportationTypeHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.TransportationTypeHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.TransportationTypeHandle.data)
   return _impl_.data_.Release();
 }
 inline void TransportationTypeHandle::set_allocated_data(std::string* data) {
@@ -10452,7 +10452,7 @@ inline void TransportationTypeHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.TransportationTypeHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.TransportationTypeHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -10464,7 +10464,7 @@ inline void DimensionHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& DimensionHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.DimensionHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.DimensionHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -10472,11 +10472,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void DimensionHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.DimensionHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.DimensionHandle.data)
 }
 inline std::string* DimensionHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.DimensionHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.DimensionHandle.data)
   return _s;
 }
 inline const std::string& DimensionHandle::_internal_data() const {
@@ -10491,7 +10491,7 @@ inline std::string* DimensionHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* DimensionHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.DimensionHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.DimensionHandle.data)
   return _impl_.data_.Release();
 }
 inline void DimensionHandle::set_allocated_data(std::string* data) {
@@ -10506,7 +10506,7 @@ inline void DimensionHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.DimensionHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.DimensionHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -10518,7 +10518,7 @@ inline void RegionHandle::clear_data() {
   _impl_.data_.ClearToEmpty();
 }
 inline const std::string& RegionHandle::data() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.RegionHandle.data)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.RegionHandle.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
@@ -10526,11 +10526,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void RegionHandle::set_data(ArgT0&& arg0, ArgT... args) {
  
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.RegionHandle.data)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.RegionHandle.data)
 }
 inline std::string* RegionHandle::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.RegionHandle.data)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.RegionHandle.data)
   return _s;
 }
 inline const std::string& RegionHandle::_internal_data() const {
@@ -10545,7 +10545,7 @@ inline std::string* RegionHandle::_internal_mutable_data() {
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RegionHandle::release_data() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.RegionHandle.data)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.RegionHandle.data)
   return _impl_.data_.Release();
 }
 inline void RegionHandle::set_allocated_data(std::string* data) {
@@ -10560,7 +10560,7 @@ inline void RegionHandle::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.RegionHandle.data)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.RegionHandle.data)
 }
 
 // -------------------------------------------------------------------
@@ -10575,7 +10575,7 @@ inline bool TimeQueryReturn::_internal_logicaltimeisvalid() const {
   return _impl_.logicaltimeisvalid_;
 }
 inline bool TimeQueryReturn::logicaltimeisvalid() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.TimeQueryReturn.logicalTimeIsValid)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.TimeQueryReturn.logicalTimeIsValid)
   return _internal_logicaltimeisvalid();
 }
 inline void TimeQueryReturn::_internal_set_logicaltimeisvalid(bool value) {
@@ -10584,10 +10584,10 @@ inline void TimeQueryReturn::_internal_set_logicaltimeisvalid(bool value) {
 }
 inline void TimeQueryReturn::set_logicaltimeisvalid(bool value) {
   _internal_set_logicaltimeisvalid(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.TimeQueryReturn.logicalTimeIsValid)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.TimeQueryReturn.logicalTimeIsValid)
 }
 
-// .rti1516_202X.fedpro.LogicalTime logicalTime = 2;
+// .rti1516_2025.fedpro.LogicalTime logicalTime = 2;
 inline bool TimeQueryReturn::_internal_has_logicaltime() const {
   return this != internal_default_instance() && _impl_.logicaltime_ != nullptr;
 }
@@ -10600,17 +10600,17 @@ inline void TimeQueryReturn::clear_logicaltime() {
   }
   _impl_.logicaltime_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::LogicalTime& TimeQueryReturn::_internal_logicaltime() const {
-  const ::rti1516_202X::fedpro::LogicalTime* p = _impl_.logicaltime_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::LogicalTime&>(
-      ::rti1516_202X::fedpro::_LogicalTime_default_instance_);
+inline const ::rti1516_2025::fedpro::LogicalTime& TimeQueryReturn::_internal_logicaltime() const {
+  const ::rti1516_2025::fedpro::LogicalTime* p = _impl_.logicaltime_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::LogicalTime&>(
+      ::rti1516_2025::fedpro::_LogicalTime_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::LogicalTime& TimeQueryReturn::logicaltime() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.TimeQueryReturn.logicalTime)
+inline const ::rti1516_2025::fedpro::LogicalTime& TimeQueryReturn::logicaltime() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.TimeQueryReturn.logicalTime)
   return _internal_logicaltime();
 }
 inline void TimeQueryReturn::unsafe_arena_set_allocated_logicaltime(
-    ::rti1516_202X::fedpro::LogicalTime* logicaltime) {
+    ::rti1516_2025::fedpro::LogicalTime* logicaltime) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.logicaltime_);
   }
@@ -10620,11 +10620,11 @@ inline void TimeQueryReturn::unsafe_arena_set_allocated_logicaltime(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.TimeQueryReturn.logicalTime)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.TimeQueryReturn.logicalTime)
 }
-inline ::rti1516_202X::fedpro::LogicalTime* TimeQueryReturn::release_logicaltime() {
+inline ::rti1516_2025::fedpro::LogicalTime* TimeQueryReturn::release_logicaltime() {
   
-  ::rti1516_202X::fedpro::LogicalTime* temp = _impl_.logicaltime_;
+  ::rti1516_2025::fedpro::LogicalTime* temp = _impl_.logicaltime_;
   _impl_.logicaltime_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -10637,27 +10637,27 @@ inline ::rti1516_202X::fedpro::LogicalTime* TimeQueryReturn::release_logicaltime
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::LogicalTime* TimeQueryReturn::unsafe_arena_release_logicaltime() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.TimeQueryReturn.logicalTime)
+inline ::rti1516_2025::fedpro::LogicalTime* TimeQueryReturn::unsafe_arena_release_logicaltime() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.TimeQueryReturn.logicalTime)
   
-  ::rti1516_202X::fedpro::LogicalTime* temp = _impl_.logicaltime_;
+  ::rti1516_2025::fedpro::LogicalTime* temp = _impl_.logicaltime_;
   _impl_.logicaltime_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::LogicalTime* TimeQueryReturn::_internal_mutable_logicaltime() {
+inline ::rti1516_2025::fedpro::LogicalTime* TimeQueryReturn::_internal_mutable_logicaltime() {
   
   if (_impl_.logicaltime_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::LogicalTime>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::LogicalTime>(GetArenaForAllocation());
     _impl_.logicaltime_ = p;
   }
   return _impl_.logicaltime_;
 }
-inline ::rti1516_202X::fedpro::LogicalTime* TimeQueryReturn::mutable_logicaltime() {
-  ::rti1516_202X::fedpro::LogicalTime* _msg = _internal_mutable_logicaltime();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.TimeQueryReturn.logicalTime)
+inline ::rti1516_2025::fedpro::LogicalTime* TimeQueryReturn::mutable_logicaltime() {
+  ::rti1516_2025::fedpro::LogicalTime* _msg = _internal_mutable_logicaltime();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.TimeQueryReturn.logicalTime)
   return _msg;
 }
-inline void TimeQueryReturn::set_allocated_logicaltime(::rti1516_202X::fedpro::LogicalTime* logicaltime) {
+inline void TimeQueryReturn::set_allocated_logicaltime(::rti1516_2025::fedpro::LogicalTime* logicaltime) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.logicaltime_;
@@ -10674,14 +10674,14 @@ inline void TimeQueryReturn::set_allocated_logicaltime(::rti1516_202X::fedpro::L
     
   }
   _impl_.logicaltime_ = logicaltime;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.TimeQueryReturn.logicalTime)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.TimeQueryReturn.logicalTime)
 }
 
 // -------------------------------------------------------------------
 
 // FederateHandleSet
 
-// repeated .rti1516_202X.fedpro.FederateHandle federateHandle = 1;
+// repeated .rti1516_2025.fedpro.FederateHandle federateHandle = 1;
 inline int FederateHandleSet::_internal_federatehandle_size() const {
   return _impl_.federatehandle_.size();
 }
@@ -10691,33 +10691,33 @@ inline int FederateHandleSet::federatehandle_size() const {
 inline void FederateHandleSet::clear_federatehandle() {
   _impl_.federatehandle_.Clear();
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSet::mutable_federatehandle(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FederateHandleSet.federateHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateHandleSet::mutable_federatehandle(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FederateHandleSet.federateHandle)
   return _impl_.federatehandle_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandle >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandle >*
 FederateHandleSet::mutable_federatehandle() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.FederateHandleSet.federateHandle)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.FederateHandleSet.federateHandle)
   return &_impl_.federatehandle_;
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateHandleSet::_internal_federatehandle(int index) const {
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateHandleSet::_internal_federatehandle(int index) const {
   return _impl_.federatehandle_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& FederateHandleSet::federatehandle(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FederateHandleSet.federateHandle)
+inline const ::rti1516_2025::fedpro::FederateHandle& FederateHandleSet::federatehandle(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FederateHandleSet.federateHandle)
   return _internal_federatehandle(index);
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSet::_internal_add_federatehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* FederateHandleSet::_internal_add_federatehandle() {
   return _impl_.federatehandle_.Add();
 }
-inline ::rti1516_202X::fedpro::FederateHandle* FederateHandleSet::add_federatehandle() {
-  ::rti1516_202X::fedpro::FederateHandle* _add = _internal_add_federatehandle();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.FederateHandleSet.federateHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* FederateHandleSet::add_federatehandle() {
+  ::rti1516_2025::fedpro::FederateHandle* _add = _internal_add_federatehandle();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.FederateHandleSet.federateHandle)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FederateHandle >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FederateHandle >&
 FederateHandleSet::federatehandle() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.FederateHandleSet.federateHandle)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.FederateHandleSet.federateHandle)
   return _impl_.federatehandle_;
 }
 
@@ -10725,7 +10725,7 @@ FederateHandleSet::federatehandle() const {
 
 // DimensionHandleSet
 
-// repeated .rti1516_202X.fedpro.DimensionHandle dimensionHandle = 1;
+// repeated .rti1516_2025.fedpro.DimensionHandle dimensionHandle = 1;
 inline int DimensionHandleSet::_internal_dimensionhandle_size() const {
   return _impl_.dimensionhandle_.size();
 }
@@ -10735,33 +10735,33 @@ inline int DimensionHandleSet::dimensionhandle_size() const {
 inline void DimensionHandleSet::clear_dimensionhandle() {
   _impl_.dimensionhandle_.Clear();
 }
-inline ::rti1516_202X::fedpro::DimensionHandle* DimensionHandleSet::mutable_dimensionhandle(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.DimensionHandleSet.dimensionHandle)
+inline ::rti1516_2025::fedpro::DimensionHandle* DimensionHandleSet::mutable_dimensionhandle(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.DimensionHandleSet.dimensionHandle)
   return _impl_.dimensionhandle_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionHandle >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionHandle >*
 DimensionHandleSet::mutable_dimensionhandle() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.DimensionHandleSet.dimensionHandle)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.DimensionHandleSet.dimensionHandle)
   return &_impl_.dimensionhandle_;
 }
-inline const ::rti1516_202X::fedpro::DimensionHandle& DimensionHandleSet::_internal_dimensionhandle(int index) const {
+inline const ::rti1516_2025::fedpro::DimensionHandle& DimensionHandleSet::_internal_dimensionhandle(int index) const {
   return _impl_.dimensionhandle_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::DimensionHandle& DimensionHandleSet::dimensionhandle(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.DimensionHandleSet.dimensionHandle)
+inline const ::rti1516_2025::fedpro::DimensionHandle& DimensionHandleSet::dimensionhandle(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.DimensionHandleSet.dimensionHandle)
   return _internal_dimensionhandle(index);
 }
-inline ::rti1516_202X::fedpro::DimensionHandle* DimensionHandleSet::_internal_add_dimensionhandle() {
+inline ::rti1516_2025::fedpro::DimensionHandle* DimensionHandleSet::_internal_add_dimensionhandle() {
   return _impl_.dimensionhandle_.Add();
 }
-inline ::rti1516_202X::fedpro::DimensionHandle* DimensionHandleSet::add_dimensionhandle() {
-  ::rti1516_202X::fedpro::DimensionHandle* _add = _internal_add_dimensionhandle();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.DimensionHandleSet.dimensionHandle)
+inline ::rti1516_2025::fedpro::DimensionHandle* DimensionHandleSet::add_dimensionhandle() {
+  ::rti1516_2025::fedpro::DimensionHandle* _add = _internal_add_dimensionhandle();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.DimensionHandleSet.dimensionHandle)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionHandle >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionHandle >&
 DimensionHandleSet::dimensionhandle() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.DimensionHandleSet.dimensionHandle)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.DimensionHandleSet.dimensionHandle)
   return _impl_.dimensionhandle_;
 }
 
@@ -10769,7 +10769,7 @@ DimensionHandleSet::dimensionhandle() const {
 
 // RegionHandleSet
 
-// repeated .rti1516_202X.fedpro.RegionHandle regionHandle = 1;
+// repeated .rti1516_2025.fedpro.RegionHandle regionHandle = 1;
 inline int RegionHandleSet::_internal_regionhandle_size() const {
   return _impl_.regionhandle_.size();
 }
@@ -10779,33 +10779,33 @@ inline int RegionHandleSet::regionhandle_size() const {
 inline void RegionHandleSet::clear_regionhandle() {
   _impl_.regionhandle_.Clear();
 }
-inline ::rti1516_202X::fedpro::RegionHandle* RegionHandleSet::mutable_regionhandle(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.RegionHandleSet.regionHandle)
+inline ::rti1516_2025::fedpro::RegionHandle* RegionHandleSet::mutable_regionhandle(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.RegionHandleSet.regionHandle)
   return _impl_.regionhandle_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::RegionHandle >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::RegionHandle >*
 RegionHandleSet::mutable_regionhandle() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.RegionHandleSet.regionHandle)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.RegionHandleSet.regionHandle)
   return &_impl_.regionhandle_;
 }
-inline const ::rti1516_202X::fedpro::RegionHandle& RegionHandleSet::_internal_regionhandle(int index) const {
+inline const ::rti1516_2025::fedpro::RegionHandle& RegionHandleSet::_internal_regionhandle(int index) const {
   return _impl_.regionhandle_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::RegionHandle& RegionHandleSet::regionhandle(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.RegionHandleSet.regionHandle)
+inline const ::rti1516_2025::fedpro::RegionHandle& RegionHandleSet::regionhandle(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.RegionHandleSet.regionHandle)
   return _internal_regionhandle(index);
 }
-inline ::rti1516_202X::fedpro::RegionHandle* RegionHandleSet::_internal_add_regionhandle() {
+inline ::rti1516_2025::fedpro::RegionHandle* RegionHandleSet::_internal_add_regionhandle() {
   return _impl_.regionhandle_.Add();
 }
-inline ::rti1516_202X::fedpro::RegionHandle* RegionHandleSet::add_regionhandle() {
-  ::rti1516_202X::fedpro::RegionHandle* _add = _internal_add_regionhandle();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.RegionHandleSet.regionHandle)
+inline ::rti1516_2025::fedpro::RegionHandle* RegionHandleSet::add_regionhandle() {
+  ::rti1516_2025::fedpro::RegionHandle* _add = _internal_add_regionhandle();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.RegionHandleSet.regionHandle)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::RegionHandle >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::RegionHandle >&
 RegionHandleSet::regionhandle() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.RegionHandleSet.regionHandle)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.RegionHandleSet.regionHandle)
   return _impl_.regionhandle_;
 }
 
@@ -10813,7 +10813,7 @@ RegionHandleSet::regionhandle() const {
 
 // AttributeHandleSet
 
-// repeated .rti1516_202X.fedpro.AttributeHandle attributeHandle = 1;
+// repeated .rti1516_2025.fedpro.AttributeHandle attributeHandle = 1;
 inline int AttributeHandleSet::_internal_attributehandle_size() const {
   return _impl_.attributehandle_.size();
 }
@@ -10823,33 +10823,33 @@ inline int AttributeHandleSet::attributehandle_size() const {
 inline void AttributeHandleSet::clear_attributehandle() {
   _impl_.attributehandle_.Clear();
 }
-inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleSet::mutable_attributehandle(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeHandleSet.attributeHandle)
+inline ::rti1516_2025::fedpro::AttributeHandle* AttributeHandleSet::mutable_attributehandle(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeHandleSet.attributeHandle)
   return _impl_.attributehandle_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandle >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandle >*
 AttributeHandleSet::mutable_attributehandle() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.AttributeHandleSet.attributeHandle)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.AttributeHandleSet.attributeHandle)
   return &_impl_.attributehandle_;
 }
-inline const ::rti1516_202X::fedpro::AttributeHandle& AttributeHandleSet::_internal_attributehandle(int index) const {
+inline const ::rti1516_2025::fedpro::AttributeHandle& AttributeHandleSet::_internal_attributehandle(int index) const {
   return _impl_.attributehandle_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::AttributeHandle& AttributeHandleSet::attributehandle(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeHandleSet.attributeHandle)
+inline const ::rti1516_2025::fedpro::AttributeHandle& AttributeHandleSet::attributehandle(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeHandleSet.attributeHandle)
   return _internal_attributehandle(index);
 }
-inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleSet::_internal_add_attributehandle() {
+inline ::rti1516_2025::fedpro::AttributeHandle* AttributeHandleSet::_internal_add_attributehandle() {
   return _impl_.attributehandle_.Add();
 }
-inline ::rti1516_202X::fedpro::AttributeHandle* AttributeHandleSet::add_attributehandle() {
-  ::rti1516_202X::fedpro::AttributeHandle* _add = _internal_add_attributehandle();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.AttributeHandleSet.attributeHandle)
+inline ::rti1516_2025::fedpro::AttributeHandle* AttributeHandleSet::add_attributehandle() {
+  ::rti1516_2025::fedpro::AttributeHandle* _add = _internal_add_attributehandle();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.AttributeHandleSet.attributeHandle)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeHandle >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeHandle >&
 AttributeHandleSet::attributehandle() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.AttributeHandleSet.attributeHandle)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.AttributeHandleSet.attributeHandle)
   return _impl_.attributehandle_;
 }
 
@@ -10857,7 +10857,7 @@ AttributeHandleSet::attributehandle() const {
 
 // AttributeSetRegionSetPair
 
-// .rti1516_202X.fedpro.AttributeHandleSet attributeSet = 1;
+// .rti1516_2025.fedpro.AttributeHandleSet attributeSet = 1;
 inline bool AttributeSetRegionSetPair::_internal_has_attributeset() const {
   return this != internal_default_instance() && _impl_.attributeset_ != nullptr;
 }
@@ -10870,17 +10870,17 @@ inline void AttributeSetRegionSetPair::clear_attributeset() {
   }
   _impl_.attributeset_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::AttributeHandleSet& AttributeSetRegionSetPair::_internal_attributeset() const {
-  const ::rti1516_202X::fedpro::AttributeHandleSet* p = _impl_.attributeset_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::AttributeHandleSet&>(
-      ::rti1516_202X::fedpro::_AttributeHandleSet_default_instance_);
+inline const ::rti1516_2025::fedpro::AttributeHandleSet& AttributeSetRegionSetPair::_internal_attributeset() const {
+  const ::rti1516_2025::fedpro::AttributeHandleSet* p = _impl_.attributeset_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::AttributeHandleSet&>(
+      ::rti1516_2025::fedpro::_AttributeHandleSet_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::AttributeHandleSet& AttributeSetRegionSetPair::attributeset() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeSetRegionSetPair.attributeSet)
+inline const ::rti1516_2025::fedpro::AttributeHandleSet& AttributeSetRegionSetPair::attributeset() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeSetRegionSetPair.attributeSet)
   return _internal_attributeset();
 }
 inline void AttributeSetRegionSetPair::unsafe_arena_set_allocated_attributeset(
-    ::rti1516_202X::fedpro::AttributeHandleSet* attributeset) {
+    ::rti1516_2025::fedpro::AttributeHandleSet* attributeset) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.attributeset_);
   }
@@ -10890,11 +10890,11 @@ inline void AttributeSetRegionSetPair::unsafe_arena_set_allocated_attributeset(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.AttributeSetRegionSetPair.attributeSet)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.AttributeSetRegionSetPair.attributeSet)
 }
-inline ::rti1516_202X::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::release_attributeset() {
+inline ::rti1516_2025::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::release_attributeset() {
   
-  ::rti1516_202X::fedpro::AttributeHandleSet* temp = _impl_.attributeset_;
+  ::rti1516_2025::fedpro::AttributeHandleSet* temp = _impl_.attributeset_;
   _impl_.attributeset_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -10907,27 +10907,27 @@ inline ::rti1516_202X::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::unsafe_arena_release_attributeset() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.AttributeSetRegionSetPair.attributeSet)
+inline ::rti1516_2025::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::unsafe_arena_release_attributeset() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.AttributeSetRegionSetPair.attributeSet)
   
-  ::rti1516_202X::fedpro::AttributeHandleSet* temp = _impl_.attributeset_;
+  ::rti1516_2025::fedpro::AttributeHandleSet* temp = _impl_.attributeset_;
   _impl_.attributeset_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::_internal_mutable_attributeset() {
+inline ::rti1516_2025::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::_internal_mutable_attributeset() {
   
   if (_impl_.attributeset_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::AttributeHandleSet>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::AttributeHandleSet>(GetArenaForAllocation());
     _impl_.attributeset_ = p;
   }
   return _impl_.attributeset_;
 }
-inline ::rti1516_202X::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::mutable_attributeset() {
-  ::rti1516_202X::fedpro::AttributeHandleSet* _msg = _internal_mutable_attributeset();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeSetRegionSetPair.attributeSet)
+inline ::rti1516_2025::fedpro::AttributeHandleSet* AttributeSetRegionSetPair::mutable_attributeset() {
+  ::rti1516_2025::fedpro::AttributeHandleSet* _msg = _internal_mutable_attributeset();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeSetRegionSetPair.attributeSet)
   return _msg;
 }
-inline void AttributeSetRegionSetPair::set_allocated_attributeset(::rti1516_202X::fedpro::AttributeHandleSet* attributeset) {
+inline void AttributeSetRegionSetPair::set_allocated_attributeset(::rti1516_2025::fedpro::AttributeHandleSet* attributeset) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.attributeset_;
@@ -10944,10 +10944,10 @@ inline void AttributeSetRegionSetPair::set_allocated_attributeset(::rti1516_202X
     
   }
   _impl_.attributeset_ = attributeset;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.AttributeSetRegionSetPair.attributeSet)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.AttributeSetRegionSetPair.attributeSet)
 }
 
-// .rti1516_202X.fedpro.RegionHandleSet regionSet = 2;
+// .rti1516_2025.fedpro.RegionHandleSet regionSet = 2;
 inline bool AttributeSetRegionSetPair::_internal_has_regionset() const {
   return this != internal_default_instance() && _impl_.regionset_ != nullptr;
 }
@@ -10960,17 +10960,17 @@ inline void AttributeSetRegionSetPair::clear_regionset() {
   }
   _impl_.regionset_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::RegionHandleSet& AttributeSetRegionSetPair::_internal_regionset() const {
-  const ::rti1516_202X::fedpro::RegionHandleSet* p = _impl_.regionset_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::RegionHandleSet&>(
-      ::rti1516_202X::fedpro::_RegionHandleSet_default_instance_);
+inline const ::rti1516_2025::fedpro::RegionHandleSet& AttributeSetRegionSetPair::_internal_regionset() const {
+  const ::rti1516_2025::fedpro::RegionHandleSet* p = _impl_.regionset_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::RegionHandleSet&>(
+      ::rti1516_2025::fedpro::_RegionHandleSet_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::RegionHandleSet& AttributeSetRegionSetPair::regionset() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeSetRegionSetPair.regionSet)
+inline const ::rti1516_2025::fedpro::RegionHandleSet& AttributeSetRegionSetPair::regionset() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeSetRegionSetPair.regionSet)
   return _internal_regionset();
 }
 inline void AttributeSetRegionSetPair::unsafe_arena_set_allocated_regionset(
-    ::rti1516_202X::fedpro::RegionHandleSet* regionset) {
+    ::rti1516_2025::fedpro::RegionHandleSet* regionset) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.regionset_);
   }
@@ -10980,11 +10980,11 @@ inline void AttributeSetRegionSetPair::unsafe_arena_set_allocated_regionset(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.AttributeSetRegionSetPair.regionSet)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.AttributeSetRegionSetPair.regionSet)
 }
-inline ::rti1516_202X::fedpro::RegionHandleSet* AttributeSetRegionSetPair::release_regionset() {
+inline ::rti1516_2025::fedpro::RegionHandleSet* AttributeSetRegionSetPair::release_regionset() {
   
-  ::rti1516_202X::fedpro::RegionHandleSet* temp = _impl_.regionset_;
+  ::rti1516_2025::fedpro::RegionHandleSet* temp = _impl_.regionset_;
   _impl_.regionset_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -10997,27 +10997,27 @@ inline ::rti1516_202X::fedpro::RegionHandleSet* AttributeSetRegionSetPair::relea
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::RegionHandleSet* AttributeSetRegionSetPair::unsafe_arena_release_regionset() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.AttributeSetRegionSetPair.regionSet)
+inline ::rti1516_2025::fedpro::RegionHandleSet* AttributeSetRegionSetPair::unsafe_arena_release_regionset() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.AttributeSetRegionSetPair.regionSet)
   
-  ::rti1516_202X::fedpro::RegionHandleSet* temp = _impl_.regionset_;
+  ::rti1516_2025::fedpro::RegionHandleSet* temp = _impl_.regionset_;
   _impl_.regionset_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::RegionHandleSet* AttributeSetRegionSetPair::_internal_mutable_regionset() {
+inline ::rti1516_2025::fedpro::RegionHandleSet* AttributeSetRegionSetPair::_internal_mutable_regionset() {
   
   if (_impl_.regionset_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::RegionHandleSet>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::RegionHandleSet>(GetArenaForAllocation());
     _impl_.regionset_ = p;
   }
   return _impl_.regionset_;
 }
-inline ::rti1516_202X::fedpro::RegionHandleSet* AttributeSetRegionSetPair::mutable_regionset() {
-  ::rti1516_202X::fedpro::RegionHandleSet* _msg = _internal_mutable_regionset();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeSetRegionSetPair.regionSet)
+inline ::rti1516_2025::fedpro::RegionHandleSet* AttributeSetRegionSetPair::mutable_regionset() {
+  ::rti1516_2025::fedpro::RegionHandleSet* _msg = _internal_mutable_regionset();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeSetRegionSetPair.regionSet)
   return _msg;
 }
-inline void AttributeSetRegionSetPair::set_allocated_regionset(::rti1516_202X::fedpro::RegionHandleSet* regionset) {
+inline void AttributeSetRegionSetPair::set_allocated_regionset(::rti1516_2025::fedpro::RegionHandleSet* regionset) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.regionset_;
@@ -11034,14 +11034,14 @@ inline void AttributeSetRegionSetPair::set_allocated_regionset(::rti1516_202X::f
     
   }
   _impl_.regionset_ = regionset;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.AttributeSetRegionSetPair.regionSet)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.AttributeSetRegionSetPair.regionSet)
 }
 
 // -------------------------------------------------------------------
 
 // AttributeSetRegionSetPairList
 
-// repeated .rti1516_202X.fedpro.AttributeSetRegionSetPair AttributeSetRegionSetPair = 1;
+// repeated .rti1516_2025.fedpro.AttributeSetRegionSetPair AttributeSetRegionSetPair = 1;
 inline int AttributeSetRegionSetPairList::_internal_attributesetregionsetpair_size() const {
   return _impl_.attributesetregionsetpair_.size();
 }
@@ -11051,33 +11051,33 @@ inline int AttributeSetRegionSetPairList::attributesetregionsetpair_size() const
 inline void AttributeSetRegionSetPairList::clear_attributesetregionsetpair() {
   _impl_.attributesetregionsetpair_.Clear();
 }
-inline ::rti1516_202X::fedpro::AttributeSetRegionSetPair* AttributeSetRegionSetPairList::mutable_attributesetregionsetpair(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
+inline ::rti1516_2025::fedpro::AttributeSetRegionSetPair* AttributeSetRegionSetPairList::mutable_attributesetregionsetpair(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
   return _impl_.attributesetregionsetpair_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeSetRegionSetPair >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeSetRegionSetPair >*
 AttributeSetRegionSetPairList::mutable_attributesetregionsetpair() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
   return &_impl_.attributesetregionsetpair_;
 }
-inline const ::rti1516_202X::fedpro::AttributeSetRegionSetPair& AttributeSetRegionSetPairList::_internal_attributesetregionsetpair(int index) const {
+inline const ::rti1516_2025::fedpro::AttributeSetRegionSetPair& AttributeSetRegionSetPairList::_internal_attributesetregionsetpair(int index) const {
   return _impl_.attributesetregionsetpair_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::AttributeSetRegionSetPair& AttributeSetRegionSetPairList::attributesetregionsetpair(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
+inline const ::rti1516_2025::fedpro::AttributeSetRegionSetPair& AttributeSetRegionSetPairList::attributesetregionsetpair(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
   return _internal_attributesetregionsetpair(index);
 }
-inline ::rti1516_202X::fedpro::AttributeSetRegionSetPair* AttributeSetRegionSetPairList::_internal_add_attributesetregionsetpair() {
+inline ::rti1516_2025::fedpro::AttributeSetRegionSetPair* AttributeSetRegionSetPairList::_internal_add_attributesetregionsetpair() {
   return _impl_.attributesetregionsetpair_.Add();
 }
-inline ::rti1516_202X::fedpro::AttributeSetRegionSetPair* AttributeSetRegionSetPairList::add_attributesetregionsetpair() {
-  ::rti1516_202X::fedpro::AttributeSetRegionSetPair* _add = _internal_add_attributesetregionsetpair();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
+inline ::rti1516_2025::fedpro::AttributeSetRegionSetPair* AttributeSetRegionSetPairList::add_attributesetregionsetpair() {
+  ::rti1516_2025::fedpro::AttributeSetRegionSetPair* _add = _internal_add_attributesetregionsetpair();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::AttributeSetRegionSetPair >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::AttributeSetRegionSetPair >&
 AttributeSetRegionSetPairList::attributesetregionsetpair() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.AttributeSetRegionSetPairList.AttributeSetRegionSetPair)
   return _impl_.attributesetregionsetpair_;
 }
 
@@ -11085,7 +11085,7 @@ AttributeSetRegionSetPairList::attributesetregionsetpair() const {
 
 // InteractionClassHandleSet
 
-// repeated .rti1516_202X.fedpro.InteractionClassHandle interactionClassHandle = 1;
+// repeated .rti1516_2025.fedpro.InteractionClassHandle interactionClassHandle = 1;
 inline int InteractionClassHandleSet::_internal_interactionclasshandle_size() const {
   return _impl_.interactionclasshandle_.size();
 }
@@ -11095,33 +11095,33 @@ inline int InteractionClassHandleSet::interactionclasshandle_size() const {
 inline void InteractionClassHandleSet::clear_interactionclasshandle() {
   _impl_.interactionclasshandle_.Clear();
 }
-inline ::rti1516_202X::fedpro::InteractionClassHandle* InteractionClassHandleSet::mutable_interactionclasshandle(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.InteractionClassHandleSet.interactionClassHandle)
+inline ::rti1516_2025::fedpro::InteractionClassHandle* InteractionClassHandleSet::mutable_interactionclasshandle(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.InteractionClassHandleSet.interactionClassHandle)
   return _impl_.interactionclasshandle_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::InteractionClassHandle >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::InteractionClassHandle >*
 InteractionClassHandleSet::mutable_interactionclasshandle() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.InteractionClassHandleSet.interactionClassHandle)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.InteractionClassHandleSet.interactionClassHandle)
   return &_impl_.interactionclasshandle_;
 }
-inline const ::rti1516_202X::fedpro::InteractionClassHandle& InteractionClassHandleSet::_internal_interactionclasshandle(int index) const {
+inline const ::rti1516_2025::fedpro::InteractionClassHandle& InteractionClassHandleSet::_internal_interactionclasshandle(int index) const {
   return _impl_.interactionclasshandle_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::InteractionClassHandle& InteractionClassHandleSet::interactionclasshandle(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.InteractionClassHandleSet.interactionClassHandle)
+inline const ::rti1516_2025::fedpro::InteractionClassHandle& InteractionClassHandleSet::interactionclasshandle(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.InteractionClassHandleSet.interactionClassHandle)
   return _internal_interactionclasshandle(index);
 }
-inline ::rti1516_202X::fedpro::InteractionClassHandle* InteractionClassHandleSet::_internal_add_interactionclasshandle() {
+inline ::rti1516_2025::fedpro::InteractionClassHandle* InteractionClassHandleSet::_internal_add_interactionclasshandle() {
   return _impl_.interactionclasshandle_.Add();
 }
-inline ::rti1516_202X::fedpro::InteractionClassHandle* InteractionClassHandleSet::add_interactionclasshandle() {
-  ::rti1516_202X::fedpro::InteractionClassHandle* _add = _internal_add_interactionclasshandle();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.InteractionClassHandleSet.interactionClassHandle)
+inline ::rti1516_2025::fedpro::InteractionClassHandle* InteractionClassHandleSet::add_interactionclasshandle() {
+  ::rti1516_2025::fedpro::InteractionClassHandle* _add = _internal_add_interactionclasshandle();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.InteractionClassHandleSet.interactionClassHandle)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::InteractionClassHandle >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::InteractionClassHandle >&
 InteractionClassHandleSet::interactionclasshandle() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.InteractionClassHandleSet.interactionClassHandle)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.InteractionClassHandleSet.interactionClassHandle)
   return _impl_.interactionclasshandle_;
 }
 
@@ -11137,7 +11137,7 @@ inline uint32_t RangeBounds::_internal_lower() const {
   return _impl_.lower_;
 }
 inline uint32_t RangeBounds::lower() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.RangeBounds.lower)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.RangeBounds.lower)
   return _internal_lower();
 }
 inline void RangeBounds::_internal_set_lower(uint32_t value) {
@@ -11146,7 +11146,7 @@ inline void RangeBounds::_internal_set_lower(uint32_t value) {
 }
 inline void RangeBounds::set_lower(uint32_t value) {
   _internal_set_lower(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.RangeBounds.lower)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.RangeBounds.lower)
 }
 
 // uint32 upper = 2;
@@ -11157,7 +11157,7 @@ inline uint32_t RangeBounds::_internal_upper() const {
   return _impl_.upper_;
 }
 inline uint32_t RangeBounds::upper() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.RangeBounds.upper)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.RangeBounds.upper)
   return _internal_upper();
 }
 inline void RangeBounds::_internal_set_upper(uint32_t value) {
@@ -11166,14 +11166,14 @@ inline void RangeBounds::_internal_set_upper(uint32_t value) {
 }
 inline void RangeBounds::set_upper(uint32_t value) {
   _internal_set_upper(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.RangeBounds.upper)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.RangeBounds.upper)
 }
 
 // -------------------------------------------------------------------
 
 // DimensionAndRange
 
-// .rti1516_202X.fedpro.DimensionHandle dimensionHandle = 1;
+// .rti1516_2025.fedpro.DimensionHandle dimensionHandle = 1;
 inline bool DimensionAndRange::_internal_has_dimensionhandle() const {
   return this != internal_default_instance() && _impl_.dimensionhandle_ != nullptr;
 }
@@ -11186,17 +11186,17 @@ inline void DimensionAndRange::clear_dimensionhandle() {
   }
   _impl_.dimensionhandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::DimensionHandle& DimensionAndRange::_internal_dimensionhandle() const {
-  const ::rti1516_202X::fedpro::DimensionHandle* p = _impl_.dimensionhandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::DimensionHandle&>(
-      ::rti1516_202X::fedpro::_DimensionHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::DimensionHandle& DimensionAndRange::_internal_dimensionhandle() const {
+  const ::rti1516_2025::fedpro::DimensionHandle* p = _impl_.dimensionhandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::DimensionHandle&>(
+      ::rti1516_2025::fedpro::_DimensionHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::DimensionHandle& DimensionAndRange::dimensionhandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.DimensionAndRange.dimensionHandle)
+inline const ::rti1516_2025::fedpro::DimensionHandle& DimensionAndRange::dimensionhandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.DimensionAndRange.dimensionHandle)
   return _internal_dimensionhandle();
 }
 inline void DimensionAndRange::unsafe_arena_set_allocated_dimensionhandle(
-    ::rti1516_202X::fedpro::DimensionHandle* dimensionhandle) {
+    ::rti1516_2025::fedpro::DimensionHandle* dimensionhandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.dimensionhandle_);
   }
@@ -11206,11 +11206,11 @@ inline void DimensionAndRange::unsafe_arena_set_allocated_dimensionhandle(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.DimensionAndRange.dimensionHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.DimensionAndRange.dimensionHandle)
 }
-inline ::rti1516_202X::fedpro::DimensionHandle* DimensionAndRange::release_dimensionhandle() {
+inline ::rti1516_2025::fedpro::DimensionHandle* DimensionAndRange::release_dimensionhandle() {
   
-  ::rti1516_202X::fedpro::DimensionHandle* temp = _impl_.dimensionhandle_;
+  ::rti1516_2025::fedpro::DimensionHandle* temp = _impl_.dimensionhandle_;
   _impl_.dimensionhandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -11223,27 +11223,27 @@ inline ::rti1516_202X::fedpro::DimensionHandle* DimensionAndRange::release_dimen
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::DimensionHandle* DimensionAndRange::unsafe_arena_release_dimensionhandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.DimensionAndRange.dimensionHandle)
+inline ::rti1516_2025::fedpro::DimensionHandle* DimensionAndRange::unsafe_arena_release_dimensionhandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.DimensionAndRange.dimensionHandle)
   
-  ::rti1516_202X::fedpro::DimensionHandle* temp = _impl_.dimensionhandle_;
+  ::rti1516_2025::fedpro::DimensionHandle* temp = _impl_.dimensionhandle_;
   _impl_.dimensionhandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::DimensionHandle* DimensionAndRange::_internal_mutable_dimensionhandle() {
+inline ::rti1516_2025::fedpro::DimensionHandle* DimensionAndRange::_internal_mutable_dimensionhandle() {
   
   if (_impl_.dimensionhandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::DimensionHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::DimensionHandle>(GetArenaForAllocation());
     _impl_.dimensionhandle_ = p;
   }
   return _impl_.dimensionhandle_;
 }
-inline ::rti1516_202X::fedpro::DimensionHandle* DimensionAndRange::mutable_dimensionhandle() {
-  ::rti1516_202X::fedpro::DimensionHandle* _msg = _internal_mutable_dimensionhandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.DimensionAndRange.dimensionHandle)
+inline ::rti1516_2025::fedpro::DimensionHandle* DimensionAndRange::mutable_dimensionhandle() {
+  ::rti1516_2025::fedpro::DimensionHandle* _msg = _internal_mutable_dimensionhandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.DimensionAndRange.dimensionHandle)
   return _msg;
 }
-inline void DimensionAndRange::set_allocated_dimensionhandle(::rti1516_202X::fedpro::DimensionHandle* dimensionhandle) {
+inline void DimensionAndRange::set_allocated_dimensionhandle(::rti1516_2025::fedpro::DimensionHandle* dimensionhandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.dimensionhandle_;
@@ -11260,10 +11260,10 @@ inline void DimensionAndRange::set_allocated_dimensionhandle(::rti1516_202X::fed
     
   }
   _impl_.dimensionhandle_ = dimensionhandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.DimensionAndRange.dimensionHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.DimensionAndRange.dimensionHandle)
 }
 
-// .rti1516_202X.fedpro.RangeBounds rangeBounds = 2;
+// .rti1516_2025.fedpro.RangeBounds rangeBounds = 2;
 inline bool DimensionAndRange::_internal_has_rangebounds() const {
   return this != internal_default_instance() && _impl_.rangebounds_ != nullptr;
 }
@@ -11276,17 +11276,17 @@ inline void DimensionAndRange::clear_rangebounds() {
   }
   _impl_.rangebounds_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::RangeBounds& DimensionAndRange::_internal_rangebounds() const {
-  const ::rti1516_202X::fedpro::RangeBounds* p = _impl_.rangebounds_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::RangeBounds&>(
-      ::rti1516_202X::fedpro::_RangeBounds_default_instance_);
+inline const ::rti1516_2025::fedpro::RangeBounds& DimensionAndRange::_internal_rangebounds() const {
+  const ::rti1516_2025::fedpro::RangeBounds* p = _impl_.rangebounds_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::RangeBounds&>(
+      ::rti1516_2025::fedpro::_RangeBounds_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::RangeBounds& DimensionAndRange::rangebounds() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.DimensionAndRange.rangeBounds)
+inline const ::rti1516_2025::fedpro::RangeBounds& DimensionAndRange::rangebounds() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.DimensionAndRange.rangeBounds)
   return _internal_rangebounds();
 }
 inline void DimensionAndRange::unsafe_arena_set_allocated_rangebounds(
-    ::rti1516_202X::fedpro::RangeBounds* rangebounds) {
+    ::rti1516_2025::fedpro::RangeBounds* rangebounds) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.rangebounds_);
   }
@@ -11296,11 +11296,11 @@ inline void DimensionAndRange::unsafe_arena_set_allocated_rangebounds(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.DimensionAndRange.rangeBounds)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.DimensionAndRange.rangeBounds)
 }
-inline ::rti1516_202X::fedpro::RangeBounds* DimensionAndRange::release_rangebounds() {
+inline ::rti1516_2025::fedpro::RangeBounds* DimensionAndRange::release_rangebounds() {
   
-  ::rti1516_202X::fedpro::RangeBounds* temp = _impl_.rangebounds_;
+  ::rti1516_2025::fedpro::RangeBounds* temp = _impl_.rangebounds_;
   _impl_.rangebounds_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -11313,27 +11313,27 @@ inline ::rti1516_202X::fedpro::RangeBounds* DimensionAndRange::release_rangeboun
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::RangeBounds* DimensionAndRange::unsafe_arena_release_rangebounds() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.DimensionAndRange.rangeBounds)
+inline ::rti1516_2025::fedpro::RangeBounds* DimensionAndRange::unsafe_arena_release_rangebounds() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.DimensionAndRange.rangeBounds)
   
-  ::rti1516_202X::fedpro::RangeBounds* temp = _impl_.rangebounds_;
+  ::rti1516_2025::fedpro::RangeBounds* temp = _impl_.rangebounds_;
   _impl_.rangebounds_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::RangeBounds* DimensionAndRange::_internal_mutable_rangebounds() {
+inline ::rti1516_2025::fedpro::RangeBounds* DimensionAndRange::_internal_mutable_rangebounds() {
   
   if (_impl_.rangebounds_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::RangeBounds>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::RangeBounds>(GetArenaForAllocation());
     _impl_.rangebounds_ = p;
   }
   return _impl_.rangebounds_;
 }
-inline ::rti1516_202X::fedpro::RangeBounds* DimensionAndRange::mutable_rangebounds() {
-  ::rti1516_202X::fedpro::RangeBounds* _msg = _internal_mutable_rangebounds();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.DimensionAndRange.rangeBounds)
+inline ::rti1516_2025::fedpro::RangeBounds* DimensionAndRange::mutable_rangebounds() {
+  ::rti1516_2025::fedpro::RangeBounds* _msg = _internal_mutable_rangebounds();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.DimensionAndRange.rangeBounds)
   return _msg;
 }
-inline void DimensionAndRange::set_allocated_rangebounds(::rti1516_202X::fedpro::RangeBounds* rangebounds) {
+inline void DimensionAndRange::set_allocated_rangebounds(::rti1516_2025::fedpro::RangeBounds* rangebounds) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.rangebounds_;
@@ -11350,14 +11350,14 @@ inline void DimensionAndRange::set_allocated_rangebounds(::rti1516_202X::fedpro:
     
   }
   _impl_.rangebounds_ = rangebounds;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.DimensionAndRange.rangeBounds)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.DimensionAndRange.rangeBounds)
 }
 
 // -------------------------------------------------------------------
 
 // ConveyedRegion
 
-// repeated .rti1516_202X.fedpro.DimensionAndRange dimensionAndRange = 1;
+// repeated .rti1516_2025.fedpro.DimensionAndRange dimensionAndRange = 1;
 inline int ConveyedRegion::_internal_dimensionandrange_size() const {
   return _impl_.dimensionandrange_.size();
 }
@@ -11367,33 +11367,33 @@ inline int ConveyedRegion::dimensionandrange_size() const {
 inline void ConveyedRegion::clear_dimensionandrange() {
   _impl_.dimensionandrange_.Clear();
 }
-inline ::rti1516_202X::fedpro::DimensionAndRange* ConveyedRegion::mutable_dimensionandrange(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ConveyedRegion.dimensionAndRange)
+inline ::rti1516_2025::fedpro::DimensionAndRange* ConveyedRegion::mutable_dimensionandrange(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ConveyedRegion.dimensionAndRange)
   return _impl_.dimensionandrange_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionAndRange >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionAndRange >*
 ConveyedRegion::mutable_dimensionandrange() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.ConveyedRegion.dimensionAndRange)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.ConveyedRegion.dimensionAndRange)
   return &_impl_.dimensionandrange_;
 }
-inline const ::rti1516_202X::fedpro::DimensionAndRange& ConveyedRegion::_internal_dimensionandrange(int index) const {
+inline const ::rti1516_2025::fedpro::DimensionAndRange& ConveyedRegion::_internal_dimensionandrange(int index) const {
   return _impl_.dimensionandrange_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::DimensionAndRange& ConveyedRegion::dimensionandrange(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ConveyedRegion.dimensionAndRange)
+inline const ::rti1516_2025::fedpro::DimensionAndRange& ConveyedRegion::dimensionandrange(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ConveyedRegion.dimensionAndRange)
   return _internal_dimensionandrange(index);
 }
-inline ::rti1516_202X::fedpro::DimensionAndRange* ConveyedRegion::_internal_add_dimensionandrange() {
+inline ::rti1516_2025::fedpro::DimensionAndRange* ConveyedRegion::_internal_add_dimensionandrange() {
   return _impl_.dimensionandrange_.Add();
 }
-inline ::rti1516_202X::fedpro::DimensionAndRange* ConveyedRegion::add_dimensionandrange() {
-  ::rti1516_202X::fedpro::DimensionAndRange* _add = _internal_add_dimensionandrange();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.ConveyedRegion.dimensionAndRange)
+inline ::rti1516_2025::fedpro::DimensionAndRange* ConveyedRegion::add_dimensionandrange() {
+  ::rti1516_2025::fedpro::DimensionAndRange* _add = _internal_add_dimensionandrange();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.ConveyedRegion.dimensionAndRange)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::DimensionAndRange >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::DimensionAndRange >&
 ConveyedRegion::dimensionandrange() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.ConveyedRegion.dimensionAndRange)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.ConveyedRegion.dimensionAndRange)
   return _impl_.dimensionandrange_;
 }
 
@@ -11401,7 +11401,7 @@ ConveyedRegion::dimensionandrange() const {
 
 // ConveyedRegionSet
 
-// repeated .rti1516_202X.fedpro.ConveyedRegion conveyedRegions = 1;
+// repeated .rti1516_2025.fedpro.ConveyedRegion conveyedRegions = 1;
 inline int ConveyedRegionSet::_internal_conveyedregions_size() const {
   return _impl_.conveyedregions_.size();
 }
@@ -11411,33 +11411,33 @@ inline int ConveyedRegionSet::conveyedregions_size() const {
 inline void ConveyedRegionSet::clear_conveyedregions() {
   _impl_.conveyedregions_.Clear();
 }
-inline ::rti1516_202X::fedpro::ConveyedRegion* ConveyedRegionSet::mutable_conveyedregions(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.ConveyedRegionSet.conveyedRegions)
+inline ::rti1516_2025::fedpro::ConveyedRegion* ConveyedRegionSet::mutable_conveyedregions(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.ConveyedRegionSet.conveyedRegions)
   return _impl_.conveyedregions_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ConveyedRegion >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ConveyedRegion >*
 ConveyedRegionSet::mutable_conveyedregions() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.ConveyedRegionSet.conveyedRegions)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.ConveyedRegionSet.conveyedRegions)
   return &_impl_.conveyedregions_;
 }
-inline const ::rti1516_202X::fedpro::ConveyedRegion& ConveyedRegionSet::_internal_conveyedregions(int index) const {
+inline const ::rti1516_2025::fedpro::ConveyedRegion& ConveyedRegionSet::_internal_conveyedregions(int index) const {
   return _impl_.conveyedregions_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::ConveyedRegion& ConveyedRegionSet::conveyedregions(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.ConveyedRegionSet.conveyedRegions)
+inline const ::rti1516_2025::fedpro::ConveyedRegion& ConveyedRegionSet::conveyedregions(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.ConveyedRegionSet.conveyedRegions)
   return _internal_conveyedregions(index);
 }
-inline ::rti1516_202X::fedpro::ConveyedRegion* ConveyedRegionSet::_internal_add_conveyedregions() {
+inline ::rti1516_2025::fedpro::ConveyedRegion* ConveyedRegionSet::_internal_add_conveyedregions() {
   return _impl_.conveyedregions_.Add();
 }
-inline ::rti1516_202X::fedpro::ConveyedRegion* ConveyedRegionSet::add_conveyedregions() {
-  ::rti1516_202X::fedpro::ConveyedRegion* _add = _internal_add_conveyedregions();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.ConveyedRegionSet.conveyedRegions)
+inline ::rti1516_2025::fedpro::ConveyedRegion* ConveyedRegionSet::add_conveyedregions() {
+  ::rti1516_2025::fedpro::ConveyedRegion* _add = _internal_add_conveyedregions();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.ConveyedRegionSet.conveyedRegions)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::ConveyedRegion >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::ConveyedRegion >&
 ConveyedRegionSet::conveyedregions() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.ConveyedRegionSet.conveyedRegions)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.ConveyedRegionSet.conveyedRegions)
   return _impl_.conveyedregions_;
 }
 
@@ -11445,7 +11445,7 @@ ConveyedRegionSet::conveyedregions() const {
 
 // SupplementalReflectInfo
 
-// .rti1516_202X.fedpro.FederateHandle producingFederate = 1;
+// .rti1516_2025.fedpro.FederateHandle producingFederate = 1;
 inline bool SupplementalReflectInfo::_internal_has_producingfederate() const {
   return this != internal_default_instance() && _impl_.producingfederate_ != nullptr;
 }
@@ -11458,17 +11458,17 @@ inline void SupplementalReflectInfo::clear_producingfederate() {
   }
   _impl_.producingfederate_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& SupplementalReflectInfo::_internal_producingfederate() const {
-  const ::rti1516_202X::fedpro::FederateHandle* p = _impl_.producingfederate_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::FederateHandle&>(
-      ::rti1516_202X::fedpro::_FederateHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::FederateHandle& SupplementalReflectInfo::_internal_producingfederate() const {
+  const ::rti1516_2025::fedpro::FederateHandle* p = _impl_.producingfederate_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::FederateHandle&>(
+      ::rti1516_2025::fedpro::_FederateHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& SupplementalReflectInfo::producingfederate() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.SupplementalReflectInfo.producingFederate)
+inline const ::rti1516_2025::fedpro::FederateHandle& SupplementalReflectInfo::producingfederate() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.SupplementalReflectInfo.producingFederate)
   return _internal_producingfederate();
 }
 inline void SupplementalReflectInfo::unsafe_arena_set_allocated_producingfederate(
-    ::rti1516_202X::fedpro::FederateHandle* producingfederate) {
+    ::rti1516_2025::fedpro::FederateHandle* producingfederate) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.producingfederate_);
   }
@@ -11478,11 +11478,11 @@ inline void SupplementalReflectInfo::unsafe_arena_set_allocated_producingfederat
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.SupplementalReflectInfo.producingFederate)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.SupplementalReflectInfo.producingFederate)
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReflectInfo::release_producingfederate() {
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReflectInfo::release_producingfederate() {
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.producingfederate_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.producingfederate_;
   _impl_.producingfederate_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -11495,27 +11495,27 @@ inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReflectInfo::release_
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReflectInfo::unsafe_arena_release_producingfederate() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.SupplementalReflectInfo.producingFederate)
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReflectInfo::unsafe_arena_release_producingfederate() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.SupplementalReflectInfo.producingFederate)
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.producingfederate_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.producingfederate_;
   _impl_.producingfederate_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReflectInfo::_internal_mutable_producingfederate() {
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReflectInfo::_internal_mutable_producingfederate() {
   
   if (_impl_.producingfederate_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandle>(GetArenaForAllocation());
     _impl_.producingfederate_ = p;
   }
   return _impl_.producingfederate_;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReflectInfo::mutable_producingfederate() {
-  ::rti1516_202X::fedpro::FederateHandle* _msg = _internal_mutable_producingfederate();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.SupplementalReflectInfo.producingFederate)
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReflectInfo::mutable_producingfederate() {
+  ::rti1516_2025::fedpro::FederateHandle* _msg = _internal_mutable_producingfederate();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.SupplementalReflectInfo.producingFederate)
   return _msg;
 }
-inline void SupplementalReflectInfo::set_allocated_producingfederate(::rti1516_202X::fedpro::FederateHandle* producingfederate) {
+inline void SupplementalReflectInfo::set_allocated_producingfederate(::rti1516_2025::fedpro::FederateHandle* producingfederate) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.producingfederate_;
@@ -11532,7 +11532,7 @@ inline void SupplementalReflectInfo::set_allocated_producingfederate(::rti1516_2
     
   }
   _impl_.producingfederate_ = producingfederate;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.SupplementalReflectInfo.producingFederate)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.SupplementalReflectInfo.producingFederate)
 }
 
 // bool conveyedRegionsIsValid = 2;
@@ -11543,7 +11543,7 @@ inline bool SupplementalReflectInfo::_internal_conveyedregionsisvalid() const {
   return _impl_.conveyedregionsisvalid_;
 }
 inline bool SupplementalReflectInfo::conveyedregionsisvalid() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.SupplementalReflectInfo.conveyedRegionsIsValid)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.SupplementalReflectInfo.conveyedRegionsIsValid)
   return _internal_conveyedregionsisvalid();
 }
 inline void SupplementalReflectInfo::_internal_set_conveyedregionsisvalid(bool value) {
@@ -11552,10 +11552,10 @@ inline void SupplementalReflectInfo::_internal_set_conveyedregionsisvalid(bool v
 }
 inline void SupplementalReflectInfo::set_conveyedregionsisvalid(bool value) {
   _internal_set_conveyedregionsisvalid(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.SupplementalReflectInfo.conveyedRegionsIsValid)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.SupplementalReflectInfo.conveyedRegionsIsValid)
 }
 
-// .rti1516_202X.fedpro.ConveyedRegionSet conveyedRegions = 3;
+// .rti1516_2025.fedpro.ConveyedRegionSet conveyedRegions = 3;
 inline bool SupplementalReflectInfo::_internal_has_conveyedregions() const {
   return this != internal_default_instance() && _impl_.conveyedregions_ != nullptr;
 }
@@ -11568,17 +11568,17 @@ inline void SupplementalReflectInfo::clear_conveyedregions() {
   }
   _impl_.conveyedregions_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::ConveyedRegionSet& SupplementalReflectInfo::_internal_conveyedregions() const {
-  const ::rti1516_202X::fedpro::ConveyedRegionSet* p = _impl_.conveyedregions_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::ConveyedRegionSet&>(
-      ::rti1516_202X::fedpro::_ConveyedRegionSet_default_instance_);
+inline const ::rti1516_2025::fedpro::ConveyedRegionSet& SupplementalReflectInfo::_internal_conveyedregions() const {
+  const ::rti1516_2025::fedpro::ConveyedRegionSet* p = _impl_.conveyedregions_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::ConveyedRegionSet&>(
+      ::rti1516_2025::fedpro::_ConveyedRegionSet_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::ConveyedRegionSet& SupplementalReflectInfo::conveyedregions() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.SupplementalReflectInfo.conveyedRegions)
+inline const ::rti1516_2025::fedpro::ConveyedRegionSet& SupplementalReflectInfo::conveyedregions() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.SupplementalReflectInfo.conveyedRegions)
   return _internal_conveyedregions();
 }
 inline void SupplementalReflectInfo::unsafe_arena_set_allocated_conveyedregions(
-    ::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions) {
+    ::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.conveyedregions_);
   }
@@ -11588,11 +11588,11 @@ inline void SupplementalReflectInfo::unsafe_arena_set_allocated_conveyedregions(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.SupplementalReflectInfo.conveyedRegions)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.SupplementalReflectInfo.conveyedRegions)
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReflectInfo::release_conveyedregions() {
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReflectInfo::release_conveyedregions() {
   
-  ::rti1516_202X::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
+  ::rti1516_2025::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
   _impl_.conveyedregions_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -11605,27 +11605,27 @@ inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReflectInfo::relea
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReflectInfo::unsafe_arena_release_conveyedregions() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.SupplementalReflectInfo.conveyedRegions)
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReflectInfo::unsafe_arena_release_conveyedregions() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.SupplementalReflectInfo.conveyedRegions)
   
-  ::rti1516_202X::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
+  ::rti1516_2025::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
   _impl_.conveyedregions_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReflectInfo::_internal_mutable_conveyedregions() {
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReflectInfo::_internal_mutable_conveyedregions() {
   
   if (_impl_.conveyedregions_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::ConveyedRegionSet>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::ConveyedRegionSet>(GetArenaForAllocation());
     _impl_.conveyedregions_ = p;
   }
   return _impl_.conveyedregions_;
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReflectInfo::mutable_conveyedregions() {
-  ::rti1516_202X::fedpro::ConveyedRegionSet* _msg = _internal_mutable_conveyedregions();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.SupplementalReflectInfo.conveyedRegions)
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReflectInfo::mutable_conveyedregions() {
+  ::rti1516_2025::fedpro::ConveyedRegionSet* _msg = _internal_mutable_conveyedregions();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.SupplementalReflectInfo.conveyedRegions)
   return _msg;
 }
-inline void SupplementalReflectInfo::set_allocated_conveyedregions(::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions) {
+inline void SupplementalReflectInfo::set_allocated_conveyedregions(::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.conveyedregions_;
@@ -11642,14 +11642,14 @@ inline void SupplementalReflectInfo::set_allocated_conveyedregions(::rti1516_202
     
   }
   _impl_.conveyedregions_ = conveyedregions;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.SupplementalReflectInfo.conveyedRegions)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.SupplementalReflectInfo.conveyedRegions)
 }
 
 // -------------------------------------------------------------------
 
 // SupplementalReceiveInfo
 
-// .rti1516_202X.fedpro.FederateHandle producingFederate = 1;
+// .rti1516_2025.fedpro.FederateHandle producingFederate = 1;
 inline bool SupplementalReceiveInfo::_internal_has_producingfederate() const {
   return this != internal_default_instance() && _impl_.producingfederate_ != nullptr;
 }
@@ -11662,17 +11662,17 @@ inline void SupplementalReceiveInfo::clear_producingfederate() {
   }
   _impl_.producingfederate_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& SupplementalReceiveInfo::_internal_producingfederate() const {
-  const ::rti1516_202X::fedpro::FederateHandle* p = _impl_.producingfederate_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::FederateHandle&>(
-      ::rti1516_202X::fedpro::_FederateHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::FederateHandle& SupplementalReceiveInfo::_internal_producingfederate() const {
+  const ::rti1516_2025::fedpro::FederateHandle* p = _impl_.producingfederate_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::FederateHandle&>(
+      ::rti1516_2025::fedpro::_FederateHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& SupplementalReceiveInfo::producingfederate() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.SupplementalReceiveInfo.producingFederate)
+inline const ::rti1516_2025::fedpro::FederateHandle& SupplementalReceiveInfo::producingfederate() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.SupplementalReceiveInfo.producingFederate)
   return _internal_producingfederate();
 }
 inline void SupplementalReceiveInfo::unsafe_arena_set_allocated_producingfederate(
-    ::rti1516_202X::fedpro::FederateHandle* producingfederate) {
+    ::rti1516_2025::fedpro::FederateHandle* producingfederate) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.producingfederate_);
   }
@@ -11682,11 +11682,11 @@ inline void SupplementalReceiveInfo::unsafe_arena_set_allocated_producingfederat
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.SupplementalReceiveInfo.producingFederate)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.SupplementalReceiveInfo.producingFederate)
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReceiveInfo::release_producingfederate() {
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReceiveInfo::release_producingfederate() {
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.producingfederate_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.producingfederate_;
   _impl_.producingfederate_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -11699,27 +11699,27 @@ inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReceiveInfo::release_
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReceiveInfo::unsafe_arena_release_producingfederate() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.SupplementalReceiveInfo.producingFederate)
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReceiveInfo::unsafe_arena_release_producingfederate() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.SupplementalReceiveInfo.producingFederate)
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.producingfederate_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.producingfederate_;
   _impl_.producingfederate_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReceiveInfo::_internal_mutable_producingfederate() {
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReceiveInfo::_internal_mutable_producingfederate() {
   
   if (_impl_.producingfederate_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandle>(GetArenaForAllocation());
     _impl_.producingfederate_ = p;
   }
   return _impl_.producingfederate_;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* SupplementalReceiveInfo::mutable_producingfederate() {
-  ::rti1516_202X::fedpro::FederateHandle* _msg = _internal_mutable_producingfederate();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.SupplementalReceiveInfo.producingFederate)
+inline ::rti1516_2025::fedpro::FederateHandle* SupplementalReceiveInfo::mutable_producingfederate() {
+  ::rti1516_2025::fedpro::FederateHandle* _msg = _internal_mutable_producingfederate();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.SupplementalReceiveInfo.producingFederate)
   return _msg;
 }
-inline void SupplementalReceiveInfo::set_allocated_producingfederate(::rti1516_202X::fedpro::FederateHandle* producingfederate) {
+inline void SupplementalReceiveInfo::set_allocated_producingfederate(::rti1516_2025::fedpro::FederateHandle* producingfederate) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.producingfederate_;
@@ -11736,7 +11736,7 @@ inline void SupplementalReceiveInfo::set_allocated_producingfederate(::rti1516_2
     
   }
   _impl_.producingfederate_ = producingfederate;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.SupplementalReceiveInfo.producingFederate)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.SupplementalReceiveInfo.producingFederate)
 }
 
 // bool conveyedRegionsIsValid = 2;
@@ -11747,7 +11747,7 @@ inline bool SupplementalReceiveInfo::_internal_conveyedregionsisvalid() const {
   return _impl_.conveyedregionsisvalid_;
 }
 inline bool SupplementalReceiveInfo::conveyedregionsisvalid() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.SupplementalReceiveInfo.conveyedRegionsIsValid)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.SupplementalReceiveInfo.conveyedRegionsIsValid)
   return _internal_conveyedregionsisvalid();
 }
 inline void SupplementalReceiveInfo::_internal_set_conveyedregionsisvalid(bool value) {
@@ -11756,10 +11756,10 @@ inline void SupplementalReceiveInfo::_internal_set_conveyedregionsisvalid(bool v
 }
 inline void SupplementalReceiveInfo::set_conveyedregionsisvalid(bool value) {
   _internal_set_conveyedregionsisvalid(value);
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.SupplementalReceiveInfo.conveyedRegionsIsValid)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.SupplementalReceiveInfo.conveyedRegionsIsValid)
 }
 
-// .rti1516_202X.fedpro.ConveyedRegionSet conveyedRegions = 3;
+// .rti1516_2025.fedpro.ConveyedRegionSet conveyedRegions = 3;
 inline bool SupplementalReceiveInfo::_internal_has_conveyedregions() const {
   return this != internal_default_instance() && _impl_.conveyedregions_ != nullptr;
 }
@@ -11772,17 +11772,17 @@ inline void SupplementalReceiveInfo::clear_conveyedregions() {
   }
   _impl_.conveyedregions_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::ConveyedRegionSet& SupplementalReceiveInfo::_internal_conveyedregions() const {
-  const ::rti1516_202X::fedpro::ConveyedRegionSet* p = _impl_.conveyedregions_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::ConveyedRegionSet&>(
-      ::rti1516_202X::fedpro::_ConveyedRegionSet_default_instance_);
+inline const ::rti1516_2025::fedpro::ConveyedRegionSet& SupplementalReceiveInfo::_internal_conveyedregions() const {
+  const ::rti1516_2025::fedpro::ConveyedRegionSet* p = _impl_.conveyedregions_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::ConveyedRegionSet&>(
+      ::rti1516_2025::fedpro::_ConveyedRegionSet_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::ConveyedRegionSet& SupplementalReceiveInfo::conveyedregions() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.SupplementalReceiveInfo.conveyedRegions)
+inline const ::rti1516_2025::fedpro::ConveyedRegionSet& SupplementalReceiveInfo::conveyedregions() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.SupplementalReceiveInfo.conveyedRegions)
   return _internal_conveyedregions();
 }
 inline void SupplementalReceiveInfo::unsafe_arena_set_allocated_conveyedregions(
-    ::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions) {
+    ::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.conveyedregions_);
   }
@@ -11792,11 +11792,11 @@ inline void SupplementalReceiveInfo::unsafe_arena_set_allocated_conveyedregions(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.SupplementalReceiveInfo.conveyedRegions)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.SupplementalReceiveInfo.conveyedRegions)
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::release_conveyedregions() {
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::release_conveyedregions() {
   
-  ::rti1516_202X::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
+  ::rti1516_2025::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
   _impl_.conveyedregions_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -11809,27 +11809,27 @@ inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::relea
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::unsafe_arena_release_conveyedregions() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.SupplementalReceiveInfo.conveyedRegions)
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::unsafe_arena_release_conveyedregions() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.SupplementalReceiveInfo.conveyedRegions)
   
-  ::rti1516_202X::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
+  ::rti1516_2025::fedpro::ConveyedRegionSet* temp = _impl_.conveyedregions_;
   _impl_.conveyedregions_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::_internal_mutable_conveyedregions() {
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::_internal_mutable_conveyedregions() {
   
   if (_impl_.conveyedregions_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::ConveyedRegionSet>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::ConveyedRegionSet>(GetArenaForAllocation());
     _impl_.conveyedregions_ = p;
   }
   return _impl_.conveyedregions_;
 }
-inline ::rti1516_202X::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::mutable_conveyedregions() {
-  ::rti1516_202X::fedpro::ConveyedRegionSet* _msg = _internal_mutable_conveyedregions();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.SupplementalReceiveInfo.conveyedRegions)
+inline ::rti1516_2025::fedpro::ConveyedRegionSet* SupplementalReceiveInfo::mutable_conveyedregions() {
+  ::rti1516_2025::fedpro::ConveyedRegionSet* _msg = _internal_mutable_conveyedregions();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.SupplementalReceiveInfo.conveyedRegions)
   return _msg;
 }
-inline void SupplementalReceiveInfo::set_allocated_conveyedregions(::rti1516_202X::fedpro::ConveyedRegionSet* conveyedregions) {
+inline void SupplementalReceiveInfo::set_allocated_conveyedregions(::rti1516_2025::fedpro::ConveyedRegionSet* conveyedregions) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.conveyedregions_;
@@ -11846,14 +11846,14 @@ inline void SupplementalReceiveInfo::set_allocated_conveyedregions(::rti1516_202
     
   }
   _impl_.conveyedregions_ = conveyedregions;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.SupplementalReceiveInfo.conveyedRegions)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.SupplementalReceiveInfo.conveyedRegions)
 }
 
 // -------------------------------------------------------------------
 
 // FomModule
 
-// .rti1516_202X.fedpro.FileFomModule file = 1;
+// .rti1516_2025.fedpro.FileFomModule file = 1;
 inline bool FomModule::_internal_has_file() const {
   return fomModule_case() == kFile;
 }
@@ -11871,11 +11871,11 @@ inline void FomModule::clear_file() {
     clear_has_fomModule();
   }
 }
-inline ::rti1516_202X::fedpro::FileFomModule* FomModule::release_file() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FomModule.file)
+inline ::rti1516_2025::fedpro::FileFomModule* FomModule::release_file() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FomModule.file)
   if (_internal_has_file()) {
     clear_has_fomModule();
-    ::rti1516_202X::fedpro::FileFomModule* temp = _impl_.fomModule_.file_;
+    ::rti1516_2025::fedpro::FileFomModule* temp = _impl_.fomModule_.file_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -11885,45 +11885,45 @@ inline ::rti1516_202X::fedpro::FileFomModule* FomModule::release_file() {
     return nullptr;
   }
 }
-inline const ::rti1516_202X::fedpro::FileFomModule& FomModule::_internal_file() const {
+inline const ::rti1516_2025::fedpro::FileFomModule& FomModule::_internal_file() const {
   return _internal_has_file()
       ? *_impl_.fomModule_.file_
-      : reinterpret_cast< ::rti1516_202X::fedpro::FileFomModule&>(::rti1516_202X::fedpro::_FileFomModule_default_instance_);
+      : reinterpret_cast< ::rti1516_2025::fedpro::FileFomModule&>(::rti1516_2025::fedpro::_FileFomModule_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::FileFomModule& FomModule::file() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FomModule.file)
+inline const ::rti1516_2025::fedpro::FileFomModule& FomModule::file() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FomModule.file)
   return _internal_file();
 }
-inline ::rti1516_202X::fedpro::FileFomModule* FomModule::unsafe_arena_release_file() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:rti1516_202X.fedpro.FomModule.file)
+inline ::rti1516_2025::fedpro::FileFomModule* FomModule::unsafe_arena_release_file() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:rti1516_2025.fedpro.FomModule.file)
   if (_internal_has_file()) {
     clear_has_fomModule();
-    ::rti1516_202X::fedpro::FileFomModule* temp = _impl_.fomModule_.file_;
+    ::rti1516_2025::fedpro::FileFomModule* temp = _impl_.fomModule_.file_;
     _impl_.fomModule_.file_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FomModule::unsafe_arena_set_allocated_file(::rti1516_202X::fedpro::FileFomModule* file) {
+inline void FomModule::unsafe_arena_set_allocated_file(::rti1516_2025::fedpro::FileFomModule* file) {
   clear_fomModule();
   if (file) {
     set_has_file();
     _impl_.fomModule_.file_ = file;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.FomModule.file)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.FomModule.file)
 }
-inline ::rti1516_202X::fedpro::FileFomModule* FomModule::_internal_mutable_file() {
+inline ::rti1516_2025::fedpro::FileFomModule* FomModule::_internal_mutable_file() {
   if (!_internal_has_file()) {
     clear_fomModule();
     set_has_file();
-    _impl_.fomModule_.file_ = CreateMaybeMessage< ::rti1516_202X::fedpro::FileFomModule >(GetArenaForAllocation());
+    _impl_.fomModule_.file_ = CreateMaybeMessage< ::rti1516_2025::fedpro::FileFomModule >(GetArenaForAllocation());
   }
   return _impl_.fomModule_.file_;
 }
-inline ::rti1516_202X::fedpro::FileFomModule* FomModule::mutable_file() {
-  ::rti1516_202X::fedpro::FileFomModule* _msg = _internal_mutable_file();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FomModule.file)
+inline ::rti1516_2025::fedpro::FileFomModule* FomModule::mutable_file() {
+  ::rti1516_2025::fedpro::FileFomModule* _msg = _internal_mutable_file();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FomModule.file)
   return _msg;
 }
 
@@ -11944,7 +11944,7 @@ inline void FomModule::clear_compressedmodule() {
   }
 }
 inline const std::string& FomModule::compressedmodule() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FomModule.compressedModule)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FomModule.compressedModule)
   return _internal_compressedmodule();
 }
 template <typename ArgT0, typename... ArgT>
@@ -11955,11 +11955,11 @@ inline void FomModule::set_compressedmodule(ArgT0&& arg0, ArgT... args) {
     _impl_.fomModule_.compressedmodule_.InitDefault();
   }
   _impl_.fomModule_.compressedmodule_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FomModule.compressedModule)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FomModule.compressedModule)
 }
 inline std::string* FomModule::mutable_compressedmodule() {
   std::string* _s = _internal_mutable_compressedmodule();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FomModule.compressedModule)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FomModule.compressedModule)
   return _s;
 }
 inline const std::string& FomModule::_internal_compressedmodule() const {
@@ -11985,7 +11985,7 @@ inline std::string* FomModule::_internal_mutable_compressedmodule() {
   return _impl_.fomModule_.compressedmodule_.Mutable(      GetArenaForAllocation());
 }
 inline std::string* FomModule::release_compressedmodule() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FomModule.compressedModule)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FomModule.compressedModule)
   if (_internal_has_compressedmodule()) {
     clear_has_fomModule();
     return _impl_.fomModule_.compressedmodule_.Release();
@@ -12001,7 +12001,7 @@ inline void FomModule::set_allocated_compressedmodule(std::string* compressedmod
     set_has_compressedmodule();
     _impl_.fomModule_.compressedmodule_.InitAllocated(compressedmodule, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FomModule.compressedModule)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FomModule.compressedModule)
 }
 
 // string url = 3;
@@ -12021,7 +12021,7 @@ inline void FomModule::clear_url() {
   }
 }
 inline const std::string& FomModule::url() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FomModule.url)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FomModule.url)
   return _internal_url();
 }
 template <typename ArgT0, typename... ArgT>
@@ -12032,11 +12032,11 @@ inline void FomModule::set_url(ArgT0&& arg0, ArgT... args) {
     _impl_.fomModule_.url_.InitDefault();
   }
   _impl_.fomModule_.url_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FomModule.url)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FomModule.url)
 }
 inline std::string* FomModule::mutable_url() {
   std::string* _s = _internal_mutable_url();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FomModule.url)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FomModule.url)
   return _s;
 }
 inline const std::string& FomModule::_internal_url() const {
@@ -12062,7 +12062,7 @@ inline std::string* FomModule::_internal_mutable_url() {
   return _impl_.fomModule_.url_.Mutable(      GetArenaForAllocation());
 }
 inline std::string* FomModule::release_url() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FomModule.url)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FomModule.url)
   if (_internal_has_url()) {
     clear_has_fomModule();
     return _impl_.fomModule_.url_.Release();
@@ -12078,7 +12078,7 @@ inline void FomModule::set_allocated_url(std::string* url) {
     set_has_url();
     _impl_.fomModule_.url_.InitAllocated(url, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FomModule.url)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FomModule.url)
 }
 
 inline bool FomModule::has_fomModule() const {
@@ -12099,7 +12099,7 @@ inline void FileFomModule::clear_name() {
   _impl_.name_.ClearToEmpty();
 }
 inline const std::string& FileFomModule::name() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FileFomModule.name)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FileFomModule.name)
   return _internal_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -12107,11 +12107,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void FileFomModule::set_name(ArgT0&& arg0, ArgT... args) {
  
  _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FileFomModule.name)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FileFomModule.name)
 }
 inline std::string* FileFomModule::mutable_name() {
   std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FileFomModule.name)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FileFomModule.name)
   return _s;
 }
 inline const std::string& FileFomModule::_internal_name() const {
@@ -12126,7 +12126,7 @@ inline std::string* FileFomModule::_internal_mutable_name() {
   return _impl_.name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileFomModule::release_name() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FileFomModule.name)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FileFomModule.name)
   return _impl_.name_.Release();
 }
 inline void FileFomModule::set_allocated_name(std::string* name) {
@@ -12141,7 +12141,7 @@ inline void FileFomModule::set_allocated_name(std::string* name) {
     _impl_.name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FileFomModule.name)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FileFomModule.name)
 }
 
 // bytes content = 2;
@@ -12149,7 +12149,7 @@ inline void FileFomModule::clear_content() {
   _impl_.content_.ClearToEmpty();
 }
 inline const std::string& FileFomModule::content() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FileFomModule.content)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FileFomModule.content)
   return _internal_content();
 }
 template <typename ArgT0, typename... ArgT>
@@ -12157,11 +12157,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void FileFomModule::set_content(ArgT0&& arg0, ArgT... args) {
  
  _impl_.content_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.FileFomModule.content)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.FileFomModule.content)
 }
 inline std::string* FileFomModule::mutable_content() {
   std::string* _s = _internal_mutable_content();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FileFomModule.content)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FileFomModule.content)
   return _s;
 }
 inline const std::string& FileFomModule::_internal_content() const {
@@ -12176,7 +12176,7 @@ inline std::string* FileFomModule::_internal_mutable_content() {
   return _impl_.content_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileFomModule::release_content() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.FileFomModule.content)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.FileFomModule.content)
   return _impl_.content_.Release();
 }
 inline void FileFomModule::set_allocated_content(std::string* content) {
@@ -12191,14 +12191,14 @@ inline void FileFomModule::set_allocated_content(std::string* content) {
     _impl_.content_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.FileFomModule.content)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.FileFomModule.content)
 }
 
 // -------------------------------------------------------------------
 
 // FomModuleSet
 
-// repeated .rti1516_202X.fedpro.FomModule fomModule = 1;
+// repeated .rti1516_2025.fedpro.FomModule fomModule = 1;
 inline int FomModuleSet::_internal_fommodule_size() const {
   return _impl_.fommodule_.size();
 }
@@ -12208,33 +12208,33 @@ inline int FomModuleSet::fommodule_size() const {
 inline void FomModuleSet::clear_fommodule() {
   _impl_.fommodule_.Clear();
 }
-inline ::rti1516_202X::fedpro::FomModule* FomModuleSet::mutable_fommodule(int index) {
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.FomModuleSet.fomModule)
+inline ::rti1516_2025::fedpro::FomModule* FomModuleSet::mutable_fommodule(int index) {
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.FomModuleSet.fomModule)
   return _impl_.fommodule_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FomModule >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FomModule >*
 FomModuleSet::mutable_fommodule() {
-  // @@protoc_insertion_point(field_mutable_list:rti1516_202X.fedpro.FomModuleSet.fomModule)
+  // @@protoc_insertion_point(field_mutable_list:rti1516_2025.fedpro.FomModuleSet.fomModule)
   return &_impl_.fommodule_;
 }
-inline const ::rti1516_202X::fedpro::FomModule& FomModuleSet::_internal_fommodule(int index) const {
+inline const ::rti1516_2025::fedpro::FomModule& FomModuleSet::_internal_fommodule(int index) const {
   return _impl_.fommodule_.Get(index);
 }
-inline const ::rti1516_202X::fedpro::FomModule& FomModuleSet::fommodule(int index) const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.FomModuleSet.fomModule)
+inline const ::rti1516_2025::fedpro::FomModule& FomModuleSet::fommodule(int index) const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.FomModuleSet.fomModule)
   return _internal_fommodule(index);
 }
-inline ::rti1516_202X::fedpro::FomModule* FomModuleSet::_internal_add_fommodule() {
+inline ::rti1516_2025::fedpro::FomModule* FomModuleSet::_internal_add_fommodule() {
   return _impl_.fommodule_.Add();
 }
-inline ::rti1516_202X::fedpro::FomModule* FomModuleSet::add_fommodule() {
-  ::rti1516_202X::fedpro::FomModule* _add = _internal_add_fommodule();
-  // @@protoc_insertion_point(field_add:rti1516_202X.fedpro.FomModuleSet.fomModule)
+inline ::rti1516_2025::fedpro::FomModule* FomModuleSet::add_fommodule() {
+  ::rti1516_2025::fedpro::FomModule* _add = _internal_add_fommodule();
+  // @@protoc_insertion_point(field_add:rti1516_2025.fedpro.FomModuleSet.fomModule)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_202X::fedpro::FomModule >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::rti1516_2025::fedpro::FomModule >&
 FomModuleSet::fommodule() const {
-  // @@protoc_insertion_point(field_list:rti1516_202X.fedpro.FomModuleSet.fomModule)
+  // @@protoc_insertion_point(field_list:rti1516_2025.fedpro.FomModuleSet.fomModule)
   return _impl_.fommodule_;
 }
 
@@ -12242,7 +12242,7 @@ FomModuleSet::fommodule() const {
 
 // JoinResult
 
-// .rti1516_202X.fedpro.FederateHandle federateHandle = 1;
+// .rti1516_2025.fedpro.FederateHandle federateHandle = 1;
 inline bool JoinResult::_internal_has_federatehandle() const {
   return this != internal_default_instance() && _impl_.federatehandle_ != nullptr;
 }
@@ -12255,17 +12255,17 @@ inline void JoinResult::clear_federatehandle() {
   }
   _impl_.federatehandle_ = nullptr;
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& JoinResult::_internal_federatehandle() const {
-  const ::rti1516_202X::fedpro::FederateHandle* p = _impl_.federatehandle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_202X::fedpro::FederateHandle&>(
-      ::rti1516_202X::fedpro::_FederateHandle_default_instance_);
+inline const ::rti1516_2025::fedpro::FederateHandle& JoinResult::_internal_federatehandle() const {
+  const ::rti1516_2025::fedpro::FederateHandle* p = _impl_.federatehandle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::rti1516_2025::fedpro::FederateHandle&>(
+      ::rti1516_2025::fedpro::_FederateHandle_default_instance_);
 }
-inline const ::rti1516_202X::fedpro::FederateHandle& JoinResult::federatehandle() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.JoinResult.federateHandle)
+inline const ::rti1516_2025::fedpro::FederateHandle& JoinResult::federatehandle() const {
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.JoinResult.federateHandle)
   return _internal_federatehandle();
 }
 inline void JoinResult::unsafe_arena_set_allocated_federatehandle(
-    ::rti1516_202X::fedpro::FederateHandle* federatehandle) {
+    ::rti1516_2025::fedpro::FederateHandle* federatehandle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.federatehandle_);
   }
@@ -12275,11 +12275,11 @@ inline void JoinResult::unsafe_arena_set_allocated_federatehandle(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_202X.fedpro.JoinResult.federateHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:rti1516_2025.fedpro.JoinResult.federateHandle)
 }
-inline ::rti1516_202X::fedpro::FederateHandle* JoinResult::release_federatehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* JoinResult::release_federatehandle() {
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.federatehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.federatehandle_;
   _impl_.federatehandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -12292,27 +12292,27 @@ inline ::rti1516_202X::fedpro::FederateHandle* JoinResult::release_federatehandl
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* JoinResult::unsafe_arena_release_federatehandle() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.JoinResult.federateHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* JoinResult::unsafe_arena_release_federatehandle() {
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.JoinResult.federateHandle)
   
-  ::rti1516_202X::fedpro::FederateHandle* temp = _impl_.federatehandle_;
+  ::rti1516_2025::fedpro::FederateHandle* temp = _impl_.federatehandle_;
   _impl_.federatehandle_ = nullptr;
   return temp;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* JoinResult::_internal_mutable_federatehandle() {
+inline ::rti1516_2025::fedpro::FederateHandle* JoinResult::_internal_mutable_federatehandle() {
   
   if (_impl_.federatehandle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::rti1516_202X::fedpro::FederateHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::rti1516_2025::fedpro::FederateHandle>(GetArenaForAllocation());
     _impl_.federatehandle_ = p;
   }
   return _impl_.federatehandle_;
 }
-inline ::rti1516_202X::fedpro::FederateHandle* JoinResult::mutable_federatehandle() {
-  ::rti1516_202X::fedpro::FederateHandle* _msg = _internal_mutable_federatehandle();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.JoinResult.federateHandle)
+inline ::rti1516_2025::fedpro::FederateHandle* JoinResult::mutable_federatehandle() {
+  ::rti1516_2025::fedpro::FederateHandle* _msg = _internal_mutable_federatehandle();
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.JoinResult.federateHandle)
   return _msg;
 }
-inline void JoinResult::set_allocated_federatehandle(::rti1516_202X::fedpro::FederateHandle* federatehandle) {
+inline void JoinResult::set_allocated_federatehandle(::rti1516_2025::fedpro::FederateHandle* federatehandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.federatehandle_;
@@ -12329,7 +12329,7 @@ inline void JoinResult::set_allocated_federatehandle(::rti1516_202X::fedpro::Fed
     
   }
   _impl_.federatehandle_ = federatehandle;
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.JoinResult.federateHandle)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.JoinResult.federateHandle)
 }
 
 // string logicalTimeImplementationName = 2;
@@ -12337,7 +12337,7 @@ inline void JoinResult::clear_logicaltimeimplementationname() {
   _impl_.logicaltimeimplementationname_.ClearToEmpty();
 }
 inline const std::string& JoinResult::logicaltimeimplementationname() const {
-  // @@protoc_insertion_point(field_get:rti1516_202X.fedpro.JoinResult.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_get:rti1516_2025.fedpro.JoinResult.logicalTimeImplementationName)
   return _internal_logicaltimeimplementationname();
 }
 template <typename ArgT0, typename... ArgT>
@@ -12345,11 +12345,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void JoinResult::set_logicaltimeimplementationname(ArgT0&& arg0, ArgT... args) {
  
  _impl_.logicaltimeimplementationname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:rti1516_202X.fedpro.JoinResult.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_set:rti1516_2025.fedpro.JoinResult.logicalTimeImplementationName)
 }
 inline std::string* JoinResult::mutable_logicaltimeimplementationname() {
   std::string* _s = _internal_mutable_logicaltimeimplementationname();
-  // @@protoc_insertion_point(field_mutable:rti1516_202X.fedpro.JoinResult.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_mutable:rti1516_2025.fedpro.JoinResult.logicalTimeImplementationName)
   return _s;
 }
 inline const std::string& JoinResult::_internal_logicaltimeimplementationname() const {
@@ -12364,7 +12364,7 @@ inline std::string* JoinResult::_internal_mutable_logicaltimeimplementationname(
   return _impl_.logicaltimeimplementationname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* JoinResult::release_logicaltimeimplementationname() {
-  // @@protoc_insertion_point(field_release:rti1516_202X.fedpro.JoinResult.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_release:rti1516_2025.fedpro.JoinResult.logicalTimeImplementationName)
   return _impl_.logicaltimeimplementationname_.Release();
 }
 inline void JoinResult::set_allocated_logicaltimeimplementationname(std::string* logicaltimeimplementationname) {
@@ -12379,7 +12379,7 @@ inline void JoinResult::set_allocated_logicaltimeimplementationname(std::string*
     _impl_.logicaltimeimplementationname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.JoinResult.logicalTimeImplementationName)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.JoinResult.logicalTimeImplementationName)
 }
 
 #ifdef __GNUC__
@@ -12481,59 +12481,59 @@ inline void JoinResult::set_allocated_logicaltimeimplementationname(std::string*
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace fedpro
-}  // namespace rti1516_202X
+}  // namespace rti1516_2025
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::AdditionalSettingsResultCode> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::AdditionalSettingsResultCode> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::AdditionalSettingsResultCode>() {
-  return ::rti1516_202X::fedpro::AdditionalSettingsResultCode_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::AdditionalSettingsResultCode>() {
+  return ::rti1516_2025::fedpro::AdditionalSettingsResultCode_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::CallbackModel> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::CallbackModel> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::CallbackModel>() {
-  return ::rti1516_202X::fedpro::CallbackModel_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::CallbackModel>() {
+  return ::rti1516_2025::fedpro::CallbackModel_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::ResignAction> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::ResignAction> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::ResignAction>() {
-  return ::rti1516_202X::fedpro::ResignAction_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::ResignAction>() {
+  return ::rti1516_2025::fedpro::ResignAction_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::SynchronizationPointFailureReason> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::SynchronizationPointFailureReason> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::SynchronizationPointFailureReason>() {
-  return ::rti1516_202X::fedpro::SynchronizationPointFailureReason_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::SynchronizationPointFailureReason>() {
+  return ::rti1516_2025::fedpro::SynchronizationPointFailureReason_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::SaveFailureReason> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::SaveFailureReason> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::SaveFailureReason>() {
-  return ::rti1516_202X::fedpro::SaveFailureReason_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::SaveFailureReason>() {
+  return ::rti1516_2025::fedpro::SaveFailureReason_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::RestoreFailureReason> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::RestoreFailureReason> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::RestoreFailureReason>() {
-  return ::rti1516_202X::fedpro::RestoreFailureReason_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::RestoreFailureReason>() {
+  return ::rti1516_2025::fedpro::RestoreFailureReason_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::SaveStatus> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::SaveStatus> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::SaveStatus>() {
-  return ::rti1516_202X::fedpro::SaveStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::SaveStatus>() {
+  return ::rti1516_2025::fedpro::SaveStatus_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::RestoreStatus> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::RestoreStatus> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::RestoreStatus>() {
-  return ::rti1516_202X::fedpro::RestoreStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::RestoreStatus>() {
+  return ::rti1516_2025::fedpro::RestoreStatus_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::OrderType> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::OrderType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::OrderType>() {
-  return ::rti1516_202X::fedpro::OrderType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::OrderType>() {
+  return ::rti1516_2025::fedpro::OrderType_descriptor();
 }
-template <> struct is_proto_enum< ::rti1516_202X::fedpro::ServiceGroup> : ::std::true_type {};
+template <> struct is_proto_enum< ::rti1516_2025::fedpro::ServiceGroup> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_202X::fedpro::ServiceGroup>() {
-  return ::rti1516_202X::fedpro::ServiceGroup_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::rti1516_2025::fedpro::ServiceGroup>() {
+  return ::rti1516_2025::fedpro::ServiceGroup_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

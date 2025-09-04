@@ -49,7 +49,7 @@ namespace FedPro
       return {SIZE + payloadSize, sequenceNumber, sessionId, lastReceivedSequenceNumber, messageType};
    }
 
-   uint64_t MessageHeader::getPayloadSize() const noexcept
+   uint32_t MessageHeader::getPayloadSize() const noexcept
    {
       return packetSize - SIZE;
    }

@@ -224,9 +224,6 @@ public class FederateAmbassadorClientAdapter {
       _federateAmbassador.discoverObjectInstance(theObject, theObjectClass, objectName);
    }
 
-   // TODO HLA 4 always passes Producing Federate. Evolved federate shall only get Producing
-   //  Federate is conveyProducingFederate switch is enable. The server-side federate is HLA 4
-   //  so it always gets Producing Federate. This is basically unsolvable.
    public void discoverObjectInstanceWithProducer(
          ObjectInstanceHandle theObject,
          ObjectClassHandle theObjectClass,
@@ -235,7 +232,11 @@ public class FederateAmbassadorClientAdapter {
    throws
          FederateInternalError
    {
-      _federateAmbassador.discoverObjectInstance(theObject, theObjectClass, objectName, producingFederate);
+      if (producingFederate != null) {
+         _federateAmbassador.discoverObjectInstance(theObject, theObjectClass, objectName, producingFederate);
+      } else {
+         _federateAmbassador.discoverObjectInstance(theObject, theObjectClass, objectName);
+      }
    }
 
    public void reflectAttributeValues(

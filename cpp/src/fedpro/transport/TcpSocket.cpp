@@ -112,13 +112,8 @@ namespace FedPro
       long n{0};
 #if defined(_WIN32)
       // Avoid int overflow on Windows
-      int maxReadBytes{0};
-      if (numOfBytes > std::numeric_limits<int>::max()) {
-         maxReadBytes = std::numeric_limits<int>::max();
-      } else {
-         maxReadBytes = static_cast<int>(numOfBytes);
-      }
-      n = ::recv(_socket, buf, maxReadBytes, 0);
+      uint32_t maxReadBytes = std::min<uint32_t>(numOfBytes, std::numeric_limits<int>::max());
+      n = ::recv(_socket, buf, static_cast<int>(maxReadBytes), 0);
 #else
       size_t fulfilled{0};
       size_t maxReadBytes{numOfBytes};
@@ -230,6 +225,7 @@ namespace FedPro
 
 #ifndef _WIN32
       // Set default timeout.
+      // TODO: this shall be made configurable
       setTimeout(100);
 #endif
    }

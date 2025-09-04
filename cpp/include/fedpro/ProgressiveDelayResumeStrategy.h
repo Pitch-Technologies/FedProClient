@@ -40,21 +40,21 @@
 
 namespace FedPro
 {
-   class FEDPRO_EXPORT ProgressiveDelayResumeStrategy : public ResumeStrategy
+   class ProgressiveDelayResumeStrategy : public ResumeStrategy
    {
    public:
 
-      ProgressiveDelayResumeStrategy() = default;
+      FEDPRO_EXPORT ProgressiveDelayResumeStrategy();
 
-      ProgressiveDelayResumeStrategy & withLimit(
+      FEDPRO_EXPORT ProgressiveDelayResumeStrategy & withLimit(
             FedProDuration delayBeforeLimit,
             FedProDuration limit);
 
-      bool shouldRetry(FedProDuration timeSinceDisconnect) noexcept override;
+      FEDPRO_EXPORT bool shouldRetry(FedProDuration timeSinceDisconnect) noexcept override;
 
-      FedProDuration getRetryDelay(FedProDuration timeSinceDisconnect) noexcept override;
+      FEDPRO_EXPORT FedProDuration getRetryDelay(FedProDuration timeSinceDisconnect) noexcept override;
 
-      FedProDuration getRetryLimit() noexcept override;
+      FEDPRO_EXPORT FedProDuration getRetryLimit() noexcept override;
 
    private:
       std::map<FedProDuration, FedProDuration> _delayBeforeEachLimit;

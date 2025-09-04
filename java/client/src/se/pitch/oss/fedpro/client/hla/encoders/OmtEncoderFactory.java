@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.client.hla.encoders;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.encoding.*;
-import hla.rti1516_202X.time.LogicalTime;
-import hla.rti1516_202X.time.LogicalTimeInterval;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.encoding.*;
+import hla.rti1516_2025.time.LogicalTime;
+import hla.rti1516_2025.time.LogicalTimeInterval;
 
 public class OmtEncoderFactory implements EncoderFactory {
    private static final OmtEncoderFactory OMT_FACTORY = new OmtEncoderFactory();
@@ -452,6 +452,21 @@ public class OmtEncoderFactory implements EncoderFactory {
          RegionHandle regionHandle)
    {
       return new OmtHLAregionHandle(rtiAmbassador, regionHandle);
+   }
+
+   @Override
+   public HLAtransportationTypeHandle createHLAtransportationTypeHandle(
+         RTIambassador rtiAmbassador)
+   {
+      return new OmtHLAtransportationTypeHandle(rtiAmbassador);
+   }
+
+   @Override
+   public HLAtransportationTypeHandle createHLAtransportationTypeHandle(
+         RTIambassador rtiAmbassador,
+         TransportationTypeHandle transportationTypeHandle)
+   {
+      return new OmtHLAtransportationTypeHandle(rtiAmbassador, transportationTypeHandle);
    }
 
    @Override

@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="IEEE 202X APIs" pattern="file[fedproclient_hla_api]:HLA1516-202X/src//*||file[fedproclient_protobuf]:*.proto" />
-</component>

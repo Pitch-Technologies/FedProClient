@@ -23,6 +23,7 @@
 #include <fedpro/Transport.h>
 
 #include "AtomicSequenceNumber.h"
+#include "buffers/RoundRobinBuffer.h"
 #include "ConcurrentHashMap.h"
 #include "MessageWriter.h"
 #include "msg/ResumeStatusMessage.h"
@@ -30,6 +31,7 @@
 #include "SocketWriter.h"
 #include "ThreadPool.h"
 #include "TimeoutTimer.h"
+#include <utility/MovingStats.h>
 
 #include <atomic>
 #include <cstdint>
@@ -53,13 +55,21 @@ namespace FedPro
 
       ~SessionImpl() override;
 
+      void requestListenerExecutorShutdown();
+
       uint64_t getId() const noexcept override;
 
       State getState() const noexcept override;
 
       void addStateListener(StateListener onStateTransition) override;
 
+      void waitStateListeners() noexcept(false) override;
+
       void setMessageSentListener(MessageSentListener onMessageSent) override;
+
+      void prettyPrintPerSecondStats(std::ostream & stream) override;
+
+      void prettyPrintStats(std::ostream & stream) override;
 
       void start(HlaCallbackRequestListener onHlaCallbackRequest) override;
 
@@ -93,6 +103,11 @@ namespace FedPro
       std::string logPrefix() const noexcept;
 
    private:
+
+      void trackMessageSent(int32_t sequenceNumber, bool isControl);
+
+      void trackHlaMessageReceived(int32_t sequenceNumber) noexcept;
+
       // The sole mutex for the session, protects the session state transitions
       // and read and write operations on the message buffers
       std::shared_ptr<std::mutex> _sessionMutex;
@@ -115,6 +130,7 @@ namespace FedPro
       HlaCallbackRequestListener _hlaCallbackRequestListener;
       std::vector<StateListener> _stateListeners;
       MessageSentListener _onMessageSent;
+      ConcurrentHashMap<int32_t, MovingStats::SteadyTimePoint> _requestTimes;
 
       // GuardedBy _sessionMutex
       std::unique_ptr<MessageWriter> _messageWriter;
@@ -135,6 +151,8 @@ namespace FedPro
       using SessionOperation = std::function<void()>;
 
       using AsyncSessionOperation = std::function<std::future<ByteSequence>()>;
+
+      using ConnectOperation = SessionOperation;
 
       // Private methods
 
@@ -220,7 +238,7 @@ namespace FedPro
 
       void doWhenTimedOut(FedProDuration timeout) noexcept;
 
-      std::shared_ptr<Socket> connect();
+      void tryConnectOperation(const ConnectOperation & connectOperation) noexcept(false);
 
       void doSessionOperation(const SessionOperation & operation);
 
@@ -250,11 +268,11 @@ namespace FedPro
 
       void runMessageReaderLoop() noexcept;
 
+      void scheduleBestEffortTerminate() noexcept;
+
       Session::State dropSession(const std::exception & e) noexcept;
 
       void extendSessionTimer() noexcept;
-
-      void trackHlaMessageReceived(int32_t sequenceNumber) noexcept;
 
       uint64_t readNewSessionStatus();
 
@@ -266,6 +284,16 @@ namespace FedPro
             MessageType messageType,
             int32_t sequenceNumber) const noexcept;
 
+      std::shared_ptr<RoundRobinBuffer<QueueableMessage>>_roundRobinMessageQueue;
+
+      bool _printStats{false};
+      std::unique_ptr<MovingStats> _hlaCallStats;
+      std::unique_ptr<MovingStats> _hlaCallTimeStats;
+      std::unique_ptr<MovingStats> _hlaCallbackStats;
+      std::unique_ptr<MovingStats> _resumeCount;
+
+      bool _warnOnLateStateListenerShutdown{true};
+
    };
 
    class SocketWriterListener : public SocketWriter::Listener
@@ -276,7 +304,7 @@ namespace FedPro
 
       void exceptionOnWrite(const std::exception & e) override;
 
-      void messageSent() override;
+      void messageSent(int32_t sequenceNumber, bool isControl) override;
 
    private:
       // Safe, given that the listener instance get deallocated before SessionImpl.

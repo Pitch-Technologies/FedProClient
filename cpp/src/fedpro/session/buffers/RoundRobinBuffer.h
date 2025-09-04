@@ -23,6 +23,7 @@
 #include "RateLimitedBuffer.h"
 #include "UnboundedBuffer.h"
 
+#include <cstddef>
 #include <functional>
 #include <mutex>
 #include <utility>
@@ -38,7 +39,7 @@ namespace FedPro
 
       using peek_type = typename GenericBuffer<E>::peek_type;
 
-      using size_type = uint32_t;
+      using size_type = size_t;
 
       using QueueAlternator = std::function<bool(const E &)>;
 
@@ -114,6 +115,16 @@ namespace FedPro
       peek_type peek() override
       {
          return selectReadBuffer()->peek();
+      }
+
+      size_type primarySize() noexcept
+      {
+         return _primaryQueue.size();
+      }
+
+      size_type alternateSize() noexcept
+      {
+         return _alternateQueue.size();
       }
 
       size_type size() noexcept override

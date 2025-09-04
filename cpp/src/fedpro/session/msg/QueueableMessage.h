@@ -31,7 +31,7 @@ namespace FedPro
    class QueueableMessage
    {
    private:
-      uint64_t _payloadSize;
+      uint32_t _payloadSize;
       int32_t _lastReceivedSequenceNumber;
       uint64_t _sessionId;
       MessageType _messageType;
@@ -45,7 +45,7 @@ namespace FedPro
    public:
 
       QueueableMessage(
-            uint64_t payloadSize,
+            uint32_t payloadSize,
             int32_t lastReceivedSequenceNumber,
             uint64_t sessionId,
             MessageType messageType,

@@ -16,19 +16,29 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.fedpro.*;
-import hla.rti1516_202X.FederateAmbassador;
-import hla.rti1516_202X.exceptions.FederateInternalError;
-import hla.rti1516_202X.exceptions.RTIinternalError;
+import hla.rti1516_2025.fedpro.*;
+import hla.rti1516_2025.FederateAmbassador;
+import hla.rti1516_2025.exceptions.FederateInternalError;
+import hla.rti1516_2025.exceptions.RTIinternalError;
+import se.pitch.oss.fedpro.common.session.MovingStats;
+
+import java.util.function.Supplier;
 
 public class FederateAmbassadorDispatcher {
    private final FederateAmbassadorClientAdapter _federateReference;
    private final ClientConverter _clientConverter;
+   private final MovingStats _reflectStats;
+   private final MovingStats _receivedInteractionStats;
+   private final MovingStats _receivedDirectedInteractionStats;
+   private final MovingStats _callbackTimeStats;
 
-   public FederateAmbassadorDispatcher(FederateAmbassador federateAmbassador, ClientConverter clientConverter)
-   {
+   public FederateAmbassadorDispatcher(FederateAmbassador federateAmbassador, ClientConverter clientConverter, Supplier<MovingStats> movingStatsSupplier) {
       _federateReference = new FederateAmbassadorClientAdapter(federateAmbassador);
       _clientConverter = clientConverter;
+      _reflectStats = movingStatsSupplier.get();
+      _receivedInteractionStats = movingStatsSupplier.get();
+      _receivedDirectedInteractionStats = movingStatsSupplier.get();
+      _callbackTimeStats = movingStatsSupplier.get();
    }
 
    void dispatchCallback(CallbackRequest callback)
@@ -36,6 +46,7 @@ public class FederateAmbassadorDispatcher {
       FederateInternalError,
       RTIinternalError
    {
+      long timeBefore = MovingStats.validTimeMillis();
      switch (callback.getCallbackRequestCase()) {
         case CONNECTIONLOST: {
            ConnectionLost request = callback.getConnectionLost();
@@ -288,6 +299,7 @@ public class FederateAmbassadorDispatcher {
         }
 
         case REFLECTATTRIBUTEVALUES: {
+           _reflectStats.sample(1);
            ReflectAttributeValues request = callback.getReflectAttributeValues();
            _federateReference.reflectAttributeValues(
               _clientConverter.convertToHla(request.getObjectInstance()),
@@ -302,6 +314,7 @@ public class FederateAmbassadorDispatcher {
         }
 
         case REFLECTATTRIBUTEVALUESWITHTIME: {
+           _reflectStats.sample(1);
            ReflectAttributeValuesWithTime request = callback.getReflectAttributeValuesWithTime();
            _federateReference.reflectAttributeValuesWithTime(
               _clientConverter.convertToHla(request.getObjectInstance()),
@@ -321,6 +334,7 @@ public class FederateAmbassadorDispatcher {
         }
 
         case RECEIVEINTERACTION: {
+           _receivedInteractionStats.sample(1);
            ReceiveInteraction request = callback.getReceiveInteraction();
            _federateReference.receiveInteraction(
               _clientConverter.convertToHla(request.getInteractionClass()),
@@ -335,6 +349,7 @@ public class FederateAmbassadorDispatcher {
         }
 
         case RECEIVEINTERACTIONWITHTIME: {
+           _receivedInteractionStats.sample(1);
            ReceiveInteractionWithTime request = callback.getReceiveInteractionWithTime();
            _federateReference.receiveInteractionWithTime(
               _clientConverter.convertToHla(request.getInteractionClass()),
@@ -354,6 +369,7 @@ public class FederateAmbassadorDispatcher {
         }
 
         case RECEIVEDIRECTEDINTERACTION: {
+           _receivedDirectedInteractionStats.sample(1);
            ReceiveDirectedInteraction request = callback.getReceiveDirectedInteraction();
            _federateReference.receiveDirectedInteraction(
               _clientConverter.convertToHla(request.getInteractionClass()),
@@ -367,6 +383,7 @@ public class FederateAmbassadorDispatcher {
         }
 
         case RECEIVEDIRECTEDINTERACTIONWITHTIME: {
+           _receivedDirectedInteractionStats.sample(1);
            ReceiveDirectedInteractionWithTime request = callback.getReceiveDirectedInteractionWithTime();
            _federateReference.receiveDirectedInteractionWithTime(
               _clientConverter.convertToHla(request.getInteractionClass()),
@@ -637,5 +654,22 @@ public class FederateAmbassadorDispatcher {
            throw new FederateInternalError("Unknown callback: " + callback.getCallbackRequestCase().toString());
         }
      }
+      _callbackTimeStats.sample((int) (MovingStats.validTimeMillis() - timeBefore));
+   }
+
+   MovingStats.Stats getReflectStats(long time) {
+      return _reflectStats.getStatsForTime(time);
+   }
+
+   MovingStats.Stats getReceivedInteractionStats(long time) {
+      return _receivedInteractionStats.getStatsForTime(time);
+   }
+
+   MovingStats.Stats getReceivedDirectedInteractionStats(long time) {
+      return _receivedDirectedInteractionStats.getStatsForTime(time);
+   }
+
+   MovingStats.Stats getCallbackTimeStats(long time) {
+      return _callbackTimeStats.getStatsForTime(time);
    }
 }

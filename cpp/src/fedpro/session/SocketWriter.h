@@ -41,7 +41,7 @@ namespace FedPro
       public:
          virtual void exceptionOnWrite(const std::exception & message) = 0;
 
-         virtual void messageSent() = 0;
+         virtual void messageSent(int32_t sequenceNumber, bool isControl) = 0;
 
          virtual ~Listener() = default;
       };
@@ -65,7 +65,9 @@ namespace FedPro
 
       void writeDirectMessage(const EncodedMessage & message);
 
-      void terminateCurrentWriterThread();
+      void enableWriterLoop();
+
+      void stopWriterLoop();
 
       bool waitForEmptyQueue(FedProDuration timeout);
 

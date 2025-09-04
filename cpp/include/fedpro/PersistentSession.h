@@ -22,10 +22,10 @@
 
 #include <chrono>
 #include <cstdint>
+#include <iosfwd>
 #include <functional>
 #include <memory>
 #include <string>
-#include <vector>
 
 namespace FedPro
 {
@@ -47,7 +47,18 @@ namespace FedPro
        */
       using ConnectionLostListener = std::function<void(const std::string & reason)>;
 
+      /**
+       * @brief Invoked when the session is terminated.
+       */
+      using SessionTerminatedListener = std::function<void(uint64_t sessionId)>;
+
       virtual ~PersistentSession() = default;
+
+      /**
+       * @brief Wait for asynchronous listener callbacks to complete after a call to terminate().
+       * @throw SessionIllegalState if state is not TERMINATED.
+       */
+      virtual void waitListeners() noexcept(false) = 0;
 
       /**
        * @brief Get the interval at which to send heartbeats
@@ -62,6 +73,17 @@ namespace FedPro
        * @return The session ID.
        */
       virtual uint64_t getId() const noexcept = 0;
+
+      /**
+       * @brief Pretty-print session statistics that are expressed in quantity per second,
+       * such as call count per second.
+       */
+      virtual void prettyPrintPerSecondStats(std::ostream & stream) = 0;
+
+      /**
+       * @brief Pretty-print session statistics that are expressed in others quantities, such as call time.
+       */
+      virtual void prettyPrintStats(std::ostream & stream) = 0;
 
       /**
        * @brief Start a new Federate Protocol Persistent Session.

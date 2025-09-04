@@ -21,12 +21,12 @@
 
 namespace FedPro
 {
-   ExponentialRateLimiter::ExponentialRateLimiter(uint32_t queueSize) noexcept
+   ExponentialRateLimiter::ExponentialRateLimiter(size_t queueSize) noexcept
          : _cutoff{queueSize / 20}
    {
    }
 
-   void ExponentialRateLimiter::preInsert(uint32_t size) noexcept
+   void ExponentialRateLimiter::preInsert(size_t size) noexcept
    {
       /*
        * If we have more than queue size / 20 calls in progress, sleep a bit
@@ -45,12 +45,12 @@ namespace FedPro
        *  ...
        */
       if (size > _cutoff) {
-         uint32_t hundreds = size / 100;
+         size_t hundreds = size / 100;
          std::this_thread::sleep_for(std::chrono::milliseconds{hundreds * hundreds});
       }
    }
 
-   void ExponentialRateLimiter::postInsert(uint32_t) noexcept
+   void ExponentialRateLimiter::postInsert(size_t) noexcept
    {
       // No-op
    }

@@ -44,4 +44,6 @@ public interface FedProSocket extends Closeable {
 
    int getSoTimeout()
    throws SocketException;
+
+   String getProtocolName();
 }

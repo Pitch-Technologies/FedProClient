@@ -16,20 +16,30 @@
 
 package se.pitch.oss.fedpro.client_evolved.hla;
 
-import hla.rti1516_202X.fedpro.*;
+import hla.rti1516_2025.fedpro.*;
 import hla.rti1516e.FederateAmbassador;
 import hla.rti1516e.OrderType;
 import hla.rti1516e.exceptions.FederateInternalError;
 import hla.rti1516e.exceptions.RTIinternalError;
+import se.pitch.oss.fedpro.common.session.MovingStats;
+
+import java.util.function.Supplier;
 
 public class FederateAmbassadorDispatcher {
    final FederateAmbassadorClientAdapter _federateReference;
    final ClientConverter _clientConverter;
+   private final MovingStats _reflectStats;
+   private final MovingStats _interactionStats;
+   private final MovingStats _directedInteractionStats;
+   private final MovingStats _callbackTimeStats;
 
-   public FederateAmbassadorDispatcher(FederateAmbassador federateAmbassador, ClientConverter clientConverter)
-   {
+   public FederateAmbassadorDispatcher(FederateAmbassador federateAmbassador, ClientConverter clientConverter, Supplier<MovingStats> movingStatsSupplier) {
       _federateReference = new FederateAmbassadorClientAdapter(federateAmbassador);
       _clientConverter = clientConverter;
+      _reflectStats = movingStatsSupplier.get();
+      _interactionStats = movingStatsSupplier.get();
+      _directedInteractionStats = movingStatsSupplier.get();
+      _callbackTimeStats = movingStatsSupplier.get();
    }
 
    void dispatchCallback(CallbackRequest callback)
@@ -37,6 +47,7 @@ public class FederateAmbassadorDispatcher {
          FederateInternalError,
          RTIinternalError
    {
+      long timeBefore = MovingStats.validTimeMillis();
       switch (callback.getCallbackRequestCase()) {
          case SYNCHRONIZATIONPOINTREGISTRATIONSUCCEEDED: {
             SynchronizationPointRegistrationSucceeded request = callback.getSynchronizationPointRegistrationSucceeded();
@@ -230,14 +241,16 @@ public class FederateAmbassadorDispatcher {
 
          case DISCOVEROBJECTINSTANCE: {
             DiscoverObjectInstance request = callback.getDiscoverObjectInstance();
-            _federateReference.discoverObjectInstance(
+            _federateReference.discoverObjectInstanceWithProducer(
                   _clientConverter.convertToHla(request.getObjectInstance()),
                   _clientConverter.convertToHla(request.getObjectClass()),
-                  _clientConverter.convertToHla(request.getObjectInstanceName()));
+                  _clientConverter.convertToHla(request.getObjectInstanceName()),
+                  _clientConverter.convertToHla(request.getProducingFederate()));
             break;
          }
 
          case REFLECTATTRIBUTEVALUES: {
+            _reflectStats.sample(1);
             ReflectAttributeValues request = callback.getReflectAttributeValues();
             _federateReference.reflectAttributeValues(
                   _clientConverter.convertToHla(request.getObjectInstance()),
@@ -250,6 +263,7 @@ public class FederateAmbassadorDispatcher {
          }
 
          case REFLECTATTRIBUTEVALUESWITHTIME: {
+            _reflectStats.sample(1);
             ReflectAttributeValuesWithTime request = callback.getReflectAttributeValuesWithTime();
             if (request.hasOptionalRetraction()) {
                _federateReference.reflectAttributeValuesWithRetraction(
@@ -277,6 +291,7 @@ public class FederateAmbassadorDispatcher {
          }
 
          case RECEIVEINTERACTION: {
+            _interactionStats.sample(1);
             ReceiveInteraction request = callback.getReceiveInteraction();
             _federateReference.receiveInteraction(
                   _clientConverter.convertToHla(request.getInteractionClass()),
@@ -291,6 +306,7 @@ public class FederateAmbassadorDispatcher {
          }
 
          case RECEIVEINTERACTIONWITHTIME: {
+            _interactionStats.sample(1);
             ReceiveInteractionWithTime request = callback.getReceiveInteractionWithTime();
             if (request.hasOptionalRetraction()) {
                _federateReference.receiveInteractionWithRetraction(
@@ -557,7 +573,23 @@ public class FederateAmbassadorDispatcher {
             throw new FederateInternalError("TODO " + callback.getCallbackRequestCase() + " not supported!");
          }
       }
-
+      _callbackTimeStats.sample((int) (MovingStats.validTimeMillis() - timeBefore));
    }
 
+   MovingStats.Stats getReflectStats(long time) {
+      return _reflectStats.getStatsForTime(time);
+   }
+
+   MovingStats.Stats getReceivedInteractionStats(long time) {
+      return _interactionStats.getStatsForTime(time);
+   }
+
+   MovingStats.Stats getReceivedDirectedInteractionStats(long time) {
+      // NOTE: These stats are obviously always zero, but needed by caller for consistency.
+      return _directedInteractionStats.getStatsForTime(time);
+   }
+
+   MovingStats.Stats getCallbackTimeStats(long time) {
+      return _callbackTimeStats.getStatsForTime(time);
+   }
 }

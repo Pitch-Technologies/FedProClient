@@ -17,7 +17,7 @@ Clone *Protocol Buffers* and the *Federate Protocol client library* repositories
 
 ### Pre-requirements ###
 
-Building the library requires *CMake* and *Protocol Buffers*.
+Building the library requires *CMake* and *Protocol Buffers*. 
 
 We suggest using *Protocol Buffers* version 3.21.x for compatibility with Visual Studio 2015. Note version 3.22.0 and above requires Visual Studio 2017 or later.
 
@@ -72,7 +72,7 @@ The following CMake commands should be executed at the root of the cloned protob
   sudo apt update
   sudo apt install ninja-build
   ```
-
+  
 * Configure both Release and Debug builds
 
   ```
@@ -106,7 +106,7 @@ The following CMake commands should be executed at the root of the cloned protob
 * Configure both Release and Debug builds
 
   ```
-  cmake -B out/gcc11-arm64/Debug --toolchain $FEDPRO_CLIENT_REPO_PATH/cpp/cmake/toolchains/linux_arm64_gcc.cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$CMAKE_PREFIX_PATH/protobuf-gcc11-arm64 -DCMAKE_POSITION_INDEPENDENT_CODE=ON -Dprotobuf_BUILD_TESTS=OFF
+  cmake -B out/gcc11-arm64/Debug --toolchain $FEDPRO_CLIENT_REPO_PATH/cpp/cmake/toolchains/linux_arm64_gcc.cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=$CMAKE_PREFIX_PATH/protobuf-gcc11-arm64 -DCMAKE_POSITION_INDEPENDENT_CODE=ON -Dprotobuf_BUILD_TESTS=OFF 
   cmake -B out/gcc11-arm64/Release --toolchain $FEDPRO_CLIENT_REPO_PATH/cpp/cmake/toolchains/linux_arm64_gcc.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$CMAKE_PREFIX_PATH/protobuf-gcc11-arm64 -DCMAKE_POSITION_INDEPENDENT_CODE=ON -Dprotobuf_BUILD_TESTS=OFF
   ```
 
@@ -143,7 +143,7 @@ specify your path instead of "<your_path>"
   cmake --build out/clang-universal2/Debug/ --config Debug
   cmake --install out/clang-universal2/Debug/ --config Debug
   ```
-
+  
 * Build and install the Release configuration
 
   ```
@@ -229,37 +229,25 @@ and a corresponding `Release` configuration when building with a `Release` profi
 
 ### Build and run the chat samples
 
-* Follow the above instructions to build both the samples and the client library.
-* Change your working directory to the sample build directory `cpp/build/<config>/<sample_name>/<config>`.
+* Follow the above instructions to build both the samples and the client library. 
+* Change your working directory to the sample build directory `cpp/build/<config>/<sample_name>/<config>`. 
 
   Example:
   ```
   cd  build/vc140-amd64-release/sample/Release
   ```
-* Run the sample executable.
-* (Optional) Run the sample executable multiple time, simultaneously, to chat between federates.
+* Run the sample executable. 
+* (Optional) Run the sample executable multiple time, simultaneously, to chat between federates. 
 
 ## Components ##
 
 ### Transport component ###
 
-The transport component allows switching between different transport types.
-Currently only TCP transport is implemented.
-
-Directories:
-* `transport`
-
-   Contains all sources and stubs for transportation types.
+TODO describe component
 
 ### Session component ###
 
-The session component is responsible for the logic to handle a Federate Protocol session, such as resuming after a connection loss.
-It also works as a middle-layer between the service and transport layer.
-
-Directories:
-* `session`
-
-  Contains all logic for message queues, resuming, and sequence number generation, among other things.
+TODO describe component
 
 ### Services component ###
 
@@ -278,7 +266,7 @@ Macros:
 
 * `RTI_NAMESPACE`
 
-  Standard HLA API namespace, such as `rti1516_202X`. This macro definition allows writing common source files and reusing them for multiple HLA API versions.
+  Standard HLA API namespace, such as `rti1516_2025`. This macro definition allows writing common source files and reusing them for multiple HLA API versions.
 
 * `RTI_HLA_VERSION`
 

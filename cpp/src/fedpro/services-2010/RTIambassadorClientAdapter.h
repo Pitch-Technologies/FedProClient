@@ -27,12 +27,6 @@
 
 #include <memory>
 
-namespace rti1516_202X {
-   namespace fedpro {
-      class RtiConfiguration;
-   }
-}
-
 namespace RTI_NAMESPACE
 {
    class FederateAmbassador;
@@ -872,7 +866,7 @@ namespace RTI_NAMESPACE
             VariableLengthData const & encodedValue) const
             RTI_THROW(CouldNotDecode, FederateNotExecutionMember, NotConnected, RTIinternalError) override;
 
-      std::unique_ptr<rti1516_202X::fedpro::RtiConfiguration> createRtiConfiguration(std::vector<std::wstring> & inputValueList);
+      static RTI_NAMESPACE::RtiConfiguration createRtiConfiguration(std::vector<std::wstring> & inputValueList);
 
    private:
 

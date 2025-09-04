@@ -17,6 +17,7 @@
 package se.pitch.oss.fedpro.client.transport;
 
 import se.pitch.oss.fedpro.client.TypedProperties;
+import se.pitch.oss.fedpro.common.Protocol;
 import se.pitch.oss.fedpro.common.transport.FedProSocket;
 import se.pitch.oss.fedpro.common.transport.FedProSocketImpl;
 
@@ -49,7 +50,7 @@ public class TcpTransport extends TransportBase {
    protected FedProSocket doConnect(String host, int port)
    throws IOException
    {
-      return new FedProSocketImpl(new java.net.Socket(host, port));
+      return new FedProSocketImpl(new java.net.Socket(host, port), Protocol.TCP);
    }
 
 }

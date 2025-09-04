@@ -16,18 +16,18 @@
 
 package se.pitch.oss.fedpro.client.hla.encoders;
 
-import hla.rti1516_202X.time.LogicalTime;
-import hla.rti1516_202X.time.LogicalTimeFactory;
-import hla.rti1516_202X.time.LogicalTimeInterval;
-import hla.rti1516_202X.RTIambassador;
-import hla.rti1516_202X.encoding.ByteWrapper;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderException;
-import hla.rti1516_202X.encoding.HLAlogicalTimeInterval;
-import hla.rti1516_202X.exceptions.CouldNotDecode;
-import hla.rti1516_202X.exceptions.CouldNotEncode;
-import hla.rti1516_202X.exceptions.FederateNotExecutionMember;
-import hla.rti1516_202X.exceptions.NotConnected;
+import hla.rti1516_2025.time.LogicalTime;
+import hla.rti1516_2025.time.LogicalTimeFactory;
+import hla.rti1516_2025.time.LogicalTimeInterval;
+import hla.rti1516_2025.RTIambassador;
+import hla.rti1516_2025.encoding.ByteWrapper;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderException;
+import hla.rti1516_2025.encoding.HLAlogicalTimeInterval;
+import hla.rti1516_2025.exceptions.CouldNotDecode;
+import hla.rti1516_2025.exceptions.CouldNotEncode;
+import hla.rti1516_2025.exceptions.FederateNotExecutionMember;
+import hla.rti1516_2025.exceptions.NotConnected;
 
 import java.util.Objects;
 

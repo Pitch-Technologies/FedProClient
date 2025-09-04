@@ -16,7 +16,7 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.*;
+import hla.rti1516_2025.*;
 
 public interface RTIambassadorEx extends RTIambassador {
    AsyncRTIambassador async();

@@ -28,6 +28,8 @@ namespace FedPro
    {
    public:
 
+      typedef size_t size_type;
+
       ConcurrentHashMap() = default;
 
       void moveAndInsert(
@@ -74,7 +76,7 @@ namespace FedPro
          _map.clear();
       }
 
-      int size()
+      size_type size()
       {
          std::lock_guard<std::mutex> lock (_mapMutex);
          return _map.size();

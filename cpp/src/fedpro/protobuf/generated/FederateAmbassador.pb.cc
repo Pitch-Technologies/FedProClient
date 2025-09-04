@@ -20,7 +20,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
-namespace rti1516_202X {
+namespace rti1516_2025 {
 namespace fedpro {
 PROTOBUF_CONSTEXPR ConnectionLost::ConnectionLost(
     ::_pbi::ConstantInitialized): _impl_{
@@ -953,764 +953,764 @@ struct CallbackResponseDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CallbackResponseDefaultTypeInternal _CallbackResponse_default_instance_;
 }  // namespace fedpro
-}  // namespace rti1516_202X
+}  // namespace rti1516_2025
 static ::_pb::Metadata file_level_metadata_FederateAmbassador_2eproto[65];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_FederateAmbassador_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_FederateAmbassador_2eproto = nullptr;
 
 const uint32_t TableStruct_FederateAmbassador_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConnectionLost, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConnectionLost, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConnectionLost, _impl_.faultdescription_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConnectionLost, _impl_.faultdescription_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportFederationExecutions, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportFederationExecutions, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportFederationExecutions, _impl_.report_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportFederationExecutions, _impl_.report_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportFederationExecutionMembers, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportFederationExecutionMembers, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportFederationExecutionMembers, _impl_.federationname_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportFederationExecutionMembers, _impl_.report_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportFederationExecutionMembers, _impl_.federationname_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportFederationExecutionMembers, _impl_.report_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist, _impl_.federationname_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist, _impl_.federationname_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederateResigned, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederateResigned, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederateResigned, _impl_.reasonforresigndescription_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederateResigned, _impl_.reasonforresigndescription_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded, _impl_.synchronizationpointlabel_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded, _impl_.synchronizationpointlabel_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed, _impl_.synchronizationpointlabel_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed, _impl_.reason_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed, _impl_.synchronizationpointlabel_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed, _impl_.reason_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AnnounceSynchronizationPoint, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AnnounceSynchronizationPoint, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AnnounceSynchronizationPoint, _impl_.synchronizationpointlabel_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AnnounceSynchronizationPoint, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AnnounceSynchronizationPoint, _impl_.synchronizationpointlabel_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AnnounceSynchronizationPoint, _impl_.usersuppliedtag_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationSynchronized, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationSynchronized, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationSynchronized, _impl_.synchronizationpointlabel_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationSynchronized, _impl_.failedtosyncset_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationSynchronized, _impl_.synchronizationpointlabel_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationSynchronized, _impl_.failedtosyncset_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateSave, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateSave, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateSave, _impl_.label_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateSave, _impl_.label_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateSaveWithTime, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateSaveWithTime, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateSaveWithTime, _impl_.label_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateSaveWithTime, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateSaveWithTime, _impl_.label_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateSaveWithTime, _impl_.time_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationSaved, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationNotSaved, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationNotSaved, _impl_.reason_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationSaveStatusResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationSaveStatusResponse, _impl_.response_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestFederationRestoreSucceeded, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestFederationRestoreSucceeded, _impl_.label_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestFederationRestoreFailed, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestFederationRestoreFailed, _impl_.label_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationRestoreBegun, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationSaved, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateRestore, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationNotSaved, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateRestore, _impl_.label_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateRestore, _impl_.federatename_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InitiateFederateRestore, _impl_.postrestorefederatehandle_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationNotSaved, _impl_.reason_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationRestored, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationSaveStatusResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationSaveStatusResponse, _impl_.response_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationNotRestored, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestFederationRestoreSucceeded, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationNotRestored, _impl_.reason_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestFederationRestoreSucceeded, _impl_.label_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationRestoreStatusResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestFederationRestoreFailed, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FederationRestoreStatusResponse, _impl_.response_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestFederationRestoreFailed, _impl_.label_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::StartRegistrationForObjectClass, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::StartRegistrationForObjectClass, _impl_.objectclass_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::StopRegistrationForObjectClass, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::StopRegistrationForObjectClass, _impl_.objectclass_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnInteractionsOn, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnInteractionsOn, _impl_.interactionclass_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnInteractionsOff, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnInteractionsOff, _impl_.interactionclass_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded, _impl_.objectinstancename_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed, _impl_.objectinstancename_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded, _impl_.objectinstancenames_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed, _impl_.objectinstancenames_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::DiscoverObjectInstance, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::DiscoverObjectInstance, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::DiscoverObjectInstance, _impl_.objectclass_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::DiscoverObjectInstance, _impl_.objectinstancename_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::DiscoverObjectInstance, _impl_.producingfederate_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValues, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValues, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValues, _impl_.attributevalues_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValues, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValues, _impl_.transportationtype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValues, _impl_.producingfederate_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValues, _impl_.optionalsentregions_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.attributevalues_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.transportationtype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.producingfederate_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.optionalsentregions_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.time_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.sentordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.receivedordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime, _impl_.optionalretraction_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteraction, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteraction, _impl_.interactionclass_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteraction, _impl_.parametervalues_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteraction, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteraction, _impl_.transportationtype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteraction, _impl_.producingfederate_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteraction, _impl_.optionalsentregions_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.interactionclass_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.parametervalues_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.transportationtype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.producingfederate_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.optionalsentregions_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.time_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.sentordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.receivedordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveInteractionWithTime, _impl_.optionalretraction_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteraction, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteraction, _impl_.interactionclass_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteraction, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteraction, _impl_.parametervalues_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteraction, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteraction, _impl_.transportationtype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteraction, _impl_.producingfederate_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.interactionclass_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.parametervalues_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.transportationtype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.producingfederate_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.time_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.sentordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.receivedordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime, _impl_.optionalretraction_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstance, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstance, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstance, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstance, _impl_.producingfederate_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _impl_.usersuppliedtag_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _impl_.producingfederate_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _impl_.time_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _impl_.sentordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _impl_.receivedordertype_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime, _impl_.optionalretraction_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributesInScope, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributesInScope, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributesInScope, _impl_.attributes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributesOutOfScope, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributesOutOfScope, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributesOutOfScope, _impl_.attributes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ProvideAttributeValueUpdate, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ProvideAttributeValueUpdate, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ProvideAttributeValueUpdate, _impl_.attributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ProvideAttributeValueUpdate, _impl_.usersuppliedtag_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance, _impl_.attributes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _impl_.attributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _impl_.updateratedesignator_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance, _impl_.attributes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange, _impl_.attributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange, _impl_.transportationtype_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportAttributeTransportationType, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportAttributeTransportationType, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportAttributeTransportationType, _impl_.attribute_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportAttributeTransportationType, _impl_.transportationtype_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange, _impl_.interactionclass_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange, _impl_.transportationtype_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportInteractionTransportationType, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportInteractionTransportationType, _impl_.federate_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportInteractionTransportationType, _impl_.interactionclass_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ReportInteractionTransportationType, _impl_.transportationtype_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption, _impl_.offeredattributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption, _impl_.usersuppliedtag_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestDivestitureConfirmation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestDivestitureConfirmation, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestDivestitureConfirmation, _impl_.releasedattributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestDivestitureConfirmation, _impl_.usersuppliedtag_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification, _impl_.securedattributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification, _impl_.usersuppliedtag_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipUnavailable, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipUnavailable, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipUnavailable, _impl_.attributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeOwnershipUnavailable, _impl_.usersuppliedtag_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipRelease, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipRelease, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipRelease, _impl_.candidateattributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestAttributeOwnershipRelease, _impl_.usersuppliedtag_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation, _impl_.attributes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InformAttributeOwnership, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InformAttributeOwnership, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InformAttributeOwnership, _impl_.attributes_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::InformAttributeOwnership, _impl_.federate_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeIsNotOwned, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeIsNotOwned, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeIsNotOwned, _impl_.attributes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeIsOwnedByRTI, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeIsOwnedByRTI, _impl_.objectinstance_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::AttributeIsOwnedByRTI, _impl_.attributes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TimeRegulationEnabled, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TimeRegulationEnabled, _impl_.time_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TimeConstrainedEnabled, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TimeConstrainedEnabled, _impl_.time_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FlushQueueGrant, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FlushQueueGrant, _impl_.time_),
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::FlushQueueGrant, _impl_.optimistictime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TimeAdvanceGrant, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::TimeAdvanceGrant, _impl_.time_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestRetraction, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::RequestRetraction, _impl_.retraction_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::CallbackSucceeded, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationRestoreBegun, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::CallbackRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateRestore, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::CallbackRequest, _impl_._oneof_case_[0]),
+  ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::CallbackRequest, _impl_.callbackRequest_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateRestore, _impl_.label_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateRestore, _impl_.federatename_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InitiateFederateRestore, _impl_.postrestorefederatehandle_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::CallbackResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationRestored, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::CallbackResponse, _impl_._oneof_case_[0]),
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationNotRestored, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationNotRestored, _impl_.reason_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationRestoreStatusResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FederationRestoreStatusResponse, _impl_.response_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::StartRegistrationForObjectClass, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::StartRegistrationForObjectClass, _impl_.objectclass_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::StopRegistrationForObjectClass, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::StopRegistrationForObjectClass, _impl_.objectclass_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnInteractionsOn, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnInteractionsOn, _impl_.interactionclass_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnInteractionsOff, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnInteractionsOff, _impl_.interactionclass_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded, _impl_.objectinstancename_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed, _impl_.objectinstancename_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded, _impl_.objectinstancenames_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed, _impl_.objectinstancenames_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::DiscoverObjectInstance, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::DiscoverObjectInstance, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::DiscoverObjectInstance, _impl_.objectclass_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::DiscoverObjectInstance, _impl_.objectinstancename_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::DiscoverObjectInstance, _impl_.producingfederate_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValues, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValues, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValues, _impl_.attributevalues_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValues, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValues, _impl_.transportationtype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValues, _impl_.producingfederate_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValues, _impl_.optionalsentregions_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.attributevalues_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.transportationtype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.producingfederate_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.optionalsentregions_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.sentordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.receivedordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime, _impl_.optionalretraction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteraction, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteraction, _impl_.interactionclass_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteraction, _impl_.parametervalues_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteraction, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteraction, _impl_.transportationtype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteraction, _impl_.producingfederate_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteraction, _impl_.optionalsentregions_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.interactionclass_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.parametervalues_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.transportationtype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.producingfederate_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.optionalsentregions_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.sentordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.receivedordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveInteractionWithTime, _impl_.optionalretraction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteraction, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteraction, _impl_.interactionclass_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteraction, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteraction, _impl_.parametervalues_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteraction, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteraction, _impl_.transportationtype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteraction, _impl_.producingfederate_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.interactionclass_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.parametervalues_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.transportationtype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.producingfederate_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.sentordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.receivedordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime, _impl_.optionalretraction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstance, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstance, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstance, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstance, _impl_.producingfederate_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _impl_.usersuppliedtag_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _impl_.producingfederate_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _impl_.sentordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _impl_.receivedordertype_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime, _impl_.optionalretraction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributesInScope, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributesInScope, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributesInScope, _impl_.attributes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributesOutOfScope, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributesOutOfScope, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributesOutOfScope, _impl_.attributes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ProvideAttributeValueUpdate, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ProvideAttributeValueUpdate, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ProvideAttributeValueUpdate, _impl_.attributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ProvideAttributeValueUpdate, _impl_.usersuppliedtag_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance, _impl_.attributes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _impl_.attributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate, _impl_.updateratedesignator_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance, _impl_.attributes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange, _impl_.attributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange, _impl_.transportationtype_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportAttributeTransportationType, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportAttributeTransportationType, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportAttributeTransportationType, _impl_.attribute_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportAttributeTransportationType, _impl_.transportationtype_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange, _impl_.interactionclass_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange, _impl_.transportationtype_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportInteractionTransportationType, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportInteractionTransportationType, _impl_.federate_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportInteractionTransportationType, _impl_.interactionclass_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ReportInteractionTransportationType, _impl_.transportationtype_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption, _impl_.offeredattributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption, _impl_.usersuppliedtag_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestDivestitureConfirmation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestDivestitureConfirmation, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestDivestitureConfirmation, _impl_.releasedattributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestDivestitureConfirmation, _impl_.usersuppliedtag_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification, _impl_.securedattributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification, _impl_.usersuppliedtag_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipUnavailable, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipUnavailable, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipUnavailable, _impl_.attributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeOwnershipUnavailable, _impl_.usersuppliedtag_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipRelease, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipRelease, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipRelease, _impl_.candidateattributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestAttributeOwnershipRelease, _impl_.usersuppliedtag_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation, _impl_.attributes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InformAttributeOwnership, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InformAttributeOwnership, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InformAttributeOwnership, _impl_.attributes_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::InformAttributeOwnership, _impl_.federate_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeIsNotOwned, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeIsNotOwned, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeIsNotOwned, _impl_.attributes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeIsOwnedByRTI, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeIsOwnedByRTI, _impl_.objectinstance_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::AttributeIsOwnedByRTI, _impl_.attributes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TimeRegulationEnabled, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TimeRegulationEnabled, _impl_.time_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TimeConstrainedEnabled, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TimeConstrainedEnabled, _impl_.time_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FlushQueueGrant, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FlushQueueGrant, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::FlushQueueGrant, _impl_.optimistictime_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TimeAdvanceGrant, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::TimeAdvanceGrant, _impl_.time_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestRetraction, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::RequestRetraction, _impl_.retraction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::CallbackSucceeded, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::CallbackRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::CallbackRequest, _impl_._oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ::_pbi::kInvalidFieldOffsetTag,
   ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::rti1516_202X::fedpro::CallbackResponse, _impl_.callbackResponse_),
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::CallbackRequest, _impl_.callbackRequest_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::CallbackResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::CallbackResponse, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::rti1516_2025::fedpro::CallbackResponse, _impl_.callbackResponse_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::rti1516_202X::fedpro::ConnectionLost)},
-  { 7, -1, -1, sizeof(::rti1516_202X::fedpro::ReportFederationExecutions)},
-  { 14, -1, -1, sizeof(::rti1516_202X::fedpro::ReportFederationExecutionMembers)},
-  { 22, -1, -1, sizeof(::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist)},
-  { 29, -1, -1, sizeof(::rti1516_202X::fedpro::FederateResigned)},
-  { 36, -1, -1, sizeof(::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded)},
-  { 43, -1, -1, sizeof(::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed)},
-  { 51, -1, -1, sizeof(::rti1516_202X::fedpro::AnnounceSynchronizationPoint)},
-  { 59, -1, -1, sizeof(::rti1516_202X::fedpro::FederationSynchronized)},
-  { 67, -1, -1, sizeof(::rti1516_202X::fedpro::InitiateFederateSave)},
-  { 74, -1, -1, sizeof(::rti1516_202X::fedpro::InitiateFederateSaveWithTime)},
-  { 82, -1, -1, sizeof(::rti1516_202X::fedpro::FederationSaved)},
-  { 88, -1, -1, sizeof(::rti1516_202X::fedpro::FederationNotSaved)},
-  { 95, -1, -1, sizeof(::rti1516_202X::fedpro::FederationSaveStatusResponse)},
-  { 102, -1, -1, sizeof(::rti1516_202X::fedpro::RequestFederationRestoreSucceeded)},
-  { 109, -1, -1, sizeof(::rti1516_202X::fedpro::RequestFederationRestoreFailed)},
-  { 116, -1, -1, sizeof(::rti1516_202X::fedpro::FederationRestoreBegun)},
-  { 122, -1, -1, sizeof(::rti1516_202X::fedpro::InitiateFederateRestore)},
-  { 131, -1, -1, sizeof(::rti1516_202X::fedpro::FederationRestored)},
-  { 137, -1, -1, sizeof(::rti1516_202X::fedpro::FederationNotRestored)},
-  { 144, -1, -1, sizeof(::rti1516_202X::fedpro::FederationRestoreStatusResponse)},
-  { 151, -1, -1, sizeof(::rti1516_202X::fedpro::StartRegistrationForObjectClass)},
-  { 158, -1, -1, sizeof(::rti1516_202X::fedpro::StopRegistrationForObjectClass)},
-  { 165, -1, -1, sizeof(::rti1516_202X::fedpro::TurnInteractionsOn)},
-  { 172, -1, -1, sizeof(::rti1516_202X::fedpro::TurnInteractionsOff)},
-  { 179, -1, -1, sizeof(::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded)},
-  { 186, -1, -1, sizeof(::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed)},
-  { 193, -1, -1, sizeof(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded)},
-  { 200, -1, -1, sizeof(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed)},
-  { 207, -1, -1, sizeof(::rti1516_202X::fedpro::DiscoverObjectInstance)},
-  { 217, -1, -1, sizeof(::rti1516_202X::fedpro::ReflectAttributeValues)},
-  { 229, -1, -1, sizeof(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime)},
-  { 245, -1, -1, sizeof(::rti1516_202X::fedpro::ReceiveInteraction)},
-  { 257, -1, -1, sizeof(::rti1516_202X::fedpro::ReceiveInteractionWithTime)},
-  { 273, -1, -1, sizeof(::rti1516_202X::fedpro::ReceiveDirectedInteraction)},
-  { 285, -1, -1, sizeof(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime)},
-  { 301, -1, -1, sizeof(::rti1516_202X::fedpro::RemoveObjectInstance)},
-  { 310, -1, -1, sizeof(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime)},
-  { 323, -1, -1, sizeof(::rti1516_202X::fedpro::AttributesInScope)},
-  { 331, -1, -1, sizeof(::rti1516_202X::fedpro::AttributesOutOfScope)},
-  { 339, -1, -1, sizeof(::rti1516_202X::fedpro::ProvideAttributeValueUpdate)},
-  { 348, -1, -1, sizeof(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance)},
-  { 356, -1, -1, sizeof(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate)},
-  { 365, -1, -1, sizeof(::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance)},
-  { 373, -1, -1, sizeof(::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange)},
-  { 382, -1, -1, sizeof(::rti1516_202X::fedpro::ReportAttributeTransportationType)},
-  { 391, -1, -1, sizeof(::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange)},
-  { 399, -1, -1, sizeof(::rti1516_202X::fedpro::ReportInteractionTransportationType)},
-  { 408, -1, -1, sizeof(::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption)},
-  { 417, -1, -1, sizeof(::rti1516_202X::fedpro::RequestDivestitureConfirmation)},
-  { 426, -1, -1, sizeof(::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification)},
-  { 435, -1, -1, sizeof(::rti1516_202X::fedpro::AttributeOwnershipUnavailable)},
-  { 444, -1, -1, sizeof(::rti1516_202X::fedpro::RequestAttributeOwnershipRelease)},
-  { 453, -1, -1, sizeof(::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation)},
-  { 461, -1, -1, sizeof(::rti1516_202X::fedpro::InformAttributeOwnership)},
-  { 470, -1, -1, sizeof(::rti1516_202X::fedpro::AttributeIsNotOwned)},
-  { 478, -1, -1, sizeof(::rti1516_202X::fedpro::AttributeIsOwnedByRTI)},
-  { 486, -1, -1, sizeof(::rti1516_202X::fedpro::TimeRegulationEnabled)},
-  { 493, -1, -1, sizeof(::rti1516_202X::fedpro::TimeConstrainedEnabled)},
-  { 500, -1, -1, sizeof(::rti1516_202X::fedpro::FlushQueueGrant)},
-  { 508, -1, -1, sizeof(::rti1516_202X::fedpro::TimeAdvanceGrant)},
-  { 515, -1, -1, sizeof(::rti1516_202X::fedpro::RequestRetraction)},
-  { 522, -1, -1, sizeof(::rti1516_202X::fedpro::CallbackSucceeded)},
-  { 528, -1, -1, sizeof(::rti1516_202X::fedpro::CallbackRequest)},
-  { 597, -1, -1, sizeof(::rti1516_202X::fedpro::CallbackResponse)},
+  { 0, -1, -1, sizeof(::rti1516_2025::fedpro::ConnectionLost)},
+  { 7, -1, -1, sizeof(::rti1516_2025::fedpro::ReportFederationExecutions)},
+  { 14, -1, -1, sizeof(::rti1516_2025::fedpro::ReportFederationExecutionMembers)},
+  { 22, -1, -1, sizeof(::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist)},
+  { 29, -1, -1, sizeof(::rti1516_2025::fedpro::FederateResigned)},
+  { 36, -1, -1, sizeof(::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded)},
+  { 43, -1, -1, sizeof(::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed)},
+  { 51, -1, -1, sizeof(::rti1516_2025::fedpro::AnnounceSynchronizationPoint)},
+  { 59, -1, -1, sizeof(::rti1516_2025::fedpro::FederationSynchronized)},
+  { 67, -1, -1, sizeof(::rti1516_2025::fedpro::InitiateFederateSave)},
+  { 74, -1, -1, sizeof(::rti1516_2025::fedpro::InitiateFederateSaveWithTime)},
+  { 82, -1, -1, sizeof(::rti1516_2025::fedpro::FederationSaved)},
+  { 88, -1, -1, sizeof(::rti1516_2025::fedpro::FederationNotSaved)},
+  { 95, -1, -1, sizeof(::rti1516_2025::fedpro::FederationSaveStatusResponse)},
+  { 102, -1, -1, sizeof(::rti1516_2025::fedpro::RequestFederationRestoreSucceeded)},
+  { 109, -1, -1, sizeof(::rti1516_2025::fedpro::RequestFederationRestoreFailed)},
+  { 116, -1, -1, sizeof(::rti1516_2025::fedpro::FederationRestoreBegun)},
+  { 122, -1, -1, sizeof(::rti1516_2025::fedpro::InitiateFederateRestore)},
+  { 131, -1, -1, sizeof(::rti1516_2025::fedpro::FederationRestored)},
+  { 137, -1, -1, sizeof(::rti1516_2025::fedpro::FederationNotRestored)},
+  { 144, -1, -1, sizeof(::rti1516_2025::fedpro::FederationRestoreStatusResponse)},
+  { 151, -1, -1, sizeof(::rti1516_2025::fedpro::StartRegistrationForObjectClass)},
+  { 158, -1, -1, sizeof(::rti1516_2025::fedpro::StopRegistrationForObjectClass)},
+  { 165, -1, -1, sizeof(::rti1516_2025::fedpro::TurnInteractionsOn)},
+  { 172, -1, -1, sizeof(::rti1516_2025::fedpro::TurnInteractionsOff)},
+  { 179, -1, -1, sizeof(::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded)},
+  { 186, -1, -1, sizeof(::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed)},
+  { 193, -1, -1, sizeof(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded)},
+  { 200, -1, -1, sizeof(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed)},
+  { 207, -1, -1, sizeof(::rti1516_2025::fedpro::DiscoverObjectInstance)},
+  { 217, -1, -1, sizeof(::rti1516_2025::fedpro::ReflectAttributeValues)},
+  { 229, -1, -1, sizeof(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime)},
+  { 245, -1, -1, sizeof(::rti1516_2025::fedpro::ReceiveInteraction)},
+  { 257, -1, -1, sizeof(::rti1516_2025::fedpro::ReceiveInteractionWithTime)},
+  { 273, -1, -1, sizeof(::rti1516_2025::fedpro::ReceiveDirectedInteraction)},
+  { 285, -1, -1, sizeof(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime)},
+  { 301, -1, -1, sizeof(::rti1516_2025::fedpro::RemoveObjectInstance)},
+  { 310, -1, -1, sizeof(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime)},
+  { 323, -1, -1, sizeof(::rti1516_2025::fedpro::AttributesInScope)},
+  { 331, -1, -1, sizeof(::rti1516_2025::fedpro::AttributesOutOfScope)},
+  { 339, -1, -1, sizeof(::rti1516_2025::fedpro::ProvideAttributeValueUpdate)},
+  { 348, -1, -1, sizeof(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance)},
+  { 356, -1, -1, sizeof(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate)},
+  { 365, -1, -1, sizeof(::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance)},
+  { 373, -1, -1, sizeof(::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange)},
+  { 382, -1, -1, sizeof(::rti1516_2025::fedpro::ReportAttributeTransportationType)},
+  { 391, -1, -1, sizeof(::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange)},
+  { 399, -1, -1, sizeof(::rti1516_2025::fedpro::ReportInteractionTransportationType)},
+  { 408, -1, -1, sizeof(::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption)},
+  { 417, -1, -1, sizeof(::rti1516_2025::fedpro::RequestDivestitureConfirmation)},
+  { 426, -1, -1, sizeof(::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification)},
+  { 435, -1, -1, sizeof(::rti1516_2025::fedpro::AttributeOwnershipUnavailable)},
+  { 444, -1, -1, sizeof(::rti1516_2025::fedpro::RequestAttributeOwnershipRelease)},
+  { 453, -1, -1, sizeof(::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation)},
+  { 461, -1, -1, sizeof(::rti1516_2025::fedpro::InformAttributeOwnership)},
+  { 470, -1, -1, sizeof(::rti1516_2025::fedpro::AttributeIsNotOwned)},
+  { 478, -1, -1, sizeof(::rti1516_2025::fedpro::AttributeIsOwnedByRTI)},
+  { 486, -1, -1, sizeof(::rti1516_2025::fedpro::TimeRegulationEnabled)},
+  { 493, -1, -1, sizeof(::rti1516_2025::fedpro::TimeConstrainedEnabled)},
+  { 500, -1, -1, sizeof(::rti1516_2025::fedpro::FlushQueueGrant)},
+  { 508, -1, -1, sizeof(::rti1516_2025::fedpro::TimeAdvanceGrant)},
+  { 515, -1, -1, sizeof(::rti1516_2025::fedpro::RequestRetraction)},
+  { 522, -1, -1, sizeof(::rti1516_2025::fedpro::CallbackSucceeded)},
+  { 528, -1, -1, sizeof(::rti1516_2025::fedpro::CallbackRequest)},
+  { 597, -1, -1, sizeof(::rti1516_2025::fedpro::CallbackResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::rti1516_202X::fedpro::_ConnectionLost_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReportFederationExecutions_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReportFederationExecutionMembers_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReportFederationExecutionDoesNotExist_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederateResigned_default_instance_._instance,
-  &::rti1516_202X::fedpro::_SynchronizationPointRegistrationSucceeded_default_instance_._instance,
-  &::rti1516_202X::fedpro::_SynchronizationPointRegistrationFailed_default_instance_._instance,
-  &::rti1516_202X::fedpro::_AnnounceSynchronizationPoint_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationSynchronized_default_instance_._instance,
-  &::rti1516_202X::fedpro::_InitiateFederateSave_default_instance_._instance,
-  &::rti1516_202X::fedpro::_InitiateFederateSaveWithTime_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationSaved_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationNotSaved_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationSaveStatusResponse_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RequestFederationRestoreSucceeded_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RequestFederationRestoreFailed_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationRestoreBegun_default_instance_._instance,
-  &::rti1516_202X::fedpro::_InitiateFederateRestore_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationRestored_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationNotRestored_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FederationRestoreStatusResponse_default_instance_._instance,
-  &::rti1516_202X::fedpro::_StartRegistrationForObjectClass_default_instance_._instance,
-  &::rti1516_202X::fedpro::_StopRegistrationForObjectClass_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TurnInteractionsOn_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TurnInteractionsOff_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ObjectInstanceNameReservationSucceeded_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ObjectInstanceNameReservationFailed_default_instance_._instance,
-  &::rti1516_202X::fedpro::_MultipleObjectInstanceNameReservationSucceeded_default_instance_._instance,
-  &::rti1516_202X::fedpro::_MultipleObjectInstanceNameReservationFailed_default_instance_._instance,
-  &::rti1516_202X::fedpro::_DiscoverObjectInstance_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReflectAttributeValues_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReflectAttributeValuesWithTime_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReceiveInteraction_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReceiveInteractionWithTime_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReceiveDirectedInteraction_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReceiveDirectedInteractionWithTime_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RemoveObjectInstance_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RemoveObjectInstanceWithTime_default_instance_._instance,
-  &::rti1516_202X::fedpro::_AttributesInScope_default_instance_._instance,
-  &::rti1516_202X::fedpro::_AttributesOutOfScope_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ProvideAttributeValueUpdate_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TurnUpdatesOnForObjectInstance_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TurnUpdatesOnForObjectInstanceWithRate_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TurnUpdatesOffForObjectInstance_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ConfirmAttributeTransportationTypeChange_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReportAttributeTransportationType_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ConfirmInteractionTransportationTypeChange_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ReportInteractionTransportationType_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RequestAttributeOwnershipAssumption_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RequestDivestitureConfirmation_default_instance_._instance,
-  &::rti1516_202X::fedpro::_AttributeOwnershipAcquisitionNotification_default_instance_._instance,
-  &::rti1516_202X::fedpro::_AttributeOwnershipUnavailable_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RequestAttributeOwnershipRelease_default_instance_._instance,
-  &::rti1516_202X::fedpro::_ConfirmAttributeOwnershipAcquisitionCancellation_default_instance_._instance,
-  &::rti1516_202X::fedpro::_InformAttributeOwnership_default_instance_._instance,
-  &::rti1516_202X::fedpro::_AttributeIsNotOwned_default_instance_._instance,
-  &::rti1516_202X::fedpro::_AttributeIsOwnedByRTI_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TimeRegulationEnabled_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TimeConstrainedEnabled_default_instance_._instance,
-  &::rti1516_202X::fedpro::_FlushQueueGrant_default_instance_._instance,
-  &::rti1516_202X::fedpro::_TimeAdvanceGrant_default_instance_._instance,
-  &::rti1516_202X::fedpro::_RequestRetraction_default_instance_._instance,
-  &::rti1516_202X::fedpro::_CallbackSucceeded_default_instance_._instance,
-  &::rti1516_202X::fedpro::_CallbackRequest_default_instance_._instance,
-  &::rti1516_202X::fedpro::_CallbackResponse_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ConnectionLost_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReportFederationExecutions_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReportFederationExecutionMembers_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReportFederationExecutionDoesNotExist_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederateResigned_default_instance_._instance,
+  &::rti1516_2025::fedpro::_SynchronizationPointRegistrationSucceeded_default_instance_._instance,
+  &::rti1516_2025::fedpro::_SynchronizationPointRegistrationFailed_default_instance_._instance,
+  &::rti1516_2025::fedpro::_AnnounceSynchronizationPoint_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationSynchronized_default_instance_._instance,
+  &::rti1516_2025::fedpro::_InitiateFederateSave_default_instance_._instance,
+  &::rti1516_2025::fedpro::_InitiateFederateSaveWithTime_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationSaved_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationNotSaved_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationSaveStatusResponse_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RequestFederationRestoreSucceeded_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RequestFederationRestoreFailed_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationRestoreBegun_default_instance_._instance,
+  &::rti1516_2025::fedpro::_InitiateFederateRestore_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationRestored_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationNotRestored_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FederationRestoreStatusResponse_default_instance_._instance,
+  &::rti1516_2025::fedpro::_StartRegistrationForObjectClass_default_instance_._instance,
+  &::rti1516_2025::fedpro::_StopRegistrationForObjectClass_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TurnInteractionsOn_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TurnInteractionsOff_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ObjectInstanceNameReservationSucceeded_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ObjectInstanceNameReservationFailed_default_instance_._instance,
+  &::rti1516_2025::fedpro::_MultipleObjectInstanceNameReservationSucceeded_default_instance_._instance,
+  &::rti1516_2025::fedpro::_MultipleObjectInstanceNameReservationFailed_default_instance_._instance,
+  &::rti1516_2025::fedpro::_DiscoverObjectInstance_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReflectAttributeValues_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReflectAttributeValuesWithTime_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReceiveInteraction_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReceiveInteractionWithTime_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReceiveDirectedInteraction_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReceiveDirectedInteractionWithTime_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RemoveObjectInstance_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RemoveObjectInstanceWithTime_default_instance_._instance,
+  &::rti1516_2025::fedpro::_AttributesInScope_default_instance_._instance,
+  &::rti1516_2025::fedpro::_AttributesOutOfScope_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ProvideAttributeValueUpdate_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TurnUpdatesOnForObjectInstance_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TurnUpdatesOnForObjectInstanceWithRate_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TurnUpdatesOffForObjectInstance_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ConfirmAttributeTransportationTypeChange_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReportAttributeTransportationType_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ConfirmInteractionTransportationTypeChange_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ReportInteractionTransportationType_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RequestAttributeOwnershipAssumption_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RequestDivestitureConfirmation_default_instance_._instance,
+  &::rti1516_2025::fedpro::_AttributeOwnershipAcquisitionNotification_default_instance_._instance,
+  &::rti1516_2025::fedpro::_AttributeOwnershipUnavailable_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RequestAttributeOwnershipRelease_default_instance_._instance,
+  &::rti1516_2025::fedpro::_ConfirmAttributeOwnershipAcquisitionCancellation_default_instance_._instance,
+  &::rti1516_2025::fedpro::_InformAttributeOwnership_default_instance_._instance,
+  &::rti1516_2025::fedpro::_AttributeIsNotOwned_default_instance_._instance,
+  &::rti1516_2025::fedpro::_AttributeIsOwnedByRTI_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TimeRegulationEnabled_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TimeConstrainedEnabled_default_instance_._instance,
+  &::rti1516_2025::fedpro::_FlushQueueGrant_default_instance_._instance,
+  &::rti1516_2025::fedpro::_TimeAdvanceGrant_default_instance_._instance,
+  &::rti1516_2025::fedpro::_RequestRetraction_default_instance_._instance,
+  &::rti1516_2025::fedpro::_CallbackSucceeded_default_instance_._instance,
+  &::rti1516_2025::fedpro::_CallbackRequest_default_instance_._instance,
+  &::rti1516_2025::fedpro::_CallbackResponse_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_FederateAmbassador_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\030FederateAmbassador.proto\022\023rti1516_202X"
+  "\n\030FederateAmbassador.proto\022\023rti1516_2025"
   ".fedpro\032\017datatypes.proto\"*\n\016ConnectionLo"
   "st\022\030\n\020faultDescription\030\001 \001(\t\"d\n\032ReportFe"
   "derationExecutions\022F\n\006report\030\001 \001(\01326.rti"
-  "1516_202X.fedpro.FederationExecutionInfo"
+  "1516_2025.fedpro.FederationExecutionInfo"
   "rmationSet\"\210\001\n ReportFederationExecution"
   "Members\022\026\n\016federationName\030\001 \001(\t\022L\n\006repor"
-  "t\030\002 \001(\0132<.rti1516_202X.fedpro.Federation"
+  "t\030\002 \001(\0132<.rti1516_2025.fedpro.Federation"
   "ExecutionMemberInformationSet\"\?\n%ReportF"
   "ederationExecutionDoesNotExist\022\026\n\016federa"
   "tionName\030\001 \001(\t\"6\n\020FederateResigned\022\"\n\032re"
@@ -1719,42 +1719,42 @@ const char descriptor_table_protodef_FederateAmbassador_2eproto[] PROTOBUF_SECTI
   "ynchronizationPointLabel\030\001 \001(\t\"\223\001\n&Synch"
   "ronizationPointRegistrationFailed\022!\n\031syn"
   "chronizationPointLabel\030\001 \001(\t\022F\n\006reason\030\002"
-  " \001(\01626.rti1516_202X.fedpro.Synchronizati"
+  " \001(\01626.rti1516_2025.fedpro.Synchronizati"
   "onPointFailureReason\"Z\n\034AnnounceSynchron"
   "izationPoint\022!\n\031synchronizationPointLabe"
   "l\030\001 \001(\t\022\027\n\017userSuppliedTag\030\002 \001(\014\"|\n\026Fede"
   "rationSynchronized\022!\n\031synchronizationPoi"
   "ntLabel\030\001 \001(\t\022\?\n\017failedToSyncSet\030\002 \001(\0132&"
-  ".rti1516_202X.fedpro.FederateHandleSet\"%"
+  ".rti1516_2025.fedpro.FederateHandleSet\"%"
   "\n\024InitiateFederateSave\022\r\n\005label\030\001 \001(\t\"]\n"
   "\034InitiateFederateSaveWithTime\022\r\n\005label\030\001"
-  " \001(\t\022.\n\004time\030\002 \001(\0132 .rti1516_202X.fedpro"
+  " \001(\t\022.\n\004time\030\002 \001(\0132 .rti1516_2025.fedpro"
   ".LogicalTime\"\021\n\017FederationSaved\"L\n\022Feder"
   "ationNotSaved\0226\n\006reason\030\001 \001(\0162&.rti1516_"
-  "202X.fedpro.SaveFailureReason\"h\n\034Federat"
+  "2025.fedpro.SaveFailureReason\"h\n\034Federat"
   "ionSaveStatusResponse\022H\n\010response\030\001 \001(\0132"
-  "6.rti1516_202X.fedpro.FederateHandleSave"
+  "6.rti1516_2025.fedpro.FederateHandleSave"
   "StatusPairArray\"2\n!RequestFederationRest"
   "oreSucceeded\022\r\n\005label\030\001 \001(\t\"/\n\036RequestFe"
   "derationRestoreFailed\022\r\n\005label\030\001 \001(\t\"\030\n\026"
   "FederationRestoreBegun\"\206\001\n\027InitiateFeder"
   "ateRestore\022\r\n\005label\030\001 \001(\t\022\024\n\014federateNam"
   "e\030\002 \001(\t\022F\n\031postRestoreFederateHandle\030\003 \001"
-  "(\0132#.rti1516_202X.fedpro.FederateHandle\""
+  "(\0132#.rti1516_2025.fedpro.FederateHandle\""
   "\024\n\022FederationRestored\"R\n\025FederationNotRe"
-  "stored\0229\n\006reason\030\001 \001(\0162).rti1516_202X.fe"
+  "stored\0229\n\006reason\030\001 \001(\0162).rti1516_2025.fe"
   "dpro.RestoreFailureReason\"d\n\037FederationR"
   "estoreStatusResponse\022A\n\010response\030\001 \001(\0132/"
-  ".rti1516_202X.fedpro.FederateRestoreStat"
+  ".rti1516_2025.fedpro.FederateRestoreStat"
   "usArray\"^\n\037StartRegistrationForObjectCla"
-  "ss\022;\n\013objectClass\030\001 \001(\0132&.rti1516_202X.f"
+  "ss\022;\n\013objectClass\030\001 \001(\0132&.rti1516_2025.f"
   "edpro.ObjectClassHandle\"]\n\036StopRegistrat"
   "ionForObjectClass\022;\n\013objectClass\030\001 \001(\0132&"
-  ".rti1516_202X.fedpro.ObjectClassHandle\"["
+  ".rti1516_2025.fedpro.ObjectClassHandle\"["
   "\n\022TurnInteractionsOn\022E\n\020interactionClass"
-  "\030\001 \001(\0132+.rti1516_202X.fedpro.Interaction"
+  "\030\001 \001(\0132+.rti1516_2025.fedpro.Interaction"
   "ClassHandle\"\\\n\023TurnInteractionsOff\022E\n\020in"
-  "teractionClass\030\001 \001(\0132+.rti1516_202X.fedp"
+  "teractionClass\030\001 \001(\0132+.rti1516_2025.fedp"
   "ro.InteractionClassHandle\"D\n&ObjectInsta"
   "nceNameReservationSucceeded\022\032\n\022objectIns"
   "tanceName\030\001 \001(\t\"A\n#ObjectInstanceNameRes"
@@ -1764,352 +1764,352 @@ const char descriptor_table_protodef_FederateAmbassador_2eproto[] PROTOBUF_SECTI
   "\t\"J\n+MultipleObjectInstanceNameReservati"
   "onFailed\022\033\n\023objectInstanceNames\030\001 \003(\t\"\364\001"
   "\n\026DiscoverObjectInstance\022A\n\016objectInstan"
-  "ce\030\001 \001(\0132).rti1516_202X.fedpro.ObjectIns"
+  "ce\030\001 \001(\0132).rti1516_2025.fedpro.ObjectIns"
   "tanceHandle\022;\n\013objectClass\030\002 \001(\0132&.rti15"
-  "16_202X.fedpro.ObjectClassHandle\022\032\n\022obje"
+  "16_2025.fedpro.ObjectClassHandle\022\032\n\022obje"
   "ctInstanceName\030\003 \001(\t\022>\n\021producingFederat"
-  "e\030\004 \001(\0132#.rti1516_202X.fedpro.FederateHa"
+  "e\030\004 \001(\0132#.rti1516_2025.fedpro.FederateHa"
   "ndle\"\213\003\n\026ReflectAttributeValues\022A\n\016objec"
-  "tInstance\030\001 \001(\0132).rti1516_202X.fedpro.Ob"
+  "tInstance\030\001 \001(\0132).rti1516_2025.fedpro.Ob"
   "jectInstanceHandle\022E\n\017attributeValues\030\002 "
-  "\001(\0132,.rti1516_202X.fedpro.AttributeHandl"
+  "\001(\0132,.rti1516_2025.fedpro.AttributeHandl"
   "eValueMap\022\027\n\017userSuppliedTag\030\003 \001(\014\022I\n\022tr"
-  "ansportationType\030\004 \001(\0132-.rti1516_202X.fe"
+  "ansportationType\030\004 \001(\0132-.rti1516_2025.fe"
   "dpro.TransportationTypeHandle\022>\n\021produci"
-  "ngFederate\030\005 \001(\0132#.rti1516_202X.fedpro.F"
+  "ngFederate\030\005 \001(\0132#.rti1516_2025.fedpro.F"
   "ederateHandle\022C\n\023optionalSentRegions\030\006 \001"
-  "(\0132&.rti1516_202X.fedpro.ConveyedRegionS"
+  "(\0132&.rti1516_2025.fedpro.ConveyedRegionS"
   "et\"\377\004\n\036ReflectAttributeValuesWithTime\022A\n"
-  "\016objectInstance\030\001 \001(\0132).rti1516_202X.fed"
+  "\016objectInstance\030\001 \001(\0132).rti1516_2025.fed"
   "pro.ObjectInstanceHandle\022E\n\017attributeVal"
-  "ues\030\002 \001(\0132,.rti1516_202X.fedpro.Attribut"
+  "ues\030\002 \001(\0132,.rti1516_2025.fedpro.Attribut"
   "eHandleValueMap\022\027\n\017userSuppliedTag\030\003 \001(\014"
   "\022I\n\022transportationType\030\004 \001(\0132-.rti1516_2"
-  "02X.fedpro.TransportationTypeHandle\022>\n\021p"
-  "roducingFederate\030\005 \001(\0132#.rti1516_202X.fe"
+  "025.fedpro.TransportationTypeHandle\022>\n\021p"
+  "roducingFederate\030\005 \001(\0132#.rti1516_2025.fe"
   "dpro.FederateHandle\022C\n\023optionalSentRegio"
-  "ns\030\006 \001(\0132&.rti1516_202X.fedpro.ConveyedR"
-  "egionSet\022.\n\004time\030\007 \001(\0132 .rti1516_202X.fe"
+  "ns\030\006 \001(\0132&.rti1516_2025.fedpro.ConveyedR"
+  "egionSet\022.\n\004time\030\007 \001(\0132 .rti1516_2025.fe"
   "dpro.LogicalTime\0225\n\rsentOrderType\030\010 \001(\0162"
-  "\036.rti1516_202X.fedpro.OrderType\0229\n\021recei"
-  "vedOrderType\030\t \001(\0162\036.rti1516_202X.fedpro"
+  "\036.rti1516_2025.fedpro.OrderType\0229\n\021recei"
+  "vedOrderType\030\t \001(\0162\036.rti1516_2025.fedpro"
   ".OrderType\022H\n\022optionalRetraction\030\n \001(\0132,"
-  ".rti1516_202X.fedpro.MessageRetractionHa"
+  ".rti1516_2025.fedpro.MessageRetractionHa"
   "ndle\"\213\003\n\022ReceiveInteraction\022E\n\020interacti"
-  "onClass\030\001 \001(\0132+.rti1516_202X.fedpro.Inte"
+  "onClass\030\001 \001(\0132+.rti1516_2025.fedpro.Inte"
   "ractionClassHandle\022E\n\017parameterValues\030\002 "
-  "\001(\0132,.rti1516_202X.fedpro.ParameterHandl"
+  "\001(\0132,.rti1516_2025.fedpro.ParameterHandl"
   "eValueMap\022\027\n\017userSuppliedTag\030\003 \001(\014\022I\n\022tr"
-  "ansportationType\030\004 \001(\0132-.rti1516_202X.fe"
+  "ansportationType\030\004 \001(\0132-.rti1516_2025.fe"
   "dpro.TransportationTypeHandle\022>\n\021produci"
-  "ngFederate\030\005 \001(\0132#.rti1516_202X.fedpro.F"
+  "ngFederate\030\005 \001(\0132#.rti1516_2025.fedpro.F"
   "ederateHandle\022C\n\023optionalSentRegions\030\006 \001"
-  "(\0132&.rti1516_202X.fedpro.ConveyedRegionS"
+  "(\0132&.rti1516_2025.fedpro.ConveyedRegionS"
   "et\"\377\004\n\032ReceiveInteractionWithTime\022E\n\020int"
-  "eractionClass\030\001 \001(\0132+.rti1516_202X.fedpr"
+  "eractionClass\030\001 \001(\0132+.rti1516_2025.fedpr"
   "o.InteractionClassHandle\022E\n\017parameterVal"
-  "ues\030\002 \001(\0132,.rti1516_202X.fedpro.Paramete"
+  "ues\030\002 \001(\0132,.rti1516_2025.fedpro.Paramete"
   "rHandleValueMap\022\027\n\017userSuppliedTag\030\003 \001(\014"
   "\022I\n\022transportationType\030\004 \001(\0132-.rti1516_2"
-  "02X.fedpro.TransportationTypeHandle\022>\n\021p"
-  "roducingFederate\030\005 \001(\0132#.rti1516_202X.fe"
+  "025.fedpro.TransportationTypeHandle\022>\n\021p"
+  "roducingFederate\030\005 \001(\0132#.rti1516_2025.fe"
   "dpro.FederateHandle\022C\n\023optionalSentRegio"
-  "ns\030\006 \001(\0132&.rti1516_202X.fedpro.ConveyedR"
-  "egionSet\022.\n\004time\030\007 \001(\0132 .rti1516_202X.fe"
+  "ns\030\006 \001(\0132&.rti1516_2025.fedpro.ConveyedR"
+  "egionSet\022.\n\004time\030\007 \001(\0132 .rti1516_2025.fe"
   "dpro.LogicalTime\0225\n\rsentOrderType\030\010 \001(\0162"
-  "\036.rti1516_202X.fedpro.OrderType\0229\n\021recei"
-  "vedOrderType\030\t \001(\0162\036.rti1516_202X.fedpro"
+  "\036.rti1516_2025.fedpro.OrderType\0229\n\021recei"
+  "vedOrderType\030\t \001(\0162\036.rti1516_2025.fedpro"
   ".OrderType\022H\n\022optionalRetraction\030\n \001(\0132,"
-  ".rti1516_202X.fedpro.MessageRetractionHa"
+  ".rti1516_2025.fedpro.MessageRetractionHa"
   "ndle\"\221\003\n\032ReceiveDirectedInteraction\022E\n\020i"
-  "nteractionClass\030\001 \001(\0132+.rti1516_202X.fed"
+  "nteractionClass\030\001 \001(\0132+.rti1516_2025.fed"
   "pro.InteractionClassHandle\022A\n\016objectInst"
-  "ance\030\002 \001(\0132).rti1516_202X.fedpro.ObjectI"
+  "ance\030\002 \001(\0132).rti1516_2025.fedpro.ObjectI"
   "nstanceHandle\022E\n\017parameterValues\030\003 \001(\0132,"
-  ".rti1516_202X.fedpro.ParameterHandleValu"
+  ".rti1516_2025.fedpro.ParameterHandleValu"
   "eMap\022\027\n\017userSuppliedTag\030\004 \001(\014\022I\n\022transpo"
-  "rtationType\030\005 \001(\0132-.rti1516_202X.fedpro."
+  "rtationType\030\005 \001(\0132-.rti1516_2025.fedpro."
   "TransportationTypeHandle\022>\n\021producingFed"
-  "erate\030\006 \001(\0132#.rti1516_202X.fedpro.Federa"
+  "erate\030\006 \001(\0132#.rti1516_2025.fedpro.Federa"
   "teHandle\"\205\005\n\"ReceiveDirectedInteractionW"
   "ithTime\022E\n\020interactionClass\030\001 \001(\0132+.rti1"
-  "516_202X.fedpro.InteractionClassHandle\022A"
-  "\n\016objectInstance\030\002 \001(\0132).rti1516_202X.fe"
+  "516_2025.fedpro.InteractionClassHandle\022A"
+  "\n\016objectInstance\030\002 \001(\0132).rti1516_2025.fe"
   "dpro.ObjectInstanceHandle\022E\n\017parameterVa"
-  "lues\030\003 \001(\0132,.rti1516_202X.fedpro.Paramet"
+  "lues\030\003 \001(\0132,.rti1516_2025.fedpro.Paramet"
   "erHandleValueMap\022\027\n\017userSuppliedTag\030\004 \001("
   "\014\022I\n\022transportationType\030\005 \001(\0132-.rti1516_"
-  "202X.fedpro.TransportationTypeHandle\022>\n\021"
-  "producingFederate\030\006 \001(\0132#.rti1516_202X.f"
+  "2025.fedpro.TransportationTypeHandle\022>\n\021"
+  "producingFederate\030\006 \001(\0132#.rti1516_2025.f"
   "edpro.FederateHandle\022.\n\004time\030\007 \001(\0132 .rti"
-  "1516_202X.fedpro.LogicalTime\0225\n\rsentOrde"
-  "rType\030\010 \001(\0162\036.rti1516_202X.fedpro.OrderT"
+  "1516_2025.fedpro.LogicalTime\0225\n\rsentOrde"
+  "rType\030\010 \001(\0162\036.rti1516_2025.fedpro.OrderT"
   "ype\0229\n\021receivedOrderType\030\t \001(\0162\036.rti1516"
-  "_202X.fedpro.OrderType\022H\n\022optionalRetrac"
-  "tion\030\n \001(\0132,.rti1516_202X.fedpro.Message"
+  "_2025.fedpro.OrderType\022H\n\022optionalRetrac"
+  "tion\030\n \001(\0132,.rti1516_2025.fedpro.Message"
   "RetractionHandle\"\262\001\n\024RemoveObjectInstanc"
-  "e\022A\n\016objectInstance\030\001 \001(\0132).rti1516_202X"
+  "e\022A\n\016objectInstance\030\001 \001(\0132).rti1516_2025"
   ".fedpro.ObjectInstanceHandle\022\027\n\017userSupp"
   "liedTag\030\002 \001(\014\022>\n\021producingFederate\030\003 \001(\013"
-  "2#.rti1516_202X.fedpro.FederateHandle\"\246\003"
+  "2#.rti1516_2025.fedpro.FederateHandle\"\246\003"
   "\n\034RemoveObjectInstanceWithTime\022A\n\016object"
-  "Instance\030\001 \001(\0132).rti1516_202X.fedpro.Obj"
+  "Instance\030\001 \001(\0132).rti1516_2025.fedpro.Obj"
   "ectInstanceHandle\022\027\n\017userSuppliedTag\030\002 \001"
   "(\014\022>\n\021producingFederate\030\003 \001(\0132#.rti1516_"
-  "202X.fedpro.FederateHandle\022.\n\004time\030\004 \001(\013"
-  "2 .rti1516_202X.fedpro.LogicalTime\0225\n\rse"
-  "ntOrderType\030\005 \001(\0162\036.rti1516_202X.fedpro."
+  "2025.fedpro.FederateHandle\022.\n\004time\030\004 \001(\013"
+  "2 .rti1516_2025.fedpro.LogicalTime\0225\n\rse"
+  "ntOrderType\030\005 \001(\0162\036.rti1516_2025.fedpro."
   "OrderType\0229\n\021receivedOrderType\030\006 \001(\0162\036.r"
-  "ti1516_202X.fedpro.OrderType\022H\n\022optional"
-  "Retraction\030\007 \001(\0132,.rti1516_202X.fedpro.M"
+  "ti1516_2025.fedpro.OrderType\022H\n\022optional"
+  "Retraction\030\007 \001(\0132,.rti1516_2025.fedpro.M"
   "essageRetractionHandle\"\223\001\n\021AttributesInS"
   "cope\022A\n\016objectInstance\030\001 \001(\0132).rti1516_2"
-  "02X.fedpro.ObjectInstanceHandle\022;\n\nattri"
-  "butes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attrib"
+  "025.fedpro.ObjectInstanceHandle\022;\n\nattri"
+  "butes\030\002 \001(\0132\'.rti1516_2025.fedpro.Attrib"
   "uteHandleSet\"\226\001\n\024AttributesOutOfScope\022A\n"
-  "\016objectInstance\030\001 \001(\0132).rti1516_202X.fed"
+  "\016objectInstance\030\001 \001(\0132).rti1516_2025.fed"
   "pro.ObjectInstanceHandle\022;\n\nattributes\030\002"
-  " \001(\0132\'.rti1516_202X.fedpro.AttributeHand"
+  " \001(\0132\'.rti1516_2025.fedpro.AttributeHand"
   "leSet\"\266\001\n\033ProvideAttributeValueUpdate\022A\n"
-  "\016objectInstance\030\001 \001(\0132).rti1516_202X.fed"
+  "\016objectInstance\030\001 \001(\0132).rti1516_2025.fed"
   "pro.ObjectInstanceHandle\022;\n\nattributes\030\002"
-  " \001(\0132\'.rti1516_202X.fedpro.AttributeHand"
+  " \001(\0132\'.rti1516_2025.fedpro.AttributeHand"
   "leSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"\240\001\n\036TurnU"
   "pdatesOnForObjectInstance\022A\n\016objectInsta"
-  "nce\030\001 \001(\0132).rti1516_202X.fedpro.ObjectIn"
+  "nce\030\001 \001(\0132).rti1516_2025.fedpro.ObjectIn"
   "stanceHandle\022;\n\nattributes\030\002 \001(\0132\'.rti15"
-  "16_202X.fedpro.AttributeHandleSet\"\306\001\n&Tu"
+  "16_2025.fedpro.AttributeHandleSet\"\306\001\n&Tu"
   "rnUpdatesOnForObjectInstanceWithRate\022A\n\016"
-  "objectInstance\030\001 \001(\0132).rti1516_202X.fedp"
+  "objectInstance\030\001 \001(\0132).rti1516_2025.fedp"
   "ro.ObjectInstanceHandle\022;\n\nattributes\030\002 "
-  "\001(\0132\'.rti1516_202X.fedpro.AttributeHandl"
+  "\001(\0132\'.rti1516_2025.fedpro.AttributeHandl"
   "eSet\022\034\n\024updateRateDesignator\030\003 \001(\t\"\241\001\n\037T"
   "urnUpdatesOffForObjectInstance\022A\n\016object"
-  "Instance\030\001 \001(\0132).rti1516_202X.fedpro.Obj"
+  "Instance\030\001 \001(\0132).rti1516_2025.fedpro.Obj"
   "ectInstanceHandle\022;\n\nattributes\030\002 \001(\0132\'."
-  "rti1516_202X.fedpro.AttributeHandleSet\"\365"
+  "rti1516_2025.fedpro.AttributeHandleSet\"\365"
   "\001\n(ConfirmAttributeTransportationTypeCha"
   "nge\022A\n\016objectInstance\030\001 \001(\0132).rti1516_20"
-  "2X.fedpro.ObjectInstanceHandle\022;\n\nattrib"
-  "utes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attribu"
+  "25.fedpro.ObjectInstanceHandle\022;\n\nattrib"
+  "utes\030\002 \001(\0132\'.rti1516_2025.fedpro.Attribu"
   "teHandleSet\022I\n\022transportationType\030\003 \001(\0132"
-  "-.rti1516_202X.fedpro.TransportationType"
+  "-.rti1516_2025.fedpro.TransportationType"
   "Handle\"\352\001\n!ReportAttributeTransportation"
   "Type\022A\n\016objectInstance\030\001 \001(\0132).rti1516_2"
-  "02X.fedpro.ObjectInstanceHandle\0227\n\tattri"
-  "bute\030\002 \001(\0132$.rti1516_202X.fedpro.Attribu"
+  "025.fedpro.ObjectInstanceHandle\0227\n\tattri"
+  "bute\030\002 \001(\0132$.rti1516_2025.fedpro.Attribu"
   "teHandle\022I\n\022transportationType\030\003 \001(\0132-.r"
-  "ti1516_202X.fedpro.TransportationTypeHan"
+  "ti1516_2025.fedpro.TransportationTypeHan"
   "dle\"\276\001\n*ConfirmInteractionTransportation"
   "TypeChange\022E\n\020interactionClass\030\001 \001(\0132+.r"
-  "ti1516_202X.fedpro.InteractionClassHandl"
+  "ti1516_2025.fedpro.InteractionClassHandl"
   "e\022I\n\022transportationType\030\002 \001(\0132-.rti1516_"
-  "202X.fedpro.TransportationTypeHandle\"\356\001\n"
+  "2025.fedpro.TransportationTypeHandle\"\356\001\n"
   "#ReportInteractionTransportationType\0225\n\010"
-  "federate\030\001 \001(\0132#.rti1516_202X.fedpro.Fed"
+  "federate\030\001 \001(\0132#.rti1516_2025.fedpro.Fed"
   "erateHandle\022E\n\020interactionClass\030\002 \001(\0132+."
-  "rti1516_202X.fedpro.InteractionClassHand"
+  "rti1516_2025.fedpro.InteractionClassHand"
   "le\022I\n\022transportationType\030\003 \001(\0132-.rti1516"
-  "_202X.fedpro.TransportationTypeHandle\"\305\001"
+  "_2025.fedpro.TransportationTypeHandle\"\305\001"
   "\n#RequestAttributeOwnershipAssumption\022A\n"
-  "\016objectInstance\030\001 \001(\0132).rti1516_202X.fed"
+  "\016objectInstance\030\001 \001(\0132).rti1516_2025.fed"
   "pro.ObjectInstanceHandle\022B\n\021offeredAttri"
-  "butes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attrib"
+  "butes\030\002 \001(\0132\'.rti1516_2025.fedpro.Attrib"
   "uteHandleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"\301\001"
   "\n\036RequestDivestitureConfirmation\022A\n\016obje"
-  "ctInstance\030\001 \001(\0132).rti1516_202X.fedpro.O"
+  "ctInstance\030\001 \001(\0132).rti1516_2025.fedpro.O"
   "bjectInstanceHandle\022C\n\022releasedAttribute"
-  "s\030\002 \001(\0132\'.rti1516_202X.fedpro.AttributeH"
+  "s\030\002 \001(\0132\'.rti1516_2025.fedpro.AttributeH"
   "andleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\"\313\001\n)At"
   "tributeOwnershipAcquisitionNotification\022"
-  "A\n\016objectInstance\030\001 \001(\0132).rti1516_202X.f"
+  "A\n\016objectInstance\030\001 \001(\0132).rti1516_2025.f"
   "edpro.ObjectInstanceHandle\022B\n\021securedAtt"
-  "ributes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attr"
+  "ributes\030\002 \001(\0132\'.rti1516_2025.fedpro.Attr"
   "ibuteHandleSet\022\027\n\017userSuppliedTag\030\003 \001(\014\""
   "\270\001\n\035AttributeOwnershipUnavailable\022A\n\016obj"
-  "ectInstance\030\001 \001(\0132).rti1516_202X.fedpro."
+  "ectInstance\030\001 \001(\0132).rti1516_2025.fedpro."
   "ObjectInstanceHandle\022;\n\nattributes\030\002 \001(\013"
-  "2\'.rti1516_202X.fedpro.AttributeHandleSe"
+  "2\'.rti1516_2025.fedpro.AttributeHandleSe"
   "t\022\027\n\017userSuppliedTag\030\003 \001(\014\"\304\001\n RequestAt"
   "tributeOwnershipRelease\022A\n\016objectInstanc"
-  "e\030\001 \001(\0132).rti1516_202X.fedpro.ObjectInst"
+  "e\030\001 \001(\0132).rti1516_2025.fedpro.ObjectInst"
   "anceHandle\022D\n\023candidateAttributes\030\002 \001(\0132"
-  "\'.rti1516_202X.fedpro.AttributeHandleSet"
+  "\'.rti1516_2025.fedpro.AttributeHandleSet"
   "\022\027\n\017userSuppliedTag\030\003 \001(\014\"\262\001\n0ConfirmAtt"
   "ributeOwnershipAcquisitionCancellation\022A"
-  "\n\016objectInstance\030\001 \001(\0132).rti1516_202X.fe"
+  "\n\016objectInstance\030\001 \001(\0132).rti1516_2025.fe"
   "dpro.ObjectInstanceHandle\022;\n\nattributes\030"
-  "\002 \001(\0132\'.rti1516_202X.fedpro.AttributeHan"
+  "\002 \001(\0132\'.rti1516_2025.fedpro.AttributeHan"
   "dleSet\"\321\001\n\030InformAttributeOwnership\022A\n\016o"
-  "bjectInstance\030\001 \001(\0132).rti1516_202X.fedpr"
+  "bjectInstance\030\001 \001(\0132).rti1516_2025.fedpr"
   "o.ObjectInstanceHandle\022;\n\nattributes\030\002 \001"
-  "(\0132\'.rti1516_202X.fedpro.AttributeHandle"
-  "Set\0225\n\010federate\030\003 \001(\0132#.rti1516_202X.fed"
+  "(\0132\'.rti1516_2025.fedpro.AttributeHandle"
+  "Set\0225\n\010federate\030\003 \001(\0132#.rti1516_2025.fed"
   "pro.FederateHandle\"\225\001\n\023AttributeIsNotOwn"
   "ed\022A\n\016objectInstance\030\001 \001(\0132).rti1516_202"
-  "X.fedpro.ObjectInstanceHandle\022;\n\nattribu"
-  "tes\030\002 \001(\0132\'.rti1516_202X.fedpro.Attribut"
+  "5.fedpro.ObjectInstanceHandle\022;\n\nattribu"
+  "tes\030\002 \001(\0132\'.rti1516_2025.fedpro.Attribut"
   "eHandleSet\"\227\001\n\025AttributeIsOwnedByRTI\022A\n\016"
-  "objectInstance\030\001 \001(\0132).rti1516_202X.fedp"
+  "objectInstance\030\001 \001(\0132).rti1516_2025.fedp"
   "ro.ObjectInstanceHandle\022;\n\nattributes\030\002 "
-  "\001(\0132\'.rti1516_202X.fedpro.AttributeHandl"
+  "\001(\0132\'.rti1516_2025.fedpro.AttributeHandl"
   "eSet\"G\n\025TimeRegulationEnabled\022.\n\004time\030\001 "
-  "\001(\0132 .rti1516_202X.fedpro.LogicalTime\"H\n"
+  "\001(\0132 .rti1516_2025.fedpro.LogicalTime\"H\n"
   "\026TimeConstrainedEnabled\022.\n\004time\030\001 \001(\0132 ."
-  "rti1516_202X.fedpro.LogicalTime\"{\n\017Flush"
-  "QueueGrant\022.\n\004time\030\001 \001(\0132 .rti1516_202X."
+  "rti1516_2025.fedpro.LogicalTime\"{\n\017Flush"
+  "QueueGrant\022.\n\004time\030\001 \001(\0132 .rti1516_2025."
   "fedpro.LogicalTime\0228\n\016optimisticTime\030\002 \001"
-  "(\0132 .rti1516_202X.fedpro.LogicalTime\"B\n\020"
+  "(\0132 .rti1516_2025.fedpro.LogicalTime\"B\n\020"
   "TimeAdvanceGrant\022.\n\004time\030\001 \001(\0132 .rti1516"
-  "_202X.fedpro.LogicalTime\"U\n\021RequestRetra"
-  "ction\022@\n\nretraction\030\001 \001(\0132,.rti1516_202X"
+  "_2025.fedpro.LogicalTime\"U\n\021RequestRetra"
+  "ction\022@\n\nretraction\030\001 \001(\0132,.rti1516_2025"
   ".fedpro.MessageRetractionHandle\"\023\n\021Callb"
   "ackSucceeded\"\373+\n\017CallbackRequest\022=\n\016conn"
-  "ectionLost\030\001 \001(\0132#.rti1516_202X.fedpro.C"
+  "ectionLost\030\001 \001(\0132#.rti1516_2025.fedpro.C"
   "onnectionLostH\000\022U\n\032reportFederationExecu"
-  "tions\030\002 \001(\0132/.rti1516_202X.fedpro.Report"
+  "tions\030\002 \001(\0132/.rti1516_2025.fedpro.Report"
   "FederationExecutionsH\000\022a\n reportFederati"
-  "onExecutionMembers\030\003 \001(\01325.rti1516_202X."
+  "onExecutionMembers\030\003 \001(\01325.rti1516_2025."
   "fedpro.ReportFederationExecutionMembersH"
   "\000\022k\n%reportFederationExecutionDoesNotExi"
-  "st\030\004 \001(\0132:.rti1516_202X.fedpro.ReportFed"
+  "st\030\004 \001(\0132:.rti1516_2025.fedpro.ReportFed"
   "erationExecutionDoesNotExistH\000\022A\n\020federa"
-  "teResigned\030\005 \001(\0132%.rti1516_202X.fedpro.F"
+  "teResigned\030\005 \001(\0132%.rti1516_2025.fedpro.F"
   "ederateResignedH\000\022s\n)synchronizationPoin"
   "tRegistrationSucceeded\030\006 \001(\0132>.rti1516_2"
-  "02X.fedpro.SynchronizationPointRegistrat"
+  "025.fedpro.SynchronizationPointRegistrat"
   "ionSucceededH\000\022m\n&synchronizationPointRe"
-  "gistrationFailed\030\007 \001(\0132;.rti1516_202X.fe"
+  "gistrationFailed\030\007 \001(\0132;.rti1516_2025.fe"
   "dpro.SynchronizationPointRegistrationFai"
   "ledH\000\022Y\n\034announceSynchronizationPoint\030\010 "
-  "\001(\01321.rti1516_202X.fedpro.AnnounceSynchr"
+  "\001(\01321.rti1516_2025.fedpro.AnnounceSynchr"
   "onizationPointH\000\022M\n\026federationSynchroniz"
-  "ed\030\t \001(\0132+.rti1516_202X.fedpro.Federatio"
+  "ed\030\t \001(\0132+.rti1516_2025.fedpro.Federatio"
   "nSynchronizedH\000\022I\n\024initiateFederateSave\030"
-  "\n \001(\0132).rti1516_202X.fedpro.InitiateFede"
+  "\n \001(\0132).rti1516_2025.fedpro.InitiateFede"
   "rateSaveH\000\022Y\n\034initiateFederateSaveWithTi"
-  "me\030\013 \001(\01321.rti1516_202X.fedpro.InitiateF"
+  "me\030\013 \001(\01321.rti1516_2025.fedpro.InitiateF"
   "ederateSaveWithTimeH\000\022\?\n\017federationSaved"
-  "\030\014 \001(\0132$.rti1516_202X.fedpro.FederationS"
+  "\030\014 \001(\0132$.rti1516_2025.fedpro.FederationS"
   "avedH\000\022E\n\022federationNotSaved\030\r \001(\0132\'.rti"
-  "1516_202X.fedpro.FederationNotSavedH\000\022Y\n"
+  "1516_2025.fedpro.FederationNotSavedH\000\022Y\n"
   "\034federationSaveStatusResponse\030\016 \001(\01321.rt"
-  "i1516_202X.fedpro.FederationSaveStatusRe"
+  "i1516_2025.fedpro.FederationSaveStatusRe"
   "sponseH\000\022c\n!requestFederationRestoreSucc"
-  "eeded\030\017 \001(\01326.rti1516_202X.fedpro.Reques"
+  "eeded\030\017 \001(\01326.rti1516_2025.fedpro.Reques"
   "tFederationRestoreSucceededH\000\022]\n\036request"
   "FederationRestoreFailed\030\020 \001(\01323.rti1516_"
-  "202X.fedpro.RequestFederationRestoreFail"
+  "2025.fedpro.RequestFederationRestoreFail"
   "edH\000\022M\n\026federationRestoreBegun\030\021 \001(\0132+.r"
-  "ti1516_202X.fedpro.FederationRestoreBegu"
+  "ti1516_2025.fedpro.FederationRestoreBegu"
   "nH\000\022O\n\027initiateFederateRestore\030\022 \001(\0132,.r"
-  "ti1516_202X.fedpro.InitiateFederateResto"
+  "ti1516_2025.fedpro.InitiateFederateResto"
   "reH\000\022E\n\022federationRestored\030\023 \001(\0132\'.rti15"
-  "16_202X.fedpro.FederationRestoredH\000\022K\n\025f"
+  "16_2025.fedpro.FederationRestoredH\000\022K\n\025f"
   "ederationNotRestored\030\024 \001(\0132*.rti1516_202"
-  "X.fedpro.FederationNotRestoredH\000\022_\n\037fede"
+  "5.fedpro.FederationNotRestoredH\000\022_\n\037fede"
   "rationRestoreStatusResponse\030\025 \001(\01324.rti1"
-  "516_202X.fedpro.FederationRestoreStatusR"
+  "516_2025.fedpro.FederationRestoreStatusR"
   "esponseH\000\022_\n\037startRegistrationForObjectC"
-  "lass\030\026 \001(\01324.rti1516_202X.fedpro.StartRe"
+  "lass\030\026 \001(\01324.rti1516_2025.fedpro.StartRe"
   "gistrationForObjectClassH\000\022]\n\036stopRegist"
   "rationForObjectClass\030\027 \001(\01323.rti1516_202"
-  "X.fedpro.StopRegistrationForObjectClassH"
+  "5.fedpro.StopRegistrationForObjectClassH"
   "\000\022E\n\022turnInteractionsOn\030\030 \001(\0132\'.rti1516_"
-  "202X.fedpro.TurnInteractionsOnH\000\022G\n\023turn"
-  "InteractionsOff\030\031 \001(\0132(.rti1516_202X.fed"
+  "2025.fedpro.TurnInteractionsOnH\000\022G\n\023turn"
+  "InteractionsOff\030\031 \001(\0132(.rti1516_2025.fed"
   "pro.TurnInteractionsOffH\000\022m\n&objectInsta"
   "nceNameReservationSucceeded\030\032 \001(\0132;.rti1"
-  "516_202X.fedpro.ObjectInstanceNameReserv"
+  "516_2025.fedpro.ObjectInstanceNameReserv"
   "ationSucceededH\000\022g\n#objectInstanceNameRe"
-  "servationFailed\030\033 \001(\01328.rti1516_202X.fed"
+  "servationFailed\030\033 \001(\01328.rti1516_2025.fed"
   "pro.ObjectInstanceNameReservationFailedH"
   "\000\022}\n.multipleObjectInstanceNameReservati"
-  "onSucceeded\030\034 \001(\0132C.rti1516_202X.fedpro."
+  "onSucceeded\030\034 \001(\0132C.rti1516_2025.fedpro."
   "MultipleObjectInstanceNameReservationSuc"
   "ceededH\000\022w\n+multipleObjectInstanceNameRe"
-  "servationFailed\030\035 \001(\0132@.rti1516_202X.fed"
+  "servationFailed\030\035 \001(\0132@.rti1516_2025.fed"
   "pro.MultipleObjectInstanceNameReservatio"
   "nFailedH\000\022M\n\026discoverObjectInstance\030\036 \001("
-  "\0132+.rti1516_202X.fedpro.DiscoverObjectIn"
+  "\0132+.rti1516_2025.fedpro.DiscoverObjectIn"
   "stanceH\000\022M\n\026reflectAttributeValues\030\037 \001(\013"
-  "2+.rti1516_202X.fedpro.ReflectAttributeV"
+  "2+.rti1516_2025.fedpro.ReflectAttributeV"
   "aluesH\000\022]\n\036reflectAttributeValuesWithTim"
-  "e\030  \001(\01323.rti1516_202X.fedpro.ReflectAtt"
+  "e\030  \001(\01323.rti1516_2025.fedpro.ReflectAtt"
   "ributeValuesWithTimeH\000\022E\n\022receiveInterac"
-  "tion\030! \001(\0132\'.rti1516_202X.fedpro.Receive"
+  "tion\030! \001(\0132\'.rti1516_2025.fedpro.Receive"
   "InteractionH\000\022U\n\032receiveInteractionWithT"
-  "ime\030\" \001(\0132/.rti1516_202X.fedpro.ReceiveI"
+  "ime\030\" \001(\0132/.rti1516_2025.fedpro.ReceiveI"
   "nteractionWithTimeH\000\022U\n\032receiveDirectedI"
-  "nteraction\030# \001(\0132/.rti1516_202X.fedpro.R"
+  "nteraction\030# \001(\0132/.rti1516_2025.fedpro.R"
   "eceiveDirectedInteractionH\000\022e\n\"receiveDi"
   "rectedInteractionWithTime\030$ \001(\01327.rti151"
-  "6_202X.fedpro.ReceiveDirectedInteraction"
+  "6_2025.fedpro.ReceiveDirectedInteraction"
   "WithTimeH\000\022I\n\024removeObjectInstance\030% \001(\013"
-  "2).rti1516_202X.fedpro.RemoveObjectInsta"
+  "2).rti1516_2025.fedpro.RemoveObjectInsta"
   "nceH\000\022Y\n\034removeObjectInstanceWithTime\030& "
-  "\001(\01321.rti1516_202X.fedpro.RemoveObjectIn"
+  "\001(\01321.rti1516_2025.fedpro.RemoveObjectIn"
   "stanceWithTimeH\000\022C\n\021attributesInScope\030\' "
-  "\001(\0132&.rti1516_202X.fedpro.AttributesInSc"
+  "\001(\0132&.rti1516_2025.fedpro.AttributesInSc"
   "opeH\000\022I\n\024attributesOutOfScope\030( \001(\0132).rt"
-  "i1516_202X.fedpro.AttributesOutOfScopeH\000"
+  "i1516_2025.fedpro.AttributesOutOfScopeH\000"
   "\022W\n\033provideAttributeValueUpdate\030) \001(\01320."
-  "rti1516_202X.fedpro.ProvideAttributeValu"
+  "rti1516_2025.fedpro.ProvideAttributeValu"
   "eUpdateH\000\022]\n\036turnUpdatesOnForObjectInsta"
-  "nce\030* \001(\01323.rti1516_202X.fedpro.TurnUpda"
+  "nce\030* \001(\01323.rti1516_2025.fedpro.TurnUpda"
   "tesOnForObjectInstanceH\000\022m\n&turnUpdatesO"
   "nForObjectInstanceWithRate\030+ \001(\0132;.rti15"
-  "16_202X.fedpro.TurnUpdatesOnForObjectIns"
+  "16_2025.fedpro.TurnUpdatesOnForObjectIns"
   "tanceWithRateH\000\022_\n\037turnUpdatesOffForObje"
-  "ctInstance\030, \001(\01324.rti1516_202X.fedpro.T"
+  "ctInstance\030, \001(\01324.rti1516_2025.fedpro.T"
   "urnUpdatesOffForObjectInstanceH\000\022q\n(conf"
   "irmAttributeTransportationTypeChange\030- \001"
-  "(\0132=.rti1516_202X.fedpro.ConfirmAttribut"
+  "(\0132=.rti1516_2025.fedpro.ConfirmAttribut"
   "eTransportationTypeChangeH\000\022c\n!reportAtt"
   "ributeTransportationType\030. \001(\01326.rti1516"
-  "_202X.fedpro.ReportAttributeTransportati"
+  "_2025.fedpro.ReportAttributeTransportati"
   "onTypeH\000\022u\n*confirmInteractionTransporta"
-  "tionTypeChange\030/ \001(\0132\?.rti1516_202X.fedp"
+  "tionTypeChange\030/ \001(\0132\?.rti1516_2025.fedp"
   "ro.ConfirmInteractionTransportationTypeC"
   "hangeH\000\022g\n#reportInteractionTransportati"
-  "onType\0300 \001(\01328.rti1516_202X.fedpro.Repor"
+  "onType\0300 \001(\01328.rti1516_2025.fedpro.Repor"
   "tInteractionTransportationTypeH\000\022g\n#requ"
   "estAttributeOwnershipAssumption\0301 \001(\01328."
-  "rti1516_202X.fedpro.RequestAttributeOwne"
+  "rti1516_2025.fedpro.RequestAttributeOwne"
   "rshipAssumptionH\000\022]\n\036requestDivestitureC"
-  "onfirmation\0302 \001(\01323.rti1516_202X.fedpro."
+  "onfirmation\0302 \001(\01323.rti1516_2025.fedpro."
   "RequestDivestitureConfirmationH\000\022s\n)attr"
   "ibuteOwnershipAcquisitionNotification\0303 "
-  "\001(\0132>.rti1516_202X.fedpro.AttributeOwner"
+  "\001(\0132>.rti1516_2025.fedpro.AttributeOwner"
   "shipAcquisitionNotificationH\000\022[\n\035attribu"
   "teOwnershipUnavailable\0304 \001(\01322.rti1516_2"
-  "02X.fedpro.AttributeOwnershipUnavailable"
+  "025.fedpro.AttributeOwnershipUnavailable"
   "H\000\022a\n requestAttributeOwnershipRelease\0305"
-  " \001(\01325.rti1516_202X.fedpro.RequestAttrib"
+  " \001(\01325.rti1516_2025.fedpro.RequestAttrib"
   "uteOwnershipReleaseH\000\022\201\001\n0confirmAttribu"
   "teOwnershipAcquisitionCancellation\0306 \001(\013"
-  "2E.rti1516_202X.fedpro.ConfirmAttributeO"
+  "2E.rti1516_2025.fedpro.ConfirmAttributeO"
   "wnershipAcquisitionCancellationH\000\022Q\n\030inf"
   "ormAttributeOwnership\0307 \001(\0132-.rti1516_20"
-  "2X.fedpro.InformAttributeOwnershipH\000\022G\n\023"
-  "attributeIsNotOwned\0308 \001(\0132(.rti1516_202X"
+  "25.fedpro.InformAttributeOwnershipH\000\022G\n\023"
+  "attributeIsNotOwned\0308 \001(\0132(.rti1516_2025"
   ".fedpro.AttributeIsNotOwnedH\000\022K\n\025attribu"
-  "teIsOwnedByRTI\0309 \001(\0132*.rti1516_202X.fedp"
+  "teIsOwnedByRTI\0309 \001(\0132*.rti1516_2025.fedp"
   "ro.AttributeIsOwnedByRTIH\000\022K\n\025timeRegula"
-  "tionEnabled\030: \001(\0132*.rti1516_202X.fedpro."
+  "tionEnabled\030: \001(\0132*.rti1516_2025.fedpro."
   "TimeRegulationEnabledH\000\022M\n\026timeConstrain"
-  "edEnabled\030; \001(\0132+.rti1516_202X.fedpro.Ti"
+  "edEnabled\030; \001(\0132+.rti1516_2025.fedpro.Ti"
   "meConstrainedEnabledH\000\022\?\n\017flushQueueGran"
-  "t\030< \001(\0132$.rti1516_202X.fedpro.FlushQueue"
+  "t\030< \001(\0132$.rti1516_2025.fedpro.FlushQueue"
   "GrantH\000\022A\n\020timeAdvanceGrant\030= \001(\0132%.rti1"
-  "516_202X.fedpro.TimeAdvanceGrantH\000\022C\n\021re"
-  "questRetraction\030> \001(\0132&.rti1516_202X.fed"
+  "516_2025.fedpro.TimeAdvanceGrantH\000\022C\n\021re"
+  "questRetraction\030> \001(\0132&.rti1516_2025.fed"
   "pro.RequestRetractionH\000B\021\n\017callbackReque"
   "st\"\251\001\n\020CallbackResponse\022C\n\021callbackSucce"
-  "eded\030\001 \001(\0132&.rti1516_202X.fedpro.Callbac"
+  "eded\030\001 \001(\0132&.rti1516_2025.fedpro.Callbac"
   "kSucceededH\000\022<\n\016callbackFailed\030\002 \001(\0132\".r"
-  "ti1516_202X.fedpro.ExceptionDataH\000B\022\n\020ca"
-  "llbackResponseB\033\n\027hla.rti1516_202X.fedpr"
+  "ti1516_2025.fedpro.ExceptionDataH\000B\022\n\020ca"
+  "llbackResponseB\033\n\027hla.rti1516_2025.fedpr"
   "oP\001b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_FederateAmbassador_2eproto_deps[1] = {
@@ -2130,7 +2130,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_Federate
 
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_FederateAmbassador_2eproto(&descriptor_table_FederateAmbassador_2eproto);
-namespace rti1516_202X {
+namespace rti1516_2025 {
 namespace fedpro {
 
 // ===================================================================
@@ -2143,7 +2143,7 @@ ConnectionLost::ConnectionLost(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ConnectionLost)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ConnectionLost)
 }
 ConnectionLost::ConnectionLost(const ConnectionLost& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2161,7 +2161,7 @@ ConnectionLost::ConnectionLost(const ConnectionLost& from)
     _this->_impl_.faultdescription_.Set(from._internal_faultdescription(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ConnectionLost)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ConnectionLost)
 }
 
 inline void ConnectionLost::SharedCtor(
@@ -2179,7 +2179,7 @@ inline void ConnectionLost::SharedCtor(
 }
 
 ConnectionLost::~ConnectionLost() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ConnectionLost)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ConnectionLost)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2197,7 +2197,7 @@ void ConnectionLost::SetCachedSize(int size) const {
 }
 
 void ConnectionLost::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ConnectionLost)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ConnectionLost)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2218,7 +2218,7 @@ const char* ConnectionLost::_InternalParse(const char* ptr, ::_pbi::ParseContext
           auto str = _internal_mutable_faultdescription();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.ConnectionLost.faultDescription"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.ConnectionLost.faultDescription"));
         } else
           goto handle_unusual;
         continue;
@@ -2247,7 +2247,7 @@ failure:
 
 uint8_t* ConnectionLost::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ConnectionLost)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ConnectionLost)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2256,7 +2256,7 @@ uint8_t* ConnectionLost::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_faultdescription().data(), static_cast<int>(this->_internal_faultdescription().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.ConnectionLost.faultDescription");
+      "rti1516_2025.fedpro.ConnectionLost.faultDescription");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_faultdescription(), target);
   }
@@ -2265,12 +2265,12 @@ uint8_t* ConnectionLost::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ConnectionLost)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ConnectionLost)
   return target;
 }
 
 size_t ConnectionLost::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ConnectionLost)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ConnectionLost)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2297,7 +2297,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConnectionLost::GetClassData()
 void ConnectionLost::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ConnectionLost*>(&to_msg);
   auto& from = static_cast<const ConnectionLost&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ConnectionLost)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ConnectionLost)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2309,7 +2309,7 @@ void ConnectionLost::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
 }
 
 void ConnectionLost::CopyFrom(const ConnectionLost& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ConnectionLost)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ConnectionLost)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2340,10 +2340,10 @@ void ConnectionLost::InternalSwap(ConnectionLost* other) {
 
 class ReportFederationExecutions::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::FederationExecutionInformationSet& report(const ReportFederationExecutions* msg);
+  static const ::rti1516_2025::fedpro::FederationExecutionInformationSet& report(const ReportFederationExecutions* msg);
 };
 
-const ::rti1516_202X::fedpro::FederationExecutionInformationSet&
+const ::rti1516_2025::fedpro::FederationExecutionInformationSet&
 ReportFederationExecutions::_Internal::report(const ReportFederationExecutions* msg) {
   return *msg->_impl_.report_;
 }
@@ -2357,7 +2357,7 @@ ReportFederationExecutions::ReportFederationExecutions(::PROTOBUF_NAMESPACE_ID::
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReportFederationExecutions)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReportFederationExecutions)
 }
 ReportFederationExecutions::ReportFederationExecutions(const ReportFederationExecutions& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2368,9 +2368,9 @@ ReportFederationExecutions::ReportFederationExecutions(const ReportFederationExe
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_report()) {
-    _this->_impl_.report_ = new ::rti1516_202X::fedpro::FederationExecutionInformationSet(*from._impl_.report_);
+    _this->_impl_.report_ = new ::rti1516_2025::fedpro::FederationExecutionInformationSet(*from._impl_.report_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReportFederationExecutions)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReportFederationExecutions)
 }
 
 inline void ReportFederationExecutions::SharedCtor(
@@ -2384,7 +2384,7 @@ inline void ReportFederationExecutions::SharedCtor(
 }
 
 ReportFederationExecutions::~ReportFederationExecutions() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReportFederationExecutions)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReportFederationExecutions)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2402,7 +2402,7 @@ void ReportFederationExecutions::SetCachedSize(int size) const {
 }
 
 void ReportFederationExecutions::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReportFederationExecutions)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReportFederationExecutions)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2420,7 +2420,7 @@ const char* ReportFederationExecutions::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.FederationExecutionInformationSet report = 1;
+      // .rti1516_2025.fedpro.FederationExecutionInformationSet report = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_report(), ptr);
@@ -2453,11 +2453,11 @@ failure:
 
 uint8_t* ReportFederationExecutions::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReportFederationExecutions)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReportFederationExecutions)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederationExecutionInformationSet report = 1;
+  // .rti1516_2025.fedpro.FederationExecutionInformationSet report = 1;
   if (this->_internal_has_report()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::report(this),
@@ -2468,19 +2468,19 @@ uint8_t* ReportFederationExecutions::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReportFederationExecutions)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReportFederationExecutions)
   return target;
 }
 
 size_t ReportFederationExecutions::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReportFederationExecutions)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReportFederationExecutions)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederationExecutionInformationSet report = 1;
+  // .rti1516_2025.fedpro.FederationExecutionInformationSet report = 1;
   if (this->_internal_has_report()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -2500,20 +2500,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReportFederationExecutions::Ge
 void ReportFederationExecutions::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReportFederationExecutions*>(&to_msg);
   auto& from = static_cast<const ReportFederationExecutions&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReportFederationExecutions)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReportFederationExecutions)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_report()) {
-    _this->_internal_mutable_report()->::rti1516_202X::fedpro::FederationExecutionInformationSet::MergeFrom(
+    _this->_internal_mutable_report()->::rti1516_2025::fedpro::FederationExecutionInformationSet::MergeFrom(
         from._internal_report());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReportFederationExecutions::CopyFrom(const ReportFederationExecutions& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReportFederationExecutions)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReportFederationExecutions)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2539,10 +2539,10 @@ void ReportFederationExecutions::InternalSwap(ReportFederationExecutions* other)
 
 class ReportFederationExecutionMembers::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::FederationExecutionMemberInformationSet& report(const ReportFederationExecutionMembers* msg);
+  static const ::rti1516_2025::fedpro::FederationExecutionMemberInformationSet& report(const ReportFederationExecutionMembers* msg);
 };
 
-const ::rti1516_202X::fedpro::FederationExecutionMemberInformationSet&
+const ::rti1516_2025::fedpro::FederationExecutionMemberInformationSet&
 ReportFederationExecutionMembers::_Internal::report(const ReportFederationExecutionMembers* msg) {
   return *msg->_impl_.report_;
 }
@@ -2556,7 +2556,7 @@ ReportFederationExecutionMembers::ReportFederationExecutionMembers(::PROTOBUF_NA
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReportFederationExecutionMembers)
 }
 ReportFederationExecutionMembers::ReportFederationExecutionMembers(const ReportFederationExecutionMembers& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2576,9 +2576,9 @@ ReportFederationExecutionMembers::ReportFederationExecutionMembers(const ReportF
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_report()) {
-    _this->_impl_.report_ = new ::rti1516_202X::fedpro::FederationExecutionMemberInformationSet(*from._impl_.report_);
+    _this->_impl_.report_ = new ::rti1516_2025::fedpro::FederationExecutionMemberInformationSet(*from._impl_.report_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReportFederationExecutionMembers)
 }
 
 inline void ReportFederationExecutionMembers::SharedCtor(
@@ -2597,7 +2597,7 @@ inline void ReportFederationExecutionMembers::SharedCtor(
 }
 
 ReportFederationExecutionMembers::~ReportFederationExecutionMembers() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReportFederationExecutionMembers)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2616,7 +2616,7 @@ void ReportFederationExecutionMembers::SetCachedSize(int size) const {
 }
 
 void ReportFederationExecutionMembers::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReportFederationExecutionMembers)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2641,11 +2641,11 @@ const char* ReportFederationExecutionMembers::_InternalParse(const char* ptr, ::
           auto str = _internal_mutable_federationname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.ReportFederationExecutionMembers.federationName"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.ReportFederationExecutionMembers.federationName"));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationExecutionMemberInformationSet report = 2;
+      // .rti1516_2025.fedpro.FederationExecutionMemberInformationSet report = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_report(), ptr);
@@ -2678,7 +2678,7 @@ failure:
 
 uint8_t* ReportFederationExecutionMembers::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReportFederationExecutionMembers)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2687,12 +2687,12 @@ uint8_t* ReportFederationExecutionMembers::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_federationname().data(), static_cast<int>(this->_internal_federationname().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.ReportFederationExecutionMembers.federationName");
+      "rti1516_2025.fedpro.ReportFederationExecutionMembers.federationName");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_federationname(), target);
   }
 
-  // .rti1516_202X.fedpro.FederationExecutionMemberInformationSet report = 2;
+  // .rti1516_2025.fedpro.FederationExecutionMemberInformationSet report = 2;
   if (this->_internal_has_report()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::report(this),
@@ -2703,12 +2703,12 @@ uint8_t* ReportFederationExecutionMembers::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReportFederationExecutionMembers)
   return target;
 }
 
 size_t ReportFederationExecutionMembers::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReportFederationExecutionMembers)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2722,7 +2722,7 @@ size_t ReportFederationExecutionMembers::ByteSizeLong() const {
         this->_internal_federationname());
   }
 
-  // .rti1516_202X.fedpro.FederationExecutionMemberInformationSet report = 2;
+  // .rti1516_2025.fedpro.FederationExecutionMemberInformationSet report = 2;
   if (this->_internal_has_report()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -2742,7 +2742,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReportFederationExecutionMembe
 void ReportFederationExecutionMembers::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReportFederationExecutionMembers*>(&to_msg);
   auto& from = static_cast<const ReportFederationExecutionMembers&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReportFederationExecutionMembers)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2751,14 +2751,14 @@ void ReportFederationExecutionMembers::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
     _this->_internal_set_federationname(from._internal_federationname());
   }
   if (from._internal_has_report()) {
-    _this->_internal_mutable_report()->::rti1516_202X::fedpro::FederationExecutionMemberInformationSet::MergeFrom(
+    _this->_internal_mutable_report()->::rti1516_2025::fedpro::FederationExecutionMemberInformationSet::MergeFrom(
         from._internal_report());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReportFederationExecutionMembers::CopyFrom(const ReportFederationExecutionMembers& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReportFederationExecutionMembers)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReportFederationExecutionMembers)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2796,7 +2796,7 @@ ReportFederationExecutionDoesNotExist::ReportFederationExecutionDoesNotExist(::P
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
 }
 ReportFederationExecutionDoesNotExist::ReportFederationExecutionDoesNotExist(const ReportFederationExecutionDoesNotExist& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2814,7 +2814,7 @@ ReportFederationExecutionDoesNotExist::ReportFederationExecutionDoesNotExist(con
     _this->_impl_.federationname_.Set(from._internal_federationname(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
 }
 
 inline void ReportFederationExecutionDoesNotExist::SharedCtor(
@@ -2832,7 +2832,7 @@ inline void ReportFederationExecutionDoesNotExist::SharedCtor(
 }
 
 ReportFederationExecutionDoesNotExist::~ReportFederationExecutionDoesNotExist() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2850,7 +2850,7 @@ void ReportFederationExecutionDoesNotExist::SetCachedSize(int size) const {
 }
 
 void ReportFederationExecutionDoesNotExist::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2871,7 +2871,7 @@ const char* ReportFederationExecutionDoesNotExist::_InternalParse(const char* pt
           auto str = _internal_mutable_federationname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.federationName"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist.federationName"));
         } else
           goto handle_unusual;
         continue;
@@ -2900,7 +2900,7 @@ failure:
 
 uint8_t* ReportFederationExecutionDoesNotExist::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2909,7 +2909,7 @@ uint8_t* ReportFederationExecutionDoesNotExist::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_federationname().data(), static_cast<int>(this->_internal_federationname().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist.federationName");
+      "rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist.federationName");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_federationname(), target);
   }
@@ -2918,12 +2918,12 @@ uint8_t* ReportFederationExecutionDoesNotExist::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
   return target;
 }
 
 size_t ReportFederationExecutionDoesNotExist::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2950,7 +2950,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReportFederationExecutionDoesN
 void ReportFederationExecutionDoesNotExist::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReportFederationExecutionDoesNotExist*>(&to_msg);
   auto& from = static_cast<const ReportFederationExecutionDoesNotExist&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2962,7 +2962,7 @@ void ReportFederationExecutionDoesNotExist::MergeImpl(::PROTOBUF_NAMESPACE_ID::M
 }
 
 void ReportFederationExecutionDoesNotExist::CopyFrom(const ReportFederationExecutionDoesNotExist& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2999,7 +2999,7 @@ FederateResigned::FederateResigned(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederateResigned)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederateResigned)
 }
 FederateResigned::FederateResigned(const FederateResigned& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3017,7 +3017,7 @@ FederateResigned::FederateResigned(const FederateResigned& from)
     _this->_impl_.reasonforresigndescription_.Set(from._internal_reasonforresigndescription(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederateResigned)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederateResigned)
 }
 
 inline void FederateResigned::SharedCtor(
@@ -3035,7 +3035,7 @@ inline void FederateResigned::SharedCtor(
 }
 
 FederateResigned::~FederateResigned() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.FederateResigned)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.FederateResigned)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3053,7 +3053,7 @@ void FederateResigned::SetCachedSize(int size) const {
 }
 
 void FederateResigned::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.FederateResigned)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.FederateResigned)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3074,7 +3074,7 @@ const char* FederateResigned::_InternalParse(const char* ptr, ::_pbi::ParseConte
           auto str = _internal_mutable_reasonforresigndescription();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.FederateResigned.reasonForResignDescription"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.FederateResigned.reasonForResignDescription"));
         } else
           goto handle_unusual;
         continue;
@@ -3103,7 +3103,7 @@ failure:
 
 uint8_t* FederateResigned::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.FederateResigned)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.FederateResigned)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3112,7 +3112,7 @@ uint8_t* FederateResigned::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_reasonforresigndescription().data(), static_cast<int>(this->_internal_reasonforresigndescription().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.FederateResigned.reasonForResignDescription");
+      "rti1516_2025.fedpro.FederateResigned.reasonForResignDescription");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_reasonforresigndescription(), target);
   }
@@ -3121,12 +3121,12 @@ uint8_t* FederateResigned::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.FederateResigned)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.FederateResigned)
   return target;
 }
 
 size_t FederateResigned::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.FederateResigned)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.FederateResigned)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3153,7 +3153,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FederateResigned::GetClassData
 void FederateResigned::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<FederateResigned*>(&to_msg);
   auto& from = static_cast<const FederateResigned&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.FederateResigned)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.FederateResigned)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3165,7 +3165,7 @@ void FederateResigned::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
 }
 
 void FederateResigned::CopyFrom(const FederateResigned& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.FederateResigned)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.FederateResigned)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3202,7 +3202,7 @@ SynchronizationPointRegistrationSucceeded::SynchronizationPointRegistrationSucce
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
 }
 SynchronizationPointRegistrationSucceeded::SynchronizationPointRegistrationSucceeded(const SynchronizationPointRegistrationSucceeded& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3220,7 +3220,7 @@ SynchronizationPointRegistrationSucceeded::SynchronizationPointRegistrationSucce
     _this->_impl_.synchronizationpointlabel_.Set(from._internal_synchronizationpointlabel(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
 }
 
 inline void SynchronizationPointRegistrationSucceeded::SharedCtor(
@@ -3238,7 +3238,7 @@ inline void SynchronizationPointRegistrationSucceeded::SharedCtor(
 }
 
 SynchronizationPointRegistrationSucceeded::~SynchronizationPointRegistrationSucceeded() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3256,7 +3256,7 @@ void SynchronizationPointRegistrationSucceeded::SetCachedSize(int size) const {
 }
 
 void SynchronizationPointRegistrationSucceeded::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3277,7 +3277,7 @@ const char* SynchronizationPointRegistrationSucceeded::_InternalParse(const char
           auto str = _internal_mutable_synchronizationpointlabel();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded.synchronizationPointLabel"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded.synchronizationPointLabel"));
         } else
           goto handle_unusual;
         continue;
@@ -3306,7 +3306,7 @@ failure:
 
 uint8_t* SynchronizationPointRegistrationSucceeded::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3315,7 +3315,7 @@ uint8_t* SynchronizationPointRegistrationSucceeded::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_synchronizationpointlabel().data(), static_cast<int>(this->_internal_synchronizationpointlabel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded.synchronizationPointLabel");
+      "rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded.synchronizationPointLabel");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_synchronizationpointlabel(), target);
   }
@@ -3324,12 +3324,12 @@ uint8_t* SynchronizationPointRegistrationSucceeded::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
   return target;
 }
 
 size_t SynchronizationPointRegistrationSucceeded::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3356,7 +3356,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SynchronizationPointRegistrati
 void SynchronizationPointRegistrationSucceeded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<SynchronizationPointRegistrationSucceeded*>(&to_msg);
   auto& from = static_cast<const SynchronizationPointRegistrationSucceeded&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3368,7 +3368,7 @@ void SynchronizationPointRegistrationSucceeded::MergeImpl(::PROTOBUF_NAMESPACE_I
 }
 
 void SynchronizationPointRegistrationSucceeded::CopyFrom(const SynchronizationPointRegistrationSucceeded& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3405,7 +3405,7 @@ SynchronizationPointRegistrationFailed::SynchronizationPointRegistrationFailed(:
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
 }
 SynchronizationPointRegistrationFailed::SynchronizationPointRegistrationFailed(const SynchronizationPointRegistrationFailed& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3425,7 +3425,7 @@ SynchronizationPointRegistrationFailed::SynchronizationPointRegistrationFailed(c
       _this->GetArenaForAllocation());
   }
   _this->_impl_.reason_ = from._impl_.reason_;
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
 }
 
 inline void SynchronizationPointRegistrationFailed::SharedCtor(
@@ -3444,7 +3444,7 @@ inline void SynchronizationPointRegistrationFailed::SharedCtor(
 }
 
 SynchronizationPointRegistrationFailed::~SynchronizationPointRegistrationFailed() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3462,7 +3462,7 @@ void SynchronizationPointRegistrationFailed::SetCachedSize(int size) const {
 }
 
 void SynchronizationPointRegistrationFailed::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3484,16 +3484,16 @@ const char* SynchronizationPointRegistrationFailed::_InternalParse(const char* p
           auto str = _internal_mutable_synchronizationpointlabel();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.SynchronizationPointRegistrationFailed.synchronizationPointLabel"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.SynchronizationPointRegistrationFailed.synchronizationPointLabel"));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.SynchronizationPointFailureReason reason = 2;
+      // .rti1516_2025.fedpro.SynchronizationPointFailureReason reason = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_reason(static_cast<::rti1516_202X::fedpro::SynchronizationPointFailureReason>(val));
+          _internal_set_reason(static_cast<::rti1516_2025::fedpro::SynchronizationPointFailureReason>(val));
         } else
           goto handle_unusual;
         continue;
@@ -3522,7 +3522,7 @@ failure:
 
 uint8_t* SynchronizationPointRegistrationFailed::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3531,12 +3531,12 @@ uint8_t* SynchronizationPointRegistrationFailed::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_synchronizationpointlabel().data(), static_cast<int>(this->_internal_synchronizationpointlabel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.SynchronizationPointRegistrationFailed.synchronizationPointLabel");
+      "rti1516_2025.fedpro.SynchronizationPointRegistrationFailed.synchronizationPointLabel");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_synchronizationpointlabel(), target);
   }
 
-  // .rti1516_202X.fedpro.SynchronizationPointFailureReason reason = 2;
+  // .rti1516_2025.fedpro.SynchronizationPointFailureReason reason = 2;
   if (this->_internal_reason() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -3547,12 +3547,12 @@ uint8_t* SynchronizationPointRegistrationFailed::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
   return target;
 }
 
 size_t SynchronizationPointRegistrationFailed::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3566,7 +3566,7 @@ size_t SynchronizationPointRegistrationFailed::ByteSizeLong() const {
         this->_internal_synchronizationpointlabel());
   }
 
-  // .rti1516_202X.fedpro.SynchronizationPointFailureReason reason = 2;
+  // .rti1516_2025.fedpro.SynchronizationPointFailureReason reason = 2;
   if (this->_internal_reason() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_reason());
@@ -3585,7 +3585,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SynchronizationPointRegistrati
 void SynchronizationPointRegistrationFailed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<SynchronizationPointRegistrationFailed*>(&to_msg);
   auto& from = static_cast<const SynchronizationPointRegistrationFailed&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3600,7 +3600,7 @@ void SynchronizationPointRegistrationFailed::MergeImpl(::PROTOBUF_NAMESPACE_ID::
 }
 
 void SynchronizationPointRegistrationFailed::CopyFrom(const SynchronizationPointRegistrationFailed& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.SynchronizationPointRegistrationFailed)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.SynchronizationPointRegistrationFailed)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3638,7 +3638,7 @@ AnnounceSynchronizationPoint::AnnounceSynchronizationPoint(::PROTOBUF_NAMESPACE_
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
 }
 AnnounceSynchronizationPoint::AnnounceSynchronizationPoint(const AnnounceSynchronizationPoint& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3665,7 +3665,7 @@ AnnounceSynchronizationPoint::AnnounceSynchronizationPoint(const AnnounceSynchro
     _this->_impl_.usersuppliedtag_.Set(from._internal_usersuppliedtag(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
 }
 
 inline void AnnounceSynchronizationPoint::SharedCtor(
@@ -3688,7 +3688,7 @@ inline void AnnounceSynchronizationPoint::SharedCtor(
 }
 
 AnnounceSynchronizationPoint::~AnnounceSynchronizationPoint() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3707,7 +3707,7 @@ void AnnounceSynchronizationPoint::SetCachedSize(int size) const {
 }
 
 void AnnounceSynchronizationPoint::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3729,7 +3729,7 @@ const char* AnnounceSynchronizationPoint::_InternalParse(const char* ptr, ::_pbi
           auto str = _internal_mutable_synchronizationpointlabel();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.AnnounceSynchronizationPoint.synchronizationPointLabel"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.AnnounceSynchronizationPoint.synchronizationPointLabel"));
         } else
           goto handle_unusual;
         continue;
@@ -3767,7 +3767,7 @@ failure:
 
 uint8_t* AnnounceSynchronizationPoint::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3776,7 +3776,7 @@ uint8_t* AnnounceSynchronizationPoint::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_synchronizationpointlabel().data(), static_cast<int>(this->_internal_synchronizationpointlabel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.AnnounceSynchronizationPoint.synchronizationPointLabel");
+      "rti1516_2025.fedpro.AnnounceSynchronizationPoint.synchronizationPointLabel");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_synchronizationpointlabel(), target);
   }
@@ -3791,12 +3791,12 @@ uint8_t* AnnounceSynchronizationPoint::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
   return target;
 }
 
 size_t AnnounceSynchronizationPoint::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3830,7 +3830,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AnnounceSynchronizationPoint::
 void AnnounceSynchronizationPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AnnounceSynchronizationPoint*>(&to_msg);
   auto& from = static_cast<const AnnounceSynchronizationPoint&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3845,7 +3845,7 @@ void AnnounceSynchronizationPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
 }
 
 void AnnounceSynchronizationPoint::CopyFrom(const AnnounceSynchronizationPoint& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.AnnounceSynchronizationPoint)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.AnnounceSynchronizationPoint)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3880,10 +3880,10 @@ void AnnounceSynchronizationPoint::InternalSwap(AnnounceSynchronizationPoint* ot
 
 class FederationSynchronized::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::FederateHandleSet& failedtosyncset(const FederationSynchronized* msg);
+  static const ::rti1516_2025::fedpro::FederateHandleSet& failedtosyncset(const FederationSynchronized* msg);
 };
 
-const ::rti1516_202X::fedpro::FederateHandleSet&
+const ::rti1516_2025::fedpro::FederateHandleSet&
 FederationSynchronized::_Internal::failedtosyncset(const FederationSynchronized* msg) {
   return *msg->_impl_.failedtosyncset_;
 }
@@ -3897,7 +3897,7 @@ FederationSynchronized::FederationSynchronized(::PROTOBUF_NAMESPACE_ID::Arena* a
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationSynchronized)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationSynchronized)
 }
 FederationSynchronized::FederationSynchronized(const FederationSynchronized& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3917,9 +3917,9 @@ FederationSynchronized::FederationSynchronized(const FederationSynchronized& fro
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_failedtosyncset()) {
-    _this->_impl_.failedtosyncset_ = new ::rti1516_202X::fedpro::FederateHandleSet(*from._impl_.failedtosyncset_);
+    _this->_impl_.failedtosyncset_ = new ::rti1516_2025::fedpro::FederateHandleSet(*from._impl_.failedtosyncset_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationSynchronized)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationSynchronized)
 }
 
 inline void FederationSynchronized::SharedCtor(
@@ -3938,7 +3938,7 @@ inline void FederationSynchronized::SharedCtor(
 }
 
 FederationSynchronized::~FederationSynchronized() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.FederationSynchronized)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.FederationSynchronized)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3957,7 +3957,7 @@ void FederationSynchronized::SetCachedSize(int size) const {
 }
 
 void FederationSynchronized::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.FederationSynchronized)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.FederationSynchronized)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3982,11 +3982,11 @@ const char* FederationSynchronized::_InternalParse(const char* ptr, ::_pbi::Pars
           auto str = _internal_mutable_synchronizationpointlabel();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.FederationSynchronized.synchronizationPointLabel"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.FederationSynchronized.synchronizationPointLabel"));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandleSet failedToSyncSet = 2;
+      // .rti1516_2025.fedpro.FederateHandleSet failedToSyncSet = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_failedtosyncset(), ptr);
@@ -4019,7 +4019,7 @@ failure:
 
 uint8_t* FederationSynchronized::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.FederationSynchronized)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.FederationSynchronized)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4028,12 +4028,12 @@ uint8_t* FederationSynchronized::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_synchronizationpointlabel().data(), static_cast<int>(this->_internal_synchronizationpointlabel().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.FederationSynchronized.synchronizationPointLabel");
+      "rti1516_2025.fedpro.FederationSynchronized.synchronizationPointLabel");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_synchronizationpointlabel(), target);
   }
 
-  // .rti1516_202X.fedpro.FederateHandleSet failedToSyncSet = 2;
+  // .rti1516_2025.fedpro.FederateHandleSet failedToSyncSet = 2;
   if (this->_internal_has_failedtosyncset()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::failedtosyncset(this),
@@ -4044,12 +4044,12 @@ uint8_t* FederationSynchronized::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.FederationSynchronized)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.FederationSynchronized)
   return target;
 }
 
 size_t FederationSynchronized::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.FederationSynchronized)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.FederationSynchronized)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4063,7 +4063,7 @@ size_t FederationSynchronized::ByteSizeLong() const {
         this->_internal_synchronizationpointlabel());
   }
 
-  // .rti1516_202X.fedpro.FederateHandleSet failedToSyncSet = 2;
+  // .rti1516_2025.fedpro.FederateHandleSet failedToSyncSet = 2;
   if (this->_internal_has_failedtosyncset()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4083,7 +4083,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FederationSynchronized::GetCla
 void FederationSynchronized::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<FederationSynchronized*>(&to_msg);
   auto& from = static_cast<const FederationSynchronized&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.FederationSynchronized)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.FederationSynchronized)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4092,14 +4092,14 @@ void FederationSynchronized::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
     _this->_internal_set_synchronizationpointlabel(from._internal_synchronizationpointlabel());
   }
   if (from._internal_has_failedtosyncset()) {
-    _this->_internal_mutable_failedtosyncset()->::rti1516_202X::fedpro::FederateHandleSet::MergeFrom(
+    _this->_internal_mutable_failedtosyncset()->::rti1516_2025::fedpro::FederateHandleSet::MergeFrom(
         from._internal_failedtosyncset());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FederationSynchronized::CopyFrom(const FederationSynchronized& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.FederationSynchronized)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.FederationSynchronized)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4137,7 +4137,7 @@ InitiateFederateSave::InitiateFederateSave(::PROTOBUF_NAMESPACE_ID::Arena* arena
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.InitiateFederateSave)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.InitiateFederateSave)
 }
 InitiateFederateSave::InitiateFederateSave(const InitiateFederateSave& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4155,7 +4155,7 @@ InitiateFederateSave::InitiateFederateSave(const InitiateFederateSave& from)
     _this->_impl_.label_.Set(from._internal_label(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.InitiateFederateSave)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.InitiateFederateSave)
 }
 
 inline void InitiateFederateSave::SharedCtor(
@@ -4173,7 +4173,7 @@ inline void InitiateFederateSave::SharedCtor(
 }
 
 InitiateFederateSave::~InitiateFederateSave() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.InitiateFederateSave)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.InitiateFederateSave)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4191,7 +4191,7 @@ void InitiateFederateSave::SetCachedSize(int size) const {
 }
 
 void InitiateFederateSave::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.InitiateFederateSave)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.InitiateFederateSave)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4212,7 +4212,7 @@ const char* InitiateFederateSave::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_label();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.InitiateFederateSave.label"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.InitiateFederateSave.label"));
         } else
           goto handle_unusual;
         continue;
@@ -4241,7 +4241,7 @@ failure:
 
 uint8_t* InitiateFederateSave::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.InitiateFederateSave)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.InitiateFederateSave)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4250,7 +4250,7 @@ uint8_t* InitiateFederateSave::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_label().data(), static_cast<int>(this->_internal_label().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.InitiateFederateSave.label");
+      "rti1516_2025.fedpro.InitiateFederateSave.label");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_label(), target);
   }
@@ -4259,12 +4259,12 @@ uint8_t* InitiateFederateSave::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.InitiateFederateSave)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.InitiateFederateSave)
   return target;
 }
 
 size_t InitiateFederateSave::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.InitiateFederateSave)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.InitiateFederateSave)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4291,7 +4291,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InitiateFederateSave::GetClass
 void InitiateFederateSave::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<InitiateFederateSave*>(&to_msg);
   auto& from = static_cast<const InitiateFederateSave&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.InitiateFederateSave)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.InitiateFederateSave)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4303,7 +4303,7 @@ void InitiateFederateSave::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
 }
 
 void InitiateFederateSave::CopyFrom(const InitiateFederateSave& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.InitiateFederateSave)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.InitiateFederateSave)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4334,10 +4334,10 @@ void InitiateFederateSave::InternalSwap(InitiateFederateSave* other) {
 
 class InitiateFederateSaveWithTime::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const InitiateFederateSaveWithTime* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const InitiateFederateSaveWithTime* msg);
 };
 
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 InitiateFederateSaveWithTime::_Internal::time(const InitiateFederateSaveWithTime* msg) {
   return *msg->_impl_.time_;
 }
@@ -4351,7 +4351,7 @@ InitiateFederateSaveWithTime::InitiateFederateSaveWithTime(::PROTOBUF_NAMESPACE_
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
 }
 InitiateFederateSaveWithTime::InitiateFederateSaveWithTime(const InitiateFederateSaveWithTime& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4371,9 +4371,9 @@ InitiateFederateSaveWithTime::InitiateFederateSaveWithTime(const InitiateFederat
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
 }
 
 inline void InitiateFederateSaveWithTime::SharedCtor(
@@ -4392,7 +4392,7 @@ inline void InitiateFederateSaveWithTime::SharedCtor(
 }
 
 InitiateFederateSaveWithTime::~InitiateFederateSaveWithTime() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4411,7 +4411,7 @@ void InitiateFederateSaveWithTime::SetCachedSize(int size) const {
 }
 
 void InitiateFederateSaveWithTime::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4436,11 +4436,11 @@ const char* InitiateFederateSaveWithTime::_InternalParse(const char* ptr, ::_pbi
           auto str = _internal_mutable_label();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.InitiateFederateSaveWithTime.label"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.InitiateFederateSaveWithTime.label"));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.LogicalTime time = 2;
+      // .rti1516_2025.fedpro.LogicalTime time = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -4473,7 +4473,7 @@ failure:
 
 uint8_t* InitiateFederateSaveWithTime::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4482,12 +4482,12 @@ uint8_t* InitiateFederateSaveWithTime::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_label().data(), static_cast<int>(this->_internal_label().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.InitiateFederateSaveWithTime.label");
+      "rti1516_2025.fedpro.InitiateFederateSaveWithTime.label");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_label(), target);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 2;
+  // .rti1516_2025.fedpro.LogicalTime time = 2;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::time(this),
@@ -4498,12 +4498,12 @@ uint8_t* InitiateFederateSaveWithTime::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
   return target;
 }
 
 size_t InitiateFederateSaveWithTime::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4517,7 +4517,7 @@ size_t InitiateFederateSaveWithTime::ByteSizeLong() const {
         this->_internal_label());
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 2;
+  // .rti1516_2025.fedpro.LogicalTime time = 2;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4537,7 +4537,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InitiateFederateSaveWithTime::
 void InitiateFederateSaveWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<InitiateFederateSaveWithTime*>(&to_msg);
   auto& from = static_cast<const InitiateFederateSaveWithTime&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4546,14 +4546,14 @@ void InitiateFederateSaveWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
     _this->_internal_set_label(from._internal_label());
   }
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InitiateFederateSaveWithTime::CopyFrom(const InitiateFederateSaveWithTime& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.InitiateFederateSaveWithTime)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.InitiateFederateSaveWithTime)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4590,13 +4590,13 @@ class FederationSaved::_Internal {
 FederationSaved::FederationSaved(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationSaved)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationSaved)
 }
 FederationSaved::FederationSaved(const FederationSaved& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   FederationSaved* const _this = this; (void)_this;
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationSaved)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationSaved)
 }
 
 
@@ -4631,7 +4631,7 @@ FederationNotSaved::FederationNotSaved(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationNotSaved)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationNotSaved)
 }
 FederationNotSaved::FederationNotSaved(const FederationNotSaved& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4642,7 +4642,7 @@ FederationNotSaved::FederationNotSaved(const FederationNotSaved& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.reason_ = from._impl_.reason_;
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationNotSaved)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationNotSaved)
 }
 
 inline void FederationNotSaved::SharedCtor(
@@ -4656,7 +4656,7 @@ inline void FederationNotSaved::SharedCtor(
 }
 
 FederationNotSaved::~FederationNotSaved() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.FederationNotSaved)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.FederationNotSaved)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4673,7 +4673,7 @@ void FederationNotSaved::SetCachedSize(int size) const {
 }
 
 void FederationNotSaved::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.FederationNotSaved)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.FederationNotSaved)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4688,12 +4688,12 @@ const char* FederationNotSaved::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.SaveFailureReason reason = 1;
+      // .rti1516_2025.fedpro.SaveFailureReason reason = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_reason(static_cast<::rti1516_202X::fedpro::SaveFailureReason>(val));
+          _internal_set_reason(static_cast<::rti1516_2025::fedpro::SaveFailureReason>(val));
         } else
           goto handle_unusual;
         continue;
@@ -4722,11 +4722,11 @@ failure:
 
 uint8_t* FederationNotSaved::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.FederationNotSaved)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.FederationNotSaved)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.SaveFailureReason reason = 1;
+  // .rti1516_2025.fedpro.SaveFailureReason reason = 1;
   if (this->_internal_reason() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -4737,19 +4737,19 @@ uint8_t* FederationNotSaved::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.FederationNotSaved)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.FederationNotSaved)
   return target;
 }
 
 size_t FederationNotSaved::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.FederationNotSaved)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.FederationNotSaved)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.SaveFailureReason reason = 1;
+  // .rti1516_2025.fedpro.SaveFailureReason reason = 1;
   if (this->_internal_reason() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_reason());
@@ -4768,7 +4768,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FederationNotSaved::GetClassDa
 void FederationNotSaved::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<FederationNotSaved*>(&to_msg);
   auto& from = static_cast<const FederationNotSaved&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.FederationNotSaved)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.FederationNotSaved)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4780,7 +4780,7 @@ void FederationNotSaved::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
 }
 
 void FederationNotSaved::CopyFrom(const FederationNotSaved& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.FederationNotSaved)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.FederationNotSaved)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4806,10 +4806,10 @@ void FederationNotSaved::InternalSwap(FederationNotSaved* other) {
 
 class FederationSaveStatusResponse::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::FederateHandleSaveStatusPairArray& response(const FederationSaveStatusResponse* msg);
+  static const ::rti1516_2025::fedpro::FederateHandleSaveStatusPairArray& response(const FederationSaveStatusResponse* msg);
 };
 
-const ::rti1516_202X::fedpro::FederateHandleSaveStatusPairArray&
+const ::rti1516_2025::fedpro::FederateHandleSaveStatusPairArray&
 FederationSaveStatusResponse::_Internal::response(const FederationSaveStatusResponse* msg) {
   return *msg->_impl_.response_;
 }
@@ -4823,7 +4823,7 @@ FederationSaveStatusResponse::FederationSaveStatusResponse(::PROTOBUF_NAMESPACE_
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationSaveStatusResponse)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationSaveStatusResponse)
 }
 FederationSaveStatusResponse::FederationSaveStatusResponse(const FederationSaveStatusResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4834,9 +4834,9 @@ FederationSaveStatusResponse::FederationSaveStatusResponse(const FederationSaveS
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_response()) {
-    _this->_impl_.response_ = new ::rti1516_202X::fedpro::FederateHandleSaveStatusPairArray(*from._impl_.response_);
+    _this->_impl_.response_ = new ::rti1516_2025::fedpro::FederateHandleSaveStatusPairArray(*from._impl_.response_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationSaveStatusResponse)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationSaveStatusResponse)
 }
 
 inline void FederationSaveStatusResponse::SharedCtor(
@@ -4850,7 +4850,7 @@ inline void FederationSaveStatusResponse::SharedCtor(
 }
 
 FederationSaveStatusResponse::~FederationSaveStatusResponse() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.FederationSaveStatusResponse)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.FederationSaveStatusResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4868,7 +4868,7 @@ void FederationSaveStatusResponse::SetCachedSize(int size) const {
 }
 
 void FederationSaveStatusResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.FederationSaveStatusResponse)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.FederationSaveStatusResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4886,7 +4886,7 @@ const char* FederationSaveStatusResponse::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.FederateHandleSaveStatusPairArray response = 1;
+      // .rti1516_2025.fedpro.FederateHandleSaveStatusPairArray response = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_response(), ptr);
@@ -4919,11 +4919,11 @@ failure:
 
 uint8_t* FederationSaveStatusResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.FederationSaveStatusResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.FederationSaveStatusResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederateHandleSaveStatusPairArray response = 1;
+  // .rti1516_2025.fedpro.FederateHandleSaveStatusPairArray response = 1;
   if (this->_internal_has_response()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::response(this),
@@ -4934,19 +4934,19 @@ uint8_t* FederationSaveStatusResponse::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.FederationSaveStatusResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.FederationSaveStatusResponse)
   return target;
 }
 
 size_t FederationSaveStatusResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.FederationSaveStatusResponse)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.FederationSaveStatusResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederateHandleSaveStatusPairArray response = 1;
+  // .rti1516_2025.fedpro.FederateHandleSaveStatusPairArray response = 1;
   if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4966,20 +4966,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FederationSaveStatusResponse::
 void FederationSaveStatusResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<FederationSaveStatusResponse*>(&to_msg);
   auto& from = static_cast<const FederationSaveStatusResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.FederationSaveStatusResponse)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.FederationSaveStatusResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_response()) {
-    _this->_internal_mutable_response()->::rti1516_202X::fedpro::FederateHandleSaveStatusPairArray::MergeFrom(
+    _this->_internal_mutable_response()->::rti1516_2025::fedpro::FederateHandleSaveStatusPairArray::MergeFrom(
         from._internal_response());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FederationSaveStatusResponse::CopyFrom(const FederationSaveStatusResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.FederationSaveStatusResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.FederationSaveStatusResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5011,7 +5011,7 @@ RequestFederationRestoreSucceeded::RequestFederationRestoreSucceeded(::PROTOBUF_
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
 }
 RequestFederationRestoreSucceeded::RequestFederationRestoreSucceeded(const RequestFederationRestoreSucceeded& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5029,7 +5029,7 @@ RequestFederationRestoreSucceeded::RequestFederationRestoreSucceeded(const Reque
     _this->_impl_.label_.Set(from._internal_label(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
 }
 
 inline void RequestFederationRestoreSucceeded::SharedCtor(
@@ -5047,7 +5047,7 @@ inline void RequestFederationRestoreSucceeded::SharedCtor(
 }
 
 RequestFederationRestoreSucceeded::~RequestFederationRestoreSucceeded() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -5065,7 +5065,7 @@ void RequestFederationRestoreSucceeded::SetCachedSize(int size) const {
 }
 
 void RequestFederationRestoreSucceeded::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5086,7 +5086,7 @@ const char* RequestFederationRestoreSucceeded::_InternalParse(const char* ptr, :
           auto str = _internal_mutable_label();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.RequestFederationRestoreSucceeded.label"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.RequestFederationRestoreSucceeded.label"));
         } else
           goto handle_unusual;
         continue;
@@ -5115,7 +5115,7 @@ failure:
 
 uint8_t* RequestFederationRestoreSucceeded::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5124,7 +5124,7 @@ uint8_t* RequestFederationRestoreSucceeded::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_label().data(), static_cast<int>(this->_internal_label().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.RequestFederationRestoreSucceeded.label");
+      "rti1516_2025.fedpro.RequestFederationRestoreSucceeded.label");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_label(), target);
   }
@@ -5133,12 +5133,12 @@ uint8_t* RequestFederationRestoreSucceeded::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
   return target;
 }
 
 size_t RequestFederationRestoreSucceeded::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5165,7 +5165,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestFederationRestoreSuccee
 void RequestFederationRestoreSucceeded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RequestFederationRestoreSucceeded*>(&to_msg);
   auto& from = static_cast<const RequestFederationRestoreSucceeded&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5177,7 +5177,7 @@ void RequestFederationRestoreSucceeded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messa
 }
 
 void RequestFederationRestoreSucceeded::CopyFrom(const RequestFederationRestoreSucceeded& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RequestFederationRestoreSucceeded)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RequestFederationRestoreSucceeded)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5214,7 +5214,7 @@ RequestFederationRestoreFailed::RequestFederationRestoreFailed(::PROTOBUF_NAMESP
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RequestFederationRestoreFailed)
 }
 RequestFederationRestoreFailed::RequestFederationRestoreFailed(const RequestFederationRestoreFailed& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5232,7 +5232,7 @@ RequestFederationRestoreFailed::RequestFederationRestoreFailed(const RequestFede
     _this->_impl_.label_.Set(from._internal_label(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RequestFederationRestoreFailed)
 }
 
 inline void RequestFederationRestoreFailed::SharedCtor(
@@ -5250,7 +5250,7 @@ inline void RequestFederationRestoreFailed::SharedCtor(
 }
 
 RequestFederationRestoreFailed::~RequestFederationRestoreFailed() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RequestFederationRestoreFailed)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -5268,7 +5268,7 @@ void RequestFederationRestoreFailed::SetCachedSize(int size) const {
 }
 
 void RequestFederationRestoreFailed::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RequestFederationRestoreFailed)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5289,7 +5289,7 @@ const char* RequestFederationRestoreFailed::_InternalParse(const char* ptr, ::_p
           auto str = _internal_mutable_label();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.RequestFederationRestoreFailed.label"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.RequestFederationRestoreFailed.label"));
         } else
           goto handle_unusual;
         continue;
@@ -5318,7 +5318,7 @@ failure:
 
 uint8_t* RequestFederationRestoreFailed::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RequestFederationRestoreFailed)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5327,7 +5327,7 @@ uint8_t* RequestFederationRestoreFailed::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_label().data(), static_cast<int>(this->_internal_label().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.RequestFederationRestoreFailed.label");
+      "rti1516_2025.fedpro.RequestFederationRestoreFailed.label");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_label(), target);
   }
@@ -5336,12 +5336,12 @@ uint8_t* RequestFederationRestoreFailed::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RequestFederationRestoreFailed)
   return target;
 }
 
 size_t RequestFederationRestoreFailed::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RequestFederationRestoreFailed)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5368,7 +5368,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestFederationRestoreFailed
 void RequestFederationRestoreFailed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RequestFederationRestoreFailed*>(&to_msg);
   auto& from = static_cast<const RequestFederationRestoreFailed&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RequestFederationRestoreFailed)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5380,7 +5380,7 @@ void RequestFederationRestoreFailed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
 }
 
 void RequestFederationRestoreFailed::CopyFrom(const RequestFederationRestoreFailed& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RequestFederationRestoreFailed)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RequestFederationRestoreFailed)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5416,13 +5416,13 @@ class FederationRestoreBegun::_Internal {
 FederationRestoreBegun::FederationRestoreBegun(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationRestoreBegun)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationRestoreBegun)
 }
 FederationRestoreBegun::FederationRestoreBegun(const FederationRestoreBegun& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   FederationRestoreBegun* const _this = this; (void)_this;
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationRestoreBegun)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationRestoreBegun)
 }
 
 
@@ -5451,10 +5451,10 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FederationRestoreBegun::GetCla
 
 class InitiateFederateRestore::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::FederateHandle& postrestorefederatehandle(const InitiateFederateRestore* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& postrestorefederatehandle(const InitiateFederateRestore* msg);
 };
 
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 InitiateFederateRestore::_Internal::postrestorefederatehandle(const InitiateFederateRestore* msg) {
   return *msg->_impl_.postrestorefederatehandle_;
 }
@@ -5468,7 +5468,7 @@ InitiateFederateRestore::InitiateFederateRestore(::PROTOBUF_NAMESPACE_ID::Arena*
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.InitiateFederateRestore)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.InitiateFederateRestore)
 }
 InitiateFederateRestore::InitiateFederateRestore(const InitiateFederateRestore& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5497,9 +5497,9 @@ InitiateFederateRestore::InitiateFederateRestore(const InitiateFederateRestore& 
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_postrestorefederatehandle()) {
-    _this->_impl_.postrestorefederatehandle_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.postrestorefederatehandle_);
+    _this->_impl_.postrestorefederatehandle_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.postrestorefederatehandle_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.InitiateFederateRestore)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.InitiateFederateRestore)
 }
 
 inline void InitiateFederateRestore::SharedCtor(
@@ -5523,7 +5523,7 @@ inline void InitiateFederateRestore::SharedCtor(
 }
 
 InitiateFederateRestore::~InitiateFederateRestore() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.InitiateFederateRestore)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.InitiateFederateRestore)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -5543,7 +5543,7 @@ void InitiateFederateRestore::SetCachedSize(int size) const {
 }
 
 void InitiateFederateRestore::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.InitiateFederateRestore)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.InitiateFederateRestore)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5569,7 +5569,7 @@ const char* InitiateFederateRestore::_InternalParse(const char* ptr, ::_pbi::Par
           auto str = _internal_mutable_label();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.InitiateFederateRestore.label"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.InitiateFederateRestore.label"));
         } else
           goto handle_unusual;
         continue;
@@ -5579,11 +5579,11 @@ const char* InitiateFederateRestore::_InternalParse(const char* ptr, ::_pbi::Par
           auto str = _internal_mutable_federatename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.InitiateFederateRestore.federateName"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.InitiateFederateRestore.federateName"));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle postRestoreFederateHandle = 3;
+      // .rti1516_2025.fedpro.FederateHandle postRestoreFederateHandle = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_postrestorefederatehandle(), ptr);
@@ -5616,7 +5616,7 @@ failure:
 
 uint8_t* InitiateFederateRestore::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.InitiateFederateRestore)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.InitiateFederateRestore)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5625,7 +5625,7 @@ uint8_t* InitiateFederateRestore::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_label().data(), static_cast<int>(this->_internal_label().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.InitiateFederateRestore.label");
+      "rti1516_2025.fedpro.InitiateFederateRestore.label");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_label(), target);
   }
@@ -5635,12 +5635,12 @@ uint8_t* InitiateFederateRestore::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_federatename().data(), static_cast<int>(this->_internal_federatename().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.InitiateFederateRestore.federateName");
+      "rti1516_2025.fedpro.InitiateFederateRestore.federateName");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_federatename(), target);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle postRestoreFederateHandle = 3;
+  // .rti1516_2025.fedpro.FederateHandle postRestoreFederateHandle = 3;
   if (this->_internal_has_postrestorefederatehandle()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::postrestorefederatehandle(this),
@@ -5651,12 +5651,12 @@ uint8_t* InitiateFederateRestore::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.InitiateFederateRestore)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.InitiateFederateRestore)
   return target;
 }
 
 size_t InitiateFederateRestore::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.InitiateFederateRestore)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.InitiateFederateRestore)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5677,7 +5677,7 @@ size_t InitiateFederateRestore::ByteSizeLong() const {
         this->_internal_federatename());
   }
 
-  // .rti1516_202X.fedpro.FederateHandle postRestoreFederateHandle = 3;
+  // .rti1516_2025.fedpro.FederateHandle postRestoreFederateHandle = 3;
   if (this->_internal_has_postrestorefederatehandle()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -5697,7 +5697,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InitiateFederateRestore::GetCl
 void InitiateFederateRestore::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<InitiateFederateRestore*>(&to_msg);
   auto& from = static_cast<const InitiateFederateRestore&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.InitiateFederateRestore)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.InitiateFederateRestore)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5709,14 +5709,14 @@ void InitiateFederateRestore::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
     _this->_internal_set_federatename(from._internal_federatename());
   }
   if (from._internal_has_postrestorefederatehandle()) {
-    _this->_internal_mutable_postrestorefederatehandle()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_postrestorefederatehandle()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_postrestorefederatehandle());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InitiateFederateRestore::CopyFrom(const InitiateFederateRestore& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.InitiateFederateRestore)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.InitiateFederateRestore)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5757,13 +5757,13 @@ class FederationRestored::_Internal {
 FederationRestored::FederationRestored(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationRestored)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationRestored)
 }
 FederationRestored::FederationRestored(const FederationRestored& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   FederationRestored* const _this = this; (void)_this;
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationRestored)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationRestored)
 }
 
 
@@ -5798,7 +5798,7 @@ FederationNotRestored::FederationNotRestored(::PROTOBUF_NAMESPACE_ID::Arena* are
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationNotRestored)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationNotRestored)
 }
 FederationNotRestored::FederationNotRestored(const FederationNotRestored& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5809,7 +5809,7 @@ FederationNotRestored::FederationNotRestored(const FederationNotRestored& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.reason_ = from._impl_.reason_;
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationNotRestored)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationNotRestored)
 }
 
 inline void FederationNotRestored::SharedCtor(
@@ -5823,7 +5823,7 @@ inline void FederationNotRestored::SharedCtor(
 }
 
 FederationNotRestored::~FederationNotRestored() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.FederationNotRestored)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.FederationNotRestored)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -5840,7 +5840,7 @@ void FederationNotRestored::SetCachedSize(int size) const {
 }
 
 void FederationNotRestored::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.FederationNotRestored)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.FederationNotRestored)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5855,12 +5855,12 @@ const char* FederationNotRestored::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.RestoreFailureReason reason = 1;
+      // .rti1516_2025.fedpro.RestoreFailureReason reason = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_reason(static_cast<::rti1516_202X::fedpro::RestoreFailureReason>(val));
+          _internal_set_reason(static_cast<::rti1516_2025::fedpro::RestoreFailureReason>(val));
         } else
           goto handle_unusual;
         continue;
@@ -5889,11 +5889,11 @@ failure:
 
 uint8_t* FederationNotRestored::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.FederationNotRestored)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.FederationNotRestored)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.RestoreFailureReason reason = 1;
+  // .rti1516_2025.fedpro.RestoreFailureReason reason = 1;
   if (this->_internal_reason() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -5904,19 +5904,19 @@ uint8_t* FederationNotRestored::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.FederationNotRestored)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.FederationNotRestored)
   return target;
 }
 
 size_t FederationNotRestored::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.FederationNotRestored)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.FederationNotRestored)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.RestoreFailureReason reason = 1;
+  // .rti1516_2025.fedpro.RestoreFailureReason reason = 1;
   if (this->_internal_reason() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_reason());
@@ -5935,7 +5935,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FederationNotRestored::GetClas
 void FederationNotRestored::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<FederationNotRestored*>(&to_msg);
   auto& from = static_cast<const FederationNotRestored&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.FederationNotRestored)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.FederationNotRestored)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5947,7 +5947,7 @@ void FederationNotRestored::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
 }
 
 void FederationNotRestored::CopyFrom(const FederationNotRestored& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.FederationNotRestored)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.FederationNotRestored)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5973,10 +5973,10 @@ void FederationNotRestored::InternalSwap(FederationNotRestored* other) {
 
 class FederationRestoreStatusResponse::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::FederateRestoreStatusArray& response(const FederationRestoreStatusResponse* msg);
+  static const ::rti1516_2025::fedpro::FederateRestoreStatusArray& response(const FederationRestoreStatusResponse* msg);
 };
 
-const ::rti1516_202X::fedpro::FederateRestoreStatusArray&
+const ::rti1516_2025::fedpro::FederateRestoreStatusArray&
 FederationRestoreStatusResponse::_Internal::response(const FederationRestoreStatusResponse* msg) {
   return *msg->_impl_.response_;
 }
@@ -5990,7 +5990,7 @@ FederationRestoreStatusResponse::FederationRestoreStatusResponse(::PROTOBUF_NAME
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FederationRestoreStatusResponse)
 }
 FederationRestoreStatusResponse::FederationRestoreStatusResponse(const FederationRestoreStatusResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6001,9 +6001,9 @@ FederationRestoreStatusResponse::FederationRestoreStatusResponse(const Federatio
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_response()) {
-    _this->_impl_.response_ = new ::rti1516_202X::fedpro::FederateRestoreStatusArray(*from._impl_.response_);
+    _this->_impl_.response_ = new ::rti1516_2025::fedpro::FederateRestoreStatusArray(*from._impl_.response_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FederationRestoreStatusResponse)
 }
 
 inline void FederationRestoreStatusResponse::SharedCtor(
@@ -6017,7 +6017,7 @@ inline void FederationRestoreStatusResponse::SharedCtor(
 }
 
 FederationRestoreStatusResponse::~FederationRestoreStatusResponse() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.FederationRestoreStatusResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -6035,7 +6035,7 @@ void FederationRestoreStatusResponse::SetCachedSize(int size) const {
 }
 
 void FederationRestoreStatusResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.FederationRestoreStatusResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6053,7 +6053,7 @@ const char* FederationRestoreStatusResponse::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.FederateRestoreStatusArray response = 1;
+      // .rti1516_2025.fedpro.FederateRestoreStatusArray response = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_response(), ptr);
@@ -6086,11 +6086,11 @@ failure:
 
 uint8_t* FederationRestoreStatusResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.FederationRestoreStatusResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederateRestoreStatusArray response = 1;
+  // .rti1516_2025.fedpro.FederateRestoreStatusArray response = 1;
   if (this->_internal_has_response()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::response(this),
@@ -6101,19 +6101,19 @@ uint8_t* FederationRestoreStatusResponse::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.FederationRestoreStatusResponse)
   return target;
 }
 
 size_t FederationRestoreStatusResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.FederationRestoreStatusResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederateRestoreStatusArray response = 1;
+  // .rti1516_2025.fedpro.FederateRestoreStatusArray response = 1;
   if (this->_internal_has_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -6133,20 +6133,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FederationRestoreStatusRespons
 void FederationRestoreStatusResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<FederationRestoreStatusResponse*>(&to_msg);
   auto& from = static_cast<const FederationRestoreStatusResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.FederationRestoreStatusResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_response()) {
-    _this->_internal_mutable_response()->::rti1516_202X::fedpro::FederateRestoreStatusArray::MergeFrom(
+    _this->_internal_mutable_response()->::rti1516_2025::fedpro::FederateRestoreStatusArray::MergeFrom(
         from._internal_response());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FederationRestoreStatusResponse::CopyFrom(const FederationRestoreStatusResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.FederationRestoreStatusResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.FederationRestoreStatusResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6172,10 +6172,10 @@ void FederationRestoreStatusResponse::InternalSwap(FederationRestoreStatusRespon
 
 class StartRegistrationForObjectClass::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectClassHandle& objectclass(const StartRegistrationForObjectClass* msg);
+  static const ::rti1516_2025::fedpro::ObjectClassHandle& objectclass(const StartRegistrationForObjectClass* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectClassHandle&
+const ::rti1516_2025::fedpro::ObjectClassHandle&
 StartRegistrationForObjectClass::_Internal::objectclass(const StartRegistrationForObjectClass* msg) {
   return *msg->_impl_.objectclass_;
 }
@@ -6189,7 +6189,7 @@ StartRegistrationForObjectClass::StartRegistrationForObjectClass(::PROTOBUF_NAME
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.StartRegistrationForObjectClass)
 }
 StartRegistrationForObjectClass::StartRegistrationForObjectClass(const StartRegistrationForObjectClass& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6200,9 +6200,9 @@ StartRegistrationForObjectClass::StartRegistrationForObjectClass(const StartRegi
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectclass()) {
-    _this->_impl_.objectclass_ = new ::rti1516_202X::fedpro::ObjectClassHandle(*from._impl_.objectclass_);
+    _this->_impl_.objectclass_ = new ::rti1516_2025::fedpro::ObjectClassHandle(*from._impl_.objectclass_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.StartRegistrationForObjectClass)
 }
 
 inline void StartRegistrationForObjectClass::SharedCtor(
@@ -6216,7 +6216,7 @@ inline void StartRegistrationForObjectClass::SharedCtor(
 }
 
 StartRegistrationForObjectClass::~StartRegistrationForObjectClass() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.StartRegistrationForObjectClass)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -6234,7 +6234,7 @@ void StartRegistrationForObjectClass::SetCachedSize(int size) const {
 }
 
 void StartRegistrationForObjectClass::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.StartRegistrationForObjectClass)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6252,7 +6252,7 @@ const char* StartRegistrationForObjectClass::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;
+      // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectclass(), ptr);
@@ -6285,11 +6285,11 @@ failure:
 
 uint8_t* StartRegistrationForObjectClass::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.StartRegistrationForObjectClass)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;
+  // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 1;
   if (this->_internal_has_objectclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectclass(this),
@@ -6300,19 +6300,19 @@ uint8_t* StartRegistrationForObjectClass::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.StartRegistrationForObjectClass)
   return target;
 }
 
 size_t StartRegistrationForObjectClass::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.StartRegistrationForObjectClass)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;
+  // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 1;
   if (this->_internal_has_objectclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -6332,20 +6332,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StartRegistrationForObjectClas
 void StartRegistrationForObjectClass::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<StartRegistrationForObjectClass*>(&to_msg);
   auto& from = static_cast<const StartRegistrationForObjectClass&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.StartRegistrationForObjectClass)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectclass()) {
-    _this->_internal_mutable_objectclass()->::rti1516_202X::fedpro::ObjectClassHandle::MergeFrom(
+    _this->_internal_mutable_objectclass()->::rti1516_2025::fedpro::ObjectClassHandle::MergeFrom(
         from._internal_objectclass());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void StartRegistrationForObjectClass::CopyFrom(const StartRegistrationForObjectClass& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.StartRegistrationForObjectClass)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.StartRegistrationForObjectClass)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6371,10 +6371,10 @@ void StartRegistrationForObjectClass::InternalSwap(StartRegistrationForObjectCla
 
 class StopRegistrationForObjectClass::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectClassHandle& objectclass(const StopRegistrationForObjectClass* msg);
+  static const ::rti1516_2025::fedpro::ObjectClassHandle& objectclass(const StopRegistrationForObjectClass* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectClassHandle&
+const ::rti1516_2025::fedpro::ObjectClassHandle&
 StopRegistrationForObjectClass::_Internal::objectclass(const StopRegistrationForObjectClass* msg) {
   return *msg->_impl_.objectclass_;
 }
@@ -6388,7 +6388,7 @@ StopRegistrationForObjectClass::StopRegistrationForObjectClass(::PROTOBUF_NAMESP
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.StopRegistrationForObjectClass)
 }
 StopRegistrationForObjectClass::StopRegistrationForObjectClass(const StopRegistrationForObjectClass& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6399,9 +6399,9 @@ StopRegistrationForObjectClass::StopRegistrationForObjectClass(const StopRegistr
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectclass()) {
-    _this->_impl_.objectclass_ = new ::rti1516_202X::fedpro::ObjectClassHandle(*from._impl_.objectclass_);
+    _this->_impl_.objectclass_ = new ::rti1516_2025::fedpro::ObjectClassHandle(*from._impl_.objectclass_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.StopRegistrationForObjectClass)
 }
 
 inline void StopRegistrationForObjectClass::SharedCtor(
@@ -6415,7 +6415,7 @@ inline void StopRegistrationForObjectClass::SharedCtor(
 }
 
 StopRegistrationForObjectClass::~StopRegistrationForObjectClass() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.StopRegistrationForObjectClass)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -6433,7 +6433,7 @@ void StopRegistrationForObjectClass::SetCachedSize(int size) const {
 }
 
 void StopRegistrationForObjectClass::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.StopRegistrationForObjectClass)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6451,7 +6451,7 @@ const char* StopRegistrationForObjectClass::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;
+      // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectclass(), ptr);
@@ -6484,11 +6484,11 @@ failure:
 
 uint8_t* StopRegistrationForObjectClass::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.StopRegistrationForObjectClass)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;
+  // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 1;
   if (this->_internal_has_objectclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectclass(this),
@@ -6499,19 +6499,19 @@ uint8_t* StopRegistrationForObjectClass::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.StopRegistrationForObjectClass)
   return target;
 }
 
 size_t StopRegistrationForObjectClass::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.StopRegistrationForObjectClass)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 1;
+  // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 1;
   if (this->_internal_has_objectclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -6531,20 +6531,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StopRegistrationForObjectClass
 void StopRegistrationForObjectClass::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<StopRegistrationForObjectClass*>(&to_msg);
   auto& from = static_cast<const StopRegistrationForObjectClass&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.StopRegistrationForObjectClass)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectclass()) {
-    _this->_internal_mutable_objectclass()->::rti1516_202X::fedpro::ObjectClassHandle::MergeFrom(
+    _this->_internal_mutable_objectclass()->::rti1516_2025::fedpro::ObjectClassHandle::MergeFrom(
         from._internal_objectclass());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void StopRegistrationForObjectClass::CopyFrom(const StopRegistrationForObjectClass& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.StopRegistrationForObjectClass)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.StopRegistrationForObjectClass)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6570,10 +6570,10 @@ void StopRegistrationForObjectClass::InternalSwap(StopRegistrationForObjectClass
 
 class TurnInteractionsOn::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const TurnInteractionsOn* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const TurnInteractionsOn* msg);
 };
 
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 TurnInteractionsOn::_Internal::interactionclass(const TurnInteractionsOn* msg) {
   return *msg->_impl_.interactionclass_;
 }
@@ -6587,7 +6587,7 @@ TurnInteractionsOn::TurnInteractionsOn(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TurnInteractionsOn)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TurnInteractionsOn)
 }
 TurnInteractionsOn::TurnInteractionsOn(const TurnInteractionsOn& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6598,9 +6598,9 @@ TurnInteractionsOn::TurnInteractionsOn(const TurnInteractionsOn& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TurnInteractionsOn)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TurnInteractionsOn)
 }
 
 inline void TurnInteractionsOn::SharedCtor(
@@ -6614,7 +6614,7 @@ inline void TurnInteractionsOn::SharedCtor(
 }
 
 TurnInteractionsOn::~TurnInteractionsOn() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TurnInteractionsOn)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TurnInteractionsOn)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -6632,7 +6632,7 @@ void TurnInteractionsOn::SetCachedSize(int size) const {
 }
 
 void TurnInteractionsOn::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TurnInteractionsOn)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TurnInteractionsOn)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6650,7 +6650,7 @@ const char* TurnInteractionsOn::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -6683,11 +6683,11 @@ failure:
 
 uint8_t* TurnInteractionsOn::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TurnInteractionsOn)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TurnInteractionsOn)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::interactionclass(this),
@@ -6698,19 +6698,19 @@ uint8_t* TurnInteractionsOn::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TurnInteractionsOn)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TurnInteractionsOn)
   return target;
 }
 
 size_t TurnInteractionsOn::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TurnInteractionsOn)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TurnInteractionsOn)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -6730,20 +6730,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TurnInteractionsOn::GetClassDa
 void TurnInteractionsOn::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TurnInteractionsOn*>(&to_msg);
   auto& from = static_cast<const TurnInteractionsOn&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TurnInteractionsOn)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TurnInteractionsOn)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TurnInteractionsOn::CopyFrom(const TurnInteractionsOn& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TurnInteractionsOn)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TurnInteractionsOn)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6769,10 +6769,10 @@ void TurnInteractionsOn::InternalSwap(TurnInteractionsOn* other) {
 
 class TurnInteractionsOff::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const TurnInteractionsOff* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const TurnInteractionsOff* msg);
 };
 
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 TurnInteractionsOff::_Internal::interactionclass(const TurnInteractionsOff* msg) {
   return *msg->_impl_.interactionclass_;
 }
@@ -6786,7 +6786,7 @@ TurnInteractionsOff::TurnInteractionsOff(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TurnInteractionsOff)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TurnInteractionsOff)
 }
 TurnInteractionsOff::TurnInteractionsOff(const TurnInteractionsOff& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6797,9 +6797,9 @@ TurnInteractionsOff::TurnInteractionsOff(const TurnInteractionsOff& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TurnInteractionsOff)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TurnInteractionsOff)
 }
 
 inline void TurnInteractionsOff::SharedCtor(
@@ -6813,7 +6813,7 @@ inline void TurnInteractionsOff::SharedCtor(
 }
 
 TurnInteractionsOff::~TurnInteractionsOff() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TurnInteractionsOff)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TurnInteractionsOff)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -6831,7 +6831,7 @@ void TurnInteractionsOff::SetCachedSize(int size) const {
 }
 
 void TurnInteractionsOff::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TurnInteractionsOff)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TurnInteractionsOff)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6849,7 +6849,7 @@ const char* TurnInteractionsOff::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -6882,11 +6882,11 @@ failure:
 
 uint8_t* TurnInteractionsOff::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TurnInteractionsOff)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TurnInteractionsOff)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::interactionclass(this),
@@ -6897,19 +6897,19 @@ uint8_t* TurnInteractionsOff::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TurnInteractionsOff)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TurnInteractionsOff)
   return target;
 }
 
 size_t TurnInteractionsOff::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TurnInteractionsOff)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TurnInteractionsOff)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -6929,20 +6929,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TurnInteractionsOff::GetClassD
 void TurnInteractionsOff::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TurnInteractionsOff*>(&to_msg);
   auto& from = static_cast<const TurnInteractionsOff&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TurnInteractionsOff)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TurnInteractionsOff)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TurnInteractionsOff::CopyFrom(const TurnInteractionsOff& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TurnInteractionsOff)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TurnInteractionsOff)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6974,7 +6974,7 @@ ObjectInstanceNameReservationSucceeded::ObjectInstanceNameReservationSucceeded(:
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
 }
 ObjectInstanceNameReservationSucceeded::ObjectInstanceNameReservationSucceeded(const ObjectInstanceNameReservationSucceeded& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6992,7 +6992,7 @@ ObjectInstanceNameReservationSucceeded::ObjectInstanceNameReservationSucceeded(c
     _this->_impl_.objectinstancename_.Set(from._internal_objectinstancename(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
 }
 
 inline void ObjectInstanceNameReservationSucceeded::SharedCtor(
@@ -7010,7 +7010,7 @@ inline void ObjectInstanceNameReservationSucceeded::SharedCtor(
 }
 
 ObjectInstanceNameReservationSucceeded::~ObjectInstanceNameReservationSucceeded() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -7028,7 +7028,7 @@ void ObjectInstanceNameReservationSucceeded::SetCachedSize(int size) const {
 }
 
 void ObjectInstanceNameReservationSucceeded::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7049,7 +7049,7 @@ const char* ObjectInstanceNameReservationSucceeded::_InternalParse(const char* p
           auto str = _internal_mutable_objectinstancename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded.objectInstanceName"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded.objectInstanceName"));
         } else
           goto handle_unusual;
         continue;
@@ -7078,7 +7078,7 @@ failure:
 
 uint8_t* ObjectInstanceNameReservationSucceeded::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7087,7 +7087,7 @@ uint8_t* ObjectInstanceNameReservationSucceeded::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_objectinstancename().data(), static_cast<int>(this->_internal_objectinstancename().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded.objectInstanceName");
+      "rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded.objectInstanceName");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_objectinstancename(), target);
   }
@@ -7096,12 +7096,12 @@ uint8_t* ObjectInstanceNameReservationSucceeded::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
   return target;
 }
 
 size_t ObjectInstanceNameReservationSucceeded::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -7128,7 +7128,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ObjectInstanceNameReservationS
 void ObjectInstanceNameReservationSucceeded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ObjectInstanceNameReservationSucceeded*>(&to_msg);
   auto& from = static_cast<const ObjectInstanceNameReservationSucceeded&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7140,7 +7140,7 @@ void ObjectInstanceNameReservationSucceeded::MergeImpl(::PROTOBUF_NAMESPACE_ID::
 }
 
 void ObjectInstanceNameReservationSucceeded::CopyFrom(const ObjectInstanceNameReservationSucceeded& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7177,7 +7177,7 @@ ObjectInstanceNameReservationFailed::ObjectInstanceNameReservationFailed(::PROTO
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
 }
 ObjectInstanceNameReservationFailed::ObjectInstanceNameReservationFailed(const ObjectInstanceNameReservationFailed& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7195,7 +7195,7 @@ ObjectInstanceNameReservationFailed::ObjectInstanceNameReservationFailed(const O
     _this->_impl_.objectinstancename_.Set(from._internal_objectinstancename(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
 }
 
 inline void ObjectInstanceNameReservationFailed::SharedCtor(
@@ -7213,7 +7213,7 @@ inline void ObjectInstanceNameReservationFailed::SharedCtor(
 }
 
 ObjectInstanceNameReservationFailed::~ObjectInstanceNameReservationFailed() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -7231,7 +7231,7 @@ void ObjectInstanceNameReservationFailed::SetCachedSize(int size) const {
 }
 
 void ObjectInstanceNameReservationFailed::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7252,7 +7252,7 @@ const char* ObjectInstanceNameReservationFailed::_InternalParse(const char* ptr,
           auto str = _internal_mutable_objectinstancename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.ObjectInstanceNameReservationFailed.objectInstanceName"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.ObjectInstanceNameReservationFailed.objectInstanceName"));
         } else
           goto handle_unusual;
         continue;
@@ -7281,7 +7281,7 @@ failure:
 
 uint8_t* ObjectInstanceNameReservationFailed::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7290,7 +7290,7 @@ uint8_t* ObjectInstanceNameReservationFailed::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_objectinstancename().data(), static_cast<int>(this->_internal_objectinstancename().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.ObjectInstanceNameReservationFailed.objectInstanceName");
+      "rti1516_2025.fedpro.ObjectInstanceNameReservationFailed.objectInstanceName");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_objectinstancename(), target);
   }
@@ -7299,12 +7299,12 @@ uint8_t* ObjectInstanceNameReservationFailed::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
   return target;
 }
 
 size_t ObjectInstanceNameReservationFailed::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -7331,7 +7331,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ObjectInstanceNameReservationF
 void ObjectInstanceNameReservationFailed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ObjectInstanceNameReservationFailed*>(&to_msg);
   auto& from = static_cast<const ObjectInstanceNameReservationFailed&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7343,7 +7343,7 @@ void ObjectInstanceNameReservationFailed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mes
 }
 
 void ObjectInstanceNameReservationFailed::CopyFrom(const ObjectInstanceNameReservationFailed& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ObjectInstanceNameReservationFailed)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ObjectInstanceNameReservationFailed)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7380,7 +7380,7 @@ MultipleObjectInstanceNameReservationSucceeded::MultipleObjectInstanceNameReserv
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
 }
 MultipleObjectInstanceNameReservationSucceeded::MultipleObjectInstanceNameReservationSucceeded(const MultipleObjectInstanceNameReservationSucceeded& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7390,7 +7390,7 @@ MultipleObjectInstanceNameReservationSucceeded::MultipleObjectInstanceNameReserv
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
 }
 
 inline void MultipleObjectInstanceNameReservationSucceeded::SharedCtor(
@@ -7404,7 +7404,7 @@ inline void MultipleObjectInstanceNameReservationSucceeded::SharedCtor(
 }
 
 MultipleObjectInstanceNameReservationSucceeded::~MultipleObjectInstanceNameReservationSucceeded() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -7422,7 +7422,7 @@ void MultipleObjectInstanceNameReservationSucceeded::SetCachedSize(int size) con
 }
 
 void MultipleObjectInstanceNameReservationSucceeded::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7446,7 +7446,7 @@ const char* MultipleObjectInstanceNameReservationSucceeded::_InternalParse(const
             auto str = _internal_add_objectinstancenames();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded.objectInstanceNames"));
+            CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded.objectInstanceNames"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -7477,7 +7477,7 @@ failure:
 
 uint8_t* MultipleObjectInstanceNameReservationSucceeded::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7487,7 +7487,7 @@ uint8_t* MultipleObjectInstanceNameReservationSucceeded::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded.objectInstanceNames");
+      "rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded.objectInstanceNames");
     target = stream->WriteString(1, s, target);
   }
 
@@ -7495,12 +7495,12 @@ uint8_t* MultipleObjectInstanceNameReservationSucceeded::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
   return target;
 }
 
 size_t MultipleObjectInstanceNameReservationSucceeded::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -7528,7 +7528,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MultipleObjectInstanceNameRese
 void MultipleObjectInstanceNameReservationSucceeded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<MultipleObjectInstanceNameReservationSucceeded*>(&to_msg);
   auto& from = static_cast<const MultipleObjectInstanceNameReservationSucceeded&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7538,7 +7538,7 @@ void MultipleObjectInstanceNameReservationSucceeded::MergeImpl(::PROTOBUF_NAMESP
 }
 
 void MultipleObjectInstanceNameReservationSucceeded::CopyFrom(const MultipleObjectInstanceNameReservationSucceeded& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7570,7 +7570,7 @@ MultipleObjectInstanceNameReservationFailed::MultipleObjectInstanceNameReservati
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
 }
 MultipleObjectInstanceNameReservationFailed::MultipleObjectInstanceNameReservationFailed(const MultipleObjectInstanceNameReservationFailed& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7580,7 +7580,7 @@ MultipleObjectInstanceNameReservationFailed::MultipleObjectInstanceNameReservati
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
 }
 
 inline void MultipleObjectInstanceNameReservationFailed::SharedCtor(
@@ -7594,7 +7594,7 @@ inline void MultipleObjectInstanceNameReservationFailed::SharedCtor(
 }
 
 MultipleObjectInstanceNameReservationFailed::~MultipleObjectInstanceNameReservationFailed() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -7612,7 +7612,7 @@ void MultipleObjectInstanceNameReservationFailed::SetCachedSize(int size) const 
 }
 
 void MultipleObjectInstanceNameReservationFailed::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7636,7 +7636,7 @@ const char* MultipleObjectInstanceNameReservationFailed::_InternalParse(const ch
             auto str = _internal_add_objectinstancenames();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed.objectInstanceNames"));
+            CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed.objectInstanceNames"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -7667,7 +7667,7 @@ failure:
 
 uint8_t* MultipleObjectInstanceNameReservationFailed::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7677,7 +7677,7 @@ uint8_t* MultipleObjectInstanceNameReservationFailed::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed.objectInstanceNames");
+      "rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed.objectInstanceNames");
     target = stream->WriteString(1, s, target);
   }
 
@@ -7685,12 +7685,12 @@ uint8_t* MultipleObjectInstanceNameReservationFailed::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
   return target;
 }
 
 size_t MultipleObjectInstanceNameReservationFailed::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -7718,7 +7718,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MultipleObjectInstanceNameRese
 void MultipleObjectInstanceNameReservationFailed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<MultipleObjectInstanceNameReservationFailed*>(&to_msg);
   auto& from = static_cast<const MultipleObjectInstanceNameReservationFailed&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7728,7 +7728,7 @@ void MultipleObjectInstanceNameReservationFailed::MergeImpl(::PROTOBUF_NAMESPACE
 }
 
 void MultipleObjectInstanceNameReservationFailed::CopyFrom(const MultipleObjectInstanceNameReservationFailed& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7754,20 +7754,20 @@ void MultipleObjectInstanceNameReservationFailed::InternalSwap(MultipleObjectIns
 
 class DiscoverObjectInstance::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const DiscoverObjectInstance* msg);
-  static const ::rti1516_202X::fedpro::ObjectClassHandle& objectclass(const DiscoverObjectInstance* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const DiscoverObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const DiscoverObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::ObjectClassHandle& objectclass(const DiscoverObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const DiscoverObjectInstance* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 DiscoverObjectInstance::_Internal::objectinstance(const DiscoverObjectInstance* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::ObjectClassHandle&
+const ::rti1516_2025::fedpro::ObjectClassHandle&
 DiscoverObjectInstance::_Internal::objectclass(const DiscoverObjectInstance* msg) {
   return *msg->_impl_.objectclass_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 DiscoverObjectInstance::_Internal::producingfederate(const DiscoverObjectInstance* msg) {
   return *msg->_impl_.producingfederate_;
 }
@@ -7793,7 +7793,7 @@ DiscoverObjectInstance::DiscoverObjectInstance(::PROTOBUF_NAMESPACE_ID::Arena* a
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.DiscoverObjectInstance)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.DiscoverObjectInstance)
 }
 DiscoverObjectInstance::DiscoverObjectInstance(const DiscoverObjectInstance& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7815,15 +7815,15 @@ DiscoverObjectInstance::DiscoverObjectInstance(const DiscoverObjectInstance& fro
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_objectclass()) {
-    _this->_impl_.objectclass_ = new ::rti1516_202X::fedpro::ObjectClassHandle(*from._impl_.objectclass_);
+    _this->_impl_.objectclass_ = new ::rti1516_2025::fedpro::ObjectClassHandle(*from._impl_.objectclass_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.DiscoverObjectInstance)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.DiscoverObjectInstance)
 }
 
 inline void DiscoverObjectInstance::SharedCtor(
@@ -7844,7 +7844,7 @@ inline void DiscoverObjectInstance::SharedCtor(
 }
 
 DiscoverObjectInstance::~DiscoverObjectInstance() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.DiscoverObjectInstance)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.DiscoverObjectInstance)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -7865,7 +7865,7 @@ void DiscoverObjectInstance::SetCachedSize(int size) const {
 }
 
 void DiscoverObjectInstance::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.DiscoverObjectInstance)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.DiscoverObjectInstance)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7892,7 +7892,7 @@ const char* DiscoverObjectInstance::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -7900,7 +7900,7 @@ const char* DiscoverObjectInstance::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 2;
+      // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectclass(), ptr);
@@ -7914,11 +7914,11 @@ const char* DiscoverObjectInstance::_InternalParse(const char* ptr, ::_pbi::Pars
           auto str = _internal_mutable_objectinstancename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.DiscoverObjectInstance.objectInstanceName"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.DiscoverObjectInstance.objectInstanceName"));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 4;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -7951,18 +7951,18 @@ failure:
 
 uint8_t* DiscoverObjectInstance::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.DiscoverObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.DiscoverObjectInstance)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 2;
+  // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 2;
   if (this->_internal_has_objectclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::objectclass(this),
@@ -7974,12 +7974,12 @@ uint8_t* DiscoverObjectInstance::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_objectinstancename().data(), static_cast<int>(this->_internal_objectinstancename().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.DiscoverObjectInstance.objectInstanceName");
+      "rti1516_2025.fedpro.DiscoverObjectInstance.objectInstanceName");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_objectinstancename(), target);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 4;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 4;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::producingfederate(this),
@@ -7990,12 +7990,12 @@ uint8_t* DiscoverObjectInstance::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.DiscoverObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.DiscoverObjectInstance)
   return target;
 }
 
 size_t DiscoverObjectInstance::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.DiscoverObjectInstance)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.DiscoverObjectInstance)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8009,21 +8009,21 @@ size_t DiscoverObjectInstance::ByteSizeLong() const {
         this->_internal_objectinstancename());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.ObjectClassHandle objectClass = 2;
+  // .rti1516_2025.fedpro.ObjectClassHandle objectClass = 2;
   if (this->_internal_has_objectclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectclass_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 4;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 4;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -8043,7 +8043,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DiscoverObjectInstance::GetCla
 void DiscoverObjectInstance::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<DiscoverObjectInstance*>(&to_msg);
   auto& from = static_cast<const DiscoverObjectInstance&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.DiscoverObjectInstance)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.DiscoverObjectInstance)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8052,22 +8052,22 @@ void DiscoverObjectInstance::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
     _this->_internal_set_objectinstancename(from._internal_objectinstancename());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_objectclass()) {
-    _this->_internal_mutable_objectclass()->::rti1516_202X::fedpro::ObjectClassHandle::MergeFrom(
+    _this->_internal_mutable_objectclass()->::rti1516_2025::fedpro::ObjectClassHandle::MergeFrom(
         from._internal_objectclass());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void DiscoverObjectInstance::CopyFrom(const DiscoverObjectInstance& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.DiscoverObjectInstance)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.DiscoverObjectInstance)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8104,30 +8104,30 @@ void DiscoverObjectInstance::InternalSwap(DiscoverObjectInstance* other) {
 
 class ReflectAttributeValues::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ReflectAttributeValues* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleValueMap& attributevalues(const ReflectAttributeValues* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReflectAttributeValues* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const ReflectAttributeValues* msg);
-  static const ::rti1516_202X::fedpro::ConveyedRegionSet& optionalsentregions(const ReflectAttributeValues* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ReflectAttributeValues* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleValueMap& attributevalues(const ReflectAttributeValues* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReflectAttributeValues* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const ReflectAttributeValues* msg);
+  static const ::rti1516_2025::fedpro::ConveyedRegionSet& optionalsentregions(const ReflectAttributeValues* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ReflectAttributeValues::_Internal::objectinstance(const ReflectAttributeValues* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleValueMap&
+const ::rti1516_2025::fedpro::AttributeHandleValueMap&
 ReflectAttributeValues::_Internal::attributevalues(const ReflectAttributeValues* msg) {
   return *msg->_impl_.attributevalues_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReflectAttributeValues::_Internal::transportationtype(const ReflectAttributeValues* msg) {
   return *msg->_impl_.transportationtype_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 ReflectAttributeValues::_Internal::producingfederate(const ReflectAttributeValues* msg) {
   return *msg->_impl_.producingfederate_;
 }
-const ::rti1516_202X::fedpro::ConveyedRegionSet&
+const ::rti1516_2025::fedpro::ConveyedRegionSet&
 ReflectAttributeValues::_Internal::optionalsentregions(const ReflectAttributeValues* msg) {
   return *msg->_impl_.optionalsentregions_;
 }
@@ -8165,7 +8165,7 @@ ReflectAttributeValues::ReflectAttributeValues(::PROTOBUF_NAMESPACE_ID::Arena* a
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReflectAttributeValues)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReflectAttributeValues)
 }
 ReflectAttributeValues::ReflectAttributeValues(const ReflectAttributeValues& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -8189,21 +8189,21 @@ ReflectAttributeValues::ReflectAttributeValues(const ReflectAttributeValues& fro
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributevalues()) {
-    _this->_impl_.attributevalues_ = new ::rti1516_202X::fedpro::AttributeHandleValueMap(*from._impl_.attributevalues_);
+    _this->_impl_.attributevalues_ = new ::rti1516_2025::fedpro::AttributeHandleValueMap(*from._impl_.attributevalues_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_impl_.optionalsentregions_ = new ::rti1516_202X::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
+    _this->_impl_.optionalsentregions_ = new ::rti1516_2025::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReflectAttributeValues)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReflectAttributeValues)
 }
 
 inline void ReflectAttributeValues::SharedCtor(
@@ -8226,7 +8226,7 @@ inline void ReflectAttributeValues::SharedCtor(
 }
 
 ReflectAttributeValues::~ReflectAttributeValues() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReflectAttributeValues)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReflectAttributeValues)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -8249,7 +8249,7 @@ void ReflectAttributeValues::SetCachedSize(int size) const {
 }
 
 void ReflectAttributeValues::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReflectAttributeValues)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReflectAttributeValues)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8284,7 +8284,7 @@ const char* ReflectAttributeValues::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -8292,7 +8292,7 @@ const char* ReflectAttributeValues::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleValueMap attributeValues = 2;
+      // .rti1516_2025.fedpro.AttributeHandleValueMap attributeValues = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributevalues(), ptr);
@@ -8309,7 +8309,7 @@ const char* ReflectAttributeValues::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -8317,7 +8317,7 @@ const char* ReflectAttributeValues::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -8325,7 +8325,7 @@ const char* ReflectAttributeValues::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+      // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalsentregions(), ptr);
@@ -8358,18 +8358,18 @@ failure:
 
 uint8_t* ReflectAttributeValues::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReflectAttributeValues)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReflectAttributeValues)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleValueMap attributeValues = 2;
+  // .rti1516_2025.fedpro.AttributeHandleValueMap attributeValues = 2;
   if (this->_internal_has_attributevalues()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributevalues(this),
@@ -8382,21 +8382,21 @@ uint8_t* ReflectAttributeValues::_InternalSerialize(
         3, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::transportationtype(this),
         _Internal::transportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::producingfederate(this),
         _Internal::producingfederate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::optionalsentregions(this),
@@ -8407,12 +8407,12 @@ uint8_t* ReflectAttributeValues::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReflectAttributeValues)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReflectAttributeValues)
   return target;
 }
 
 size_t ReflectAttributeValues::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReflectAttributeValues)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReflectAttributeValues)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8426,35 +8426,35 @@ size_t ReflectAttributeValues::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleValueMap attributeValues = 2;
+  // .rti1516_2025.fedpro.AttributeHandleValueMap attributeValues = 2;
   if (this->_internal_has_attributevalues()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.attributevalues_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.transportationtype_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.producingfederate_);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -8474,7 +8474,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReflectAttributeValues::GetCla
 void ReflectAttributeValues::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReflectAttributeValues*>(&to_msg);
   auto& from = static_cast<const ReflectAttributeValues&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReflectAttributeValues)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReflectAttributeValues)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8483,30 +8483,30 @@ void ReflectAttributeValues::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributevalues()) {
-    _this->_internal_mutable_attributevalues()->::rti1516_202X::fedpro::AttributeHandleValueMap::MergeFrom(
+    _this->_internal_mutable_attributevalues()->::rti1516_2025::fedpro::AttributeHandleValueMap::MergeFrom(
         from._internal_attributevalues());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_internal_mutable_optionalsentregions()->::rti1516_202X::fedpro::ConveyedRegionSet::MergeFrom(
+    _this->_internal_mutable_optionalsentregions()->::rti1516_2025::fedpro::ConveyedRegionSet::MergeFrom(
         from._internal_optionalsentregions());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReflectAttributeValues::CopyFrom(const ReflectAttributeValues& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReflectAttributeValues)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReflectAttributeValues)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8543,40 +8543,40 @@ void ReflectAttributeValues::InternalSwap(ReflectAttributeValues* other) {
 
 class ReflectAttributeValuesWithTime::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ReflectAttributeValuesWithTime* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleValueMap& attributevalues(const ReflectAttributeValuesWithTime* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReflectAttributeValuesWithTime* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const ReflectAttributeValuesWithTime* msg);
-  static const ::rti1516_202X::fedpro::ConveyedRegionSet& optionalsentregions(const ReflectAttributeValuesWithTime* msg);
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const ReflectAttributeValuesWithTime* msg);
-  static const ::rti1516_202X::fedpro::MessageRetractionHandle& optionalretraction(const ReflectAttributeValuesWithTime* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ReflectAttributeValuesWithTime* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleValueMap& attributevalues(const ReflectAttributeValuesWithTime* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReflectAttributeValuesWithTime* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const ReflectAttributeValuesWithTime* msg);
+  static const ::rti1516_2025::fedpro::ConveyedRegionSet& optionalsentregions(const ReflectAttributeValuesWithTime* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const ReflectAttributeValuesWithTime* msg);
+  static const ::rti1516_2025::fedpro::MessageRetractionHandle& optionalretraction(const ReflectAttributeValuesWithTime* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ReflectAttributeValuesWithTime::_Internal::objectinstance(const ReflectAttributeValuesWithTime* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleValueMap&
+const ::rti1516_2025::fedpro::AttributeHandleValueMap&
 ReflectAttributeValuesWithTime::_Internal::attributevalues(const ReflectAttributeValuesWithTime* msg) {
   return *msg->_impl_.attributevalues_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReflectAttributeValuesWithTime::_Internal::transportationtype(const ReflectAttributeValuesWithTime* msg) {
   return *msg->_impl_.transportationtype_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 ReflectAttributeValuesWithTime::_Internal::producingfederate(const ReflectAttributeValuesWithTime* msg) {
   return *msg->_impl_.producingfederate_;
 }
-const ::rti1516_202X::fedpro::ConveyedRegionSet&
+const ::rti1516_2025::fedpro::ConveyedRegionSet&
 ReflectAttributeValuesWithTime::_Internal::optionalsentregions(const ReflectAttributeValuesWithTime* msg) {
   return *msg->_impl_.optionalsentregions_;
 }
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 ReflectAttributeValuesWithTime::_Internal::time(const ReflectAttributeValuesWithTime* msg) {
   return *msg->_impl_.time_;
 }
-const ::rti1516_202X::fedpro::MessageRetractionHandle&
+const ::rti1516_2025::fedpro::MessageRetractionHandle&
 ReflectAttributeValuesWithTime::_Internal::optionalretraction(const ReflectAttributeValuesWithTime* msg) {
   return *msg->_impl_.optionalretraction_;
 }
@@ -8626,7 +8626,7 @@ ReflectAttributeValuesWithTime::ReflectAttributeValuesWithTime(::PROTOBUF_NAMESP
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
 }
 ReflectAttributeValuesWithTime::ReflectAttributeValuesWithTime(const ReflectAttributeValuesWithTime& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -8654,30 +8654,30 @@ ReflectAttributeValuesWithTime::ReflectAttributeValuesWithTime(const ReflectAttr
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributevalues()) {
-    _this->_impl_.attributevalues_ = new ::rti1516_202X::fedpro::AttributeHandleValueMap(*from._impl_.attributevalues_);
+    _this->_impl_.attributevalues_ = new ::rti1516_2025::fedpro::AttributeHandleValueMap(*from._impl_.attributevalues_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_impl_.optionalsentregions_ = new ::rti1516_202X::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
+    _this->_impl_.optionalsentregions_ = new ::rti1516_2025::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
   }
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_impl_.optionalretraction_ = new ::rti1516_202X::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
+    _this->_impl_.optionalretraction_ = new ::rti1516_2025::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
   }
   ::memcpy(&_impl_.sentordertype_, &from._impl_.sentordertype_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.receivedordertype_) -
     reinterpret_cast<char*>(&_impl_.sentordertype_)) + sizeof(_impl_.receivedordertype_));
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
 }
 
 inline void ReflectAttributeValuesWithTime::SharedCtor(
@@ -8704,7 +8704,7 @@ inline void ReflectAttributeValuesWithTime::SharedCtor(
 }
 
 ReflectAttributeValuesWithTime::~ReflectAttributeValuesWithTime() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -8729,7 +8729,7 @@ void ReflectAttributeValuesWithTime::SetCachedSize(int size) const {
 }
 
 void ReflectAttributeValuesWithTime::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8775,7 +8775,7 @@ const char* ReflectAttributeValuesWithTime::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -8783,7 +8783,7 @@ const char* ReflectAttributeValuesWithTime::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleValueMap attributeValues = 2;
+      // .rti1516_2025.fedpro.AttributeHandleValueMap attributeValues = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributevalues(), ptr);
@@ -8800,7 +8800,7 @@ const char* ReflectAttributeValuesWithTime::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -8808,7 +8808,7 @@ const char* ReflectAttributeValuesWithTime::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -8816,7 +8816,7 @@ const char* ReflectAttributeValuesWithTime::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+      // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalsentregions(), ptr);
@@ -8824,7 +8824,7 @@ const char* ReflectAttributeValuesWithTime::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.LogicalTime time = 7;
+      // .rti1516_2025.fedpro.LogicalTime time = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -8832,25 +8832,25 @@ const char* ReflectAttributeValuesWithTime::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+      // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_sentordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_sentordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+      // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_receivedordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_receivedordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+      // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalretraction(), ptr);
@@ -8883,18 +8883,18 @@ failure:
 
 uint8_t* ReflectAttributeValuesWithTime::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleValueMap attributeValues = 2;
+  // .rti1516_2025.fedpro.AttributeHandleValueMap attributeValues = 2;
   if (this->_internal_has_attributevalues()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributevalues(this),
@@ -8907,49 +8907,49 @@ uint8_t* ReflectAttributeValuesWithTime::_InternalSerialize(
         3, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::transportationtype(this),
         _Internal::transportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::producingfederate(this),
         _Internal::producingfederate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::optionalsentregions(this),
         _Internal::optionalsentregions(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 7;
+  // .rti1516_2025.fedpro.LogicalTime time = 7;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(7, _Internal::time(this),
         _Internal::time(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
   if (this->_internal_sentordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       8, this->_internal_sentordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
   if (this->_internal_receivedordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       9, this->_internal_receivedordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
   if (this->_internal_has_optionalretraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(10, _Internal::optionalretraction(this),
@@ -8960,12 +8960,12 @@ uint8_t* ReflectAttributeValuesWithTime::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
   return target;
 }
 
 size_t ReflectAttributeValuesWithTime::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8979,62 +8979,62 @@ size_t ReflectAttributeValuesWithTime::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleValueMap attributeValues = 2;
+  // .rti1516_2025.fedpro.AttributeHandleValueMap attributeValues = 2;
   if (this->_internal_has_attributevalues()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.attributevalues_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.transportationtype_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.producingfederate_);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.optionalsentregions_);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 7;
+  // .rti1516_2025.fedpro.LogicalTime time = 7;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.time_);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
   if (this->_internal_has_optionalretraction()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.optionalretraction_);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
   if (this->_internal_sentordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_sentordertype());
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
   if (this->_internal_receivedordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_receivedordertype());
@@ -9053,7 +9053,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReflectAttributeValuesWithTime
 void ReflectAttributeValuesWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReflectAttributeValuesWithTime*>(&to_msg);
   auto& from = static_cast<const ReflectAttributeValuesWithTime&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -9062,31 +9062,31 @@ void ReflectAttributeValuesWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributevalues()) {
-    _this->_internal_mutable_attributevalues()->::rti1516_202X::fedpro::AttributeHandleValueMap::MergeFrom(
+    _this->_internal_mutable_attributevalues()->::rti1516_2025::fedpro::AttributeHandleValueMap::MergeFrom(
         from._internal_attributevalues());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_internal_mutable_optionalsentregions()->::rti1516_202X::fedpro::ConveyedRegionSet::MergeFrom(
+    _this->_internal_mutable_optionalsentregions()->::rti1516_2025::fedpro::ConveyedRegionSet::MergeFrom(
         from._internal_optionalsentregions());
   }
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_internal_mutable_optionalretraction()->::rti1516_202X::fedpro::MessageRetractionHandle::MergeFrom(
+    _this->_internal_mutable_optionalretraction()->::rti1516_2025::fedpro::MessageRetractionHandle::MergeFrom(
         from._internal_optionalretraction());
   }
   if (from._internal_sentordertype() != 0) {
@@ -9099,7 +9099,7 @@ void ReflectAttributeValuesWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
 }
 
 void ReflectAttributeValuesWithTime::CopyFrom(const ReflectAttributeValuesWithTime& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReflectAttributeValuesWithTime)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReflectAttributeValuesWithTime)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9136,30 +9136,30 @@ void ReflectAttributeValuesWithTime::InternalSwap(ReflectAttributeValuesWithTime
 
 class ReceiveInteraction::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const ReceiveInteraction* msg);
-  static const ::rti1516_202X::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveInteraction* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReceiveInteraction* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const ReceiveInteraction* msg);
-  static const ::rti1516_202X::fedpro::ConveyedRegionSet& optionalsentregions(const ReceiveInteraction* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const ReceiveInteraction* msg);
+  static const ::rti1516_2025::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveInteraction* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReceiveInteraction* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const ReceiveInteraction* msg);
+  static const ::rti1516_2025::fedpro::ConveyedRegionSet& optionalsentregions(const ReceiveInteraction* msg);
 };
 
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 ReceiveInteraction::_Internal::interactionclass(const ReceiveInteraction* msg) {
   return *msg->_impl_.interactionclass_;
 }
-const ::rti1516_202X::fedpro::ParameterHandleValueMap&
+const ::rti1516_2025::fedpro::ParameterHandleValueMap&
 ReceiveInteraction::_Internal::parametervalues(const ReceiveInteraction* msg) {
   return *msg->_impl_.parametervalues_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReceiveInteraction::_Internal::transportationtype(const ReceiveInteraction* msg) {
   return *msg->_impl_.transportationtype_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 ReceiveInteraction::_Internal::producingfederate(const ReceiveInteraction* msg) {
   return *msg->_impl_.producingfederate_;
 }
-const ::rti1516_202X::fedpro::ConveyedRegionSet&
+const ::rti1516_2025::fedpro::ConveyedRegionSet&
 ReceiveInteraction::_Internal::optionalsentregions(const ReceiveInteraction* msg) {
   return *msg->_impl_.optionalsentregions_;
 }
@@ -9197,7 +9197,7 @@ ReceiveInteraction::ReceiveInteraction(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReceiveInteraction)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReceiveInteraction)
 }
 ReceiveInteraction::ReceiveInteraction(const ReceiveInteraction& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -9221,21 +9221,21 @@ ReceiveInteraction::ReceiveInteraction(const ReceiveInteraction& from)
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
   if (from._internal_has_parametervalues()) {
-    _this->_impl_.parametervalues_ = new ::rti1516_202X::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
+    _this->_impl_.parametervalues_ = new ::rti1516_2025::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_impl_.optionalsentregions_ = new ::rti1516_202X::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
+    _this->_impl_.optionalsentregions_ = new ::rti1516_2025::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReceiveInteraction)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReceiveInteraction)
 }
 
 inline void ReceiveInteraction::SharedCtor(
@@ -9258,7 +9258,7 @@ inline void ReceiveInteraction::SharedCtor(
 }
 
 ReceiveInteraction::~ReceiveInteraction() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReceiveInteraction)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReceiveInteraction)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -9281,7 +9281,7 @@ void ReceiveInteraction::SetCachedSize(int size) const {
 }
 
 void ReceiveInteraction::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReceiveInteraction)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReceiveInteraction)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9316,7 +9316,7 @@ const char* ReceiveInteraction::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -9324,7 +9324,7 @@ const char* ReceiveInteraction::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 2;
+      // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_parametervalues(), ptr);
@@ -9341,7 +9341,7 @@ const char* ReceiveInteraction::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -9349,7 +9349,7 @@ const char* ReceiveInteraction::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -9357,7 +9357,7 @@ const char* ReceiveInteraction::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+      // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalsentregions(), ptr);
@@ -9390,18 +9390,18 @@ failure:
 
 uint8_t* ReceiveInteraction::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReceiveInteraction)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReceiveInteraction)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::interactionclass(this),
         _Internal::interactionclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 2;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 2;
   if (this->_internal_has_parametervalues()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::parametervalues(this),
@@ -9414,21 +9414,21 @@ uint8_t* ReceiveInteraction::_InternalSerialize(
         3, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::transportationtype(this),
         _Internal::transportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::producingfederate(this),
         _Internal::producingfederate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::optionalsentregions(this),
@@ -9439,12 +9439,12 @@ uint8_t* ReceiveInteraction::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReceiveInteraction)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReceiveInteraction)
   return target;
 }
 
 size_t ReceiveInteraction::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReceiveInteraction)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReceiveInteraction)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -9458,35 +9458,35 @@ size_t ReceiveInteraction::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.interactionclass_);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 2;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 2;
   if (this->_internal_has_parametervalues()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.parametervalues_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.transportationtype_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.producingfederate_);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -9506,7 +9506,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReceiveInteraction::GetClassDa
 void ReceiveInteraction::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReceiveInteraction*>(&to_msg);
   auto& from = static_cast<const ReceiveInteraction&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReceiveInteraction)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReceiveInteraction)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -9515,30 +9515,30 @@ void ReceiveInteraction::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   if (from._internal_has_parametervalues()) {
-    _this->_internal_mutable_parametervalues()->::rti1516_202X::fedpro::ParameterHandleValueMap::MergeFrom(
+    _this->_internal_mutable_parametervalues()->::rti1516_2025::fedpro::ParameterHandleValueMap::MergeFrom(
         from._internal_parametervalues());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_internal_mutable_optionalsentregions()->::rti1516_202X::fedpro::ConveyedRegionSet::MergeFrom(
+    _this->_internal_mutable_optionalsentregions()->::rti1516_2025::fedpro::ConveyedRegionSet::MergeFrom(
         from._internal_optionalsentregions());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReceiveInteraction::CopyFrom(const ReceiveInteraction& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReceiveInteraction)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReceiveInteraction)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9575,40 +9575,40 @@ void ReceiveInteraction::InternalSwap(ReceiveInteraction* other) {
 
 class ReceiveInteractionWithTime::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const ReceiveInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReceiveInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const ReceiveInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::ConveyedRegionSet& optionalsentregions(const ReceiveInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const ReceiveInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::MessageRetractionHandle& optionalretraction(const ReceiveInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const ReceiveInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReceiveInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const ReceiveInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::ConveyedRegionSet& optionalsentregions(const ReceiveInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const ReceiveInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::MessageRetractionHandle& optionalretraction(const ReceiveInteractionWithTime* msg);
 };
 
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 ReceiveInteractionWithTime::_Internal::interactionclass(const ReceiveInteractionWithTime* msg) {
   return *msg->_impl_.interactionclass_;
 }
-const ::rti1516_202X::fedpro::ParameterHandleValueMap&
+const ::rti1516_2025::fedpro::ParameterHandleValueMap&
 ReceiveInteractionWithTime::_Internal::parametervalues(const ReceiveInteractionWithTime* msg) {
   return *msg->_impl_.parametervalues_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReceiveInteractionWithTime::_Internal::transportationtype(const ReceiveInteractionWithTime* msg) {
   return *msg->_impl_.transportationtype_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 ReceiveInteractionWithTime::_Internal::producingfederate(const ReceiveInteractionWithTime* msg) {
   return *msg->_impl_.producingfederate_;
 }
-const ::rti1516_202X::fedpro::ConveyedRegionSet&
+const ::rti1516_2025::fedpro::ConveyedRegionSet&
 ReceiveInteractionWithTime::_Internal::optionalsentregions(const ReceiveInteractionWithTime* msg) {
   return *msg->_impl_.optionalsentregions_;
 }
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 ReceiveInteractionWithTime::_Internal::time(const ReceiveInteractionWithTime* msg) {
   return *msg->_impl_.time_;
 }
-const ::rti1516_202X::fedpro::MessageRetractionHandle&
+const ::rti1516_2025::fedpro::MessageRetractionHandle&
 ReceiveInteractionWithTime::_Internal::optionalretraction(const ReceiveInteractionWithTime* msg) {
   return *msg->_impl_.optionalretraction_;
 }
@@ -9658,7 +9658,7 @@ ReceiveInteractionWithTime::ReceiveInteractionWithTime(::PROTOBUF_NAMESPACE_ID::
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReceiveInteractionWithTime)
 }
 ReceiveInteractionWithTime::ReceiveInteractionWithTime(const ReceiveInteractionWithTime& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -9686,30 +9686,30 @@ ReceiveInteractionWithTime::ReceiveInteractionWithTime(const ReceiveInteractionW
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
   if (from._internal_has_parametervalues()) {
-    _this->_impl_.parametervalues_ = new ::rti1516_202X::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
+    _this->_impl_.parametervalues_ = new ::rti1516_2025::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_impl_.optionalsentregions_ = new ::rti1516_202X::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
+    _this->_impl_.optionalsentregions_ = new ::rti1516_2025::fedpro::ConveyedRegionSet(*from._impl_.optionalsentregions_);
   }
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_impl_.optionalretraction_ = new ::rti1516_202X::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
+    _this->_impl_.optionalretraction_ = new ::rti1516_2025::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
   }
   ::memcpy(&_impl_.sentordertype_, &from._impl_.sentordertype_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.receivedordertype_) -
     reinterpret_cast<char*>(&_impl_.sentordertype_)) + sizeof(_impl_.receivedordertype_));
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReceiveInteractionWithTime)
 }
 
 inline void ReceiveInteractionWithTime::SharedCtor(
@@ -9736,7 +9736,7 @@ inline void ReceiveInteractionWithTime::SharedCtor(
 }
 
 ReceiveInteractionWithTime::~ReceiveInteractionWithTime() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReceiveInteractionWithTime)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -9761,7 +9761,7 @@ void ReceiveInteractionWithTime::SetCachedSize(int size) const {
 }
 
 void ReceiveInteractionWithTime::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReceiveInteractionWithTime)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9807,7 +9807,7 @@ const char* ReceiveInteractionWithTime::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -9815,7 +9815,7 @@ const char* ReceiveInteractionWithTime::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 2;
+      // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_parametervalues(), ptr);
@@ -9832,7 +9832,7 @@ const char* ReceiveInteractionWithTime::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -9840,7 +9840,7 @@ const char* ReceiveInteractionWithTime::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -9848,7 +9848,7 @@ const char* ReceiveInteractionWithTime::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+      // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalsentregions(), ptr);
@@ -9856,7 +9856,7 @@ const char* ReceiveInteractionWithTime::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.LogicalTime time = 7;
+      // .rti1516_2025.fedpro.LogicalTime time = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -9864,25 +9864,25 @@ const char* ReceiveInteractionWithTime::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+      // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_sentordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_sentordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+      // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_receivedordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_receivedordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+      // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalretraction(), ptr);
@@ -9915,18 +9915,18 @@ failure:
 
 uint8_t* ReceiveInteractionWithTime::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReceiveInteractionWithTime)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::interactionclass(this),
         _Internal::interactionclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 2;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 2;
   if (this->_internal_has_parametervalues()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::parametervalues(this),
@@ -9939,49 +9939,49 @@ uint8_t* ReceiveInteractionWithTime::_InternalSerialize(
         3, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::transportationtype(this),
         _Internal::transportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::producingfederate(this),
         _Internal::producingfederate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::optionalsentregions(this),
         _Internal::optionalsentregions(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 7;
+  // .rti1516_2025.fedpro.LogicalTime time = 7;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(7, _Internal::time(this),
         _Internal::time(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
   if (this->_internal_sentordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       8, this->_internal_sentordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
   if (this->_internal_receivedordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       9, this->_internal_receivedordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
   if (this->_internal_has_optionalretraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(10, _Internal::optionalretraction(this),
@@ -9992,12 +9992,12 @@ uint8_t* ReceiveInteractionWithTime::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReceiveInteractionWithTime)
   return target;
 }
 
 size_t ReceiveInteractionWithTime::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReceiveInteractionWithTime)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -10011,62 +10011,62 @@ size_t ReceiveInteractionWithTime::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.interactionclass_);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 2;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 2;
   if (this->_internal_has_parametervalues()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.parametervalues_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 4;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 4;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.transportationtype_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 5;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 5;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.producingfederate_);
   }
 
-  // .rti1516_202X.fedpro.ConveyedRegionSet optionalSentRegions = 6;
+  // .rti1516_2025.fedpro.ConveyedRegionSet optionalSentRegions = 6;
   if (this->_internal_has_optionalsentregions()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.optionalsentregions_);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 7;
+  // .rti1516_2025.fedpro.LogicalTime time = 7;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.time_);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
   if (this->_internal_has_optionalretraction()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.optionalretraction_);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
   if (this->_internal_sentordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_sentordertype());
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
   if (this->_internal_receivedordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_receivedordertype());
@@ -10085,7 +10085,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReceiveInteractionWithTime::Ge
 void ReceiveInteractionWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReceiveInteractionWithTime*>(&to_msg);
   auto& from = static_cast<const ReceiveInteractionWithTime&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReceiveInteractionWithTime)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -10094,31 +10094,31 @@ void ReceiveInteractionWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   if (from._internal_has_parametervalues()) {
-    _this->_internal_mutable_parametervalues()->::rti1516_202X::fedpro::ParameterHandleValueMap::MergeFrom(
+    _this->_internal_mutable_parametervalues()->::rti1516_2025::fedpro::ParameterHandleValueMap::MergeFrom(
         from._internal_parametervalues());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   if (from._internal_has_optionalsentregions()) {
-    _this->_internal_mutable_optionalsentregions()->::rti1516_202X::fedpro::ConveyedRegionSet::MergeFrom(
+    _this->_internal_mutable_optionalsentregions()->::rti1516_2025::fedpro::ConveyedRegionSet::MergeFrom(
         from._internal_optionalsentregions());
   }
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_internal_mutable_optionalretraction()->::rti1516_202X::fedpro::MessageRetractionHandle::MergeFrom(
+    _this->_internal_mutable_optionalretraction()->::rti1516_2025::fedpro::MessageRetractionHandle::MergeFrom(
         from._internal_optionalretraction());
   }
   if (from._internal_sentordertype() != 0) {
@@ -10131,7 +10131,7 @@ void ReceiveInteractionWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
 }
 
 void ReceiveInteractionWithTime::CopyFrom(const ReceiveInteractionWithTime& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReceiveInteractionWithTime)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReceiveInteractionWithTime)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -10168,30 +10168,30 @@ void ReceiveInteractionWithTime::InternalSwap(ReceiveInteractionWithTime* other)
 
 class ReceiveDirectedInteraction::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const ReceiveDirectedInteraction* msg);
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ReceiveDirectedInteraction* msg);
-  static const ::rti1516_202X::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveDirectedInteraction* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReceiveDirectedInteraction* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const ReceiveDirectedInteraction* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const ReceiveDirectedInteraction* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ReceiveDirectedInteraction* msg);
+  static const ::rti1516_2025::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveDirectedInteraction* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReceiveDirectedInteraction* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const ReceiveDirectedInteraction* msg);
 };
 
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 ReceiveDirectedInteraction::_Internal::interactionclass(const ReceiveDirectedInteraction* msg) {
   return *msg->_impl_.interactionclass_;
 }
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ReceiveDirectedInteraction::_Internal::objectinstance(const ReceiveDirectedInteraction* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::ParameterHandleValueMap&
+const ::rti1516_2025::fedpro::ParameterHandleValueMap&
 ReceiveDirectedInteraction::_Internal::parametervalues(const ReceiveDirectedInteraction* msg) {
   return *msg->_impl_.parametervalues_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReceiveDirectedInteraction::_Internal::transportationtype(const ReceiveDirectedInteraction* msg) {
   return *msg->_impl_.transportationtype_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 ReceiveDirectedInteraction::_Internal::producingfederate(const ReceiveDirectedInteraction* msg) {
   return *msg->_impl_.producingfederate_;
 }
@@ -10229,7 +10229,7 @@ ReceiveDirectedInteraction::ReceiveDirectedInteraction(::PROTOBUF_NAMESPACE_ID::
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReceiveDirectedInteraction)
 }
 ReceiveDirectedInteraction::ReceiveDirectedInteraction(const ReceiveDirectedInteraction& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -10253,21 +10253,21 @@ ReceiveDirectedInteraction::ReceiveDirectedInteraction(const ReceiveDirectedInte
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_parametervalues()) {
-    _this->_impl_.parametervalues_ = new ::rti1516_202X::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
+    _this->_impl_.parametervalues_ = new ::rti1516_2025::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReceiveDirectedInteraction)
 }
 
 inline void ReceiveDirectedInteraction::SharedCtor(
@@ -10290,7 +10290,7 @@ inline void ReceiveDirectedInteraction::SharedCtor(
 }
 
 ReceiveDirectedInteraction::~ReceiveDirectedInteraction() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReceiveDirectedInteraction)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -10313,7 +10313,7 @@ void ReceiveDirectedInteraction::SetCachedSize(int size) const {
 }
 
 void ReceiveDirectedInteraction::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReceiveDirectedInteraction)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10348,7 +10348,7 @@ const char* ReceiveDirectedInteraction::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -10356,7 +10356,7 @@ const char* ReceiveDirectedInteraction::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 2;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -10364,7 +10364,7 @@ const char* ReceiveDirectedInteraction::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 3;
+      // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_parametervalues(), ptr);
@@ -10381,7 +10381,7 @@ const char* ReceiveDirectedInteraction::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 5;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -10389,7 +10389,7 @@ const char* ReceiveDirectedInteraction::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 6;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -10422,25 +10422,25 @@ failure:
 
 uint8_t* ReceiveDirectedInteraction::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReceiveDirectedInteraction)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::interactionclass(this),
         _Internal::interactionclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 2;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 2;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 3;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 3;
   if (this->_internal_has_parametervalues()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::parametervalues(this),
@@ -10453,14 +10453,14 @@ uint8_t* ReceiveDirectedInteraction::_InternalSerialize(
         4, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 5;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 5;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::transportationtype(this),
         _Internal::transportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 6;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 6;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::producingfederate(this),
@@ -10471,12 +10471,12 @@ uint8_t* ReceiveDirectedInteraction::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReceiveDirectedInteraction)
   return target;
 }
 
 size_t ReceiveDirectedInteraction::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReceiveDirectedInteraction)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -10490,35 +10490,35 @@ size_t ReceiveDirectedInteraction::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.interactionclass_);
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 2;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 2;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 3;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 3;
   if (this->_internal_has_parametervalues()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.parametervalues_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 5;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 5;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.transportationtype_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 6;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 6;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -10538,7 +10538,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReceiveDirectedInteraction::Ge
 void ReceiveDirectedInteraction::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReceiveDirectedInteraction*>(&to_msg);
   auto& from = static_cast<const ReceiveDirectedInteraction&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReceiveDirectedInteraction)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -10547,30 +10547,30 @@ void ReceiveDirectedInteraction::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_parametervalues()) {
-    _this->_internal_mutable_parametervalues()->::rti1516_202X::fedpro::ParameterHandleValueMap::MergeFrom(
+    _this->_internal_mutable_parametervalues()->::rti1516_2025::fedpro::ParameterHandleValueMap::MergeFrom(
         from._internal_parametervalues());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReceiveDirectedInteraction::CopyFrom(const ReceiveDirectedInteraction& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReceiveDirectedInteraction)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReceiveDirectedInteraction)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -10607,40 +10607,40 @@ void ReceiveDirectedInteraction::InternalSwap(ReceiveDirectedInteraction* other)
 
 class ReceiveDirectedInteractionWithTime::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const ReceiveDirectedInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ReceiveDirectedInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveDirectedInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReceiveDirectedInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const ReceiveDirectedInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const ReceiveDirectedInteractionWithTime* msg);
-  static const ::rti1516_202X::fedpro::MessageRetractionHandle& optionalretraction(const ReceiveDirectedInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const ReceiveDirectedInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ReceiveDirectedInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::ParameterHandleValueMap& parametervalues(const ReceiveDirectedInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReceiveDirectedInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const ReceiveDirectedInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const ReceiveDirectedInteractionWithTime* msg);
+  static const ::rti1516_2025::fedpro::MessageRetractionHandle& optionalretraction(const ReceiveDirectedInteractionWithTime* msg);
 };
 
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 ReceiveDirectedInteractionWithTime::_Internal::interactionclass(const ReceiveDirectedInteractionWithTime* msg) {
   return *msg->_impl_.interactionclass_;
 }
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ReceiveDirectedInteractionWithTime::_Internal::objectinstance(const ReceiveDirectedInteractionWithTime* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::ParameterHandleValueMap&
+const ::rti1516_2025::fedpro::ParameterHandleValueMap&
 ReceiveDirectedInteractionWithTime::_Internal::parametervalues(const ReceiveDirectedInteractionWithTime* msg) {
   return *msg->_impl_.parametervalues_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReceiveDirectedInteractionWithTime::_Internal::transportationtype(const ReceiveDirectedInteractionWithTime* msg) {
   return *msg->_impl_.transportationtype_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 ReceiveDirectedInteractionWithTime::_Internal::producingfederate(const ReceiveDirectedInteractionWithTime* msg) {
   return *msg->_impl_.producingfederate_;
 }
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 ReceiveDirectedInteractionWithTime::_Internal::time(const ReceiveDirectedInteractionWithTime* msg) {
   return *msg->_impl_.time_;
 }
-const ::rti1516_202X::fedpro::MessageRetractionHandle&
+const ::rti1516_2025::fedpro::MessageRetractionHandle&
 ReceiveDirectedInteractionWithTime::_Internal::optionalretraction(const ReceiveDirectedInteractionWithTime* msg) {
   return *msg->_impl_.optionalretraction_;
 }
@@ -10690,7 +10690,7 @@ ReceiveDirectedInteractionWithTime::ReceiveDirectedInteractionWithTime(::PROTOBU
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
 }
 ReceiveDirectedInteractionWithTime::ReceiveDirectedInteractionWithTime(const ReceiveDirectedInteractionWithTime& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -10718,30 +10718,30 @@ ReceiveDirectedInteractionWithTime::ReceiveDirectedInteractionWithTime(const Rec
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_parametervalues()) {
-    _this->_impl_.parametervalues_ = new ::rti1516_202X::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
+    _this->_impl_.parametervalues_ = new ::rti1516_2025::fedpro::ParameterHandleValueMap(*from._impl_.parametervalues_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_impl_.optionalretraction_ = new ::rti1516_202X::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
+    _this->_impl_.optionalretraction_ = new ::rti1516_2025::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
   }
   ::memcpy(&_impl_.sentordertype_, &from._impl_.sentordertype_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.receivedordertype_) -
     reinterpret_cast<char*>(&_impl_.sentordertype_)) + sizeof(_impl_.receivedordertype_));
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
 }
 
 inline void ReceiveDirectedInteractionWithTime::SharedCtor(
@@ -10768,7 +10768,7 @@ inline void ReceiveDirectedInteractionWithTime::SharedCtor(
 }
 
 ReceiveDirectedInteractionWithTime::~ReceiveDirectedInteractionWithTime() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -10793,7 +10793,7 @@ void ReceiveDirectedInteractionWithTime::SetCachedSize(int size) const {
 }
 
 void ReceiveDirectedInteractionWithTime::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10839,7 +10839,7 @@ const char* ReceiveDirectedInteractionWithTime::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -10847,7 +10847,7 @@ const char* ReceiveDirectedInteractionWithTime::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 2;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -10855,7 +10855,7 @@ const char* ReceiveDirectedInteractionWithTime::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 3;
+      // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_parametervalues(), ptr);
@@ -10872,7 +10872,7 @@ const char* ReceiveDirectedInteractionWithTime::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 5;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -10880,7 +10880,7 @@ const char* ReceiveDirectedInteractionWithTime::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 6;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -10888,7 +10888,7 @@ const char* ReceiveDirectedInteractionWithTime::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.LogicalTime time = 7;
+      // .rti1516_2025.fedpro.LogicalTime time = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -10896,25 +10896,25 @@ const char* ReceiveDirectedInteractionWithTime::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+      // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_sentordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_sentordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+      // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_receivedordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_receivedordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+      // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalretraction(), ptr);
@@ -10947,25 +10947,25 @@ failure:
 
 uint8_t* ReceiveDirectedInteractionWithTime::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::interactionclass(this),
         _Internal::interactionclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 2;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 2;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 3;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 3;
   if (this->_internal_has_parametervalues()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::parametervalues(this),
@@ -10978,42 +10978,42 @@ uint8_t* ReceiveDirectedInteractionWithTime::_InternalSerialize(
         4, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 5;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 5;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::transportationtype(this),
         _Internal::transportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 6;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 6;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::producingfederate(this),
         _Internal::producingfederate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 7;
+  // .rti1516_2025.fedpro.LogicalTime time = 7;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(7, _Internal::time(this),
         _Internal::time(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
   if (this->_internal_sentordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       8, this->_internal_sentordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
   if (this->_internal_receivedordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       9, this->_internal_receivedordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
   if (this->_internal_has_optionalretraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(10, _Internal::optionalretraction(this),
@@ -11024,12 +11024,12 @@ uint8_t* ReceiveDirectedInteractionWithTime::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
   return target;
 }
 
 size_t ReceiveDirectedInteractionWithTime::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -11043,62 +11043,62 @@ size_t ReceiveDirectedInteractionWithTime::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.interactionclass_);
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 2;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 2;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.ParameterHandleValueMap parameterValues = 3;
+  // .rti1516_2025.fedpro.ParameterHandleValueMap parameterValues = 3;
   if (this->_internal_has_parametervalues()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.parametervalues_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 5;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 5;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.transportationtype_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 6;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 6;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.producingfederate_);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 7;
+  // .rti1516_2025.fedpro.LogicalTime time = 7;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.time_);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 10;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 10;
   if (this->_internal_has_optionalretraction()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.optionalretraction_);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 8;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 8;
   if (this->_internal_sentordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_sentordertype());
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 9;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 9;
   if (this->_internal_receivedordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_receivedordertype());
@@ -11117,7 +11117,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReceiveDirectedInteractionWith
 void ReceiveDirectedInteractionWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReceiveDirectedInteractionWithTime*>(&to_msg);
   auto& from = static_cast<const ReceiveDirectedInteractionWithTime&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -11126,31 +11126,31 @@ void ReceiveDirectedInteractionWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_parametervalues()) {
-    _this->_internal_mutable_parametervalues()->::rti1516_202X::fedpro::ParameterHandleValueMap::MergeFrom(
+    _this->_internal_mutable_parametervalues()->::rti1516_2025::fedpro::ParameterHandleValueMap::MergeFrom(
         from._internal_parametervalues());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_internal_mutable_optionalretraction()->::rti1516_202X::fedpro::MessageRetractionHandle::MergeFrom(
+    _this->_internal_mutable_optionalretraction()->::rti1516_2025::fedpro::MessageRetractionHandle::MergeFrom(
         from._internal_optionalretraction());
   }
   if (from._internal_sentordertype() != 0) {
@@ -11163,7 +11163,7 @@ void ReceiveDirectedInteractionWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
 }
 
 void ReceiveDirectedInteractionWithTime::CopyFrom(const ReceiveDirectedInteractionWithTime& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -11200,15 +11200,15 @@ void ReceiveDirectedInteractionWithTime::InternalSwap(ReceiveDirectedInteraction
 
 class RemoveObjectInstance::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const RemoveObjectInstance* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const RemoveObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const RemoveObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const RemoveObjectInstance* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 RemoveObjectInstance::_Internal::objectinstance(const RemoveObjectInstance* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 RemoveObjectInstance::_Internal::producingfederate(const RemoveObjectInstance* msg) {
   return *msg->_impl_.producingfederate_;
 }
@@ -11228,7 +11228,7 @@ RemoveObjectInstance::RemoveObjectInstance(::PROTOBUF_NAMESPACE_ID::Arena* arena
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RemoveObjectInstance)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RemoveObjectInstance)
 }
 RemoveObjectInstance::RemoveObjectInstance(const RemoveObjectInstance& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -11249,12 +11249,12 @@ RemoveObjectInstance::RemoveObjectInstance(const RemoveObjectInstance& from)
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RemoveObjectInstance)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RemoveObjectInstance)
 }
 
 inline void RemoveObjectInstance::SharedCtor(
@@ -11274,7 +11274,7 @@ inline void RemoveObjectInstance::SharedCtor(
 }
 
 RemoveObjectInstance::~RemoveObjectInstance() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RemoveObjectInstance)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RemoveObjectInstance)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -11294,7 +11294,7 @@ void RemoveObjectInstance::SetCachedSize(int size) const {
 }
 
 void RemoveObjectInstance::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RemoveObjectInstance)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RemoveObjectInstance)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -11317,7 +11317,7 @@ const char* RemoveObjectInstance::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -11334,7 +11334,7 @@ const char* RemoveObjectInstance::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 3;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -11367,11 +11367,11 @@ failure:
 
 uint8_t* RemoveObjectInstance::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RemoveObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RemoveObjectInstance)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
@@ -11384,7 +11384,7 @@ uint8_t* RemoveObjectInstance::_InternalSerialize(
         2, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 3;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 3;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::producingfederate(this),
@@ -11395,12 +11395,12 @@ uint8_t* RemoveObjectInstance::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RemoveObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RemoveObjectInstance)
   return target;
 }
 
 size_t RemoveObjectInstance::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RemoveObjectInstance)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RemoveObjectInstance)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -11414,14 +11414,14 @@ size_t RemoveObjectInstance::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 3;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 3;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -11441,7 +11441,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoveObjectInstance::GetClass
 void RemoveObjectInstance::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RemoveObjectInstance*>(&to_msg);
   auto& from = static_cast<const RemoveObjectInstance&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RemoveObjectInstance)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RemoveObjectInstance)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -11450,18 +11450,18 @@ void RemoveObjectInstance::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RemoveObjectInstance::CopyFrom(const RemoveObjectInstance& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RemoveObjectInstance)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RemoveObjectInstance)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -11498,25 +11498,25 @@ void RemoveObjectInstance::InternalSwap(RemoveObjectInstance* other) {
 
 class RemoveObjectInstanceWithTime::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const RemoveObjectInstanceWithTime* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& producingfederate(const RemoveObjectInstanceWithTime* msg);
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const RemoveObjectInstanceWithTime* msg);
-  static const ::rti1516_202X::fedpro::MessageRetractionHandle& optionalretraction(const RemoveObjectInstanceWithTime* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const RemoveObjectInstanceWithTime* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& producingfederate(const RemoveObjectInstanceWithTime* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const RemoveObjectInstanceWithTime* msg);
+  static const ::rti1516_2025::fedpro::MessageRetractionHandle& optionalretraction(const RemoveObjectInstanceWithTime* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 RemoveObjectInstanceWithTime::_Internal::objectinstance(const RemoveObjectInstanceWithTime* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 RemoveObjectInstanceWithTime::_Internal::producingfederate(const RemoveObjectInstanceWithTime* msg) {
   return *msg->_impl_.producingfederate_;
 }
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 RemoveObjectInstanceWithTime::_Internal::time(const RemoveObjectInstanceWithTime* msg) {
   return *msg->_impl_.time_;
 }
-const ::rti1516_202X::fedpro::MessageRetractionHandle&
+const ::rti1516_2025::fedpro::MessageRetractionHandle&
 RemoveObjectInstanceWithTime::_Internal::optionalretraction(const RemoveObjectInstanceWithTime* msg) {
   return *msg->_impl_.optionalretraction_;
 }
@@ -11548,7 +11548,7 @@ RemoveObjectInstanceWithTime::RemoveObjectInstanceWithTime(::PROTOBUF_NAMESPACE_
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
 }
 RemoveObjectInstanceWithTime::RemoveObjectInstanceWithTime(const RemoveObjectInstanceWithTime& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -11573,21 +11573,21 @@ RemoveObjectInstanceWithTime::RemoveObjectInstanceWithTime(const RemoveObjectIns
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_producingfederate()) {
-    _this->_impl_.producingfederate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.producingfederate_);
+    _this->_impl_.producingfederate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.producingfederate_);
   }
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_impl_.optionalretraction_ = new ::rti1516_202X::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
+    _this->_impl_.optionalretraction_ = new ::rti1516_2025::fedpro::MessageRetractionHandle(*from._impl_.optionalretraction_);
   }
   ::memcpy(&_impl_.sentordertype_, &from._impl_.sentordertype_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.receivedordertype_) -
     reinterpret_cast<char*>(&_impl_.sentordertype_)) + sizeof(_impl_.receivedordertype_));
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
 }
 
 inline void RemoveObjectInstanceWithTime::SharedCtor(
@@ -11611,7 +11611,7 @@ inline void RemoveObjectInstanceWithTime::SharedCtor(
 }
 
 RemoveObjectInstanceWithTime::~RemoveObjectInstanceWithTime() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -11633,7 +11633,7 @@ void RemoveObjectInstanceWithTime::SetCachedSize(int size) const {
 }
 
 void RemoveObjectInstanceWithTime::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -11667,7 +11667,7 @@ const char* RemoveObjectInstanceWithTime::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -11684,7 +11684,7 @@ const char* RemoveObjectInstanceWithTime::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle producingFederate = 3;
+      // .rti1516_2025.fedpro.FederateHandle producingFederate = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_producingfederate(), ptr);
@@ -11692,7 +11692,7 @@ const char* RemoveObjectInstanceWithTime::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.LogicalTime time = 4;
+      // .rti1516_2025.fedpro.LogicalTime time = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -11700,25 +11700,25 @@ const char* RemoveObjectInstanceWithTime::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType sentOrderType = 5;
+      // .rti1516_2025.fedpro.OrderType sentOrderType = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_sentordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_sentordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.OrderType receivedOrderType = 6;
+      // .rti1516_2025.fedpro.OrderType receivedOrderType = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_receivedordertype(static_cast<::rti1516_202X::fedpro::OrderType>(val));
+          _internal_set_receivedordertype(static_cast<::rti1516_2025::fedpro::OrderType>(val));
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 7;
+      // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_optionalretraction(), ptr);
@@ -11751,11 +11751,11 @@ failure:
 
 uint8_t* RemoveObjectInstanceWithTime::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
@@ -11768,35 +11768,35 @@ uint8_t* RemoveObjectInstanceWithTime::_InternalSerialize(
         2, this->_internal_usersuppliedtag(), target);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 3;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 3;
   if (this->_internal_has_producingfederate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::producingfederate(this),
         _Internal::producingfederate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 4;
+  // .rti1516_2025.fedpro.LogicalTime time = 4;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::time(this),
         _Internal::time(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 5;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 5;
   if (this->_internal_sentordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       5, this->_internal_sentordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 6;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 6;
   if (this->_internal_receivedordertype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
       6, this->_internal_receivedordertype(), target);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 7;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 7;
   if (this->_internal_has_optionalretraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(7, _Internal::optionalretraction(this),
@@ -11807,12 +11807,12 @@ uint8_t* RemoveObjectInstanceWithTime::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
   return target;
 }
 
 size_t RemoveObjectInstanceWithTime::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -11826,41 +11826,41 @@ size_t RemoveObjectInstanceWithTime::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle producingFederate = 3;
+  // .rti1516_2025.fedpro.FederateHandle producingFederate = 3;
   if (this->_internal_has_producingfederate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.producingfederate_);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime time = 4;
+  // .rti1516_2025.fedpro.LogicalTime time = 4;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.time_);
   }
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle optionalRetraction = 7;
+  // .rti1516_2025.fedpro.MessageRetractionHandle optionalRetraction = 7;
   if (this->_internal_has_optionalretraction()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.optionalretraction_);
   }
 
-  // .rti1516_202X.fedpro.OrderType sentOrderType = 5;
+  // .rti1516_2025.fedpro.OrderType sentOrderType = 5;
   if (this->_internal_sentordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_sentordertype());
   }
 
-  // .rti1516_202X.fedpro.OrderType receivedOrderType = 6;
+  // .rti1516_2025.fedpro.OrderType receivedOrderType = 6;
   if (this->_internal_receivedordertype() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_receivedordertype());
@@ -11879,7 +11879,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoveObjectInstanceWithTime::
 void RemoveObjectInstanceWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RemoveObjectInstanceWithTime*>(&to_msg);
   auto& from = static_cast<const RemoveObjectInstanceWithTime&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -11888,19 +11888,19 @@ void RemoveObjectInstanceWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_producingfederate()) {
-    _this->_internal_mutable_producingfederate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_producingfederate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_producingfederate());
   }
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   if (from._internal_has_optionalretraction()) {
-    _this->_internal_mutable_optionalretraction()->::rti1516_202X::fedpro::MessageRetractionHandle::MergeFrom(
+    _this->_internal_mutable_optionalretraction()->::rti1516_2025::fedpro::MessageRetractionHandle::MergeFrom(
         from._internal_optionalretraction());
   }
   if (from._internal_sentordertype() != 0) {
@@ -11913,7 +11913,7 @@ void RemoveObjectInstanceWithTime::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
 }
 
 void RemoveObjectInstanceWithTime::CopyFrom(const RemoveObjectInstanceWithTime& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RemoveObjectInstanceWithTime)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RemoveObjectInstanceWithTime)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -11950,15 +11950,15 @@ void RemoveObjectInstanceWithTime::InternalSwap(RemoveObjectInstanceWithTime* ot
 
 class AttributesInScope::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const AttributesInScope* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const AttributesInScope* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const AttributesInScope* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const AttributesInScope* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 AttributesInScope::_Internal::objectinstance(const AttributesInScope* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 AttributesInScope::_Internal::attributes(const AttributesInScope* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -11978,7 +11978,7 @@ AttributesInScope::AttributesInScope(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.AttributesInScope)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.AttributesInScope)
 }
 AttributesInScope::AttributesInScope(const AttributesInScope& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -11990,12 +11990,12 @@ AttributesInScope::AttributesInScope(const AttributesInScope& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.AttributesInScope)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.AttributesInScope)
 }
 
 inline void AttributesInScope::SharedCtor(
@@ -12010,7 +12010,7 @@ inline void AttributesInScope::SharedCtor(
 }
 
 AttributesInScope::~AttributesInScope() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.AttributesInScope)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.AttributesInScope)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -12029,7 +12029,7 @@ void AttributesInScope::SetCachedSize(int size) const {
 }
 
 void AttributesInScope::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.AttributesInScope)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.AttributesInScope)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12051,7 +12051,7 @@ const char* AttributesInScope::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -12059,7 +12059,7 @@ const char* AttributesInScope::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -12092,18 +12092,18 @@ failure:
 
 uint8_t* AttributesInScope::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.AttributesInScope)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.AttributesInScope)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -12114,26 +12114,26 @@ uint8_t* AttributesInScope::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.AttributesInScope)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.AttributesInScope)
   return target;
 }
 
 size_t AttributesInScope::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.AttributesInScope)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.AttributesInScope)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -12153,24 +12153,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AttributesInScope::GetClassDat
 void AttributesInScope::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AttributesInScope*>(&to_msg);
   auto& from = static_cast<const AttributesInScope&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.AttributesInScope)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.AttributesInScope)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AttributesInScope::CopyFrom(const AttributesInScope& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.AttributesInScope)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.AttributesInScope)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -12201,15 +12201,15 @@ void AttributesInScope::InternalSwap(AttributesInScope* other) {
 
 class AttributesOutOfScope::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const AttributesOutOfScope* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const AttributesOutOfScope* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const AttributesOutOfScope* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const AttributesOutOfScope* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 AttributesOutOfScope::_Internal::objectinstance(const AttributesOutOfScope* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 AttributesOutOfScope::_Internal::attributes(const AttributesOutOfScope* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -12229,7 +12229,7 @@ AttributesOutOfScope::AttributesOutOfScope(::PROTOBUF_NAMESPACE_ID::Arena* arena
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.AttributesOutOfScope)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.AttributesOutOfScope)
 }
 AttributesOutOfScope::AttributesOutOfScope(const AttributesOutOfScope& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -12241,12 +12241,12 @@ AttributesOutOfScope::AttributesOutOfScope(const AttributesOutOfScope& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.AttributesOutOfScope)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.AttributesOutOfScope)
 }
 
 inline void AttributesOutOfScope::SharedCtor(
@@ -12261,7 +12261,7 @@ inline void AttributesOutOfScope::SharedCtor(
 }
 
 AttributesOutOfScope::~AttributesOutOfScope() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.AttributesOutOfScope)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.AttributesOutOfScope)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -12280,7 +12280,7 @@ void AttributesOutOfScope::SetCachedSize(int size) const {
 }
 
 void AttributesOutOfScope::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.AttributesOutOfScope)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.AttributesOutOfScope)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12302,7 +12302,7 @@ const char* AttributesOutOfScope::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -12310,7 +12310,7 @@ const char* AttributesOutOfScope::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -12343,18 +12343,18 @@ failure:
 
 uint8_t* AttributesOutOfScope::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.AttributesOutOfScope)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.AttributesOutOfScope)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -12365,26 +12365,26 @@ uint8_t* AttributesOutOfScope::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.AttributesOutOfScope)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.AttributesOutOfScope)
   return target;
 }
 
 size_t AttributesOutOfScope::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.AttributesOutOfScope)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.AttributesOutOfScope)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -12404,24 +12404,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AttributesOutOfScope::GetClass
 void AttributesOutOfScope::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AttributesOutOfScope*>(&to_msg);
   auto& from = static_cast<const AttributesOutOfScope&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.AttributesOutOfScope)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.AttributesOutOfScope)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AttributesOutOfScope::CopyFrom(const AttributesOutOfScope& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.AttributesOutOfScope)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.AttributesOutOfScope)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -12452,15 +12452,15 @@ void AttributesOutOfScope::InternalSwap(AttributesOutOfScope* other) {
 
 class ProvideAttributeValueUpdate::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ProvideAttributeValueUpdate* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const ProvideAttributeValueUpdate* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ProvideAttributeValueUpdate* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const ProvideAttributeValueUpdate* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ProvideAttributeValueUpdate::_Internal::objectinstance(const ProvideAttributeValueUpdate* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 ProvideAttributeValueUpdate::_Internal::attributes(const ProvideAttributeValueUpdate* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -12480,7 +12480,7 @@ ProvideAttributeValueUpdate::ProvideAttributeValueUpdate(::PROTOBUF_NAMESPACE_ID
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
 }
 ProvideAttributeValueUpdate::ProvideAttributeValueUpdate(const ProvideAttributeValueUpdate& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -12501,12 +12501,12 @@ ProvideAttributeValueUpdate::ProvideAttributeValueUpdate(const ProvideAttributeV
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
 }
 
 inline void ProvideAttributeValueUpdate::SharedCtor(
@@ -12526,7 +12526,7 @@ inline void ProvideAttributeValueUpdate::SharedCtor(
 }
 
 ProvideAttributeValueUpdate::~ProvideAttributeValueUpdate() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -12546,7 +12546,7 @@ void ProvideAttributeValueUpdate::SetCachedSize(int size) const {
 }
 
 void ProvideAttributeValueUpdate::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12569,7 +12569,7 @@ const char* ProvideAttributeValueUpdate::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -12577,7 +12577,7 @@ const char* ProvideAttributeValueUpdate::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -12619,18 +12619,18 @@ failure:
 
 uint8_t* ProvideAttributeValueUpdate::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -12647,12 +12647,12 @@ uint8_t* ProvideAttributeValueUpdate::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
   return target;
 }
 
 size_t ProvideAttributeValueUpdate::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -12666,14 +12666,14 @@ size_t ProvideAttributeValueUpdate::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -12693,7 +12693,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ProvideAttributeValueUpdate::G
 void ProvideAttributeValueUpdate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ProvideAttributeValueUpdate*>(&to_msg);
   auto& from = static_cast<const ProvideAttributeValueUpdate&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -12702,18 +12702,18 @@ void ProvideAttributeValueUpdate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ProvideAttributeValueUpdate::CopyFrom(const ProvideAttributeValueUpdate& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ProvideAttributeValueUpdate)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ProvideAttributeValueUpdate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -12750,15 +12750,15 @@ void ProvideAttributeValueUpdate::InternalSwap(ProvideAttributeValueUpdate* othe
 
 class TurnUpdatesOnForObjectInstance::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const TurnUpdatesOnForObjectInstance* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const TurnUpdatesOnForObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const TurnUpdatesOnForObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const TurnUpdatesOnForObjectInstance* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 TurnUpdatesOnForObjectInstance::_Internal::objectinstance(const TurnUpdatesOnForObjectInstance* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 TurnUpdatesOnForObjectInstance::_Internal::attributes(const TurnUpdatesOnForObjectInstance* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -12778,7 +12778,7 @@ TurnUpdatesOnForObjectInstance::TurnUpdatesOnForObjectInstance(::PROTOBUF_NAMESP
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
 }
 TurnUpdatesOnForObjectInstance::TurnUpdatesOnForObjectInstance(const TurnUpdatesOnForObjectInstance& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -12790,12 +12790,12 @@ TurnUpdatesOnForObjectInstance::TurnUpdatesOnForObjectInstance(const TurnUpdates
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
 }
 
 inline void TurnUpdatesOnForObjectInstance::SharedCtor(
@@ -12810,7 +12810,7 @@ inline void TurnUpdatesOnForObjectInstance::SharedCtor(
 }
 
 TurnUpdatesOnForObjectInstance::~TurnUpdatesOnForObjectInstance() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -12829,7 +12829,7 @@ void TurnUpdatesOnForObjectInstance::SetCachedSize(int size) const {
 }
 
 void TurnUpdatesOnForObjectInstance::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -12851,7 +12851,7 @@ const char* TurnUpdatesOnForObjectInstance::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -12859,7 +12859,7 @@ const char* TurnUpdatesOnForObjectInstance::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -12892,18 +12892,18 @@ failure:
 
 uint8_t* TurnUpdatesOnForObjectInstance::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -12914,26 +12914,26 @@ uint8_t* TurnUpdatesOnForObjectInstance::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
   return target;
 }
 
 size_t TurnUpdatesOnForObjectInstance::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -12953,24 +12953,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TurnUpdatesOnForObjectInstance
 void TurnUpdatesOnForObjectInstance::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TurnUpdatesOnForObjectInstance*>(&to_msg);
   auto& from = static_cast<const TurnUpdatesOnForObjectInstance&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TurnUpdatesOnForObjectInstance::CopyFrom(const TurnUpdatesOnForObjectInstance& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -13001,15 +13001,15 @@ void TurnUpdatesOnForObjectInstance::InternalSwap(TurnUpdatesOnForObjectInstance
 
 class TurnUpdatesOnForObjectInstanceWithRate::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const TurnUpdatesOnForObjectInstanceWithRate* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const TurnUpdatesOnForObjectInstanceWithRate* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const TurnUpdatesOnForObjectInstanceWithRate* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const TurnUpdatesOnForObjectInstanceWithRate* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 TurnUpdatesOnForObjectInstanceWithRate::_Internal::objectinstance(const TurnUpdatesOnForObjectInstanceWithRate* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 TurnUpdatesOnForObjectInstanceWithRate::_Internal::attributes(const TurnUpdatesOnForObjectInstanceWithRate* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -13029,7 +13029,7 @@ TurnUpdatesOnForObjectInstanceWithRate::TurnUpdatesOnForObjectInstanceWithRate(:
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
 }
 TurnUpdatesOnForObjectInstanceWithRate::TurnUpdatesOnForObjectInstanceWithRate(const TurnUpdatesOnForObjectInstanceWithRate& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -13050,12 +13050,12 @@ TurnUpdatesOnForObjectInstanceWithRate::TurnUpdatesOnForObjectInstanceWithRate(c
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
 }
 
 inline void TurnUpdatesOnForObjectInstanceWithRate::SharedCtor(
@@ -13075,7 +13075,7 @@ inline void TurnUpdatesOnForObjectInstanceWithRate::SharedCtor(
 }
 
 TurnUpdatesOnForObjectInstanceWithRate::~TurnUpdatesOnForObjectInstanceWithRate() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -13095,7 +13095,7 @@ void TurnUpdatesOnForObjectInstanceWithRate::SetCachedSize(int size) const {
 }
 
 void TurnUpdatesOnForObjectInstanceWithRate::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -13118,7 +13118,7 @@ const char* TurnUpdatesOnForObjectInstanceWithRate::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -13126,7 +13126,7 @@ const char* TurnUpdatesOnForObjectInstanceWithRate::_InternalParse(const char* p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -13140,7 +13140,7 @@ const char* TurnUpdatesOnForObjectInstanceWithRate::_InternalParse(const char* p
           auto str = _internal_mutable_updateratedesignator();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate.updateRateDesignator"));
+          CHK_(::_pbi::VerifyUTF8(str, "rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate.updateRateDesignator"));
         } else
           goto handle_unusual;
         continue;
@@ -13169,18 +13169,18 @@ failure:
 
 uint8_t* TurnUpdatesOnForObjectInstanceWithRate::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -13192,7 +13192,7 @@ uint8_t* TurnUpdatesOnForObjectInstanceWithRate::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_updateratedesignator().data(), static_cast<int>(this->_internal_updateratedesignator().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate.updateRateDesignator");
+      "rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate.updateRateDesignator");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_updateratedesignator(), target);
   }
@@ -13201,12 +13201,12 @@ uint8_t* TurnUpdatesOnForObjectInstanceWithRate::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
   return target;
 }
 
 size_t TurnUpdatesOnForObjectInstanceWithRate::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -13220,14 +13220,14 @@ size_t TurnUpdatesOnForObjectInstanceWithRate::ByteSizeLong() const {
         this->_internal_updateratedesignator());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -13247,7 +13247,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TurnUpdatesOnForObjectInstance
 void TurnUpdatesOnForObjectInstanceWithRate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TurnUpdatesOnForObjectInstanceWithRate*>(&to_msg);
   auto& from = static_cast<const TurnUpdatesOnForObjectInstanceWithRate&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -13256,18 +13256,18 @@ void TurnUpdatesOnForObjectInstanceWithRate::MergeImpl(::PROTOBUF_NAMESPACE_ID::
     _this->_internal_set_updateratedesignator(from._internal_updateratedesignator());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TurnUpdatesOnForObjectInstanceWithRate::CopyFrom(const TurnUpdatesOnForObjectInstanceWithRate& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -13304,15 +13304,15 @@ void TurnUpdatesOnForObjectInstanceWithRate::InternalSwap(TurnUpdatesOnForObject
 
 class TurnUpdatesOffForObjectInstance::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const TurnUpdatesOffForObjectInstance* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const TurnUpdatesOffForObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const TurnUpdatesOffForObjectInstance* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const TurnUpdatesOffForObjectInstance* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 TurnUpdatesOffForObjectInstance::_Internal::objectinstance(const TurnUpdatesOffForObjectInstance* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 TurnUpdatesOffForObjectInstance::_Internal::attributes(const TurnUpdatesOffForObjectInstance* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -13332,7 +13332,7 @@ TurnUpdatesOffForObjectInstance::TurnUpdatesOffForObjectInstance(::PROTOBUF_NAME
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
 }
 TurnUpdatesOffForObjectInstance::TurnUpdatesOffForObjectInstance(const TurnUpdatesOffForObjectInstance& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -13344,12 +13344,12 @@ TurnUpdatesOffForObjectInstance::TurnUpdatesOffForObjectInstance(const TurnUpdat
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
 }
 
 inline void TurnUpdatesOffForObjectInstance::SharedCtor(
@@ -13364,7 +13364,7 @@ inline void TurnUpdatesOffForObjectInstance::SharedCtor(
 }
 
 TurnUpdatesOffForObjectInstance::~TurnUpdatesOffForObjectInstance() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -13383,7 +13383,7 @@ void TurnUpdatesOffForObjectInstance::SetCachedSize(int size) const {
 }
 
 void TurnUpdatesOffForObjectInstance::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -13405,7 +13405,7 @@ const char* TurnUpdatesOffForObjectInstance::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -13413,7 +13413,7 @@ const char* TurnUpdatesOffForObjectInstance::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -13446,18 +13446,18 @@ failure:
 
 uint8_t* TurnUpdatesOffForObjectInstance::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -13468,26 +13468,26 @@ uint8_t* TurnUpdatesOffForObjectInstance::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
   return target;
 }
 
 size_t TurnUpdatesOffForObjectInstance::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -13507,24 +13507,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TurnUpdatesOffForObjectInstanc
 void TurnUpdatesOffForObjectInstance::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TurnUpdatesOffForObjectInstance*>(&to_msg);
   auto& from = static_cast<const TurnUpdatesOffForObjectInstance&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TurnUpdatesOffForObjectInstance::CopyFrom(const TurnUpdatesOffForObjectInstance& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -13555,20 +13555,20 @@ void TurnUpdatesOffForObjectInstance::InternalSwap(TurnUpdatesOffForObjectInstan
 
 class ConfirmAttributeTransportationTypeChange::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ConfirmAttributeTransportationTypeChange* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const ConfirmAttributeTransportationTypeChange* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ConfirmAttributeTransportationTypeChange* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ConfirmAttributeTransportationTypeChange* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const ConfirmAttributeTransportationTypeChange* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ConfirmAttributeTransportationTypeChange* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ConfirmAttributeTransportationTypeChange::_Internal::objectinstance(const ConfirmAttributeTransportationTypeChange* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 ConfirmAttributeTransportationTypeChange::_Internal::attributes(const ConfirmAttributeTransportationTypeChange* msg) {
   return *msg->_impl_.attributes_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ConfirmAttributeTransportationTypeChange::_Internal::transportationtype(const ConfirmAttributeTransportationTypeChange* msg) {
   return *msg->_impl_.transportationtype_;
 }
@@ -13594,7 +13594,7 @@ ConfirmAttributeTransportationTypeChange::ConfirmAttributeTransportationTypeChan
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
 }
 ConfirmAttributeTransportationTypeChange::ConfirmAttributeTransportationTypeChange(const ConfirmAttributeTransportationTypeChange& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -13607,15 +13607,15 @@ ConfirmAttributeTransportationTypeChange::ConfirmAttributeTransportationTypeChan
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
 }
 
 inline void ConfirmAttributeTransportationTypeChange::SharedCtor(
@@ -13631,7 +13631,7 @@ inline void ConfirmAttributeTransportationTypeChange::SharedCtor(
 }
 
 ConfirmAttributeTransportationTypeChange::~ConfirmAttributeTransportationTypeChange() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -13651,7 +13651,7 @@ void ConfirmAttributeTransportationTypeChange::SetCachedSize(int size) const {
 }
 
 void ConfirmAttributeTransportationTypeChange::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -13677,7 +13677,7 @@ const char* ConfirmAttributeTransportationTypeChange::_InternalParse(const char*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -13685,7 +13685,7 @@ const char* ConfirmAttributeTransportationTypeChange::_InternalParse(const char*
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -13693,7 +13693,7 @@ const char* ConfirmAttributeTransportationTypeChange::_InternalParse(const char*
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -13726,25 +13726,25 @@ failure:
 
 uint8_t* ConfirmAttributeTransportationTypeChange::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
         _Internal::attributes(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::transportationtype(this),
@@ -13755,33 +13755,33 @@ uint8_t* ConfirmAttributeTransportationTypeChange::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
   return target;
 }
 
 size_t ConfirmAttributeTransportationTypeChange::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.attributes_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -13801,28 +13801,28 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConfirmAttributeTransportation
 void ConfirmAttributeTransportationTypeChange::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ConfirmAttributeTransportationTypeChange*>(&to_msg);
   auto& from = static_cast<const ConfirmAttributeTransportationTypeChange&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ConfirmAttributeTransportationTypeChange::CopyFrom(const ConfirmAttributeTransportationTypeChange& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -13853,20 +13853,20 @@ void ConfirmAttributeTransportationTypeChange::InternalSwap(ConfirmAttributeTran
 
 class ReportAttributeTransportationType::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ReportAttributeTransportationType* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandle& attribute(const ReportAttributeTransportationType* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReportAttributeTransportationType* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ReportAttributeTransportationType* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandle& attribute(const ReportAttributeTransportationType* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReportAttributeTransportationType* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ReportAttributeTransportationType::_Internal::objectinstance(const ReportAttributeTransportationType* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandle&
+const ::rti1516_2025::fedpro::AttributeHandle&
 ReportAttributeTransportationType::_Internal::attribute(const ReportAttributeTransportationType* msg) {
   return *msg->_impl_.attribute_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReportAttributeTransportationType::_Internal::transportationtype(const ReportAttributeTransportationType* msg) {
   return *msg->_impl_.transportationtype_;
 }
@@ -13892,7 +13892,7 @@ ReportAttributeTransportationType::ReportAttributeTransportationType(::PROTOBUF_
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReportAttributeTransportationType)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReportAttributeTransportationType)
 }
 ReportAttributeTransportationType::ReportAttributeTransportationType(const ReportAttributeTransportationType& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -13905,15 +13905,15 @@ ReportAttributeTransportationType::ReportAttributeTransportationType(const Repor
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attribute()) {
-    _this->_impl_.attribute_ = new ::rti1516_202X::fedpro::AttributeHandle(*from._impl_.attribute_);
+    _this->_impl_.attribute_ = new ::rti1516_2025::fedpro::AttributeHandle(*from._impl_.attribute_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReportAttributeTransportationType)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReportAttributeTransportationType)
 }
 
 inline void ReportAttributeTransportationType::SharedCtor(
@@ -13929,7 +13929,7 @@ inline void ReportAttributeTransportationType::SharedCtor(
 }
 
 ReportAttributeTransportationType::~ReportAttributeTransportationType() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReportAttributeTransportationType)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReportAttributeTransportationType)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -13949,7 +13949,7 @@ void ReportAttributeTransportationType::SetCachedSize(int size) const {
 }
 
 void ReportAttributeTransportationType::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReportAttributeTransportationType)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReportAttributeTransportationType)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -13975,7 +13975,7 @@ const char* ReportAttributeTransportationType::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -13983,7 +13983,7 @@ const char* ReportAttributeTransportationType::_InternalParse(const char* ptr, :
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandle attribute = 2;
+      // .rti1516_2025.fedpro.AttributeHandle attribute = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attribute(), ptr);
@@ -13991,7 +13991,7 @@ const char* ReportAttributeTransportationType::_InternalParse(const char* ptr, :
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -14024,25 +14024,25 @@ failure:
 
 uint8_t* ReportAttributeTransportationType::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReportAttributeTransportationType)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReportAttributeTransportationType)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandle attribute = 2;
+  // .rti1516_2025.fedpro.AttributeHandle attribute = 2;
   if (this->_internal_has_attribute()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attribute(this),
         _Internal::attribute(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::transportationtype(this),
@@ -14053,33 +14053,33 @@ uint8_t* ReportAttributeTransportationType::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReportAttributeTransportationType)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReportAttributeTransportationType)
   return target;
 }
 
 size_t ReportAttributeTransportationType::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReportAttributeTransportationType)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReportAttributeTransportationType)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandle attribute = 2;
+  // .rti1516_2025.fedpro.AttributeHandle attribute = 2;
   if (this->_internal_has_attribute()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.attribute_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -14099,28 +14099,28 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReportAttributeTransportationT
 void ReportAttributeTransportationType::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReportAttributeTransportationType*>(&to_msg);
   auto& from = static_cast<const ReportAttributeTransportationType&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReportAttributeTransportationType)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReportAttributeTransportationType)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attribute()) {
-    _this->_internal_mutable_attribute()->::rti1516_202X::fedpro::AttributeHandle::MergeFrom(
+    _this->_internal_mutable_attribute()->::rti1516_2025::fedpro::AttributeHandle::MergeFrom(
         from._internal_attribute());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReportAttributeTransportationType::CopyFrom(const ReportAttributeTransportationType& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReportAttributeTransportationType)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReportAttributeTransportationType)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -14151,15 +14151,15 @@ void ReportAttributeTransportationType::InternalSwap(ReportAttributeTransportati
 
 class ConfirmInteractionTransportationTypeChange::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const ConfirmInteractionTransportationTypeChange* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ConfirmInteractionTransportationTypeChange* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const ConfirmInteractionTransportationTypeChange* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ConfirmInteractionTransportationTypeChange* msg);
 };
 
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 ConfirmInteractionTransportationTypeChange::_Internal::interactionclass(const ConfirmInteractionTransportationTypeChange* msg) {
   return *msg->_impl_.interactionclass_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ConfirmInteractionTransportationTypeChange::_Internal::transportationtype(const ConfirmInteractionTransportationTypeChange* msg) {
   return *msg->_impl_.transportationtype_;
 }
@@ -14179,7 +14179,7 @@ ConfirmInteractionTransportationTypeChange::ConfirmInteractionTransportationType
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
 }
 ConfirmInteractionTransportationTypeChange::ConfirmInteractionTransportationTypeChange(const ConfirmInteractionTransportationTypeChange& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -14191,12 +14191,12 @@ ConfirmInteractionTransportationTypeChange::ConfirmInteractionTransportationType
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
 }
 
 inline void ConfirmInteractionTransportationTypeChange::SharedCtor(
@@ -14211,7 +14211,7 @@ inline void ConfirmInteractionTransportationTypeChange::SharedCtor(
 }
 
 ConfirmInteractionTransportationTypeChange::~ConfirmInteractionTransportationTypeChange() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -14230,7 +14230,7 @@ void ConfirmInteractionTransportationTypeChange::SetCachedSize(int size) const {
 }
 
 void ConfirmInteractionTransportationTypeChange::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -14252,7 +14252,7 @@ const char* ConfirmInteractionTransportationTypeChange::_InternalParse(const cha
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -14260,7 +14260,7 @@ const char* ConfirmInteractionTransportationTypeChange::_InternalParse(const cha
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 2;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -14293,18 +14293,18 @@ failure:
 
 uint8_t* ConfirmInteractionTransportationTypeChange::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::interactionclass(this),
         _Internal::interactionclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 2;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 2;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::transportationtype(this),
@@ -14315,26 +14315,26 @@ uint8_t* ConfirmInteractionTransportationTypeChange::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
   return target;
 }
 
 size_t ConfirmInteractionTransportationTypeChange::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 1;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 1;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.interactionclass_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 2;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 2;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -14354,24 +14354,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConfirmInteractionTransportati
 void ConfirmInteractionTransportationTypeChange::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ConfirmInteractionTransportationTypeChange*>(&to_msg);
   auto& from = static_cast<const ConfirmInteractionTransportationTypeChange&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ConfirmInteractionTransportationTypeChange::CopyFrom(const ConfirmInteractionTransportationTypeChange& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -14402,20 +14402,20 @@ void ConfirmInteractionTransportationTypeChange::InternalSwap(ConfirmInteraction
 
 class ReportInteractionTransportationType::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::FederateHandle& federate(const ReportInteractionTransportationType* msg);
-  static const ::rti1516_202X::fedpro::InteractionClassHandle& interactionclass(const ReportInteractionTransportationType* msg);
-  static const ::rti1516_202X::fedpro::TransportationTypeHandle& transportationtype(const ReportInteractionTransportationType* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& federate(const ReportInteractionTransportationType* msg);
+  static const ::rti1516_2025::fedpro::InteractionClassHandle& interactionclass(const ReportInteractionTransportationType* msg);
+  static const ::rti1516_2025::fedpro::TransportationTypeHandle& transportationtype(const ReportInteractionTransportationType* msg);
 };
 
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 ReportInteractionTransportationType::_Internal::federate(const ReportInteractionTransportationType* msg) {
   return *msg->_impl_.federate_;
 }
-const ::rti1516_202X::fedpro::InteractionClassHandle&
+const ::rti1516_2025::fedpro::InteractionClassHandle&
 ReportInteractionTransportationType::_Internal::interactionclass(const ReportInteractionTransportationType* msg) {
   return *msg->_impl_.interactionclass_;
 }
-const ::rti1516_202X::fedpro::TransportationTypeHandle&
+const ::rti1516_2025::fedpro::TransportationTypeHandle&
 ReportInteractionTransportationType::_Internal::transportationtype(const ReportInteractionTransportationType* msg) {
   return *msg->_impl_.transportationtype_;
 }
@@ -14441,7 +14441,7 @@ ReportInteractionTransportationType::ReportInteractionTransportationType(::PROTO
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ReportInteractionTransportationType)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ReportInteractionTransportationType)
 }
 ReportInteractionTransportationType::ReportInteractionTransportationType(const ReportInteractionTransportationType& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -14454,15 +14454,15 @@ ReportInteractionTransportationType::ReportInteractionTransportationType(const R
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_federate()) {
-    _this->_impl_.federate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.federate_);
+    _this->_impl_.federate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.federate_);
   }
   if (from._internal_has_interactionclass()) {
-    _this->_impl_.interactionclass_ = new ::rti1516_202X::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
+    _this->_impl_.interactionclass_ = new ::rti1516_2025::fedpro::InteractionClassHandle(*from._impl_.interactionclass_);
   }
   if (from._internal_has_transportationtype()) {
-    _this->_impl_.transportationtype_ = new ::rti1516_202X::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
+    _this->_impl_.transportationtype_ = new ::rti1516_2025::fedpro::TransportationTypeHandle(*from._impl_.transportationtype_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ReportInteractionTransportationType)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ReportInteractionTransportationType)
 }
 
 inline void ReportInteractionTransportationType::SharedCtor(
@@ -14478,7 +14478,7 @@ inline void ReportInteractionTransportationType::SharedCtor(
 }
 
 ReportInteractionTransportationType::~ReportInteractionTransportationType() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ReportInteractionTransportationType)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ReportInteractionTransportationType)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -14498,7 +14498,7 @@ void ReportInteractionTransportationType::SetCachedSize(int size) const {
 }
 
 void ReportInteractionTransportationType::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ReportInteractionTransportationType)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ReportInteractionTransportationType)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -14524,7 +14524,7 @@ const char* ReportInteractionTransportationType::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.FederateHandle federate = 1;
+      // .rti1516_2025.fedpro.FederateHandle federate = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_federate(), ptr);
@@ -14532,7 +14532,7 @@ const char* ReportInteractionTransportationType::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 2;
+      // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_interactionclass(), ptr);
@@ -14540,7 +14540,7 @@ const char* ReportInteractionTransportationType::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+      // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_transportationtype(), ptr);
@@ -14573,25 +14573,25 @@ failure:
 
 uint8_t* ReportInteractionTransportationType::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ReportInteractionTransportationType)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ReportInteractionTransportationType)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederateHandle federate = 1;
+  // .rti1516_2025.fedpro.FederateHandle federate = 1;
   if (this->_internal_has_federate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::federate(this),
         _Internal::federate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 2;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 2;
   if (this->_internal_has_interactionclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::interactionclass(this),
         _Internal::interactionclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
   if (this->_internal_has_transportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::transportationtype(this),
@@ -14602,33 +14602,33 @@ uint8_t* ReportInteractionTransportationType::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ReportInteractionTransportationType)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ReportInteractionTransportationType)
   return target;
 }
 
 size_t ReportInteractionTransportationType::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ReportInteractionTransportationType)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ReportInteractionTransportationType)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.FederateHandle federate = 1;
+  // .rti1516_2025.fedpro.FederateHandle federate = 1;
   if (this->_internal_has_federate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.federate_);
   }
 
-  // .rti1516_202X.fedpro.InteractionClassHandle interactionClass = 2;
+  // .rti1516_2025.fedpro.InteractionClassHandle interactionClass = 2;
   if (this->_internal_has_interactionclass()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.interactionclass_);
   }
 
-  // .rti1516_202X.fedpro.TransportationTypeHandle transportationType = 3;
+  // .rti1516_2025.fedpro.TransportationTypeHandle transportationType = 3;
   if (this->_internal_has_transportationtype()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -14648,28 +14648,28 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReportInteractionTransportatio
 void ReportInteractionTransportationType::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ReportInteractionTransportationType*>(&to_msg);
   auto& from = static_cast<const ReportInteractionTransportationType&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ReportInteractionTransportationType)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ReportInteractionTransportationType)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_federate()) {
-    _this->_internal_mutable_federate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_federate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_federate());
   }
   if (from._internal_has_interactionclass()) {
-    _this->_internal_mutable_interactionclass()->::rti1516_202X::fedpro::InteractionClassHandle::MergeFrom(
+    _this->_internal_mutable_interactionclass()->::rti1516_2025::fedpro::InteractionClassHandle::MergeFrom(
         from._internal_interactionclass());
   }
   if (from._internal_has_transportationtype()) {
-    _this->_internal_mutable_transportationtype()->::rti1516_202X::fedpro::TransportationTypeHandle::MergeFrom(
+    _this->_internal_mutable_transportationtype()->::rti1516_2025::fedpro::TransportationTypeHandle::MergeFrom(
         from._internal_transportationtype());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReportInteractionTransportationType::CopyFrom(const ReportInteractionTransportationType& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ReportInteractionTransportationType)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ReportInteractionTransportationType)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -14700,15 +14700,15 @@ void ReportInteractionTransportationType::InternalSwap(ReportInteractionTranspor
 
 class RequestAttributeOwnershipAssumption::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const RequestAttributeOwnershipAssumption* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& offeredattributes(const RequestAttributeOwnershipAssumption* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const RequestAttributeOwnershipAssumption* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& offeredattributes(const RequestAttributeOwnershipAssumption* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 RequestAttributeOwnershipAssumption::_Internal::objectinstance(const RequestAttributeOwnershipAssumption* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 RequestAttributeOwnershipAssumption::_Internal::offeredattributes(const RequestAttributeOwnershipAssumption* msg) {
   return *msg->_impl_.offeredattributes_;
 }
@@ -14728,7 +14728,7 @@ RequestAttributeOwnershipAssumption::RequestAttributeOwnershipAssumption(::PROTO
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
 }
 RequestAttributeOwnershipAssumption::RequestAttributeOwnershipAssumption(const RequestAttributeOwnershipAssumption& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -14749,12 +14749,12 @@ RequestAttributeOwnershipAssumption::RequestAttributeOwnershipAssumption(const R
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_offeredattributes()) {
-    _this->_impl_.offeredattributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.offeredattributes_);
+    _this->_impl_.offeredattributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.offeredattributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
 }
 
 inline void RequestAttributeOwnershipAssumption::SharedCtor(
@@ -14774,7 +14774,7 @@ inline void RequestAttributeOwnershipAssumption::SharedCtor(
 }
 
 RequestAttributeOwnershipAssumption::~RequestAttributeOwnershipAssumption() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -14794,7 +14794,7 @@ void RequestAttributeOwnershipAssumption::SetCachedSize(int size) const {
 }
 
 void RequestAttributeOwnershipAssumption::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -14817,7 +14817,7 @@ const char* RequestAttributeOwnershipAssumption::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -14825,7 +14825,7 @@ const char* RequestAttributeOwnershipAssumption::_InternalParse(const char* ptr,
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet offeredAttributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet offeredAttributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_offeredattributes(), ptr);
@@ -14867,18 +14867,18 @@ failure:
 
 uint8_t* RequestAttributeOwnershipAssumption::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet offeredAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet offeredAttributes = 2;
   if (this->_internal_has_offeredattributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::offeredattributes(this),
@@ -14895,12 +14895,12 @@ uint8_t* RequestAttributeOwnershipAssumption::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
   return target;
 }
 
 size_t RequestAttributeOwnershipAssumption::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -14914,14 +14914,14 @@ size_t RequestAttributeOwnershipAssumption::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet offeredAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet offeredAttributes = 2;
   if (this->_internal_has_offeredattributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -14941,7 +14941,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestAttributeOwnershipAssum
 void RequestAttributeOwnershipAssumption::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RequestAttributeOwnershipAssumption*>(&to_msg);
   auto& from = static_cast<const RequestAttributeOwnershipAssumption&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -14950,18 +14950,18 @@ void RequestAttributeOwnershipAssumption::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mes
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_offeredattributes()) {
-    _this->_internal_mutable_offeredattributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_offeredattributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_offeredattributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RequestAttributeOwnershipAssumption::CopyFrom(const RequestAttributeOwnershipAssumption& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RequestAttributeOwnershipAssumption)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RequestAttributeOwnershipAssumption)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -14998,15 +14998,15 @@ void RequestAttributeOwnershipAssumption::InternalSwap(RequestAttributeOwnership
 
 class RequestDivestitureConfirmation::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const RequestDivestitureConfirmation* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& releasedattributes(const RequestDivestitureConfirmation* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const RequestDivestitureConfirmation* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& releasedattributes(const RequestDivestitureConfirmation* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 RequestDivestitureConfirmation::_Internal::objectinstance(const RequestDivestitureConfirmation* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 RequestDivestitureConfirmation::_Internal::releasedattributes(const RequestDivestitureConfirmation* msg) {
   return *msg->_impl_.releasedattributes_;
 }
@@ -15026,7 +15026,7 @@ RequestDivestitureConfirmation::RequestDivestitureConfirmation(::PROTOBUF_NAMESP
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RequestDivestitureConfirmation)
 }
 RequestDivestitureConfirmation::RequestDivestitureConfirmation(const RequestDivestitureConfirmation& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -15047,12 +15047,12 @@ RequestDivestitureConfirmation::RequestDivestitureConfirmation(const RequestDive
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_releasedattributes()) {
-    _this->_impl_.releasedattributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.releasedattributes_);
+    _this->_impl_.releasedattributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.releasedattributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RequestDivestitureConfirmation)
 }
 
 inline void RequestDivestitureConfirmation::SharedCtor(
@@ -15072,7 +15072,7 @@ inline void RequestDivestitureConfirmation::SharedCtor(
 }
 
 RequestDivestitureConfirmation::~RequestDivestitureConfirmation() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RequestDivestitureConfirmation)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -15092,7 +15092,7 @@ void RequestDivestitureConfirmation::SetCachedSize(int size) const {
 }
 
 void RequestDivestitureConfirmation::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RequestDivestitureConfirmation)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -15115,7 +15115,7 @@ const char* RequestDivestitureConfirmation::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -15123,7 +15123,7 @@ const char* RequestDivestitureConfirmation::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet releasedAttributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet releasedAttributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_releasedattributes(), ptr);
@@ -15165,18 +15165,18 @@ failure:
 
 uint8_t* RequestDivestitureConfirmation::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RequestDivestitureConfirmation)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet releasedAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet releasedAttributes = 2;
   if (this->_internal_has_releasedattributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::releasedattributes(this),
@@ -15193,12 +15193,12 @@ uint8_t* RequestDivestitureConfirmation::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RequestDivestitureConfirmation)
   return target;
 }
 
 size_t RequestDivestitureConfirmation::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RequestDivestitureConfirmation)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -15212,14 +15212,14 @@ size_t RequestDivestitureConfirmation::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet releasedAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet releasedAttributes = 2;
   if (this->_internal_has_releasedattributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -15239,7 +15239,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestDivestitureConfirmation
 void RequestDivestitureConfirmation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RequestDivestitureConfirmation*>(&to_msg);
   auto& from = static_cast<const RequestDivestitureConfirmation&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RequestDivestitureConfirmation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -15248,18 +15248,18 @@ void RequestDivestitureConfirmation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_releasedattributes()) {
-    _this->_internal_mutable_releasedattributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_releasedattributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_releasedattributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RequestDivestitureConfirmation::CopyFrom(const RequestDivestitureConfirmation& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RequestDivestitureConfirmation)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RequestDivestitureConfirmation)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -15296,15 +15296,15 @@ void RequestDivestitureConfirmation::InternalSwap(RequestDivestitureConfirmation
 
 class AttributeOwnershipAcquisitionNotification::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const AttributeOwnershipAcquisitionNotification* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& securedattributes(const AttributeOwnershipAcquisitionNotification* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const AttributeOwnershipAcquisitionNotification* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& securedattributes(const AttributeOwnershipAcquisitionNotification* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 AttributeOwnershipAcquisitionNotification::_Internal::objectinstance(const AttributeOwnershipAcquisitionNotification* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 AttributeOwnershipAcquisitionNotification::_Internal::securedattributes(const AttributeOwnershipAcquisitionNotification* msg) {
   return *msg->_impl_.securedattributes_;
 }
@@ -15324,7 +15324,7 @@ AttributeOwnershipAcquisitionNotification::AttributeOwnershipAcquisitionNotifica
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
 }
 AttributeOwnershipAcquisitionNotification::AttributeOwnershipAcquisitionNotification(const AttributeOwnershipAcquisitionNotification& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -15345,12 +15345,12 @@ AttributeOwnershipAcquisitionNotification::AttributeOwnershipAcquisitionNotifica
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_securedattributes()) {
-    _this->_impl_.securedattributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.securedattributes_);
+    _this->_impl_.securedattributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.securedattributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
 }
 
 inline void AttributeOwnershipAcquisitionNotification::SharedCtor(
@@ -15370,7 +15370,7 @@ inline void AttributeOwnershipAcquisitionNotification::SharedCtor(
 }
 
 AttributeOwnershipAcquisitionNotification::~AttributeOwnershipAcquisitionNotification() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -15390,7 +15390,7 @@ void AttributeOwnershipAcquisitionNotification::SetCachedSize(int size) const {
 }
 
 void AttributeOwnershipAcquisitionNotification::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -15413,7 +15413,7 @@ const char* AttributeOwnershipAcquisitionNotification::_InternalParse(const char
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -15421,7 +15421,7 @@ const char* AttributeOwnershipAcquisitionNotification::_InternalParse(const char
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet securedAttributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet securedAttributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_securedattributes(), ptr);
@@ -15463,18 +15463,18 @@ failure:
 
 uint8_t* AttributeOwnershipAcquisitionNotification::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet securedAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet securedAttributes = 2;
   if (this->_internal_has_securedattributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::securedattributes(this),
@@ -15491,12 +15491,12 @@ uint8_t* AttributeOwnershipAcquisitionNotification::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
   return target;
 }
 
 size_t AttributeOwnershipAcquisitionNotification::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -15510,14 +15510,14 @@ size_t AttributeOwnershipAcquisitionNotification::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet securedAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet securedAttributes = 2;
   if (this->_internal_has_securedattributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -15537,7 +15537,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AttributeOwnershipAcquisitionN
 void AttributeOwnershipAcquisitionNotification::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AttributeOwnershipAcquisitionNotification*>(&to_msg);
   auto& from = static_cast<const AttributeOwnershipAcquisitionNotification&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -15546,18 +15546,18 @@ void AttributeOwnershipAcquisitionNotification::MergeImpl(::PROTOBUF_NAMESPACE_I
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_securedattributes()) {
-    _this->_internal_mutable_securedattributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_securedattributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_securedattributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AttributeOwnershipAcquisitionNotification::CopyFrom(const AttributeOwnershipAcquisitionNotification& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -15594,15 +15594,15 @@ void AttributeOwnershipAcquisitionNotification::InternalSwap(AttributeOwnershipA
 
 class AttributeOwnershipUnavailable::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const AttributeOwnershipUnavailable* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const AttributeOwnershipUnavailable* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const AttributeOwnershipUnavailable* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const AttributeOwnershipUnavailable* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 AttributeOwnershipUnavailable::_Internal::objectinstance(const AttributeOwnershipUnavailable* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 AttributeOwnershipUnavailable::_Internal::attributes(const AttributeOwnershipUnavailable* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -15622,7 +15622,7 @@ AttributeOwnershipUnavailable::AttributeOwnershipUnavailable(::PROTOBUF_NAMESPAC
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
 }
 AttributeOwnershipUnavailable::AttributeOwnershipUnavailable(const AttributeOwnershipUnavailable& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -15643,12 +15643,12 @@ AttributeOwnershipUnavailable::AttributeOwnershipUnavailable(const AttributeOwne
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
 }
 
 inline void AttributeOwnershipUnavailable::SharedCtor(
@@ -15668,7 +15668,7 @@ inline void AttributeOwnershipUnavailable::SharedCtor(
 }
 
 AttributeOwnershipUnavailable::~AttributeOwnershipUnavailable() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -15688,7 +15688,7 @@ void AttributeOwnershipUnavailable::SetCachedSize(int size) const {
 }
 
 void AttributeOwnershipUnavailable::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -15711,7 +15711,7 @@ const char* AttributeOwnershipUnavailable::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -15719,7 +15719,7 @@ const char* AttributeOwnershipUnavailable::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -15761,18 +15761,18 @@ failure:
 
 uint8_t* AttributeOwnershipUnavailable::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -15789,12 +15789,12 @@ uint8_t* AttributeOwnershipUnavailable::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
   return target;
 }
 
 size_t AttributeOwnershipUnavailable::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -15808,14 +15808,14 @@ size_t AttributeOwnershipUnavailable::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -15835,7 +15835,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AttributeOwnershipUnavailable:
 void AttributeOwnershipUnavailable::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AttributeOwnershipUnavailable*>(&to_msg);
   auto& from = static_cast<const AttributeOwnershipUnavailable&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -15844,18 +15844,18 @@ void AttributeOwnershipUnavailable::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AttributeOwnershipUnavailable::CopyFrom(const AttributeOwnershipUnavailable& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.AttributeOwnershipUnavailable)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.AttributeOwnershipUnavailable)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -15892,15 +15892,15 @@ void AttributeOwnershipUnavailable::InternalSwap(AttributeOwnershipUnavailable* 
 
 class RequestAttributeOwnershipRelease::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const RequestAttributeOwnershipRelease* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& candidateattributes(const RequestAttributeOwnershipRelease* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const RequestAttributeOwnershipRelease* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& candidateattributes(const RequestAttributeOwnershipRelease* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 RequestAttributeOwnershipRelease::_Internal::objectinstance(const RequestAttributeOwnershipRelease* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 RequestAttributeOwnershipRelease::_Internal::candidateattributes(const RequestAttributeOwnershipRelease* msg) {
   return *msg->_impl_.candidateattributes_;
 }
@@ -15920,7 +15920,7 @@ RequestAttributeOwnershipRelease::RequestAttributeOwnershipRelease(::PROTOBUF_NA
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
 }
 RequestAttributeOwnershipRelease::RequestAttributeOwnershipRelease(const RequestAttributeOwnershipRelease& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -15941,12 +15941,12 @@ RequestAttributeOwnershipRelease::RequestAttributeOwnershipRelease(const Request
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_candidateattributes()) {
-    _this->_impl_.candidateattributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.candidateattributes_);
+    _this->_impl_.candidateattributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.candidateattributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
 }
 
 inline void RequestAttributeOwnershipRelease::SharedCtor(
@@ -15966,7 +15966,7 @@ inline void RequestAttributeOwnershipRelease::SharedCtor(
 }
 
 RequestAttributeOwnershipRelease::~RequestAttributeOwnershipRelease() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -15986,7 +15986,7 @@ void RequestAttributeOwnershipRelease::SetCachedSize(int size) const {
 }
 
 void RequestAttributeOwnershipRelease::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -16009,7 +16009,7 @@ const char* RequestAttributeOwnershipRelease::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -16017,7 +16017,7 @@ const char* RequestAttributeOwnershipRelease::_InternalParse(const char* ptr, ::
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet candidateAttributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet candidateAttributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_candidateattributes(), ptr);
@@ -16059,18 +16059,18 @@ failure:
 
 uint8_t* RequestAttributeOwnershipRelease::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet candidateAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet candidateAttributes = 2;
   if (this->_internal_has_candidateattributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::candidateattributes(this),
@@ -16087,12 +16087,12 @@ uint8_t* RequestAttributeOwnershipRelease::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
   return target;
 }
 
 size_t RequestAttributeOwnershipRelease::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -16106,14 +16106,14 @@ size_t RequestAttributeOwnershipRelease::ByteSizeLong() const {
         this->_internal_usersuppliedtag());
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet candidateAttributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet candidateAttributes = 2;
   if (this->_internal_has_candidateattributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -16133,7 +16133,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestAttributeOwnershipRelea
 void RequestAttributeOwnershipRelease::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RequestAttributeOwnershipRelease*>(&to_msg);
   auto& from = static_cast<const RequestAttributeOwnershipRelease&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -16142,18 +16142,18 @@ void RequestAttributeOwnershipRelease::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
     _this->_internal_set_usersuppliedtag(from._internal_usersuppliedtag());
   }
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_candidateattributes()) {
-    _this->_internal_mutable_candidateattributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_candidateattributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_candidateattributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RequestAttributeOwnershipRelease::CopyFrom(const RequestAttributeOwnershipRelease& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RequestAttributeOwnershipRelease)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RequestAttributeOwnershipRelease)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -16190,15 +16190,15 @@ void RequestAttributeOwnershipRelease::InternalSwap(RequestAttributeOwnershipRel
 
 class ConfirmAttributeOwnershipAcquisitionCancellation::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const ConfirmAttributeOwnershipAcquisitionCancellation* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const ConfirmAttributeOwnershipAcquisitionCancellation* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const ConfirmAttributeOwnershipAcquisitionCancellation* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const ConfirmAttributeOwnershipAcquisitionCancellation* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 ConfirmAttributeOwnershipAcquisitionCancellation::_Internal::objectinstance(const ConfirmAttributeOwnershipAcquisitionCancellation* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 ConfirmAttributeOwnershipAcquisitionCancellation::_Internal::attributes(const ConfirmAttributeOwnershipAcquisitionCancellation* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -16218,7 +16218,7 @@ ConfirmAttributeOwnershipAcquisitionCancellation::ConfirmAttributeOwnershipAcqui
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
 }
 ConfirmAttributeOwnershipAcquisitionCancellation::ConfirmAttributeOwnershipAcquisitionCancellation(const ConfirmAttributeOwnershipAcquisitionCancellation& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -16230,12 +16230,12 @@ ConfirmAttributeOwnershipAcquisitionCancellation::ConfirmAttributeOwnershipAcqui
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
 }
 
 inline void ConfirmAttributeOwnershipAcquisitionCancellation::SharedCtor(
@@ -16250,7 +16250,7 @@ inline void ConfirmAttributeOwnershipAcquisitionCancellation::SharedCtor(
 }
 
 ConfirmAttributeOwnershipAcquisitionCancellation::~ConfirmAttributeOwnershipAcquisitionCancellation() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -16269,7 +16269,7 @@ void ConfirmAttributeOwnershipAcquisitionCancellation::SetCachedSize(int size) c
 }
 
 void ConfirmAttributeOwnershipAcquisitionCancellation::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -16291,7 +16291,7 @@ const char* ConfirmAttributeOwnershipAcquisitionCancellation::_InternalParse(con
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -16299,7 +16299,7 @@ const char* ConfirmAttributeOwnershipAcquisitionCancellation::_InternalParse(con
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -16332,18 +16332,18 @@ failure:
 
 uint8_t* ConfirmAttributeOwnershipAcquisitionCancellation::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -16354,26 +16354,26 @@ uint8_t* ConfirmAttributeOwnershipAcquisitionCancellation::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
   return target;
 }
 
 size_t ConfirmAttributeOwnershipAcquisitionCancellation::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -16393,24 +16393,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConfirmAttributeOwnershipAcqui
 void ConfirmAttributeOwnershipAcquisitionCancellation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<ConfirmAttributeOwnershipAcquisitionCancellation*>(&to_msg);
   auto& from = static_cast<const ConfirmAttributeOwnershipAcquisitionCancellation&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ConfirmAttributeOwnershipAcquisitionCancellation::CopyFrom(const ConfirmAttributeOwnershipAcquisitionCancellation& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -16441,20 +16441,20 @@ void ConfirmAttributeOwnershipAcquisitionCancellation::InternalSwap(ConfirmAttri
 
 class InformAttributeOwnership::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const InformAttributeOwnership* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const InformAttributeOwnership* msg);
-  static const ::rti1516_202X::fedpro::FederateHandle& federate(const InformAttributeOwnership* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const InformAttributeOwnership* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const InformAttributeOwnership* msg);
+  static const ::rti1516_2025::fedpro::FederateHandle& federate(const InformAttributeOwnership* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 InformAttributeOwnership::_Internal::objectinstance(const InformAttributeOwnership* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 InformAttributeOwnership::_Internal::attributes(const InformAttributeOwnership* msg) {
   return *msg->_impl_.attributes_;
 }
-const ::rti1516_202X::fedpro::FederateHandle&
+const ::rti1516_2025::fedpro::FederateHandle&
 InformAttributeOwnership::_Internal::federate(const InformAttributeOwnership* msg) {
   return *msg->_impl_.federate_;
 }
@@ -16480,7 +16480,7 @@ InformAttributeOwnership::InformAttributeOwnership(::PROTOBUF_NAMESPACE_ID::Aren
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.InformAttributeOwnership)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.InformAttributeOwnership)
 }
 InformAttributeOwnership::InformAttributeOwnership(const InformAttributeOwnership& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -16493,15 +16493,15 @@ InformAttributeOwnership::InformAttributeOwnership(const InformAttributeOwnershi
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
   if (from._internal_has_federate()) {
-    _this->_impl_.federate_ = new ::rti1516_202X::fedpro::FederateHandle(*from._impl_.federate_);
+    _this->_impl_.federate_ = new ::rti1516_2025::fedpro::FederateHandle(*from._impl_.federate_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.InformAttributeOwnership)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.InformAttributeOwnership)
 }
 
 inline void InformAttributeOwnership::SharedCtor(
@@ -16517,7 +16517,7 @@ inline void InformAttributeOwnership::SharedCtor(
 }
 
 InformAttributeOwnership::~InformAttributeOwnership() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.InformAttributeOwnership)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.InformAttributeOwnership)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -16537,7 +16537,7 @@ void InformAttributeOwnership::SetCachedSize(int size) const {
 }
 
 void InformAttributeOwnership::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.InformAttributeOwnership)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.InformAttributeOwnership)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -16563,7 +16563,7 @@ const char* InformAttributeOwnership::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -16571,7 +16571,7 @@ const char* InformAttributeOwnership::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -16579,7 +16579,7 @@ const char* InformAttributeOwnership::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateHandle federate = 3;
+      // .rti1516_2025.fedpro.FederateHandle federate = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_federate(), ptr);
@@ -16612,25 +16612,25 @@ failure:
 
 uint8_t* InformAttributeOwnership::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.InformAttributeOwnership)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.InformAttributeOwnership)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
         _Internal::attributes(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle federate = 3;
+  // .rti1516_2025.fedpro.FederateHandle federate = 3;
   if (this->_internal_has_federate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::federate(this),
@@ -16641,33 +16641,33 @@ uint8_t* InformAttributeOwnership::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.InformAttributeOwnership)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.InformAttributeOwnership)
   return target;
 }
 
 size_t InformAttributeOwnership::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.InformAttributeOwnership)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.InformAttributeOwnership)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.attributes_);
   }
 
-  // .rti1516_202X.fedpro.FederateHandle federate = 3;
+  // .rti1516_2025.fedpro.FederateHandle federate = 3;
   if (this->_internal_has_federate()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -16687,28 +16687,28 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InformAttributeOwnership::GetC
 void InformAttributeOwnership::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<InformAttributeOwnership*>(&to_msg);
   auto& from = static_cast<const InformAttributeOwnership&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.InformAttributeOwnership)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.InformAttributeOwnership)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   if (from._internal_has_federate()) {
-    _this->_internal_mutable_federate()->::rti1516_202X::fedpro::FederateHandle::MergeFrom(
+    _this->_internal_mutable_federate()->::rti1516_2025::fedpro::FederateHandle::MergeFrom(
         from._internal_federate());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InformAttributeOwnership::CopyFrom(const InformAttributeOwnership& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.InformAttributeOwnership)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.InformAttributeOwnership)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -16739,15 +16739,15 @@ void InformAttributeOwnership::InternalSwap(InformAttributeOwnership* other) {
 
 class AttributeIsNotOwned::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const AttributeIsNotOwned* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const AttributeIsNotOwned* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const AttributeIsNotOwned* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const AttributeIsNotOwned* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 AttributeIsNotOwned::_Internal::objectinstance(const AttributeIsNotOwned* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 AttributeIsNotOwned::_Internal::attributes(const AttributeIsNotOwned* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -16767,7 +16767,7 @@ AttributeIsNotOwned::AttributeIsNotOwned(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.AttributeIsNotOwned)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.AttributeIsNotOwned)
 }
 AttributeIsNotOwned::AttributeIsNotOwned(const AttributeIsNotOwned& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -16779,12 +16779,12 @@ AttributeIsNotOwned::AttributeIsNotOwned(const AttributeIsNotOwned& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.AttributeIsNotOwned)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.AttributeIsNotOwned)
 }
 
 inline void AttributeIsNotOwned::SharedCtor(
@@ -16799,7 +16799,7 @@ inline void AttributeIsNotOwned::SharedCtor(
 }
 
 AttributeIsNotOwned::~AttributeIsNotOwned() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.AttributeIsNotOwned)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.AttributeIsNotOwned)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -16818,7 +16818,7 @@ void AttributeIsNotOwned::SetCachedSize(int size) const {
 }
 
 void AttributeIsNotOwned::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.AttributeIsNotOwned)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.AttributeIsNotOwned)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -16840,7 +16840,7 @@ const char* AttributeIsNotOwned::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -16848,7 +16848,7 @@ const char* AttributeIsNotOwned::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -16881,18 +16881,18 @@ failure:
 
 uint8_t* AttributeIsNotOwned::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.AttributeIsNotOwned)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.AttributeIsNotOwned)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -16903,26 +16903,26 @@ uint8_t* AttributeIsNotOwned::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.AttributeIsNotOwned)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.AttributeIsNotOwned)
   return target;
 }
 
 size_t AttributeIsNotOwned::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.AttributeIsNotOwned)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.AttributeIsNotOwned)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -16942,24 +16942,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AttributeIsNotOwned::GetClassD
 void AttributeIsNotOwned::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AttributeIsNotOwned*>(&to_msg);
   auto& from = static_cast<const AttributeIsNotOwned&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.AttributeIsNotOwned)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.AttributeIsNotOwned)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AttributeIsNotOwned::CopyFrom(const AttributeIsNotOwned& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.AttributeIsNotOwned)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.AttributeIsNotOwned)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -16990,15 +16990,15 @@ void AttributeIsNotOwned::InternalSwap(AttributeIsNotOwned* other) {
 
 class AttributeIsOwnedByRTI::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ObjectInstanceHandle& objectinstance(const AttributeIsOwnedByRTI* msg);
-  static const ::rti1516_202X::fedpro::AttributeHandleSet& attributes(const AttributeIsOwnedByRTI* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceHandle& objectinstance(const AttributeIsOwnedByRTI* msg);
+  static const ::rti1516_2025::fedpro::AttributeHandleSet& attributes(const AttributeIsOwnedByRTI* msg);
 };
 
-const ::rti1516_202X::fedpro::ObjectInstanceHandle&
+const ::rti1516_2025::fedpro::ObjectInstanceHandle&
 AttributeIsOwnedByRTI::_Internal::objectinstance(const AttributeIsOwnedByRTI* msg) {
   return *msg->_impl_.objectinstance_;
 }
-const ::rti1516_202X::fedpro::AttributeHandleSet&
+const ::rti1516_2025::fedpro::AttributeHandleSet&
 AttributeIsOwnedByRTI::_Internal::attributes(const AttributeIsOwnedByRTI* msg) {
   return *msg->_impl_.attributes_;
 }
@@ -17018,7 +17018,7 @@ AttributeIsOwnedByRTI::AttributeIsOwnedByRTI(::PROTOBUF_NAMESPACE_ID::Arena* are
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
 }
 AttributeIsOwnedByRTI::AttributeIsOwnedByRTI(const AttributeIsOwnedByRTI& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -17030,12 +17030,12 @@ AttributeIsOwnedByRTI::AttributeIsOwnedByRTI(const AttributeIsOwnedByRTI& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_objectinstance()) {
-    _this->_impl_.objectinstance_ = new ::rti1516_202X::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
+    _this->_impl_.objectinstance_ = new ::rti1516_2025::fedpro::ObjectInstanceHandle(*from._impl_.objectinstance_);
   }
   if (from._internal_has_attributes()) {
-    _this->_impl_.attributes_ = new ::rti1516_202X::fedpro::AttributeHandleSet(*from._impl_.attributes_);
+    _this->_impl_.attributes_ = new ::rti1516_2025::fedpro::AttributeHandleSet(*from._impl_.attributes_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
 }
 
 inline void AttributeIsOwnedByRTI::SharedCtor(
@@ -17050,7 +17050,7 @@ inline void AttributeIsOwnedByRTI::SharedCtor(
 }
 
 AttributeIsOwnedByRTI::~AttributeIsOwnedByRTI() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -17069,7 +17069,7 @@ void AttributeIsOwnedByRTI::SetCachedSize(int size) const {
 }
 
 void AttributeIsOwnedByRTI::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -17091,7 +17091,7 @@ const char* AttributeIsOwnedByRTI::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+      // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstance(), ptr);
@@ -17099,7 +17099,7 @@ const char* AttributeIsOwnedByRTI::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+      // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributes(), ptr);
@@ -17132,18 +17132,18 @@ failure:
 
 uint8_t* AttributeIsOwnedByRTI::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::objectinstance(this),
         _Internal::objectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::attributes(this),
@@ -17154,26 +17154,26 @@ uint8_t* AttributeIsOwnedByRTI::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
   return target;
 }
 
 size_t AttributeIsOwnedByRTI::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ObjectInstanceHandle objectInstance = 1;
+  // .rti1516_2025.fedpro.ObjectInstanceHandle objectInstance = 1;
   if (this->_internal_has_objectinstance()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.objectinstance_);
   }
 
-  // .rti1516_202X.fedpro.AttributeHandleSet attributes = 2;
+  // .rti1516_2025.fedpro.AttributeHandleSet attributes = 2;
   if (this->_internal_has_attributes()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -17193,24 +17193,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AttributeIsOwnedByRTI::GetClas
 void AttributeIsOwnedByRTI::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<AttributeIsOwnedByRTI*>(&to_msg);
   auto& from = static_cast<const AttributeIsOwnedByRTI&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_objectinstance()) {
-    _this->_internal_mutable_objectinstance()->::rti1516_202X::fedpro::ObjectInstanceHandle::MergeFrom(
+    _this->_internal_mutable_objectinstance()->::rti1516_2025::fedpro::ObjectInstanceHandle::MergeFrom(
         from._internal_objectinstance());
   }
   if (from._internal_has_attributes()) {
-    _this->_internal_mutable_attributes()->::rti1516_202X::fedpro::AttributeHandleSet::MergeFrom(
+    _this->_internal_mutable_attributes()->::rti1516_2025::fedpro::AttributeHandleSet::MergeFrom(
         from._internal_attributes());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AttributeIsOwnedByRTI::CopyFrom(const AttributeIsOwnedByRTI& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.AttributeIsOwnedByRTI)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.AttributeIsOwnedByRTI)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -17241,10 +17241,10 @@ void AttributeIsOwnedByRTI::InternalSwap(AttributeIsOwnedByRTI* other) {
 
 class TimeRegulationEnabled::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const TimeRegulationEnabled* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const TimeRegulationEnabled* msg);
 };
 
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 TimeRegulationEnabled::_Internal::time(const TimeRegulationEnabled* msg) {
   return *msg->_impl_.time_;
 }
@@ -17258,7 +17258,7 @@ TimeRegulationEnabled::TimeRegulationEnabled(::PROTOBUF_NAMESPACE_ID::Arena* are
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TimeRegulationEnabled)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TimeRegulationEnabled)
 }
 TimeRegulationEnabled::TimeRegulationEnabled(const TimeRegulationEnabled& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -17269,9 +17269,9 @@ TimeRegulationEnabled::TimeRegulationEnabled(const TimeRegulationEnabled& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TimeRegulationEnabled)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TimeRegulationEnabled)
 }
 
 inline void TimeRegulationEnabled::SharedCtor(
@@ -17285,7 +17285,7 @@ inline void TimeRegulationEnabled::SharedCtor(
 }
 
 TimeRegulationEnabled::~TimeRegulationEnabled() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TimeRegulationEnabled)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TimeRegulationEnabled)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -17303,7 +17303,7 @@ void TimeRegulationEnabled::SetCachedSize(int size) const {
 }
 
 void TimeRegulationEnabled::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TimeRegulationEnabled)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TimeRegulationEnabled)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -17321,7 +17321,7 @@ const char* TimeRegulationEnabled::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.LogicalTime time = 1;
+      // .rti1516_2025.fedpro.LogicalTime time = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -17354,11 +17354,11 @@ failure:
 
 uint8_t* TimeRegulationEnabled::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TimeRegulationEnabled)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TimeRegulationEnabled)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::time(this),
@@ -17369,19 +17369,19 @@ uint8_t* TimeRegulationEnabled::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TimeRegulationEnabled)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TimeRegulationEnabled)
   return target;
 }
 
 size_t TimeRegulationEnabled::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TimeRegulationEnabled)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TimeRegulationEnabled)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -17401,20 +17401,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TimeRegulationEnabled::GetClas
 void TimeRegulationEnabled::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TimeRegulationEnabled*>(&to_msg);
   auto& from = static_cast<const TimeRegulationEnabled&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TimeRegulationEnabled)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TimeRegulationEnabled)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TimeRegulationEnabled::CopyFrom(const TimeRegulationEnabled& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TimeRegulationEnabled)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TimeRegulationEnabled)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -17440,10 +17440,10 @@ void TimeRegulationEnabled::InternalSwap(TimeRegulationEnabled* other) {
 
 class TimeConstrainedEnabled::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const TimeConstrainedEnabled* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const TimeConstrainedEnabled* msg);
 };
 
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 TimeConstrainedEnabled::_Internal::time(const TimeConstrainedEnabled* msg) {
   return *msg->_impl_.time_;
 }
@@ -17457,7 +17457,7 @@ TimeConstrainedEnabled::TimeConstrainedEnabled(::PROTOBUF_NAMESPACE_ID::Arena* a
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TimeConstrainedEnabled)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TimeConstrainedEnabled)
 }
 TimeConstrainedEnabled::TimeConstrainedEnabled(const TimeConstrainedEnabled& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -17468,9 +17468,9 @@ TimeConstrainedEnabled::TimeConstrainedEnabled(const TimeConstrainedEnabled& fro
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TimeConstrainedEnabled)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TimeConstrainedEnabled)
 }
 
 inline void TimeConstrainedEnabled::SharedCtor(
@@ -17484,7 +17484,7 @@ inline void TimeConstrainedEnabled::SharedCtor(
 }
 
 TimeConstrainedEnabled::~TimeConstrainedEnabled() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TimeConstrainedEnabled)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TimeConstrainedEnabled)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -17502,7 +17502,7 @@ void TimeConstrainedEnabled::SetCachedSize(int size) const {
 }
 
 void TimeConstrainedEnabled::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TimeConstrainedEnabled)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TimeConstrainedEnabled)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -17520,7 +17520,7 @@ const char* TimeConstrainedEnabled::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.LogicalTime time = 1;
+      // .rti1516_2025.fedpro.LogicalTime time = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -17553,11 +17553,11 @@ failure:
 
 uint8_t* TimeConstrainedEnabled::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TimeConstrainedEnabled)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TimeConstrainedEnabled)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::time(this),
@@ -17568,19 +17568,19 @@ uint8_t* TimeConstrainedEnabled::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TimeConstrainedEnabled)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TimeConstrainedEnabled)
   return target;
 }
 
 size_t TimeConstrainedEnabled::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TimeConstrainedEnabled)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TimeConstrainedEnabled)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -17600,20 +17600,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TimeConstrainedEnabled::GetCla
 void TimeConstrainedEnabled::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TimeConstrainedEnabled*>(&to_msg);
   auto& from = static_cast<const TimeConstrainedEnabled&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TimeConstrainedEnabled)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TimeConstrainedEnabled)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TimeConstrainedEnabled::CopyFrom(const TimeConstrainedEnabled& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TimeConstrainedEnabled)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TimeConstrainedEnabled)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -17639,15 +17639,15 @@ void TimeConstrainedEnabled::InternalSwap(TimeConstrainedEnabled* other) {
 
 class FlushQueueGrant::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const FlushQueueGrant* msg);
-  static const ::rti1516_202X::fedpro::LogicalTime& optimistictime(const FlushQueueGrant* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const FlushQueueGrant* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& optimistictime(const FlushQueueGrant* msg);
 };
 
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 FlushQueueGrant::_Internal::time(const FlushQueueGrant* msg) {
   return *msg->_impl_.time_;
 }
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 FlushQueueGrant::_Internal::optimistictime(const FlushQueueGrant* msg) {
   return *msg->_impl_.optimistictime_;
 }
@@ -17667,7 +17667,7 @@ FlushQueueGrant::FlushQueueGrant(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.FlushQueueGrant)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.FlushQueueGrant)
 }
 FlushQueueGrant::FlushQueueGrant(const FlushQueueGrant& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -17679,12 +17679,12 @@ FlushQueueGrant::FlushQueueGrant(const FlushQueueGrant& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
   if (from._internal_has_optimistictime()) {
-    _this->_impl_.optimistictime_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.optimistictime_);
+    _this->_impl_.optimistictime_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.optimistictime_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.FlushQueueGrant)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.FlushQueueGrant)
 }
 
 inline void FlushQueueGrant::SharedCtor(
@@ -17699,7 +17699,7 @@ inline void FlushQueueGrant::SharedCtor(
 }
 
 FlushQueueGrant::~FlushQueueGrant() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.FlushQueueGrant)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.FlushQueueGrant)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -17718,7 +17718,7 @@ void FlushQueueGrant::SetCachedSize(int size) const {
 }
 
 void FlushQueueGrant::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.FlushQueueGrant)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.FlushQueueGrant)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -17740,7 +17740,7 @@ const char* FlushQueueGrant::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.LogicalTime time = 1;
+      // .rti1516_2025.fedpro.LogicalTime time = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -17748,7 +17748,7 @@ const char* FlushQueueGrant::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.LogicalTime optimisticTime = 2;
+      // .rti1516_2025.fedpro.LogicalTime optimisticTime = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_optimistictime(), ptr);
@@ -17781,18 +17781,18 @@ failure:
 
 uint8_t* FlushQueueGrant::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.FlushQueueGrant)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.FlushQueueGrant)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::time(this),
         _Internal::time(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime optimisticTime = 2;
+  // .rti1516_2025.fedpro.LogicalTime optimisticTime = 2;
   if (this->_internal_has_optimistictime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::optimistictime(this),
@@ -17803,26 +17803,26 @@ uint8_t* FlushQueueGrant::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.FlushQueueGrant)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.FlushQueueGrant)
   return target;
 }
 
 size_t FlushQueueGrant::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.FlushQueueGrant)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.FlushQueueGrant)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.time_);
   }
 
-  // .rti1516_202X.fedpro.LogicalTime optimisticTime = 2;
+  // .rti1516_2025.fedpro.LogicalTime optimisticTime = 2;
   if (this->_internal_has_optimistictime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -17842,24 +17842,24 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FlushQueueGrant::GetClassData(
 void FlushQueueGrant::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<FlushQueueGrant*>(&to_msg);
   auto& from = static_cast<const FlushQueueGrant&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.FlushQueueGrant)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.FlushQueueGrant)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   if (from._internal_has_optimistictime()) {
-    _this->_internal_mutable_optimistictime()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_optimistictime()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_optimistictime());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FlushQueueGrant::CopyFrom(const FlushQueueGrant& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.FlushQueueGrant)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.FlushQueueGrant)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -17890,10 +17890,10 @@ void FlushQueueGrant::InternalSwap(FlushQueueGrant* other) {
 
 class TimeAdvanceGrant::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::LogicalTime& time(const TimeAdvanceGrant* msg);
+  static const ::rti1516_2025::fedpro::LogicalTime& time(const TimeAdvanceGrant* msg);
 };
 
-const ::rti1516_202X::fedpro::LogicalTime&
+const ::rti1516_2025::fedpro::LogicalTime&
 TimeAdvanceGrant::_Internal::time(const TimeAdvanceGrant* msg) {
   return *msg->_impl_.time_;
 }
@@ -17907,7 +17907,7 @@ TimeAdvanceGrant::TimeAdvanceGrant(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.TimeAdvanceGrant)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.TimeAdvanceGrant)
 }
 TimeAdvanceGrant::TimeAdvanceGrant(const TimeAdvanceGrant& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -17918,9 +17918,9 @@ TimeAdvanceGrant::TimeAdvanceGrant(const TimeAdvanceGrant& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_time()) {
-    _this->_impl_.time_ = new ::rti1516_202X::fedpro::LogicalTime(*from._impl_.time_);
+    _this->_impl_.time_ = new ::rti1516_2025::fedpro::LogicalTime(*from._impl_.time_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.TimeAdvanceGrant)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.TimeAdvanceGrant)
 }
 
 inline void TimeAdvanceGrant::SharedCtor(
@@ -17934,7 +17934,7 @@ inline void TimeAdvanceGrant::SharedCtor(
 }
 
 TimeAdvanceGrant::~TimeAdvanceGrant() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.TimeAdvanceGrant)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.TimeAdvanceGrant)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -17952,7 +17952,7 @@ void TimeAdvanceGrant::SetCachedSize(int size) const {
 }
 
 void TimeAdvanceGrant::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.TimeAdvanceGrant)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.TimeAdvanceGrant)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -17970,7 +17970,7 @@ const char* TimeAdvanceGrant::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.LogicalTime time = 1;
+      // .rti1516_2025.fedpro.LogicalTime time = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_time(), ptr);
@@ -18003,11 +18003,11 @@ failure:
 
 uint8_t* TimeAdvanceGrant::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.TimeAdvanceGrant)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.TimeAdvanceGrant)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::time(this),
@@ -18018,19 +18018,19 @@ uint8_t* TimeAdvanceGrant::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.TimeAdvanceGrant)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.TimeAdvanceGrant)
   return target;
 }
 
 size_t TimeAdvanceGrant::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.TimeAdvanceGrant)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.TimeAdvanceGrant)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.LogicalTime time = 1;
+  // .rti1516_2025.fedpro.LogicalTime time = 1;
   if (this->_internal_has_time()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -18050,20 +18050,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TimeAdvanceGrant::GetClassData
 void TimeAdvanceGrant::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<TimeAdvanceGrant*>(&to_msg);
   auto& from = static_cast<const TimeAdvanceGrant&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.TimeAdvanceGrant)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.TimeAdvanceGrant)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_time()) {
-    _this->_internal_mutable_time()->::rti1516_202X::fedpro::LogicalTime::MergeFrom(
+    _this->_internal_mutable_time()->::rti1516_2025::fedpro::LogicalTime::MergeFrom(
         from._internal_time());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TimeAdvanceGrant::CopyFrom(const TimeAdvanceGrant& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.TimeAdvanceGrant)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.TimeAdvanceGrant)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -18089,10 +18089,10 @@ void TimeAdvanceGrant::InternalSwap(TimeAdvanceGrant* other) {
 
 class RequestRetraction::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::MessageRetractionHandle& retraction(const RequestRetraction* msg);
+  static const ::rti1516_2025::fedpro::MessageRetractionHandle& retraction(const RequestRetraction* msg);
 };
 
-const ::rti1516_202X::fedpro::MessageRetractionHandle&
+const ::rti1516_2025::fedpro::MessageRetractionHandle&
 RequestRetraction::_Internal::retraction(const RequestRetraction* msg) {
   return *msg->_impl_.retraction_;
 }
@@ -18106,7 +18106,7 @@ RequestRetraction::RequestRetraction(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.RequestRetraction)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.RequestRetraction)
 }
 RequestRetraction::RequestRetraction(const RequestRetraction& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -18117,9 +18117,9 @@ RequestRetraction::RequestRetraction(const RequestRetraction& from)
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_retraction()) {
-    _this->_impl_.retraction_ = new ::rti1516_202X::fedpro::MessageRetractionHandle(*from._impl_.retraction_);
+    _this->_impl_.retraction_ = new ::rti1516_2025::fedpro::MessageRetractionHandle(*from._impl_.retraction_);
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.RequestRetraction)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.RequestRetraction)
 }
 
 inline void RequestRetraction::SharedCtor(
@@ -18133,7 +18133,7 @@ inline void RequestRetraction::SharedCtor(
 }
 
 RequestRetraction::~RequestRetraction() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.RequestRetraction)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.RequestRetraction)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -18151,7 +18151,7 @@ void RequestRetraction::SetCachedSize(int size) const {
 }
 
 void RequestRetraction::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.RequestRetraction)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.RequestRetraction)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -18169,7 +18169,7 @@ const char* RequestRetraction::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.MessageRetractionHandle retraction = 1;
+      // .rti1516_2025.fedpro.MessageRetractionHandle retraction = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_retraction(), ptr);
@@ -18202,11 +18202,11 @@ failure:
 
 uint8_t* RequestRetraction::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.RequestRetraction)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.RequestRetraction)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle retraction = 1;
+  // .rti1516_2025.fedpro.MessageRetractionHandle retraction = 1;
   if (this->_internal_has_retraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::retraction(this),
@@ -18217,19 +18217,19 @@ uint8_t* RequestRetraction::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.RequestRetraction)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.RequestRetraction)
   return target;
 }
 
 size_t RequestRetraction::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.RequestRetraction)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.RequestRetraction)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.MessageRetractionHandle retraction = 1;
+  // .rti1516_2025.fedpro.MessageRetractionHandle retraction = 1;
   if (this->_internal_has_retraction()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -18249,20 +18249,20 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestRetraction::GetClassDat
 void RequestRetraction::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<RequestRetraction*>(&to_msg);
   auto& from = static_cast<const RequestRetraction&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.RequestRetraction)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.RequestRetraction)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_retraction()) {
-    _this->_internal_mutable_retraction()->::rti1516_202X::fedpro::MessageRetractionHandle::MergeFrom(
+    _this->_internal_mutable_retraction()->::rti1516_2025::fedpro::MessageRetractionHandle::MergeFrom(
         from._internal_retraction());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RequestRetraction::CopyFrom(const RequestRetraction& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.RequestRetraction)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.RequestRetraction)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -18293,13 +18293,13 @@ class CallbackSucceeded::_Internal {
 CallbackSucceeded::CallbackSucceeded(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.CallbackSucceeded)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.CallbackSucceeded)
 }
 CallbackSucceeded::CallbackSucceeded(const CallbackSucceeded& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   CallbackSucceeded* const _this = this; (void)_this;
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.CallbackSucceeded)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.CallbackSucceeded)
 }
 
 
@@ -18328,319 +18328,319 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CallbackSucceeded::GetClassDat
 
 class CallbackRequest::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::ConnectionLost& connectionlost(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReportFederationExecutions& reportfederationexecutions(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReportFederationExecutionMembers& reportfederationexecutionmembers(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist& reportfederationexecutiondoesnotexist(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederateResigned& federateresigned(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded& synchronizationpointregistrationsucceeded(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed& synchronizationpointregistrationfailed(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::AnnounceSynchronizationPoint& announcesynchronizationpoint(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationSynchronized& federationsynchronized(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::InitiateFederateSave& initiatefederatesave(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::InitiateFederateSaveWithTime& initiatefederatesavewithtime(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationSaved& federationsaved(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationNotSaved& federationnotsaved(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationSaveStatusResponse& federationsavestatusresponse(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RequestFederationRestoreSucceeded& requestfederationrestoresucceeded(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RequestFederationRestoreFailed& requestfederationrestorefailed(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationRestoreBegun& federationrestorebegun(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::InitiateFederateRestore& initiatefederaterestore(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationRestored& federationrestored(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationNotRestored& federationnotrestored(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FederationRestoreStatusResponse& federationrestorestatusresponse(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::StartRegistrationForObjectClass& startregistrationforobjectclass(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::StopRegistrationForObjectClass& stopregistrationforobjectclass(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TurnInteractionsOn& turninteractionson(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TurnInteractionsOff& turninteractionsoff(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded& objectinstancenamereservationsucceeded(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed& objectinstancenamereservationfailed(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded& multipleobjectinstancenamereservationsucceeded(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed& multipleobjectinstancenamereservationfailed(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::DiscoverObjectInstance& discoverobjectinstance(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReflectAttributeValues& reflectattributevalues(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReflectAttributeValuesWithTime& reflectattributevalueswithtime(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReceiveInteraction& receiveinteraction(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReceiveInteractionWithTime& receiveinteractionwithtime(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReceiveDirectedInteraction& receivedirectedinteraction(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime& receivedirectedinteractionwithtime(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RemoveObjectInstance& removeobjectinstance(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RemoveObjectInstanceWithTime& removeobjectinstancewithtime(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::AttributesInScope& attributesinscope(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::AttributesOutOfScope& attributesoutofscope(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ProvideAttributeValueUpdate& provideattributevalueupdate(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance& turnupdatesonforobjectinstance(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate& turnupdatesonforobjectinstancewithrate(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance& turnupdatesoffforobjectinstance(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange& confirmattributetransportationtypechange(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReportAttributeTransportationType& reportattributetransportationtype(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange& confirminteractiontransportationtypechange(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ReportInteractionTransportationType& reportinteractiontransportationtype(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption& requestattributeownershipassumption(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RequestDivestitureConfirmation& requestdivestitureconfirmation(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification& attributeownershipacquisitionnotification(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::AttributeOwnershipUnavailable& attributeownershipunavailable(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RequestAttributeOwnershipRelease& requestattributeownershiprelease(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation& confirmattributeownershipacquisitioncancellation(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::InformAttributeOwnership& informattributeownership(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::AttributeIsNotOwned& attributeisnotowned(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::AttributeIsOwnedByRTI& attributeisownedbyrti(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TimeRegulationEnabled& timeregulationenabled(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TimeConstrainedEnabled& timeconstrainedenabled(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::FlushQueueGrant& flushqueuegrant(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::TimeAdvanceGrant& timeadvancegrant(const CallbackRequest* msg);
-  static const ::rti1516_202X::fedpro::RequestRetraction& requestretraction(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ConnectionLost& connectionlost(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReportFederationExecutions& reportfederationexecutions(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReportFederationExecutionMembers& reportfederationexecutionmembers(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist& reportfederationexecutiondoesnotexist(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederateResigned& federateresigned(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded& synchronizationpointregistrationsucceeded(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed& synchronizationpointregistrationfailed(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::AnnounceSynchronizationPoint& announcesynchronizationpoint(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationSynchronized& federationsynchronized(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::InitiateFederateSave& initiatefederatesave(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::InitiateFederateSaveWithTime& initiatefederatesavewithtime(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationSaved& federationsaved(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationNotSaved& federationnotsaved(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationSaveStatusResponse& federationsavestatusresponse(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RequestFederationRestoreSucceeded& requestfederationrestoresucceeded(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RequestFederationRestoreFailed& requestfederationrestorefailed(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationRestoreBegun& federationrestorebegun(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::InitiateFederateRestore& initiatefederaterestore(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationRestored& federationrestored(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationNotRestored& federationnotrestored(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FederationRestoreStatusResponse& federationrestorestatusresponse(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::StartRegistrationForObjectClass& startregistrationforobjectclass(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::StopRegistrationForObjectClass& stopregistrationforobjectclass(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TurnInteractionsOn& turninteractionson(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TurnInteractionsOff& turninteractionsoff(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded& objectinstancenamereservationsucceeded(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed& objectinstancenamereservationfailed(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded& multipleobjectinstancenamereservationsucceeded(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed& multipleobjectinstancenamereservationfailed(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::DiscoverObjectInstance& discoverobjectinstance(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReflectAttributeValues& reflectattributevalues(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReflectAttributeValuesWithTime& reflectattributevalueswithtime(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReceiveInteraction& receiveinteraction(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReceiveInteractionWithTime& receiveinteractionwithtime(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReceiveDirectedInteraction& receivedirectedinteraction(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime& receivedirectedinteractionwithtime(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RemoveObjectInstance& removeobjectinstance(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RemoveObjectInstanceWithTime& removeobjectinstancewithtime(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::AttributesInScope& attributesinscope(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::AttributesOutOfScope& attributesoutofscope(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ProvideAttributeValueUpdate& provideattributevalueupdate(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance& turnupdatesonforobjectinstance(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate& turnupdatesonforobjectinstancewithrate(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance& turnupdatesoffforobjectinstance(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange& confirmattributetransportationtypechange(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReportAttributeTransportationType& reportattributetransportationtype(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange& confirminteractiontransportationtypechange(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ReportInteractionTransportationType& reportinteractiontransportationtype(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption& requestattributeownershipassumption(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RequestDivestitureConfirmation& requestdivestitureconfirmation(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification& attributeownershipacquisitionnotification(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::AttributeOwnershipUnavailable& attributeownershipunavailable(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RequestAttributeOwnershipRelease& requestattributeownershiprelease(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation& confirmattributeownershipacquisitioncancellation(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::InformAttributeOwnership& informattributeownership(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::AttributeIsNotOwned& attributeisnotowned(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::AttributeIsOwnedByRTI& attributeisownedbyrti(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TimeRegulationEnabled& timeregulationenabled(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TimeConstrainedEnabled& timeconstrainedenabled(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::FlushQueueGrant& flushqueuegrant(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::TimeAdvanceGrant& timeadvancegrant(const CallbackRequest* msg);
+  static const ::rti1516_2025::fedpro::RequestRetraction& requestretraction(const CallbackRequest* msg);
 };
 
-const ::rti1516_202X::fedpro::ConnectionLost&
+const ::rti1516_2025::fedpro::ConnectionLost&
 CallbackRequest::_Internal::connectionlost(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.connectionlost_;
 }
-const ::rti1516_202X::fedpro::ReportFederationExecutions&
+const ::rti1516_2025::fedpro::ReportFederationExecutions&
 CallbackRequest::_Internal::reportfederationexecutions(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.reportfederationexecutions_;
 }
-const ::rti1516_202X::fedpro::ReportFederationExecutionMembers&
+const ::rti1516_2025::fedpro::ReportFederationExecutionMembers&
 CallbackRequest::_Internal::reportfederationexecutionmembers(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.reportfederationexecutionmembers_;
 }
-const ::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist&
+const ::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist&
 CallbackRequest::_Internal::reportfederationexecutiondoesnotexist(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.reportfederationexecutiondoesnotexist_;
 }
-const ::rti1516_202X::fedpro::FederateResigned&
+const ::rti1516_2025::fedpro::FederateResigned&
 CallbackRequest::_Internal::federateresigned(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federateresigned_;
 }
-const ::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded&
+const ::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded&
 CallbackRequest::_Internal::synchronizationpointregistrationsucceeded(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.synchronizationpointregistrationsucceeded_;
 }
-const ::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed&
+const ::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed&
 CallbackRequest::_Internal::synchronizationpointregistrationfailed(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.synchronizationpointregistrationfailed_;
 }
-const ::rti1516_202X::fedpro::AnnounceSynchronizationPoint&
+const ::rti1516_2025::fedpro::AnnounceSynchronizationPoint&
 CallbackRequest::_Internal::announcesynchronizationpoint(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.announcesynchronizationpoint_;
 }
-const ::rti1516_202X::fedpro::FederationSynchronized&
+const ::rti1516_2025::fedpro::FederationSynchronized&
 CallbackRequest::_Internal::federationsynchronized(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationsynchronized_;
 }
-const ::rti1516_202X::fedpro::InitiateFederateSave&
+const ::rti1516_2025::fedpro::InitiateFederateSave&
 CallbackRequest::_Internal::initiatefederatesave(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.initiatefederatesave_;
 }
-const ::rti1516_202X::fedpro::InitiateFederateSaveWithTime&
+const ::rti1516_2025::fedpro::InitiateFederateSaveWithTime&
 CallbackRequest::_Internal::initiatefederatesavewithtime(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.initiatefederatesavewithtime_;
 }
-const ::rti1516_202X::fedpro::FederationSaved&
+const ::rti1516_2025::fedpro::FederationSaved&
 CallbackRequest::_Internal::federationsaved(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationsaved_;
 }
-const ::rti1516_202X::fedpro::FederationNotSaved&
+const ::rti1516_2025::fedpro::FederationNotSaved&
 CallbackRequest::_Internal::federationnotsaved(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationnotsaved_;
 }
-const ::rti1516_202X::fedpro::FederationSaveStatusResponse&
+const ::rti1516_2025::fedpro::FederationSaveStatusResponse&
 CallbackRequest::_Internal::federationsavestatusresponse(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationsavestatusresponse_;
 }
-const ::rti1516_202X::fedpro::RequestFederationRestoreSucceeded&
+const ::rti1516_2025::fedpro::RequestFederationRestoreSucceeded&
 CallbackRequest::_Internal::requestfederationrestoresucceeded(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.requestfederationrestoresucceeded_;
 }
-const ::rti1516_202X::fedpro::RequestFederationRestoreFailed&
+const ::rti1516_2025::fedpro::RequestFederationRestoreFailed&
 CallbackRequest::_Internal::requestfederationrestorefailed(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.requestfederationrestorefailed_;
 }
-const ::rti1516_202X::fedpro::FederationRestoreBegun&
+const ::rti1516_2025::fedpro::FederationRestoreBegun&
 CallbackRequest::_Internal::federationrestorebegun(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationrestorebegun_;
 }
-const ::rti1516_202X::fedpro::InitiateFederateRestore&
+const ::rti1516_2025::fedpro::InitiateFederateRestore&
 CallbackRequest::_Internal::initiatefederaterestore(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.initiatefederaterestore_;
 }
-const ::rti1516_202X::fedpro::FederationRestored&
+const ::rti1516_2025::fedpro::FederationRestored&
 CallbackRequest::_Internal::federationrestored(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationrestored_;
 }
-const ::rti1516_202X::fedpro::FederationNotRestored&
+const ::rti1516_2025::fedpro::FederationNotRestored&
 CallbackRequest::_Internal::federationnotrestored(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationnotrestored_;
 }
-const ::rti1516_202X::fedpro::FederationRestoreStatusResponse&
+const ::rti1516_2025::fedpro::FederationRestoreStatusResponse&
 CallbackRequest::_Internal::federationrestorestatusresponse(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.federationrestorestatusresponse_;
 }
-const ::rti1516_202X::fedpro::StartRegistrationForObjectClass&
+const ::rti1516_2025::fedpro::StartRegistrationForObjectClass&
 CallbackRequest::_Internal::startregistrationforobjectclass(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.startregistrationforobjectclass_;
 }
-const ::rti1516_202X::fedpro::StopRegistrationForObjectClass&
+const ::rti1516_2025::fedpro::StopRegistrationForObjectClass&
 CallbackRequest::_Internal::stopregistrationforobjectclass(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.stopregistrationforobjectclass_;
 }
-const ::rti1516_202X::fedpro::TurnInteractionsOn&
+const ::rti1516_2025::fedpro::TurnInteractionsOn&
 CallbackRequest::_Internal::turninteractionson(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.turninteractionson_;
 }
-const ::rti1516_202X::fedpro::TurnInteractionsOff&
+const ::rti1516_2025::fedpro::TurnInteractionsOff&
 CallbackRequest::_Internal::turninteractionsoff(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.turninteractionsoff_;
 }
-const ::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded&
+const ::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded&
 CallbackRequest::_Internal::objectinstancenamereservationsucceeded(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.objectinstancenamereservationsucceeded_;
 }
-const ::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed&
+const ::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed&
 CallbackRequest::_Internal::objectinstancenamereservationfailed(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.objectinstancenamereservationfailed_;
 }
-const ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded&
+const ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded&
 CallbackRequest::_Internal::multipleobjectinstancenamereservationsucceeded(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.multipleobjectinstancenamereservationsucceeded_;
 }
-const ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed&
+const ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed&
 CallbackRequest::_Internal::multipleobjectinstancenamereservationfailed(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.multipleobjectinstancenamereservationfailed_;
 }
-const ::rti1516_202X::fedpro::DiscoverObjectInstance&
+const ::rti1516_2025::fedpro::DiscoverObjectInstance&
 CallbackRequest::_Internal::discoverobjectinstance(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.discoverobjectinstance_;
 }
-const ::rti1516_202X::fedpro::ReflectAttributeValues&
+const ::rti1516_2025::fedpro::ReflectAttributeValues&
 CallbackRequest::_Internal::reflectattributevalues(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.reflectattributevalues_;
 }
-const ::rti1516_202X::fedpro::ReflectAttributeValuesWithTime&
+const ::rti1516_2025::fedpro::ReflectAttributeValuesWithTime&
 CallbackRequest::_Internal::reflectattributevalueswithtime(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.reflectattributevalueswithtime_;
 }
-const ::rti1516_202X::fedpro::ReceiveInteraction&
+const ::rti1516_2025::fedpro::ReceiveInteraction&
 CallbackRequest::_Internal::receiveinteraction(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.receiveinteraction_;
 }
-const ::rti1516_202X::fedpro::ReceiveInteractionWithTime&
+const ::rti1516_2025::fedpro::ReceiveInteractionWithTime&
 CallbackRequest::_Internal::receiveinteractionwithtime(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.receiveinteractionwithtime_;
 }
-const ::rti1516_202X::fedpro::ReceiveDirectedInteraction&
+const ::rti1516_2025::fedpro::ReceiveDirectedInteraction&
 CallbackRequest::_Internal::receivedirectedinteraction(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.receivedirectedinteraction_;
 }
-const ::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime&
+const ::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime&
 CallbackRequest::_Internal::receivedirectedinteractionwithtime(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.receivedirectedinteractionwithtime_;
 }
-const ::rti1516_202X::fedpro::RemoveObjectInstance&
+const ::rti1516_2025::fedpro::RemoveObjectInstance&
 CallbackRequest::_Internal::removeobjectinstance(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.removeobjectinstance_;
 }
-const ::rti1516_202X::fedpro::RemoveObjectInstanceWithTime&
+const ::rti1516_2025::fedpro::RemoveObjectInstanceWithTime&
 CallbackRequest::_Internal::removeobjectinstancewithtime(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.removeobjectinstancewithtime_;
 }
-const ::rti1516_202X::fedpro::AttributesInScope&
+const ::rti1516_2025::fedpro::AttributesInScope&
 CallbackRequest::_Internal::attributesinscope(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.attributesinscope_;
 }
-const ::rti1516_202X::fedpro::AttributesOutOfScope&
+const ::rti1516_2025::fedpro::AttributesOutOfScope&
 CallbackRequest::_Internal::attributesoutofscope(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.attributesoutofscope_;
 }
-const ::rti1516_202X::fedpro::ProvideAttributeValueUpdate&
+const ::rti1516_2025::fedpro::ProvideAttributeValueUpdate&
 CallbackRequest::_Internal::provideattributevalueupdate(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.provideattributevalueupdate_;
 }
-const ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance&
+const ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance&
 CallbackRequest::_Internal::turnupdatesonforobjectinstance(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.turnupdatesonforobjectinstance_;
 }
-const ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate&
+const ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate&
 CallbackRequest::_Internal::turnupdatesonforobjectinstancewithrate(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.turnupdatesonforobjectinstancewithrate_;
 }
-const ::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance&
+const ::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance&
 CallbackRequest::_Internal::turnupdatesoffforobjectinstance(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.turnupdatesoffforobjectinstance_;
 }
-const ::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange&
+const ::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange&
 CallbackRequest::_Internal::confirmattributetransportationtypechange(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.confirmattributetransportationtypechange_;
 }
-const ::rti1516_202X::fedpro::ReportAttributeTransportationType&
+const ::rti1516_2025::fedpro::ReportAttributeTransportationType&
 CallbackRequest::_Internal::reportattributetransportationtype(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.reportattributetransportationtype_;
 }
-const ::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange&
+const ::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange&
 CallbackRequest::_Internal::confirminteractiontransportationtypechange(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.confirminteractiontransportationtypechange_;
 }
-const ::rti1516_202X::fedpro::ReportInteractionTransportationType&
+const ::rti1516_2025::fedpro::ReportInteractionTransportationType&
 CallbackRequest::_Internal::reportinteractiontransportationtype(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.reportinteractiontransportationtype_;
 }
-const ::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption&
+const ::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption&
 CallbackRequest::_Internal::requestattributeownershipassumption(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.requestattributeownershipassumption_;
 }
-const ::rti1516_202X::fedpro::RequestDivestitureConfirmation&
+const ::rti1516_2025::fedpro::RequestDivestitureConfirmation&
 CallbackRequest::_Internal::requestdivestitureconfirmation(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.requestdivestitureconfirmation_;
 }
-const ::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification&
+const ::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification&
 CallbackRequest::_Internal::attributeownershipacquisitionnotification(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.attributeownershipacquisitionnotification_;
 }
-const ::rti1516_202X::fedpro::AttributeOwnershipUnavailable&
+const ::rti1516_2025::fedpro::AttributeOwnershipUnavailable&
 CallbackRequest::_Internal::attributeownershipunavailable(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.attributeownershipunavailable_;
 }
-const ::rti1516_202X::fedpro::RequestAttributeOwnershipRelease&
+const ::rti1516_2025::fedpro::RequestAttributeOwnershipRelease&
 CallbackRequest::_Internal::requestattributeownershiprelease(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.requestattributeownershiprelease_;
 }
-const ::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation&
+const ::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation&
 CallbackRequest::_Internal::confirmattributeownershipacquisitioncancellation(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.confirmattributeownershipacquisitioncancellation_;
 }
-const ::rti1516_202X::fedpro::InformAttributeOwnership&
+const ::rti1516_2025::fedpro::InformAttributeOwnership&
 CallbackRequest::_Internal::informattributeownership(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.informattributeownership_;
 }
-const ::rti1516_202X::fedpro::AttributeIsNotOwned&
+const ::rti1516_2025::fedpro::AttributeIsNotOwned&
 CallbackRequest::_Internal::attributeisnotowned(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.attributeisnotowned_;
 }
-const ::rti1516_202X::fedpro::AttributeIsOwnedByRTI&
+const ::rti1516_2025::fedpro::AttributeIsOwnedByRTI&
 CallbackRequest::_Internal::attributeisownedbyrti(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.attributeisownedbyrti_;
 }
-const ::rti1516_202X::fedpro::TimeRegulationEnabled&
+const ::rti1516_2025::fedpro::TimeRegulationEnabled&
 CallbackRequest::_Internal::timeregulationenabled(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.timeregulationenabled_;
 }
-const ::rti1516_202X::fedpro::TimeConstrainedEnabled&
+const ::rti1516_2025::fedpro::TimeConstrainedEnabled&
 CallbackRequest::_Internal::timeconstrainedenabled(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.timeconstrainedenabled_;
 }
-const ::rti1516_202X::fedpro::FlushQueueGrant&
+const ::rti1516_2025::fedpro::FlushQueueGrant&
 CallbackRequest::_Internal::flushqueuegrant(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.flushqueuegrant_;
 }
-const ::rti1516_202X::fedpro::TimeAdvanceGrant&
+const ::rti1516_2025::fedpro::TimeAdvanceGrant&
 CallbackRequest::_Internal::timeadvancegrant(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.timeadvancegrant_;
 }
-const ::rti1516_202X::fedpro::RequestRetraction&
+const ::rti1516_2025::fedpro::RequestRetraction&
 CallbackRequest::_Internal::requestretraction(const CallbackRequest* msg) {
   return *msg->_impl_.callbackRequest_.requestretraction_;
 }
-void CallbackRequest::set_allocated_connectionlost(::rti1516_202X::fedpro::ConnectionLost* connectionlost) {
+void CallbackRequest::set_allocated_connectionlost(::rti1516_2025::fedpro::ConnectionLost* connectionlost) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (connectionlost) {
@@ -18653,9 +18653,9 @@ void CallbackRequest::set_allocated_connectionlost(::rti1516_202X::fedpro::Conne
     set_has_connectionlost();
     _impl_.callbackRequest_.connectionlost_ = connectionlost;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.connectionLost)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.connectionLost)
 }
-void CallbackRequest::set_allocated_reportfederationexecutions(::rti1516_202X::fedpro::ReportFederationExecutions* reportfederationexecutions) {
+void CallbackRequest::set_allocated_reportfederationexecutions(::rti1516_2025::fedpro::ReportFederationExecutions* reportfederationexecutions) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (reportfederationexecutions) {
@@ -18668,9 +18668,9 @@ void CallbackRequest::set_allocated_reportfederationexecutions(::rti1516_202X::f
     set_has_reportfederationexecutions();
     _impl_.callbackRequest_.reportfederationexecutions_ = reportfederationexecutions;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.reportFederationExecutions)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.reportFederationExecutions)
 }
-void CallbackRequest::set_allocated_reportfederationexecutionmembers(::rti1516_202X::fedpro::ReportFederationExecutionMembers* reportfederationexecutionmembers) {
+void CallbackRequest::set_allocated_reportfederationexecutionmembers(::rti1516_2025::fedpro::ReportFederationExecutionMembers* reportfederationexecutionmembers) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (reportfederationexecutionmembers) {
@@ -18683,9 +18683,9 @@ void CallbackRequest::set_allocated_reportfederationexecutionmembers(::rti1516_2
     set_has_reportfederationexecutionmembers();
     _impl_.callbackRequest_.reportfederationexecutionmembers_ = reportfederationexecutionmembers;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.reportFederationExecutionMembers)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.reportFederationExecutionMembers)
 }
-void CallbackRequest::set_allocated_reportfederationexecutiondoesnotexist(::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist* reportfederationexecutiondoesnotexist) {
+void CallbackRequest::set_allocated_reportfederationexecutiondoesnotexist(::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist* reportfederationexecutiondoesnotexist) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (reportfederationexecutiondoesnotexist) {
@@ -18698,9 +18698,9 @@ void CallbackRequest::set_allocated_reportfederationexecutiondoesnotexist(::rti1
     set_has_reportfederationexecutiondoesnotexist();
     _impl_.callbackRequest_.reportfederationexecutiondoesnotexist_ = reportfederationexecutiondoesnotexist;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.reportFederationExecutionDoesNotExist)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.reportFederationExecutionDoesNotExist)
 }
-void CallbackRequest::set_allocated_federateresigned(::rti1516_202X::fedpro::FederateResigned* federateresigned) {
+void CallbackRequest::set_allocated_federateresigned(::rti1516_2025::fedpro::FederateResigned* federateresigned) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federateresigned) {
@@ -18713,9 +18713,9 @@ void CallbackRequest::set_allocated_federateresigned(::rti1516_202X::fedpro::Fed
     set_has_federateresigned();
     _impl_.callbackRequest_.federateresigned_ = federateresigned;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federateResigned)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federateResigned)
 }
-void CallbackRequest::set_allocated_synchronizationpointregistrationsucceeded(::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded* synchronizationpointregistrationsucceeded) {
+void CallbackRequest::set_allocated_synchronizationpointregistrationsucceeded(::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded* synchronizationpointregistrationsucceeded) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (synchronizationpointregistrationsucceeded) {
@@ -18728,9 +18728,9 @@ void CallbackRequest::set_allocated_synchronizationpointregistrationsucceeded(::
     set_has_synchronizationpointregistrationsucceeded();
     _impl_.callbackRequest_.synchronizationpointregistrationsucceeded_ = synchronizationpointregistrationsucceeded;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.synchronizationPointRegistrationSucceeded)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.synchronizationPointRegistrationSucceeded)
 }
-void CallbackRequest::set_allocated_synchronizationpointregistrationfailed(::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed* synchronizationpointregistrationfailed) {
+void CallbackRequest::set_allocated_synchronizationpointregistrationfailed(::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed* synchronizationpointregistrationfailed) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (synchronizationpointregistrationfailed) {
@@ -18743,9 +18743,9 @@ void CallbackRequest::set_allocated_synchronizationpointregistrationfailed(::rti
     set_has_synchronizationpointregistrationfailed();
     _impl_.callbackRequest_.synchronizationpointregistrationfailed_ = synchronizationpointregistrationfailed;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.synchronizationPointRegistrationFailed)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.synchronizationPointRegistrationFailed)
 }
-void CallbackRequest::set_allocated_announcesynchronizationpoint(::rti1516_202X::fedpro::AnnounceSynchronizationPoint* announcesynchronizationpoint) {
+void CallbackRequest::set_allocated_announcesynchronizationpoint(::rti1516_2025::fedpro::AnnounceSynchronizationPoint* announcesynchronizationpoint) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (announcesynchronizationpoint) {
@@ -18758,9 +18758,9 @@ void CallbackRequest::set_allocated_announcesynchronizationpoint(::rti1516_202X:
     set_has_announcesynchronizationpoint();
     _impl_.callbackRequest_.announcesynchronizationpoint_ = announcesynchronizationpoint;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.announceSynchronizationPoint)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.announceSynchronizationPoint)
 }
-void CallbackRequest::set_allocated_federationsynchronized(::rti1516_202X::fedpro::FederationSynchronized* federationsynchronized) {
+void CallbackRequest::set_allocated_federationsynchronized(::rti1516_2025::fedpro::FederationSynchronized* federationsynchronized) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationsynchronized) {
@@ -18773,9 +18773,9 @@ void CallbackRequest::set_allocated_federationsynchronized(::rti1516_202X::fedpr
     set_has_federationsynchronized();
     _impl_.callbackRequest_.federationsynchronized_ = federationsynchronized;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationSynchronized)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationSynchronized)
 }
-void CallbackRequest::set_allocated_initiatefederatesave(::rti1516_202X::fedpro::InitiateFederateSave* initiatefederatesave) {
+void CallbackRequest::set_allocated_initiatefederatesave(::rti1516_2025::fedpro::InitiateFederateSave* initiatefederatesave) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (initiatefederatesave) {
@@ -18788,9 +18788,9 @@ void CallbackRequest::set_allocated_initiatefederatesave(::rti1516_202X::fedpro:
     set_has_initiatefederatesave();
     _impl_.callbackRequest_.initiatefederatesave_ = initiatefederatesave;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.initiateFederateSave)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.initiateFederateSave)
 }
-void CallbackRequest::set_allocated_initiatefederatesavewithtime(::rti1516_202X::fedpro::InitiateFederateSaveWithTime* initiatefederatesavewithtime) {
+void CallbackRequest::set_allocated_initiatefederatesavewithtime(::rti1516_2025::fedpro::InitiateFederateSaveWithTime* initiatefederatesavewithtime) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (initiatefederatesavewithtime) {
@@ -18803,9 +18803,9 @@ void CallbackRequest::set_allocated_initiatefederatesavewithtime(::rti1516_202X:
     set_has_initiatefederatesavewithtime();
     _impl_.callbackRequest_.initiatefederatesavewithtime_ = initiatefederatesavewithtime;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.initiateFederateSaveWithTime)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.initiateFederateSaveWithTime)
 }
-void CallbackRequest::set_allocated_federationsaved(::rti1516_202X::fedpro::FederationSaved* federationsaved) {
+void CallbackRequest::set_allocated_federationsaved(::rti1516_2025::fedpro::FederationSaved* federationsaved) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationsaved) {
@@ -18818,9 +18818,9 @@ void CallbackRequest::set_allocated_federationsaved(::rti1516_202X::fedpro::Fede
     set_has_federationsaved();
     _impl_.callbackRequest_.federationsaved_ = federationsaved;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationSaved)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationSaved)
 }
-void CallbackRequest::set_allocated_federationnotsaved(::rti1516_202X::fedpro::FederationNotSaved* federationnotsaved) {
+void CallbackRequest::set_allocated_federationnotsaved(::rti1516_2025::fedpro::FederationNotSaved* federationnotsaved) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationnotsaved) {
@@ -18833,9 +18833,9 @@ void CallbackRequest::set_allocated_federationnotsaved(::rti1516_202X::fedpro::F
     set_has_federationnotsaved();
     _impl_.callbackRequest_.federationnotsaved_ = federationnotsaved;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationNotSaved)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationNotSaved)
 }
-void CallbackRequest::set_allocated_federationsavestatusresponse(::rti1516_202X::fedpro::FederationSaveStatusResponse* federationsavestatusresponse) {
+void CallbackRequest::set_allocated_federationsavestatusresponse(::rti1516_2025::fedpro::FederationSaveStatusResponse* federationsavestatusresponse) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationsavestatusresponse) {
@@ -18848,9 +18848,9 @@ void CallbackRequest::set_allocated_federationsavestatusresponse(::rti1516_202X:
     set_has_federationsavestatusresponse();
     _impl_.callbackRequest_.federationsavestatusresponse_ = federationsavestatusresponse;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationSaveStatusResponse)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationSaveStatusResponse)
 }
-void CallbackRequest::set_allocated_requestfederationrestoresucceeded(::rti1516_202X::fedpro::RequestFederationRestoreSucceeded* requestfederationrestoresucceeded) {
+void CallbackRequest::set_allocated_requestfederationrestoresucceeded(::rti1516_2025::fedpro::RequestFederationRestoreSucceeded* requestfederationrestoresucceeded) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (requestfederationrestoresucceeded) {
@@ -18863,9 +18863,9 @@ void CallbackRequest::set_allocated_requestfederationrestoresucceeded(::rti1516_
     set_has_requestfederationrestoresucceeded();
     _impl_.callbackRequest_.requestfederationrestoresucceeded_ = requestfederationrestoresucceeded;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.requestFederationRestoreSucceeded)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.requestFederationRestoreSucceeded)
 }
-void CallbackRequest::set_allocated_requestfederationrestorefailed(::rti1516_202X::fedpro::RequestFederationRestoreFailed* requestfederationrestorefailed) {
+void CallbackRequest::set_allocated_requestfederationrestorefailed(::rti1516_2025::fedpro::RequestFederationRestoreFailed* requestfederationrestorefailed) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (requestfederationrestorefailed) {
@@ -18878,9 +18878,9 @@ void CallbackRequest::set_allocated_requestfederationrestorefailed(::rti1516_202
     set_has_requestfederationrestorefailed();
     _impl_.callbackRequest_.requestfederationrestorefailed_ = requestfederationrestorefailed;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.requestFederationRestoreFailed)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.requestFederationRestoreFailed)
 }
-void CallbackRequest::set_allocated_federationrestorebegun(::rti1516_202X::fedpro::FederationRestoreBegun* federationrestorebegun) {
+void CallbackRequest::set_allocated_federationrestorebegun(::rti1516_2025::fedpro::FederationRestoreBegun* federationrestorebegun) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationrestorebegun) {
@@ -18893,9 +18893,9 @@ void CallbackRequest::set_allocated_federationrestorebegun(::rti1516_202X::fedpr
     set_has_federationrestorebegun();
     _impl_.callbackRequest_.federationrestorebegun_ = federationrestorebegun;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationRestoreBegun)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationRestoreBegun)
 }
-void CallbackRequest::set_allocated_initiatefederaterestore(::rti1516_202X::fedpro::InitiateFederateRestore* initiatefederaterestore) {
+void CallbackRequest::set_allocated_initiatefederaterestore(::rti1516_2025::fedpro::InitiateFederateRestore* initiatefederaterestore) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (initiatefederaterestore) {
@@ -18908,9 +18908,9 @@ void CallbackRequest::set_allocated_initiatefederaterestore(::rti1516_202X::fedp
     set_has_initiatefederaterestore();
     _impl_.callbackRequest_.initiatefederaterestore_ = initiatefederaterestore;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.initiateFederateRestore)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.initiateFederateRestore)
 }
-void CallbackRequest::set_allocated_federationrestored(::rti1516_202X::fedpro::FederationRestored* federationrestored) {
+void CallbackRequest::set_allocated_federationrestored(::rti1516_2025::fedpro::FederationRestored* federationrestored) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationrestored) {
@@ -18923,9 +18923,9 @@ void CallbackRequest::set_allocated_federationrestored(::rti1516_202X::fedpro::F
     set_has_federationrestored();
     _impl_.callbackRequest_.federationrestored_ = federationrestored;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationRestored)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationRestored)
 }
-void CallbackRequest::set_allocated_federationnotrestored(::rti1516_202X::fedpro::FederationNotRestored* federationnotrestored) {
+void CallbackRequest::set_allocated_federationnotrestored(::rti1516_2025::fedpro::FederationNotRestored* federationnotrestored) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationnotrestored) {
@@ -18938,9 +18938,9 @@ void CallbackRequest::set_allocated_federationnotrestored(::rti1516_202X::fedpro
     set_has_federationnotrestored();
     _impl_.callbackRequest_.federationnotrestored_ = federationnotrestored;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationNotRestored)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationNotRestored)
 }
-void CallbackRequest::set_allocated_federationrestorestatusresponse(::rti1516_202X::fedpro::FederationRestoreStatusResponse* federationrestorestatusresponse) {
+void CallbackRequest::set_allocated_federationrestorestatusresponse(::rti1516_2025::fedpro::FederationRestoreStatusResponse* federationrestorestatusresponse) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (federationrestorestatusresponse) {
@@ -18953,9 +18953,9 @@ void CallbackRequest::set_allocated_federationrestorestatusresponse(::rti1516_20
     set_has_federationrestorestatusresponse();
     _impl_.callbackRequest_.federationrestorestatusresponse_ = federationrestorestatusresponse;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.federationRestoreStatusResponse)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.federationRestoreStatusResponse)
 }
-void CallbackRequest::set_allocated_startregistrationforobjectclass(::rti1516_202X::fedpro::StartRegistrationForObjectClass* startregistrationforobjectclass) {
+void CallbackRequest::set_allocated_startregistrationforobjectclass(::rti1516_2025::fedpro::StartRegistrationForObjectClass* startregistrationforobjectclass) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (startregistrationforobjectclass) {
@@ -18968,9 +18968,9 @@ void CallbackRequest::set_allocated_startregistrationforobjectclass(::rti1516_20
     set_has_startregistrationforobjectclass();
     _impl_.callbackRequest_.startregistrationforobjectclass_ = startregistrationforobjectclass;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.startRegistrationForObjectClass)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.startRegistrationForObjectClass)
 }
-void CallbackRequest::set_allocated_stopregistrationforobjectclass(::rti1516_202X::fedpro::StopRegistrationForObjectClass* stopregistrationforobjectclass) {
+void CallbackRequest::set_allocated_stopregistrationforobjectclass(::rti1516_2025::fedpro::StopRegistrationForObjectClass* stopregistrationforobjectclass) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (stopregistrationforobjectclass) {
@@ -18983,9 +18983,9 @@ void CallbackRequest::set_allocated_stopregistrationforobjectclass(::rti1516_202
     set_has_stopregistrationforobjectclass();
     _impl_.callbackRequest_.stopregistrationforobjectclass_ = stopregistrationforobjectclass;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.stopRegistrationForObjectClass)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.stopRegistrationForObjectClass)
 }
-void CallbackRequest::set_allocated_turninteractionson(::rti1516_202X::fedpro::TurnInteractionsOn* turninteractionson) {
+void CallbackRequest::set_allocated_turninteractionson(::rti1516_2025::fedpro::TurnInteractionsOn* turninteractionson) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (turninteractionson) {
@@ -18998,9 +18998,9 @@ void CallbackRequest::set_allocated_turninteractionson(::rti1516_202X::fedpro::T
     set_has_turninteractionson();
     _impl_.callbackRequest_.turninteractionson_ = turninteractionson;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.turnInteractionsOn)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.turnInteractionsOn)
 }
-void CallbackRequest::set_allocated_turninteractionsoff(::rti1516_202X::fedpro::TurnInteractionsOff* turninteractionsoff) {
+void CallbackRequest::set_allocated_turninteractionsoff(::rti1516_2025::fedpro::TurnInteractionsOff* turninteractionsoff) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (turninteractionsoff) {
@@ -19013,9 +19013,9 @@ void CallbackRequest::set_allocated_turninteractionsoff(::rti1516_202X::fedpro::
     set_has_turninteractionsoff();
     _impl_.callbackRequest_.turninteractionsoff_ = turninteractionsoff;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.turnInteractionsOff)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.turnInteractionsOff)
 }
-void CallbackRequest::set_allocated_objectinstancenamereservationsucceeded(::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded* objectinstancenamereservationsucceeded) {
+void CallbackRequest::set_allocated_objectinstancenamereservationsucceeded(::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded* objectinstancenamereservationsucceeded) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (objectinstancenamereservationsucceeded) {
@@ -19028,9 +19028,9 @@ void CallbackRequest::set_allocated_objectinstancenamereservationsucceeded(::rti
     set_has_objectinstancenamereservationsucceeded();
     _impl_.callbackRequest_.objectinstancenamereservationsucceeded_ = objectinstancenamereservationsucceeded;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.objectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.objectInstanceNameReservationSucceeded)
 }
-void CallbackRequest::set_allocated_objectinstancenamereservationfailed(::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed* objectinstancenamereservationfailed) {
+void CallbackRequest::set_allocated_objectinstancenamereservationfailed(::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed* objectinstancenamereservationfailed) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (objectinstancenamereservationfailed) {
@@ -19043,9 +19043,9 @@ void CallbackRequest::set_allocated_objectinstancenamereservationfailed(::rti151
     set_has_objectinstancenamereservationfailed();
     _impl_.callbackRequest_.objectinstancenamereservationfailed_ = objectinstancenamereservationfailed;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.objectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.objectInstanceNameReservationFailed)
 }
-void CallbackRequest::set_allocated_multipleobjectinstancenamereservationsucceeded(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded* multipleobjectinstancenamereservationsucceeded) {
+void CallbackRequest::set_allocated_multipleobjectinstancenamereservationsucceeded(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded* multipleobjectinstancenamereservationsucceeded) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (multipleobjectinstancenamereservationsucceeded) {
@@ -19058,9 +19058,9 @@ void CallbackRequest::set_allocated_multipleobjectinstancenamereservationsucceed
     set_has_multipleobjectinstancenamereservationsucceeded();
     _impl_.callbackRequest_.multipleobjectinstancenamereservationsucceeded_ = multipleobjectinstancenamereservationsucceeded;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.multipleObjectInstanceNameReservationSucceeded)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.multipleObjectInstanceNameReservationSucceeded)
 }
-void CallbackRequest::set_allocated_multipleobjectinstancenamereservationfailed(::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed* multipleobjectinstancenamereservationfailed) {
+void CallbackRequest::set_allocated_multipleobjectinstancenamereservationfailed(::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed* multipleobjectinstancenamereservationfailed) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (multipleobjectinstancenamereservationfailed) {
@@ -19073,9 +19073,9 @@ void CallbackRequest::set_allocated_multipleobjectinstancenamereservationfailed(
     set_has_multipleobjectinstancenamereservationfailed();
     _impl_.callbackRequest_.multipleobjectinstancenamereservationfailed_ = multipleobjectinstancenamereservationfailed;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.multipleObjectInstanceNameReservationFailed)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.multipleObjectInstanceNameReservationFailed)
 }
-void CallbackRequest::set_allocated_discoverobjectinstance(::rti1516_202X::fedpro::DiscoverObjectInstance* discoverobjectinstance) {
+void CallbackRequest::set_allocated_discoverobjectinstance(::rti1516_2025::fedpro::DiscoverObjectInstance* discoverobjectinstance) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (discoverobjectinstance) {
@@ -19088,9 +19088,9 @@ void CallbackRequest::set_allocated_discoverobjectinstance(::rti1516_202X::fedpr
     set_has_discoverobjectinstance();
     _impl_.callbackRequest_.discoverobjectinstance_ = discoverobjectinstance;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.discoverObjectInstance)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.discoverObjectInstance)
 }
-void CallbackRequest::set_allocated_reflectattributevalues(::rti1516_202X::fedpro::ReflectAttributeValues* reflectattributevalues) {
+void CallbackRequest::set_allocated_reflectattributevalues(::rti1516_2025::fedpro::ReflectAttributeValues* reflectattributevalues) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (reflectattributevalues) {
@@ -19103,9 +19103,9 @@ void CallbackRequest::set_allocated_reflectattributevalues(::rti1516_202X::fedpr
     set_has_reflectattributevalues();
     _impl_.callbackRequest_.reflectattributevalues_ = reflectattributevalues;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.reflectAttributeValues)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.reflectAttributeValues)
 }
-void CallbackRequest::set_allocated_reflectattributevalueswithtime(::rti1516_202X::fedpro::ReflectAttributeValuesWithTime* reflectattributevalueswithtime) {
+void CallbackRequest::set_allocated_reflectattributevalueswithtime(::rti1516_2025::fedpro::ReflectAttributeValuesWithTime* reflectattributevalueswithtime) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (reflectattributevalueswithtime) {
@@ -19118,9 +19118,9 @@ void CallbackRequest::set_allocated_reflectattributevalueswithtime(::rti1516_202
     set_has_reflectattributevalueswithtime();
     _impl_.callbackRequest_.reflectattributevalueswithtime_ = reflectattributevalueswithtime;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.reflectAttributeValuesWithTime)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.reflectAttributeValuesWithTime)
 }
-void CallbackRequest::set_allocated_receiveinteraction(::rti1516_202X::fedpro::ReceiveInteraction* receiveinteraction) {
+void CallbackRequest::set_allocated_receiveinteraction(::rti1516_2025::fedpro::ReceiveInteraction* receiveinteraction) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (receiveinteraction) {
@@ -19133,9 +19133,9 @@ void CallbackRequest::set_allocated_receiveinteraction(::rti1516_202X::fedpro::R
     set_has_receiveinteraction();
     _impl_.callbackRequest_.receiveinteraction_ = receiveinteraction;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.receiveInteraction)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.receiveInteraction)
 }
-void CallbackRequest::set_allocated_receiveinteractionwithtime(::rti1516_202X::fedpro::ReceiveInteractionWithTime* receiveinteractionwithtime) {
+void CallbackRequest::set_allocated_receiveinteractionwithtime(::rti1516_2025::fedpro::ReceiveInteractionWithTime* receiveinteractionwithtime) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (receiveinteractionwithtime) {
@@ -19148,9 +19148,9 @@ void CallbackRequest::set_allocated_receiveinteractionwithtime(::rti1516_202X::f
     set_has_receiveinteractionwithtime();
     _impl_.callbackRequest_.receiveinteractionwithtime_ = receiveinteractionwithtime;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.receiveInteractionWithTime)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.receiveInteractionWithTime)
 }
-void CallbackRequest::set_allocated_receivedirectedinteraction(::rti1516_202X::fedpro::ReceiveDirectedInteraction* receivedirectedinteraction) {
+void CallbackRequest::set_allocated_receivedirectedinteraction(::rti1516_2025::fedpro::ReceiveDirectedInteraction* receivedirectedinteraction) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (receivedirectedinteraction) {
@@ -19163,9 +19163,9 @@ void CallbackRequest::set_allocated_receivedirectedinteraction(::rti1516_202X::f
     set_has_receivedirectedinteraction();
     _impl_.callbackRequest_.receivedirectedinteraction_ = receivedirectedinteraction;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.receiveDirectedInteraction)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.receiveDirectedInteraction)
 }
-void CallbackRequest::set_allocated_receivedirectedinteractionwithtime(::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime* receivedirectedinteractionwithtime) {
+void CallbackRequest::set_allocated_receivedirectedinteractionwithtime(::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime* receivedirectedinteractionwithtime) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (receivedirectedinteractionwithtime) {
@@ -19178,9 +19178,9 @@ void CallbackRequest::set_allocated_receivedirectedinteractionwithtime(::rti1516
     set_has_receivedirectedinteractionwithtime();
     _impl_.callbackRequest_.receivedirectedinteractionwithtime_ = receivedirectedinteractionwithtime;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.receiveDirectedInteractionWithTime)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.receiveDirectedInteractionWithTime)
 }
-void CallbackRequest::set_allocated_removeobjectinstance(::rti1516_202X::fedpro::RemoveObjectInstance* removeobjectinstance) {
+void CallbackRequest::set_allocated_removeobjectinstance(::rti1516_2025::fedpro::RemoveObjectInstance* removeobjectinstance) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (removeobjectinstance) {
@@ -19193,9 +19193,9 @@ void CallbackRequest::set_allocated_removeobjectinstance(::rti1516_202X::fedpro:
     set_has_removeobjectinstance();
     _impl_.callbackRequest_.removeobjectinstance_ = removeobjectinstance;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.removeObjectInstance)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.removeObjectInstance)
 }
-void CallbackRequest::set_allocated_removeobjectinstancewithtime(::rti1516_202X::fedpro::RemoveObjectInstanceWithTime* removeobjectinstancewithtime) {
+void CallbackRequest::set_allocated_removeobjectinstancewithtime(::rti1516_2025::fedpro::RemoveObjectInstanceWithTime* removeobjectinstancewithtime) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (removeobjectinstancewithtime) {
@@ -19208,9 +19208,9 @@ void CallbackRequest::set_allocated_removeobjectinstancewithtime(::rti1516_202X:
     set_has_removeobjectinstancewithtime();
     _impl_.callbackRequest_.removeobjectinstancewithtime_ = removeobjectinstancewithtime;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.removeObjectInstanceWithTime)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.removeObjectInstanceWithTime)
 }
-void CallbackRequest::set_allocated_attributesinscope(::rti1516_202X::fedpro::AttributesInScope* attributesinscope) {
+void CallbackRequest::set_allocated_attributesinscope(::rti1516_2025::fedpro::AttributesInScope* attributesinscope) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (attributesinscope) {
@@ -19223,9 +19223,9 @@ void CallbackRequest::set_allocated_attributesinscope(::rti1516_202X::fedpro::At
     set_has_attributesinscope();
     _impl_.callbackRequest_.attributesinscope_ = attributesinscope;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.attributesInScope)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.attributesInScope)
 }
-void CallbackRequest::set_allocated_attributesoutofscope(::rti1516_202X::fedpro::AttributesOutOfScope* attributesoutofscope) {
+void CallbackRequest::set_allocated_attributesoutofscope(::rti1516_2025::fedpro::AttributesOutOfScope* attributesoutofscope) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (attributesoutofscope) {
@@ -19238,9 +19238,9 @@ void CallbackRequest::set_allocated_attributesoutofscope(::rti1516_202X::fedpro:
     set_has_attributesoutofscope();
     _impl_.callbackRequest_.attributesoutofscope_ = attributesoutofscope;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.attributesOutOfScope)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.attributesOutOfScope)
 }
-void CallbackRequest::set_allocated_provideattributevalueupdate(::rti1516_202X::fedpro::ProvideAttributeValueUpdate* provideattributevalueupdate) {
+void CallbackRequest::set_allocated_provideattributevalueupdate(::rti1516_2025::fedpro::ProvideAttributeValueUpdate* provideattributevalueupdate) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (provideattributevalueupdate) {
@@ -19253,9 +19253,9 @@ void CallbackRequest::set_allocated_provideattributevalueupdate(::rti1516_202X::
     set_has_provideattributevalueupdate();
     _impl_.callbackRequest_.provideattributevalueupdate_ = provideattributevalueupdate;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.provideAttributeValueUpdate)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.provideAttributeValueUpdate)
 }
-void CallbackRequest::set_allocated_turnupdatesonforobjectinstance(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance* turnupdatesonforobjectinstance) {
+void CallbackRequest::set_allocated_turnupdatesonforobjectinstance(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance* turnupdatesonforobjectinstance) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (turnupdatesonforobjectinstance) {
@@ -19268,9 +19268,9 @@ void CallbackRequest::set_allocated_turnupdatesonforobjectinstance(::rti1516_202
     set_has_turnupdatesonforobjectinstance();
     _impl_.callbackRequest_.turnupdatesonforobjectinstance_ = turnupdatesonforobjectinstance;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.turnUpdatesOnForObjectInstance)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.turnUpdatesOnForObjectInstance)
 }
-void CallbackRequest::set_allocated_turnupdatesonforobjectinstancewithrate(::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate* turnupdatesonforobjectinstancewithrate) {
+void CallbackRequest::set_allocated_turnupdatesonforobjectinstancewithrate(::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate* turnupdatesonforobjectinstancewithrate) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (turnupdatesonforobjectinstancewithrate) {
@@ -19283,9 +19283,9 @@ void CallbackRequest::set_allocated_turnupdatesonforobjectinstancewithrate(::rti
     set_has_turnupdatesonforobjectinstancewithrate();
     _impl_.callbackRequest_.turnupdatesonforobjectinstancewithrate_ = turnupdatesonforobjectinstancewithrate;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.turnUpdatesOnForObjectInstanceWithRate)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.turnUpdatesOnForObjectInstanceWithRate)
 }
-void CallbackRequest::set_allocated_turnupdatesoffforobjectinstance(::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance* turnupdatesoffforobjectinstance) {
+void CallbackRequest::set_allocated_turnupdatesoffforobjectinstance(::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance* turnupdatesoffforobjectinstance) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (turnupdatesoffforobjectinstance) {
@@ -19298,9 +19298,9 @@ void CallbackRequest::set_allocated_turnupdatesoffforobjectinstance(::rti1516_20
     set_has_turnupdatesoffforobjectinstance();
     _impl_.callbackRequest_.turnupdatesoffforobjectinstance_ = turnupdatesoffforobjectinstance;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.turnUpdatesOffForObjectInstance)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.turnUpdatesOffForObjectInstance)
 }
-void CallbackRequest::set_allocated_confirmattributetransportationtypechange(::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange* confirmattributetransportationtypechange) {
+void CallbackRequest::set_allocated_confirmattributetransportationtypechange(::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange* confirmattributetransportationtypechange) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (confirmattributetransportationtypechange) {
@@ -19313,9 +19313,9 @@ void CallbackRequest::set_allocated_confirmattributetransportationtypechange(::r
     set_has_confirmattributetransportationtypechange();
     _impl_.callbackRequest_.confirmattributetransportationtypechange_ = confirmattributetransportationtypechange;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.confirmAttributeTransportationTypeChange)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.confirmAttributeTransportationTypeChange)
 }
-void CallbackRequest::set_allocated_reportattributetransportationtype(::rti1516_202X::fedpro::ReportAttributeTransportationType* reportattributetransportationtype) {
+void CallbackRequest::set_allocated_reportattributetransportationtype(::rti1516_2025::fedpro::ReportAttributeTransportationType* reportattributetransportationtype) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (reportattributetransportationtype) {
@@ -19328,9 +19328,9 @@ void CallbackRequest::set_allocated_reportattributetransportationtype(::rti1516_
     set_has_reportattributetransportationtype();
     _impl_.callbackRequest_.reportattributetransportationtype_ = reportattributetransportationtype;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.reportAttributeTransportationType)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.reportAttributeTransportationType)
 }
-void CallbackRequest::set_allocated_confirminteractiontransportationtypechange(::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange* confirminteractiontransportationtypechange) {
+void CallbackRequest::set_allocated_confirminteractiontransportationtypechange(::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange* confirminteractiontransportationtypechange) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (confirminteractiontransportationtypechange) {
@@ -19343,9 +19343,9 @@ void CallbackRequest::set_allocated_confirminteractiontransportationtypechange(:
     set_has_confirminteractiontransportationtypechange();
     _impl_.callbackRequest_.confirminteractiontransportationtypechange_ = confirminteractiontransportationtypechange;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.confirmInteractionTransportationTypeChange)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.confirmInteractionTransportationTypeChange)
 }
-void CallbackRequest::set_allocated_reportinteractiontransportationtype(::rti1516_202X::fedpro::ReportInteractionTransportationType* reportinteractiontransportationtype) {
+void CallbackRequest::set_allocated_reportinteractiontransportationtype(::rti1516_2025::fedpro::ReportInteractionTransportationType* reportinteractiontransportationtype) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (reportinteractiontransportationtype) {
@@ -19358,9 +19358,9 @@ void CallbackRequest::set_allocated_reportinteractiontransportationtype(::rti151
     set_has_reportinteractiontransportationtype();
     _impl_.callbackRequest_.reportinteractiontransportationtype_ = reportinteractiontransportationtype;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.reportInteractionTransportationType)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.reportInteractionTransportationType)
 }
-void CallbackRequest::set_allocated_requestattributeownershipassumption(::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption* requestattributeownershipassumption) {
+void CallbackRequest::set_allocated_requestattributeownershipassumption(::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption* requestattributeownershipassumption) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (requestattributeownershipassumption) {
@@ -19373,9 +19373,9 @@ void CallbackRequest::set_allocated_requestattributeownershipassumption(::rti151
     set_has_requestattributeownershipassumption();
     _impl_.callbackRequest_.requestattributeownershipassumption_ = requestattributeownershipassumption;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.requestAttributeOwnershipAssumption)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.requestAttributeOwnershipAssumption)
 }
-void CallbackRequest::set_allocated_requestdivestitureconfirmation(::rti1516_202X::fedpro::RequestDivestitureConfirmation* requestdivestitureconfirmation) {
+void CallbackRequest::set_allocated_requestdivestitureconfirmation(::rti1516_2025::fedpro::RequestDivestitureConfirmation* requestdivestitureconfirmation) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (requestdivestitureconfirmation) {
@@ -19388,9 +19388,9 @@ void CallbackRequest::set_allocated_requestdivestitureconfirmation(::rti1516_202
     set_has_requestdivestitureconfirmation();
     _impl_.callbackRequest_.requestdivestitureconfirmation_ = requestdivestitureconfirmation;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.requestDivestitureConfirmation)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.requestDivestitureConfirmation)
 }
-void CallbackRequest::set_allocated_attributeownershipacquisitionnotification(::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification* attributeownershipacquisitionnotification) {
+void CallbackRequest::set_allocated_attributeownershipacquisitionnotification(::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification* attributeownershipacquisitionnotification) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (attributeownershipacquisitionnotification) {
@@ -19403,9 +19403,9 @@ void CallbackRequest::set_allocated_attributeownershipacquisitionnotification(::
     set_has_attributeownershipacquisitionnotification();
     _impl_.callbackRequest_.attributeownershipacquisitionnotification_ = attributeownershipacquisitionnotification;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.attributeOwnershipAcquisitionNotification)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.attributeOwnershipAcquisitionNotification)
 }
-void CallbackRequest::set_allocated_attributeownershipunavailable(::rti1516_202X::fedpro::AttributeOwnershipUnavailable* attributeownershipunavailable) {
+void CallbackRequest::set_allocated_attributeownershipunavailable(::rti1516_2025::fedpro::AttributeOwnershipUnavailable* attributeownershipunavailable) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (attributeownershipunavailable) {
@@ -19418,9 +19418,9 @@ void CallbackRequest::set_allocated_attributeownershipunavailable(::rti1516_202X
     set_has_attributeownershipunavailable();
     _impl_.callbackRequest_.attributeownershipunavailable_ = attributeownershipunavailable;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.attributeOwnershipUnavailable)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.attributeOwnershipUnavailable)
 }
-void CallbackRequest::set_allocated_requestattributeownershiprelease(::rti1516_202X::fedpro::RequestAttributeOwnershipRelease* requestattributeownershiprelease) {
+void CallbackRequest::set_allocated_requestattributeownershiprelease(::rti1516_2025::fedpro::RequestAttributeOwnershipRelease* requestattributeownershiprelease) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (requestattributeownershiprelease) {
@@ -19433,9 +19433,9 @@ void CallbackRequest::set_allocated_requestattributeownershiprelease(::rti1516_2
     set_has_requestattributeownershiprelease();
     _impl_.callbackRequest_.requestattributeownershiprelease_ = requestattributeownershiprelease;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.requestAttributeOwnershipRelease)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.requestAttributeOwnershipRelease)
 }
-void CallbackRequest::set_allocated_confirmattributeownershipacquisitioncancellation(::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation* confirmattributeownershipacquisitioncancellation) {
+void CallbackRequest::set_allocated_confirmattributeownershipacquisitioncancellation(::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation* confirmattributeownershipacquisitioncancellation) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (confirmattributeownershipacquisitioncancellation) {
@@ -19448,9 +19448,9 @@ void CallbackRequest::set_allocated_confirmattributeownershipacquisitioncancella
     set_has_confirmattributeownershipacquisitioncancellation();
     _impl_.callbackRequest_.confirmattributeownershipacquisitioncancellation_ = confirmattributeownershipacquisitioncancellation;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.confirmAttributeOwnershipAcquisitionCancellation)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.confirmAttributeOwnershipAcquisitionCancellation)
 }
-void CallbackRequest::set_allocated_informattributeownership(::rti1516_202X::fedpro::InformAttributeOwnership* informattributeownership) {
+void CallbackRequest::set_allocated_informattributeownership(::rti1516_2025::fedpro::InformAttributeOwnership* informattributeownership) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (informattributeownership) {
@@ -19463,9 +19463,9 @@ void CallbackRequest::set_allocated_informattributeownership(::rti1516_202X::fed
     set_has_informattributeownership();
     _impl_.callbackRequest_.informattributeownership_ = informattributeownership;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.informAttributeOwnership)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.informAttributeOwnership)
 }
-void CallbackRequest::set_allocated_attributeisnotowned(::rti1516_202X::fedpro::AttributeIsNotOwned* attributeisnotowned) {
+void CallbackRequest::set_allocated_attributeisnotowned(::rti1516_2025::fedpro::AttributeIsNotOwned* attributeisnotowned) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (attributeisnotowned) {
@@ -19478,9 +19478,9 @@ void CallbackRequest::set_allocated_attributeisnotowned(::rti1516_202X::fedpro::
     set_has_attributeisnotowned();
     _impl_.callbackRequest_.attributeisnotowned_ = attributeisnotowned;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.attributeIsNotOwned)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.attributeIsNotOwned)
 }
-void CallbackRequest::set_allocated_attributeisownedbyrti(::rti1516_202X::fedpro::AttributeIsOwnedByRTI* attributeisownedbyrti) {
+void CallbackRequest::set_allocated_attributeisownedbyrti(::rti1516_2025::fedpro::AttributeIsOwnedByRTI* attributeisownedbyrti) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (attributeisownedbyrti) {
@@ -19493,9 +19493,9 @@ void CallbackRequest::set_allocated_attributeisownedbyrti(::rti1516_202X::fedpro
     set_has_attributeisownedbyrti();
     _impl_.callbackRequest_.attributeisownedbyrti_ = attributeisownedbyrti;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.attributeIsOwnedByRTI)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.attributeIsOwnedByRTI)
 }
-void CallbackRequest::set_allocated_timeregulationenabled(::rti1516_202X::fedpro::TimeRegulationEnabled* timeregulationenabled) {
+void CallbackRequest::set_allocated_timeregulationenabled(::rti1516_2025::fedpro::TimeRegulationEnabled* timeregulationenabled) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (timeregulationenabled) {
@@ -19508,9 +19508,9 @@ void CallbackRequest::set_allocated_timeregulationenabled(::rti1516_202X::fedpro
     set_has_timeregulationenabled();
     _impl_.callbackRequest_.timeregulationenabled_ = timeregulationenabled;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.timeRegulationEnabled)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.timeRegulationEnabled)
 }
-void CallbackRequest::set_allocated_timeconstrainedenabled(::rti1516_202X::fedpro::TimeConstrainedEnabled* timeconstrainedenabled) {
+void CallbackRequest::set_allocated_timeconstrainedenabled(::rti1516_2025::fedpro::TimeConstrainedEnabled* timeconstrainedenabled) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (timeconstrainedenabled) {
@@ -19523,9 +19523,9 @@ void CallbackRequest::set_allocated_timeconstrainedenabled(::rti1516_202X::fedpr
     set_has_timeconstrainedenabled();
     _impl_.callbackRequest_.timeconstrainedenabled_ = timeconstrainedenabled;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.timeConstrainedEnabled)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.timeConstrainedEnabled)
 }
-void CallbackRequest::set_allocated_flushqueuegrant(::rti1516_202X::fedpro::FlushQueueGrant* flushqueuegrant) {
+void CallbackRequest::set_allocated_flushqueuegrant(::rti1516_2025::fedpro::FlushQueueGrant* flushqueuegrant) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (flushqueuegrant) {
@@ -19538,9 +19538,9 @@ void CallbackRequest::set_allocated_flushqueuegrant(::rti1516_202X::fedpro::Flus
     set_has_flushqueuegrant();
     _impl_.callbackRequest_.flushqueuegrant_ = flushqueuegrant;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.flushQueueGrant)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.flushQueueGrant)
 }
-void CallbackRequest::set_allocated_timeadvancegrant(::rti1516_202X::fedpro::TimeAdvanceGrant* timeadvancegrant) {
+void CallbackRequest::set_allocated_timeadvancegrant(::rti1516_2025::fedpro::TimeAdvanceGrant* timeadvancegrant) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (timeadvancegrant) {
@@ -19553,9 +19553,9 @@ void CallbackRequest::set_allocated_timeadvancegrant(::rti1516_202X::fedpro::Tim
     set_has_timeadvancegrant();
     _impl_.callbackRequest_.timeadvancegrant_ = timeadvancegrant;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.timeAdvanceGrant)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.timeAdvanceGrant)
 }
-void CallbackRequest::set_allocated_requestretraction(::rti1516_202X::fedpro::RequestRetraction* requestretraction) {
+void CallbackRequest::set_allocated_requestretraction(::rti1516_2025::fedpro::RequestRetraction* requestretraction) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackRequest();
   if (requestretraction) {
@@ -19568,13 +19568,13 @@ void CallbackRequest::set_allocated_requestretraction(::rti1516_202X::fedpro::Re
     set_has_requestretraction();
     _impl_.callbackRequest_.requestretraction_ = requestretraction;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackRequest.requestRetraction)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackRequest.requestRetraction)
 }
 CallbackRequest::CallbackRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.CallbackRequest)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.CallbackRequest)
 }
 CallbackRequest::CallbackRequest(const CallbackRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -19588,312 +19588,312 @@ CallbackRequest::CallbackRequest(const CallbackRequest& from)
   clear_has_callbackRequest();
   switch (from.callbackRequest_case()) {
     case kConnectionLost: {
-      _this->_internal_mutable_connectionlost()->::rti1516_202X::fedpro::ConnectionLost::MergeFrom(
+      _this->_internal_mutable_connectionlost()->::rti1516_2025::fedpro::ConnectionLost::MergeFrom(
           from._internal_connectionlost());
       break;
     }
     case kReportFederationExecutions: {
-      _this->_internal_mutable_reportfederationexecutions()->::rti1516_202X::fedpro::ReportFederationExecutions::MergeFrom(
+      _this->_internal_mutable_reportfederationexecutions()->::rti1516_2025::fedpro::ReportFederationExecutions::MergeFrom(
           from._internal_reportfederationexecutions());
       break;
     }
     case kReportFederationExecutionMembers: {
-      _this->_internal_mutable_reportfederationexecutionmembers()->::rti1516_202X::fedpro::ReportFederationExecutionMembers::MergeFrom(
+      _this->_internal_mutable_reportfederationexecutionmembers()->::rti1516_2025::fedpro::ReportFederationExecutionMembers::MergeFrom(
           from._internal_reportfederationexecutionmembers());
       break;
     }
     case kReportFederationExecutionDoesNotExist: {
-      _this->_internal_mutable_reportfederationexecutiondoesnotexist()->::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist::MergeFrom(
+      _this->_internal_mutable_reportfederationexecutiondoesnotexist()->::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist::MergeFrom(
           from._internal_reportfederationexecutiondoesnotexist());
       break;
     }
     case kFederateResigned: {
-      _this->_internal_mutable_federateresigned()->::rti1516_202X::fedpro::FederateResigned::MergeFrom(
+      _this->_internal_mutable_federateresigned()->::rti1516_2025::fedpro::FederateResigned::MergeFrom(
           from._internal_federateresigned());
       break;
     }
     case kSynchronizationPointRegistrationSucceeded: {
-      _this->_internal_mutable_synchronizationpointregistrationsucceeded()->::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded::MergeFrom(
+      _this->_internal_mutable_synchronizationpointregistrationsucceeded()->::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded::MergeFrom(
           from._internal_synchronizationpointregistrationsucceeded());
       break;
     }
     case kSynchronizationPointRegistrationFailed: {
-      _this->_internal_mutable_synchronizationpointregistrationfailed()->::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed::MergeFrom(
+      _this->_internal_mutable_synchronizationpointregistrationfailed()->::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed::MergeFrom(
           from._internal_synchronizationpointregistrationfailed());
       break;
     }
     case kAnnounceSynchronizationPoint: {
-      _this->_internal_mutable_announcesynchronizationpoint()->::rti1516_202X::fedpro::AnnounceSynchronizationPoint::MergeFrom(
+      _this->_internal_mutable_announcesynchronizationpoint()->::rti1516_2025::fedpro::AnnounceSynchronizationPoint::MergeFrom(
           from._internal_announcesynchronizationpoint());
       break;
     }
     case kFederationSynchronized: {
-      _this->_internal_mutable_federationsynchronized()->::rti1516_202X::fedpro::FederationSynchronized::MergeFrom(
+      _this->_internal_mutable_federationsynchronized()->::rti1516_2025::fedpro::FederationSynchronized::MergeFrom(
           from._internal_federationsynchronized());
       break;
     }
     case kInitiateFederateSave: {
-      _this->_internal_mutable_initiatefederatesave()->::rti1516_202X::fedpro::InitiateFederateSave::MergeFrom(
+      _this->_internal_mutable_initiatefederatesave()->::rti1516_2025::fedpro::InitiateFederateSave::MergeFrom(
           from._internal_initiatefederatesave());
       break;
     }
     case kInitiateFederateSaveWithTime: {
-      _this->_internal_mutable_initiatefederatesavewithtime()->::rti1516_202X::fedpro::InitiateFederateSaveWithTime::MergeFrom(
+      _this->_internal_mutable_initiatefederatesavewithtime()->::rti1516_2025::fedpro::InitiateFederateSaveWithTime::MergeFrom(
           from._internal_initiatefederatesavewithtime());
       break;
     }
     case kFederationSaved: {
-      _this->_internal_mutable_federationsaved()->::rti1516_202X::fedpro::FederationSaved::MergeFrom(
+      _this->_internal_mutable_federationsaved()->::rti1516_2025::fedpro::FederationSaved::MergeFrom(
           from._internal_federationsaved());
       break;
     }
     case kFederationNotSaved: {
-      _this->_internal_mutable_federationnotsaved()->::rti1516_202X::fedpro::FederationNotSaved::MergeFrom(
+      _this->_internal_mutable_federationnotsaved()->::rti1516_2025::fedpro::FederationNotSaved::MergeFrom(
           from._internal_federationnotsaved());
       break;
     }
     case kFederationSaveStatusResponse: {
-      _this->_internal_mutable_federationsavestatusresponse()->::rti1516_202X::fedpro::FederationSaveStatusResponse::MergeFrom(
+      _this->_internal_mutable_federationsavestatusresponse()->::rti1516_2025::fedpro::FederationSaveStatusResponse::MergeFrom(
           from._internal_federationsavestatusresponse());
       break;
     }
     case kRequestFederationRestoreSucceeded: {
-      _this->_internal_mutable_requestfederationrestoresucceeded()->::rti1516_202X::fedpro::RequestFederationRestoreSucceeded::MergeFrom(
+      _this->_internal_mutable_requestfederationrestoresucceeded()->::rti1516_2025::fedpro::RequestFederationRestoreSucceeded::MergeFrom(
           from._internal_requestfederationrestoresucceeded());
       break;
     }
     case kRequestFederationRestoreFailed: {
-      _this->_internal_mutable_requestfederationrestorefailed()->::rti1516_202X::fedpro::RequestFederationRestoreFailed::MergeFrom(
+      _this->_internal_mutable_requestfederationrestorefailed()->::rti1516_2025::fedpro::RequestFederationRestoreFailed::MergeFrom(
           from._internal_requestfederationrestorefailed());
       break;
     }
     case kFederationRestoreBegun: {
-      _this->_internal_mutable_federationrestorebegun()->::rti1516_202X::fedpro::FederationRestoreBegun::MergeFrom(
+      _this->_internal_mutable_federationrestorebegun()->::rti1516_2025::fedpro::FederationRestoreBegun::MergeFrom(
           from._internal_federationrestorebegun());
       break;
     }
     case kInitiateFederateRestore: {
-      _this->_internal_mutable_initiatefederaterestore()->::rti1516_202X::fedpro::InitiateFederateRestore::MergeFrom(
+      _this->_internal_mutable_initiatefederaterestore()->::rti1516_2025::fedpro::InitiateFederateRestore::MergeFrom(
           from._internal_initiatefederaterestore());
       break;
     }
     case kFederationRestored: {
-      _this->_internal_mutable_federationrestored()->::rti1516_202X::fedpro::FederationRestored::MergeFrom(
+      _this->_internal_mutable_federationrestored()->::rti1516_2025::fedpro::FederationRestored::MergeFrom(
           from._internal_federationrestored());
       break;
     }
     case kFederationNotRestored: {
-      _this->_internal_mutable_federationnotrestored()->::rti1516_202X::fedpro::FederationNotRestored::MergeFrom(
+      _this->_internal_mutable_federationnotrestored()->::rti1516_2025::fedpro::FederationNotRestored::MergeFrom(
           from._internal_federationnotrestored());
       break;
     }
     case kFederationRestoreStatusResponse: {
-      _this->_internal_mutable_federationrestorestatusresponse()->::rti1516_202X::fedpro::FederationRestoreStatusResponse::MergeFrom(
+      _this->_internal_mutable_federationrestorestatusresponse()->::rti1516_2025::fedpro::FederationRestoreStatusResponse::MergeFrom(
           from._internal_federationrestorestatusresponse());
       break;
     }
     case kStartRegistrationForObjectClass: {
-      _this->_internal_mutable_startregistrationforobjectclass()->::rti1516_202X::fedpro::StartRegistrationForObjectClass::MergeFrom(
+      _this->_internal_mutable_startregistrationforobjectclass()->::rti1516_2025::fedpro::StartRegistrationForObjectClass::MergeFrom(
           from._internal_startregistrationforobjectclass());
       break;
     }
     case kStopRegistrationForObjectClass: {
-      _this->_internal_mutable_stopregistrationforobjectclass()->::rti1516_202X::fedpro::StopRegistrationForObjectClass::MergeFrom(
+      _this->_internal_mutable_stopregistrationforobjectclass()->::rti1516_2025::fedpro::StopRegistrationForObjectClass::MergeFrom(
           from._internal_stopregistrationforobjectclass());
       break;
     }
     case kTurnInteractionsOn: {
-      _this->_internal_mutable_turninteractionson()->::rti1516_202X::fedpro::TurnInteractionsOn::MergeFrom(
+      _this->_internal_mutable_turninteractionson()->::rti1516_2025::fedpro::TurnInteractionsOn::MergeFrom(
           from._internal_turninteractionson());
       break;
     }
     case kTurnInteractionsOff: {
-      _this->_internal_mutable_turninteractionsoff()->::rti1516_202X::fedpro::TurnInteractionsOff::MergeFrom(
+      _this->_internal_mutable_turninteractionsoff()->::rti1516_2025::fedpro::TurnInteractionsOff::MergeFrom(
           from._internal_turninteractionsoff());
       break;
     }
     case kObjectInstanceNameReservationSucceeded: {
-      _this->_internal_mutable_objectinstancenamereservationsucceeded()->::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded::MergeFrom(
+      _this->_internal_mutable_objectinstancenamereservationsucceeded()->::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded::MergeFrom(
           from._internal_objectinstancenamereservationsucceeded());
       break;
     }
     case kObjectInstanceNameReservationFailed: {
-      _this->_internal_mutable_objectinstancenamereservationfailed()->::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed::MergeFrom(
+      _this->_internal_mutable_objectinstancenamereservationfailed()->::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed::MergeFrom(
           from._internal_objectinstancenamereservationfailed());
       break;
     }
     case kMultipleObjectInstanceNameReservationSucceeded: {
-      _this->_internal_mutable_multipleobjectinstancenamereservationsucceeded()->::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded::MergeFrom(
+      _this->_internal_mutable_multipleobjectinstancenamereservationsucceeded()->::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded::MergeFrom(
           from._internal_multipleobjectinstancenamereservationsucceeded());
       break;
     }
     case kMultipleObjectInstanceNameReservationFailed: {
-      _this->_internal_mutable_multipleobjectinstancenamereservationfailed()->::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed::MergeFrom(
+      _this->_internal_mutable_multipleobjectinstancenamereservationfailed()->::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed::MergeFrom(
           from._internal_multipleobjectinstancenamereservationfailed());
       break;
     }
     case kDiscoverObjectInstance: {
-      _this->_internal_mutable_discoverobjectinstance()->::rti1516_202X::fedpro::DiscoverObjectInstance::MergeFrom(
+      _this->_internal_mutable_discoverobjectinstance()->::rti1516_2025::fedpro::DiscoverObjectInstance::MergeFrom(
           from._internal_discoverobjectinstance());
       break;
     }
     case kReflectAttributeValues: {
-      _this->_internal_mutable_reflectattributevalues()->::rti1516_202X::fedpro::ReflectAttributeValues::MergeFrom(
+      _this->_internal_mutable_reflectattributevalues()->::rti1516_2025::fedpro::ReflectAttributeValues::MergeFrom(
           from._internal_reflectattributevalues());
       break;
     }
     case kReflectAttributeValuesWithTime: {
-      _this->_internal_mutable_reflectattributevalueswithtime()->::rti1516_202X::fedpro::ReflectAttributeValuesWithTime::MergeFrom(
+      _this->_internal_mutable_reflectattributevalueswithtime()->::rti1516_2025::fedpro::ReflectAttributeValuesWithTime::MergeFrom(
           from._internal_reflectattributevalueswithtime());
       break;
     }
     case kReceiveInteraction: {
-      _this->_internal_mutable_receiveinteraction()->::rti1516_202X::fedpro::ReceiveInteraction::MergeFrom(
+      _this->_internal_mutable_receiveinteraction()->::rti1516_2025::fedpro::ReceiveInteraction::MergeFrom(
           from._internal_receiveinteraction());
       break;
     }
     case kReceiveInteractionWithTime: {
-      _this->_internal_mutable_receiveinteractionwithtime()->::rti1516_202X::fedpro::ReceiveInteractionWithTime::MergeFrom(
+      _this->_internal_mutable_receiveinteractionwithtime()->::rti1516_2025::fedpro::ReceiveInteractionWithTime::MergeFrom(
           from._internal_receiveinteractionwithtime());
       break;
     }
     case kReceiveDirectedInteraction: {
-      _this->_internal_mutable_receivedirectedinteraction()->::rti1516_202X::fedpro::ReceiveDirectedInteraction::MergeFrom(
+      _this->_internal_mutable_receivedirectedinteraction()->::rti1516_2025::fedpro::ReceiveDirectedInteraction::MergeFrom(
           from._internal_receivedirectedinteraction());
       break;
     }
     case kReceiveDirectedInteractionWithTime: {
-      _this->_internal_mutable_receivedirectedinteractionwithtime()->::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime::MergeFrom(
+      _this->_internal_mutable_receivedirectedinteractionwithtime()->::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime::MergeFrom(
           from._internal_receivedirectedinteractionwithtime());
       break;
     }
     case kRemoveObjectInstance: {
-      _this->_internal_mutable_removeobjectinstance()->::rti1516_202X::fedpro::RemoveObjectInstance::MergeFrom(
+      _this->_internal_mutable_removeobjectinstance()->::rti1516_2025::fedpro::RemoveObjectInstance::MergeFrom(
           from._internal_removeobjectinstance());
       break;
     }
     case kRemoveObjectInstanceWithTime: {
-      _this->_internal_mutable_removeobjectinstancewithtime()->::rti1516_202X::fedpro::RemoveObjectInstanceWithTime::MergeFrom(
+      _this->_internal_mutable_removeobjectinstancewithtime()->::rti1516_2025::fedpro::RemoveObjectInstanceWithTime::MergeFrom(
           from._internal_removeobjectinstancewithtime());
       break;
     }
     case kAttributesInScope: {
-      _this->_internal_mutable_attributesinscope()->::rti1516_202X::fedpro::AttributesInScope::MergeFrom(
+      _this->_internal_mutable_attributesinscope()->::rti1516_2025::fedpro::AttributesInScope::MergeFrom(
           from._internal_attributesinscope());
       break;
     }
     case kAttributesOutOfScope: {
-      _this->_internal_mutable_attributesoutofscope()->::rti1516_202X::fedpro::AttributesOutOfScope::MergeFrom(
+      _this->_internal_mutable_attributesoutofscope()->::rti1516_2025::fedpro::AttributesOutOfScope::MergeFrom(
           from._internal_attributesoutofscope());
       break;
     }
     case kProvideAttributeValueUpdate: {
-      _this->_internal_mutable_provideattributevalueupdate()->::rti1516_202X::fedpro::ProvideAttributeValueUpdate::MergeFrom(
+      _this->_internal_mutable_provideattributevalueupdate()->::rti1516_2025::fedpro::ProvideAttributeValueUpdate::MergeFrom(
           from._internal_provideattributevalueupdate());
       break;
     }
     case kTurnUpdatesOnForObjectInstance: {
-      _this->_internal_mutable_turnupdatesonforobjectinstance()->::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance::MergeFrom(
+      _this->_internal_mutable_turnupdatesonforobjectinstance()->::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance::MergeFrom(
           from._internal_turnupdatesonforobjectinstance());
       break;
     }
     case kTurnUpdatesOnForObjectInstanceWithRate: {
-      _this->_internal_mutable_turnupdatesonforobjectinstancewithrate()->::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate::MergeFrom(
+      _this->_internal_mutable_turnupdatesonforobjectinstancewithrate()->::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate::MergeFrom(
           from._internal_turnupdatesonforobjectinstancewithrate());
       break;
     }
     case kTurnUpdatesOffForObjectInstance: {
-      _this->_internal_mutable_turnupdatesoffforobjectinstance()->::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance::MergeFrom(
+      _this->_internal_mutable_turnupdatesoffforobjectinstance()->::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance::MergeFrom(
           from._internal_turnupdatesoffforobjectinstance());
       break;
     }
     case kConfirmAttributeTransportationTypeChange: {
-      _this->_internal_mutable_confirmattributetransportationtypechange()->::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange::MergeFrom(
+      _this->_internal_mutable_confirmattributetransportationtypechange()->::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange::MergeFrom(
           from._internal_confirmattributetransportationtypechange());
       break;
     }
     case kReportAttributeTransportationType: {
-      _this->_internal_mutable_reportattributetransportationtype()->::rti1516_202X::fedpro::ReportAttributeTransportationType::MergeFrom(
+      _this->_internal_mutable_reportattributetransportationtype()->::rti1516_2025::fedpro::ReportAttributeTransportationType::MergeFrom(
           from._internal_reportattributetransportationtype());
       break;
     }
     case kConfirmInteractionTransportationTypeChange: {
-      _this->_internal_mutable_confirminteractiontransportationtypechange()->::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange::MergeFrom(
+      _this->_internal_mutable_confirminteractiontransportationtypechange()->::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange::MergeFrom(
           from._internal_confirminteractiontransportationtypechange());
       break;
     }
     case kReportInteractionTransportationType: {
-      _this->_internal_mutable_reportinteractiontransportationtype()->::rti1516_202X::fedpro::ReportInteractionTransportationType::MergeFrom(
+      _this->_internal_mutable_reportinteractiontransportationtype()->::rti1516_2025::fedpro::ReportInteractionTransportationType::MergeFrom(
           from._internal_reportinteractiontransportationtype());
       break;
     }
     case kRequestAttributeOwnershipAssumption: {
-      _this->_internal_mutable_requestattributeownershipassumption()->::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption::MergeFrom(
+      _this->_internal_mutable_requestattributeownershipassumption()->::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption::MergeFrom(
           from._internal_requestattributeownershipassumption());
       break;
     }
     case kRequestDivestitureConfirmation: {
-      _this->_internal_mutable_requestdivestitureconfirmation()->::rti1516_202X::fedpro::RequestDivestitureConfirmation::MergeFrom(
+      _this->_internal_mutable_requestdivestitureconfirmation()->::rti1516_2025::fedpro::RequestDivestitureConfirmation::MergeFrom(
           from._internal_requestdivestitureconfirmation());
       break;
     }
     case kAttributeOwnershipAcquisitionNotification: {
-      _this->_internal_mutable_attributeownershipacquisitionnotification()->::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification::MergeFrom(
+      _this->_internal_mutable_attributeownershipacquisitionnotification()->::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification::MergeFrom(
           from._internal_attributeownershipacquisitionnotification());
       break;
     }
     case kAttributeOwnershipUnavailable: {
-      _this->_internal_mutable_attributeownershipunavailable()->::rti1516_202X::fedpro::AttributeOwnershipUnavailable::MergeFrom(
+      _this->_internal_mutable_attributeownershipunavailable()->::rti1516_2025::fedpro::AttributeOwnershipUnavailable::MergeFrom(
           from._internal_attributeownershipunavailable());
       break;
     }
     case kRequestAttributeOwnershipRelease: {
-      _this->_internal_mutable_requestattributeownershiprelease()->::rti1516_202X::fedpro::RequestAttributeOwnershipRelease::MergeFrom(
+      _this->_internal_mutable_requestattributeownershiprelease()->::rti1516_2025::fedpro::RequestAttributeOwnershipRelease::MergeFrom(
           from._internal_requestattributeownershiprelease());
       break;
     }
     case kConfirmAttributeOwnershipAcquisitionCancellation: {
-      _this->_internal_mutable_confirmattributeownershipacquisitioncancellation()->::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation::MergeFrom(
+      _this->_internal_mutable_confirmattributeownershipacquisitioncancellation()->::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation::MergeFrom(
           from._internal_confirmattributeownershipacquisitioncancellation());
       break;
     }
     case kInformAttributeOwnership: {
-      _this->_internal_mutable_informattributeownership()->::rti1516_202X::fedpro::InformAttributeOwnership::MergeFrom(
+      _this->_internal_mutable_informattributeownership()->::rti1516_2025::fedpro::InformAttributeOwnership::MergeFrom(
           from._internal_informattributeownership());
       break;
     }
     case kAttributeIsNotOwned: {
-      _this->_internal_mutable_attributeisnotowned()->::rti1516_202X::fedpro::AttributeIsNotOwned::MergeFrom(
+      _this->_internal_mutable_attributeisnotowned()->::rti1516_2025::fedpro::AttributeIsNotOwned::MergeFrom(
           from._internal_attributeisnotowned());
       break;
     }
     case kAttributeIsOwnedByRTI: {
-      _this->_internal_mutable_attributeisownedbyrti()->::rti1516_202X::fedpro::AttributeIsOwnedByRTI::MergeFrom(
+      _this->_internal_mutable_attributeisownedbyrti()->::rti1516_2025::fedpro::AttributeIsOwnedByRTI::MergeFrom(
           from._internal_attributeisownedbyrti());
       break;
     }
     case kTimeRegulationEnabled: {
-      _this->_internal_mutable_timeregulationenabled()->::rti1516_202X::fedpro::TimeRegulationEnabled::MergeFrom(
+      _this->_internal_mutable_timeregulationenabled()->::rti1516_2025::fedpro::TimeRegulationEnabled::MergeFrom(
           from._internal_timeregulationenabled());
       break;
     }
     case kTimeConstrainedEnabled: {
-      _this->_internal_mutable_timeconstrainedenabled()->::rti1516_202X::fedpro::TimeConstrainedEnabled::MergeFrom(
+      _this->_internal_mutable_timeconstrainedenabled()->::rti1516_2025::fedpro::TimeConstrainedEnabled::MergeFrom(
           from._internal_timeconstrainedenabled());
       break;
     }
     case kFlushQueueGrant: {
-      _this->_internal_mutable_flushqueuegrant()->::rti1516_202X::fedpro::FlushQueueGrant::MergeFrom(
+      _this->_internal_mutable_flushqueuegrant()->::rti1516_2025::fedpro::FlushQueueGrant::MergeFrom(
           from._internal_flushqueuegrant());
       break;
     }
     case kTimeAdvanceGrant: {
-      _this->_internal_mutable_timeadvancegrant()->::rti1516_202X::fedpro::TimeAdvanceGrant::MergeFrom(
+      _this->_internal_mutable_timeadvancegrant()->::rti1516_2025::fedpro::TimeAdvanceGrant::MergeFrom(
           from._internal_timeadvancegrant());
       break;
     }
     case kRequestRetraction: {
-      _this->_internal_mutable_requestretraction()->::rti1516_202X::fedpro::RequestRetraction::MergeFrom(
+      _this->_internal_mutable_requestretraction()->::rti1516_2025::fedpro::RequestRetraction::MergeFrom(
           from._internal_requestretraction());
       break;
     }
@@ -19901,7 +19901,7 @@ CallbackRequest::CallbackRequest(const CallbackRequest& from)
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.CallbackRequest)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.CallbackRequest)
 }
 
 inline void CallbackRequest::SharedCtor(
@@ -19917,7 +19917,7 @@ inline void CallbackRequest::SharedCtor(
 }
 
 CallbackRequest::~CallbackRequest() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.CallbackRequest)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.CallbackRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -19937,7 +19937,7 @@ void CallbackRequest::SetCachedSize(int size) const {
 }
 
 void CallbackRequest::clear_callbackRequest() {
-// @@protoc_insertion_point(one_of_clear_start:rti1516_202X.fedpro.CallbackRequest)
+// @@protoc_insertion_point(one_of_clear_start:rti1516_2025.fedpro.CallbackRequest)
   switch (callbackRequest_case()) {
     case kConnectionLost: {
       if (GetArenaForAllocation() == nullptr) {
@@ -20320,7 +20320,7 @@ void CallbackRequest::clear_callbackRequest() {
 
 
 void CallbackRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.CallbackRequest)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.CallbackRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -20335,7 +20335,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.ConnectionLost connectionLost = 1;
+      // .rti1516_2025.fedpro.ConnectionLost connectionLost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_connectionlost(), ptr);
@@ -20343,7 +20343,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;
+      // .rti1516_2025.fedpro.ReportFederationExecutions reportFederationExecutions = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_reportfederationexecutions(), ptr);
@@ -20351,7 +20351,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
+      // .rti1516_2025.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_reportfederationexecutionmembers(), ptr);
@@ -20359,7 +20359,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
+      // .rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_reportfederationexecutiondoesnotexist(), ptr);
@@ -20367,7 +20367,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederateResigned federateResigned = 5;
+      // .rti1516_2025.fedpro.FederateResigned federateResigned = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_federateresigned(), ptr);
@@ -20375,7 +20375,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
+      // .rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_synchronizationpointregistrationsucceeded(), ptr);
@@ -20383,7 +20383,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
+      // .rti1516_2025.fedpro.SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_synchronizationpointregistrationfailed(), ptr);
@@ -20391,7 +20391,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
+      // .rti1516_2025.fedpro.AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_announcesynchronizationpoint(), ptr);
@@ -20399,7 +20399,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationSynchronized federationSynchronized = 9;
+      // .rti1516_2025.fedpro.FederationSynchronized federationSynchronized = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationsynchronized(), ptr);
@@ -20407,7 +20407,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.InitiateFederateSave initiateFederateSave = 10;
+      // .rti1516_2025.fedpro.InitiateFederateSave initiateFederateSave = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_initiatefederatesave(), ptr);
@@ -20415,7 +20415,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.InitiateFederateSaveWithTime initiateFederateSaveWithTime = 11;
+      // .rti1516_2025.fedpro.InitiateFederateSaveWithTime initiateFederateSaveWithTime = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_initiatefederatesavewithtime(), ptr);
@@ -20423,7 +20423,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationSaved federationSaved = 12;
+      // .rti1516_2025.fedpro.FederationSaved federationSaved = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationsaved(), ptr);
@@ -20431,7 +20431,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationNotSaved federationNotSaved = 13;
+      // .rti1516_2025.fedpro.FederationNotSaved federationNotSaved = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationnotsaved(), ptr);
@@ -20439,7 +20439,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationSaveStatusResponse federationSaveStatusResponse = 14;
+      // .rti1516_2025.fedpro.FederationSaveStatusResponse federationSaveStatusResponse = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationsavestatusresponse(), ptr);
@@ -20447,7 +20447,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RequestFederationRestoreSucceeded requestFederationRestoreSucceeded = 15;
+      // .rti1516_2025.fedpro.RequestFederationRestoreSucceeded requestFederationRestoreSucceeded = 15;
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestfederationrestoresucceeded(), ptr);
@@ -20455,7 +20455,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RequestFederationRestoreFailed requestFederationRestoreFailed = 16;
+      // .rti1516_2025.fedpro.RequestFederationRestoreFailed requestFederationRestoreFailed = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestfederationrestorefailed(), ptr);
@@ -20463,7 +20463,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationRestoreBegun federationRestoreBegun = 17;
+      // .rti1516_2025.fedpro.FederationRestoreBegun federationRestoreBegun = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationrestorebegun(), ptr);
@@ -20471,7 +20471,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.InitiateFederateRestore initiateFederateRestore = 18;
+      // .rti1516_2025.fedpro.InitiateFederateRestore initiateFederateRestore = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           ptr = ctx->ParseMessage(_internal_mutable_initiatefederaterestore(), ptr);
@@ -20479,7 +20479,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationRestored federationRestored = 19;
+      // .rti1516_2025.fedpro.FederationRestored federationRestored = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 154)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationrestored(), ptr);
@@ -20487,7 +20487,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationNotRestored federationNotRestored = 20;
+      // .rti1516_2025.fedpro.FederationNotRestored federationNotRestored = 20;
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 162)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationnotrestored(), ptr);
@@ -20495,7 +20495,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FederationRestoreStatusResponse federationRestoreStatusResponse = 21;
+      // .rti1516_2025.fedpro.FederationRestoreStatusResponse federationRestoreStatusResponse = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
           ptr = ctx->ParseMessage(_internal_mutable_federationrestorestatusresponse(), ptr);
@@ -20503,7 +20503,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.StartRegistrationForObjectClass startRegistrationForObjectClass = 22;
+      // .rti1516_2025.fedpro.StartRegistrationForObjectClass startRegistrationForObjectClass = 22;
       case 22:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 178)) {
           ptr = ctx->ParseMessage(_internal_mutable_startregistrationforobjectclass(), ptr);
@@ -20511,7 +20511,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.StopRegistrationForObjectClass stopRegistrationForObjectClass = 23;
+      // .rti1516_2025.fedpro.StopRegistrationForObjectClass stopRegistrationForObjectClass = 23;
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 186)) {
           ptr = ctx->ParseMessage(_internal_mutable_stopregistrationforobjectclass(), ptr);
@@ -20519,7 +20519,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TurnInteractionsOn turnInteractionsOn = 24;
+      // .rti1516_2025.fedpro.TurnInteractionsOn turnInteractionsOn = 24;
       case 24:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 194)) {
           ptr = ctx->ParseMessage(_internal_mutable_turninteractionson(), ptr);
@@ -20527,7 +20527,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TurnInteractionsOff turnInteractionsOff = 25;
+      // .rti1516_2025.fedpro.TurnInteractionsOff turnInteractionsOff = 25;
       case 25:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 202)) {
           ptr = ctx->ParseMessage(_internal_mutable_turninteractionsoff(), ptr);
@@ -20535,7 +20535,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded objectInstanceNameReservationSucceeded = 26;
+      // .rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded objectInstanceNameReservationSucceeded = 26;
       case 26:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 210)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstancenamereservationsucceeded(), ptr);
@@ -20543,7 +20543,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ObjectInstanceNameReservationFailed objectInstanceNameReservationFailed = 27;
+      // .rti1516_2025.fedpro.ObjectInstanceNameReservationFailed objectInstanceNameReservationFailed = 27;
       case 27:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 218)) {
           ptr = ctx->ParseMessage(_internal_mutable_objectinstancenamereservationfailed(), ptr);
@@ -20551,7 +20551,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded multipleObjectInstanceNameReservationSucceeded = 28;
+      // .rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded multipleObjectInstanceNameReservationSucceeded = 28;
       case 28:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 226)) {
           ptr = ctx->ParseMessage(_internal_mutable_multipleobjectinstancenamereservationsucceeded(), ptr);
@@ -20559,7 +20559,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed multipleObjectInstanceNameReservationFailed = 29;
+      // .rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed multipleObjectInstanceNameReservationFailed = 29;
       case 29:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 234)) {
           ptr = ctx->ParseMessage(_internal_mutable_multipleobjectinstancenamereservationfailed(), ptr);
@@ -20567,7 +20567,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.DiscoverObjectInstance discoverObjectInstance = 30;
+      // .rti1516_2025.fedpro.DiscoverObjectInstance discoverObjectInstance = 30;
       case 30:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 242)) {
           ptr = ctx->ParseMessage(_internal_mutable_discoverobjectinstance(), ptr);
@@ -20575,7 +20575,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReflectAttributeValues reflectAttributeValues = 31;
+      // .rti1516_2025.fedpro.ReflectAttributeValues reflectAttributeValues = 31;
       case 31:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 250)) {
           ptr = ctx->ParseMessage(_internal_mutable_reflectattributevalues(), ptr);
@@ -20583,7 +20583,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReflectAttributeValuesWithTime reflectAttributeValuesWithTime = 32;
+      // .rti1516_2025.fedpro.ReflectAttributeValuesWithTime reflectAttributeValuesWithTime = 32;
       case 32:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 2)) {
           ptr = ctx->ParseMessage(_internal_mutable_reflectattributevalueswithtime(), ptr);
@@ -20591,7 +20591,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReceiveInteraction receiveInteraction = 33;
+      // .rti1516_2025.fedpro.ReceiveInteraction receiveInteraction = 33;
       case 33:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_receiveinteraction(), ptr);
@@ -20599,7 +20599,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReceiveInteractionWithTime receiveInteractionWithTime = 34;
+      // .rti1516_2025.fedpro.ReceiveInteractionWithTime receiveInteractionWithTime = 34;
       case 34:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_receiveinteractionwithtime(), ptr);
@@ -20607,7 +20607,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReceiveDirectedInteraction receiveDirectedInteraction = 35;
+      // .rti1516_2025.fedpro.ReceiveDirectedInteraction receiveDirectedInteraction = 35;
       case 35:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_receivedirectedinteraction(), ptr);
@@ -20615,7 +20615,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime receiveDirectedInteractionWithTime = 36;
+      // .rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime receiveDirectedInteractionWithTime = 36;
       case 36:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_receivedirectedinteractionwithtime(), ptr);
@@ -20623,7 +20623,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RemoveObjectInstance removeObjectInstance = 37;
+      // .rti1516_2025.fedpro.RemoveObjectInstance removeObjectInstance = 37;
       case 37:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_removeobjectinstance(), ptr);
@@ -20631,7 +20631,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RemoveObjectInstanceWithTime removeObjectInstanceWithTime = 38;
+      // .rti1516_2025.fedpro.RemoveObjectInstanceWithTime removeObjectInstanceWithTime = 38;
       case 38:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_removeobjectinstancewithtime(), ptr);
@@ -20639,7 +20639,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributesInScope attributesInScope = 39;
+      // .rti1516_2025.fedpro.AttributesInScope attributesInScope = 39;
       case 39:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributesinscope(), ptr);
@@ -20647,7 +20647,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributesOutOfScope attributesOutOfScope = 40;
+      // .rti1516_2025.fedpro.AttributesOutOfScope attributesOutOfScope = 40;
       case 40:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributesoutofscope(), ptr);
@@ -20655,7 +20655,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ProvideAttributeValueUpdate provideAttributeValueUpdate = 41;
+      // .rti1516_2025.fedpro.ProvideAttributeValueUpdate provideAttributeValueUpdate = 41;
       case 41:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_provideattributevalueupdate(), ptr);
@@ -20663,7 +20663,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance turnUpdatesOnForObjectInstance = 42;
+      // .rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance turnUpdatesOnForObjectInstance = 42;
       case 42:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_turnupdatesonforobjectinstance(), ptr);
@@ -20671,7 +20671,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
+      // .rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
       case 43:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_turnupdatesonforobjectinstancewithrate(), ptr);
@@ -20679,7 +20679,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
+      // .rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
       case 44:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_turnupdatesoffforobjectinstance(), ptr);
@@ -20687,7 +20687,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
+      // .rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
       case 45:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_confirmattributetransportationtypechange(), ptr);
@@ -20695,7 +20695,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;
+      // .rti1516_2025.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;
       case 46:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
           ptr = ctx->ParseMessage(_internal_mutable_reportattributetransportationtype(), ptr);
@@ -20703,7 +20703,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
+      // .rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
       case 47:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
           ptr = ctx->ParseMessage(_internal_mutable_confirminteractiontransportationtypechange(), ptr);
@@ -20711,7 +20711,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ReportInteractionTransportationType reportInteractionTransportationType = 48;
+      // .rti1516_2025.fedpro.ReportInteractionTransportationType reportInteractionTransportationType = 48;
       case 48:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_reportinteractiontransportationtype(), ptr);
@@ -20719,7 +20719,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
+      // .rti1516_2025.fedpro.RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
       case 49:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestattributeownershipassumption(), ptr);
@@ -20727,7 +20727,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RequestDivestitureConfirmation requestDivestitureConfirmation = 50;
+      // .rti1516_2025.fedpro.RequestDivestitureConfirmation requestDivestitureConfirmation = 50;
       case 50:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestdivestitureconfirmation(), ptr);
@@ -20735,7 +20735,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification attributeOwnershipAcquisitionNotification = 51;
+      // .rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification attributeOwnershipAcquisitionNotification = 51;
       case 51:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 154)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributeownershipacquisitionnotification(), ptr);
@@ -20743,7 +20743,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeOwnershipUnavailable attributeOwnershipUnavailable = 52;
+      // .rti1516_2025.fedpro.AttributeOwnershipUnavailable attributeOwnershipUnavailable = 52;
       case 52:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 162)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributeownershipunavailable(), ptr);
@@ -20751,7 +20751,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RequestAttributeOwnershipRelease requestAttributeOwnershipRelease = 53;
+      // .rti1516_2025.fedpro.RequestAttributeOwnershipRelease requestAttributeOwnershipRelease = 53;
       case 53:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestattributeownershiprelease(), ptr);
@@ -20759,7 +20759,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation confirmAttributeOwnershipAcquisitionCancellation = 54;
+      // .rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation confirmAttributeOwnershipAcquisitionCancellation = 54;
       case 54:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 178)) {
           ptr = ctx->ParseMessage(_internal_mutable_confirmattributeownershipacquisitioncancellation(), ptr);
@@ -20767,7 +20767,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.InformAttributeOwnership informAttributeOwnership = 55;
+      // .rti1516_2025.fedpro.InformAttributeOwnership informAttributeOwnership = 55;
       case 55:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 186)) {
           ptr = ctx->ParseMessage(_internal_mutable_informattributeownership(), ptr);
@@ -20775,7 +20775,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeIsNotOwned attributeIsNotOwned = 56;
+      // .rti1516_2025.fedpro.AttributeIsNotOwned attributeIsNotOwned = 56;
       case 56:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 194)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributeisnotowned(), ptr);
@@ -20783,7 +20783,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.AttributeIsOwnedByRTI attributeIsOwnedByRTI = 57;
+      // .rti1516_2025.fedpro.AttributeIsOwnedByRTI attributeIsOwnedByRTI = 57;
       case 57:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 202)) {
           ptr = ctx->ParseMessage(_internal_mutable_attributeisownedbyrti(), ptr);
@@ -20791,7 +20791,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TimeRegulationEnabled timeRegulationEnabled = 58;
+      // .rti1516_2025.fedpro.TimeRegulationEnabled timeRegulationEnabled = 58;
       case 58:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 210)) {
           ptr = ctx->ParseMessage(_internal_mutable_timeregulationenabled(), ptr);
@@ -20799,7 +20799,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TimeConstrainedEnabled timeConstrainedEnabled = 59;
+      // .rti1516_2025.fedpro.TimeConstrainedEnabled timeConstrainedEnabled = 59;
       case 59:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 218)) {
           ptr = ctx->ParseMessage(_internal_mutable_timeconstrainedenabled(), ptr);
@@ -20807,7 +20807,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.FlushQueueGrant flushQueueGrant = 60;
+      // .rti1516_2025.fedpro.FlushQueueGrant flushQueueGrant = 60;
       case 60:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 226)) {
           ptr = ctx->ParseMessage(_internal_mutable_flushqueuegrant(), ptr);
@@ -20815,7 +20815,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.TimeAdvanceGrant timeAdvanceGrant = 61;
+      // .rti1516_2025.fedpro.TimeAdvanceGrant timeAdvanceGrant = 61;
       case 61:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 234)) {
           ptr = ctx->ParseMessage(_internal_mutable_timeadvancegrant(), ptr);
@@ -20823,7 +20823,7 @@ const char* CallbackRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.RequestRetraction requestRetraction = 62;
+      // .rti1516_2025.fedpro.RequestRetraction requestRetraction = 62;
       case 62:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 242)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestretraction(), ptr);
@@ -20856,438 +20856,438 @@ failure:
 
 uint8_t* CallbackRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.CallbackRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.CallbackRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.ConnectionLost connectionLost = 1;
+  // .rti1516_2025.fedpro.ConnectionLost connectionLost = 1;
   if (_internal_has_connectionlost()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::connectionlost(this),
         _Internal::connectionlost(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;
+  // .rti1516_2025.fedpro.ReportFederationExecutions reportFederationExecutions = 2;
   if (_internal_has_reportfederationexecutions()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::reportfederationexecutions(this),
         _Internal::reportfederationexecutions(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
+  // .rti1516_2025.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
   if (_internal_has_reportfederationexecutionmembers()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::reportfederationexecutionmembers(this),
         _Internal::reportfederationexecutionmembers(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
+  // .rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
   if (_internal_has_reportfederationexecutiondoesnotexist()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::reportfederationexecutiondoesnotexist(this),
         _Internal::reportfederationexecutiondoesnotexist(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederateResigned federateResigned = 5;
+  // .rti1516_2025.fedpro.FederateResigned federateResigned = 5;
   if (_internal_has_federateresigned()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::federateresigned(this),
         _Internal::federateresigned(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
+  // .rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
   if (_internal_has_synchronizationpointregistrationsucceeded()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::synchronizationpointregistrationsucceeded(this),
         _Internal::synchronizationpointregistrationsucceeded(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
+  // .rti1516_2025.fedpro.SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
   if (_internal_has_synchronizationpointregistrationfailed()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(7, _Internal::synchronizationpointregistrationfailed(this),
         _Internal::synchronizationpointregistrationfailed(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
+  // .rti1516_2025.fedpro.AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
   if (_internal_has_announcesynchronizationpoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(8, _Internal::announcesynchronizationpoint(this),
         _Internal::announcesynchronizationpoint(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationSynchronized federationSynchronized = 9;
+  // .rti1516_2025.fedpro.FederationSynchronized federationSynchronized = 9;
   if (_internal_has_federationsynchronized()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(9, _Internal::federationsynchronized(this),
         _Internal::federationsynchronized(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.InitiateFederateSave initiateFederateSave = 10;
+  // .rti1516_2025.fedpro.InitiateFederateSave initiateFederateSave = 10;
   if (_internal_has_initiatefederatesave()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(10, _Internal::initiatefederatesave(this),
         _Internal::initiatefederatesave(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.InitiateFederateSaveWithTime initiateFederateSaveWithTime = 11;
+  // .rti1516_2025.fedpro.InitiateFederateSaveWithTime initiateFederateSaveWithTime = 11;
   if (_internal_has_initiatefederatesavewithtime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(11, _Internal::initiatefederatesavewithtime(this),
         _Internal::initiatefederatesavewithtime(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationSaved federationSaved = 12;
+  // .rti1516_2025.fedpro.FederationSaved federationSaved = 12;
   if (_internal_has_federationsaved()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(12, _Internal::federationsaved(this),
         _Internal::federationsaved(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationNotSaved federationNotSaved = 13;
+  // .rti1516_2025.fedpro.FederationNotSaved federationNotSaved = 13;
   if (_internal_has_federationnotsaved()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(13, _Internal::federationnotsaved(this),
         _Internal::federationnotsaved(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationSaveStatusResponse federationSaveStatusResponse = 14;
+  // .rti1516_2025.fedpro.FederationSaveStatusResponse federationSaveStatusResponse = 14;
   if (_internal_has_federationsavestatusresponse()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(14, _Internal::federationsavestatusresponse(this),
         _Internal::federationsavestatusresponse(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RequestFederationRestoreSucceeded requestFederationRestoreSucceeded = 15;
+  // .rti1516_2025.fedpro.RequestFederationRestoreSucceeded requestFederationRestoreSucceeded = 15;
   if (_internal_has_requestfederationrestoresucceeded()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(15, _Internal::requestfederationrestoresucceeded(this),
         _Internal::requestfederationrestoresucceeded(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RequestFederationRestoreFailed requestFederationRestoreFailed = 16;
+  // .rti1516_2025.fedpro.RequestFederationRestoreFailed requestFederationRestoreFailed = 16;
   if (_internal_has_requestfederationrestorefailed()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(16, _Internal::requestfederationrestorefailed(this),
         _Internal::requestfederationrestorefailed(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationRestoreBegun federationRestoreBegun = 17;
+  // .rti1516_2025.fedpro.FederationRestoreBegun federationRestoreBegun = 17;
   if (_internal_has_federationrestorebegun()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(17, _Internal::federationrestorebegun(this),
         _Internal::federationrestorebegun(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.InitiateFederateRestore initiateFederateRestore = 18;
+  // .rti1516_2025.fedpro.InitiateFederateRestore initiateFederateRestore = 18;
   if (_internal_has_initiatefederaterestore()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(18, _Internal::initiatefederaterestore(this),
         _Internal::initiatefederaterestore(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationRestored federationRestored = 19;
+  // .rti1516_2025.fedpro.FederationRestored federationRestored = 19;
   if (_internal_has_federationrestored()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(19, _Internal::federationrestored(this),
         _Internal::federationrestored(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationNotRestored federationNotRestored = 20;
+  // .rti1516_2025.fedpro.FederationNotRestored federationNotRestored = 20;
   if (_internal_has_federationnotrestored()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(20, _Internal::federationnotrestored(this),
         _Internal::federationnotrestored(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FederationRestoreStatusResponse federationRestoreStatusResponse = 21;
+  // .rti1516_2025.fedpro.FederationRestoreStatusResponse federationRestoreStatusResponse = 21;
   if (_internal_has_federationrestorestatusresponse()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(21, _Internal::federationrestorestatusresponse(this),
         _Internal::federationrestorestatusresponse(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.StartRegistrationForObjectClass startRegistrationForObjectClass = 22;
+  // .rti1516_2025.fedpro.StartRegistrationForObjectClass startRegistrationForObjectClass = 22;
   if (_internal_has_startregistrationforobjectclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(22, _Internal::startregistrationforobjectclass(this),
         _Internal::startregistrationforobjectclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.StopRegistrationForObjectClass stopRegistrationForObjectClass = 23;
+  // .rti1516_2025.fedpro.StopRegistrationForObjectClass stopRegistrationForObjectClass = 23;
   if (_internal_has_stopregistrationforobjectclass()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(23, _Internal::stopregistrationforobjectclass(this),
         _Internal::stopregistrationforobjectclass(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TurnInteractionsOn turnInteractionsOn = 24;
+  // .rti1516_2025.fedpro.TurnInteractionsOn turnInteractionsOn = 24;
   if (_internal_has_turninteractionson()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(24, _Internal::turninteractionson(this),
         _Internal::turninteractionson(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TurnInteractionsOff turnInteractionsOff = 25;
+  // .rti1516_2025.fedpro.TurnInteractionsOff turnInteractionsOff = 25;
   if (_internal_has_turninteractionsoff()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(25, _Internal::turninteractionsoff(this),
         _Internal::turninteractionsoff(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded objectInstanceNameReservationSucceeded = 26;
+  // .rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded objectInstanceNameReservationSucceeded = 26;
   if (_internal_has_objectinstancenamereservationsucceeded()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(26, _Internal::objectinstancenamereservationsucceeded(this),
         _Internal::objectinstancenamereservationsucceeded(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ObjectInstanceNameReservationFailed objectInstanceNameReservationFailed = 27;
+  // .rti1516_2025.fedpro.ObjectInstanceNameReservationFailed objectInstanceNameReservationFailed = 27;
   if (_internal_has_objectinstancenamereservationfailed()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(27, _Internal::objectinstancenamereservationfailed(this),
         _Internal::objectinstancenamereservationfailed(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded multipleObjectInstanceNameReservationSucceeded = 28;
+  // .rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded multipleObjectInstanceNameReservationSucceeded = 28;
   if (_internal_has_multipleobjectinstancenamereservationsucceeded()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(28, _Internal::multipleobjectinstancenamereservationsucceeded(this),
         _Internal::multipleobjectinstancenamereservationsucceeded(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed multipleObjectInstanceNameReservationFailed = 29;
+  // .rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed multipleObjectInstanceNameReservationFailed = 29;
   if (_internal_has_multipleobjectinstancenamereservationfailed()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(29, _Internal::multipleobjectinstancenamereservationfailed(this),
         _Internal::multipleobjectinstancenamereservationfailed(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.DiscoverObjectInstance discoverObjectInstance = 30;
+  // .rti1516_2025.fedpro.DiscoverObjectInstance discoverObjectInstance = 30;
   if (_internal_has_discoverobjectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(30, _Internal::discoverobjectinstance(this),
         _Internal::discoverobjectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReflectAttributeValues reflectAttributeValues = 31;
+  // .rti1516_2025.fedpro.ReflectAttributeValues reflectAttributeValues = 31;
   if (_internal_has_reflectattributevalues()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(31, _Internal::reflectattributevalues(this),
         _Internal::reflectattributevalues(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReflectAttributeValuesWithTime reflectAttributeValuesWithTime = 32;
+  // .rti1516_2025.fedpro.ReflectAttributeValuesWithTime reflectAttributeValuesWithTime = 32;
   if (_internal_has_reflectattributevalueswithtime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(32, _Internal::reflectattributevalueswithtime(this),
         _Internal::reflectattributevalueswithtime(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReceiveInteraction receiveInteraction = 33;
+  // .rti1516_2025.fedpro.ReceiveInteraction receiveInteraction = 33;
   if (_internal_has_receiveinteraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(33, _Internal::receiveinteraction(this),
         _Internal::receiveinteraction(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReceiveInteractionWithTime receiveInteractionWithTime = 34;
+  // .rti1516_2025.fedpro.ReceiveInteractionWithTime receiveInteractionWithTime = 34;
   if (_internal_has_receiveinteractionwithtime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(34, _Internal::receiveinteractionwithtime(this),
         _Internal::receiveinteractionwithtime(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReceiveDirectedInteraction receiveDirectedInteraction = 35;
+  // .rti1516_2025.fedpro.ReceiveDirectedInteraction receiveDirectedInteraction = 35;
   if (_internal_has_receivedirectedinteraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(35, _Internal::receivedirectedinteraction(this),
         _Internal::receivedirectedinteraction(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime receiveDirectedInteractionWithTime = 36;
+  // .rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime receiveDirectedInteractionWithTime = 36;
   if (_internal_has_receivedirectedinteractionwithtime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(36, _Internal::receivedirectedinteractionwithtime(this),
         _Internal::receivedirectedinteractionwithtime(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RemoveObjectInstance removeObjectInstance = 37;
+  // .rti1516_2025.fedpro.RemoveObjectInstance removeObjectInstance = 37;
   if (_internal_has_removeobjectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(37, _Internal::removeobjectinstance(this),
         _Internal::removeobjectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RemoveObjectInstanceWithTime removeObjectInstanceWithTime = 38;
+  // .rti1516_2025.fedpro.RemoveObjectInstanceWithTime removeObjectInstanceWithTime = 38;
   if (_internal_has_removeobjectinstancewithtime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(38, _Internal::removeobjectinstancewithtime(this),
         _Internal::removeobjectinstancewithtime(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributesInScope attributesInScope = 39;
+  // .rti1516_2025.fedpro.AttributesInScope attributesInScope = 39;
   if (_internal_has_attributesinscope()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(39, _Internal::attributesinscope(this),
         _Internal::attributesinscope(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributesOutOfScope attributesOutOfScope = 40;
+  // .rti1516_2025.fedpro.AttributesOutOfScope attributesOutOfScope = 40;
   if (_internal_has_attributesoutofscope()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(40, _Internal::attributesoutofscope(this),
         _Internal::attributesoutofscope(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ProvideAttributeValueUpdate provideAttributeValueUpdate = 41;
+  // .rti1516_2025.fedpro.ProvideAttributeValueUpdate provideAttributeValueUpdate = 41;
   if (_internal_has_provideattributevalueupdate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(41, _Internal::provideattributevalueupdate(this),
         _Internal::provideattributevalueupdate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance turnUpdatesOnForObjectInstance = 42;
+  // .rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance turnUpdatesOnForObjectInstance = 42;
   if (_internal_has_turnupdatesonforobjectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(42, _Internal::turnupdatesonforobjectinstance(this),
         _Internal::turnupdatesonforobjectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
+  // .rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
   if (_internal_has_turnupdatesonforobjectinstancewithrate()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(43, _Internal::turnupdatesonforobjectinstancewithrate(this),
         _Internal::turnupdatesonforobjectinstancewithrate(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
+  // .rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
   if (_internal_has_turnupdatesoffforobjectinstance()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(44, _Internal::turnupdatesoffforobjectinstance(this),
         _Internal::turnupdatesoffforobjectinstance(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
+  // .rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
   if (_internal_has_confirmattributetransportationtypechange()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(45, _Internal::confirmattributetransportationtypechange(this),
         _Internal::confirmattributetransportationtypechange(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;
+  // .rti1516_2025.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;
   if (_internal_has_reportattributetransportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(46, _Internal::reportattributetransportationtype(this),
         _Internal::reportattributetransportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
+  // .rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
   if (_internal_has_confirminteractiontransportationtypechange()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(47, _Internal::confirminteractiontransportationtypechange(this),
         _Internal::confirminteractiontransportationtypechange(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ReportInteractionTransportationType reportInteractionTransportationType = 48;
+  // .rti1516_2025.fedpro.ReportInteractionTransportationType reportInteractionTransportationType = 48;
   if (_internal_has_reportinteractiontransportationtype()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(48, _Internal::reportinteractiontransportationtype(this),
         _Internal::reportinteractiontransportationtype(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
+  // .rti1516_2025.fedpro.RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
   if (_internal_has_requestattributeownershipassumption()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(49, _Internal::requestattributeownershipassumption(this),
         _Internal::requestattributeownershipassumption(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RequestDivestitureConfirmation requestDivestitureConfirmation = 50;
+  // .rti1516_2025.fedpro.RequestDivestitureConfirmation requestDivestitureConfirmation = 50;
   if (_internal_has_requestdivestitureconfirmation()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(50, _Internal::requestdivestitureconfirmation(this),
         _Internal::requestdivestitureconfirmation(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification attributeOwnershipAcquisitionNotification = 51;
+  // .rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification attributeOwnershipAcquisitionNotification = 51;
   if (_internal_has_attributeownershipacquisitionnotification()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(51, _Internal::attributeownershipacquisitionnotification(this),
         _Internal::attributeownershipacquisitionnotification(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeOwnershipUnavailable attributeOwnershipUnavailable = 52;
+  // .rti1516_2025.fedpro.AttributeOwnershipUnavailable attributeOwnershipUnavailable = 52;
   if (_internal_has_attributeownershipunavailable()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(52, _Internal::attributeownershipunavailable(this),
         _Internal::attributeownershipunavailable(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RequestAttributeOwnershipRelease requestAttributeOwnershipRelease = 53;
+  // .rti1516_2025.fedpro.RequestAttributeOwnershipRelease requestAttributeOwnershipRelease = 53;
   if (_internal_has_requestattributeownershiprelease()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(53, _Internal::requestattributeownershiprelease(this),
         _Internal::requestattributeownershiprelease(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation confirmAttributeOwnershipAcquisitionCancellation = 54;
+  // .rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation confirmAttributeOwnershipAcquisitionCancellation = 54;
   if (_internal_has_confirmattributeownershipacquisitioncancellation()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(54, _Internal::confirmattributeownershipacquisitioncancellation(this),
         _Internal::confirmattributeownershipacquisitioncancellation(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.InformAttributeOwnership informAttributeOwnership = 55;
+  // .rti1516_2025.fedpro.InformAttributeOwnership informAttributeOwnership = 55;
   if (_internal_has_informattributeownership()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(55, _Internal::informattributeownership(this),
         _Internal::informattributeownership(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeIsNotOwned attributeIsNotOwned = 56;
+  // .rti1516_2025.fedpro.AttributeIsNotOwned attributeIsNotOwned = 56;
   if (_internal_has_attributeisnotowned()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(56, _Internal::attributeisnotowned(this),
         _Internal::attributeisnotowned(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.AttributeIsOwnedByRTI attributeIsOwnedByRTI = 57;
+  // .rti1516_2025.fedpro.AttributeIsOwnedByRTI attributeIsOwnedByRTI = 57;
   if (_internal_has_attributeisownedbyrti()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(57, _Internal::attributeisownedbyrti(this),
         _Internal::attributeisownedbyrti(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TimeRegulationEnabled timeRegulationEnabled = 58;
+  // .rti1516_2025.fedpro.TimeRegulationEnabled timeRegulationEnabled = 58;
   if (_internal_has_timeregulationenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(58, _Internal::timeregulationenabled(this),
         _Internal::timeregulationenabled(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TimeConstrainedEnabled timeConstrainedEnabled = 59;
+  // .rti1516_2025.fedpro.TimeConstrainedEnabled timeConstrainedEnabled = 59;
   if (_internal_has_timeconstrainedenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(59, _Internal::timeconstrainedenabled(this),
         _Internal::timeconstrainedenabled(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.FlushQueueGrant flushQueueGrant = 60;
+  // .rti1516_2025.fedpro.FlushQueueGrant flushQueueGrant = 60;
   if (_internal_has_flushqueuegrant()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(60, _Internal::flushqueuegrant(this),
         _Internal::flushqueuegrant(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.TimeAdvanceGrant timeAdvanceGrant = 61;
+  // .rti1516_2025.fedpro.TimeAdvanceGrant timeAdvanceGrant = 61;
   if (_internal_has_timeadvancegrant()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(61, _Internal::timeadvancegrant(this),
         _Internal::timeadvancegrant(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.RequestRetraction requestRetraction = 62;
+  // .rti1516_2025.fedpro.RequestRetraction requestRetraction = 62;
   if (_internal_has_requestretraction()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(62, _Internal::requestretraction(this),
@@ -21298,12 +21298,12 @@ uint8_t* CallbackRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.CallbackRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.CallbackRequest)
   return target;
 }
 
 size_t CallbackRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.CallbackRequest)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.CallbackRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -21311,434 +21311,434 @@ size_t CallbackRequest::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (callbackRequest_case()) {
-    // .rti1516_202X.fedpro.ConnectionLost connectionLost = 1;
+    // .rti1516_2025.fedpro.ConnectionLost connectionLost = 1;
     case kConnectionLost: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.connectionlost_);
       break;
     }
-    // .rti1516_202X.fedpro.ReportFederationExecutions reportFederationExecutions = 2;
+    // .rti1516_2025.fedpro.ReportFederationExecutions reportFederationExecutions = 2;
     case kReportFederationExecutions: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.reportfederationexecutions_);
       break;
     }
-    // .rti1516_202X.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
+    // .rti1516_2025.fedpro.ReportFederationExecutionMembers reportFederationExecutionMembers = 3;
     case kReportFederationExecutionMembers: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.reportfederationexecutionmembers_);
       break;
     }
-    // .rti1516_202X.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
+    // .rti1516_2025.fedpro.ReportFederationExecutionDoesNotExist reportFederationExecutionDoesNotExist = 4;
     case kReportFederationExecutionDoesNotExist: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.reportfederationexecutiondoesnotexist_);
       break;
     }
-    // .rti1516_202X.fedpro.FederateResigned federateResigned = 5;
+    // .rti1516_2025.fedpro.FederateResigned federateResigned = 5;
     case kFederateResigned: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federateresigned_);
       break;
     }
-    // .rti1516_202X.fedpro.SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
+    // .rti1516_2025.fedpro.SynchronizationPointRegistrationSucceeded synchronizationPointRegistrationSucceeded = 6;
     case kSynchronizationPointRegistrationSucceeded: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.synchronizationpointregistrationsucceeded_);
       break;
     }
-    // .rti1516_202X.fedpro.SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
+    // .rti1516_2025.fedpro.SynchronizationPointRegistrationFailed synchronizationPointRegistrationFailed = 7;
     case kSynchronizationPointRegistrationFailed: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.synchronizationpointregistrationfailed_);
       break;
     }
-    // .rti1516_202X.fedpro.AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
+    // .rti1516_2025.fedpro.AnnounceSynchronizationPoint announceSynchronizationPoint = 8;
     case kAnnounceSynchronizationPoint: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.announcesynchronizationpoint_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationSynchronized federationSynchronized = 9;
+    // .rti1516_2025.fedpro.FederationSynchronized federationSynchronized = 9;
     case kFederationSynchronized: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationsynchronized_);
       break;
     }
-    // .rti1516_202X.fedpro.InitiateFederateSave initiateFederateSave = 10;
+    // .rti1516_2025.fedpro.InitiateFederateSave initiateFederateSave = 10;
     case kInitiateFederateSave: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.initiatefederatesave_);
       break;
     }
-    // .rti1516_202X.fedpro.InitiateFederateSaveWithTime initiateFederateSaveWithTime = 11;
+    // .rti1516_2025.fedpro.InitiateFederateSaveWithTime initiateFederateSaveWithTime = 11;
     case kInitiateFederateSaveWithTime: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.initiatefederatesavewithtime_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationSaved federationSaved = 12;
+    // .rti1516_2025.fedpro.FederationSaved federationSaved = 12;
     case kFederationSaved: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationsaved_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationNotSaved federationNotSaved = 13;
+    // .rti1516_2025.fedpro.FederationNotSaved federationNotSaved = 13;
     case kFederationNotSaved: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationnotsaved_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationSaveStatusResponse federationSaveStatusResponse = 14;
+    // .rti1516_2025.fedpro.FederationSaveStatusResponse federationSaveStatusResponse = 14;
     case kFederationSaveStatusResponse: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationsavestatusresponse_);
       break;
     }
-    // .rti1516_202X.fedpro.RequestFederationRestoreSucceeded requestFederationRestoreSucceeded = 15;
+    // .rti1516_2025.fedpro.RequestFederationRestoreSucceeded requestFederationRestoreSucceeded = 15;
     case kRequestFederationRestoreSucceeded: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.requestfederationrestoresucceeded_);
       break;
     }
-    // .rti1516_202X.fedpro.RequestFederationRestoreFailed requestFederationRestoreFailed = 16;
+    // .rti1516_2025.fedpro.RequestFederationRestoreFailed requestFederationRestoreFailed = 16;
     case kRequestFederationRestoreFailed: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.requestfederationrestorefailed_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationRestoreBegun federationRestoreBegun = 17;
+    // .rti1516_2025.fedpro.FederationRestoreBegun federationRestoreBegun = 17;
     case kFederationRestoreBegun: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationrestorebegun_);
       break;
     }
-    // .rti1516_202X.fedpro.InitiateFederateRestore initiateFederateRestore = 18;
+    // .rti1516_2025.fedpro.InitiateFederateRestore initiateFederateRestore = 18;
     case kInitiateFederateRestore: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.initiatefederaterestore_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationRestored federationRestored = 19;
+    // .rti1516_2025.fedpro.FederationRestored federationRestored = 19;
     case kFederationRestored: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationrestored_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationNotRestored federationNotRestored = 20;
+    // .rti1516_2025.fedpro.FederationNotRestored federationNotRestored = 20;
     case kFederationNotRestored: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationnotrestored_);
       break;
     }
-    // .rti1516_202X.fedpro.FederationRestoreStatusResponse federationRestoreStatusResponse = 21;
+    // .rti1516_2025.fedpro.FederationRestoreStatusResponse federationRestoreStatusResponse = 21;
     case kFederationRestoreStatusResponse: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.federationrestorestatusresponse_);
       break;
     }
-    // .rti1516_202X.fedpro.StartRegistrationForObjectClass startRegistrationForObjectClass = 22;
+    // .rti1516_2025.fedpro.StartRegistrationForObjectClass startRegistrationForObjectClass = 22;
     case kStartRegistrationForObjectClass: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.startregistrationforobjectclass_);
       break;
     }
-    // .rti1516_202X.fedpro.StopRegistrationForObjectClass stopRegistrationForObjectClass = 23;
+    // .rti1516_2025.fedpro.StopRegistrationForObjectClass stopRegistrationForObjectClass = 23;
     case kStopRegistrationForObjectClass: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.stopregistrationforobjectclass_);
       break;
     }
-    // .rti1516_202X.fedpro.TurnInteractionsOn turnInteractionsOn = 24;
+    // .rti1516_2025.fedpro.TurnInteractionsOn turnInteractionsOn = 24;
     case kTurnInteractionsOn: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.turninteractionson_);
       break;
     }
-    // .rti1516_202X.fedpro.TurnInteractionsOff turnInteractionsOff = 25;
+    // .rti1516_2025.fedpro.TurnInteractionsOff turnInteractionsOff = 25;
     case kTurnInteractionsOff: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.turninteractionsoff_);
       break;
     }
-    // .rti1516_202X.fedpro.ObjectInstanceNameReservationSucceeded objectInstanceNameReservationSucceeded = 26;
+    // .rti1516_2025.fedpro.ObjectInstanceNameReservationSucceeded objectInstanceNameReservationSucceeded = 26;
     case kObjectInstanceNameReservationSucceeded: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.objectinstancenamereservationsucceeded_);
       break;
     }
-    // .rti1516_202X.fedpro.ObjectInstanceNameReservationFailed objectInstanceNameReservationFailed = 27;
+    // .rti1516_2025.fedpro.ObjectInstanceNameReservationFailed objectInstanceNameReservationFailed = 27;
     case kObjectInstanceNameReservationFailed: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.objectinstancenamereservationfailed_);
       break;
     }
-    // .rti1516_202X.fedpro.MultipleObjectInstanceNameReservationSucceeded multipleObjectInstanceNameReservationSucceeded = 28;
+    // .rti1516_2025.fedpro.MultipleObjectInstanceNameReservationSucceeded multipleObjectInstanceNameReservationSucceeded = 28;
     case kMultipleObjectInstanceNameReservationSucceeded: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.multipleobjectinstancenamereservationsucceeded_);
       break;
     }
-    // .rti1516_202X.fedpro.MultipleObjectInstanceNameReservationFailed multipleObjectInstanceNameReservationFailed = 29;
+    // .rti1516_2025.fedpro.MultipleObjectInstanceNameReservationFailed multipleObjectInstanceNameReservationFailed = 29;
     case kMultipleObjectInstanceNameReservationFailed: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.multipleobjectinstancenamereservationfailed_);
       break;
     }
-    // .rti1516_202X.fedpro.DiscoverObjectInstance discoverObjectInstance = 30;
+    // .rti1516_2025.fedpro.DiscoverObjectInstance discoverObjectInstance = 30;
     case kDiscoverObjectInstance: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.discoverobjectinstance_);
       break;
     }
-    // .rti1516_202X.fedpro.ReflectAttributeValues reflectAttributeValues = 31;
+    // .rti1516_2025.fedpro.ReflectAttributeValues reflectAttributeValues = 31;
     case kReflectAttributeValues: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.reflectattributevalues_);
       break;
     }
-    // .rti1516_202X.fedpro.ReflectAttributeValuesWithTime reflectAttributeValuesWithTime = 32;
+    // .rti1516_2025.fedpro.ReflectAttributeValuesWithTime reflectAttributeValuesWithTime = 32;
     case kReflectAttributeValuesWithTime: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.reflectattributevalueswithtime_);
       break;
     }
-    // .rti1516_202X.fedpro.ReceiveInteraction receiveInteraction = 33;
+    // .rti1516_2025.fedpro.ReceiveInteraction receiveInteraction = 33;
     case kReceiveInteraction: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.receiveinteraction_);
       break;
     }
-    // .rti1516_202X.fedpro.ReceiveInteractionWithTime receiveInteractionWithTime = 34;
+    // .rti1516_2025.fedpro.ReceiveInteractionWithTime receiveInteractionWithTime = 34;
     case kReceiveInteractionWithTime: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.receiveinteractionwithtime_);
       break;
     }
-    // .rti1516_202X.fedpro.ReceiveDirectedInteraction receiveDirectedInteraction = 35;
+    // .rti1516_2025.fedpro.ReceiveDirectedInteraction receiveDirectedInteraction = 35;
     case kReceiveDirectedInteraction: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.receivedirectedinteraction_);
       break;
     }
-    // .rti1516_202X.fedpro.ReceiveDirectedInteractionWithTime receiveDirectedInteractionWithTime = 36;
+    // .rti1516_2025.fedpro.ReceiveDirectedInteractionWithTime receiveDirectedInteractionWithTime = 36;
     case kReceiveDirectedInteractionWithTime: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.receivedirectedinteractionwithtime_);
       break;
     }
-    // .rti1516_202X.fedpro.RemoveObjectInstance removeObjectInstance = 37;
+    // .rti1516_2025.fedpro.RemoveObjectInstance removeObjectInstance = 37;
     case kRemoveObjectInstance: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.removeobjectinstance_);
       break;
     }
-    // .rti1516_202X.fedpro.RemoveObjectInstanceWithTime removeObjectInstanceWithTime = 38;
+    // .rti1516_2025.fedpro.RemoveObjectInstanceWithTime removeObjectInstanceWithTime = 38;
     case kRemoveObjectInstanceWithTime: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.removeobjectinstancewithtime_);
       break;
     }
-    // .rti1516_202X.fedpro.AttributesInScope attributesInScope = 39;
+    // .rti1516_2025.fedpro.AttributesInScope attributesInScope = 39;
     case kAttributesInScope: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.attributesinscope_);
       break;
     }
-    // .rti1516_202X.fedpro.AttributesOutOfScope attributesOutOfScope = 40;
+    // .rti1516_2025.fedpro.AttributesOutOfScope attributesOutOfScope = 40;
     case kAttributesOutOfScope: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.attributesoutofscope_);
       break;
     }
-    // .rti1516_202X.fedpro.ProvideAttributeValueUpdate provideAttributeValueUpdate = 41;
+    // .rti1516_2025.fedpro.ProvideAttributeValueUpdate provideAttributeValueUpdate = 41;
     case kProvideAttributeValueUpdate: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.provideattributevalueupdate_);
       break;
     }
-    // .rti1516_202X.fedpro.TurnUpdatesOnForObjectInstance turnUpdatesOnForObjectInstance = 42;
+    // .rti1516_2025.fedpro.TurnUpdatesOnForObjectInstance turnUpdatesOnForObjectInstance = 42;
     case kTurnUpdatesOnForObjectInstance: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.turnupdatesonforobjectinstance_);
       break;
     }
-    // .rti1516_202X.fedpro.TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
+    // .rti1516_2025.fedpro.TurnUpdatesOnForObjectInstanceWithRate turnUpdatesOnForObjectInstanceWithRate = 43;
     case kTurnUpdatesOnForObjectInstanceWithRate: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.turnupdatesonforobjectinstancewithrate_);
       break;
     }
-    // .rti1516_202X.fedpro.TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
+    // .rti1516_2025.fedpro.TurnUpdatesOffForObjectInstance turnUpdatesOffForObjectInstance = 44;
     case kTurnUpdatesOffForObjectInstance: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.turnupdatesoffforobjectinstance_);
       break;
     }
-    // .rti1516_202X.fedpro.ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
+    // .rti1516_2025.fedpro.ConfirmAttributeTransportationTypeChange confirmAttributeTransportationTypeChange = 45;
     case kConfirmAttributeTransportationTypeChange: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.confirmattributetransportationtypechange_);
       break;
     }
-    // .rti1516_202X.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;
+    // .rti1516_2025.fedpro.ReportAttributeTransportationType reportAttributeTransportationType = 46;
     case kReportAttributeTransportationType: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.reportattributetransportationtype_);
       break;
     }
-    // .rti1516_202X.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
+    // .rti1516_2025.fedpro.ConfirmInteractionTransportationTypeChange confirmInteractionTransportationTypeChange = 47;
     case kConfirmInteractionTransportationTypeChange: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.confirminteractiontransportationtypechange_);
       break;
     }
-    // .rti1516_202X.fedpro.ReportInteractionTransportationType reportInteractionTransportationType = 48;
+    // .rti1516_2025.fedpro.ReportInteractionTransportationType reportInteractionTransportationType = 48;
     case kReportInteractionTransportationType: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.reportinteractiontransportationtype_);
       break;
     }
-    // .rti1516_202X.fedpro.RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
+    // .rti1516_2025.fedpro.RequestAttributeOwnershipAssumption requestAttributeOwnershipAssumption = 49;
     case kRequestAttributeOwnershipAssumption: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.requestattributeownershipassumption_);
       break;
     }
-    // .rti1516_202X.fedpro.RequestDivestitureConfirmation requestDivestitureConfirmation = 50;
+    // .rti1516_2025.fedpro.RequestDivestitureConfirmation requestDivestitureConfirmation = 50;
     case kRequestDivestitureConfirmation: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.requestdivestitureconfirmation_);
       break;
     }
-    // .rti1516_202X.fedpro.AttributeOwnershipAcquisitionNotification attributeOwnershipAcquisitionNotification = 51;
+    // .rti1516_2025.fedpro.AttributeOwnershipAcquisitionNotification attributeOwnershipAcquisitionNotification = 51;
     case kAttributeOwnershipAcquisitionNotification: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.attributeownershipacquisitionnotification_);
       break;
     }
-    // .rti1516_202X.fedpro.AttributeOwnershipUnavailable attributeOwnershipUnavailable = 52;
+    // .rti1516_2025.fedpro.AttributeOwnershipUnavailable attributeOwnershipUnavailable = 52;
     case kAttributeOwnershipUnavailable: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.attributeownershipunavailable_);
       break;
     }
-    // .rti1516_202X.fedpro.RequestAttributeOwnershipRelease requestAttributeOwnershipRelease = 53;
+    // .rti1516_2025.fedpro.RequestAttributeOwnershipRelease requestAttributeOwnershipRelease = 53;
     case kRequestAttributeOwnershipRelease: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.requestattributeownershiprelease_);
       break;
     }
-    // .rti1516_202X.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation confirmAttributeOwnershipAcquisitionCancellation = 54;
+    // .rti1516_2025.fedpro.ConfirmAttributeOwnershipAcquisitionCancellation confirmAttributeOwnershipAcquisitionCancellation = 54;
     case kConfirmAttributeOwnershipAcquisitionCancellation: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.confirmattributeownershipacquisitioncancellation_);
       break;
     }
-    // .rti1516_202X.fedpro.InformAttributeOwnership informAttributeOwnership = 55;
+    // .rti1516_2025.fedpro.InformAttributeOwnership informAttributeOwnership = 55;
     case kInformAttributeOwnership: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.informattributeownership_);
       break;
     }
-    // .rti1516_202X.fedpro.AttributeIsNotOwned attributeIsNotOwned = 56;
+    // .rti1516_2025.fedpro.AttributeIsNotOwned attributeIsNotOwned = 56;
     case kAttributeIsNotOwned: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.attributeisnotowned_);
       break;
     }
-    // .rti1516_202X.fedpro.AttributeIsOwnedByRTI attributeIsOwnedByRTI = 57;
+    // .rti1516_2025.fedpro.AttributeIsOwnedByRTI attributeIsOwnedByRTI = 57;
     case kAttributeIsOwnedByRTI: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.attributeisownedbyrti_);
       break;
     }
-    // .rti1516_202X.fedpro.TimeRegulationEnabled timeRegulationEnabled = 58;
+    // .rti1516_2025.fedpro.TimeRegulationEnabled timeRegulationEnabled = 58;
     case kTimeRegulationEnabled: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.timeregulationenabled_);
       break;
     }
-    // .rti1516_202X.fedpro.TimeConstrainedEnabled timeConstrainedEnabled = 59;
+    // .rti1516_2025.fedpro.TimeConstrainedEnabled timeConstrainedEnabled = 59;
     case kTimeConstrainedEnabled: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.timeconstrainedenabled_);
       break;
     }
-    // .rti1516_202X.fedpro.FlushQueueGrant flushQueueGrant = 60;
+    // .rti1516_2025.fedpro.FlushQueueGrant flushQueueGrant = 60;
     case kFlushQueueGrant: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.flushqueuegrant_);
       break;
     }
-    // .rti1516_202X.fedpro.TimeAdvanceGrant timeAdvanceGrant = 61;
+    // .rti1516_2025.fedpro.TimeAdvanceGrant timeAdvanceGrant = 61;
     case kTimeAdvanceGrant: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackRequest_.timeadvancegrant_);
       break;
     }
-    // .rti1516_202X.fedpro.RequestRetraction requestRetraction = 62;
+    // .rti1516_2025.fedpro.RequestRetraction requestRetraction = 62;
     case kRequestRetraction: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -21762,319 +21762,319 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CallbackRequest::GetClassData(
 void CallbackRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CallbackRequest*>(&to_msg);
   auto& from = static_cast<const CallbackRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.CallbackRequest)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.CallbackRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   switch (from.callbackRequest_case()) {
     case kConnectionLost: {
-      _this->_internal_mutable_connectionlost()->::rti1516_202X::fedpro::ConnectionLost::MergeFrom(
+      _this->_internal_mutable_connectionlost()->::rti1516_2025::fedpro::ConnectionLost::MergeFrom(
           from._internal_connectionlost());
       break;
     }
     case kReportFederationExecutions: {
-      _this->_internal_mutable_reportfederationexecutions()->::rti1516_202X::fedpro::ReportFederationExecutions::MergeFrom(
+      _this->_internal_mutable_reportfederationexecutions()->::rti1516_2025::fedpro::ReportFederationExecutions::MergeFrom(
           from._internal_reportfederationexecutions());
       break;
     }
     case kReportFederationExecutionMembers: {
-      _this->_internal_mutable_reportfederationexecutionmembers()->::rti1516_202X::fedpro::ReportFederationExecutionMembers::MergeFrom(
+      _this->_internal_mutable_reportfederationexecutionmembers()->::rti1516_2025::fedpro::ReportFederationExecutionMembers::MergeFrom(
           from._internal_reportfederationexecutionmembers());
       break;
     }
     case kReportFederationExecutionDoesNotExist: {
-      _this->_internal_mutable_reportfederationexecutiondoesnotexist()->::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist::MergeFrom(
+      _this->_internal_mutable_reportfederationexecutiondoesnotexist()->::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist::MergeFrom(
           from._internal_reportfederationexecutiondoesnotexist());
       break;
     }
     case kFederateResigned: {
-      _this->_internal_mutable_federateresigned()->::rti1516_202X::fedpro::FederateResigned::MergeFrom(
+      _this->_internal_mutable_federateresigned()->::rti1516_2025::fedpro::FederateResigned::MergeFrom(
           from._internal_federateresigned());
       break;
     }
     case kSynchronizationPointRegistrationSucceeded: {
-      _this->_internal_mutable_synchronizationpointregistrationsucceeded()->::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded::MergeFrom(
+      _this->_internal_mutable_synchronizationpointregistrationsucceeded()->::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded::MergeFrom(
           from._internal_synchronizationpointregistrationsucceeded());
       break;
     }
     case kSynchronizationPointRegistrationFailed: {
-      _this->_internal_mutable_synchronizationpointregistrationfailed()->::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed::MergeFrom(
+      _this->_internal_mutable_synchronizationpointregistrationfailed()->::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed::MergeFrom(
           from._internal_synchronizationpointregistrationfailed());
       break;
     }
     case kAnnounceSynchronizationPoint: {
-      _this->_internal_mutable_announcesynchronizationpoint()->::rti1516_202X::fedpro::AnnounceSynchronizationPoint::MergeFrom(
+      _this->_internal_mutable_announcesynchronizationpoint()->::rti1516_2025::fedpro::AnnounceSynchronizationPoint::MergeFrom(
           from._internal_announcesynchronizationpoint());
       break;
     }
     case kFederationSynchronized: {
-      _this->_internal_mutable_federationsynchronized()->::rti1516_202X::fedpro::FederationSynchronized::MergeFrom(
+      _this->_internal_mutable_federationsynchronized()->::rti1516_2025::fedpro::FederationSynchronized::MergeFrom(
           from._internal_federationsynchronized());
       break;
     }
     case kInitiateFederateSave: {
-      _this->_internal_mutable_initiatefederatesave()->::rti1516_202X::fedpro::InitiateFederateSave::MergeFrom(
+      _this->_internal_mutable_initiatefederatesave()->::rti1516_2025::fedpro::InitiateFederateSave::MergeFrom(
           from._internal_initiatefederatesave());
       break;
     }
     case kInitiateFederateSaveWithTime: {
-      _this->_internal_mutable_initiatefederatesavewithtime()->::rti1516_202X::fedpro::InitiateFederateSaveWithTime::MergeFrom(
+      _this->_internal_mutable_initiatefederatesavewithtime()->::rti1516_2025::fedpro::InitiateFederateSaveWithTime::MergeFrom(
           from._internal_initiatefederatesavewithtime());
       break;
     }
     case kFederationSaved: {
-      _this->_internal_mutable_federationsaved()->::rti1516_202X::fedpro::FederationSaved::MergeFrom(
+      _this->_internal_mutable_federationsaved()->::rti1516_2025::fedpro::FederationSaved::MergeFrom(
           from._internal_federationsaved());
       break;
     }
     case kFederationNotSaved: {
-      _this->_internal_mutable_federationnotsaved()->::rti1516_202X::fedpro::FederationNotSaved::MergeFrom(
+      _this->_internal_mutable_federationnotsaved()->::rti1516_2025::fedpro::FederationNotSaved::MergeFrom(
           from._internal_federationnotsaved());
       break;
     }
     case kFederationSaveStatusResponse: {
-      _this->_internal_mutable_federationsavestatusresponse()->::rti1516_202X::fedpro::FederationSaveStatusResponse::MergeFrom(
+      _this->_internal_mutable_federationsavestatusresponse()->::rti1516_2025::fedpro::FederationSaveStatusResponse::MergeFrom(
           from._internal_federationsavestatusresponse());
       break;
     }
     case kRequestFederationRestoreSucceeded: {
-      _this->_internal_mutable_requestfederationrestoresucceeded()->::rti1516_202X::fedpro::RequestFederationRestoreSucceeded::MergeFrom(
+      _this->_internal_mutable_requestfederationrestoresucceeded()->::rti1516_2025::fedpro::RequestFederationRestoreSucceeded::MergeFrom(
           from._internal_requestfederationrestoresucceeded());
       break;
     }
     case kRequestFederationRestoreFailed: {
-      _this->_internal_mutable_requestfederationrestorefailed()->::rti1516_202X::fedpro::RequestFederationRestoreFailed::MergeFrom(
+      _this->_internal_mutable_requestfederationrestorefailed()->::rti1516_2025::fedpro::RequestFederationRestoreFailed::MergeFrom(
           from._internal_requestfederationrestorefailed());
       break;
     }
     case kFederationRestoreBegun: {
-      _this->_internal_mutable_federationrestorebegun()->::rti1516_202X::fedpro::FederationRestoreBegun::MergeFrom(
+      _this->_internal_mutable_federationrestorebegun()->::rti1516_2025::fedpro::FederationRestoreBegun::MergeFrom(
           from._internal_federationrestorebegun());
       break;
     }
     case kInitiateFederateRestore: {
-      _this->_internal_mutable_initiatefederaterestore()->::rti1516_202X::fedpro::InitiateFederateRestore::MergeFrom(
+      _this->_internal_mutable_initiatefederaterestore()->::rti1516_2025::fedpro::InitiateFederateRestore::MergeFrom(
           from._internal_initiatefederaterestore());
       break;
     }
     case kFederationRestored: {
-      _this->_internal_mutable_federationrestored()->::rti1516_202X::fedpro::FederationRestored::MergeFrom(
+      _this->_internal_mutable_federationrestored()->::rti1516_2025::fedpro::FederationRestored::MergeFrom(
           from._internal_federationrestored());
       break;
     }
     case kFederationNotRestored: {
-      _this->_internal_mutable_federationnotrestored()->::rti1516_202X::fedpro::FederationNotRestored::MergeFrom(
+      _this->_internal_mutable_federationnotrestored()->::rti1516_2025::fedpro::FederationNotRestored::MergeFrom(
           from._internal_federationnotrestored());
       break;
     }
     case kFederationRestoreStatusResponse: {
-      _this->_internal_mutable_federationrestorestatusresponse()->::rti1516_202X::fedpro::FederationRestoreStatusResponse::MergeFrom(
+      _this->_internal_mutable_federationrestorestatusresponse()->::rti1516_2025::fedpro::FederationRestoreStatusResponse::MergeFrom(
           from._internal_federationrestorestatusresponse());
       break;
     }
     case kStartRegistrationForObjectClass: {
-      _this->_internal_mutable_startregistrationforobjectclass()->::rti1516_202X::fedpro::StartRegistrationForObjectClass::MergeFrom(
+      _this->_internal_mutable_startregistrationforobjectclass()->::rti1516_2025::fedpro::StartRegistrationForObjectClass::MergeFrom(
           from._internal_startregistrationforobjectclass());
       break;
     }
     case kStopRegistrationForObjectClass: {
-      _this->_internal_mutable_stopregistrationforobjectclass()->::rti1516_202X::fedpro::StopRegistrationForObjectClass::MergeFrom(
+      _this->_internal_mutable_stopregistrationforobjectclass()->::rti1516_2025::fedpro::StopRegistrationForObjectClass::MergeFrom(
           from._internal_stopregistrationforobjectclass());
       break;
     }
     case kTurnInteractionsOn: {
-      _this->_internal_mutable_turninteractionson()->::rti1516_202X::fedpro::TurnInteractionsOn::MergeFrom(
+      _this->_internal_mutable_turninteractionson()->::rti1516_2025::fedpro::TurnInteractionsOn::MergeFrom(
           from._internal_turninteractionson());
       break;
     }
     case kTurnInteractionsOff: {
-      _this->_internal_mutable_turninteractionsoff()->::rti1516_202X::fedpro::TurnInteractionsOff::MergeFrom(
+      _this->_internal_mutable_turninteractionsoff()->::rti1516_2025::fedpro::TurnInteractionsOff::MergeFrom(
           from._internal_turninteractionsoff());
       break;
     }
     case kObjectInstanceNameReservationSucceeded: {
-      _this->_internal_mutable_objectinstancenamereservationsucceeded()->::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded::MergeFrom(
+      _this->_internal_mutable_objectinstancenamereservationsucceeded()->::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded::MergeFrom(
           from._internal_objectinstancenamereservationsucceeded());
       break;
     }
     case kObjectInstanceNameReservationFailed: {
-      _this->_internal_mutable_objectinstancenamereservationfailed()->::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed::MergeFrom(
+      _this->_internal_mutable_objectinstancenamereservationfailed()->::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed::MergeFrom(
           from._internal_objectinstancenamereservationfailed());
       break;
     }
     case kMultipleObjectInstanceNameReservationSucceeded: {
-      _this->_internal_mutable_multipleobjectinstancenamereservationsucceeded()->::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded::MergeFrom(
+      _this->_internal_mutable_multipleobjectinstancenamereservationsucceeded()->::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded::MergeFrom(
           from._internal_multipleobjectinstancenamereservationsucceeded());
       break;
     }
     case kMultipleObjectInstanceNameReservationFailed: {
-      _this->_internal_mutable_multipleobjectinstancenamereservationfailed()->::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed::MergeFrom(
+      _this->_internal_mutable_multipleobjectinstancenamereservationfailed()->::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed::MergeFrom(
           from._internal_multipleobjectinstancenamereservationfailed());
       break;
     }
     case kDiscoverObjectInstance: {
-      _this->_internal_mutable_discoverobjectinstance()->::rti1516_202X::fedpro::DiscoverObjectInstance::MergeFrom(
+      _this->_internal_mutable_discoverobjectinstance()->::rti1516_2025::fedpro::DiscoverObjectInstance::MergeFrom(
           from._internal_discoverobjectinstance());
       break;
     }
     case kReflectAttributeValues: {
-      _this->_internal_mutable_reflectattributevalues()->::rti1516_202X::fedpro::ReflectAttributeValues::MergeFrom(
+      _this->_internal_mutable_reflectattributevalues()->::rti1516_2025::fedpro::ReflectAttributeValues::MergeFrom(
           from._internal_reflectattributevalues());
       break;
     }
     case kReflectAttributeValuesWithTime: {
-      _this->_internal_mutable_reflectattributevalueswithtime()->::rti1516_202X::fedpro::ReflectAttributeValuesWithTime::MergeFrom(
+      _this->_internal_mutable_reflectattributevalueswithtime()->::rti1516_2025::fedpro::ReflectAttributeValuesWithTime::MergeFrom(
           from._internal_reflectattributevalueswithtime());
       break;
     }
     case kReceiveInteraction: {
-      _this->_internal_mutable_receiveinteraction()->::rti1516_202X::fedpro::ReceiveInteraction::MergeFrom(
+      _this->_internal_mutable_receiveinteraction()->::rti1516_2025::fedpro::ReceiveInteraction::MergeFrom(
           from._internal_receiveinteraction());
       break;
     }
     case kReceiveInteractionWithTime: {
-      _this->_internal_mutable_receiveinteractionwithtime()->::rti1516_202X::fedpro::ReceiveInteractionWithTime::MergeFrom(
+      _this->_internal_mutable_receiveinteractionwithtime()->::rti1516_2025::fedpro::ReceiveInteractionWithTime::MergeFrom(
           from._internal_receiveinteractionwithtime());
       break;
     }
     case kReceiveDirectedInteraction: {
-      _this->_internal_mutable_receivedirectedinteraction()->::rti1516_202X::fedpro::ReceiveDirectedInteraction::MergeFrom(
+      _this->_internal_mutable_receivedirectedinteraction()->::rti1516_2025::fedpro::ReceiveDirectedInteraction::MergeFrom(
           from._internal_receivedirectedinteraction());
       break;
     }
     case kReceiveDirectedInteractionWithTime: {
-      _this->_internal_mutable_receivedirectedinteractionwithtime()->::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime::MergeFrom(
+      _this->_internal_mutable_receivedirectedinteractionwithtime()->::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime::MergeFrom(
           from._internal_receivedirectedinteractionwithtime());
       break;
     }
     case kRemoveObjectInstance: {
-      _this->_internal_mutable_removeobjectinstance()->::rti1516_202X::fedpro::RemoveObjectInstance::MergeFrom(
+      _this->_internal_mutable_removeobjectinstance()->::rti1516_2025::fedpro::RemoveObjectInstance::MergeFrom(
           from._internal_removeobjectinstance());
       break;
     }
     case kRemoveObjectInstanceWithTime: {
-      _this->_internal_mutable_removeobjectinstancewithtime()->::rti1516_202X::fedpro::RemoveObjectInstanceWithTime::MergeFrom(
+      _this->_internal_mutable_removeobjectinstancewithtime()->::rti1516_2025::fedpro::RemoveObjectInstanceWithTime::MergeFrom(
           from._internal_removeobjectinstancewithtime());
       break;
     }
     case kAttributesInScope: {
-      _this->_internal_mutable_attributesinscope()->::rti1516_202X::fedpro::AttributesInScope::MergeFrom(
+      _this->_internal_mutable_attributesinscope()->::rti1516_2025::fedpro::AttributesInScope::MergeFrom(
           from._internal_attributesinscope());
       break;
     }
     case kAttributesOutOfScope: {
-      _this->_internal_mutable_attributesoutofscope()->::rti1516_202X::fedpro::AttributesOutOfScope::MergeFrom(
+      _this->_internal_mutable_attributesoutofscope()->::rti1516_2025::fedpro::AttributesOutOfScope::MergeFrom(
           from._internal_attributesoutofscope());
       break;
     }
     case kProvideAttributeValueUpdate: {
-      _this->_internal_mutable_provideattributevalueupdate()->::rti1516_202X::fedpro::ProvideAttributeValueUpdate::MergeFrom(
+      _this->_internal_mutable_provideattributevalueupdate()->::rti1516_2025::fedpro::ProvideAttributeValueUpdate::MergeFrom(
           from._internal_provideattributevalueupdate());
       break;
     }
     case kTurnUpdatesOnForObjectInstance: {
-      _this->_internal_mutable_turnupdatesonforobjectinstance()->::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance::MergeFrom(
+      _this->_internal_mutable_turnupdatesonforobjectinstance()->::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance::MergeFrom(
           from._internal_turnupdatesonforobjectinstance());
       break;
     }
     case kTurnUpdatesOnForObjectInstanceWithRate: {
-      _this->_internal_mutable_turnupdatesonforobjectinstancewithrate()->::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate::MergeFrom(
+      _this->_internal_mutable_turnupdatesonforobjectinstancewithrate()->::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate::MergeFrom(
           from._internal_turnupdatesonforobjectinstancewithrate());
       break;
     }
     case kTurnUpdatesOffForObjectInstance: {
-      _this->_internal_mutable_turnupdatesoffforobjectinstance()->::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance::MergeFrom(
+      _this->_internal_mutable_turnupdatesoffforobjectinstance()->::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance::MergeFrom(
           from._internal_turnupdatesoffforobjectinstance());
       break;
     }
     case kConfirmAttributeTransportationTypeChange: {
-      _this->_internal_mutable_confirmattributetransportationtypechange()->::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange::MergeFrom(
+      _this->_internal_mutable_confirmattributetransportationtypechange()->::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange::MergeFrom(
           from._internal_confirmattributetransportationtypechange());
       break;
     }
     case kReportAttributeTransportationType: {
-      _this->_internal_mutable_reportattributetransportationtype()->::rti1516_202X::fedpro::ReportAttributeTransportationType::MergeFrom(
+      _this->_internal_mutable_reportattributetransportationtype()->::rti1516_2025::fedpro::ReportAttributeTransportationType::MergeFrom(
           from._internal_reportattributetransportationtype());
       break;
     }
     case kConfirmInteractionTransportationTypeChange: {
-      _this->_internal_mutable_confirminteractiontransportationtypechange()->::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange::MergeFrom(
+      _this->_internal_mutable_confirminteractiontransportationtypechange()->::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange::MergeFrom(
           from._internal_confirminteractiontransportationtypechange());
       break;
     }
     case kReportInteractionTransportationType: {
-      _this->_internal_mutable_reportinteractiontransportationtype()->::rti1516_202X::fedpro::ReportInteractionTransportationType::MergeFrom(
+      _this->_internal_mutable_reportinteractiontransportationtype()->::rti1516_2025::fedpro::ReportInteractionTransportationType::MergeFrom(
           from._internal_reportinteractiontransportationtype());
       break;
     }
     case kRequestAttributeOwnershipAssumption: {
-      _this->_internal_mutable_requestattributeownershipassumption()->::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption::MergeFrom(
+      _this->_internal_mutable_requestattributeownershipassumption()->::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption::MergeFrom(
           from._internal_requestattributeownershipassumption());
       break;
     }
     case kRequestDivestitureConfirmation: {
-      _this->_internal_mutable_requestdivestitureconfirmation()->::rti1516_202X::fedpro::RequestDivestitureConfirmation::MergeFrom(
+      _this->_internal_mutable_requestdivestitureconfirmation()->::rti1516_2025::fedpro::RequestDivestitureConfirmation::MergeFrom(
           from._internal_requestdivestitureconfirmation());
       break;
     }
     case kAttributeOwnershipAcquisitionNotification: {
-      _this->_internal_mutable_attributeownershipacquisitionnotification()->::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification::MergeFrom(
+      _this->_internal_mutable_attributeownershipacquisitionnotification()->::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification::MergeFrom(
           from._internal_attributeownershipacquisitionnotification());
       break;
     }
     case kAttributeOwnershipUnavailable: {
-      _this->_internal_mutable_attributeownershipunavailable()->::rti1516_202X::fedpro::AttributeOwnershipUnavailable::MergeFrom(
+      _this->_internal_mutable_attributeownershipunavailable()->::rti1516_2025::fedpro::AttributeOwnershipUnavailable::MergeFrom(
           from._internal_attributeownershipunavailable());
       break;
     }
     case kRequestAttributeOwnershipRelease: {
-      _this->_internal_mutable_requestattributeownershiprelease()->::rti1516_202X::fedpro::RequestAttributeOwnershipRelease::MergeFrom(
+      _this->_internal_mutable_requestattributeownershiprelease()->::rti1516_2025::fedpro::RequestAttributeOwnershipRelease::MergeFrom(
           from._internal_requestattributeownershiprelease());
       break;
     }
     case kConfirmAttributeOwnershipAcquisitionCancellation: {
-      _this->_internal_mutable_confirmattributeownershipacquisitioncancellation()->::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation::MergeFrom(
+      _this->_internal_mutable_confirmattributeownershipacquisitioncancellation()->::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation::MergeFrom(
           from._internal_confirmattributeownershipacquisitioncancellation());
       break;
     }
     case kInformAttributeOwnership: {
-      _this->_internal_mutable_informattributeownership()->::rti1516_202X::fedpro::InformAttributeOwnership::MergeFrom(
+      _this->_internal_mutable_informattributeownership()->::rti1516_2025::fedpro::InformAttributeOwnership::MergeFrom(
           from._internal_informattributeownership());
       break;
     }
     case kAttributeIsNotOwned: {
-      _this->_internal_mutable_attributeisnotowned()->::rti1516_202X::fedpro::AttributeIsNotOwned::MergeFrom(
+      _this->_internal_mutable_attributeisnotowned()->::rti1516_2025::fedpro::AttributeIsNotOwned::MergeFrom(
           from._internal_attributeisnotowned());
       break;
     }
     case kAttributeIsOwnedByRTI: {
-      _this->_internal_mutable_attributeisownedbyrti()->::rti1516_202X::fedpro::AttributeIsOwnedByRTI::MergeFrom(
+      _this->_internal_mutable_attributeisownedbyrti()->::rti1516_2025::fedpro::AttributeIsOwnedByRTI::MergeFrom(
           from._internal_attributeisownedbyrti());
       break;
     }
     case kTimeRegulationEnabled: {
-      _this->_internal_mutable_timeregulationenabled()->::rti1516_202X::fedpro::TimeRegulationEnabled::MergeFrom(
+      _this->_internal_mutable_timeregulationenabled()->::rti1516_2025::fedpro::TimeRegulationEnabled::MergeFrom(
           from._internal_timeregulationenabled());
       break;
     }
     case kTimeConstrainedEnabled: {
-      _this->_internal_mutable_timeconstrainedenabled()->::rti1516_202X::fedpro::TimeConstrainedEnabled::MergeFrom(
+      _this->_internal_mutable_timeconstrainedenabled()->::rti1516_2025::fedpro::TimeConstrainedEnabled::MergeFrom(
           from._internal_timeconstrainedenabled());
       break;
     }
     case kFlushQueueGrant: {
-      _this->_internal_mutable_flushqueuegrant()->::rti1516_202X::fedpro::FlushQueueGrant::MergeFrom(
+      _this->_internal_mutable_flushqueuegrant()->::rti1516_2025::fedpro::FlushQueueGrant::MergeFrom(
           from._internal_flushqueuegrant());
       break;
     }
     case kTimeAdvanceGrant: {
-      _this->_internal_mutable_timeadvancegrant()->::rti1516_202X::fedpro::TimeAdvanceGrant::MergeFrom(
+      _this->_internal_mutable_timeadvancegrant()->::rti1516_2025::fedpro::TimeAdvanceGrant::MergeFrom(
           from._internal_timeadvancegrant());
       break;
     }
     case kRequestRetraction: {
-      _this->_internal_mutable_requestretraction()->::rti1516_202X::fedpro::RequestRetraction::MergeFrom(
+      _this->_internal_mutable_requestretraction()->::rti1516_2025::fedpro::RequestRetraction::MergeFrom(
           from._internal_requestretraction());
       break;
     }
@@ -22086,7 +22086,7 @@ void CallbackRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
 }
 
 void CallbackRequest::CopyFrom(const CallbackRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.CallbackRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.CallbackRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -22113,19 +22113,19 @@ void CallbackRequest::InternalSwap(CallbackRequest* other) {
 
 class CallbackResponse::_Internal {
  public:
-  static const ::rti1516_202X::fedpro::CallbackSucceeded& callbacksucceeded(const CallbackResponse* msg);
-  static const ::rti1516_202X::fedpro::ExceptionData& callbackfailed(const CallbackResponse* msg);
+  static const ::rti1516_2025::fedpro::CallbackSucceeded& callbacksucceeded(const CallbackResponse* msg);
+  static const ::rti1516_2025::fedpro::ExceptionData& callbackfailed(const CallbackResponse* msg);
 };
 
-const ::rti1516_202X::fedpro::CallbackSucceeded&
+const ::rti1516_2025::fedpro::CallbackSucceeded&
 CallbackResponse::_Internal::callbacksucceeded(const CallbackResponse* msg) {
   return *msg->_impl_.callbackResponse_.callbacksucceeded_;
 }
-const ::rti1516_202X::fedpro::ExceptionData&
+const ::rti1516_2025::fedpro::ExceptionData&
 CallbackResponse::_Internal::callbackfailed(const CallbackResponse* msg) {
   return *msg->_impl_.callbackResponse_.callbackfailed_;
 }
-void CallbackResponse::set_allocated_callbacksucceeded(::rti1516_202X::fedpro::CallbackSucceeded* callbacksucceeded) {
+void CallbackResponse::set_allocated_callbacksucceeded(::rti1516_2025::fedpro::CallbackSucceeded* callbacksucceeded) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackResponse();
   if (callbacksucceeded) {
@@ -22138,9 +22138,9 @@ void CallbackResponse::set_allocated_callbacksucceeded(::rti1516_202X::fedpro::C
     set_has_callbacksucceeded();
     _impl_.callbackResponse_.callbacksucceeded_ = callbacksucceeded;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackResponse.callbackSucceeded)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackResponse.callbackSucceeded)
 }
-void CallbackResponse::set_allocated_callbackfailed(::rti1516_202X::fedpro::ExceptionData* callbackfailed) {
+void CallbackResponse::set_allocated_callbackfailed(::rti1516_2025::fedpro::ExceptionData* callbackfailed) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_callbackResponse();
   if (callbackfailed) {
@@ -22154,7 +22154,7 @@ void CallbackResponse::set_allocated_callbackfailed(::rti1516_202X::fedpro::Exce
     set_has_callbackfailed();
     _impl_.callbackResponse_.callbackfailed_ = callbackfailed;
   }
-  // @@protoc_insertion_point(field_set_allocated:rti1516_202X.fedpro.CallbackResponse.callbackFailed)
+  // @@protoc_insertion_point(field_set_allocated:rti1516_2025.fedpro.CallbackResponse.callbackFailed)
 }
 void CallbackResponse::clear_callbackfailed() {
   if (_internal_has_callbackfailed()) {
@@ -22168,7 +22168,7 @@ CallbackResponse::CallbackResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:rti1516_202X.fedpro.CallbackResponse)
+  // @@protoc_insertion_point(arena_constructor:rti1516_2025.fedpro.CallbackResponse)
 }
 CallbackResponse::CallbackResponse(const CallbackResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -22182,12 +22182,12 @@ CallbackResponse::CallbackResponse(const CallbackResponse& from)
   clear_has_callbackResponse();
   switch (from.callbackResponse_case()) {
     case kCallbackSucceeded: {
-      _this->_internal_mutable_callbacksucceeded()->::rti1516_202X::fedpro::CallbackSucceeded::MergeFrom(
+      _this->_internal_mutable_callbacksucceeded()->::rti1516_2025::fedpro::CallbackSucceeded::MergeFrom(
           from._internal_callbacksucceeded());
       break;
     }
     case kCallbackFailed: {
-      _this->_internal_mutable_callbackfailed()->::rti1516_202X::fedpro::ExceptionData::MergeFrom(
+      _this->_internal_mutable_callbackfailed()->::rti1516_2025::fedpro::ExceptionData::MergeFrom(
           from._internal_callbackfailed());
       break;
     }
@@ -22195,7 +22195,7 @@ CallbackResponse::CallbackResponse(const CallbackResponse& from)
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:rti1516_202X.fedpro.CallbackResponse)
+  // @@protoc_insertion_point(copy_constructor:rti1516_2025.fedpro.CallbackResponse)
 }
 
 inline void CallbackResponse::SharedCtor(
@@ -22211,7 +22211,7 @@ inline void CallbackResponse::SharedCtor(
 }
 
 CallbackResponse::~CallbackResponse() {
-  // @@protoc_insertion_point(destructor:rti1516_202X.fedpro.CallbackResponse)
+  // @@protoc_insertion_point(destructor:rti1516_2025.fedpro.CallbackResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -22231,7 +22231,7 @@ void CallbackResponse::SetCachedSize(int size) const {
 }
 
 void CallbackResponse::clear_callbackResponse() {
-// @@protoc_insertion_point(one_of_clear_start:rti1516_202X.fedpro.CallbackResponse)
+// @@protoc_insertion_point(one_of_clear_start:rti1516_2025.fedpro.CallbackResponse)
   switch (callbackResponse_case()) {
     case kCallbackSucceeded: {
       if (GetArenaForAllocation() == nullptr) {
@@ -22254,7 +22254,7 @@ void CallbackResponse::clear_callbackResponse() {
 
 
 void CallbackResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:rti1516_202X.fedpro.CallbackResponse)
+// @@protoc_insertion_point(message_clear_start:rti1516_2025.fedpro.CallbackResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -22269,7 +22269,7 @@ const char* CallbackResponse::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .rti1516_202X.fedpro.CallbackSucceeded callbackSucceeded = 1;
+      // .rti1516_2025.fedpro.CallbackSucceeded callbackSucceeded = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_callbacksucceeded(), ptr);
@@ -22277,7 +22277,7 @@ const char* CallbackResponse::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // .rti1516_202X.fedpro.ExceptionData callbackFailed = 2;
+      // .rti1516_2025.fedpro.ExceptionData callbackFailed = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_callbackfailed(), ptr);
@@ -22310,18 +22310,18 @@ failure:
 
 uint8_t* CallbackResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:rti1516_202X.fedpro.CallbackResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:rti1516_2025.fedpro.CallbackResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .rti1516_202X.fedpro.CallbackSucceeded callbackSucceeded = 1;
+  // .rti1516_2025.fedpro.CallbackSucceeded callbackSucceeded = 1;
   if (_internal_has_callbacksucceeded()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::callbacksucceeded(this),
         _Internal::callbacksucceeded(this).GetCachedSize(), target, stream);
   }
 
-  // .rti1516_202X.fedpro.ExceptionData callbackFailed = 2;
+  // .rti1516_2025.fedpro.ExceptionData callbackFailed = 2;
   if (_internal_has_callbackfailed()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::callbackfailed(this),
@@ -22332,12 +22332,12 @@ uint8_t* CallbackResponse::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:rti1516_202X.fedpro.CallbackResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:rti1516_2025.fedpro.CallbackResponse)
   return target;
 }
 
 size_t CallbackResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:rti1516_202X.fedpro.CallbackResponse)
+// @@protoc_insertion_point(message_byte_size_start:rti1516_2025.fedpro.CallbackResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -22345,14 +22345,14 @@ size_t CallbackResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (callbackResponse_case()) {
-    // .rti1516_202X.fedpro.CallbackSucceeded callbackSucceeded = 1;
+    // .rti1516_2025.fedpro.CallbackSucceeded callbackSucceeded = 1;
     case kCallbackSucceeded: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *_impl_.callbackResponse_.callbacksucceeded_);
       break;
     }
-    // .rti1516_202X.fedpro.ExceptionData callbackFailed = 2;
+    // .rti1516_2025.fedpro.ExceptionData callbackFailed = 2;
     case kCallbackFailed: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -22376,19 +22376,19 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CallbackResponse::GetClassData
 void CallbackResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<CallbackResponse*>(&to_msg);
   auto& from = static_cast<const CallbackResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_202X.fedpro.CallbackResponse)
+  // @@protoc_insertion_point(class_specific_merge_from_start:rti1516_2025.fedpro.CallbackResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   switch (from.callbackResponse_case()) {
     case kCallbackSucceeded: {
-      _this->_internal_mutable_callbacksucceeded()->::rti1516_202X::fedpro::CallbackSucceeded::MergeFrom(
+      _this->_internal_mutable_callbacksucceeded()->::rti1516_2025::fedpro::CallbackSucceeded::MergeFrom(
           from._internal_callbacksucceeded());
       break;
     }
     case kCallbackFailed: {
-      _this->_internal_mutable_callbackfailed()->::rti1516_202X::fedpro::ExceptionData::MergeFrom(
+      _this->_internal_mutable_callbackfailed()->::rti1516_2025::fedpro::ExceptionData::MergeFrom(
           from._internal_callbackfailed());
       break;
     }
@@ -22400,7 +22400,7 @@ void CallbackResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
 }
 
 void CallbackResponse::CopyFrom(const CallbackResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_202X.fedpro.CallbackResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:rti1516_2025.fedpro.CallbackResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -22425,267 +22425,267 @@ void CallbackResponse::InternalSwap(CallbackResponse* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace fedpro
-}  // namespace rti1516_202X
+}  // namespace rti1516_2025
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ConnectionLost*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ConnectionLost >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ConnectionLost >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReportFederationExecutions*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReportFederationExecutions >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReportFederationExecutions >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReportFederationExecutionMembers*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReportFederationExecutionMembers >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReportFederationExecutionMembers >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReportFederationExecutionDoesNotExist >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederateResigned*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederateResigned >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederateResigned >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::SynchronizationPointRegistrationSucceeded >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::SynchronizationPointRegistrationFailed >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::AnnounceSynchronizationPoint*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::AnnounceSynchronizationPoint >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::AnnounceSynchronizationPoint >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationSynchronized*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationSynchronized >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationSynchronized >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::InitiateFederateSave*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::InitiateFederateSave >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::InitiateFederateSave >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::InitiateFederateSaveWithTime*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::InitiateFederateSaveWithTime >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::InitiateFederateSaveWithTime >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationSaved*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationSaved >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationSaved >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationNotSaved*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationNotSaved >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationNotSaved >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationSaveStatusResponse*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationSaveStatusResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationSaveStatusResponse >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RequestFederationRestoreSucceeded*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RequestFederationRestoreSucceeded >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RequestFederationRestoreSucceeded >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RequestFederationRestoreFailed*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RequestFederationRestoreFailed >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RequestFederationRestoreFailed >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationRestoreBegun*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationRestoreBegun >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationRestoreBegun >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::InitiateFederateRestore*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::InitiateFederateRestore >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::InitiateFederateRestore >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationRestored*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationRestored >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationRestored >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationNotRestored*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationNotRestored >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationNotRestored >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FederationRestoreStatusResponse*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FederationRestoreStatusResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FederationRestoreStatusResponse >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::StartRegistrationForObjectClass*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::StartRegistrationForObjectClass >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::StartRegistrationForObjectClass >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::StopRegistrationForObjectClass*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::StopRegistrationForObjectClass >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::StopRegistrationForObjectClass >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TurnInteractionsOn*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TurnInteractionsOn >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TurnInteractionsOn >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TurnInteractionsOff*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TurnInteractionsOff >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TurnInteractionsOff >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ObjectInstanceNameReservationSucceeded >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ObjectInstanceNameReservationFailed >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationSucceeded >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::MultipleObjectInstanceNameReservationFailed >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::DiscoverObjectInstance*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::DiscoverObjectInstance >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::DiscoverObjectInstance >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReflectAttributeValues*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReflectAttributeValues >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReflectAttributeValues >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReflectAttributeValuesWithTime*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReflectAttributeValuesWithTime >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReflectAttributeValuesWithTime >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReceiveInteraction*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReceiveInteraction >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReceiveInteraction >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReceiveInteractionWithTime*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReceiveInteractionWithTime >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReceiveInteractionWithTime >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReceiveDirectedInteraction*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReceiveDirectedInteraction >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReceiveDirectedInteraction >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReceiveDirectedInteractionWithTime >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RemoveObjectInstance*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RemoveObjectInstance >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RemoveObjectInstance >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RemoveObjectInstanceWithTime*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RemoveObjectInstanceWithTime >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RemoveObjectInstanceWithTime >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::AttributesInScope*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::AttributesInScope >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::AttributesInScope >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::AttributesOutOfScope*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::AttributesOutOfScope >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::AttributesOutOfScope >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ProvideAttributeValueUpdate*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ProvideAttributeValueUpdate >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ProvideAttributeValueUpdate >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstance >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TurnUpdatesOnForObjectInstanceWithRate >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TurnUpdatesOffForObjectInstance >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ConfirmAttributeTransportationTypeChange >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReportAttributeTransportationType*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReportAttributeTransportationType >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReportAttributeTransportationType >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ConfirmInteractionTransportationTypeChange >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ReportInteractionTransportationType*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ReportInteractionTransportationType >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ReportInteractionTransportationType >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RequestAttributeOwnershipAssumption >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RequestDivestitureConfirmation*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RequestDivestitureConfirmation >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RequestDivestitureConfirmation >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::AttributeOwnershipAcquisitionNotification >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::AttributeOwnershipUnavailable*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::AttributeOwnershipUnavailable >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::AttributeOwnershipUnavailable >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RequestAttributeOwnershipRelease*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RequestAttributeOwnershipRelease >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RequestAttributeOwnershipRelease >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::InformAttributeOwnership*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::InformAttributeOwnership >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::InformAttributeOwnership >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::AttributeIsNotOwned*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::AttributeIsNotOwned >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::AttributeIsNotOwned >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::AttributeIsOwnedByRTI*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::AttributeIsOwnedByRTI >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::AttributeIsOwnedByRTI >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TimeRegulationEnabled*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TimeRegulationEnabled >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TimeRegulationEnabled >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TimeConstrainedEnabled*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TimeConstrainedEnabled >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TimeConstrainedEnabled >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::FlushQueueGrant*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::FlushQueueGrant >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::FlushQueueGrant >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::TimeAdvanceGrant*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::TimeAdvanceGrant >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::TimeAdvanceGrant >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::RequestRetraction*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::RequestRetraction >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::RequestRetraction >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::CallbackSucceeded*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::CallbackSucceeded >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::CallbackSucceeded >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::CallbackRequest*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::CallbackRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::CallbackRequest >(arena);
-}
-template<> PROTOBUF_NOINLINE ::rti1516_202X::fedpro::CallbackResponse*
-Arena::CreateMaybeMessage< ::rti1516_202X::fedpro::CallbackResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::rti1516_202X::fedpro::CallbackResponse >(arena);
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ConnectionLost*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ConnectionLost >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ConnectionLost >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReportFederationExecutions*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReportFederationExecutions >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReportFederationExecutions >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReportFederationExecutionMembers*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReportFederationExecutionMembers >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReportFederationExecutionMembers >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReportFederationExecutionDoesNotExist >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederateResigned*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederateResigned >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederateResigned >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::SynchronizationPointRegistrationSucceeded >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::SynchronizationPointRegistrationFailed >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::AnnounceSynchronizationPoint*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::AnnounceSynchronizationPoint >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::AnnounceSynchronizationPoint >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationSynchronized*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationSynchronized >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationSynchronized >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::InitiateFederateSave*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::InitiateFederateSave >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::InitiateFederateSave >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::InitiateFederateSaveWithTime*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::InitiateFederateSaveWithTime >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::InitiateFederateSaveWithTime >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationSaved*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationSaved >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationSaved >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationNotSaved*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationNotSaved >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationNotSaved >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationSaveStatusResponse*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationSaveStatusResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationSaveStatusResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RequestFederationRestoreSucceeded*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RequestFederationRestoreSucceeded >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RequestFederationRestoreSucceeded >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RequestFederationRestoreFailed*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RequestFederationRestoreFailed >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RequestFederationRestoreFailed >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationRestoreBegun*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationRestoreBegun >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationRestoreBegun >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::InitiateFederateRestore*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::InitiateFederateRestore >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::InitiateFederateRestore >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationRestored*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationRestored >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationRestored >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationNotRestored*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationNotRestored >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationNotRestored >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FederationRestoreStatusResponse*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FederationRestoreStatusResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FederationRestoreStatusResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::StartRegistrationForObjectClass*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::StartRegistrationForObjectClass >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::StartRegistrationForObjectClass >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::StopRegistrationForObjectClass*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::StopRegistrationForObjectClass >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::StopRegistrationForObjectClass >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TurnInteractionsOn*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TurnInteractionsOn >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TurnInteractionsOn >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TurnInteractionsOff*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TurnInteractionsOff >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TurnInteractionsOff >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ObjectInstanceNameReservationSucceeded >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ObjectInstanceNameReservationFailed >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationSucceeded >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::MultipleObjectInstanceNameReservationFailed >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::DiscoverObjectInstance*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::DiscoverObjectInstance >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::DiscoverObjectInstance >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReflectAttributeValues*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReflectAttributeValues >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReflectAttributeValues >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReflectAttributeValuesWithTime*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReflectAttributeValuesWithTime >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReflectAttributeValuesWithTime >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReceiveInteraction*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReceiveInteraction >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReceiveInteraction >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReceiveInteractionWithTime*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReceiveInteractionWithTime >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReceiveInteractionWithTime >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReceiveDirectedInteraction*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReceiveDirectedInteraction >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReceiveDirectedInteraction >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReceiveDirectedInteractionWithTime >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RemoveObjectInstance*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RemoveObjectInstance >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RemoveObjectInstance >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RemoveObjectInstanceWithTime*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RemoveObjectInstanceWithTime >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RemoveObjectInstanceWithTime >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::AttributesInScope*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::AttributesInScope >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::AttributesInScope >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::AttributesOutOfScope*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::AttributesOutOfScope >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::AttributesOutOfScope >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ProvideAttributeValueUpdate*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ProvideAttributeValueUpdate >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ProvideAttributeValueUpdate >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstance >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TurnUpdatesOnForObjectInstanceWithRate >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TurnUpdatesOffForObjectInstance >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ConfirmAttributeTransportationTypeChange >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReportAttributeTransportationType*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReportAttributeTransportationType >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReportAttributeTransportationType >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ConfirmInteractionTransportationTypeChange >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ReportInteractionTransportationType*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ReportInteractionTransportationType >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ReportInteractionTransportationType >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RequestAttributeOwnershipAssumption >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RequestDivestitureConfirmation*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RequestDivestitureConfirmation >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RequestDivestitureConfirmation >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::AttributeOwnershipAcquisitionNotification >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::AttributeOwnershipUnavailable*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::AttributeOwnershipUnavailable >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::AttributeOwnershipUnavailable >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RequestAttributeOwnershipRelease*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RequestAttributeOwnershipRelease >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RequestAttributeOwnershipRelease >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::ConfirmAttributeOwnershipAcquisitionCancellation >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::InformAttributeOwnership*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::InformAttributeOwnership >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::InformAttributeOwnership >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::AttributeIsNotOwned*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::AttributeIsNotOwned >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::AttributeIsNotOwned >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::AttributeIsOwnedByRTI*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::AttributeIsOwnedByRTI >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::AttributeIsOwnedByRTI >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TimeRegulationEnabled*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TimeRegulationEnabled >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TimeRegulationEnabled >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TimeConstrainedEnabled*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TimeConstrainedEnabled >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TimeConstrainedEnabled >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::FlushQueueGrant*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::FlushQueueGrant >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::FlushQueueGrant >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::TimeAdvanceGrant*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::TimeAdvanceGrant >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::TimeAdvanceGrant >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::RequestRetraction*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::RequestRetraction >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::RequestRetraction >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::CallbackSucceeded*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::CallbackSucceeded >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::CallbackSucceeded >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::CallbackRequest*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::CallbackRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::CallbackRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::rti1516_2025::fedpro::CallbackResponse*
+Arena::CreateMaybeMessage< ::rti1516_2025::fedpro::CallbackResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::rti1516_2025::fedpro::CallbackResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

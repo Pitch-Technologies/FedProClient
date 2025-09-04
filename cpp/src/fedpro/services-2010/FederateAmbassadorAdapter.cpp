@@ -14,11 +14,17 @@
  limitations under the License.
  **********************************************************************/
 
+// Silence clang-tidy issues reported for standard HLA exception.
+// NOLINTBEGIN(hicpp-exception-baseclass)
+
 #include "FederateAmbassadorAdapter.h"
 
-#include "services-common/RTIambassadorClient.h"
+#include <services-common/RTIambassadorClient.h>
+#include <utility/StringUtil.h>
 
 #include <RTI/FederateAmbassador.h>
+
+#include <spdlog/spdlog.h>
 
 namespace FedPro
 {
@@ -39,15 +45,12 @@ namespace FedPro
       // For an Evolved federate, we hope two TransportationTypeHandle exist.
 
       try {
-         _reliableTransportType = client->getTransportationTypeHandle("HLAreliable");
+         auto getReliableTransportTypeFuture = client->asyncGetTransportationTypeHandle("HLAreliable");
+         auto getBestEffortTransportTypeFuture = client->asyncGetTransportationTypeHandle("HLAbestEffort");
+         _reliableTransportType = getReliableTransportTypeFuture();
+         _bestEffortTransportType = getBestEffortTransportTypeFuture();
       } catch (const RTI_NAMESPACE::Exception & e) {
-         // TODO log error
-      }
-
-      try {
-         _bestEffortTransportType = client->getTransportationTypeHandle("HLAbestEffort");
-      } catch (const RTI_NAMESPACE::Exception & e) {
-         // TODO log error
+         SPDLOG_ERROR("Failed to prefetch TransportationTypeHandle: " + toString(e.what()));
       }
    }
 
@@ -250,8 +253,8 @@ namespace FedPro
                transportationType,
                optionalSentRegions ? SupplementalReflectInfo{producingFederate, *optionalSentRegions}
                                    : SupplementalReflectInfo{producingFederate});
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("reflectAttributeValues failed: " + toString(e.what()));
       }
    }
 
@@ -293,8 +296,8 @@ namespace FedPro
                   optionalSentRegions ? SupplementalReflectInfo{producingFederate, *optionalSentRegions}
                                       : SupplementalReflectInfo{producingFederate});
          }
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("reflectAttributeValues failed: " + toString(e.what()));
       }
    }
 
@@ -316,8 +319,8 @@ namespace FedPro
                transportationType,
                optionalSentRegions ? SupplementalReceiveInfo{producingFederate, *optionalSentRegions}
                                    : SupplementalReceiveInfo{producingFederate});
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("receiveInteraction failed: " + toString(e.what()));
       }
    }
 
@@ -360,14 +363,14 @@ namespace FedPro
                   optionalSentRegions ? SupplementalReceiveInfo{producingFederate, *optionalSentRegions}
                                       : SupplementalReceiveInfo{producingFederate});
          }
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("receiveInteraction failed: " + toString(e.what()));
       }
    }
 
    void FederateAmbassadorAdapter::receiveDirectedInteraction(
          InteractionClassHandle const & interactionClass,
-         ObjectInstanceHandle const & objectInstance,
+         ObjectInstanceHandle const & , // objectInstance
          ParameterHandleValueMap const & parameterValues,
          VariableLengthData const & userSuppliedTag,
          TransportationTypeHandle const & transportationType,
@@ -385,7 +388,7 @@ namespace FedPro
 
    void FederateAmbassadorAdapter::receiveDirectedInteraction(
          InteractionClassHandle const & interactionClass,
-         ObjectInstanceHandle const & objectInstance,
+         ObjectInstanceHandle const & , // objectInstance
          ParameterHandleValueMap const & parameterValues,
          VariableLengthData const & userSuppliedTag,
          TransportationTypeHandle const & transportationType,
@@ -499,8 +502,8 @@ namespace FedPro
       try {
          TransportationType transportationType = getTransportationType(transportationTypeHandle);
          _federateReference->confirmAttributeTransportationTypeChange(objectInstance, attributes, transportationType);
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("confirmAttributeTransportationTypeChange failed: " + toString(e.what()));
       }
    }
 
@@ -512,8 +515,8 @@ namespace FedPro
       try {
          TransportationType transportationType = getTransportationType(transportationTypeHandle);
          _federateReference->reportAttributeTransportationType(objectInstance, attribute, transportationType);
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("reportAttributeTransportationType failed: " + toString(e.what()));
       }
    }
 
@@ -524,8 +527,8 @@ namespace FedPro
       try {
          TransportationType transportationType = getTransportationType(transportationTypeHandle);
          _federateReference->confirmInteractionTransportationTypeChange(interactionClass, transportationType);
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("confirmInteractionTransportationTypeChange failed: " + toString(e.what()));
       }
    }
 
@@ -537,8 +540,8 @@ namespace FedPro
       try {
          TransportationType transportationType = getTransportationType(transportationTypeHandle);
          _federateReference->reportInteractionTransportationType(federate, interactionClass, transportationType);
-      } catch (const std::exception &) {
-         // TODO log exception as error
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("reportInteractionTransportationType failed: " + toString(e.what()));
       }
    }
 
@@ -642,3 +645,5 @@ namespace FedPro
    }
 
 } // FedPro
+
+// NOLINTEND(hicpp-exception-baseclass)

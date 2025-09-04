@@ -28,7 +28,7 @@ namespace RTI_NAMESPACE
      A::what () const                     \
      noexcept { return _msg;};
 
-#if (RTI_HLA_VERSION < 2024)
+#if (RTI_HLA_VERSION < 2025)
 #define RTI_EXCEPTION(A)                  \
    RTI_EXCEPTION_2010(A)
 #else

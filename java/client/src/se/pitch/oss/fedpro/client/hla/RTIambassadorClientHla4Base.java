@@ -16,18 +16,22 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.CallbackModel;
-import hla.rti1516_202X.ConfigurationResult;
-import hla.rti1516_202X.FederateAmbassador;
-import hla.rti1516_202X.RtiConfiguration;
-import hla.rti1516_202X.auth.Credentials;
-import hla.rti1516_202X.exceptions.*;
-import hla.rti1516_202X.fedpro.*;
+import hla.rti1516_2025.CallbackModel;
+import hla.rti1516_2025.ConfigurationResult;
+import hla.rti1516_2025.FederateAmbassador;
+import hla.rti1516_2025.RtiConfiguration;
+import hla.rti1516_2025.auth.Credentials;
+import hla.rti1516_2025.exceptions.*;
+import hla.rti1516_2025.fedpro.*;
 import net.jcip.annotations.GuardedBy;
+import se.pitch.oss.fedpro.client.TypedProperties;
 import se.pitch.oss.fedpro.client_common.RTIambassadorClientGenericBase;
+import se.pitch.oss.fedpro.client_common.SettingsParser;
 import se.pitch.oss.fedpro.client_common.exceptions.*;
+import se.pitch.oss.fedpro.common.session.MovingStats;
+import se.pitch.oss.fedpro.common.session.MovingStatsNoOp;
+import se.pitch.oss.fedpro.common.session.StandAloneMovingStats;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
@@ -183,7 +187,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
                // is thrown by get/join. The sync variants catch this completionException,
                // extracts the cause and rethrows that.
                return decodeHlaCallResponse(encodedResponse);
-            } catch (IOException | FedProRtiException e) {
+            } catch (Exception e) {
                // Will this result in nested CompletionExceptions, or not?
                throw new CompletionException(e);
             }
@@ -209,7 +213,10 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          throwIfAlreadyConnected();
 
          try {
-            _persistentSession = createPersistentSession();
+            // ALWAYS parse settings, even if the input parameter is null,
+            // to ensure parsing of settings provided by environment variables and java system properties.
+            TypedProperties clientSettings = SettingsParser.parse(null);
+            _persistentSession = createPersistentSession(clientSettings);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
@@ -241,10 +248,10 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
 
          ArrayList<String> inputValueList = splitFederateConnectSettings(rtiConfiguration.additionalSettings());
          addServerAddressToList(inputValueList, rtiConfiguration);
-         final String clientSettings = extractAndRemoveClientSettings(inputValueList, false);
+         final String clientSettingsLine = extractAndRemoveClientSettings(inputValueList, false);
          final RtiConfiguration parsedRtiConfiguration = parseRtiConfiguration(rtiConfiguration, inputValueList);
-
          try {
+            TypedProperties clientSettings = SettingsParser.parse(clientSettingsLine);
             _persistentSession = createPersistentSession(clientSettings);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
@@ -284,7 +291,10 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          throwIfAlreadyConnected();
 
          try {
-            _persistentSession = createPersistentSession();
+            // ALWAYS parse settings, even if the input parameter is null,
+            // to ensure parsing of settings provided by environment variables and java system properties.
+            TypedProperties clientSettings = SettingsParser.parse(null);
+            _persistentSession = createPersistentSession(clientSettings);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
@@ -324,10 +334,11 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
 
          ArrayList<String> inputValueList = splitFederateConnectSettings(rtiConfiguration.additionalSettings());
          addServerAddressToList(inputValueList, rtiConfiguration);
-         final String clientSettings = extractAndRemoveClientSettings(inputValueList, false);
+         final String clientSettingsLine = extractAndRemoveClientSettings(inputValueList, false);
          final RtiConfiguration parsedRtiConfiguration = parseRtiConfiguration(rtiConfiguration, inputValueList);
 
          try {
+            TypedProperties clientSettings = SettingsParser.parse(clientSettingsLine);
             _persistentSession = createPersistentSession(clientSettings);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
@@ -357,9 +368,14 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
       try {
          startPersistentSession();
          CallResponse callResponse = doHlaCall(callRequest);
-         _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter);
+         if (_printStats) {
+            _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter, () -> new StandAloneMovingStats(_printStatsIntervalMillis));
+         } else {
+            _federateAmbassadorDispatcher = new FederateAmbassadorDispatcher(federateReference, _clientConverter, MovingStatsNoOp::new);
+         }
          // Todo - I don't see how we need throwOnException() here? remove?
          throwOnException(callResponse);
+         startStatPrinting();
          if (callbackModel == CallbackModel.HLA_IMMEDIATE) {
             startCallbackThread();
          }
@@ -382,9 +398,24 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
       try {
          disconnectBase();
       } catch (FedProRtiInternalError | RuntimeException e) {
-         // TODO: What happens in the standard API when we call disconnect before the RTIambassador is connected?
          throw new RTIinternalError("" + e, e);
       }
+   }
+
+   protected MovingStats.Stats getReflectStats(long time) {
+      return _federateAmbassadorDispatcher.getReflectStats(time);
+   }
+
+   protected MovingStats.Stats getReceivedInteractionStats(long time) {
+      return _federateAmbassadorDispatcher.getReceivedInteractionStats(time);
+   }
+
+   protected MovingStats.Stats getReceivedDirectedInteractionStats(long time) {
+      return _federateAmbassadorDispatcher.getReceivedDirectedInteractionStats(time);
+   }
+
+   protected MovingStats.Stats getCallbackTimeStats(long time) {
+      return _federateAmbassadorDispatcher.getCallbackTimeStats(time);
    }
 
    private static void addServerAddressToList(

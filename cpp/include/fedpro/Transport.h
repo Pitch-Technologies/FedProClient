@@ -17,9 +17,6 @@
 #pragma once
 
 #include <fedpro/Config.h>
-#include <fedpro/Properties.h>
-// Todo - move include to a cpp file where we intend to define the transport destructor
-#include <fedpro/Socket.h>
 
 #include <memory>
 
@@ -36,6 +33,9 @@ namespace FedPro
 
    public:
 
+      // Todo - move destructor to a cpp file
+      virtual ~Transport() = default;
+
       /**
        * @brief Establishes a connection with a server through the host IP address and
        * port specified as arguments to the constructor of transport this instance.
@@ -45,16 +45,6 @@ namespace FedPro
        * @return A shared pointer to a socket instance.
        */
       virtual std::shared_ptr<Socket> connect() = 0;
-
-      // Todo - move destructor to a cpp file
-      virtual ~Transport()
-      {
-         delete (_socket);
-      };
-
-   private:
-
-      Socket * _socket{nullptr};
    };
 
 } // FedPro

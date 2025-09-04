@@ -1,10 +1,10 @@
-# Federate Protocol Client (compatible with Pitch pRTI 5.5.11)
+# Federate Protocol Client
 
 _FedProClient_ is a set of Federate Protocol client libraries for C++ and Java.
-It aims to implement the HLA 4 Federate Protocol from the IEEE 1516-202X specification.
+It aims to implement the HLA 4 Federate Protocol from the IEEE 1516-2025 specification.
 
 Both the C++ and Java client libraries have two versions,
-which implement the HLA Evolved standard API (IEEE 1516-2010) and the draft HLA 4 standard API (IEEE 1516-202X), respectively.
+which implement the HLA Evolved standard API (IEEE 1516-2010) and the HLA 4 standard API (IEEE 1516-2025), respectively.
 
 ## Usage
 
@@ -17,7 +17,7 @@ Sample federates for Java and C++ clients are provided to facilitate getting sta
 #### Chat
 `Chat` is a basic synchronous sample.
 Both HLA 4 and HLA Evolved versions of it are provided.
-The samples prompt users to specify the address to FedPro server in the format `[<server_address>[:<server_port>]]`.
+The samples prompt users to specify the FedPro server address in the format `[<server_address>[:<server_port>]]`.
 If values for address and/or port are left out,
 the samples will use the default values `localhost` as hostname and `15164` as port.
 

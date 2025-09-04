@@ -36,15 +36,6 @@ public class Settings {
    public static final String SETTING_OVERRIDES_PREFIX = "FedProOverrides.";
 
    /**
-    * Names of available protocols.
-    */
-   public static final String TCP = "tcp";
-   public static final String TLS = "tls";
-   public static final String WS = "websocket";
-   public static final String WSS = "websocketsecure";
-   public static final String[] ALLOWED_PROTOCOLS = new String[] {TCP, TLS, WS, WSS};
-
-   /**
     * HLA standard settings.
     */
    public static final String SETTING_NAME_HEARTBEAT_INTERVAL = "FED_INT_HEART"; // Session
@@ -57,6 +48,7 @@ public class Settings {
    public static final String SETTING_NAME_ASYNC_UPDATES = "asyncUpdates"; // Service
    public static final String SETTING_NAME_CONNECTION_HOST = "connect.hostname"; // Transport
    public static final String SETTING_NAME_CONNECTION_MAX_RETRY_ATTEMPTS = "connect.maxRetryAttempts"; // Session
+   public static final String SETTING_NAME_RESUME_RETRY_DELAY_MILLIS = "resume.retryDelayMillis"; // Session
    public static final String SETTING_NAME_CONNECTION_PORT = "connect.port"; // Transport // Service
    public static final String SETTING_NAME_CONNECTION_PROTOCOL = "connect.protocol";
    public static final String SETTING_NAME_CONNECTION_TIMEOUT = "connect.timeout"; // Session
@@ -64,10 +56,16 @@ public class Settings {
    public static final String SETTING_NAME_KEYSTORE_PASSWORD_PATH = "keystore.password.path"; // Transport
    public static final String SETTING_NAME_KEYSTORE_PATH = "keystore.path"; // Transport
    public static final String SETTING_NAME_KEYSTORE_TYPE = "keystore.type"; // Transport
-   public static final String SETTING_NAME_KEYSTORE_USE_DEFAULT = "keystore.useDefault"; // Transport
    public static final String SETTING_NAME_MESSAGE_QUEUE_SIZE = "messageQueue.size"; // Session
    public static final String SETTING_NAME_RATE_LIMIT_ENABLED = "messageQueue.outgoing.limitedRate"; // Session
    public static final String SETTING_NAME_TLS_MODE = "tls.mode"; // Transport
    public static final String SETTING_NAME_TLS_SNI = "tls.sniHostname"; // Transport
+   public static final String SETTING_NAME_PRINT_STATS = "log.stats"; // Session, Service
+   public static final String SETTING_NAME_PRINT_STATS_INTERVAL = "log.stats.interval"; // Session, Service
+   public static final String SETTING_NAME_HLA_API_VERSION = "API.version";
 
+   /**
+    * Undocumented settings
+    */
+   public static final String SETTING_NAME_WARN_ON_LATE_STATE_LISTENER_SHUTDOWN = "log.warnOnLateStateListenerShutdown";
 }

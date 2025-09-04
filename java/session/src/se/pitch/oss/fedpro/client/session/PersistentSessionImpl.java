@@ -19,7 +19,6 @@ package se.pitch.oss.fedpro.client.session;
 import se.pitch.oss.fedpro.client.*;
 import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionLost;
-import se.pitch.oss.fedpro.common.session.LogUtil;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -39,6 +38,7 @@ public class PersistentSessionImpl implements PersistentSession {
    private final SessionImpl _session;
    private final ResumeStrategy _resumeStrategy;
    private final ConnectionLostListener _connectionLostListener;
+   private final SessionTerminatedListener _sessionTerminatedListener;
 
    private TimeoutTimer _sendHeartbeatTimer;
 
@@ -46,17 +46,20 @@ public class PersistentSessionImpl implements PersistentSession {
    private final long _heartbeatIntervalMillis;
 
    /**
-    * @param transportProtocol      The underlying transport layer.
-    * @param connectionLostListener The listener to be called when the session is
-    *                               terminally lost due to connection issues.
-    * @param resumeStrategy         A ResumeStrategy instance that will control when, how
-    *                               often and for how long reconnection attempts will be
-    *                               made.
+    * @param transportProtocol         The underlying transport layer.
+    * @param connectionLostListener    The listener to be called when the session is
+    *                                  terminally lost due to connection issues.
+    * @param sessionTerminatedListener The listener to be called when the session terminates
+    *                                  for any reason.
+    * @param resumeStrategy            A ResumeStrategy instance that will control when, how
+    *                                  often and for how long reconnection attempts will be
+    *                                  made.
     * @throws NullPointerException If resumeStrategy is null.
     */
    public PersistentSessionImpl(
          Transport transportProtocol,
          ConnectionLostListener connectionLostListener,
+         SessionTerminatedListener sessionTerminatedListener,
          TypedProperties settings,
          ResumeStrategy resumeStrategy)
    {
@@ -75,6 +78,7 @@ public class PersistentSessionImpl implements PersistentSession {
 
       _session = new SessionImpl(transportProtocol, settings);
       _connectionLostListener = connectionLostListener;
+      _sessionTerminatedListener = sessionTerminatedListener;
       _resumeStrategy = resumeStrategy;
       _session.addStateListener(this::stateListener);
 
@@ -84,16 +88,14 @@ public class PersistentSessionImpl implements PersistentSession {
    }
 
    @Override
-   public void close()
-   throws Exception
-   {
-      _session.close();
-   }
-
-   @Override
    public long getId()
    {
       return _session.getId();
+   }
+
+   @Override
+   public String getPrettyPrintedPerSecondStats() {
+      return _session.getPrettyPrintedPerSecondStats();
    }
 
    @Override
@@ -118,7 +120,7 @@ public class PersistentSessionImpl implements PersistentSession {
    private void startHeartBeatTimer()
    {
       _sendHeartbeatTimer = TimeoutTimer.createEagerTimeoutTimer(
-            "Client Session " + LogUtil.formatSessionId(_session.getId()) + " Heartbeat Timer",
+            "FedPro Client Session Heartbeat Timer",
             _heartbeatIntervalMillis);
       _session.setMessageSentListener(_sendHeartbeatTimer::extend);
       _sendHeartbeatTimer.start(this::heartbeat);
@@ -144,9 +146,6 @@ public class PersistentSessionImpl implements PersistentSession {
    public void terminate()
    throws SessionLost, SessionIllegalState
    {
-      if (_sendHeartbeatTimer != null) {
-         _sendHeartbeatTimer.cancel();
-      }
       _session.terminate();
    }
 
@@ -156,9 +155,6 @@ public class PersistentSessionImpl implements PersistentSession {
          TimeUnit responseTimeoutUnit)
    throws SessionLost, SessionIllegalState
    {
-      if (_sendHeartbeatTimer != null) {
-         _sendHeartbeatTimer.cancel();
-      }
       _session.terminate(responseTimeout, responseTimeoutUnit);
    }
 
@@ -200,6 +196,11 @@ public class PersistentSessionImpl implements PersistentSession {
    {
       if (oldState == SessionImpl.State.RUNNING && newState == SessionImpl.State.DROPPED) {
          runResumeStrategy();
+      } else if (newState == Session.State.TERMINATED) {
+         if (_sendHeartbeatTimer != null) {
+            _sendHeartbeatTimer.cancel();
+         }
+         _sessionTerminatedListener.onSessionTerminated(_session.getId());
       }
    }
 

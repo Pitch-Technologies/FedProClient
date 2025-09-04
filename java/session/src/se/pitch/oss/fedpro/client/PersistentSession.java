@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  * Reconnection attempts will happen according to a supplied custom strategy, or, by default, every 5 seconds up to
  * a minute. If the connection cannot be reestablished, a {@link ConnectionLostListener} will be invoked.
  */
-public interface PersistentSession extends AutoCloseable {
+public interface PersistentSession {
 
    /**
     * Invoked when the session fails to reconnect to the server.
@@ -39,12 +39,22 @@ public interface PersistentSession extends AutoCloseable {
       void onConnectionLost(String reason);
    }
 
+   interface SessionTerminatedListener {
+      void onSessionTerminated(long sessionId);
+   }
+
    /**
     * Get the session ID.
     *
     * @return The session ID.
     */
    long getId();
+
+   /**
+    * Get pretty-printed session statistics that are expressed in quantity per second,
+    * such as call count per second.
+    */
+   String getPrettyPrintedPerSecondStats();
 
    /**
     * Start a new Federate Protocol Persistent Session.

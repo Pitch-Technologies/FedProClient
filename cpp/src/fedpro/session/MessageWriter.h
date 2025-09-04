@@ -81,7 +81,7 @@ namespace FedPro
             MessageType messageType);
 
       void addMessage(
-            uint64_t payloadSize,
+            uint32_t payloadSize,
             int32_t lastReceivedSequenceNumber,
             MessageType messageType,
             std::unique_ptr<EncodableMessage> payload);
@@ -92,7 +92,7 @@ namespace FedPro
             ConcurrentHashMap<int32_t, std::promise<ByteSequence>> * futuresMap);
 
       std::future<ByteSequence> addRequest(
-            uint64_t payloadSize,
+            uint32_t payloadSize,
             int32_t lastReceivedSequenceNumber,
             MessageType messageType,
             std::unique_ptr<EncodableMessage> payload,

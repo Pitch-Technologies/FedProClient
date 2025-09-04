@@ -14,7 +14,7 @@
  limitations under the License.
  **********************************************************************/
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/time/LogicalTime.h>
 #include <RTI/time/LogicalTimeFactory.h>
 #else

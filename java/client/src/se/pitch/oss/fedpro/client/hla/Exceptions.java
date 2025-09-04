@@ -16,8 +16,8 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.exceptions.RTIexception;
-import hla.rti1516_202X.exceptions.RTIinternalError;
+import hla.rti1516_2025.exceptions.RTIexception;
+import hla.rti1516_2025.exceptions.RTIinternalError;
 import se.pitch.oss.fedpro.client_common.exceptions.FedProRtiInternalError;
 
 import java.lang.reflect.Constructor;
@@ -143,7 +143,7 @@ public class Exceptions {
          Map<String, Constructor<? extends RTIexception>> map = new HashMap<>();
          for (String name : NAMES) {
             try {
-               Class<?> c = Class.forName("hla.rti1516_202X.exceptions." + name);
+               Class<?> c = Class.forName("hla.rti1516_2025.exceptions." + name);
                if (RTIexception.class.isAssignableFrom(c)) {
                   //noinspection unchecked
                   Class<? extends RTIexception> c2 = (Class<? extends RTIexception>) c;
@@ -151,6 +151,7 @@ public class Exceptions {
                   map.put(name, constructor);
                }
             } catch (ClassNotFoundException | NoSuchMethodException e) {
+               System.out.println("e = " + e);
                throw new RuntimeException(e);
             }
          }
@@ -173,6 +174,7 @@ public class Exceptions {
       Constructor<? extends RTIexception> constructor = Init.CONSTRUCTORS.get(exceptionName);
       if (constructor != null) {
          try {
+            // sneakyThrow(..) throws RTIexception
             sneakyThrow(constructor.newInstance(details));
          } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
             throw new FedProRtiInternalError("Failed to create exception", e);

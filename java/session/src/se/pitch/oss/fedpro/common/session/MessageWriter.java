@@ -16,10 +16,10 @@
 
 package se.pitch.oss.fedpro.common.session;
 
-import se.pitch.oss.fedpro.common.session.buffers.GenericBuffer;
-import se.pitch.oss.fedpro.common.exceptions.MessageQueueFull;
 import se.pitch.oss.fedpro.client.session.msg.EncodableMessage;
 import se.pitch.oss.fedpro.client.session.msg.QueueableMessage;
+import se.pitch.oss.fedpro.common.exceptions.MessageQueueFull;
+import se.pitch.oss.fedpro.common.session.buffers.GenericBuffer;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;

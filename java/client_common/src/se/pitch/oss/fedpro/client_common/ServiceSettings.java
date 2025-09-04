@@ -16,7 +16,7 @@
 
 package se.pitch.oss.fedpro.client_common;
 
-import static se.pitch.oss.fedpro.client.Settings.TCP;
+import static se.pitch.oss.fedpro.common.Protocol.TCP;
 
 public class ServiceSettings {
    // Default values

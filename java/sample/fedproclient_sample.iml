@@ -9,6 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="fedproclient_client" />
     <orderEntry type="module" module-name="fedproclient_hla_api" />
-    <orderEntry type="library" name="slf4j-api-2.0.5" level="project" />
+    <orderEntry type="library" name="slf4j-api" level="project" />
   </component>
 </module>

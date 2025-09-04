@@ -13,7 +13,6 @@
 #  limitations under the License.
 
 
-#
 # FindVcToolset.cmake
 #
 # Locates an installed Visual Studio version that can provide the requested

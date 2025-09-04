@@ -16,16 +16,16 @@
 
 package se.pitch.oss.fedpro.client.hla.encoders;
 
-import hla.rti1516_202X.DimensionHandle;
-import hla.rti1516_202X.RTIambassador;
-import hla.rti1516_202X.encoding.ByteWrapper;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderException;
-import hla.rti1516_202X.encoding.HLAdimensionHandle;
-import hla.rti1516_202X.exceptions.CouldNotDecode;
-import hla.rti1516_202X.exceptions.FederateNotExecutionMember;
-import hla.rti1516_202X.exceptions.NotConnected;
-import hla.rti1516_202X.exceptions.RTIinternalError;
+import hla.rti1516_2025.DimensionHandle;
+import hla.rti1516_2025.RTIambassador;
+import hla.rti1516_2025.encoding.ByteWrapper;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderException;
+import hla.rti1516_2025.encoding.HLAdimensionHandle;
+import hla.rti1516_2025.exceptions.CouldNotDecode;
+import hla.rti1516_2025.exceptions.FederateNotExecutionMember;
+import hla.rti1516_2025.exceptions.NotConnected;
+import hla.rti1516_2025.exceptions.RTIinternalError;
 
 import java.util.Objects;
 

@@ -16,7 +16,7 @@
 
 #include "../RTIcompat.h"
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/time/LogicalTime.h>
 #else
 #include <RTI/LogicalTime.h>
@@ -76,7 +76,7 @@ namespace RTI_NAMESPACE
    }
 
    RTI_UNIQUE_PTR<LogicalTime> HLAfloat64TimeFactory::decodeLogicalTime(
-         RTI_IF_HLA_VERSION_2024_OR_LATER(const) void * buffer,
+         RTI_IF_HLA_VERSION_2025_OR_LATER(const) void * buffer,
          size_t bufferSize) RTI_THROW(InternalError, CouldNotDecode)
    {
       RTI_UNIQUE_PTR<LogicalTime> time{new HLAfloat64Time()};
@@ -93,7 +93,7 @@ namespace RTI_NAMESPACE
    }
 
    RTI_UNIQUE_PTR<LogicalTimeInterval> HLAfloat64TimeFactory::decodeLogicalTimeInterval(
-         RTI_IF_HLA_VERSION_2024_OR_LATER(const) void * buffer,
+         RTI_IF_HLA_VERSION_2025_OR_LATER(const) void * buffer,
          size_t bufferSize) RTI_THROW(InternalError, CouldNotDecode)
    {
       RTI_UNIQUE_PTR<LogicalTimeInterval> timeInterval{new HLAfloat64Interval()};

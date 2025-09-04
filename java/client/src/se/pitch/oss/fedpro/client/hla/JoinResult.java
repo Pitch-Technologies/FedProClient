@@ -16,7 +16,7 @@
 
 package se.pitch.oss.fedpro.client.hla;
 
-import hla.rti1516_202X.FederateHandle;
+import hla.rti1516_2025.FederateHandle;
 
 public class JoinResult {
    private final FederateHandle _federateHandle;

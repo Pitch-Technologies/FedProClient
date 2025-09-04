@@ -16,7 +16,9 @@
 
 #include "FederateAmbassadorDispatcher.h"
 
-#if (RTI_HLA_VERSION >= 2024)
+#include <utility/MovingStats.h>
+
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/time/LogicalTime.h>
 #else
 #include "services-2010/FederateAmbassadorAdapter.h"
@@ -28,43 +30,49 @@ namespace FedPro
 {
    FederateAmbassadorDispatcher::FederateAmbassadorDispatcher(
          RTI_NAMESPACE::FederateAmbassador * federateReference,
-         std::shared_ptr<FedPro::ClientConverter> clientConverter)
-#if (RTI_HLA_VERSION >= 2024)
+         std::shared_ptr<FedPro::ClientConverter> clientConverter,
+         const MovingStatsSupplier & movingStatsSupplier)
+#if (RTI_HLA_VERSION >= 2025)
          : _federateReference(federateReference),
 #else
          : _federateReference(std::make_unique<FederateAmbassadorAdapter>(federateReference)),
 #endif
            _clientConverter(std::move(clientConverter))
    {
+      _reflectStats = movingStatsSupplier();
+      _receivedInteractionStats = movingStatsSupplier();
+      _receivedDirectedInteractionStats = movingStatsSupplier();
+      _callbackTimeStats = movingStatsSupplier();
    }
 
    FederateAmbassadorDispatcher::~FederateAmbassadorDispatcher() = default;
 
    void FederateAmbassadorDispatcher::prefetch(RTIambassadorClient * client)
    {
-#if (RTI_HLA_VERSION < 2024)
+#if (RTI_HLA_VERSION < 2025)
       _federateReference->prefetch(client);
 #endif
    }
 
-   void FederateAmbassadorDispatcher::dispatchCallback(std::unique_ptr<rti1516_202X::fedpro::CallbackRequest> callback) {
+   void FederateAmbassadorDispatcher::dispatchCallback(std::unique_ptr<rti1516_2025::fedpro::CallbackRequest> callback) {
+      MovingStats::SteadyTimePoint timeBefore{MovingStats::nowMillis()};
       switch (callback->callbackRequest_case()) {
-         case rti1516_202X::fedpro::CallbackRequest::kConnectionLost: {
+         case rti1516_2025::fedpro::CallbackRequest::kConnectionLost: {
             auto request = callback->mutable_connectionlost();
             _federateReference->connectionLost(
                 _clientConverter->convertToHlaAndDelete(request->release_faultdescription()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReportFederationExecutions: {
+         case rti1516_2025::fedpro::CallbackRequest::kReportFederationExecutions: {
             auto request = callback->mutable_reportfederationexecutions();
             _federateReference->reportFederationExecutions(
                 _clientConverter->convertToHlaAndDelete(request->release_report()));
             break;
          }
 
-#if (RTI_HLA_VERSION >= 2024)
-         case rti1516_202X::fedpro::CallbackRequest::kReportFederationExecutionMembers: {
+#if (RTI_HLA_VERSION >= 2025)
+         case rti1516_2025::fedpro::CallbackRequest::kReportFederationExecutionMembers: {
             auto request = callback->mutable_reportfederationexecutionmembers();
             _federateReference->reportFederationExecutionMembers(
                 _clientConverter->convertToHlaAndDelete(request->release_federationname()),
@@ -73,8 +81,8 @@ namespace FedPro
          }
 
 #endif
-#if (RTI_HLA_VERSION >= 2024)
-         case rti1516_202X::fedpro::CallbackRequest::kReportFederationExecutionDoesNotExist: {
+#if (RTI_HLA_VERSION >= 2025)
+         case rti1516_2025::fedpro::CallbackRequest::kReportFederationExecutionDoesNotExist: {
             auto request = callback->mutable_reportfederationexecutiondoesnotexist();
             _federateReference->reportFederationExecutionDoesNotExist(
                 _clientConverter->convertToHlaAndDelete(request->release_federationname()));
@@ -82,8 +90,8 @@ namespace FedPro
          }
 
 #endif
-#if (RTI_HLA_VERSION >= 2024)
-         case rti1516_202X::fedpro::CallbackRequest::kFederateResigned: {
+#if (RTI_HLA_VERSION >= 2025)
+         case rti1516_2025::fedpro::CallbackRequest::kFederateResigned: {
             auto request = callback->mutable_federateresigned();
             _federateReference->federateResigned(
                 _clientConverter->convertToHlaAndDelete(request->release_reasonforresigndescription()));
@@ -91,14 +99,14 @@ namespace FedPro
          }
 
 #endif
-         case rti1516_202X::fedpro::CallbackRequest::kSynchronizationPointRegistrationSucceeded: {
+         case rti1516_2025::fedpro::CallbackRequest::kSynchronizationPointRegistrationSucceeded: {
             auto request = callback->mutable_synchronizationpointregistrationsucceeded();
             _federateReference->synchronizationPointRegistrationSucceeded(
                 _clientConverter->convertToHlaAndDelete(request->release_synchronizationpointlabel()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kSynchronizationPointRegistrationFailed: {
+         case rti1516_2025::fedpro::CallbackRequest::kSynchronizationPointRegistrationFailed: {
             auto request = callback->mutable_synchronizationpointregistrationfailed();
             _federateReference->synchronizationPointRegistrationFailed(
                 _clientConverter->convertToHlaAndDelete(request->release_synchronizationpointlabel()),
@@ -106,7 +114,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kAnnounceSynchronizationPoint: {
+         case rti1516_2025::fedpro::CallbackRequest::kAnnounceSynchronizationPoint: {
             auto request = callback->mutable_announcesynchronizationpoint();
             _federateReference->announceSynchronizationPoint(
                 _clientConverter->convertToHlaAndDelete(request->release_synchronizationpointlabel()),
@@ -114,7 +122,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationSynchronized: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationSynchronized: {
             auto request = callback->mutable_federationsynchronized();
             _federateReference->federationSynchronized(
                 _clientConverter->convertToHlaAndDelete(request->release_synchronizationpointlabel()),
@@ -122,14 +130,14 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kInitiateFederateSave: {
+         case rti1516_2025::fedpro::CallbackRequest::kInitiateFederateSave: {
             auto request = callback->mutable_initiatefederatesave();
             _federateReference->initiateFederateSave(
                 _clientConverter->convertToHlaAndDelete(request->release_label()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kInitiateFederateSaveWithTime: {
+         case rti1516_2025::fedpro::CallbackRequest::kInitiateFederateSaveWithTime: {
             auto request = callback->mutable_initiatefederatesavewithtime();
             _federateReference->initiateFederateSave(
                 _clientConverter->convertToHlaAndDelete(request->release_label()),
@@ -137,47 +145,47 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationSaved: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationSaved: {
             _federateReference->federationSaved(
 );
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationNotSaved: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationNotSaved: {
             auto request = callback->mutable_federationnotsaved();
             _federateReference->federationNotSaved(
                 _clientConverter->convertToHla(request->reason()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationSaveStatusResponse: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationSaveStatusResponse: {
             auto request = callback->mutable_federationsavestatusresponse();
             _federateReference->federationSaveStatusResponse(
                 _clientConverter->convertToHlaAndDelete(request->release_response()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRequestFederationRestoreSucceeded: {
+         case rti1516_2025::fedpro::CallbackRequest::kRequestFederationRestoreSucceeded: {
             auto request = callback->mutable_requestfederationrestoresucceeded();
             _federateReference->requestFederationRestoreSucceeded(
                 _clientConverter->convertToHlaAndDelete(request->release_label()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRequestFederationRestoreFailed: {
+         case rti1516_2025::fedpro::CallbackRequest::kRequestFederationRestoreFailed: {
             auto request = callback->mutable_requestfederationrestorefailed();
             _federateReference->requestFederationRestoreFailed(
                 _clientConverter->convertToHlaAndDelete(request->release_label()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationRestoreBegun: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationRestoreBegun: {
             _federateReference->federationRestoreBegun(
 );
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kInitiateFederateRestore: {
+         case rti1516_2025::fedpro::CallbackRequest::kInitiateFederateRestore: {
             auto request = callback->mutable_initiatefederaterestore();
             _federateReference->initiateFederateRestore(
                 _clientConverter->convertToHlaAndDelete(request->release_label()),
@@ -186,83 +194,83 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationRestored: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationRestored: {
             _federateReference->federationRestored(
 );
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationNotRestored: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationNotRestored: {
             auto request = callback->mutable_federationnotrestored();
             _federateReference->federationNotRestored(
                 _clientConverter->convertToHla(request->reason()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kFederationRestoreStatusResponse: {
+         case rti1516_2025::fedpro::CallbackRequest::kFederationRestoreStatusResponse: {
             auto request = callback->mutable_federationrestorestatusresponse();
             _federateReference->federationRestoreStatusResponse(
                 _clientConverter->convertToHlaAndDelete(request->release_response()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kStartRegistrationForObjectClass: {
+         case rti1516_2025::fedpro::CallbackRequest::kStartRegistrationForObjectClass: {
             auto request = callback->mutable_startregistrationforobjectclass();
             _federateReference->startRegistrationForObjectClass(
                 _clientConverter->convertToHlaAndDelete(request->release_objectclass()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kStopRegistrationForObjectClass: {
+         case rti1516_2025::fedpro::CallbackRequest::kStopRegistrationForObjectClass: {
             auto request = callback->mutable_stopregistrationforobjectclass();
             _federateReference->stopRegistrationForObjectClass(
                 _clientConverter->convertToHlaAndDelete(request->release_objectclass()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kTurnInteractionsOn: {
+         case rti1516_2025::fedpro::CallbackRequest::kTurnInteractionsOn: {
             auto request = callback->mutable_turninteractionson();
             _federateReference->turnInteractionsOn(
                 _clientConverter->convertToHlaAndDelete(request->release_interactionclass()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kTurnInteractionsOff: {
+         case rti1516_2025::fedpro::CallbackRequest::kTurnInteractionsOff: {
             auto request = callback->mutable_turninteractionsoff();
             _federateReference->turnInteractionsOff(
                 _clientConverter->convertToHlaAndDelete(request->release_interactionclass()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kObjectInstanceNameReservationSucceeded: {
+         case rti1516_2025::fedpro::CallbackRequest::kObjectInstanceNameReservationSucceeded: {
             auto request = callback->mutable_objectinstancenamereservationsucceeded();
             _federateReference->objectInstanceNameReservationSucceeded(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstancename()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kObjectInstanceNameReservationFailed: {
+         case rti1516_2025::fedpro::CallbackRequest::kObjectInstanceNameReservationFailed: {
             auto request = callback->mutable_objectinstancenamereservationfailed();
             _federateReference->objectInstanceNameReservationFailed(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstancename()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kMultipleObjectInstanceNameReservationSucceeded: {
+         case rti1516_2025::fedpro::CallbackRequest::kMultipleObjectInstanceNameReservationSucceeded: {
             auto request = callback->mutable_multipleobjectinstancenamereservationsucceeded();
             _federateReference->multipleObjectInstanceNameReservationSucceeded(
                 _clientConverter->convertToHlaAndMove(request->mutable_objectinstancenames()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kMultipleObjectInstanceNameReservationFailed: {
+         case rti1516_2025::fedpro::CallbackRequest::kMultipleObjectInstanceNameReservationFailed: {
             auto request = callback->mutable_multipleobjectinstancenamereservationfailed();
             _federateReference->multipleObjectInstanceNameReservationFailed(
                 _clientConverter->convertToHlaAndMove(request->mutable_objectinstancenames()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kDiscoverObjectInstance: {
+         case rti1516_2025::fedpro::CallbackRequest::kDiscoverObjectInstance: {
             auto request = callback->mutable_discoverobjectinstance();
             _federateReference->discoverObjectInstance(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -272,7 +280,8 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReflectAttributeValues: {
+         case rti1516_2025::fedpro::CallbackRequest::kReflectAttributeValues: {
+            _reflectStats->sample(1);
             auto request = callback->mutable_reflectattributevalues();
             _federateReference->reflectAttributeValues(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -284,7 +293,8 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReflectAttributeValuesWithTime: {
+         case rti1516_2025::fedpro::CallbackRequest::kReflectAttributeValuesWithTime: {
+            _reflectStats->sample(1);
             auto request = callback->mutable_reflectattributevalueswithtime();
             std::unique_ptr<RTI_NAMESPACE::MessageRetractionHandle> optionalretraction;
             if (request->has_optionalretraction()) {
@@ -304,7 +314,8 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReceiveInteraction: {
+         case rti1516_2025::fedpro::CallbackRequest::kReceiveInteraction: {
+            _receivedInteractionStats->sample(1);
             auto request = callback->mutable_receiveinteraction();
             _federateReference->receiveInteraction(
                 _clientConverter->convertToHlaAndDelete(request->release_interactionclass()),
@@ -316,7 +327,8 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReceiveInteractionWithTime: {
+         case rti1516_2025::fedpro::CallbackRequest::kReceiveInteractionWithTime: {
+            _receivedInteractionStats->sample(1);
             auto request = callback->mutable_receiveinteractionwithtime();
             std::unique_ptr<RTI_NAMESPACE::MessageRetractionHandle> optionalretraction;
             if (request->has_optionalretraction()) {
@@ -336,7 +348,8 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReceiveDirectedInteraction: {
+         case rti1516_2025::fedpro::CallbackRequest::kReceiveDirectedInteraction: {
+            _receivedDirectedInteractionStats->sample(1);
             auto request = callback->mutable_receivedirectedinteraction();
             _federateReference->receiveDirectedInteraction(
                 _clientConverter->convertToHlaAndDelete(request->release_interactionclass()),
@@ -348,7 +361,8 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReceiveDirectedInteractionWithTime: {
+         case rti1516_2025::fedpro::CallbackRequest::kReceiveDirectedInteractionWithTime: {
+            _receivedDirectedInteractionStats->sample(1);
             auto request = callback->mutable_receivedirectedinteractionwithtime();
             std::unique_ptr<RTI_NAMESPACE::MessageRetractionHandle> optionalretraction;
             if (request->has_optionalretraction()) {
@@ -368,7 +382,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRemoveObjectInstance: {
+         case rti1516_2025::fedpro::CallbackRequest::kRemoveObjectInstance: {
             auto request = callback->mutable_removeobjectinstance();
             _federateReference->removeObjectInstance(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -377,7 +391,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRemoveObjectInstanceWithTime: {
+         case rti1516_2025::fedpro::CallbackRequest::kRemoveObjectInstanceWithTime: {
             auto request = callback->mutable_removeobjectinstancewithtime();
             std::unique_ptr<RTI_NAMESPACE::MessageRetractionHandle> optionalretraction;
             if (request->has_optionalretraction()) {
@@ -394,7 +408,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kAttributesInScope: {
+         case rti1516_2025::fedpro::CallbackRequest::kAttributesInScope: {
             auto request = callback->mutable_attributesinscope();
             _federateReference->attributesInScope(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -402,7 +416,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kAttributesOutOfScope: {
+         case rti1516_2025::fedpro::CallbackRequest::kAttributesOutOfScope: {
             auto request = callback->mutable_attributesoutofscope();
             _federateReference->attributesOutOfScope(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -410,7 +424,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kProvideAttributeValueUpdate: {
+         case rti1516_2025::fedpro::CallbackRequest::kProvideAttributeValueUpdate: {
             auto request = callback->mutable_provideattributevalueupdate();
             _federateReference->provideAttributeValueUpdate(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -419,7 +433,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kTurnUpdatesOnForObjectInstance: {
+         case rti1516_2025::fedpro::CallbackRequest::kTurnUpdatesOnForObjectInstance: {
             auto request = callback->mutable_turnupdatesonforobjectinstance();
             _federateReference->turnUpdatesOnForObjectInstance(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -427,7 +441,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kTurnUpdatesOnForObjectInstanceWithRate: {
+         case rti1516_2025::fedpro::CallbackRequest::kTurnUpdatesOnForObjectInstanceWithRate: {
             auto request = callback->mutable_turnupdatesonforobjectinstancewithrate();
             _federateReference->turnUpdatesOnForObjectInstance(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -436,7 +450,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kTurnUpdatesOffForObjectInstance: {
+         case rti1516_2025::fedpro::CallbackRequest::kTurnUpdatesOffForObjectInstance: {
             auto request = callback->mutable_turnupdatesoffforobjectinstance();
             _federateReference->turnUpdatesOffForObjectInstance(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -444,7 +458,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kConfirmAttributeTransportationTypeChange: {
+         case rti1516_2025::fedpro::CallbackRequest::kConfirmAttributeTransportationTypeChange: {
             auto request = callback->mutable_confirmattributetransportationtypechange();
             _federateReference->confirmAttributeTransportationTypeChange(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -453,7 +467,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReportAttributeTransportationType: {
+         case rti1516_2025::fedpro::CallbackRequest::kReportAttributeTransportationType: {
             auto request = callback->mutable_reportattributetransportationtype();
             _federateReference->reportAttributeTransportationType(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -462,7 +476,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kConfirmInteractionTransportationTypeChange: {
+         case rti1516_2025::fedpro::CallbackRequest::kConfirmInteractionTransportationTypeChange: {
             auto request = callback->mutable_confirminteractiontransportationtypechange();
             _federateReference->confirmInteractionTransportationTypeChange(
                 _clientConverter->convertToHlaAndDelete(request->release_interactionclass()),
@@ -470,7 +484,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kReportInteractionTransportationType: {
+         case rti1516_2025::fedpro::CallbackRequest::kReportInteractionTransportationType: {
             auto request = callback->mutable_reportinteractiontransportationtype();
             _federateReference->reportInteractionTransportationType(
                 _clientConverter->convertToHlaAndDelete(request->release_federate()),
@@ -479,7 +493,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRequestAttributeOwnershipAssumption: {
+         case rti1516_2025::fedpro::CallbackRequest::kRequestAttributeOwnershipAssumption: {
             auto request = callback->mutable_requestattributeownershipassumption();
             _federateReference->requestAttributeOwnershipAssumption(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -488,7 +502,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRequestDivestitureConfirmation: {
+         case rti1516_2025::fedpro::CallbackRequest::kRequestDivestitureConfirmation: {
             auto request = callback->mutable_requestdivestitureconfirmation();
             _federateReference->requestDivestitureConfirmation(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -497,7 +511,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kAttributeOwnershipAcquisitionNotification: {
+         case rti1516_2025::fedpro::CallbackRequest::kAttributeOwnershipAcquisitionNotification: {
             auto request = callback->mutable_attributeownershipacquisitionnotification();
             _federateReference->attributeOwnershipAcquisitionNotification(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -506,7 +520,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kAttributeOwnershipUnavailable: {
+         case rti1516_2025::fedpro::CallbackRequest::kAttributeOwnershipUnavailable: {
             auto request = callback->mutable_attributeownershipunavailable();
             _federateReference->attributeOwnershipUnavailable(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -515,7 +529,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRequestAttributeOwnershipRelease: {
+         case rti1516_2025::fedpro::CallbackRequest::kRequestAttributeOwnershipRelease: {
             auto request = callback->mutable_requestattributeownershiprelease();
             _federateReference->requestAttributeOwnershipRelease(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -524,7 +538,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kConfirmAttributeOwnershipAcquisitionCancellation: {
+         case rti1516_2025::fedpro::CallbackRequest::kConfirmAttributeOwnershipAcquisitionCancellation: {
             auto request = callback->mutable_confirmattributeownershipacquisitioncancellation();
             _federateReference->confirmAttributeOwnershipAcquisitionCancellation(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -532,7 +546,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kInformAttributeOwnership: {
+         case rti1516_2025::fedpro::CallbackRequest::kInformAttributeOwnership: {
             auto request = callback->mutable_informattributeownership();
             _federateReference->informAttributeOwnership(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -541,7 +555,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kAttributeIsNotOwned: {
+         case rti1516_2025::fedpro::CallbackRequest::kAttributeIsNotOwned: {
             auto request = callback->mutable_attributeisnotowned();
             _federateReference->attributeIsNotOwned(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -549,7 +563,7 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kAttributeIsOwnedByRTI: {
+         case rti1516_2025::fedpro::CallbackRequest::kAttributeIsOwnedByRTI: {
             auto request = callback->mutable_attributeisownedbyrti();
             _federateReference->attributeIsOwnedByRTI(
                 _clientConverter->convertToHlaAndDelete(request->release_objectinstance()),
@@ -557,22 +571,22 @@ namespace FedPro
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kTimeRegulationEnabled: {
+         case rti1516_2025::fedpro::CallbackRequest::kTimeRegulationEnabled: {
             auto request = callback->mutable_timeregulationenabled();
             _federateReference->timeRegulationEnabled(
                 *_clientConverter->convertToHlaAndDelete(request->release_time()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kTimeConstrainedEnabled: {
+         case rti1516_2025::fedpro::CallbackRequest::kTimeConstrainedEnabled: {
             auto request = callback->mutable_timeconstrainedenabled();
             _federateReference->timeConstrainedEnabled(
                 *_clientConverter->convertToHlaAndDelete(request->release_time()));
             break;
          }
 
-#if (RTI_HLA_VERSION >= 2024)
-         case rti1516_202X::fedpro::CallbackRequest::kFlushQueueGrant: {
+#if (RTI_HLA_VERSION >= 2025)
+         case rti1516_2025::fedpro::CallbackRequest::kFlushQueueGrant: {
             auto request = callback->mutable_flushqueuegrant();
             _federateReference->flushQueueGrant(
                 *_clientConverter->convertToHlaAndDelete(request->release_time()),
@@ -581,14 +595,14 @@ namespace FedPro
          }
 
 #endif
-         case rti1516_202X::fedpro::CallbackRequest::kTimeAdvanceGrant: {
+         case rti1516_2025::fedpro::CallbackRequest::kTimeAdvanceGrant: {
             auto request = callback->mutable_timeadvancegrant();
             _federateReference->timeAdvanceGrant(
                 *_clientConverter->convertToHlaAndDelete(request->release_time()));
             break;
          }
 
-         case rti1516_202X::fedpro::CallbackRequest::kRequestRetraction: {
+         case rti1516_2025::fedpro::CallbackRequest::kRequestRetraction: {
             auto request = callback->mutable_requestretraction();
             _federateReference->requestRetraction(
                 *_clientConverter->convertToHlaAndDelete(request->release_retraction()));
@@ -599,5 +613,8 @@ namespace FedPro
             throw RTI_NAMESPACE::FederateInternalError(
                   L"Unknown callback: " + std::to_wstring(callback->callbackRequest_case()));
       }
+      auto callbackDurationMillis =
+            std::chrono::duration_cast<FedProDuration>(MovingStats::nowMillis() - timeBefore).count();
+      _callbackTimeStats->sample(static_cast<int>(callbackDurationMillis));
    }
 }

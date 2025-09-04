@@ -16,7 +16,7 @@
 
 #include "services-common/RTIcompat.h"
 
-#if (RTI_HLA_VERSION >= 2024)
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/time/LogicalTime.h>
 #else
 #include <RTI/LogicalTime.h>
@@ -26,7 +26,7 @@
 
 namespace RTI_NAMESPACE
 {
-#if (RTI_HLA_VERSION < 2024)
+#if (RTI_HLA_VERSION < 2025)
    LogicalTime::~LogicalTime() RTI_NOEXCEPT = default;
 #endif
 

@@ -26,6 +26,7 @@
 #include <fedpro/Session.h>
 #include <fedpro/SimpleResumeStrategy.h>
 #include <fedpro/Settings.h>
+#include <fedpro/Socket.h>
 #include <fedpro/Transport.h>
 
 namespace FedPro
@@ -62,14 +63,16 @@ namespace FedPro
     * @param transportProtocol The unique pointer to the transport protocol to be used for
     * the new persistent session. The ownership of the pointer is transferred to the
     * created session.
-    * @param connectionLostListener The listener to be invoked when the session is
+    * @param connectionLostListener The listener to invoke when the session is
     * terminally lost due to connection issues.
+    * @param sessionTerminatedListener The listener to invoke following session termination.
     *
     * @return An unique pointer to a new PersistentSession instance.
     */
    FEDPRO_EXPORT std::unique_ptr<PersistentSession> createPersistentSession(
          std::unique_ptr<Transport> transportProtocol,
-         const PersistentSession::ConnectionLostListener & connectionLostListener);
+         PersistentSession::ConnectionLostListener connectionLostListener,
+         PersistentSession::SessionTerminatedListener sessionTerminatedListener);
 
    /**
     * @brief Create a new persistent client session with a custom resume strategy.
@@ -77,8 +80,9 @@ namespace FedPro
     * @param transportProtocol The unique pointer to the transport protocol to be used for
     * the new persistent session. The ownership of the pointer is transferred to the
     * created session.
-    * @param connectionLostListener The listener to be invoked when the session is
+    * @param connectionLostListener The listener to invoke when the session is
     * terminally lost due to connection issues.
+    * @param sessionTerminatedListener The listener to invoke following session termination.
     * @param settings The Properties object instance which session layer settings will be
     * loaded from. Unprovided settings will get default values and non-session settings
     * will be ignored.
@@ -89,7 +93,8 @@ namespace FedPro
     */
    FEDPRO_EXPORT std::unique_ptr<PersistentSession> createPersistentSession(
          std::unique_ptr<Transport> transportProtocol,
-         const PersistentSession::ConnectionLostListener & connectionLostListener,
+         PersistentSession::ConnectionLostListener connectionLostListener,
+         PersistentSession::SessionTerminatedListener sessionTerminatedListener,
          const Properties & settings);
 
    /**
@@ -98,8 +103,9 @@ namespace FedPro
     * @param transportProtocol The unique pointer to the transport protocol to be used for
     * the new persistent session. The ownership of the pointer is transferred to the
     * created session.
-    * @param connectionLostListener The listener to be invoked when the session is
+    * @param connectionLostListener The listener to invoke when the session is
     * terminally lost due to connection issues.
+    * @param sessionTerminatedListener The listener to invoke following session termination.
     * @param settings The Properties object instance which session layer settings will be
     * loaded from. Unprovided settings will get default values and non-session settings
     * will be ignored.
@@ -114,7 +120,8 @@ namespace FedPro
     */
    FEDPRO_EXPORT std::unique_ptr<PersistentSession> createPersistentSession(
          std::unique_ptr<Transport> transportProtocol,
-         const PersistentSession::ConnectionLostListener & connectionLostListener,
+         PersistentSession::ConnectionLostListener connectionLostListener,
+         PersistentSession::SessionTerminatedListener sessionTerminatedListener,
          const Properties & settings,
          std::unique_ptr<ResumeStrategy> resumeStrategy);
 

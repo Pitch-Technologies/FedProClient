@@ -16,11 +16,11 @@
 
 package se.pitch.oss.chat1516_4;
 
-import hla.rti1516_202X.*;
-import hla.rti1516_202X.encoding.DecoderException;
-import hla.rti1516_202X.encoding.EncoderFactory;
-import hla.rti1516_202X.encoding.HLAunicodeString;
-import hla.rti1516_202X.exceptions.*;
+import hla.rti1516_2025.*;
+import hla.rti1516_2025.encoding.DecoderException;
+import hla.rti1516_2025.encoding.EncoderFactory;
+import hla.rti1516_2025.encoding.HLAunicodeString;
+import hla.rti1516_2025.exceptions.*;
 import se.pitch.oss.fedpro.client.hla.AsyncRTIambassador;
 import se.pitch.oss.fedpro.client.hla.RTIambassadorEx;
 
@@ -37,6 +37,7 @@ import java.util.concurrent.CompletionException;
 
 /**
  * Basic asynchronous HLA 4 Chat sample for Federate Protocol.
+ * Note that this sample does not implement directed interactions, so it may not receive or send private messages
  */
 class AsyncChat extends NullFederateAmbassador {
    private static final String FEDERATION_NAME = "ChatRoom";
@@ -95,21 +96,21 @@ class AsyncChat extends NullFederateAmbassador {
       } catch (CompletionException ce) {
          Throwable e = ce.getCause() != null ? ce.getCause() : ce;
          System.err.println("Federate failed to start: " + e);
-         pressEnterToShutDown();
+         waitForEnterThenExit(1);
       } catch (RuntimeException e) {
          System.err.println("Unexpected exception: " + e);
          e.printStackTrace();
-         pressEnterToShutDown();
+         waitForEnterThenExit(1);
       } catch (Exception e) {
          System.err.println("" + e);
-         pressEnterToShutDown();
+         waitForEnterThenExit(1);
       }
    }
 
-   private void pressEnterToShutDown()
+   private void waitForEnterThenExit(int exitStatus)
    {
       try {
-         System.out.println("Press <ENTER> to shutdown");
+         System.out.println("Press <ENTER> to exit");
          _systemInput.readLine();
          if (_rtiAmbassador != null) {
             try {
@@ -123,13 +124,14 @@ class AsyncChat extends NullFederateAmbassador {
          }
       } catch (IOException ignored) {
       }
+      System.exit(exitStatus);
    }
 
    private void run()
    throws Exception
    {
-
       String rtiHost;
+
       if (!_args.isEmpty()) {
          rtiHost = _args.get(0);
       } else {
@@ -160,7 +162,7 @@ class AsyncChat extends NullFederateAmbassador {
       try {
          _rtiAmbassador.connect(this, CallbackModel.HLA_IMMEDIATE, rtiConfiguration);
       } catch (Unauthorized e) {
-         System.out.println(e.getMessage());
+         System.err.println(e.getMessage());
       }
 
       try {
@@ -169,7 +171,7 @@ class AsyncChat extends NullFederateAmbassador {
       } catch (FederatesCurrentlyJoined | FederationExecutionDoesNotExist ignored) {
       }
 
-      File fddFile = new File("Chat-evolved.xml");
+      File fddFile = new File("Chat-hla4.xml");
       try {
          _rtiAmbassador.createFederationExecution(FEDERATION_NAME, new String[] {fddFile.getPath()}, "HLAfloat64Time");
       } catch (FederationExecutionAlreadyExists ignored) {
@@ -218,7 +220,7 @@ class AsyncChat extends NullFederateAmbassador {
          } catch (IllegalName e) {
             System.out.println("Illegal name. Try again.");
          } catch (RTIexception e) {
-            System.out.println("RTI exception when reserving name: " + e.getMessage());
+            System.err.println("RTI exception when reserving name: " + e.getMessage());
             return;
          }
       } while (!_reservationSucceeded);
@@ -240,8 +242,7 @@ class AsyncChat extends NullFederateAmbassador {
       while (true) {
          System.out.print("> ");
          String message = _systemInput.readLine();
-
-         if (message.equals(".")) {
+         if (message == null || message.equals(".")) {
             break;
          }
          ParameterHandleValueMap parameters = _rtiAmbassador.getParameterHandleValueMapFactory().create(1);

@@ -23,13 +23,12 @@ namespace FedPro
    // Default values
    static constexpr const FedProDuration DEFAULT_HEARTBEAT_INTERVAL_MILLIS{60000ULL};
    static constexpr const FedProDuration DEFAULT_RESPONSE_TIMEOUT_MILLIS{180000ULL};
+   static constexpr const FedProDuration DEFAULT_RECONNECT_DELAY_MILLIS{5000ULL};
    static constexpr const FedProDuration DEFAULT_RECONNECT_LIMIT_MILLIS{600000ULL};
    static constexpr const uint32_t DEFAULT_CONNECTION_MAX_RETRY_ATTEMPTS{0};
    static constexpr const FedProDuration DEFAULT_CONNECTION_TIMEOUT_MILLIS{DEFAULT_RESPONSE_TIMEOUT_MILLIS};
    static constexpr const uint32_t DEFAULT_MESSAGE_QUEUE_SIZE{2000};
    static constexpr const bool DEFAULT_RATE_LIMIT_ENABLED{false};
-
-   // Non settings related default values.
-   static constexpr const FedProDuration DEFAULT_RECONNECT_DELAY_MILLIS{5000ULL};
+   static constexpr const FedProDuration DEFAULT_PRINT_STATS_INTERVAL_MILLIS{60000};
 
 }

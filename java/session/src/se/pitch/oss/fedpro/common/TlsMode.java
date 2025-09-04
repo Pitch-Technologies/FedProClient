@@ -17,6 +17,7 @@
 package se.pitch.oss.fedpro.common;
 
 public enum TlsMode {
+   // Todo: document these modes
    ENCRYPTED,  // When connection should only be encrypted, and certificates not verified.
    SERVER_AUTH, // Standard mode, fully TLS 1.3. Encrypted and certificates validated.
    CLIENT_SERVER_AUTH;  // This mode is optional to support (also not in standard at 2024.01.24?)
