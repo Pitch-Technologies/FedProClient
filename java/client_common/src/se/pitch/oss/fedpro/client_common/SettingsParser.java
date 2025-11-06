@@ -67,7 +67,7 @@ public class SettingsParser {
     * a settings line string, and then returns them.
     *
     * @param settingsLine A string containing settings seperated by the ',' character.
-    *                     Each setting must be specified in the format <setting_name>=<setting_value>.
+    *                     Each setting must be specified in the format &lt;setting_name&gt;=&lt;setting_value&gt;.
     *                     Example: "FED_INT_HEART=600,connect.port=tcp".
     * @return A FedProProperties instance that contains parsed values for all provided
     *       settings.
