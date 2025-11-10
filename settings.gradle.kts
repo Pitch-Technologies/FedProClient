@@ -8,6 +8,6 @@
  */
 
 rootProject.name = "fedproclient"
-include("java:api","java:client","java:client_common","java:session","java:protobuf","install:")
+include("java:api","java:client","java:client_common","java:session","java:protobuf")
 
 
