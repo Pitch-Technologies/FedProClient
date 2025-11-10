@@ -119,9 +119,7 @@ public class OmtHLAlogicalTimeInterval<T extends LogicalTime<T, U>, U extends Lo
       return this;
    }
 
-   /**
-    * @noinspection RedundantIfStatement
-    */
+   // @noinspection RedundantIfStatement
    @Override
    public boolean equals(Object o)
    {
