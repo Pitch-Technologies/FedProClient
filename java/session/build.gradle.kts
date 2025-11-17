@@ -24,10 +24,16 @@ sourceSets {
 
 java {
     withSourcesJar()
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
 }
 
 mavenPublishing {
     coordinates("se.pitch.oss.fedpro", "session", libs.versions.fed.pro.client.get())
+
+    publishToMavenCentral()
+    signAllPublications()
 
     pom {
         name.set("Federate Protocol Java Client Session")

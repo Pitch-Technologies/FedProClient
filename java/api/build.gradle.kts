@@ -23,10 +23,16 @@ sourceSets {
 
 java {
     withSourcesJar()
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
 }
 
 mavenPublishing {
     coordinates("se.pitch.oss.fedpro", "hla4-api", libs.versions.fed.pro.client.get())
+
+    publishToMavenCentral()
+    signAllPublications()
 
     pom {
         name.set("HLA 4 API")
