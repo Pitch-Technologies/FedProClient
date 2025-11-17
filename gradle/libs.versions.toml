@@ -1,5 +1,5 @@
 [versions]
-fed-pro-client = "1.2.0-SNAPSHOT"
+fed-pro-client = "1.2.0"
 
 websocket = "1.6.0"
 protobuf = "4.29.1"
