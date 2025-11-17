@@ -41,8 +41,10 @@ mavenPublishing {
 
         licenses {
             license {
-                name.set("The Apache License, Version 2.0")
-                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                name.set("IEEE 1516.1-2025 Permission Notice")
+                url.set("https://github.com/Pitch-Technologies/FedProClient/blob/main/java/api/HLA1516-2025/src/hla/rti1516_2025/AdditionalSettingsResultCode.java")
+                distribution.set("repo")
+                comments.set("See notice in the source file header")
             }
         }
         scm {
