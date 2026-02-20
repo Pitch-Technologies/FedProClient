@@ -68,11 +68,16 @@ public class MemorySocket implements FedProSocket {
 
    @Override
    public void close()
+   throws IOException
    {
       synchronized (_open) {
          _open.set(false);
          _open.notifyAll();
       }
+      _inboundInputStream.close();
+      _outboundOutputStream.close();
+      // To make inboundInputStream reach end, we must close the outputStream that feeds the inboundInputStream
+      _inboundOutputStream.close();
    }
 
    @Override

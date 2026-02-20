@@ -61,13 +61,14 @@ public:
 
 private:
 
+   mutable std::mutex _mutex;
+
    std::atomic<bool> _open{false};
 
    // Signals arrival of packets, opening and closing of socket.
-   mutable std::condition_variable _condition;
+   mutable std::condition_variable _condition; // GUARDED_BY(_mutex)
 
-   mutable std::string _inboundMemoryBuffer; // GUARDED_BY(_inboundMutex)
-   mutable std::mutex _inboundMutex;
+   mutable std::string _inboundMemoryBuffer; // GUARDED_BY(_mutex)
 
    mutable std::string _outboundMemoryBuffer;
 

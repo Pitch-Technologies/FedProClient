@@ -19,17 +19,16 @@
 
 #include "RTIambassadorClientGenericBase.h"
 
+#include "ClientSession.h"
 #include "FederateAmbassadorDispatcher.h"
 #include <FedPro.h>
-#include "SettingsParser.h"
-#include <protobuf/generated/datatypes.pb.h>
-#include <protobuf/generated/FederateAmbassador.pb.h>
+#include <fedpro/IOException.h>
+#include <fedpro/Transport.h>
+#include <protobuf/generated/RTIambassador.pb.h>
 #include <session/LogUtil.h>
-#include <session/msg/MessageHeader.h>
-#include <session/msg/HlaCallbackResponseMessage.h>
 #include <session/SessionSettings.h>
+#include <transport/TransportFactoryImpl.h>
 #include <utility/final.h>
-#include <utility/FixedRateExecutor.h>
 #include <utility/LoggerInitializer.h>
 #include <utility/MovingStatsNoOp.h>
 #include <utility/StandAloneMovingStats.h>
@@ -47,20 +46,7 @@
 
 namespace FedPro
 {
-   RTIambassadorClientGenericBase::QueuedCallback::QueuedCallback(
-         std::unique_ptr<CallbackRequest> callbackRequest,
-         SequenceNumber sequenceNumber,
-         bool needsResponse)
-         : _callbackRequest{std::move(callbackRequest)},
-           _sequenceNumber{sequenceNumber},
-           _needsResponse{needsResponse}
-   {
-   }
-
-   RTIambassadorClientGenericBase::QueuedCallback::QueuedCallback(Type type)
-         : _type{type}
-   {
-   }
+   using namespace FedPro::Internal;
 
    RTIambassadorClientGenericBase::RTIambassadorClientGenericBase(std::shared_ptr<ClientConverter> clientConverter)
          : _clientConverter{std::move(clientConverter)}
@@ -72,79 +58,83 @@ namespace FedPro
 
    RTIambassadorClientGenericBase::~RTIambassadorClientGenericBase()
    {
-      // Terminating session to destroy when this destructor returns.
-      // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks.
-      std::unique_ptr<PersistentSession> terminatingSession;
+      std::shared_ptr<ClientSession> terminatingSession;
       {
          std::lock_guard<std::mutex> guard(_connectionStateLock);
-         if (_persistentSession) {
-            try {
-               _persistentSession->terminate(FedProDuration{0});
-            } catch (const FedPro::SessionLost &) {
-            } catch (const FedPro::SessionAlreadyTerminated &) {
-            }
-            _persistentSession.swap(terminatingSession);
-            _shutdownInProgress = true;
-         }
+         _clientSession.swap(terminatingSession);
       }
 
-      // Wait for listeners to complete before destroying PersistentSession (cf terminatingSession),
-      // since lostConnection() and sessionTerminated() need to access this client object,
-      // and this the last opportunity to wait for the session's listeners.
       if (terminatingSession) {
-         terminatingSession->waitListeners();
+         try {
+            terminatingSession->_persistentSession->terminate(FedProDuration{0});
+         } catch (const FedPro::SessionLost &) {
+         } catch (const FedPro::SessionAlreadyTerminated &) {
+         }
+
+         // Wait for listeners to complete before destroying PersistentSession (cf terminatingSession),
+         // since lostConnection() and sessionTerminated() need to access this client object,
+         // and this is the last opportunity to wait for the session's listeners.
+         terminatingSession->_persistentSession->waitListeners();
+
+         // cleanUpTerminatingSession waits for thread, and destroy the PersistentSession being terminated.
+         // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks.
+         cleanUpTerminatingSession(*terminatingSession);
       }
-      // Wait for threads to complete before destroying PersistentSession and this client object,
-      // since printStats() and dispatchCallback() need to access PersistentSession and/or this client object,
-      cleanUpTerminatingSession();
    }
 
    RTIambassadorClientGenericBase::CallResponse RTIambassadorClientGenericBase::doConnect(
-         RTI_NAMESPACE::FederateAmbassador & federateReference,
-         RTI_NAMESPACE::CallbackModel callbackModel,
          const CallRequest & callRequest,
-         std::unique_ptr<PersistentSession> & failedSession) noexcept(false)
+         std::shared_ptr<ClientSession> & failedSession) noexcept(false)
    {
+      if (!_clientSession) {
+         throw RTI_NAMESPACE::RTIinternalError{L"Cannot start session before initialization"};
+      }
       try {
-         _persistentSession->start(
-               [this](
-                     SequenceNumber seq,
-                     const ByteSequence & hlaCallback) { hlaCallbackRequest(seq, hlaCallback); });
-         CallResponse callResponse = doHlaCall(callRequest);
-         _federateAmbassadorDispatcher = std::make_unique<FederateAmbassadorDispatcher>(
-               &federateReference, _clientConverter, [this]() -> std::unique_ptr<MovingStats> {
-                  if (_printStats) {
-                     return std::make_unique<StandAloneMovingStats>(_printStatsIntervalMillis);
-                  } else {
-                     return std::make_unique<MovingStatsNoOp>();
-                  }
-               });
+         _clientSession->startPersistentSession();
+         CallResponse callResponse = doHlaCall(callRequest, *_clientSession);
          // Todo - I don't see how we need throwOnException() here? remove?
          throwOnException(callResponse);
-         startStatsPrinting();
-         if (callbackModel == RTI_NAMESPACE::HLA_IMMEDIATE) {
-            startCallbackThread();
-         }
+         startSessionThreads(*_clientSession);
          return callResponse;
 
       } catch (const SessionLost & e) {
          // There's no point keeping the session if it failed to initialize
-         _persistentSession.swap(failedSession);
+         _clientSession.swap(failedSession);
          throw RTI_NAMESPACE::ConnectionFailed(
                toWString("Failed to start FedPro session: ") + toWString(e.what()));
       } catch (const SessionIllegalState & e) {
          // There's no point keeping the session if it failed to initialize
-         _persistentSession.swap(failedSession);
+         _clientSession.swap(failedSession);
          throw RTI_NAMESPACE::ConnectionFailed(
                toWString("Failed to start FedPro session: ") + toWString(e.what()));
       } catch (const RTI_NAMESPACE::NotConnected & e) {
          // There's no point keeping the session if it failed to initialize
-         _persistentSession.swap(failedSession);
+         _clientSession.swap(failedSession);
          throw RTI_NAMESPACE::ConnectionFailed(toWString(L"Failed to connect: ") + e.what());
       }
    }
 
-   void RTIambassadorClientGenericBase::createPersistentSession(const Properties & settings)
+   void RTIambassadorClientGenericBase::createClientSession(
+         const Properties & settings,
+         RTI_NAMESPACE::FederateAmbassador & federateReference,
+         RTI_NAMESPACE::CallbackModel callbackModel)
+   {
+      auto federateAmbassadorDispatcher = std::make_shared<FederateAmbassadorDispatcher>(
+            &federateReference, _clientConverter, [this]() -> std::unique_ptr<MovingStats> {
+               if (_printStats) {
+                  return std::make_unique<StandAloneMovingStats>(_printStatsIntervalMillis);
+               } else {
+                  return std::make_unique<MovingStatsNoOp>();
+               }
+            });
+      bool createCallbackThread = (callbackModel == RTI_NAMESPACE::CallbackModel::HLA_IMMEDIATE);
+      createClientSession(settings, std::move(federateAmbassadorDispatcher), createCallbackThread);
+   }
+
+   void RTIambassadorClientGenericBase::createClientSession(
+         const Properties & settings,
+         std::shared_ptr<FederateAmbassadorDispatcher> federateAmbassadorDispatcher,
+         bool createCallbackThread)
    {
       // No logging is done before this:
       LoggerInitializer::initialize(settings);
@@ -152,12 +142,15 @@ namespace FedPro
       // Always assign to honor changes in settings between successive connect/disconnect calls.
       _asyncUpdates = settings.getBoolean(SETTING_NAME_ASYNC_UPDATES, DEFAULT_ASYNC_UPDATES);
 
-      _persistentSession = FedPro::createPersistentSession(
+      _federateAmbassadorDispatcher = std::move(federateAmbassadorDispatcher);
+
+      _clientSession = std::make_shared<ClientSession>(
             createTransportConfiguration(settings),
-            [this](std::string reason) { lostConnection(std::move(reason)); },
             [this](uint64_t sessionId) { sessionTerminated(sessionId); },
             settings,
-            std::make_unique<SimpleResumeStrategy>(settings));
+            std::make_unique<SimpleResumeStrategy>(settings),
+            createCallbackThread,
+            _federateAmbassadorDispatcher);
 
       Properties allServiceSettingsUsed;
       allServiceSettingsUsed.setBoolean(SETTING_NAME_ASYNC_UPDATES, _asyncUpdates);
@@ -186,89 +179,10 @@ namespace FedPro
 
    std::unique_ptr<Transport> RTIambassadorClientGenericBase::createTransportConfiguration(const Properties & settings)
    {
-      std::unique_ptr<Transport> transport;
-
-      _protocol = settings.getString(SETTING_NAME_CONNECTION_PROTOCOL, TCP);
-      if (_protocol == TLS) {
-         // TODO: Create option to allow for TLS clients
-         throw std::runtime_error("Option 'tls' not implemented.");
-      } else if (_protocol == WS) {
-         transport = createWebSocketTransport(settings);
-      } else if (_protocol == WSS) {
-         // TODO: Create option to allow for WebSocket Secure clients
-         throw std::runtime_error("Option 'websocketsecure' not implemented.");
-      } else if (_protocol == TCP) {
-         transport = createTcpTransport(settings);
-      } else {
-         throw RTI_NAMESPACE::RTIinternalError(
-               L"Invalid network protocol '" + make_wstring(_protocol) + L"' in settings");
-      }
-      return transport;
-   }
-
-   void RTIambassadorClientGenericBase::startCallbackThread()
-   {
-      if (_callbackThread && _callbackThread->joinable()) {
-         throw std::runtime_error("Callback thread is running or pending join");
-      }
-
-      _callbackThread = std::make_unique<std::thread>(&RTIambassadorClientGenericBase::callbackLoop, this);
-   }
-
-   void RTIambassadorClientGenericBase::stopCallbackThread()
-   {
       try {
-         // Interrupts the thread waiting on the callback queue.
-         // Should we drop all queued callbacks?
-         {
-            std::lock_guard<std::mutex> queueLock(_queueLock);
-            _queueCondition.interruptOne();
-         }
-
-         {
-            std::lock_guard<std::mutex> lock(_callbackLock);
-            // If callbacks are disabled, then evoke may be stuck waiting
-            // for notification and callbacks to be enabled.
-            _callbacksEnabled = true;
-            _callbackCondition.notifyAll();
-         }
-
-         // _connectionStateLock needs to be released at this point as _callbackThread may be stuck in a deadlock
-         //   waiting for _connectionStateLock.
-
-         //noinspection FieldAccessNotGuarded
-         if (_callbackThread && _callbackThread->joinable()) {
-            //noinspection FieldAccessNotGuarded
-            _callbackThread->join();
-         } else {
-            // Evoked mode.
-         }
-      } catch (const InterruptedException &) {
-      }
-
-      {
-         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         _callbackThread = nullptr;
-      }
-   }
-
-   void RTIambassadorClientGenericBase::startStatsPrinting()
-   {
-      stopStatsPrinting();
-      if (_printStats) {
-         auto printStatsExecutor =
-               makeFixedRateExecutor([this]() { printStats(); }, _printStatsIntervalMillis, _printStatsIntervalMillis);
-         _printStatsInterrupt = printStatsExecutor.getState();
-         _statPrintingExecutor = std::thread(printStatsExecutor);
-      }
-   }
-
-   void RTIambassadorClientGenericBase::stopStatsPrinting()
-   {
-      if (_printStatsInterrupt) {
-         _printStatsInterrupt->interrupt();
-         _printStatsInterrupt.reset();
-         _statPrintingExecutor.join();
+         return createTransport(settings);
+      } catch (const std::runtime_error & e) {
+         throw RTI_NAMESPACE::RTIinternalError(make_wstring(e.what()));
       }
    }
 
@@ -324,12 +238,10 @@ namespace FedPro
 
    bool RTIambassadorClientGenericBase::evokeCallbackBase(double approximateMinimumTimeInSeconds)
    {
-      {
-         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         if (_callbackThread) {
-            // Immediate mode
-            return false;
-         }
+      std::shared_ptr<ClientSession> clientSession = getClientSession();
+      if (clientSession->_callbackThread) {
+         // Immediate mode
+         return false;
       }
 
       using clock_type = std::chrono::high_resolution_clock;
@@ -345,28 +257,30 @@ namespace FedPro
 
       try {
          {
-            std::unique_lock<std::mutex> lock(_callbackLock);
-            while (!_callbacksEnabled) {
-               if (_callbackCondition.waitUntil(lock, minTime) == std::cv_status::timeout) {
+            std::unique_lock<std::mutex> lock(clientSession->_callbackLock);
+            while (!clientSession->_callbacksEnabled) {
+               if (clientSession->_callbackCondition.waitUntil(lock, minTime) == std::cv_status::timeout) {
                   return false;
                }
             }
             // Callbacks are enabled. Let's go!
-            _callbackInProgress = true;
+            clientSession->_callbackInProgress = true;
          }
 
          // Function to execute at the end of the loop, or if returning early.
          auto final_guard = make_final(
-               [this]() {
-                  std::lock_guard<std::mutex> lock(_callbackLock);
+               [&clientSession]() {
+                  std::lock_guard<std::mutex> lock(clientSession->_callbackLock);
 
-                  _callbackInProgress = false;
-                  _callbackCondition.notifyAll();
+                  clientSession->_callbackInProgress = false;
+                  clientSession->_callbackCondition.notifyAll();
                });
 
          size_t remainingCallbacks{0};
          FedProDuration timeRemainingMillis = std::chrono::duration_cast<FedProDuration>(minTime - clock_type::now());
-         std::unique_ptr<QueuedCallback> queuedCallback = pollCallback(remainingCallbacks, timeRemainingMillis);
+         std::unique_ptr<QueuedCallback> queuedCallback = clientSession->_callbackQueue.poll(
+               remainingCallbacks,
+               timeRemainingMillis);
          if (!queuedCallback) {
             return false;
          }
@@ -376,7 +290,7 @@ namespace FedPro
             return remainingCallbacks > 0;
          }
 
-         dispatchCallback(std::move(*queuedCallback));
+         clientSession->dispatchCallback(std::move(*queuedCallback));
          return remainingCallbacks > 0;
       } catch (const InterruptedException &) {
          SPDLOG_DEBUG("Interrupted while waiting for callback.");
@@ -388,12 +302,10 @@ namespace FedPro
          double minimumTime,
          double maximumTime)
    {
-      {
-         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         if (_callbackThread) {
-            // Immediate mode
-            return false;
-         }
+      std::shared_ptr<ClientSession> clientSession = getClientSession();
+      if (clientSession->_callbackThread) {
+         // Immediate mode
+         return false;
       }
 
       using clock_type = std::chrono::high_resolution_clock;
@@ -411,23 +323,23 @@ namespace FedPro
       while (true) {
          try {
             {
-               std::unique_lock<std::mutex> lock(_callbackLock);
-               while (!_callbacksEnabled) {
-                  if (_callbackCondition.waitUntil(lock, waitLimitPoint) == std::cv_status::timeout) {
+               std::unique_lock<std::mutex> lock(clientSession->_callbackLock);
+               while (!clientSession->_callbacksEnabled) {
+                  if (clientSession->_callbackCondition.waitUntil(lock, waitLimitPoint) == std::cv_status::timeout) {
                      return false;
                   }
                }
                // Callbacks are enabled. Let's go!
-               _callbackInProgress = true;
+               clientSession->_callbackInProgress = true;
             }
 
             // Function to execute at the end of the loop, or if returning early.
             auto final_guard = make_final(
-                  [this]() {
-                     std::lock_guard<std::mutex> scopedLock(_callbackLock);
+                  [&clientSession]() {
+                     std::lock_guard<std::mutex> scopedLock(clientSession->_callbackLock);
 
-                     _callbackInProgress = false;
-                     _callbackCondition.notifyAll();
+                     clientSession->_callbackInProgress = false;
+                     clientSession->_callbackCondition.notifyAll();
                   });
 
             std::unique_ptr<QueuedCallback> queuedCallback;
@@ -437,14 +349,13 @@ namespace FedPro
             if (now < waitLimitPoint) {
                // If we haven't reached minimumTime, wait until callback becomes available but not longer than minimumTime
                FedProDuration timeout = std::chrono::duration_cast<FedProDuration>(waitLimitPoint - now);
-               queuedCallback = pollCallback(remainingCallbacks, timeout);
+               queuedCallback = clientSession->_callbackQueue.poll(remainingCallbacks, timeout);
             } else if (now < cutoffTimePoint) {
                // We are past minimumTime. Keep going until no more callbacks or we hit maximumTime
                FedProDuration timeout = std::chrono::duration_cast<FedProDuration>(cutoffTimePoint - now);
-               queuedCallback = pollCallback(remainingCallbacks, timeout);
+               queuedCallback = clientSession->_callbackQueue.poll(remainingCallbacks, timeout);
             } else {
-               std::unique_lock<std::mutex> queueGuard(_queueLock);
-               remainingCallbacks = _callbackQueue.size();
+               remainingCallbacks = clientSession->_callbackQueue.size();
             }
 
             if (!queuedCallback) {
@@ -455,7 +366,7 @@ namespace FedPro
                // Wakeup from enableCallbacks/disableCallbacks. Loop around and start over
                return remainingCallbacks > 0;
             }
-            dispatchCallback(std::move(*queuedCallback));
+            clientSession->dispatchCallback(std::move(*queuedCallback));
          } catch (const InterruptedException &) {
             SPDLOG_DEBUG("Interrupted while waiting for callback.");
             return false;
@@ -465,52 +376,57 @@ namespace FedPro
 
    void RTIambassadorClientGenericBase::disconnectBase()
    {
-      // Terminating session to destroy when this function returns.
-      // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks.
-      std::unique_ptr<PersistentSession> terminatingSession;
+      std::shared_ptr<ClientSession> clientSession;
       {
-         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         if (_shutdownInProgress) {
+         std::lock_guard<std::mutex> disconnectGuard(_disconnectLock);
+         {
+            std::lock_guard<std::mutex> guard(_connectionStateLock);
+            clientSession = _clientSession;
+         }
+         if (!clientSession) {
             return;
          }
 
          try {
             rti1516_2025::fedpro::CallRequest callRequest;
             callRequest.set_allocated_disconnectrequest(new rti1516_2025::fedpro::DisconnectRequest);
-            CallResponse callResponse = doHlaCall(callRequest);
+            CallResponse callResponse = doHlaCall(callRequest, *clientSession);
             // Todo - I don't see how we need throwOnException() here? remove?
             throwOnException(callResponse);
          } catch (const RTI_NAMESPACE::NotConnected & e) {
             const std::string eAsString = toString(e.what());
             SPDLOG_DEBUG("Call to disconnect while not connected: {}", eAsString);
             // Already disconnected. Just ignore.
-            return;
          }
 
-         terminatePersistentSession();
-         _persistentSession.swap(terminatingSession);
-         _shutdownInProgress = true;
+         {
+            std::lock_guard<std::mutex> guard(_connectionStateLock);
+            if (_clientSession != clientSession) {
+               // Another thread terminated this session. Nothing more to do.
+               // Socket reader thread may have detected a broken socket and initiated sessionTerminated().
+               return;
+            }
+            _clientSession.reset();
+         }
       }
 
-      // Wait for listeners to complete before destroying PersistentSession (cf terminatingSession),
+      terminatePersistentSession(*clientSession);
+
+      // Wait for listeners to complete before destroying PersistentSession (cf cleanUpTerminatingSession),
       // since lostConnection() and sessionTerminated() need to access this client object,
       // and this the last opportunity to wait for the session's listeners.
-      terminatingSession->waitListeners();
-      // Wait for threads to complete before destroying PersistentSession (cf terminatingSession),
-      // since dispatchCallback() need to access PersistentSession,
-      cleanUpTerminatingSession();
-      {
-         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         _shutdownInProgress = false;
-      }
+      clientSession->_persistentSession->waitListeners();
+
+      // cleanUpTerminatingSession waits for thread, and destroy the PersistentSession being terminated.
+      // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks.
+      cleanUpTerminatingSession(*clientSession);
+
    }
 
-   void RTIambassadorClientGenericBase::terminatePersistentSession()
+   void RTIambassadorClientGenericBase::terminatePersistentSession(ClientSession & clientSession)
    {
       try {
-         if (_persistentSession) {
-            _persistentSession->terminate();
-         }
+         clientSession._persistentSession->terminate();
       } catch (const SessionLost & e) {
          SPDLOG_DEBUG("Exception while trying to disconnect: {}", e.what());
          // Termination request did not complete.
@@ -523,22 +439,9 @@ namespace FedPro
       }
    }
 
-   static ::rti1516_2025::fedpro::CallbackResponse createCallbackResponse(
-         const char * exceptionName,
-         const wstring_view exceptionDetails)
+   bool RTIambassadorClientGenericBase::isInCallbackThread() const
    {
-      auto * exceptionData = new ::rti1516_2025::fedpro::ExceptionData();
-      exceptionData->set_exceptionname(exceptionName);
-      exceptionData->set_details(toString(exceptionDetails));
-
-      ::rti1516_2025::fedpro::CallbackResponse callbackResponse;
-      callbackResponse.set_allocated_callbackfailed(exceptionData);
-      return callbackResponse;
-   }
-
-   bool RTIambassadorClientGenericBase::isInCurrentCallbackThread() const
-   {
-      return (_callbackThread && std::this_thread::get_id() == _callbackThread->get_id());
+      return ClientSession::isInCallbackThread();
    }
 
    std::vector<std::wstring> RTIambassadorClientGenericBase::splitFederateConnectSettings(const std::wstring & inputString)
@@ -576,22 +479,29 @@ namespace FedPro
          bool crcAddressIsFedProServerAddress)
    {
       /*
-       * This method moves all settings that are prefixed with 'FedPro.'from the input parameter to client setting
+       * This method moves all settings that are prefixed with 'FedPro.' from the input parameter to client setting
        * string and return it.
        * Exception: If the boolean parameter is set to true, the setting 'crcAddress' is interpreted as the address of
        * the FedPro server, not as an LRC setting.
        */
-      const std::wstring crcAddressPrefix{L"crcAddress="};
+      static const string_view SETTING_NAME_CRC_ADDRESS{"crcAddress"};
       std::string clientSettings;
 
       auto iterator = inputValueList.begin();
       while (iterator != inputValueList.end()) {
-         std::wstring settingsLine = *iterator;
+         const std::wstring & settingEntry{*iterator};
 
-         if (settingsLine.find(crcAddressPrefix) == 0 && crcAddressIsFedProServerAddress) {
+         size_t settingsNameLen = settingEntry.find('=');
+         if (settingsNameLen == std::wstring::npos) {
+            ++iterator; // Move to the next element
+            continue;
+         }
+         std::string settingName = toString(wstring_view{settingEntry.c_str(), settingsNameLen});
+
+         if (settingName == SETTING_NAME_CRC_ADDRESS && crcAddressIsFedProServerAddress) {
             // Handle the case where crcAddress is interpreted as the FedPro server address
 
-            std::wstring serverAddress = settingsLine.substr(crcAddressPrefix.length());
+            std::wstring serverAddress = settingEntry.substr(settingsNameLen + 1);
             std::vector<wstring_view> serverHostAndPort = splitString(serverAddress, L':', 2);
             if (!serverHostAndPort[0].empty()) {
                std::string serverHost = toString(serverHostAndPort[0]);
@@ -604,10 +514,18 @@ namespace FedPro
 
             iterator = inputValueList.erase(iterator); // Remove the processed element
 
-         } else if (settingsLine.find(SETTING_PREFIX_WIDE_STRING) == 0) {
+         } else if (settingName == SETTING_NAME_HEARTBEAT_INTERVAL ||
+                    settingName == SETTING_NAME_RESPONSE_TIMEOUT ||
+                    settingName == SETTING_NAME_RECONNECT_LIMIT) {
+
+            // Handle standard settings without prefix
+            addToSettingsLine(clientSettings, toString(settingEntry));
+            // Remove the processed element
+            iterator = inputValueList.erase(iterator);
+         } else if (settingName.find(SETTING_PREFIX) == 0) {
             // Handle settings prefixed with 'FedPro.'
 
-            std::wstring setting = settingsLine.substr(SETTING_PREFIX_WIDE_STRING.length());
+            std::wstring setting = settingEntry.substr(SETTING_PREFIX_WIDE_STRING.length());
             addToSettingsLine(clientSettings, toString(setting));
 
             iterator = inputValueList.erase(iterator); // Remove the processed element
@@ -632,25 +550,17 @@ namespace FedPro
       return additionalSettingsStream.str();
    }
 
-   std::future<ByteSequence> RTIambassadorClientGenericBase::sendCallRequest(ByteSequence && encodedHlaCall)
-   {
-      if (!_persistentSession) {
-         throw RTI_NAMESPACE::NotConnected(L"HLA call without a federate protocol session");
-      }
-
-      return _persistentSession->sendHlaCallRequest(encodedHlaCall);
-   }
-
    void RTIambassadorClientGenericBase::enableCallbacks()
    {
+      std::shared_ptr<ClientSession> clientSession = getClientSession();
       try {
          // Push placeholder callback
          QueuedCallback placeholder{QueuedCallback::Type::PLACEHOLDER};
-         putCallback(std::move(placeholder));
+         clientSession->_callbackQueue.push(std::move(placeholder));
 
-         std::lock_guard<std::mutex> lock(_callbackLock);
-         _callbacksEnabled = true;
-         _callbackCondition.notifyAll();
+         std::lock_guard<std::mutex> lock(clientSession->_callbackLock);
+         clientSession->_callbacksEnabled = true;
+         clientSession->_callbackCondition.notifyAll();
       } catch (const InterruptedException &) {
          throw RTI_NAMESPACE::RTIinternalError(L"Interrupted while waiting for callback lock");
       }
@@ -658,33 +568,61 @@ namespace FedPro
 
    void RTIambassadorClientGenericBase::disableCallbacks()
    {
+      std::shared_ptr<ClientSession> clientSession = getClientSession();
       try {
          // Push placeholder callback
          QueuedCallback placeholder{QueuedCallback::Type::PLACEHOLDER};
-         putCallback(std::move(placeholder));
+         clientSession->_callbackQueue.push(std::move(placeholder));
 
-         std::unique_lock<std::mutex> lock(_callbackLock);
-         _callbacksEnabled = false;
-         _callbackCondition.notifyAll();
+         std::unique_lock<std::mutex> lock(clientSession->_callbackLock);
+         clientSession->_callbacksEnabled = false;
+         clientSession->_callbackCondition.notifyAll();
 
          // Do not wait for the callback thread if you are the callback thread
-         if (!isInCurrentCallbackThread()) {
-            // COM_9-2 states that disableCallbacks shall not return until an
-            // ongoing callback has finished
-            _callbackCondition.wait(lock, [this]() { return !_callbackInProgress; });
+         if (!ClientSession::isInCallbackThread()) {
+            // Standard states that disableCallbacks shall not return until an
+            // ongoing callback has finished. (IFSPEC 10.60.4 c)
+            clientSession->_callbackCondition.wait(lock, [&clientSession]() { return !clientSession->_callbackInProgress; });
          }
       } catch (const InterruptedException &) {
          throw RTI_NAMESPACE::RTIinternalError(L"Interrupted while waiting for callback lock");
       }
    }
 
-   PersistentSession * RTIambassadorClientGenericBase::getSession()
+   std::shared_ptr<ClientSession> RTIambassadorClientGenericBase::getClientSession()
    {
       std::lock_guard<std::mutex> guard(_connectionStateLock);
-      return _persistentSession.get();
+      return _clientSession;
+   }
+
+   void RTIambassadorClientGenericBase::startSessionThreads(ClientSession & clientSession)
+   {
+      if (_printStats) {
+         clientSession.startStatsPrinting([this]() { printStats(); }, _printStatsIntervalMillis);
+      }
+      clientSession.startCallbackThread();
+   }
+
+   void RTIambassadorClientGenericBase::cleanUpTerminatingSession(ClientSession & clientSession)
+   {
+      clientSession.stopStatsPrinting();
+      clientSession.stopCallbackThread();
+
+      // Wait for threads to complete before destroying PersistentSession,
+      // since the callback thread invokes dispatchCallback() and need to access PersistentSession.
+      clientSession._persistentSession.reset();
    }
 
    RTIambassadorClientGenericBase::CallResponse RTIambassadorClientGenericBase::doHlaCall(const CallRequest & callRequest)
+   {
+      std::shared_ptr<ClientSession> clientSession = getClientSession();
+      if (!clientSession) {
+         throw RTI_NAMESPACE::NotConnected(L"HLA call without a federate protocol session");
+      }
+      return doHlaCall(callRequest, *clientSession);
+   }
+
+   RTIambassadorClientGenericBase::CallResponse RTIambassadorClientGenericBase::doHlaCall(const CallRequest & callRequest, ClientSession & session)
    {
       try {
          ByteSequence encodedRequest;
@@ -693,34 +631,47 @@ namespace FedPro
                   L"Failed to serialize the CallRequest as Protocol Buffer, possibly due to missing fields. ");
          }
 
-         std::future<ByteSequence> call = sendCallRequest(std::move(encodedRequest));
+         std::future<ByteSequence> call = session._persistentSession->sendHlaCallRequest(std::move(encodedRequest));
 
-         // Todo: Probably a bug, this call to get() will rethrow any exception instead of storing it in encodedResponse.
-         //   Try / catch block instead?
-         //   Possible exceptions are: MessageQueueFull and SessionLost.
          ByteSequence encodedResponse = call.get();
 
          return decodeHlaCallResponse(encodedResponse);
 
-      } catch (const std::ios_base::failure & e) {
-         throw RTI_NAMESPACE::RTIinternalError(L"Failed to perform HLA call. " + make_wstring(e.what()));
       } catch (const SessionIllegalState & e) {
-         throw RTI_NAMESPACE::NotConnected(L"Failed to perform HLA call. " + make_wstring(e.what()));
+         // Session::sendHlaCallRequest threw SessionIllegalState
+         throw RTI_NAMESPACE::NotConnected(L"HLA call without a federate protocol session: " + make_wstring(e.what()));
+      } catch (const SessionLost & e) {
+         // The future returned by Session::sendHlaCallRequest threw SessionLost
+         throw RTI_NAMESPACE::NotConnected(L"HLA call without a federate protocol session " + make_wstring(e.what()));
+      } catch (const FedProException & e) {
+         // The future returned by Session::sendHlaCallRequest threw MessageQueueFull (FedProException)
+         throw RTI_NAMESPACE::RTIinternalError(L"Failed to perform HLA call. " + make_wstring(e.what()));
+      } catch (const IOException & e) {
+         // Session::sendHlaCallRequest threw IOException
+         throw RTI_NAMESPACE::RTIinternalError(L"Failed to perform HLA call. " + make_wstring(e.what()));
       }
    }
 
    std::future<ByteSequence> RTIambassadorClientGenericBase::doAsyncHlaCall(const CallRequest & callRequest)
    {
+      std::shared_ptr<ClientSession> clientSession = getClientSession();
+      if (!clientSession) {
+         throw RTI_NAMESPACE::NotConnected(L"HLA call without a federate protocol session");
+      }
+
       ByteSequence encodedRequest;
       if (!callRequest.SerializeToString(&encodedRequest)) {
          throw RTI_NAMESPACE::RTIinternalError(
                L"Failed to serialize the CallRequest as Protocol Buffer, possibly due to missing fields. ");
       }
 
+      PersistentSession & persistentSession{clientSession->getPersistentSession()};
       try {
-         return sendCallRequest(std::move(encodedRequest));
+         return persistentSession.sendHlaCallRequest(std::move(encodedRequest));
       } catch (const SessionIllegalState & e) {
          throw RTI_NAMESPACE::NotConnected(L"Failed to perform HLA call. " + make_wstring(e.what()));
+      } catch (const IOException & e) {
+         throw RTI_NAMESPACE::RTIinternalError(L"Failed to perform HLA call. " + make_wstring(e.what()));
       }
    }
 
@@ -1014,187 +965,32 @@ namespace FedPro
       }
    }
 
-   void RTIambassadorClientGenericBase::putCallback(QueuedCallback callback)
-   {
-      std::lock_guard<std::mutex> queueLock(_queueLock);
-      _callbackQueue.emplace(std::move(callback));
-      _queueCondition.notifyAll();
-   }
-
-   RTIambassadorClientGenericBase::QueuedCallback RTIambassadorClientGenericBase::takeCallback()
-   {
-      std::unique_lock<std::mutex> queueLock(_queueLock);
-      _queueCondition.wait(queueLock, [this]() { return !_callbackQueue.empty(); });
-      QueuedCallback queuedCallback = std::move(_callbackQueue.front());
-      _callbackQueue.pop();
-      return queuedCallback;
-   }
-
-   std::unique_ptr<RTIambassadorClientGenericBase::QueuedCallback> RTIambassadorClientGenericBase::pollCallback(
-         size_t & remainingCallbacks,
-         FedProDuration timeout)
-   {
-      std::unique_lock<std::mutex> queueLock(_queueLock);
-      while (_callbackQueue.empty()) {
-         if (timeout == FedProDuration::zero() ||
-             _queueCondition.waitFor(queueLock, timeout) == std::cv_status::timeout) {
-            remainingCallbacks = _callbackQueue.size();
-            return {};
-         }
-      }
-
-      auto queuedCallback = std::make_unique<QueuedCallback>(std::move(_callbackQueue.front()));
-      _callbackQueue.pop();
-
-      remainingCallbacks = _callbackQueue.size();
-      return queuedCallback;
-   }
-
-   void RTIambassadorClientGenericBase::callbackLoop()
-   {
-      while (true) {
-         try {
-            {
-               std::unique_lock<std::mutex> lock{_callbackLock};
-
-               // Wait for callbacks to be enabled
-               _callbackCondition.wait(lock, [this]() { return _callbacksEnabled; });
-
-               // Callbacks are enabled. Let's go!
-               _callbackInProgress = true;
-            }
-
-            // Function to execute at the end of the loop, or if returning early.
-            auto final_guard = make_final(
-                  [this]() {
-                     std::lock_guard<std::mutex> lock(_callbackLock);
-
-                     _callbackInProgress = false;
-                     _callbackCondition.notifyAll();
-                  });
-
-            QueuedCallback queuedCallback = takeCallback();
-            if (queuedCallback._type == QueuedCallback::Type::PLACEHOLDER) {
-               // Wakeup from disableCallbacks. Loop around.
-               continue;
-            }
-
-            dispatchCallback(std::move(queuedCallback));
-         } catch (const InterruptedException &) {
-            SPDLOG_DEBUG("Interrupted while waiting for callback");
-            return;
-         }
-      }
-   }
-
-   void RTIambassadorClientGenericBase::dispatchCallback(QueuedCallback queuedCallback)
-   {
-      auto * session = _persistentSession.get();
-
-      try {
-         dispatchHlaCallback(std::move(queuedCallback._callbackRequest));
-
-         if (session && queuedCallback._needsResponse) {
-            rti1516_2025::fedpro::CallbackResponse callbackResponse;
-            callbackResponse.set_allocated_callbacksucceeded(new rti1516_2025::fedpro::CallbackSucceeded());
-            session->sendHlaCallbackResponse(queuedCallback._sequenceNumber, callbackResponse.SerializeAsString());
-         }
-      } catch (const RTI_NAMESPACE::FederateInternalError & e) {
-         const std::string eAsString = toString(e.what());
-         SPDLOG_WARN("Exception in federate callback handler: {}", eAsString);
-         if (queuedCallback._needsResponse) {
-            rti1516_2025::fedpro::CallbackResponse response{createCallbackResponse(typeid(e).name(), e.what())};
-            sendHlaCallbackErrorResponse(
-                  session, queuedCallback._sequenceNumber, response.SerializeAsString());
-         }
-      } catch (const std::runtime_error &) {
-         // TODO: do something more sensible with these exceptions
-      } catch (const SessionIllegalState &) {
-         // Terminated: A failed callback response is not even important enough to log in the context of session termination.
-         // Not initialized: Can basically not happen.
-      }
-   }
-
-   void RTIambassadorClientGenericBase::sendHlaCallbackErrorResponse(
-         PersistentSession * resumingClient,
-         SequenceNumber sequenceNumber,
-         ByteSequence && encodedHlaResponse)
-   {
-      if (resumingClient) {
-         try {
-            resumingClient->sendHlaCallbackResponse(sequenceNumber, encodedHlaResponse);
-         } catch (const SessionIllegalState &) {
-            // Terminated: A callback error is not even important enough to log in the context of session termination.
-            // Not initialized: Can basically not happen
-         }
-      }
-
-   }
-
-   void RTIambassadorClientGenericBase::hlaCallbackRequest(
-         SequenceNumber sequenceNumber,
-         const ByteSequence & hlaCallback)
-   {
-      try {
-         auto callback = std::make_unique<CallbackRequest>();
-         if (!callback->ParseFromString(hlaCallback)) {
-            throw std::invalid_argument("Failed to parse the encoded CallbackRequest");
-         }
-
-         QueuedCallback queuedCallback{std::move(callback), sequenceNumber, true};
-         putCallback(std::move(queuedCallback));
-      } catch (const std::invalid_argument & e) {
-         SPDLOG_WARN("Failed to parse callback request with sequence number {}: {}", sequenceNumber, e.what());
-         // Report exception "InvalidProtocolBufferException" to match Java client behavior, even though
-         // there is no such C++ exception.
-         rti1516_2025::fedpro::CallbackResponse response{createCallbackResponse(
-               "InvalidProtocolBufferException", L"Failed to parse the encoded CallbackRequest")};
-         sendHlaCallbackErrorResponse(getSession(), sequenceNumber, response.SerializeAsString());
-      }
-   }
-
-   void RTIambassadorClientGenericBase::lostConnection(std::string reason)
-   {
-      // TODO Anything more we should do?
-
-      auto * connectionLost = new rti1516_2025::fedpro::ConnectionLost;
-      connectionLost->set_faultdescription(std::move(reason));
-      auto callback = std::make_unique<CallbackRequest>();
-      callback->set_allocated_connectionlost(connectionLost);
-      try {
-         QueuedCallback queuedCallback{std::move(callback), 0, false};
-         putCallback(std::move(queuedCallback));
-      } catch (const InterruptedException & e) {
-         // Give up
-         SPDLOG_CRITICAL(
-               "Interrupted while trying to put a callback on the callback queue when the connection was lost: {}",
-               e.what());
-      }
-   }
-
    void RTIambassadorClientGenericBase::printStats() noexcept
    {
       using namespace StatsPrettyPrint;
 
+      std::shared_ptr<ClientSession> clientSession = getClientSession();
+
       std::stringstream stream;
       std::stringstream stream2;
       std::string moreSessionStats;
-      stream << "FedPro client stats for the last " << (static_cast<double>(_printStatsIntervalMillis.count()) / 1000.0) << " seconds.\n";
-      {
-         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         if (_persistentSession) {
-            stream << "Session: " << LogUtil::formatSessionId(_persistentSession->getId()) << "\n"
-            << "                                                    " << titlesPerSecond << "\n";
-            _persistentSession->prettyPrintPerSecondStats(stream);
-            stream2 << "                                                    " << titles << "\n";
-            _persistentSession->prettyPrintStats(stream2);
-         } else {
-            stream << "Session: no active session\n"
-            << "                                                    " << titlesPerSecond << "\n";
-            stream2 << "                                                    " << titles << "\n";
-         }
-         stream << "\n";
+      stream << "FedPro client stats for the last " << (static_cast<double>(_printStatsIntervalMillis.count()) / 1000.0)
+             << " seconds.\n";
+      if (clientSession) {
+         stream << "Session: " << LogUtil::formatSessionId(clientSession->_persistentSession->getId()) << "\n"
+                << "                                                    " << titlesPerSecond << "\n";
+         clientSession->_persistentSession->prettyPrintPerSecondStats(stream);
+         stream << "\n"
+                << "HLA callbacks in queue:                             " << padStat << padStat << padStat << setFormat << clientSession->_callbackQueue.size() << "\n";
+         stream2 << "                                                    " << titles << "\n";
+         clientSession->_persistentSession->prettyPrintStats(stream2);
+
+      } else {
+         stream << "Session: no active session\n"
+                << "                                                    " << titlesPerSecond << "\n";
+         stream2 << "                                                    " << titles << "\n";
       }
+      stream << "\n";
 
       MovingStats::SteadyTimePoint time = MovingStats::nowMillis();
       MovingStats::Stats syncUpdates = _hlaSyncUpdateStats->getStatsForTime(time);
@@ -1208,9 +1004,7 @@ namespace FedPro
       MovingStats::Stats receivedDirInteractionStats = getReceivedDirectedInteractionStats(time);
       MovingStats::Stats callbackTimeStats = getCallbackTimeStats(time);
 
-      stream << "HLA callbacks in queue:                             " << padStat << padStat << padStat << setFormat << _callbackQueue.size() << "\n"
-             << "\n"
-             << "Updates sent (sync):                                " << syncUpdates << "\n"
+      stream << "Updates sent (sync):                                " << syncUpdates << "\n"
              << "Updates sent (async):                               " << asyncUpdates << "\n"
              << "Updates received:                                   " << reflectStats << "\n"
              << "\n"
@@ -1230,34 +1024,21 @@ namespace FedPro
 
    void RTIambassadorClientGenericBase::sessionTerminated(uint64_t sessionId)
    {
-      // Terminating session to destroy when this function returns.
-      // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks.
-      std::unique_ptr<PersistentSession> terminatingSession;
+      std::shared_ptr<ClientSession> clientSession;
       {
         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         if (!_persistentSession || (_persistentSession->getId() != sessionId) || _shutdownInProgress) {
+         if (!_clientSession || (_clientSession->_persistentSession->getId() != sessionId)) {
             return;
          }
-         _persistentSession.swap(terminatingSession);
-         _shutdownInProgress = true;
+         clientSession = _clientSession;
+         _clientSession.reset();
       }
 
-      // Wait for threads to complete before destroying PersistentSession (cf terminatingSession),
-      // since dispatchCallback() need to access PersistentSession,
-      cleanUpTerminatingSession();
-      {
-         std::lock_guard<std::mutex> guard(_connectionStateLock);
-         _shutdownInProgress = false;
-      }
+      // cleanUpTerminatingSession waits for thread, and destroy the PersistentSession being terminated.
+      // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks.
+      cleanUpTerminatingSession(*clientSession);
    }
 
-   void RTIambassadorClientGenericBase::cleanUpTerminatingSession()
-   {
-      stopStatsPrinting();
-      if (_callbackThread) {
-         stopCallbackThread();
-      }
-   }
 
 } // FedPro
 

@@ -31,10 +31,12 @@ set(FEDPRO_SOURCES_COMMON
       ../include/fedpro/SimpleResumeStrategy.h
       ../include/fedpro/Socket.h
       ../include/fedpro/Transport.h
+      ../include/fedpro/TransportFactory.h
       # Common
       fedpro/FedPro.cpp
       fedpro/FedProException.cpp
       fedpro/utility/bit.h
+      fedpro/utility/BlockingQueue.h
       fedpro/utility/exceptions/InterruptedException.cpp
       fedpro/utility/final.h
       fedpro/utility/InterruptibleCondition.cpp
@@ -132,6 +134,7 @@ set(FEDPRO_SOURCES_COMMON
       fedpro/session/ThreadPool.h
       # Transport
       fedpro/transport/exceptions/EofException.cpp
+      fedpro/transport/exceptions/IOException.cpp
       fedpro/transport/Socket.cpp
       fedpro/transport/TcpSocket.cpp
       fedpro/transport/TcpSocket.h
@@ -141,6 +144,8 @@ set(FEDPRO_SOURCES_COMMON
       fedpro/transport/TlsTransport.h
       fedpro/transport/TransportBase.cpp
       fedpro/transport/TransportImplBase.h
+      fedpro/transport/TransportFactory.cpp
+      fedpro/transport/TransportFactoryImpl.h
       fedpro/transport/TransportSettings.h
       fedpro/transport/WebsocketSecureTransport.cpp
       fedpro/transport/WebsocketSecureTransport.h
@@ -153,6 +158,10 @@ set(FEDPRO_SOURCES_COMMON
       # Services
       fedpro/services-common/ClientConverter.cpp
       fedpro/services-common/ClientConverter.h
+      fedpro/services-common/ClientSession.cpp
+      fedpro/services-common/ClientSession.h
+      fedpro/services-common/ConveyedRegionHandleImpl.cpp
+      fedpro/services-common/ConveyedRegionHandleImpl.h
       fedpro/services-common/encoding/BasicDataElements.cpp
       fedpro/services-common/encoding/Encoder.h
       fedpro/services-common/encoding/EncoderException.cpp
@@ -184,9 +193,9 @@ set(FEDPRO_SOURCES_COMMON
       fedpro/services-common/LogicalTimeFactoryFactory.cpp
       fedpro/services-common/NullFederateAmbassador.cpp
       fedpro/services-common/protobuf_util.h
+      fedpro/services-common/QueuedCallback.cpp
+      fedpro/services-common/QueuedCallback.h
       fedpro/services-common/RangeBounds.cpp
-      fedpro/services-common/RegionHandleImplementation.cpp
-      fedpro/services-common/RegionHandleImplementation.h
       fedpro/services-common/RTIambassador.cpp
       fedpro/services-common/RTIambassadorClient.cpp
       fedpro/services-common/RTIambassadorClient.h
@@ -214,9 +223,15 @@ set(FEDPRO_SOURCES_COMMON
       fedpro/services-common/RTITypedefs.h
 )
 
+if (FEDPRO_SHARED_LIBS)
+      set(FEDPRO_LIB_TYPE SHARED)
+else()
+      set(FEDPRO_LIB_TYPE STATIC)
+endif()
+
 # RTI API library target
 add_library(fedpro_librti1516e
-      SHARED
+      ${FEDPRO_LIB_TYPE}
       ${FEDPRO_SOURCES_COMMON}
       # HLA Evolved-specific files
       fedpro/services-2010/FederateAmbassadorAdapter.cpp
@@ -234,8 +249,11 @@ else ()
 endif()
 
 # Define the actual library prefix and name
-set_target_properties(fedpro_librti1516e PROPERTIES PREFIX "")
-set_target_properties(fedpro_librti1516e PROPERTIES OUTPUT_NAME librti1516e${HLA_EVOLVED_LIB_SUFFIX})
+set_target_properties(fedpro_librti1516e
+      PROPERTIES
+      OUTPUT_NAME librti1516e${HLA_EVOLVED_LIB_SUFFIX}
+      PREFIX ""
+      DEBUG_POSTFIX "d")
 
 # Specify compiler and linker flags
 target_compile_options(fedpro_librti1516e PRIVATE ${FEDPRO_CXX_FLAGS_EVOLVED})
@@ -243,10 +261,14 @@ target_compile_options(fedpro_librti1516e PRIVATE ${FEDPRO_CXX_FLAGS_EVOLVED})
 # Define the RTI library target
 fedpro_set_librti_target_options(fedpro_librti1516e rti1516e 2010 ${HLA_1516_2010_FEDPRO_INCLUDE})
 
+if (NOT FEDPRO_SHARED_LIBS)
+      target_compile_definitions(fedpro_librti1516e PUBLIC STATIC_RTI STATIC_FEDTIME STATIC_FEDPRO)
+endif()
+
 
 # Logical time library
 add_library(fedpro_libfedtime1516e
-      SHARED
+      ${FEDPRO_LIB_TYPE}
       # Services
       fedpro/services-common/LogicalTimeFactoryFactory.cpp
 )
@@ -260,8 +282,12 @@ target_compile_definitions(fedpro_libfedtime1516e
 )
 
 # Define the actual library prefix and name
-set_target_properties(fedpro_libfedtime1516e PROPERTIES PREFIX "")
-set_target_properties(fedpro_libfedtime1516e PROPERTIES OUTPUT_NAME libfedtime1516e${HLA_EVOLVED_LIB_SUFFIX})
+set_target_properties(fedpro_libfedtime1516e
+      PROPERTIES
+      OUTPUT_NAME libfedtime1516e${HLA_EVOLVED_LIB_SUFFIX}
+      PREFIX ""
+      DEBUG_POSTFIX "d"
+)
 
 target_link_libraries(fedpro_libfedtime1516e
       PRIVATE
@@ -270,7 +296,7 @@ target_link_libraries(fedpro_libfedtime1516e
 
 # RTI API library target
 add_library(fedpro_librti1516_4
-      SHARED
+      ${FEDPRO_LIB_TYPE}
       # Common
       ${FEDPRO_SOURCES_COMMON}
       # HLA4-specific files
@@ -284,8 +310,12 @@ add_library(fedpro_librti1516_4
 hla_get_target_suffix(2025 HLA_4_LIB_SUFFIX)
 
 # Define the actual library prefix and name
-set_target_properties(fedpro_librti1516_4 PROPERTIES PREFIX "")
-set_target_properties(fedpro_librti1516_4 PROPERTIES OUTPUT_NAME librti1516_2025${HLA_4_LIB_SUFFIX})
+set_target_properties(fedpro_librti1516_4
+      PROPERTIES
+      OUTPUT_NAME librti1516_2025${HLA_4_LIB_SUFFIX}
+      PREFIX ""
+      DEBUG_POSTFIX "d"
+)
 
 # Specify compiler and linker flags
 target_compile_options(fedpro_librti1516_4 PRIVATE ${FEDPRO_CXX_FLAGS_HLA4})
@@ -293,9 +323,13 @@ target_compile_options(fedpro_librti1516_4 PRIVATE ${FEDPRO_CXX_FLAGS_HLA4})
 # Define the RTI library target
 fedpro_set_librti_target_options(fedpro_librti1516_4 rti1516_2025 2025 ${HLA_1516_2025_FEDPRO_INCLUDE})
 
+if (NOT FEDPRO_SHARED_LIBS)
+      target_compile_definitions(fedpro_librti1516_4 PUBLIC STATIC_RTI STATIC_FEDTIME STATIC_FEDPRO)
+endif()
+
 # Logical time library
 add_library(fedpro_libfedtime1516_4
-      SHARED
+      ${FEDPRO_LIB_TYPE}
       # Services
       fedpro/services-common/LogicalTimeFactoryFactory.cpp
 )
@@ -313,8 +347,12 @@ target_compile_definitions(fedpro_libfedtime1516_4
 )
 
 # Define the actual library name
-set_target_properties(fedpro_libfedtime1516_4 PROPERTIES PREFIX "")
-set_target_properties(fedpro_libfedtime1516_4 PROPERTIES OUTPUT_NAME libfedtime1516_2025${HLA_4_LIB_SUFFIX})
+set_target_properties(fedpro_libfedtime1516_4
+      PROPERTIES
+      OUTPUT_NAME libfedtime1516_2025${HLA_4_LIB_SUFFIX}
+      PREFIX ""
+      DEBUG_POSTFIX "d"
+)
 
 target_link_libraries(fedpro_libfedtime1516_4
       PRIVATE

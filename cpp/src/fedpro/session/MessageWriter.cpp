@@ -16,7 +16,8 @@
 
 #include "MessageWriter.h"
 
-#include "fedpro/FedProExceptions.h"
+#include <fedpro/IOException.h>
+#include <fedpro/FedProExceptions.h>
 #include "msg/ByteInfo.h"
 #include "SequenceNumber.h"
 
@@ -77,7 +78,7 @@ namespace FedPro
          ConcurrentHashMap<int32_t, std::promise<ByteSequence>> * futuresMap)
    {
       if (hlaServiceCallWithParams.size() > std::numeric_limits<uint32_t>::max()) {
-         throw std::ios_base::failure{"writeHlaCallRequest fail. Request size exceed payload limit. "};
+         throw IOException{"writeHlaCallRequest fail. Request size exceed payload limit. "};
       }
       return addRequest(
             static_cast<uint32_t>(hlaServiceCallWithParams.size()),
@@ -93,7 +94,7 @@ namespace FedPro
          int32_t lastReceivedSequenceNumber)
    {
       if (encodedResponse.size() > std::numeric_limits<uint32_t>::max() - INT32_SIZE) {
-         throw std::ios_base::failure{"writeHlaCallbackResponse fail. Response size exceed payload limit. "};
+         throw IOException{"writeHlaCallbackResponse fail. Response size exceed payload limit. "};
       }
       addMessage(
             static_cast<uint32_t>(INT32_SIZE + encodedResponse.size()),

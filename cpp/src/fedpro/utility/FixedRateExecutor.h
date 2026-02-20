@@ -43,11 +43,11 @@ namespace FedPro
       {
       }
 
-      FixedRateExecutor(const FixedRateExecutor &) noexcept = default;
+      FixedRateExecutor(const FixedRateExecutor &) = default;
 
       FixedRateExecutor(FixedRateExecutor &&) noexcept = default;
 
-      FixedRateExecutor & operator=(const FixedRateExecutor &) noexcept = default;
+      FixedRateExecutor & operator=(const FixedRateExecutor &) = default;
 
       FixedRateExecutor & operator=(FixedRateExecutor &&) noexcept = default;
 

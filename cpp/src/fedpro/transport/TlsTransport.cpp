@@ -16,6 +16,7 @@
 
 #include "TlsTransport.h"
 
+#include <fedpro/IOException.h>
 #include "TransportSettings.h"
 
 namespace FedPro
@@ -35,8 +36,9 @@ namespace FedPro
       return tcpSocket;
    }
 
-   void TlsTransport::verifyTlsHandshakeOrClose(TcpSocket socket)
+   void TlsTransport::verifyTlsHandshakeOrClose(TcpSocket & socket)
    {
-      //TODO: Fix
+      // TODO
+      throw IOException{"Unimplemented transport type 'TlsTransport'"};
    }
 }

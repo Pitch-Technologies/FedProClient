@@ -16,6 +16,7 @@
 
 #include "WebsocketTransport.h"
 
+#include <fedpro/IOException.h>
 #include <fedpro/Socket.h>
 #include "TransportSettings.h"
 
@@ -35,6 +36,6 @@ namespace FedPro
          uint16_t port)
    {
       // TODO
-      return {};
+      throw IOException{"Unimplemented transport type 'websocket'"};
    }
 }

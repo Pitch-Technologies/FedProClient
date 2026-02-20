@@ -89,10 +89,19 @@ TEST_F(TestClientConverter_strings_enums, string_convertStringFromHla)
    EXPECT_EQ(_clientConverter.convertStringFromHla(L"Bj\x00F6rn"), "Bj\xC3\xB6rn");
 }
 
-TEST_F(TestClientConverter_strings_enums, string_convertToHla)
+TEST_F(TestClientConverter_strings_enums, convertToHla_Given_String)
 {
    EXPECT_EQ(_clientConverter.convertToHla("hello"), L"hello");
    EXPECT_EQ(_clientConverter.convertToHla("Bj\xC3\xB6rn"), L"Bj\x00F6rn");
+}
+
+TEST_F(TestClientConverter_strings_enums, convertToHla_Given_StringIsInvalid)
+{
+   // Given invalid UTF-8 character(s),
+   for (string_view invalidInput : {"\x92", "n\x92\x61", "\x90"}) {
+      // Then return the err arg (cf TestUtils::toWstring).
+      EXPECT_EQ(_clientConverter.convertToHla(invalidInput), L"?");
+   }
 }
 
 TEST_F(TestClientConverter_strings_enums, string_convertFromHla)

@@ -19,8 +19,8 @@
 
 #include "ClientConverter.h"
 
+#include "ConveyedRegionHandleImpl.h"
 #include "HandleImplementation.h"
-#include "RegionHandleImplementation.h"
 #include "utility/StringUtil.h"
 
 #if (RTI_HLA_VERSION >= 2025)
@@ -815,15 +815,17 @@ namespace FedPro
    {
       auto * hlaSet = new RTI_NAMESPACE::RegionHandleSet;
       for (auto & conveyedRegion : *conveyedRegionSet.mutable_conveyedregions()) {
-         RTI_NAMESPACE::RegionHandle regionHandle;
+         auto regionHandleImpl = std::make_unique<RTI_NAMESPACE::ConveyedRegionHandleImpl>();
+         // Assign placeholder data so the handle is considered valid.
+         regionHandleImpl->setData(std::string{"placeholder"});
          for (auto & dimensionAndRange : *conveyedRegion.mutable_dimensionandrange()) {
-            auto regionHandleImpl = static_cast<RTI_NAMESPACE::RegionHandleImplementation * >(getImplementation(regionHandle));
             regionHandleImpl->addRange(
                   convertToHlaAndDelete(dimensionAndRange.release_dimensionhandle()),
                   convertToHla(dimensionAndRange.rangebounds()));
          }
 
-         hlaSet->emplace(regionHandle);
+         RTI_NAMESPACE::RegionHandle region = make_handle(std::move(regionHandleImpl));
+         hlaSet->emplace(std::move(region));
       }
 
       return hlaSet;

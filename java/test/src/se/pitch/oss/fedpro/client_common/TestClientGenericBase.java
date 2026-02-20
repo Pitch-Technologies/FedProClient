@@ -16,8 +16,12 @@
 
 package se.pitch.oss.fedpro.client_common;
 
+import org.junit.Assert;
 import org.junit.Test;
+import se.pitch.oss.fedpro.client.TypedProperties;
+import se.pitch.oss.fedpro.client_common.exceptions.InvalidSetting;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -102,6 +106,25 @@ public class TestClientGenericBase {
             "FedPro.FED_TIMEOUT_HEART=100",
             "crcHost=rti.test.local",
             "FedPro.messageQueue.outgoing.limitedRate=false"));
+   }
+
+   @Test
+   public void extractAndRemoveClientSettings_Given_StandardSetting()
+   throws InvalidSetting
+   {
+      // Given
+      String additionalSettings = "FED_INT_HEART=5";
+      ArrayList<String> inputList = RTIambassadorClientGenericBase.splitFederateConnectSettings(additionalSettings);
+
+      // When
+      String clientSettingsLine = RTIambassadorClientGenericBase.extractAndRemoveClientSettings(inputList, false);
+
+      // Then
+      TypedProperties clientSettings = SettingsParser.parse(clientSettingsLine);
+      Assert.assertTrue(inputList.isEmpty());
+      Assert.assertEquals(
+            Duration.ofSeconds(5),
+            clientSettings.getDuration("FED_INT_HEART", Duration.ofSeconds(0)));
    }
 
 }

@@ -151,7 +151,6 @@ public class Exceptions {
                   map.put(name, constructor);
                }
             } catch (ClassNotFoundException | NoSuchMethodException e) {
-               System.out.println("e = " + e);
                throw new RuntimeException(e);
             }
          }

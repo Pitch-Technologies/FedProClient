@@ -37,10 +37,13 @@
 #include <cstdint>
 #include <future>
 #include <memory>
+#include <stdexcept>
 #include <vector>
 
 namespace FedPro
 {
+   class IOException;
+
    class SessionImpl : public Session
    {
    public:
@@ -120,7 +123,7 @@ namespace FedPro
       std::future<ByteSequence> _sessionTerminatedFuture;
       std::unique_ptr<FedPro::TimeoutTimer> _sessionTimeoutTimer;
 
-      // GuardedBy _sessionMutex
+      // GUARDED_BY(_sessionMutex)
       State _state;
       std::unique_ptr<Transport> _transportProtocol;
       std::shared_ptr<Socket> _socket;
@@ -132,7 +135,7 @@ namespace FedPro
       MessageSentListener _onMessageSent;
       ConcurrentHashMap<int32_t, MovingStats::SteadyTimePoint> _requestTimes;
 
-      // GuardedBy _sessionMutex
+      // GUARDED_BY(_sessionMutex)
       std::unique_ptr<MessageWriter> _messageWriter;
       std::unique_ptr<SocketWriter> _socketWriter;
       // These 2 threads need to be declared after message writer and socket writer, because of the de-allocation order.
@@ -160,7 +163,7 @@ namespace FedPro
 
       void waitForState(State state) noexcept;
 
-      // Guarded by _sessionMutex
+      // REQUIRES(_sessionMutex)
       void lockFreeWaitForState(
             State state,
             std::unique_lock<std::mutex> & sessionLock) noexcept;
@@ -171,7 +174,7 @@ namespace FedPro
 
       State waitForStates(std::initializer_list<State> anticipatedStates) noexcept;
 
-      // Guarded by _sessionMutex
+      // REQUIRES(_sessionMutex)
       Session::State lockFreeWaitForStates(
             std::initializer_list<State> anticipatedStates,
             std::unique_lock<std::mutex> & lock) noexcept;
@@ -192,7 +195,7 @@ namespace FedPro
             const std::unordered_map<State, State> & transitions,
             const std::string & reason) noexcept;
 
-      // Guarded by _sessionMutex
+      // REQUIRES(_sessionMutex)
       State lockFreeCompareAndSetState(
             const std::unordered_map<State, State> & transitions,
             const std::string & reason) noexcept;
@@ -201,7 +204,7 @@ namespace FedPro
             State expectedState,
             State newState) noexcept;
 
-      // Guarded by _sessionMutex
+      // REQUIRES(_sessionMutex)
       State lockFreeCompareAndSetState(
             State expectedState,
             State newState) noexcept;
@@ -211,12 +214,13 @@ namespace FedPro
             State newState,
             const std::string & reason) noexcept;
 
-      // Guarded by _sessionMutex
+      // REQUIRES(_sessionMutex)
       State lockFreeCompareAndSetState(
             State expectedState,
             State newState,
             const std::string & reason) noexcept;
 
+      // REQUIRES(_sessionMutex)
       void transitionSessionState(
             State oldState,
             State newState) noexcept;
@@ -225,6 +229,7 @@ namespace FedPro
             std::shared_ptr<Socket> & newSocket,
             const std::string & reason);
 
+      // REQUIRES(_sessionMutex)
       void transitionToTerminated() noexcept;
 
       void failAllFuturesWhenTerminating() noexcept;
@@ -247,7 +252,7 @@ namespace FedPro
       // All public methods that results in writing outgoing messages are thread-safe since they pass through
       // doAsyncSessionOperation(), which only executes the passed operation in state RUNNING, DROPPED or RESUMING. This
       // helps ensure correct ordering of messages.
-      // Guarded by _sessionMutex
+      // REQUIRES(_sessionMutex)
       std::future<ByteSequence> lockFreeDoAsyncSessionOperation(const AsyncSessionOperation & operation);
 
       void closeSocket() noexcept;
@@ -257,6 +262,9 @@ namespace FedPro
       void startWriterThread() noexcept;
 
       void startReaderThread() noexcept;
+
+      // REQUIRES(_sessionMutex)
+      void lockFreeStopWriterThread() noexcept;
 
       // Session mutex must never be acquired while this method is called.
       // Guarded by the session state machine.
@@ -268,9 +276,9 @@ namespace FedPro
 
       void runMessageReaderLoop() noexcept;
 
-      void scheduleBestEffortTerminate() noexcept;
+      void handleReadException(const std::runtime_error & e) noexcept;
 
-      Session::State dropSession(const std::exception & e) noexcept;
+      void scheduleBestEffortTerminate() noexcept;
 
       void extendSessionTimer() noexcept;
 

@@ -39,7 +39,6 @@ import java.io.InputStream;
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Logger;
 
 import static java.util.Map.entry;
@@ -80,7 +79,7 @@ public class SessionImpl implements Session {
 
    // TODO: Save the original Exception that caused session to drop, and relay its message to federate
    //   in the connectionLost callback when and if we fail to resume the session.
-   private final AtomicReference<CompletableFuture<Void>> _sessionTerminatedFuture = new AtomicReference<>();
+   private final CompletableFuture<Void> _sessionTerminatedFuture = new CompletableFuture<>();
    private final Map<Integer, CompletableFuture<byte[]>> _requestFutures = new ConcurrentHashMap<>();
 
    private HlaCallbackRequestListener _hlaCallbackRequestListener;
@@ -456,22 +455,32 @@ public class SessionImpl implements Session {
    @GuardedBy("_sessionLock")
    private void transitionToTerminated()
    {
+      LOGGER.finer(() -> String.format("%s: Completing: %s", logPrefix(), _sessionTerminatedFuture));
       _sessionTimeoutTimer.cancel();
-      close(_socket);
-      failAllFuturesWhenTerminating();
       _socketWriterThread.interrupt();
+      close(_socket);
+      // We can't wait for the socketWriterThread to terminate since it is using the same
+      // sessionLock that we are guarded by here.
+      failAllFuturesWhenTerminating();
    }
 
    @GuardedBy("_sessionLock")
    private void failAllFuturesWhenTerminating()
    {
+      // The session State being terminated guarantees that no further doSessionOperation() call is possible, which
+      // means new messages cannot be added to _roundRobinMessageQueue via _messageWriter.write...Message() calls.
+      QueueableMessage queuedMessage;
+      while ((queuedMessage = _roundRobinMessageQueue.poll()) != null) {
+         CompletableFuture<byte[]> responseFuture = queuedMessage.removeResponseFuture();
+         if (responseFuture != null) {
+            failFutureWhenTerminating(responseFuture);
+         }
+      }
+
       _requestFutures.forEach((seqNum, future) -> failFutureWhenTerminating(future));
       _requestFutures.clear();
 
-      CompletableFuture<Void> future = _sessionTerminatedFuture.getAndSet(null);
-      if (future != null) {
-         failFutureWhenTerminating(future);
-      }
+      failFutureWhenTerminating(_sessionTerminatedFuture);
    }
 
    @GuardedBy("_sessionLock")
@@ -532,8 +541,6 @@ public class SessionImpl implements Session {
             _queueSize,
             limiter,
             QueueableMessage::isHlaResponse);
-      assert _messageWriter == null;
-      _messageWriter = new ClientMessageWriter(MessageHeader.NO_SESSION_ID, _roundRobinMessageQueue);
 
       _hlaCallbackRequestListener = hlaCallbackRequestListener;
 
@@ -567,6 +574,8 @@ public class SessionImpl implements Session {
             }
          });
 
+         assert _messageWriter == null;
+         _messageWriter = new ClientMessageWriter(MessageHeader.NO_SESSION_ID, _roundRobinMessageQueue);
          _messageWriter.setSessionId(_sessionId);
          _socketWriter.setSessionId(_sessionId);
 
@@ -599,8 +608,8 @@ public class SessionImpl implements Session {
          @Override
          public void exceptionOnWrite(Exception e)
          {
-            LOGGER.warning(() -> String.format("%s: Failed to write to socket: %s", logPrefix(), e.toString()));
-            compareAndSetState(State.RUNNING, State.DROPPED, "Failed to write to socket: " + e.toString());
+            LOGGER.info(() -> String.format("%s: Failed to write to socket: %s", logPrefix(), e.toString()));
+            // Socket was probably closed. Socket reader thread will drop the session.
          }
 
          @Override
@@ -620,6 +629,8 @@ public class SessionImpl implements Session {
     */
    public void forceCloseConnection()
    {
+      LOGGER.fine(() -> String.format("%s: Forcefully closing the socket.", logPrefix()));
+
       close(_socket);
    }
 
@@ -663,6 +674,8 @@ public class SessionImpl implements Session {
                oldestAvailableFederateMessage);
          directSocketWriter.writeDirectMessage(resumeSessionMessage);
 
+         // Initialize _socket and resume timer before reading to enable read timeout.
+         _socket = newSocket;
          _sessionTimeoutTimer.resume();
          ResumeStatusMessage resumeStatusMessage = readResumeStatus(newSocket.getInputStream());
 
@@ -686,7 +699,6 @@ public class SessionImpl implements Session {
          }
 
          _socketWriter.setNewSocket(newSocket);
-         _socket = newSocket;
 
          _resumeCount.sample(1);
          compareAndSetState(State.RESUMING, State.RUNNING);
@@ -760,46 +772,56 @@ public class SessionImpl implements Session {
          TimeUnit responseTimeoutUnit)
    throws SessionLost, SessionIllegalState
    {
-      CompletableFuture<Void> futureResponse = new CompletableFuture<>();
       State[] stateBeforeTerminating = new State[1];
-      doSessionOperation(() -> {
-         if (getState() == State.RESUMING) {
+      synchronized (_sessionLock) {
+         while (_state == State.RESUMING || _state == State.TERMINATING) {
             try {
                _sessionLock.wait();
-            } catch (InterruptedException ignore) {
+            } catch (InterruptedException ignored) {
+               break;
             }
          }
-         stateBeforeTerminating[0] = compareAndSetState(Map.ofEntries(
-               entry(State.RUNNING, State.TERMINATING),
-               entry(State.DROPPED, State.TERMINATING)));
-         // Henceforth, the session state is TERMINATING and so this thread has exclusive right to the session. This is
-         // guaranteed since the public methods that attempt to alter the session will throw in the wrong state.
-      });
+         doSessionOperation(() -> {
+            stateBeforeTerminating[0] = compareAndSetState(Map.ofEntries(
+                  entry(State.RUNNING, State.TERMINATING),
+                  entry(State.DROPPED, State.TERMINATING)));
+            // Henceforth, the session state is TERMINATING and so this thread has exclusive right to the session. This is
+            // guaranteed since the public methods that attempt to alter the session will throw in the wrong state.
+         });
+      }
 
       if (getState() == State.TERMINATED) {
+         // If runResumeStrategy fails to resume, it calls terminate (this method) to clean up
+         // the RESUMING session. If the session is TERMINATED, it has terminated while we were
+         // trying to resume.
+         LOGGER.finer(() -> String.format("%s: Session terminated while trying to resume", logPrefix()));
          throw new SessionLost("Session terminated while trying to resume.");
       }
 
       if (stateBeforeTerminating[0] == State.DROPPED) {
+         // The session was DROPPED. We tried to resume but failed, so we call terminate (this method)
+         // to clean up.
+         LOGGER.finer(() -> String.format("%s: Session terminated without resuming", logPrefix()));
          compareAndSetState(State.TERMINATING, State.TERMINATED, "Terminated dropped session without resuming.");
          return;
       }
 
-      _sessionTerminatedFuture.set(futureResponse);
       try {
          _messageWriter.writeTerminateMessage(_lastReceivedSequenceNumber.get());
       } catch (InterruptedException e) {
+         LOGGER.finer(() -> String.format("%s: Session failed to write termination message", logPrefix()));
          throw new RuntimeException("Client application thread was interrupted while trying to terminate session.");
       }
 
       try {
-         futureResponse.get(responseTimeout, responseTimeoutUnit);
+         _sessionTerminatedFuture.get(responseTimeout, responseTimeoutUnit);
       } catch (InterruptedException e) {
          throw new SessionLost(
                logPrefix() + ": Interrupted while waiting for response to termination request: " + e,
                e);
       } catch (TimeoutException e) {
-         throw new SessionLost(logPrefix() + ": Timed out while waiting for response to termination request: " + e);
+         throw new SessionLost(logPrefix() + ": Timed out after " + responseTimeoutUnit.toMillis(responseTimeout) +
+                               " ms while waiting for response to termination request: " + e);
       } catch (CancellationException | ExecutionException e) {
          throw new SessionLost(logPrefix() + ": Failed to complete termination request to server: " + e);
       } finally {
@@ -873,11 +895,12 @@ public class SessionImpl implements Session {
    private void runMessageReaderLoop()
    {
       try {
-         if (_socket == null) {
+         FedProSocket socket = _socket;
+         if (socket == null) {
             // We're still in DROPPED
             throw new EOFException();
          }
-         InputStream inputStream = _socket.getInputStream();
+         InputStream inputStream = socket.getInputStream();
 
          while (true) {
             MessageHeader messageHeader = MessageHeader.decode(inputStream);
@@ -910,14 +933,8 @@ public class SessionImpl implements Session {
 
                case CTRL_SESSION_TERMINATED: {
                   extendSessionTimer();
-                  CompletableFuture<Void> future = _sessionTerminatedFuture.getAndSet(null);
-                  if (future != null) {
-                     future.completeAsync(() -> null);
-                  } else {
-                     LOGGER.warning(() -> String.format(
-                           "%s: Received unexpected CTRL_SESSION_TERMINATED.",
-                           logPrefix()));
-                  }
+                  LOGGER.finer(() -> String.format("%s: Received CTRL_SESSION_TERMINATED. Completing: %s", logPrefix(), _sessionTerminatedFuture));
+                  _sessionTerminatedFuture.completeAsync(() -> null);
 
                   // This is the last message we can receive, there's no point on listening for further messages
                   return;
@@ -933,6 +950,8 @@ public class SessionImpl implements Session {
                   if (future != null) {
                      future.completeAsync(() -> message.hlaServiceReturnValueOrException);
                   } else {
+                     // This can happen during shutdown. failAllFuturesWhenTerminating has already
+                     // called completeExceptionally on all futures.
                      LOGGER.warning(() -> String.format(
                            "%s: Received unexpected HLA call response to sequence number %d.",
                            logPrefix(),
@@ -968,35 +987,50 @@ public class SessionImpl implements Session {
             }
          }
       } catch (EOFException e) {
-         // Handles the case where server closes the socket while we're trying to terminate the session
-         // TODO: This case handles an inconsistency in the server implementation from the standard
-         //       The server should not shut down the socket, but leave that to the client.
-         //       We should consider removing this when the inconsistency is removed.
-         if (getState() == State.TERMINATING) {
-            CompletableFuture<Void> future = _sessionTerminatedFuture.get();
-            if (future != null) {
-               future.completeAsync(() -> null);
-               return;
-            }
-         }
-         compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
-         LOGGER.info(() -> String.format("%s: Exception in reader thread: %s", logPrefix(), e));
+         // Socket was closed by server.
+         handleReadException(e);
       } catch (IOException e) {
-         State oldState = compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
-         if (oldState == State.RUNNING || oldState == State.TERMINATING) {
-            LOGGER.warning(() -> String.format("%s: Failed to read from socket: %s", logPrefix(), e));
-         }
+         // Socket was closed locally.
+         handleReadException(e);
       } catch (BadMessage e) {
          // 12.13.4.4 requires entering a fatal state when receiving a bad message, so schedule termination.
          // Scheduling to better match the C++ client behavior.
          scheduleBestEffortTerminate();
          LOGGER.severe(() -> String.format("%s: Received invalid message! %s", logPrefix(), e));
       } catch (RuntimeException e) {
-         compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
+         handleReadException(e);
          LOGGER.severe(() -> String.format(
                "%s: Got unexpected exception in message reader thread: %s",
                logPrefix(),
                e));
+      }
+   }
+
+   private void handleReadException(Exception e)
+   {
+      // Unexpected loss of connection.
+      // If we were in RUNNING state, move to DROPPED.
+      State oldState = compareAndSetState(State.RUNNING, State.DROPPED, e.toString());
+      switch (oldState) {
+         case RUNNING:
+            // Moved to DROPPED. Will try to resume.
+            LOGGER.info(() -> String.format("%s: While running, exception in reader thread: %s", logPrefix(), e));
+            break;
+         case TERMINATING:
+            // Handles the case where socket was closed locally or by server while
+            // we're trying to terminate the session.
+            LOGGER.info(() -> String.format("%s: While terminating, exception in reader thread: %s", logPrefix(), e));
+            _sessionTerminatedFuture.completeAsync(() -> null);
+            break;
+         case DROPPED:
+            // Socket exception while we're trying to resume the session.
+            // Just ignore and let resume deal with it.
+            LOGGER.info(() -> String.format("%s: While dropped, exception in reader thread: %s", logPrefix(), e));
+            break;
+         default:
+            // TODO Figure out what to do here
+            LOGGER.warning(() -> String.format("%s: In %s, exception in reader thread: %s", logPrefix(), oldState, e));
+            break;
       }
    }
 

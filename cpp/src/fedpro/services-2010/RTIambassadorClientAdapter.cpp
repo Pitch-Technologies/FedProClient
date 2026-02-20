@@ -20,9 +20,9 @@
 #include "RTIambassadorClientAdapter.h"
 
 #include <fedpro/FedProExceptions.h>
+#include "services-common/ConveyedRegionHandleImpl.h"
 #include "services-common/FomModuleLoader.h"
 #include "services-common/HandleImplementation.h"
-#include "services-common/RegionHandleImplementation.h"
 #include "services-common/RTIcompat.h"
 #include "services-common/RtiConfiguration.h"
 #include "services-common/SettingsParser.h"
@@ -768,7 +768,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          throw RegionNotCreatedByThisFederate(L"Conveyed region");
       } else {
@@ -1118,7 +1118,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          return conveyedRegion->getDimensionHandleSet();
       } else {
@@ -1134,7 +1134,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          return conveyedRegion->getRangeBounds(dimension);
       } else {
@@ -1151,7 +1151,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          throw RegionNotCreatedByThisFederate(L"Conveyed region");
       } else {

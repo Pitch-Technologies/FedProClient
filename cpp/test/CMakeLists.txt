@@ -23,6 +23,8 @@ endif()
 add_executable(gtest_fedpro_2010
       # Evolved-specific services tests
       services-2010/TestRTIambassadorClientEvolved.cpp
+      # Services tests
+      services-common/TestLibRti.cpp
       # Statically link librti dependency
       $<TARGET_OBJECTS:fedpro_librti1516e>
 )
@@ -39,8 +41,6 @@ add_executable(gtest_fedpro_2025
       utility/BrokenSocket.h
       utility/LocalRateLimiter.cpp
       utility/LocalRateLimiter.h
-      utility/MemoryTransport.cpp
-      utility/MemoryTransport.h
       utility/MemorySocket.cpp
       utility/MemorySocket.h
       utility/PacketFactory.cpp

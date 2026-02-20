@@ -19,6 +19,7 @@
 #include "buffers/RoundRobinBuffer.h"
 #include <fedpro/EofException.h>
 #include <fedpro/FedProExceptions.h>
+#include <fedpro/IOException.h>
 #include "flowcontrol/ExponentialRateLimiter.h"
 #include "flowcontrol/NullRateLimiter.h"
 #include "LogUtil.h"
@@ -34,7 +35,7 @@
 #include <utility/StandAloneMovingStats.h>
 #include <utility/StatsPrettyPrint.h>
 
-#include "spdlog/spdlog.h"
+#include <spdlog/spdlog.h>
 
 #include <algorithm>
 #include <cassert>
@@ -56,7 +57,7 @@ namespace FedPro
            _stateCondition{},
            _requestFutures{},
            _sessionTerminatedPromise{},
-           _sessionTerminatedFuture{},
+           _sessionTerminatedFuture{_sessionTerminatedPromise.get_future()},
            _sessionTimeoutTimer{nullptr},
            _state{State::NEW},
            _transportProtocol{std::move(transportProtocol)},
@@ -109,8 +110,9 @@ namespace FedPro
              {State::RUNNING, State::TERMINATED},
              {State::DROPPED, State::TERMINATED}},
             "Terminated ungracefully. Terminate request failed or did not occur at all.");
-      _stateCondition.notify_all();
 
+      // It's necessary to wait (aka join) threads before destroying them.
+      // This is specific to the C++ client library, due to C++ memory management.
       if (oldState != Session::State::TERMINATED) {
          // This means the destructor was the one to transition the session state to TERMINATED.
          stopAndWaitForWriterThread();
@@ -232,15 +234,13 @@ namespace FedPro
             _sessionMutex,
             _queueSize);
 
-      _messageWriter = std::make_unique<MessageWriter>(_sessionId, _roundRobinMessageQueue);
-
       _hlaCallbackRequestListener = onHlaCallbackRequest;
 
       try {
          auto connectOperation = [this, connectionTimeout]() {
             _socket = _transportProtocol->connect();
             if (!_socket) {
-               throw std::ios_base::failure{"Transport could not connect"};
+               throw IOException{"Transport could not connect"};
             }
 
             int32_t firstSocketWriterSequenceNumber = FedPro::SequenceNumber::INITIAL_SEQUENCE_NUMBER + 1;
@@ -268,7 +268,11 @@ namespace FedPro
          };
          tryConnectOperation(connectOperation);
 
-         _messageWriter->setSessionId(_sessionId);
+         {
+            std::lock_guard<std::mutex> lock(*_sessionMutex);
+            _messageWriter = std::make_unique<MessageWriter>(_sessionId, _roundRobinMessageQueue);
+            _messageWriter->setSessionId(_sessionId);
+         }
          _socketWriter->setSessionId(_sessionId);
 
       } catch (const std::exception & e) {
@@ -301,8 +305,9 @@ namespace FedPro
       // Now that the session state is RESUMING, this thread will have exclusive right to the session. This is
       // guaranteed since the public methods that attempt to alter the session will throw in the wrong state.
 
-      stopAndWaitForWriterThread();
-      waitForReaderThread();
+      // It's necessary to wait (aka join) threads before destroying and replacing them.
+      // This is specific to the C++ client library, due to C++ memory management.
+      stopThreadsInTransitoryState();
 
       SPDLOG_DEBUG("{}: Trying to resume.", logPrefix());
 
@@ -328,6 +333,8 @@ namespace FedPro
                _sessionId, lastReceivedRtiMessage, oldestAvailableFederateMessage);
          directSocketWriter->writeDirectMessage(resumeSessionMessage);
 
+         // Initialize _socket and resume timer before reading to enable read timeout.
+         _socket = newSocket;
          if (_sessionTimeoutTimer) {
             _sessionTimeoutTimer->resume();
          }
@@ -350,7 +357,6 @@ namespace FedPro
                   SequenceNumber{resumeStatusMessage.lastReceivedFederateSequenceNumber});
          }
 
-         _socket = newSocket;
          _socketWriter->setNewSocket(newSocket);
 
          // Starting the these threads must be done in a lock free state.
@@ -359,7 +365,7 @@ namespace FedPro
 
          _resumeCount->sample(1);
          compareAndSetState(State::RESUMING, State::RUNNING);
-         _stateCondition.notify_all();
+
          return true;
 
       } catch (const BadMessage & e) {
@@ -368,11 +374,9 @@ namespace FedPro
       } catch (const SessionLost & e) {
          terminateResumingSession(newSocket, e.what());
          rethrowAsSessionException();
-      } catch (const std::ios_base::failure & e) {
-         _socketWriter->stopWriterLoop();
+      } catch (const IOException & e) {
          close(newSocket);
          compareAndSetState(State::RESUMING, State::DROPPED, e.what());
-         _stateCondition.notify_all();
          throw;
       }
       return false;
@@ -417,11 +421,12 @@ namespace FedPro
       Session::State stateBeforeTerminating;
       {
          std::unique_lock<std::mutex> lock(*_sessionMutex);
+         // Wait for any concurrent resume or terminate operation to complete.
+         while (_state == State::RESUMING || _state == State::TERMINATING) {
+            _stateCondition.wait(lock);
+         }
          lockFreeDoAsyncSessionOperation(
-               [this, &lock, &stateBeforeTerminating]() -> std::future<ByteSequence> {
-                  while (_state == State::RESUMING) {
-                     _stateCondition.wait(lock);
-                  }
+               [this, &stateBeforeTerminating]() -> std::future<ByteSequence> {
                   stateBeforeTerminating = _state;
                   lockFreeCompareAndSetState(State::RUNNING, State::TERMINATING);
                   lockFreeCompareAndSetState(State::DROPPED, State::TERMINATING);
@@ -432,18 +437,22 @@ namespace FedPro
       }
       if (getState() == State::TERMINATED) {
          // This means that the session terminated non-gracefully. Server has not been notified that session terminated.
-         throw SessionLost{logPrefix() + "Terminated while trying to resume session"};
+         SPDLOG_DEBUG("{}: Session terminated while trying to resume.", logPrefix());
+         throw SessionLost{logPrefix() + "Session terminated while trying to resume"};
       }
 
       if (stateBeforeTerminating == Session::State::DROPPED) {
          // Don't try to resume a session just to terminate it.
          stopThreadsInTransitoryState();
+         SPDLOG_DEBUG("{}: Session terminated without resuming.", logPrefix());
          compareAndSetState(State::TERMINATING, State::TERMINATED, "Terminated dropped session without resuming.");
          return;
       }
 
-      _sessionTerminatedFuture = _sessionTerminatedPromise.get_future();
-      _messageWriter->writeTerminateMessage(_lastReceivedSequenceNumber.get());
+      {
+         std::lock_guard<std::mutex> lock(*_sessionMutex);
+         _messageWriter->writeTerminateMessage(_lastReceivedSequenceNumber.get());
+      }
       std::future_status status = _sessionTerminatedFuture.wait_for(responseTimeout);
 
       stopThreadsInTransitoryState();
@@ -458,8 +467,9 @@ namespace FedPro
 
    void SessionImpl::forceCloseConnection() noexcept
    {
+      SPDLOG_DEBUG("{}: Forcefully closing the socket.", logPrefix());
+
       closeSocket();
-      SPDLOG_TRACE("{}: Socket forcefully closed by client.", logPrefix());
    }
 
    Properties SessionImpl::getSettings() const noexcept
@@ -691,6 +701,7 @@ namespace FedPro
          }
          case State::RUNNING: {
             if (newState == State::DROPPED) {
+               lockFreeStopWriterThread();
                if (_sessionTimeoutTimer) {
                   _sessionTimeoutTimer->pause();
                }
@@ -750,7 +761,6 @@ namespace FedPro
       close(newSocket);
       stopThreadsInTransitoryState();
       compareAndSetState(State::RESUMING, State::TERMINATED, reason);
-      _stateCondition.notify_all();
    }
 
    void SessionImpl::transitionToTerminated() noexcept
@@ -759,6 +769,8 @@ namespace FedPro
          _sessionTimeoutTimer->cancel();
       }
       closeSocket();
+      // We can't wait for the socketWriterThread to terminate since it is using the same
+      // sessionLock that we are guarded by here.
       if (_messageWriter) {
          _messageWriter->disableMessageQueueInsertion();
       }
@@ -767,6 +779,18 @@ namespace FedPro
 
    void SessionImpl::failAllFuturesWhenTerminating() noexcept
    {
+      if (_roundRobinMessageQueue) {
+         // The session State being terminated guarantees that no further doSessionOperation() call is possible, which
+         // means new messages cannot be added to _roundRobinMessageQueue via _messageWriter.write...Message() calls.
+         std::unique_ptr<QueueableMessage> queuedMessage;
+         while ((queuedMessage = _roundRobinMessageQueue->poll())) {
+            std::unique_ptr<std::promise<std::string>> responseFuture = queuedMessage->removeResponseFuture();
+            if (responseFuture) {
+               failFutureWhenTerminating(*responseFuture);
+            }
+         }
+      }
+
       std::unordered_map<int32_t, std::promise<ByteSequence>> futuresToFail{};
       _requestFutures.swap(futuresToFail);
       for (auto & pair : futuresToFail) {
@@ -816,7 +840,7 @@ namespace FedPro
          try {
             connectOperation();
             return;
-         } catch (const std::ios_base::failure & lastException) {
+         } catch (const IOException & lastException) {
             // Retry is allowed if the connection breaks or times out.
             // See IEEE 1516-2025 Federate Interface Specification, Figure 27—Federate Session Startup State Diagram.
             if (attempt < _maxRetryConnectAttempts) {
@@ -904,6 +928,11 @@ namespace FedPro
       _readerThread = std::thread{[this]() {
          runMessageReaderLoop();
       }};
+   }
+
+   void SessionImpl::lockFreeStopWriterThread() noexcept
+   {
+      _roundRobinMessageQueue->interruptPoller(true);
    }
 
    void SessionImpl::stopAndWaitForWriterThread() noexcept
@@ -1036,29 +1065,48 @@ namespace FedPro
             }
          }
       } catch (const EofException & e) {
-         // Handles the case where the server closes the socket while we're trying to terminate the session
-         // TODO (from the java code): This case handles an inconsistency in the server implementation from the standard
-         //  The server should not shut down the socket, but leave that to the client.
-         //  We should consider removing this when the inconsistency is removed.
-         if (getState() == State::TERMINATING) {
-            _sessionTerminatedPromise.set_value("Session socket closed");
-            return;
-         }
-         dropSession(e);
-         SPDLOG_INFO("{}: Failed to read from socket: {}", logPrefix(), e.what());
-      } catch (const std::ios_base::failure & e) {
-         State oldState = dropSession(e);
-         if (oldState == State::RUNNING || oldState == State::TERMINATING) {
-            SPDLOG_WARN("{}: Failed to read from socket: {}", logPrefix(), e.what());
-         }
+         // Socket was closed by server.
+         handleReadException(e);
+      } catch (const IOException & e) {
+         // Socket was closed locally.
+         handleReadException(e);
       } catch (const BadMessage & e) {
          // 12.13.4.4 requires entering a fatal state when receiving a bad message, so schedule termination.
          // Scheduling is necessary as termination require waiting for the reader thread (ie this thread).
          scheduleBestEffortTerminate();
          SPDLOG_ERROR("{}: Received an invalid message! {}", logPrefix(), e.what());
       } catch (const std::runtime_error & e) {
-         dropSession(e);
+         closeSocket();
+         handleReadException(e);
          SPDLOG_ERROR("{}: Got an unexpected exception in the message reader thread: {}", logPrefix(), e.what());
+      }
+   }
+
+   void SessionImpl::handleReadException(const std::runtime_error & e) noexcept
+   {
+      // Unexpected loss of connection.
+      // If we were in RUNNING state, move to DROPPED.
+      State oldState = compareAndSetState(State::RUNNING, State::DROPPED, e.what());
+      switch (oldState) {
+         case State::RUNNING:
+            // Moved to DROPPED. Will try to resume.
+            SPDLOG_INFO("While running, exception in reader thread: {}", e.what());
+            break;
+         case State::TERMINATING:
+            // Handles the case where socket was closed locally or by server while
+            // we're trying to terminate the session.
+            SPDLOG_INFO("While terminating, exception in reader thread: {}", e.what());
+            _sessionTerminatedPromise.set_value(ByteSequence{"Session socket closed"});
+            break;
+         case State::DROPPED:
+            // Socket exception while we're trying to resume the session.
+            // Just ignore and let resume deal with it.
+            SPDLOG_INFO("While dropped, exception in reader thread: {}", e.what());
+            break;
+         default:
+            // TODO Figure out what to do here
+            SPDLOG_WARN("While state is {}, exception in reader thread: {}", stateToString(oldState), e.what());
+            break;
       }
    }
 
@@ -1078,15 +1126,6 @@ namespace FedPro
                   SPDLOG_ERROR("{}: Unexpected state during best-effort terminate. {}.", logPrefix(), e.what());
                }
             });
-   }
-
-   Session::State SessionImpl::dropSession(const std::exception & e) noexcept
-   {
-      if (_socketWriter) {
-         _socketWriter->stopWriterLoop();
-      }
-      closeSocket();
-      return compareAndSetState(State::RUNNING, State::DROPPED, e.what());
    }
 
    void SessionImpl::trackMessageSent(int32_t sequenceNumber, bool isControl)
@@ -1115,7 +1154,7 @@ namespace FedPro
       }
    }
 
-   uint64_t SessionImpl::readNewSessionStatus() // throws std::ios_base::failure, BadMessage, SessionLost
+   uint64_t SessionImpl::readNewSessionStatus() // throws IOException, BadMessage, SessionLost
    {
       ByteSequence headerBuffer{_socket->recvNBytes(MessageHeader::SIZE)};
       MessageHeader messageHeader = MessageHeader::decode(headerBuffer);
@@ -1138,7 +1177,7 @@ namespace FedPro
    }
 
    ResumeStatusMessage SessionImpl::readResumeStatus(const std::shared_ptr<Socket> & newSocket)
-   // throws std::ios_base::failure, BadMessage
+   // throws IOException, BadMessage
    {
       ByteSequence headerBuffer{newSocket->recvNBytes(MessageHeader::SIZE)};
       MessageHeader messageHeader = MessageHeader::decode(headerBuffer);

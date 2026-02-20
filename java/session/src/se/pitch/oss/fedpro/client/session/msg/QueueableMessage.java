@@ -70,7 +70,7 @@ public class QueueableMessage {
       //   It's also important that we increment the sequence number at the atomically same time as we put the message
       //   on the message queue, since they must be sent in the correct order.
       if (_futuresMap != null) {
-         if(_future != null) {
+         if (_future != null) {
             _futuresMap.put(nextSequenceNumber, _future);
             _future = null;
          } else {
@@ -81,5 +81,12 @@ public class QueueableMessage {
       }
 
       return msg;
+   }
+
+   public CompletableFuture<byte[]> removeResponseFuture()
+   {
+      CompletableFuture<byte[]> future = _future;
+      _future = null;
+      return future;
    }
 }

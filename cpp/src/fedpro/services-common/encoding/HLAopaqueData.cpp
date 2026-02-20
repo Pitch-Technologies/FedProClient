@@ -170,6 +170,13 @@ namespace RTI_NAMESPACE
       return static_cast<const Octet *>(_impl->data);
    }
 
+#if (RTI_HLA_VERSION < 2025)
+   HLAopaqueData::operator const Octet *() const
+   {
+      return get();
+   }
+#endif
+
 #if (RTI_HLA_VERSION >= 2025)
    HLAopaqueData &
 #else

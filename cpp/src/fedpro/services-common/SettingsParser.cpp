@@ -20,7 +20,6 @@
 #include "utility/StringUtil.h"
 
 #include <algorithm>
-#include <regex>
 #include <string>
 #include <fstream>
 #include <sstream>

@@ -21,9 +21,9 @@
 
 #include <fedpro/FedProExceptions.h>
 #include <fedpro/Properties.h>
+#include "services-common/ConveyedRegionHandleImpl.h"
 #include "services-common/FomModuleLoader.h"
 #include "services-common/HandleImplementation.h"
-#include "services-common/RegionHandleImplementation.h"
 #include "services-common/SettingsParser.h"
 #include "utility/StringUtil.h"
 #include "utility/string_view.h"
@@ -915,7 +915,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          throw RegionNotCreatedByThisFederate(L"Conveyed region");
       } else {
@@ -1240,7 +1240,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          return conveyedRegion->getDimensionHandleSet();
       } else {
@@ -1256,7 +1256,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          return conveyedRegion->getRangeBounds(dimension);
       } else {
@@ -1273,7 +1273,7 @@ namespace RTI_NAMESPACE
          throw InvalidRegion(L"Invalid RegionHandle");
       }
       const HandleImplementation * handleImplementation = getImplementation(region);
-      auto * conveyedRegion = dynamic_cast<const RegionHandleImplementation *>(handleImplementation);
+      auto * conveyedRegion = dynamic_cast<const ConveyedRegionHandleImpl *>(handleImplementation);
       if (conveyedRegion != nullptr) {
          throw RegionNotCreatedByThisFederate(L"Conveyed region");
       } else {
@@ -1553,6 +1553,9 @@ namespace RTI_NAMESPACE
    {
       const std::wstring & serverAddress = rtiConfiguration.rtiAddress();
       std::vector<wstring_view> hostAndPort = splitString(serverAddress, L':', 2);
+      if (hostAndPort.empty()) {
+         return;
+      }
       if (!hostAndPort[0].empty()) {
          settingsList.emplace_back(SETTING_PREFIX_WIDE_STRING + toWString(SETTING_NAME_CONNECTION_HOST) + L"=" + hostAndPort[0]);
       }

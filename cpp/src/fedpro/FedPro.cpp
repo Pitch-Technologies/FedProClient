@@ -16,12 +16,9 @@
 
 #include <FedPro.h>
 
+#include <fedpro/TransportFactory.h>
 #include "session/PersistentSessionImpl.h"
 #include "session/SessionImpl.h"
-#include "transport/TcpTransport.h"
-#include "transport/TlsTransport.h"
-#include "transport/WebsocketTransport.h"
-#include "transport/WebsocketSecureTransport.h"
 #include "utility/LoggerInitializer.h"
 
 #include <memory>
@@ -88,42 +85,42 @@ namespace FedPro
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createTcpTransport(const Properties & settings)
    {
-      return std::make_unique<TcpTransport>(settings);
+      return TransportFactory::createTcpTransport(settings);
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createTcpTransport()
    {
-      return createTcpTransport(Properties{});
+      return TransportFactory::createTcpTransport(Properties{});
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createTlsTransport(const Properties & settings)
    {
-      return std::make_unique<TlsTransport>(settings);
+      return TransportFactory::createTlsTransport(settings);
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createTlsTransport()
    {
-      return createTlsTransport(Properties{});
+      return TransportFactory::createTlsTransport(Properties{});
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketTransport(const Properties & settings)
    {
-      return std::make_unique<WebsocketTransport>(settings);
+      return TransportFactory::createWebSocketTransport(settings);
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketTransport()
    {
-      return createWebSocketTransport(Properties{});
+      return TransportFactory::createWebSocketTransport(Properties{});
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketSecureTransport(const Properties & settings)
    {
-      return std::make_unique<WebsocketSecureTransport>(settings);
+      return TransportFactory::createWebSocketSecureTransport(settings);
    }
 
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketSecureTransport()
    {
-      return createWebSocketSecureTransport(Properties{});
+      return TransportFactory::createWebSocketSecureTransport(Properties{});
    }
 
    FEDPRO_EXPORT void initializeLogger(const Properties & settings)

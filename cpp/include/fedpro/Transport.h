@@ -40,7 +40,7 @@ namespace FedPro
        * @brief Establishes a connection with a server through the host IP address and
        * port specified as arguments to the constructor of transport this instance.
        *
-       * @throws std::ios_base::failure If an IO error occurs and no connection to the
+       * @throws IOException If an IO error occurs and no connection to the
        * server is successfully established.
        * @return A shared pointer to a socket instance.
        */

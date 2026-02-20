@@ -22,14 +22,36 @@
 #include <RTI/RangeBounds.h>
 
 #include <map>
+#include <memory>
 #include <string>
 
 #define DECLARE_HANDLE_HELPERS(HandleKind)                                    \
    template<>                                                                 \
    HandleKind make_handle<HandleKind>(std::string && encodedHandle);          \
+   HandleKind make_handle(                                                    \
+      std::unique_ptr<HandleKind##Implementation> handleImpl);                \
    std::string serialize(const HandleKind & handle);                          \
    const HandleImplementation * getImplementation(const HandleKind & handle); \
    HandleImplementation * getImplementation(HandleKind & handle);
+
+
+#define DECLARE_HANDLE_IMPLEMENTATION(HandleKind)                 \
+class HandleKind##Implementation : public HandleImplementation    \
+{                                                                 \
+public:                                                           \
+   HandleKind##Implementation() = default;                        \
+   HandleKind##Implementation(                                    \
+      const HandleKind##Implementation &) = default;              \
+   HandleKind##Implementation(                                    \
+      HandleKind##Implementation &&) = default;                   \
+                                                                  \
+   HandleKind##Implementation& operator=(                         \
+      const HandleKind##Implementation &) = default;              \
+   HandleKind##Implementation& operator=(                         \
+      HandleKind##Implementation &&) = default;                   \
+                                                                  \
+   HandleImplementation * clone() const override;                 \
+};
 
 namespace RTI_NAMESPACE
 {
@@ -49,6 +71,8 @@ namespace RTI_NAMESPACE
       explicit HandleImplementation(std::string && encodedData);
 
       virtual ~HandleImplementation();
+
+      virtual HandleImplementation * clone() const;
 
       void setData(std::string && encodedData);
 
@@ -89,6 +113,11 @@ namespace RTI_NAMESPACE
       }
 
    protected:
+
+      HandleImplementation(const HandleImplementation &);
+
+      HandleImplementation & operator=(const HandleImplementation &);
+
       std::string _encodedHandle;
 
    };
@@ -96,24 +125,35 @@ namespace RTI_NAMESPACE
    template<class Handle>
    Handle make_handle(std::string && encodedHandle);
 
-   // Handle helper classes are implemented by invoking the macro above.
+   // Handle implementation and helper classes are declared by invoking the macro above.
+
+   DECLARE_HANDLE_IMPLEMENTATION(FederateHandle)
    DECLARE_HANDLE_HELPERS(FederateHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(ObjectClassHandle)
    DECLARE_HANDLE_HELPERS(ObjectClassHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(InteractionClassHandle)
    DECLARE_HANDLE_HELPERS(InteractionClassHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(ObjectInstanceHandle)
    DECLARE_HANDLE_HELPERS(ObjectInstanceHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(AttributeHandle)
    DECLARE_HANDLE_HELPERS(AttributeHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(ParameterHandle)
    DECLARE_HANDLE_HELPERS(ParameterHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(DimensionHandle)
    DECLARE_HANDLE_HELPERS(DimensionHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(MessageRetractionHandle)
    DECLARE_HANDLE_HELPERS(MessageRetractionHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(RegionHandle)
    DECLARE_HANDLE_HELPERS(RegionHandle)
 
+   DECLARE_HANDLE_IMPLEMENTATION(TransportationTypeHandle)
    DECLARE_HANDLE_HELPERS(TransportationTypeHandle)
 }

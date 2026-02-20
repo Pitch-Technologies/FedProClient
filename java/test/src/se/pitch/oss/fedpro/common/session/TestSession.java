@@ -25,12 +25,15 @@ import se.pitch.oss.fedpro.client.session.msg.HeartbeatResponseMessage;
 import se.pitch.oss.fedpro.client.session.msg.MessageHeader;
 import se.pitch.oss.fedpro.client.session.msg.NewSessionStatusMessage;
 import se.pitch.oss.fedpro.client_common.SettingsParser;
+import se.pitch.oss.fedpro.common.exceptions.SessionAlreadyTerminated;
 import se.pitch.oss.fedpro.common.exceptions.SessionIllegalState;
 import se.pitch.oss.fedpro.common.exceptions.SessionLost;
 import se.pitch.oss.fedpro.utility.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -39,7 +42,7 @@ public class TestSession {
    private final long _fakeSessionId = 42;
    private TypedProperties _clientSettings;
 
-   private final StateWaiter _stateWaiter = new StateWaiter();
+   private StateWaiter _stateWaiter = new StateWaiter();
 
    @Before
    public void setUp()
@@ -60,12 +63,11 @@ public class TestSession {
    public void terminateSession_When_ReceiveInvalidSequenceNumber()
    throws IOException, SessionLost, SessionIllegalState, InterruptedException
    {
-      MemoryTransport transport = new MemoryTransport();
-      transport.addInboundPacket(createNewSessionStatus(_fakeSessionId));
-
       // Given
       final int invalidSequenceNumber = Integer.MIN_VALUE;
-      transport.addInboundPacket(createHeartbeatResponse(_fakeSessionId, invalidSequenceNumber, 42));
+      Transport transport = createMemoryTransport(
+            createNewSessionStatus(_fakeSessionId),
+            createHeartbeatResponse(_fakeSessionId, invalidSequenceNumber, 42));
 
       // When
       Session session = createSession(transport);
@@ -99,7 +101,7 @@ public class TestSession {
 
       // When
       Session session = createSession(transport);
-         session.start((sequenceNumber, hlaCallback) -> {});
+      session.start((sequenceNumber, hlaCallback) -> {});
 
       // Then
       Assert.assertEquals(
@@ -107,6 +109,41 @@ public class TestSession {
             _stateWaiter.waitForState(Session.State.RUNNING, 4, TimeUnit.SECONDS));
       Assert.assertEquals(_fakeSessionId, session.getId());
       Assert.assertTrue(connectionAttemptCount.get() > 1);
+   }
+
+   @Test
+   public void terminateSucceed_When_ConcurrentTerminateCalls()
+   throws IOException, SessionLost, SessionIllegalState, InterruptedException
+   {
+      MemorySocket socket = new MemorySocket();
+      socket.addInboundPacket(createNewSessionStatus(_fakeSessionId));
+      Transport transport = new SocketSupplierTransport(socket);
+      Session session = createSession(transport);
+
+      session.start((sequenceNumber, hlaCallback) -> {});
+      // Close the socket immediately. The socket only has 1 packet in queue, any further read attempt would time out.
+      socket.close();
+
+      ExecutorService threadPool = Executors.newFixedThreadPool(3);
+      for (int i = 0; i < 9; ++i) {
+         threadPool.submit(() -> {
+            try {
+               // When any thread call terminate
+               session.terminate(12, TimeUnit.SECONDS);
+            } catch (SessionAlreadyTerminated ignored) {
+            } catch (SessionLost e) {
+               // Terminate throws SessionLost, which is plausible for a real socket.
+               // But this is odd for a MemorySocket as it should be perfectly reliable.
+               // So log a message.
+               System.err.println("Terminate throws " + e);
+            } catch (Exception e) {
+               Assert.fail(e.toString());
+            }
+            // Then succeed
+         });
+      }
+      threadPool.shutdown();
+      Assert.assertTrue(threadPool.awaitTermination(16, TimeUnit.SECONDS));
    }
 
    protected Session createSession(Transport transport)
@@ -117,6 +154,8 @@ public class TestSession {
    protected Session createSession(Transport transport, TypedProperties settings)
    {
       Session session = SessionFactory.createSession(transport, settings);
+      // Start with a clean StateWaiter in every iteration
+      _stateWaiter = new StateWaiter();
       session.addStateListener(_stateWaiter);
       return session;
    }
@@ -149,5 +188,15 @@ public class TestSession {
       outputStream.write(header.encode());
       outputStream.write(payload);
       return outputStream.toByteArray();
+   }
+
+   protected static Transport createMemoryTransport(byte[] ... packets)
+   throws IOException
+   {
+      MemorySocket socket = new MemorySocket();
+      for (byte[] packet : packets) {
+         socket.addInboundPacket(packet);
+      }
+      return new SocketSupplierTransport(socket);
    }
 }

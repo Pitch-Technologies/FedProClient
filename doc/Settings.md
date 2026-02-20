@@ -15,7 +15,7 @@ The order of precedence of the different methods is as follows:
 
 ### RtiConfiguration syntax (HLA 4)
 
-Federates using the {hla4} API may provide settings in an `RtiConfiguration` object passed to the `connect()` method of the `RTIambassador` class.
+Federates using the HLA 4 API may provide settings in an `RtiConfiguration` object passed to the `connect()` method of the `RTIambassador` class.
 When doing so, the following applies:
 
 * Both regular LRC settings and Federate Protocol client settings may be provided through the `additionalSettings` field of the `RtiConfiguration` object.

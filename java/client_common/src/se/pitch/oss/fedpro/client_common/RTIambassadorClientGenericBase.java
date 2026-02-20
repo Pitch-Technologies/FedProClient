@@ -49,7 +49,7 @@ import static se.pitch.oss.fedpro.client_common.ServiceSettings.DEFAULT_CONNECTI
 public abstract class RTIambassadorClientGenericBase {
    private static final Logger LOGGER = Logger.getLogger(RTIambassadorClientGenericBase.class.getName());
 
-   protected static final String crcAddressPrefix = "crcAddress=";
+   protected static final String SETTING_NAME_CRC_ADDRESS = "crcAddress";
 
    private final ScheduledExecutorService _statPrintingExecutor = Executors.newSingleThreadScheduledExecutor(r -> {
       Thread thread = Executors.defaultThreadFactory().newThread(r);
@@ -58,24 +58,188 @@ public abstract class RTIambassadorClientGenericBase {
       return thread;
    });
 
-   @GuardedBy("_connectionStateLock")
-   protected PersistentSession _persistentSession;
-   private final BlockingQueue<QueuedCallback> _callbackQueue = new LinkedBlockingQueue<>();
-   @GuardedBy("_connectionStateLock")
-   private Thread _callbackThread;
-   private final AtomicReference<Thread> _callbackInProgressThread = new AtomicReference<>();
-   private final Object _callbackLock = new Object();
-   @GuardedBy("_callbackLock")
-   private boolean _callbackInProgress = false;
-   @GuardedBy("_callbackLock")
-   private boolean _callbacksEnabled = true;
+   protected class ClientSession
+   {
+      protected final PersistentSession _persistentSession;
+      final Thread _callbackThread;
+      final BlockingQueue<QueuedCallback> _callbackQueue = new LinkedBlockingQueue<>();
 
-   // We protect connect and disconnect calls here at the top level, to simplify some code. All other HLA calls are made
-   //  thread-safe further down, in the Session classes.
+      @GuardedBy("this")
+      boolean _callbackInProgress = false;
+      @GuardedBy("this")
+      boolean _callbacksEnabled = true;
+
+      private ScheduledFuture<?> _statPrintingFuture;
+
+      ClientSession(
+            Transport clientTransport,
+            PersistentSession.SessionTerminatedListener sessionTerminatedListener,
+            TypedProperties clientSettings,
+            ResumeStrategy resumeStrategy,
+            boolean createCallbackThread)
+      {
+         _persistentSession = SessionFactory.createPersistentSession(
+               clientTransport,
+               this::lostConnection,
+               sessionTerminatedListener,
+               clientSettings,
+               resumeStrategy);
+         if (createCallbackThread) {
+            _callbackThread = new Thread(this::callbackLoop);
+            _callbackThread.setDaemon(true);
+
+         } else {
+            _callbackThread = null;
+         }
+      }
+
+      public PersistentSession getPersistentSession()
+      {
+         return _persistentSession;
+      }
+
+      private void startCallbackThread()
+      {
+         if (_callbackThread != null) {
+            _callbackThread.setName(
+                  "FedPro Client Session " + LogUtil.formatSessionId(_persistentSession.getId()) + " Callback Thread");
+            _callbackThread.start();
+         }
+      }
+
+      private void stopCallbackThread()
+      {
+         try {
+            // Poison pill ends up last in callback queue.
+            // Should we drop all queued callbacks?
+            _callbackQueue.put(POISON);
+            synchronized (this) {
+               // If callbacks are disabled, then evoke may be stuck waiting
+               // for notification and callbacks to be enabled.
+               _callbacksEnabled = true;
+               this.notifyAll();
+            }
+
+            // _connectionStateLock needs to be released at this point as _callbackThread may be stuck in a deadlock
+            //   waiting for _connectionStateLock.
+
+            if (_callbackThread != null) {
+               _callbackThread.join();
+            } else {
+               // Evoked mode.
+            }
+         } catch (InterruptedException ignored) {
+         }
+      }
+
+      private void callbackLoop()
+      {
+         while (true) {
+            try {
+               synchronized (this) {
+                  // Wait for callbacks to be enabled
+                  while (!_callbacksEnabled) {
+                     this.wait();
+                  }
+                  // Callbacks are enabled. Let's go!
+                  _callbackInProgress = true;
+               }
+               try {
+                  QueuedCallback queuedCallback = _callbackQueue.take();
+                  if (queuedCallback == PLACEHOLDER) {
+                     // Wakeup from disableCallbacks. Loop around.
+                     continue;
+                  }
+                  if (queuedCallback == POISON) {
+                     return;
+                  }
+                  dispatchCallback(queuedCallback, _persistentSession);
+               } finally {
+                  synchronized (this) {
+                     _callbackInProgress = false;
+                     this.notifyAll();
+                  }
+               }
+
+            } catch (InterruptedException e) {
+               // Interrupted. Let's get out of here.
+               return;
+            }
+         }
+      }
+
+      protected void startStatPrinting(
+            ScheduledExecutorService statPrintingExecutor,
+            Runnable printStatsRunnable,
+            int printStatsIntervalMillis)
+      {
+         stopStatPrinting();
+         _statPrintingFuture = statPrintingExecutor.scheduleAtFixedRate(
+               printStatsRunnable,
+               printStatsIntervalMillis,
+               printStatsIntervalMillis,
+               TimeUnit.MILLISECONDS);
+      }
+
+      private void stopStatPrinting() {
+         if (_statPrintingFuture != null) {
+            _statPrintingFuture.cancel(false);
+            _statPrintingFuture = null;
+         }
+      }
+
+      private void lostConnection(String reason)
+      {
+         // TODO Anything more we should do?
+
+
+         // TODO: When we get a connectionLost callback from the LRC, should we then also close the FedPro connection?
+         //   Otherwise, we may keep creating new FedPro session and leave them idle, i.e. leak them.
+         CallbackRequest connectionLostRequest = CallbackRequest.newBuilder()
+               .setConnectionLost(ConnectionLost.newBuilder().setFaultDescription("Unable to resume session").build())
+               .build();
+         try {
+            _callbackQueue.put(new QueuedCallback(connectionLostRequest, 0, false));
+         } catch (InterruptedException e) {
+            // Give up
+            LOGGER.severe(() -> String.format(
+                  "Interrupted while trying to put a callback on the callback queue when the connection was lost: %s",
+                  e));
+         }
+      }
+
+      private void hlaCallbackRequest(
+            int sequenceNumber, byte[] hlaCallback)
+      {
+         try {
+            CallbackRequest callback = CallbackRequest.parseFrom(hlaCallback);
+            _callbackQueue.put(new QueuedCallback(callback, sequenceNumber, true));
+         } catch (InvalidProtocolBufferException e) {
+            LOGGER.warning(() -> String.format(
+                  "Failed to parse callback request with sequence number %d: %s",
+                  sequenceNumber,
+                  e));
+            sendHlaCallbackErrorResponse(_persistentSession, sequenceNumber, e);
+         } catch (InterruptedException e) {
+            // Time to leave
+            sendHlaCallbackErrorResponse(_persistentSession, sequenceNumber, e);
+         }
+      }
+   }
+
+   @GuardedBy("_connectionStateLock")
+   protected ClientSession _clientSession = null;
+   private final AtomicReference<Thread> _callbackInProgressThread = new AtomicReference<>();
+
+   // Protect connect and disconnect calls here at the top level, to simplify some code.
+   // All other HLA calls are made thread-safe further down, in the Session classes.
+   // Lock safety: This shall not be locked nor synchronized while executing federate callbacks/functors,
+   // since a federate may call disconnect() which is synchronized with _disconnectLock.
    protected final Object _connectionStateLock = new Object();
 
-   @GuardedBy("_connectionStateLock")
-   private boolean _shutdownInProgress = false;
+   // disconnect has an additional lock to prevent concurrent disconnect calls.
+   // Lock safety: _disconnectLock shall not be locked nor synchronized after _connectionStateLock
+   private final Object _disconnectLock = new Object();
 
    // Service layer settings
    protected boolean _asyncUpdates = DEFAULT_ASYNC_UPDATES;
@@ -106,47 +270,11 @@ public abstract class RTIambassadorClientGenericBase {
       }
    }
 
-   private final QueuedCallback POISON = new QueuedCallback(null, 0, false);
-   private final QueuedCallback PLACEHOLDER = new QueuedCallback(null, 0, false);
+   private static final QueuedCallback POISON = new QueuedCallback(null, 0, false);
+   private static final QueuedCallback PLACEHOLDER = new QueuedCallback(null, 0, false);
 
    protected RTIambassadorClientGenericBase()
    {
-   }
-
-   private void callbackLoop()
-   {
-      while (true) {
-         try {
-            synchronized (_callbackLock) {
-               // Wait for callbacks to be enabled
-               while (!_callbacksEnabled) {
-                  _callbackLock.wait();
-               }
-               // Callbacks are enabled. Let's go!
-               _callbackInProgress = true;
-            }
-            try {
-               QueuedCallback queuedCallback = _callbackQueue.take();
-               if (queuedCallback == PLACEHOLDER) {
-                  // Wakeup from disableCallbacks. Loop around.
-                  continue;
-               }
-               if (queuedCallback == POISON) {
-                  return;
-               }
-               dispatchCallback(queuedCallback);
-            } finally {
-               synchronized (_callbackLock) {
-                  _callbackInProgress = false;
-                  _callbackLock.notifyAll();
-               }
-            }
-
-         } catch (InterruptedException e) {
-            // Interrupted. Let's get out of here.
-            return;
-         }
-      }
    }
 
    public boolean isInCurrentCallbackThread()
@@ -157,28 +285,27 @@ public abstract class RTIambassadorClientGenericBase {
    protected boolean evokeCallbackBase(double approximateMinimumTimeInSeconds)
    throws FedProRtiInternalError
    {
-      synchronized (_connectionStateLock) {
-         if (_callbackThread != null) {
-            // Immediate mode
-            return false;
-         }
+      ClientSession callbackState = getClientSession();
+      if (callbackState._callbackThread != null) {
+         // Immediate mode
+         return false;
       }
       // Evoke
       long start = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
       long minTime = (long) (start + approximateMinimumTimeInSeconds * 1000);
       try {
-         synchronized (_callbackLock) {
-            while (!_callbacksEnabled) {
+         synchronized (callbackState) {
+            while (!callbackState._callbacksEnabled) {
                long now = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
                long timeRemainingMillis = minTime - now;
                if (timeRemainingMillis <= 0) {
                   // Callbacks did not become enabled within our allotted time
                   return false;
                }
-               _callbackLock.wait(timeRemainingMillis);
+               callbackState.wait(timeRemainingMillis);
             }
             // Callbacks are enabled. Let's go!
-            _callbackInProgress = true;
+            callbackState._callbackInProgress = true;
          }
          long now = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
          long timeRemainingMillis = minTime - now;
@@ -187,9 +314,9 @@ public abstract class RTIambassadorClientGenericBase {
             if (minTime == 0.0) {
                // If timeout is zero, check if there's a callback immediately available.
                // But don't wait.
-               queuedCallback = _callbackQueue.poll();
+               queuedCallback = callbackState._callbackQueue.poll();
             } else {
-               queuedCallback = _callbackQueue.poll(timeRemainingMillis, TimeUnit.MILLISECONDS);
+               queuedCallback = callbackState._callbackQueue.poll(timeRemainingMillis, TimeUnit.MILLISECONDS);
             }
             if (queuedCallback == null) {
                return false;
@@ -197,33 +324,32 @@ public abstract class RTIambassadorClientGenericBase {
             if (queuedCallback == PLACEHOLDER) {
                // Wakeup from enableCallbacks. Why did we end up here?
                // If callbacks were disabled, we should be stuck in tryAcquire.
-               return !_callbackQueue.isEmpty();
+               return !callbackState._callbackQueue.isEmpty();
             }
             if (queuedCallback == POISON) {
                return false;
             }
-            dispatchCallback(queuedCallback);
+            dispatchCallback(queuedCallback, callbackState._persistentSession);
          } finally {
-            synchronized (_callbackLock) {
-               _callbackInProgress = false;
-               _callbackLock.notifyAll();
+            synchronized (callbackState) {
+               callbackState._callbackInProgress = false;
+               callbackState.notifyAll();
             }
          }
       } catch (InterruptedException e) {
          throw new FedProRtiInternalError("Interrupted while waiting for callbackLock", e);
       }
-      return !_callbackQueue.isEmpty();
+      return !callbackState._callbackQueue.isEmpty();
    }
 
    protected boolean evokeMultipleCallbacksBase(
          double minimumTime, double maximumTime)
    throws FedProRtiInternalError
    {
-      synchronized (_connectionStateLock) {
-         if (_callbackThread != null) {
-            // Immediate mode
-            return false;
-         }
+      ClientSession callbackState = getClientSession();
+      if (callbackState._callbackThread != null) {
+         // Immediate mode
+         return false;
       }
       long startMillis = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
       long waitLimitMillis = (long) (startMillis + minimumTime * 1000);
@@ -231,17 +357,17 @@ public abstract class RTIambassadorClientGenericBase {
 
       while (true) {
          try {
-            synchronized (_callbackLock) {
-               while (!_callbacksEnabled) {
+            synchronized (callbackState) {
+               while (!callbackState._callbacksEnabled) {
                   long now = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
                   long timeRemainingMillis = waitLimitMillis - now;
                   if (timeRemainingMillis <= 0) {
                      // Callbacks did not become enabled within our allotted time
                      return false;
                   }
-                  _callbackLock.wait(timeRemainingMillis);
+                  callbackState.wait(timeRemainingMillis);
                }
-               _callbackInProgress = true;
+               callbackState._callbackInProgress = true;
             }
             long now = TimeUnit.NANOSECONDS.toMillis(System.nanoTime());
             try {
@@ -249,19 +375,19 @@ public abstract class RTIambassadorClientGenericBase {
                if (now < waitLimitMillis) {
                   // If we haven't reached minimumTime, wait until callback becomes available but not longer than minimumTime
                   long timeoutMillis = waitLimitMillis - now;
-                  queuedCallback = _callbackQueue.poll(timeoutMillis, TimeUnit.MILLISECONDS);
+                  queuedCallback = callbackState._callbackQueue.poll(timeoutMillis, TimeUnit.MILLISECONDS);
                } else {
                   // We are past minimumTime. Keep going until no more callbacks or we hit maximumTime
                   if (now < cutoffTimeMillis) {
                      // TODO pass an appropriate wait duration for this poll call
-                     queuedCallback = _callbackQueue.poll();
+                     queuedCallback = callbackState._callbackQueue.poll();
                   } else {
                      queuedCallback = null;
                   }
                }
                if (queuedCallback == null) {
                   // No more callbacks or we ran out of time
-                  return !_callbackQueue.isEmpty();
+                  return !callbackState._callbackQueue.isEmpty();
                }
                if (queuedCallback == PLACEHOLDER) {
                   // Wakeup from enableCallbacks/disableCallbacks. Loop around and start over
@@ -270,11 +396,11 @@ public abstract class RTIambassadorClientGenericBase {
                if (queuedCallback == POISON) {
                   return false;
                }
-               dispatchCallback(queuedCallback);
+               dispatchCallback(queuedCallback, callbackState._persistentSession);
             } finally {
-               synchronized (_callbackLock) {
-                  _callbackInProgress = false;
-                  _callbackLock.notifyAll();
+               synchronized (callbackState) {
+                  callbackState._callbackInProgress = false;
+                  callbackState.notifyAll();
                }
             }
          } catch (InterruptedException e) {
@@ -283,10 +409,8 @@ public abstract class RTIambassadorClientGenericBase {
       }
    }
 
-   private void dispatchCallback(QueuedCallback queuedCallback)
+   private void dispatchCallback(QueuedCallback queuedCallback, PersistentSession session)
    {
-      PersistentSession session = _persistentSession;
-
       try {
          _callbackInProgressThread.set(Thread.currentThread());
          dispatchHlaVersionSpecificCallback(queuedCallback.callbackRequest);
@@ -318,10 +442,11 @@ public abstract class RTIambassadorClientGenericBase {
    throws FedProRtiInternalError
    {
       try {
-         synchronized (_callbackLock) {
-            _callbacksEnabled = true;
-            _callbackQueue.put(PLACEHOLDER);
-            _callbackLock.notifyAll();
+         ClientSession callbackState = getClientSession();
+         synchronized (callbackState) {
+            callbackState._callbacksEnabled = true;
+            callbackState._callbackQueue.put(PLACEHOLDER);
+            callbackState.notifyAll();
          }
       } catch (InterruptedException e) {
          throw new FedProRtiInternalError("Interrupted while waiting for callbackLock", e);
@@ -331,20 +456,21 @@ public abstract class RTIambassadorClientGenericBase {
    protected void disableCallbacksBase()
    throws FedProRtiInternalError
    {
+      ClientSession callbackState = getClientSession();
       try {
-         synchronized (_callbackLock) {
-            _callbacksEnabled = false;
-            _callbackQueue.put(PLACEHOLDER);
-            _callbackLock.notifyAll();
+         synchronized (callbackState) {
+            callbackState._callbacksEnabled = false;
+            callbackState._callbackQueue.put(PLACEHOLDER);
+            callbackState.notifyAll();
             if (isInCurrentCallbackThread()) {
                // This call comes from within a callback.
                // Obviously, if this is the callback thread then we cannot wait here
                // for the callback thread to terminate.
             } else {
-               // COM_9-2 states that disableCallbacks shall not return until an
-               // ongoing callback has finished
-               while (_callbackInProgress) {
-                  _callbackLock.wait();
+               // Standard states that disableCallbacks shall not return until an
+               // ongoing callback has finished. (IFSPEC 10.60.4 c)
+               while (callbackState._callbackInProgress) {
+                  callbackState.wait();
                }
             }
          }
@@ -355,8 +481,17 @@ public abstract class RTIambassadorClientGenericBase {
 
    protected PersistentSession getSession()
    {
+      ClientSession callbackState = getClientSession();
+      if (callbackState == null) {
+         return null;
+      }
+      return callbackState._persistentSession;
+   }
+
+   ClientSession getClientSession()
+   {
       synchronized (_connectionStateLock) {
-         return _persistentSession;
+         return _clientSession;
       }
    }
 
@@ -370,32 +505,49 @@ public abstract class RTIambassadorClientGenericBase {
       return callResponse;
    }
 
-   private CallResponse doHlaCallBase(CallRequest.Builder callRequestBuilder)
-   throws FedProRtiInternalError, FedProNotConnected
-   {
-      return doHlaCallBase(callRequestBuilder.build());
-   }
-
    protected CallResponse doHlaCallBase(CallRequest callRequest)
    throws FedProRtiInternalError, FedProNotConnected
    {
+      PersistentSession session = getSession();
+      return doHlaCallBase(callRequest, session);
+   }
+
+   private CallResponse doHlaCallBase(CallRequest callRequest, PersistentSession session)
+   throws FedProRtiInternalError, FedProNotConnected
+   {
       try {
-         PersistentSession session = getSession();
          if (session == null) {
             throw new FedProNotConnected("Federate is not connected");
          }
          long sendtime = MovingStats.validTimeMillis();
          CompletableFuture<byte[]> call = session.sendHlaCallRequest(callRequest.toByteArray());
 
-         // TODO: Handle CancellationException and CompletionException
-         byte[] response = call.join();
-         _hlaCallTimeStats.sample((int) (MovingStats.validTimeMillis() - sendtime));
+         try {
+            byte[] response = call.join();
+            _hlaCallTimeStats.sample((int) (MovingStats.validTimeMillis() - sendtime));
 
-         return decodeHlaCallResponse(response);
+            return decodeHlaCallResponse(response);
+         } catch (CompletionException e) {
+            // The future returned by session.sendHlaCallRequest threw an exception. The only checked
+            // exceptions that can be thrown is SessionLost. Let's check for that.
+            Throwable cause = e.getCause();
+            if (cause instanceof SessionLost) {
+               throw (SessionLost) cause;
+            }
+            // cause may be an unchecked (runtime) exception.
+            if (cause instanceof RuntimeException) {
+               throw (RuntimeException) cause;
+            }
+            if (cause != null) {
+               throw new FedProRtiInternalError("Failed to perform HLA call: " + cause, cause);
+            } else {
+               throw new FedProRtiInternalError("Failed to perform HLA call: " + e, e);
+            }
+         }
+      } catch (SessionIllegalState | SessionLost e) {
+         throw new FedProNotConnected("HLA call without a federate protocol session: " + e);
       } catch (IOException e) {
          throw new FedProRtiInternalError("Failed to perform HLA call", e);
-      } catch (SessionIllegalState e) {
-         throw new FedProNotConnected("HLA call without a federate protocol session: " + e);
       }
    }
 
@@ -441,57 +593,19 @@ public abstract class RTIambassadorClientGenericBase {
       }
    }
 
-   private void hlaCallbackRequest(
-         int sequenceNumber, byte[] hlaCallback)
-   {
-      try {
-         CallbackRequest callback = CallbackRequest.parseFrom(hlaCallback);
-         _callbackQueue.put(new QueuedCallback(callback, sequenceNumber, true));
-      } catch (InvalidProtocolBufferException e) {
-         LOGGER.warning(() -> String.format(
-               "Failed to parse callback request with sequence number %d: %s",
-               sequenceNumber,
-               e));
-         sendHlaCallbackErrorResponse(getSession(), sequenceNumber, e);
-      } catch (InterruptedException e) {
-         // Time to leave
-         sendHlaCallbackErrorResponse(getSession(), sequenceNumber, e);
-      }
-   }
-
-   private void lostConnection(String reason)
-   {
-      // TODO Anything more we should do?
-
-
-      // TODO: When we get a connectionLost callback from the LRC, should we then also close the FedPro connection?
-      //   Otherwise, we may keep creating new FedPro session and leave them idle, i.e. leak them.
-      CallbackRequest connectionLostRequest = CallbackRequest.newBuilder()
-            .setConnectionLost(ConnectionLost.newBuilder().setFaultDescription("Unable to resume session").build())
-            .build();
-      try {
-         _callbackQueue.put(new QueuedCallback(connectionLostRequest, 0, false));
-      } catch (InterruptedException e) {
-         // Give up
-         LOGGER.severe(() -> String.format(
-               "Interrupted while trying to put a callback on the callback queue when the connection was lost: %s",
-               e));
-      }
-   }
-
    @GuardedBy("_connectionStateLock")
-   protected PersistentSession createPersistentSession(TypedProperties settings)
+   protected PersistentSession createPersistentSession(TypedProperties settings, boolean createCallbackThread)
    throws FedProRtiInternalError, InvalidSetting
    {
       // Always assign to honor changes in settings between successive connect/disconnect calls.
       _asyncUpdates = settings.getBoolean(SETTING_NAME_ASYNC_UPDATES, DEFAULT_ASYNC_UPDATES);
 
-      PersistentSession persistentSession = SessionFactory.createPersistentSession(
+      _clientSession = new ClientSession(
             createTransportConfiguration(settings),
-            this::lostConnection,
             this::sessionTerminated,
             settings,
-            new SimpleResumeStrategy(settings));
+            new SimpleResumeStrategy(settings),
+            createCallbackThread);
 
       TypedProperties allServiceSettingsUsed = new TypedProperties();
       allServiceSettingsUsed.setBoolean(SETTING_NAME_ASYNC_UPDATES, _asyncUpdates);
@@ -518,7 +632,7 @@ public abstract class RTIambassadorClientGenericBase {
          _hlaAsyncSentDirectedInteraction = new MovingStatsNoOp();
          _hlaCallTimeStats = new MovingStatsNoOp();
       }
-      return persistentSession;
+      return _clientSession._persistentSession;
    }
 
    private Transport createTransportConfiguration(TypedProperties settings)
@@ -543,58 +657,66 @@ public abstract class RTIambassadorClientGenericBase {
    protected void startPersistentSession()
    throws FedProConnectionFailed, FedProRtiInternalError, FedProNotConnected
    {
+      if (_clientSession == null) {
+         throw new FedProRtiInternalError("Cannot start session before initialization");
+      }
       try {
-         _persistentSession.start(this::hlaCallbackRequest);
+         _clientSession._persistentSession.start(_clientSession::hlaCallbackRequest);
       } catch (SessionLost | SessionIllegalState e) {
          // There's no point keeping the session if it failed to initialize
-         _persistentSession = null;
+         _clientSession = null;
          throw new FedProConnectionFailed("Failed to start FedPro session: " + e.getMessage(), e);
       }
-   }
-
-   @GuardedBy("_connectionStateLock")
-   protected void startCallbackThread()
-   {
-      _callbackThread = new Thread(this::callbackLoop);
-      _callbackThread.setName("FedPro Client Session " + LogUtil.formatSessionId(_persistentSession.getId()) + " Callback Thread");
-      _callbackThread.setDaemon(true);
-      _callbackThread.start();
    }
 
    protected void disconnectBase()
    throws FedProRtiInternalError
    {
-      synchronized (_connectionStateLock) {
-         if (_persistentSession == null || _shutdownInProgress) {
+      ClientSession clientSession;
+      synchronized (_disconnectLock) {
+         synchronized (_connectionStateLock) {
+            clientSession = _clientSession;
+         }
+         if (clientSession == null) {
             return;
          }
          try {
+            // We should not hold _connectionStateLock while we wait for something.
+            // Otherwise, we can get a deadlock with Client State Listener Thread when it
+            // tries to call sessionTerminated.
+            CallRequest.Builder callRequest =
+                  CallRequest.newBuilder().setDisconnectRequest(DisconnectRequest.newBuilder());
             CallResponse callResponse =
-                  doHlaCallBase(CallRequest.newBuilder().setDisconnectRequest(DisconnectRequest.newBuilder()));
+                  doHlaCallBase(callRequest.build(), clientSession._persistentSession);
             // Todo - I don't see how we need throwOnException() here? remove?
             throwOnException(callResponse);
          } catch (FedProNotConnected e) {
             LOGGER.fine(() -> String.format("Call to disconnect while not connected: %s", e));
             // Already disconnected. Just ignore.
-            return;
          }
 
-         terminatePersistentSession();
-         _shutdownInProgress = true;
+         synchronized (_connectionStateLock) {
+            if (_clientSession != clientSession) {
+               // Another thread terminated this session. Nothing more to do.
+               // Socket reader thread may have detected a broken socket and initiated sessionTerminated().
+               return;
+            }
+            _clientSession = null;
+         }
       }
-      cleanUpTerminatingSession();
-      synchronized (_connectionStateLock) {
-         _shutdownInProgress = false;
-         _persistentSession = null;
-      }
+
+      terminatePersistentSession(clientSession);
+
+      // _connectionStateLock needs to be released at this point as _callbackThread may be stuck in a deadlock
+      //   waiting for _connectionStateLock.
+      cleanUpTerminatingSession(clientSession);
    }
 
-   @GuardedBy("_connectionStateLock")
-   private void terminatePersistentSession()
+   private void terminatePersistentSession(ClientSession clientSession)
    throws FedProRtiInternalError
    {
       try {
-         _persistentSession.terminate();
+         clientSession._persistentSession.terminate();
       } catch (SessionLost e) {
          LOGGER.fine(() -> String.format("Exception while trying to disconnect: %s", e));
          // Termination request did not complete.
@@ -607,68 +729,28 @@ public abstract class RTIambassadorClientGenericBase {
    }
 
    private void sessionTerminated(long sessionId) {
+      ClientSession callbackState;
       synchronized (_connectionStateLock) {
-         if (_persistentSession == null || _persistentSession.getId() != sessionId || _shutdownInProgress) {
+         if (_clientSession == null || _clientSession._persistentSession.getId() != sessionId) {
             return;
          }
-         _shutdownInProgress = true;
+         callbackState = _clientSession;
+         _clientSession = null;
       }
-      cleanUpTerminatingSession();
-      synchronized (_connectionStateLock) {
-         _shutdownInProgress = false;
-         _persistentSession = null;
-      }
+      cleanUpTerminatingSession(callbackState);
    }
 
-   private void cleanUpTerminatingSession() {
-      stopStatPrinting();
-      stopCallbackThread();
-   }
-
-   private void stopCallbackThread()
+   protected void startSessionThreads(ClientSession clientSession)
    {
-      try {
-         // Poison pill ends up last in callback queue.
-         // Should we drop all queued callbacks?
-         _callbackQueue.put(POISON);
-         synchronized (_callbackLock) {
-            // If callbacks are disabled, then evoke may be stuck waiting
-            // for notification and callbacks to be enabled.
-            _callbacksEnabled = true;
-            _callbackLock.notifyAll();
-         }
-
-         // _connectionStateLock needs to be released at this point as _callbackThread may be stuck in a deadlock
-         //   waiting for _connectionStateLock.
-
-         //noinspection FieldAccessNotGuarded
-         if (_callbackThread != null) {
-            //noinspection FieldAccessNotGuarded
-            _callbackThread.join();
-         } else {
-            // Evoked mode.
-         }
-      } catch (InterruptedException ignored) {
-      }
-      synchronized (_connectionStateLock) {
-         _callbackThread = null;
-      }
-   }
-
-   private ScheduledFuture<?> _statPrintingFuture;
-
-   protected void startStatPrinting() {
       if (_printStats) {
-         stopStatPrinting();
-         _statPrintingFuture = _statPrintingExecutor.scheduleAtFixedRate(this::printStats, _printStatsIntervalMillis, _printStatsIntervalMillis, TimeUnit.MILLISECONDS);
+         clientSession.startStatPrinting(_statPrintingExecutor, this::printStats, _printStatsIntervalMillis);
       }
+      clientSession.startCallbackThread();
    }
 
-   private void stopStatPrinting() {
-      if (_statPrintingFuture != null) {
-         _statPrintingFuture.cancel(false);
-         _statPrintingFuture = null;
-      }
+   private void cleanUpTerminatingSession(ClientSession callbackState) {
+      callbackState.stopStatPrinting();
+      callbackState.stopCallbackThread();
    }
 
    protected void countSyncUpdateForStats() {
@@ -695,10 +777,11 @@ public abstract class RTIambassadorClientGenericBase {
       _hlaAsyncSentDirectedInteraction.sample(1);
    }
 
-   private void printStats() {
+   void printStats() {
       try {
 
          long time = MovingStats.validTimeMillis();
+         ClientSession clientSession = getClientSession();
 
          MovingStats.Stats syncUpdates = _hlaSyncUpdateStats.getStatsForTime(time);
          MovingStats.Stats asyncUpdates = _hlaAsyncUpdateStats.getStatsForTime(time);
@@ -714,11 +797,10 @@ public abstract class RTIambassadorClientGenericBase {
 
          // The stats we are accessing have their own lock, and have no bearing on the session state.
          // @formatter:off
-         // noinspection FieldAccessNotGuarded
          LOGGER.info("FedPro client stats for the last " + (int)(_printStatsIntervalMillis / 1000.0) + " seconds.\n" +
-               "Session " + LogUtil.formatSessionId(_persistentSession.getId()) + "\n" +
-               _persistentSession.getPrettyPrintedPerSecondStats() + "\n" +
-               "HLA callbacks in queue:                             " + LogUtil.padStat(3) + LogUtil.printStatInt(_callbackQueue.size()) + "\n" +
+               "Session " + LogUtil.formatSessionId(clientSession._persistentSession.getId()) + "\n" +
+               clientSession._persistentSession.getPrettyPrintedPerSecondStats() + "\n" +
+               "HLA callbacks in queue:                             " + LogUtil.padStat(3) + LogUtil.printStatInt(clientSession._callbackQueue.size()) + "\n" +
                "\n" +
                "Updates sent (sync):                                " + LogUtil.printStatFloat(syncUpdates.averageBucket) + LogUtil.printStatInt(syncUpdates.maxBucket) + LogUtil.printStatInt(syncUpdates.minBucket) + LogUtil.printStatInt(syncUpdates.sum) + LogUtil.printStatLong(syncUpdates.historicTotal) + "\n" +
                "Updates sent (async):                               " + LogUtil.printStatFloat(asyncUpdates.averageBucket) + LogUtil.printStatInt(asyncUpdates.maxBucket) + LogUtil.printStatInt(asyncUpdates.minBucket) + LogUtil.printStatInt(asyncUpdates.sum) + LogUtil.printStatLong(asyncUpdates.historicTotal) + "\n" +
@@ -768,7 +850,7 @@ public abstract class RTIambassadorClientGenericBase {
          boolean crcAddressIsFedProServerAddress)
    {
       /*
-       * This method moves all settings that are prefixed with 'FedPro.'from the input parameter to client setting
+       * This method moves all settings that are prefixed with 'FedPro.' from the input parameter to client setting
        * string and return it.
        * Exception: If the boolean parameter is set to true, the setting 'crcAddress' is interpreted as the address of
        * the FedPro server, not as an LRC setting.
@@ -777,11 +859,18 @@ public abstract class RTIambassadorClientGenericBase {
 
       Iterator<String> iterator = inputValueList.iterator();
       while (iterator.hasNext()) {
-         String settingsLine = iterator.next();
+         String settingEntry = iterator.next();
 
-         if (settingsLine.startsWith(crcAddressPrefix) && crcAddressIsFedProServerAddress) {
+         int settingsNameLen = settingEntry.indexOf('=');
+         if (settingsNameLen == -1) {
+            // Not an assignment. Move to the next element
+            continue;
+         }
 
-            String serverAddress = settingsLine.substring(crcAddressPrefix.length());
+         String settingName = settingEntry.substring(0, settingsNameLen);
+         if (settingName.equals(SETTING_NAME_CRC_ADDRESS) && crcAddressIsFedProServerAddress) {
+
+            String serverAddress = settingEntry.substring(settingsNameLen + 1);
             String[] serverHostAndPort = serverAddress.split(":", 2);
             if (!serverHostAndPort[0].isEmpty()) {
                addToSettingsLine(clientSettings, SETTING_NAME_CONNECTION_HOST + "=" + serverHostAndPort[0]);
@@ -791,9 +880,18 @@ public abstract class RTIambassadorClientGenericBase {
             }
             iterator.remove();
 
-         } else if (settingsLine.startsWith(SETTING_PREFIX)) {
+         } else if (settingName.equals(SETTING_NAME_HEARTBEAT_INTERVAL) ||
+                    settingName.equals(SETTING_NAME_RESPONSE_TIMEOUT) ||
+                    settingName.equals(SETTING_NAME_RECONNECT_LIMIT)) {
 
-            String setting = settingsLine.substring(SETTING_PREFIX.length());
+            // Handle standard settings without prefix
+            addToSettingsLine(clientSettings, settingEntry);
+            // Remove the processed element
+            iterator.remove();
+
+         } else if (settingEntry.startsWith(SETTING_PREFIX)) {
+
+            String setting = settingEntry.substring(SETTING_PREFIX.length());
             addToSettingsLine(clientSettings, setting);
             iterator.remove();
 

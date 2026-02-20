@@ -39,7 +39,7 @@ namespace RTI_NAMESPACE
 
    std::wstring rtiVersion()
    {
-      return L"1.2";
+      return L"2.1";
    }
 
 }

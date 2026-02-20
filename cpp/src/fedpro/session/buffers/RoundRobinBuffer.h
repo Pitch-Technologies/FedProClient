@@ -142,6 +142,12 @@ namespace FedPro
          return _primaryQueue.capacity();
       }
 
+      void interruptPoller(bool interrupt) noexcept
+      {
+         _interrupted = interrupt;
+         _condition.notify_all();
+      }
+
       void interrupt(bool interrupt) noexcept override
       {
          _interrupted = interrupt;

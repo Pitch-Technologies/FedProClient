@@ -34,7 +34,7 @@ namespace FedPro
       uint32_t readInTotal = 0;
 
       while (readInTotal < minByteCount) {
-         // Blocks when there is nothing to read, unless there is a std::ios_base::failure or EofException.
+         // Blocks when there is nothing to read, unless there is a IOException or EofException.
          int bytesRead = recv(firstBytePos + readInTotal, maxByteCount - readInTotal);
 
          if (bytesRead < 1) {

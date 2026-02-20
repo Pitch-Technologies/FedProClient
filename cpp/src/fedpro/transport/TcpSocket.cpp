@@ -16,6 +16,8 @@
 
 #include "TcpSocket.h"
 
+#include <fedpro/IOException.h>
+
 #if defined(_WIN32)
 #pragma comment(lib, "iphlpapi.lib")
 
@@ -41,8 +43,6 @@
 #include <sstream>
 #include <algorithm>
 #include <cstring>
-
-#include <array>
 
 namespace FedPro
 {
@@ -80,7 +80,7 @@ namespace FedPro
 #if defined(_WIN32)
       WSADATA wsaData;
       if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0) {
-         throw std::ios_base::failure("Could not create socket", getLastErrorCode());
+         throw IOException("Could not create socket", getLastErrorCode());
       }
 #endif
 
@@ -139,9 +139,9 @@ namespace FedPro
 #else
             if (errorCode == ETIMEDOUT) {
 #endif
-            throw std::ios_base::failure{"Socket timed out", getLastErrorCode()};
+            throw IOException{"Socket timed out", getLastErrorCode()};
          }
-         throw std::ios_base::failure{"Could not read from socket", getLastErrorCode()};
+         throw IOException{"Could not read from socket", getLastErrorCode()};
       }
       return n;
    }
@@ -167,10 +167,10 @@ namespace FedPro
       long n = ::send(_socket, buf, numOfBytes, 0);
 #endif
       if (n == SOCKET_ERROR) {
-         throw std::ios_base::failure("Could not write to socket", getLastErrorCode());
+         throw IOException("Could not write to socket", getLastErrorCode());
       }
       if (n != numOfBytes) {
-         throw std::ios_base::failure("Could not write all data to socket");
+         throw IOException("Could not write all data to socket");
       }
 
       return true;
@@ -194,7 +194,7 @@ namespace FedPro
       // https://learn.microsoft.com/en-us/windows/win32/winsock/sol-socket-socket-options
       // "The default for this option is zero, which indicates that a receive operation will not time out."
       if (setsockopt(_socket, SOL_SOCKET, SO_RCVTIMEO, (char *) &tv, sizeof(tv)) == SOCKET_ERROR) {
-         throw std::ios_base::failure("Could not set sockopt SO_RCVTIMEO on socket", getLastErrorCode());
+         throw IOException("Could not set sockopt SO_RCVTIMEO on socket", getLastErrorCode());
       }
    }
 
@@ -220,7 +220,7 @@ namespace FedPro
       // Create the socket
       _socket = socket(PF_INET, SOCK_STREAM, 0);
       if (_socket == SOCKET_ERROR) {
-         throw std::ios_base::failure("Could not create socket", getLastErrorCode());
+         throw IOException("Could not create socket", getLastErrorCode());
       }
 
 #ifndef _WIN32
@@ -244,7 +244,7 @@ namespace FedPro
       // bind to socket
       int bindCode = bind(_socket, reinterpret_cast<const sockaddr *>(&_sendingLocalAddressC), sizeof(struct sockaddr));
       if (bindCode == SOCKET_ERROR) {
-         throw std::ios_base::failure("Could not bind socket to ephemeral port", getLastErrorCode());
+         throw IOException("Could not bind socket to ephemeral port", getLastErrorCode());
       }
 
       // Set up the remote address
@@ -256,7 +256,7 @@ namespace FedPro
       int connectCode =
             ::connect(_socket, reinterpret_cast<const sockaddr *>(&_remoteAddressC), sizeof(_remoteAddressC));
       if (connectCode == SOCKET_ERROR) {
-         throw std::ios_base::failure("Could not connect", getLastErrorCode());
+         throw IOException("Could not connect", getLastErrorCode());
       }
       return true;
    }
@@ -272,19 +272,19 @@ namespace FedPro
       // Allow address:port reuse
       const int enableReuse{1};
       if (setsockopt(_socket, SOL_SOCKET, SO_REUSEADDR, (char *) &enableReuse, sizeof(enableReuse)) == SOCKET_ERROR) {
-         throw std::ios_base::failure("Could not set sockopt SO_REUSEADDR on socket" , getLastErrorCode());
+         throw IOException("Could not set sockopt SO_REUSEADDR on socket" , getLastErrorCode());
       }
 
       // bind to socket
       int bindCode = bind(_socket, reinterpret_cast<const sockaddr *>(&_sendingLocalAddressC), sizeof(struct sockaddr));
       if (bindCode == SOCKET_ERROR) {
-         throw std::ios_base::failure(
+         throw IOException(
                "Could not bind socket to " + _address + ":" + std::to_string(_port), getLastErrorCode());
       }
 
       auto listenCode = ::listen(_socket, backlog);
       if (listenCode == SOCKET_ERROR) {
-         throw std::ios_base::failure("Could not listen on port", getLastErrorCode());
+         throw IOException("Could not listen on port", getLastErrorCode());
       }
       return true;
    }
@@ -296,7 +296,7 @@ namespace FedPro
       socket->_sendingLocalAddressC = _sendingLocalAddressC;
       socket->_socket = ::accept(_socket, reinterpret_cast<sockaddr *>(&_remoteAddressC), &remoteAddressLen);
       if (socket->_socket == INVALID_SOCKET) {
-         throw std::ios_base::failure("Could not accept client", getLastErrorCode());
+         throw IOException("Could not accept client", getLastErrorCode());
       }
       return socket;
    }
@@ -320,11 +320,11 @@ namespace FedPro
    {
        struct hostent *he = gethostbyname(hostname.c_str());
        if (he == nullptr) {
-           throw std::ios_base::failure("Could resolve hostname: " + hostname, getLastErrorCode());
+           throw IOException("Could resolve hostname: " + hostname, getLastErrorCode());
        }
        char *ipAddress = inet_ntoa(*(struct in_addr *) he->h_addr_list[0]);
        if (ipAddress == nullptr) {
-           throw std::ios_base::failure("Could not convert IP address to number-dot notation for hostname: " + hostname,
+           throw IOException("Could not convert IP address to number-dot notation for hostname: " + hostname,
                                         std::error_code{});
        }
        address = ipAddress;

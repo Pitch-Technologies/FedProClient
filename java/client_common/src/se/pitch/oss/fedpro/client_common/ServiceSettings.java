@@ -20,7 +20,7 @@ import static se.pitch.oss.fedpro.common.Protocol.TCP;
 
 public class ServiceSettings {
    // Default values
-   static final boolean DEFAULT_ASYNC_UPDATES = false;
-   static final String DEFAULT_CONNECTION_PROTOCOL = TCP;
+   public static final boolean DEFAULT_ASYNC_UPDATES = false;
+   public static final String DEFAULT_CONNECTION_PROTOCOL = TCP;
 
 }

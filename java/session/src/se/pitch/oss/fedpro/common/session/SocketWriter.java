@@ -26,6 +26,7 @@ import se.pitch.oss.fedpro.common.transport.FedProSocket;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SocketWriter {
@@ -40,7 +41,7 @@ public class SocketWriter {
    private final SequenceNumber _expectedNextSequenceNumber;
    private int _lastSequenceNumber = SequenceNumber.NO_SEQUENCE_NUMBER;
 
-   private boolean _run = false;
+   private volatile boolean _run = false;
 
    public interface Listener {
       void exceptionOnWrite(Exception e);
@@ -104,6 +105,10 @@ public class SocketWriter {
             //   Therefore, the loop should be ended by first interrupting the thread and then closing the socket.
             writeNextMessage();
          }
+         LOGGER.finer(() -> String.format(
+               "%s: \"%s\" ended gracefully",
+               logPrefix(),
+               Thread.currentThread().getName()));
       } catch (InterruptedException e) {
          LOGGER.finer(() -> String.format(
                "%s: \"%s\" was interrupted and will end",
@@ -111,9 +116,21 @@ public class SocketWriter {
                Thread.currentThread().getName()));
          // End the thread
       } catch (RuntimeException e) {
-         LOGGER.severe(() -> String.format(
-               "%s: Unexpected exception in thread " + Thread.currentThread().getName(),
-               logPrefix()));
+         LOGGER.log(
+               Level.SEVERE,
+               e,
+               () -> String.format(
+                     "%s: Unexpected exception in thread \"%s\"",
+                     logPrefix(),
+                     Thread.currentThread().getName()));
+      } finally {
+         try {
+            // Try to close socket to make sure that reader thread terminates.
+            // This is a no-op if the socket is already closed.
+            _socket.close();
+         } catch (IOException ignore) {
+            // Well, we tried.
+         }
       }
    }
 

@@ -282,9 +282,13 @@ public class ClientConverter {
       }
 
       RangeBounds getRangeBounds(DimensionHandle dimensionHandle)
+      throws RegionDoesNotContainSpecifiedDimension
       {
-         // TODO throw RegionDoesNotContainSpecifiedDimension when dimensionHandle is not in the map
-         return _rangeMap.get(dimensionHandle);
+         RangeBounds rangeBounds = _rangeMap.get(dimensionHandle);
+         if (rangeBounds == null) {
+            throw new RegionDoesNotContainSpecifiedDimension("No RangeBounds for this DimensionHandle");
+         }
+         return rangeBounds;
       }
 
       /**

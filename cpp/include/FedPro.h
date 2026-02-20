@@ -129,11 +129,7 @@ namespace FedPro
     * @brief Create a new TCP specific transport instance with specified server settings,
     * or their default values if not specified.
     *
-    * @param settings The Properties object instance which transport layer settings will
-    * be loaded from. Unprovided settings will get default values and non-transport
-    * settings will be ignored.
-    *
-    * @return An unique pointer to a new Transport instance.
+    * @deprecated Use the corresponding method in TransportFactory instead.
     */
    FEDPRO_EXPORT std::unique_ptr<Transport> createTcpTransport(const Properties & settings);
    FEDPRO_EXPORT std::unique_ptr<Transport> createTcpTransport();
@@ -142,11 +138,7 @@ namespace FedPro
     * @brief Create a new TLS specific transport instance with specified server settings,
     * or their default values if not specified.
     *
-    * @param settings The Properties object instance which transport layer settings will
-    * be loaded from. Unprovided settings will get default values and non-transport
-    * settings will be ignored.
-    *
-    * @return An unique pointer to a new Transport instance.
+    * @deprecated Use the corresponding method in TransportFactory instead.
     */
    FEDPRO_EXPORT std::unique_ptr<Transport> createTlsTransport(const Properties & settings);
    FEDPRO_EXPORT std::unique_ptr<Transport> createTlsTransport();
@@ -155,11 +147,7 @@ namespace FedPro
     * @brief Create a new Web Socket specific transport instance with specified settings,
     * or their default values if not specified.
     *
-    * @param settings The Properties object instance which transport layer settings will
-    * be loaded from. Unprovided settings will get default values and non-transport
-    * settings will be ignored.
-    *
-    * @return An unique pointer to a new Transport instance.
+    * @deprecated Use the corresponding method in TransportFactory instead.
     */
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketTransport(const Properties & settings);
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketTransport();
@@ -168,11 +156,7 @@ namespace FedPro
     * @brief Create a new Secure Web Socket specific transport instance with specified
     * settings, or their default values if not specified.
     *
-    * @param settings The Properties object instance which transport layer settings will
-    * be loaded from. Unprovided settings will get default values and non-transport
-    * settings will be ignored.
-    *
-    * @return An unique pointer to a new Transport instance.
+    * @deprecated Use the corresponding method in TransportFactory instead.
     */
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketSecureTransport(const Properties & settings);
    FEDPRO_EXPORT std::unique_ptr<Transport> createWebSocketSecureTransport();

@@ -19,6 +19,8 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+option(FEDPRO_SHARED_LIBS "Build shared fedpro client libraries" true)
+
 find_package(Protobuf 3.21.0...<3.22.0 CONFIG)
 if (NOT Protobuf_FOUND)
    message(STATUS "protobuf not found, skipping ${CMAKE_CURRENT_SOURCE_DIR}")
@@ -35,6 +37,9 @@ endif ()
 
 get_filename_component(HLA_1516_2010_FEDPRO_INCLUDE "api/HLA_1516-2010" ABSOLUTE)
 get_filename_component(HLA_1516_2025_FEDPRO_INCLUDE "api/HLA_1516-2025" ABSOLUTE)
+
+# Add third-parties (googletest, ...)
+add_subdirectory(third_party EXCLUDE_FROM_ALL)
 
 # Adds library source files
 add_subdirectory(src)

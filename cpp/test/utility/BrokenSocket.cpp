@@ -16,20 +16,20 @@
 
 #include "BrokenSocket.h"
 
-#include <ios>
+#include <fedpro/IOException.h>
 
 bool BrokenSocket::send(
       const char * firstBytePos,
       uint32_t numOfBytes) const
 {
-   throw std::ios_base::failure("");
+   throw FedPro::IOException("Socket is broken");
 }
 
 int BrokenSocket::recv(
       char * firstBytePos,
       uint32_t numOfBytes) const
 {
-   throw std::ios_base::failure("");
+   throw FedPro::IOException("Socket is broken");
 }
 
 void BrokenSocket::close()

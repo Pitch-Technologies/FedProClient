@@ -19,7 +19,7 @@
 namespace FedPro
 {
    EofException::EofException(const std::string & message)
-         : std::ios_base::failure{message}
+         : IOException{message}
    {
    }
 } // FedPro

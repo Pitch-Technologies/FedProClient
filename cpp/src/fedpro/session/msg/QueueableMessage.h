@@ -71,6 +71,8 @@ namespace FedPro
 
       void swap(QueueableMessage & rhs) noexcept;
 
+      std::unique_ptr<std::promise<ByteSequence>> removeResponseFuture();
+
       friend std::ostream & operator<<(
             std::ostream & os,
             const QueueableMessage & message);

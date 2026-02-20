@@ -76,9 +76,9 @@ namespace FedPro
 
    std::wstring toWString(string_view s)
    {
-      // Use static thread_local storage for performance
-      // because wstring_convert is expensive to create.
-      static thread_local std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> cvt;
+      // Use static thread_local storage for performance because wstring_convert is expensive to create.
+      // Provide err arguments to constructor to ensure from_byte never throws std::range_error.
+      static thread_local std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> cvt("?", L"?");
 
       // If sizeof(wchar_t) == 2, which applies to Windows, convert from UTF-8 to UTF-16.
       // If sizeof(wchar_t) == 4, which applies to Linux, convert from UTF-8 to UTF-32.

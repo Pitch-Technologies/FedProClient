@@ -37,6 +37,6 @@ namespace FedPro
             const std::string & host,
             uint16_t port) override;
 
-      void verifyTlsHandshakeOrClose(TcpSocket socket);
+      void verifyTlsHandshakeOrClose(TcpSocket & socket);
    };
 }

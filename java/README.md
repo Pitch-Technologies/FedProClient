@@ -18,10 +18,10 @@ The available severity levels are, from least verbose to most, `OFF`, `SEVERE`, 
 
 ## <a name="building"></a>Build instructions
 
-The Federate Protocol Java Client and its dependencies can be build using the ant-target `dist.all` present in `build.xml`.
+To build the Federate Protocol Java Client and its dependencies using Gradle, run `gradlew build` in `java/`.
 
-### Regenerating build-targets
+Gradle requires JVM 17 or later. 
 
-Regenerating the build targets has to be done when module dependencies have changed.
-To generate these in the IntelliJ project, the plugin 'Ant Build Generation' should be used,
-with the settings 'Generate single-file ant build' selected, and 'Enable UI forms compilations' disabled.
+## Running the Chat federate
+
+To build and run the sample Chat federate using Gradle, run `gradlew runSample --console=plain` in `java/`

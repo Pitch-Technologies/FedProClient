@@ -17,8 +17,7 @@
 #pragma once
 
 #include <fedpro/Config.h>
-
-#include <ios>
+#include <fedpro/IOException.h>
 
 namespace FedPro
 {
@@ -26,7 +25,7 @@ namespace FedPro
     * @brief Transport layer exception that signals that an end of file or end of stream
     * has been reached unexpectedly during input.
     */
-   class FEDPRO_EXPORT EofException : public std::ios_base::failure
+   class FEDPRO_EXPORT EofException : public IOException
    {
    public:
       explicit EofException(const std::string & message);

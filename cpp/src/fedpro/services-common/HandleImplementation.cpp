@@ -16,7 +16,6 @@
 
 #include "HandleImplementation.h"
 
-#include "RegionHandleImplementation.h"
 #include "RTIcompat.h"
 
 #include <RTI/Handle.h>
@@ -27,23 +26,6 @@
 #include <sstream>
 
 
-#define DECLARE_HANDLE_IMPLEMENTATION(HandleKind)                 \
-class HandleKind##Implementation : public HandleImplementation    \
-{                                                                 \
-public:                                                           \
-   HandleKind##Implementation() = default;                        \
-   HandleKind##Implementation(                                    \
-      const HandleKind##Implementation &) = default;              \
-   HandleKind##Implementation(                                    \
-      HandleKind##Implementation &&) = default;                   \
-                                                                  \
-   HandleKind##Implementation& operator=(                         \
-      const HandleKind##Implementation &) = default;              \
-   HandleKind##Implementation& operator=(                         \
-      HandleKind##Implementation &&) = default;                   \
-};
-
-
 #define IMPLEMENT_HANDLE_CLASS(HandleKind)                        \
    /* Constructs an invalid handle                           */   \
    HandleKind::HandleKind () :                                    \
@@ -51,7 +33,8 @@ public:                                                           \
    }                                                              \
                                                                   \
    HandleKind::HandleKind(HandleKind##Implementation* impl)  :    \
-      _impl(new HandleKind##Implementation(*impl)) {              \
+      _impl(static_cast<HandleKind##Implementation *>(impl->clone())) \
+   {                                                              \
    }                                                              \
                                                                   \
    HandleKind::~HandleKind () noexcept {                          \
@@ -168,8 +151,10 @@ public:                                                           \
    class HandleKind##Friend {                                     \
    public:                                                        \
       using Impl = HandleKind##Implementation;                    \
-      static HandleKind make_handle(Impl * handleImpl) {          \
-         return HandleKind(handleImpl);                           \
+      static HandleKind make_handle(                              \
+         std::unique_ptr<HandleKind##Implementation> handleImpl)  \
+      {                                                           \
+         return HandleKind(handleImpl.release());                 \
       }                                                           \
       static HandleKind make_handle(std::string && encodedData) { \
          HandleKind handle;                                       \
@@ -187,10 +172,22 @@ public:                                                           \
       }                                                           \
    };                                                             \
                                                                   \
+   HandleImplementation * HandleKind##Implementation::clone() const \
+   {                                                              \
+      return new HandleKind##Implementation(*this);               \
+   }
+
+   #define IMPLEMENT_HANDLE_HELPERS(HandleKind)                   \
    template<>                                                     \
    HandleKind make_handle<HandleKind>(std::string && buffer)      \
    {                                                              \
        return HandleKind##Friend::make_handle(std::move(buffer)); \
+   }                                                              \
+                                                                  \
+   HandleKind make_handle(                                        \
+      std::unique_ptr<HandleKind##Implementation> handleImpl)     \
+   {                                                              \
+       return HandleKind##Friend::make_handle(std::move(handleImpl)); \
    }                                                              \
                                                                   \
    std::string serialize(const HandleKind & handle) {             \
@@ -218,6 +215,15 @@ namespace RTI_NAMESPACE
    }
 
    HandleImplementation::~HandleImplementation() = default;
+
+   HandleImplementation::HandleImplementation(const HandleImplementation &) = default;
+
+   HandleImplementation & HandleImplementation::operator=(const HandleImplementation &) = default;
+
+   HandleImplementation * HandleImplementation::clone() const
+   {
+      return new HandleImplementation(*this);
+   }
 
    void HandleImplementation::setData(std::string && encodedData)
    {
@@ -285,33 +291,33 @@ namespace RTI_NAMESPACE
 
    // Handle classes are implemented by invoking the macro above.
 
-   DECLARE_HANDLE_IMPLEMENTATION(FederateHandle)
    IMPLEMENT_HANDLE_CLASS(FederateHandle)
+   IMPLEMENT_HANDLE_HELPERS(FederateHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(ObjectClassHandle)
    IMPLEMENT_HANDLE_CLASS(ObjectClassHandle)
+   IMPLEMENT_HANDLE_HELPERS(ObjectClassHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(InteractionClassHandle)
    IMPLEMENT_HANDLE_CLASS(InteractionClassHandle)
+   IMPLEMENT_HANDLE_HELPERS(InteractionClassHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(ObjectInstanceHandle)
    IMPLEMENT_HANDLE_CLASS(ObjectInstanceHandle)
+   IMPLEMENT_HANDLE_HELPERS(ObjectInstanceHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(AttributeHandle)
    IMPLEMENT_HANDLE_CLASS(AttributeHandle)
+   IMPLEMENT_HANDLE_HELPERS(AttributeHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(ParameterHandle)
    IMPLEMENT_HANDLE_CLASS(ParameterHandle)
+   IMPLEMENT_HANDLE_HELPERS(ParameterHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(DimensionHandle)
    IMPLEMENT_HANDLE_CLASS(DimensionHandle)
+   IMPLEMENT_HANDLE_HELPERS(DimensionHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(MessageRetractionHandle)
    IMPLEMENT_HANDLE_CLASS(MessageRetractionHandle)
+   IMPLEMENT_HANDLE_HELPERS(MessageRetractionHandle);
 
-   // RegionHandleImplementation is located in RegionHandleImplementation.cpp.h
    IMPLEMENT_HANDLE_CLASS(RegionHandle)
+   IMPLEMENT_HANDLE_HELPERS(RegionHandle);
 
-   DECLARE_HANDLE_IMPLEMENTATION(TransportationTypeHandle)
    IMPLEMENT_HANDLE_CLASS(TransportationTypeHandle)
+   IMPLEMENT_HANDLE_HELPERS(TransportationTypeHandle);
 }

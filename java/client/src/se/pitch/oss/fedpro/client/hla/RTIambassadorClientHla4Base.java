@@ -136,7 +136,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
    private void throwIfAlreadyConnected()
    throws AlreadyConnected
    {
-      if (_persistentSession != null) {
+      if (_clientSession != null) {
          throw new AlreadyConnected("Already has a session");
       }
    }
@@ -216,7 +216,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
             // ALWAYS parse settings, even if the input parameter is null,
             // to ensure parsing of settings provided by environment variables and java system properties.
             TypedProperties clientSettings = SettingsParser.parse(null);
-            _persistentSession = createPersistentSession(clientSettings);
+            createPersistentSession(clientSettings, callbackModel == CallbackModel.HLA_IMMEDIATE);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
@@ -252,7 +252,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          final RtiConfiguration parsedRtiConfiguration = parseRtiConfiguration(rtiConfiguration, inputValueList);
          try {
             TypedProperties clientSettings = SettingsParser.parse(clientSettingsLine);
-            _persistentSession = createPersistentSession(clientSettings);
+            createPersistentSession(clientSettings, callbackModel == CallbackModel.HLA_IMMEDIATE);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
@@ -294,7 +294,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
             // ALWAYS parse settings, even if the input parameter is null,
             // to ensure parsing of settings provided by environment variables and java system properties.
             TypedProperties clientSettings = SettingsParser.parse(null);
-            _persistentSession = createPersistentSession(clientSettings);
+            createPersistentSession(clientSettings, callbackModel == CallbackModel.HLA_IMMEDIATE);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
@@ -339,7 +339,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
 
          try {
             TypedProperties clientSettings = SettingsParser.parse(clientSettingsLine);
-            _persistentSession = createPersistentSession(clientSettings);
+            createPersistentSession(clientSettings, callbackModel == CallbackModel.HLA_IMMEDIATE);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
@@ -375,10 +375,7 @@ public class RTIambassadorClientHla4Base extends RTIambassadorClientGenericBase 
          }
          // Todo - I don't see how we need throwOnException() here? remove?
          throwOnException(callResponse);
-         startStatPrinting();
-         if (callbackModel == CallbackModel.HLA_IMMEDIATE) {
-            startCallbackThread();
-         }
+         startSessionThreads(_clientSession);
          return callResponse;
       } catch (FedProNotConnected | NotConnected e) {
          throw new ConnectionFailed("Failed to connect");

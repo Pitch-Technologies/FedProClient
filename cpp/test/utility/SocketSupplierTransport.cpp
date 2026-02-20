@@ -23,11 +23,21 @@ SocketSupplierTransport::SocketSupplierTransport(SocketSupplier socketSupplier)
 {
 }
 
+SocketSupplierTransport::SocketSupplierTransport(std::shared_ptr<FedPro::Socket> socket)
+{
+   _socketSupplier = [socket = std::move(socket)]() {
+      return socket;
+   };
+}
+
+SocketSupplierTransport::SocketSupplierTransport(const SocketSupplierTransport & transport) noexcept
+      : _socketSupplier{transport._socketSupplier}
+{
+}
+
 SocketSupplierTransport::~SocketSupplierTransport() = default;
 
 std::shared_ptr<FedPro::Socket> SocketSupplierTransport::connect()
 {
-   auto socket = _socketSupplier();
-   socket->connect();
-   return socket;
+   return _socketSupplier();
 }

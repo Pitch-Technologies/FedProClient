@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="IEEE 2010 APIs" pattern="file[fedproclient_client_evolved]:src/hla//*" />
-</component>

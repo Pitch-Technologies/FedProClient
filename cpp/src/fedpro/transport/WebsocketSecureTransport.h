@@ -29,7 +29,7 @@ namespace FedPro
    class WebsocketSecureTransport : public TransportImplBase
    {
    public:
-      WebsocketSecureTransport(const Properties & settings);
+      explicit WebsocketSecureTransport(const Properties & settings);
 
    private:
       std::unique_ptr<FedPro::Socket> doConnect(

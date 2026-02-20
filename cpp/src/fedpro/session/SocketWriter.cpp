@@ -16,6 +16,7 @@
 
 #include "SocketWriter.h"
 
+#include <fedpro/IOException.h>
 #include <fedpro/FedProExceptions.h>
 #include "LogUtil.h"
 
@@ -207,7 +208,7 @@ namespace FedPro
       if (message.data.size() <= maxMessageSize) {
          _socket->send(&message.data[0], static_cast<uint32_t>(message.data.length()));
       } else {
-         throw std::ios_base::failure(
+         throw IOException(
                "Failed to write message because its size exceed " + std::to_string(maxMessageSize));
       }
       logSentMessage(message);

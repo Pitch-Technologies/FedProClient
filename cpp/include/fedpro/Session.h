@@ -196,7 +196,7 @@ namespace FedPro
        * @throws SessionLost If the server refuses to resume the session or sends a bad
        * response message.
        * @throws SessionIllegalState If the operation is not allowed in this state.
-       * @throws std::ios_base::failure If an IO error occurs.
+       * @throws IOException If an IO error occurs.
        *
        * @return True if session is resumed, false otherwise.
        */

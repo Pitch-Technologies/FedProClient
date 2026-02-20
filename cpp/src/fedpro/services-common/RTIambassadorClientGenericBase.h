@@ -20,12 +20,9 @@
 #include <fedpro/PersistentSession.h>
 #include <fedpro/Properties.h>
 #include <fedpro/Session.h>
-#include <fedpro/Transport.h>
 #include "protobuf_util.h"
 #include "protobuf/generated/RTIambassador.pb.h"
 #include "ServiceSettings.h"
-#include "session/ThreadPool.h"
-#include <utility/InterruptibleCondition.h>
 #include <utility/MovingStats.h>
 #include <utility/string_view.h>
 
@@ -33,7 +30,6 @@
 #include <future>
 #include <memory>
 #include <mutex>
-#include <queue>
 #include <thread>
 
 namespace RTI_NAMESPACE
@@ -41,17 +37,12 @@ namespace RTI_NAMESPACE
    class FederateAmbassador;
 }
 
-namespace rti1516_2025
-{
-   namespace fedpro
-   {
-      class CallbackRequest;
-   }
-}
-
 namespace FedPro
 {
+   class ClientSession;
    class FederateAmbassadorDispatcher;
+   class ResumeStrategy;
+   class Transport;
 
    class RTIambassadorClientGenericBase
    {
@@ -59,35 +50,36 @@ namespace FedPro
 
       using CallRequest = ::rti1516_2025::fedpro::CallRequest;
       using CallResponse = ::rti1516_2025::fedpro::CallResponse;
-      using CallbackRequest = ::rti1516_2025::fedpro::CallbackRequest;
-
-      using SequenceNumber = int32_t;
 
       explicit RTIambassadorClientGenericBase(std::shared_ptr<ClientConverter> clientConverter);
 
       virtual ~RTIambassadorClientGenericBase();
 
-      bool isConnected() const
-      {
-         return _persistentSession != nullptr;
-      }
+      void createClientSession(
+            const Properties & settings,
+            RTI_NAMESPACE::FederateAmbassador & federateReference,
+            RTI_NAMESPACE::CallbackModel callbackModel);
 
       /**
-       * Create the PersistentSession instance using the provided settings.
+       * Create the ClientSession instance, and the corresponding PersistentSession, using the provided settings.
        *
        * @param settings A Properties object produced by SettingsParser::parse().
        * Example: "FED_INT_HEART=600,connect.port=tcp".
+       * @param createCallbackThread Whether to create an thread for immediate callback dispatch, or not.
        *
        * @throw std::invalid_argument If any setting is provided through an invalid format
        * @throw std::runtime_error
        */
-      void createPersistentSession(const Properties & settings);
+      void createClientSession(
+            const Properties & settings,
+            std::shared_ptr<FederateAmbassadorDispatcher> federateAmbassadorDispatcher,
+            bool createCallbackThread);
 
       virtual void enableCallbacks();
 
       virtual void disableCallbacks();
 
-      bool isInCurrentCallbackThread() const;
+      bool isInCallbackThread() const;
 
       static std::vector<std::wstring> splitFederateConnectSettings(const std::wstring & inputString);
 
@@ -113,17 +105,17 @@ namespace FedPro
        * @param failedSession If the call fails, the method assign the failed session instance to this output parameter.
        */
       CallResponse doConnect(
-            RTI_NAMESPACE::FederateAmbassador & federateReference,
-            RTI_NAMESPACE::CallbackModel callbackModel,
             const CallRequest & callRequest,
-            std::unique_ptr<PersistentSession> & failedSession) noexcept(false); // REQUIRES(_connectionStateLock)
+            std::shared_ptr<ClientSession> & failedSession) noexcept(false); // REQUIRES(_connectionStateLock)
 
       /**
        * Submit an HLA call, wait for the response, and decode the response.
        *
        * @throw RTI_NAMESPACE::NotConnected
        */
-      CallResponse doHlaCall(const CallRequest & request);
+      CallResponse doHlaCall(const CallRequest & callRequest);
+
+      CallResponse doHlaCall(const CallRequest & callRequest, ClientSession & session);
 
       /**
        * Submit an HLA call.
@@ -131,19 +123,6 @@ namespace FedPro
        * @throw RTI_NAMESPACE::NotConnected
        */
       std::future<ByteSequence> doAsyncHlaCall(const CallRequest & callRequest);
-
-      /**
-       * Start the callback thread to process responses.
-       *
-       * @throw std::runtime_error If the callback thread is already running.
-       */
-      void startCallbackThread();
-
-      void stopCallbackThread();
-
-      void startStatsPrinting();
-
-      void stopStatsPrinting();
 
       void countSyncUpdateForStats();
 
@@ -173,20 +152,27 @@ namespace FedPro
 
       void disconnectBase();
 
-      virtual void dispatchHlaCallback(std::unique_ptr<CallbackRequest> queuedCallback) = 0;
+      std::shared_ptr<ClientSession> getClientSession();
 
-      /**
-       * @throw FedPro::NotConnectedException
-       */
-      std::future<ByteSequence> sendCallRequest(ByteSequence && encodedHlaCall);
+      void startSessionThreads(ClientSession & clientSession);
 
-      PersistentSession * getSession();
+      void cleanUpTerminatingSession(ClientSession & clientSession);
 
       std::shared_ptr<ClientConverter> _clientConverter;
 
-      std::unique_ptr<FederateAmbassadorDispatcher> _federateAmbassadorDispatcher;
+      std::shared_ptr<FederateAmbassadorDispatcher> _federateAmbassadorDispatcher;
 
+      std::shared_ptr<ClientSession> _clientSession; // GUARDED_BY(_connectionStateLock)
+
+      // Protect connect and disconnect calls here at the top level, to simplify some code.
+      // All other HLA calls are made thread-safe further down, in the Session classes.
+      // Lock safety: This shall not be locked nor synchronized while executing federate callbacks/functors,
+      // since a federate may call disconnect() which is synchronized with _disconnectLock.
       std::mutex _connectionStateLock;
+
+      // disconnect has an additional lock to prevent concurrent disconnect calls.
+      // Lock safety: _disconnectLock shall not be locked nor synchronized after _connectionStateLock
+      std::mutex _disconnectLock;
 
       // Service layer settings
       // We may want to query property "client.asyncUpdates".
@@ -195,88 +181,13 @@ namespace FedPro
 
    private:
 
-      class QueuedCallback
-      {
-      public:
-         enum class Type : uint8_t
-         {
-            REQUEST, PLACEHOLDER
-         };
-
-         std::unique_ptr<CallbackRequest> _callbackRequest;
-         SequenceNumber _sequenceNumber{0};
-         bool _needsResponse{false};
-         Type _type{Type::REQUEST};
-
-         /**
-          * Create a callback queue entry with a request.
-          */
-         QueuedCallback(
-               std::unique_ptr<CallbackRequest> callbackRequest,
-               SequenceNumber sequenceNumber,
-               bool needsResponse);
-
-         /**
-          * Create an empty callback queue entry.
-          */
-         explicit QueuedCallback(Type type);
-
-         QueuedCallback(QueuedCallback &&) noexcept = default;
-
-         QueuedCallback & operator=(QueuedCallback &&) noexcept = default;
-      };
-
-      // Put a callback into the queue
-      void putCallback(QueuedCallback callback);
-
-      // Take a callback from the queue. May block until a callback is available.
-      QueuedCallback takeCallback();
-
-      // Poll a callback from the queue.
-      // Wait at least for the provided duration for a callback to become available.
-      std::unique_ptr<QueuedCallback> pollCallback(
-            size_t & remainingCallbacks,
-            FedProDuration duration = FedProDuration{0});
-
-      void terminatePersistentSession(); // REQUIRES(_connectionStateLock)
-
-      void callbackLoop();
-
-      void dispatchCallback(QueuedCallback queuedCallback);
-
-      void sendHlaCallbackErrorResponse(
-            PersistentSession * resumingClient,
-            SequenceNumber sequenceNumber,
-            ByteSequence && encodedHlaResponse);
+      void terminatePersistentSession(ClientSession & clientSession);
 
       void printStats() noexcept;
 
-      // Parse a callback and add it to the queue.
-      void hlaCallbackRequest(
-            SequenceNumber sequenceNumber,
-            const ByteSequence & hlaCallback);
-
-      void lostConnection(std::string reason);
-
       void sessionTerminated(uint64_t sessionId);
 
-      void cleanUpTerminatingSession();
-
       std::unique_ptr<Transport> createTransportConfiguration(const Properties & settings);
-
-      std::mutex _queueLock;
-
-      InterruptibleCondition _queueCondition; // GUARDED_BY(_queueLock)
-
-      std::queue<QueuedCallback> _callbackQueue; // GUARDED_BY(_queueLock)
-
-      std::mutex _callbackLock;
-
-      InterruptibleCondition _callbackCondition; // GUARDED_BY(_callbackLock)
-
-      bool _callbackInProgress{false}; // GUARDED_BY(_callbackLock)
-
-      bool _callbacksEnabled{true}; // GUARDED_BY(_callbackLock)
 
       std::unique_ptr<MovingStats> _hlaSyncUpdateStats;
       std::unique_ptr<MovingStats> _hlaAsyncUpdateStats;
@@ -288,16 +199,6 @@ namespace FedPro
       bool _printStats{false};
 
       FedProDuration _printStatsIntervalMillis{};
-
-      std::thread _statPrintingExecutor;
-
-      std::shared_ptr<InterruptibleConditionState> _printStatsInterrupt;
-
-      std::unique_ptr<PersistentSession> _persistentSession; // GUARDED_BY(_connectionStateLock)
-
-      bool _shutdownInProgress{false}; // GUARDED_BY(_connectionStateLock)
-
-      std::unique_ptr<std::thread> _callbackThread; // GUARDED_BY(_connectionStateLock)
    };
 
 }

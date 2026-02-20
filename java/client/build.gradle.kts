@@ -1,3 +1,19 @@
+/*
+ *  Copyright (C) 2025 Pitch Technologies AB
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 plugins {
     `java-library`
     id("com.vanniktech.maven.publish") version "0.34.0"
@@ -9,13 +25,12 @@ repositories {
 
 dependencies {
     implementation(libs.protobuf.java)
-    implementation(libs.java.websocket)
     implementation(libs.jcip.annotations)
     implementation(libs.bundles.slf4j)
-    api(project(":java:api"))
-    api(project(":java:protobuf"))
-    api(project(":java:session"))
-    api(project(":java:client_common"))
+    api(project(":api:HLA1516-2025"))
+    api(project(":protobuf"))
+    api(project(":session"))
+    api(project(":client_common"))
 }
 
 sourceSets {
@@ -35,7 +50,7 @@ tasks.jar {
 java {
     withSourcesJar()
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion = JavaLanguageVersion.of(11)
     }
 }
 

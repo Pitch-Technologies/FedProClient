@@ -31,6 +31,11 @@ public class SocketSupplierTransport extends TransportBase {
       _socketSupplier = socketSupplier;
    }
 
+   public SocketSupplierTransport(FedProSocket socket)
+   {
+      this(() -> socket);
+   }
+
    @Override
    protected FedProSocket doConnect(String host, int port)
    {

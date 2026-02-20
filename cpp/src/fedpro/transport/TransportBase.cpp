@@ -16,6 +16,7 @@
 
 #include "TransportImplBase.h"
 
+#include <fedpro/IOException.h>
 #include <fedpro/Settings.h>
 #include <fedpro/Socket.h>
 
@@ -44,17 +45,17 @@ namespace FedPro
             socket->setTcpNoDelay(true);
          }
          return socket;
-      } catch (const std::ios_base::failure & e) {
+      } catch (const IOException & e) {
          throw e;
       }
-      // If throwing any exception other than std::ios_base::failure,
+      // If throwing any exception other than IOException,
       // catch it and re-throw with a generic error message.
       catch (const std::exception & e)
       {
-         throw std::ios_base::failure(std::string {"Could not connect: "} + e.what());
+         throw IOException(std::string {"Could not connect: "} + e.what());
       }
       catch (...) {
-         throw std::ios_base::failure("Could not connect");
+         throw IOException("Could not connect");
       }
    }
 

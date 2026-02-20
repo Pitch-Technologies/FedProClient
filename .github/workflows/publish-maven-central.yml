@@ -17,7 +17,7 @@ jobs:
 
 
       - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+        run: chmod +x java/gradlew
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
@@ -25,10 +25,11 @@ jobs:
         uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
       - name: Publish with Gradle Wrapper
-        # Use ./gradlew publishToMavenCentral(automaticRelease = true) to skip manual approval in Maven Central portal
-        run: ./gradlew publishToMavenCentral
+        # Use java/gradlew publishToMavenCentral(automaticRelease = true) to skip manual approval in Maven Central portal
+        run: java/gradlew publishToMavenCentral
         env:
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_PASSWORD }}
           ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.GPG_SIGNING_KEY }}
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.GPG_SIGNING_KEY_PW }}
+ 

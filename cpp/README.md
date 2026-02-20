@@ -237,7 +237,17 @@ and a corresponding `Release` configuration when building with a `Release` profi
   cd  build/vc140-amd64-release/sample/Release
   ```
 * Run the sample executable. 
-* (Optional) Run the sample executable multiple time, simultaneously, to chat between federates. 
+* (Optional) Run the sample executable multiple times, simultaneously, to chat between federates. 
+
+### Build static libraries
+
+By default, the client library is built as a shared library. If you want to build static libraries instead, you can turn off the `FEDPRO_SHARED_LIBS` option in the CMake configure step. For example, if building with the latest Visual Studio toolset installed, run
+
+```
+cmake --preset vc-amd64 -DFEDPRO_SHARED_LIBS=OFF
+```
+
+The build and install commands remain the same as before.
 
 ## Components ##
 

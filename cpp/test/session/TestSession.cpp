@@ -19,8 +19,9 @@
 
 #include <FedPro.h>
 #include <services-common/SettingsParser.h>
+#include "session/ThreadPool.h"
 #include "utility/BrokenSocket.h"
-#include "utility/MemoryTransport.h"
+#include "utility/MemorySocket.h"
 #include "utility/PacketFactory.h"
 #include "utility/SocketSupplierTransport.h"
 #include "utility/StateWaiter.h"
@@ -71,6 +72,21 @@ public:
    {
    }
 
+   static std::unique_ptr<Transport> createMemoryTransport(FedPro::string_view firstPacket)
+   {
+      return createMemoryTransport({firstPacket});
+   }
+
+   static std::unique_ptr<Transport> createMemoryTransport(std::initializer_list<FedPro::string_view> packets)
+   {
+      auto socket = std::make_shared<MemorySocket>();
+      for (FedPro::string_view packet : packets)  {
+         socket->addInboundPacket(packet);
+      }
+      socket->connect();
+      return std::make_unique<SocketSupplierTransport>(std::move(socket));
+   }
+
    const uint64_t _fakeSessionId{42};
 
    FedPro::Properties _clientSettings;
@@ -81,8 +97,8 @@ public:
 
 TEST_F(TestSession, messageQueueFull)
 {
-   auto transport = std::make_unique<MemoryTransport>();
-   transport->addInboundPacket(PacketFactory::createNewSessionStatus(_fakeSessionId));
+   auto transport = createMemoryTransport(
+         PacketFactory::createNewSessionStatus(_fakeSessionId));
    _clientSettings.setUnsignedInt32(SETTING_NAME_MESSAGE_QUEUE_SIZE, 1);
    auto session = createSession(std::move(transport), _clientSettings);
 
@@ -109,12 +125,13 @@ TEST_F(TestSession, two_sessions)
 {
    // Create two states with a MemoryTransport containing a bad message to cause an immediate termination-on-start.
    // Then verify that both termination were reported.
-   auto transportA = std::make_unique<MemoryTransport>();
-   transportA->addInboundPacket(PacketFactory::createBadMessageType());
+
+   auto transportA = createMemoryTransport(
+         PacketFactory::createBadMessageType());
    auto sessionA = createSession(std::move(transportA));
 
-   auto transportB = std::make_unique<MemoryTransport>();
-   transportB->addInboundPacket(PacketFactory::createBadMessageType());
+   auto transportB = createMemoryTransport(
+         PacketFactory::createBadMessageType());
    auto sessionB = createSession(std::move(transportB));
 
    try {
@@ -156,12 +173,14 @@ TEST_F(TestSession, two_sessions)
 
 TEST_F(TestSession, terminateSession_When_ReceiveInvalidSequenceNumber)
 {
-   auto transport = std::make_unique<MemoryTransport>();
-   transport->addInboundPacket(PacketFactory::createNewSessionStatus(_fakeSessionId));
-
    // Given
    const int32_t invalidSequenceNumber = std::numeric_limits<int32_t>::min();
-   transport->addInboundPacket(PacketFactory::createHeartbeatResponse(_fakeSessionId, invalidSequenceNumber));
+
+   auto transport = createMemoryTransport(
+         {
+               PacketFactory::createNewSessionStatus(_fakeSessionId),
+               PacketFactory::createHeartbeatResponse(_fakeSessionId, invalidSequenceNumber)
+         });
 
    // When
    auto session = createSession(std::move(transport));
@@ -185,6 +204,7 @@ TEST_F(TestSession, startSucceed_When_BrokenSocketOnFirstAttempt)
             } else {
                auto socket = std::make_shared<MemorySocket>();
                socket->addInboundPacket(PacketFactory::createNewSessionStatus(_fakeSessionId));
+               socket->connect();
                return socket;
             }
          });
@@ -200,6 +220,46 @@ TEST_F(TestSession, startSucceed_When_BrokenSocketOnFirstAttempt)
    EXPECT_EQ(std::cv_status::no_timeout, _stateWaiter.waitForState(Session::State::RUNNING, std::chrono::seconds{4}));
    EXPECT_EQ(_fakeSessionId, session->getId());
    EXPECT_GT(connectionAttemptCount, 1);
+}
+
+TEST_F(TestSession, terminateSucceed_When_ConcurrentTerminateCalls)
+{
+   auto socket = std::make_shared<MemorySocket>();
+   socket->addInboundPacket(PacketFactory::createNewSessionStatus(_fakeSessionId));
+   socket->connect();
+   auto transport = std::make_unique<SocketSupplierTransport>(socket);
+   auto session = createSession(std::move(transport));
+
+   session->start(
+         [this](
+               int32_t sequenceNumber,
+               const ByteSequence & hlaCallback) { onHlaCallbackRequest(sequenceNumber, hlaCallback); });
+   // Close the socket immediately. The socket only has 1 packet in queue, any further read attempt would time out.
+   socket->close();
+
+   // Given multiple threads do concurrent session operations
+   FedPro::ThreadPool threadPool(3);
+   for (int i = 0; i < 9; ++i) {
+      threadPool.queueJob(
+            [&session]() {
+               try {
+                  // When any thread call terminate
+                  session->terminate(std::chrono::seconds{12});
+               } catch (const FedPro::SessionAlreadyTerminated &) {
+               } catch (const FedPro::SessionLost & e) {
+                  // Terminate throws SessionLost, which is plausible for a real socket.
+                  // But this is odd for a MemorySocket as it should be perfectly reliable.
+                  // So log a message.
+                  std::cerr << "Terminate throws " << e.getName() << ": " << e.what() << std::endl;
+               } catch (const std::exception & e) {
+                  FAIL() << e.what();
+               }
+               // Then succeed
+            });
+   }
+   threadPool.start();
+   threadPool.shutdown(true);
+   ASSERT_TRUE(threadPool.waitTermination(std::chrono::seconds{16}));
 }
 
 

@@ -569,8 +569,7 @@ public class FederateAmbassadorDispatcher {
 
 
          default: {
-            System.out.println("Unknown callback: " + callback.getCallbackRequestCase());
-            throw new FederateInternalError("TODO " + callback.getCallbackRequestCase() + " not supported!");
+            throw new FederateInternalError("Unknown callback: " + callback.getCallbackRequestCase());
          }
       }
       _callbackTimeStats.sample((int) (MovingStats.validTimeMillis() - timeBefore));

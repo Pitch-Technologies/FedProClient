@@ -1,3 +1,4 @@
+/.gradle
 sample/FedProClientLogs/FedProClient*
 sample_evolved/FedProClientLogs/FedProClient*
 java.properties

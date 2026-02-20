@@ -116,6 +116,13 @@ namespace FedPro
       return result;
    }
 
+   std::unique_ptr<std::promise<ByteSequence>> QueueableMessage::removeResponseFuture()
+   {
+      std::unique_ptr<std::promise<ByteSequence>> promise{std::move(_promise)};
+      _promise.reset();
+      return promise;
+   }
+
    std::ostream & operator<<(
          std::ostream & os,
          const QueueableMessage & message)

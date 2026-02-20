@@ -19,16 +19,22 @@
 // Silence clang-tidy issues reported for standard HLA exception.
 // NOLINTBEGIN(hicpp-exception-baseclass)
 
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/auth/AuthorizationResult.h>
 #include <RTI/auth/Authorizer.h>
 #include <RTI/auth/AuthorizerFactory.h>
 #include <RTI/auth/HLAauthorizerFactoryFactory.h>
+#endif
 #include <RTI/encoding/BasicDataElements.h>
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/encoding/HLAextendableVariantRecord.h>
+#endif
 #include <RTI/encoding/HLAfixedArray.h>
 #include <RTI/encoding/HLAfixedRecord.h>
+#if (RTI_HLA_VERSION >= 2025)
 #include <RTI/encoding/HLAlogicalTime.h>
 #include <RTI/encoding/HLAlogicalTimeInterval.h>
+#endif
 #include <RTI/encoding/HLAopaqueData.h>
 #include <RTI/encoding/HLAvariableArray.h>
 #include <RTI/encoding/HLAvariantRecord.h>
@@ -87,6 +93,11 @@ static_assert(true, "Require semicolon after macro")
 }                                                  \
 static_assert(true, "Require semicolon after macro")
 
+// Begin a block of non-reachable code to exercise
+// linking with the given class.
+#define LINK_ONLY_BLOCK(TYPE, POINTER_NAME)                                                      \
+if (TYPE * POINTER_NAME = (std::min)(static_cast<TYPE *>(nullptr), static_cast<TYPE *>(nullptr)))
+
 TEST_F(TestLibRti, linkAllClasses)
 {
    // Link with methods and operators to verify that this RTI library
@@ -142,15 +153,35 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(AttributeScopeAdvisorySwitchIsOn);
    LINK_CLASS_DESTRUCTOR(AttributeScopeAdvisorySwitchIsOn);
    LINK_CLASS_WIDE_STREAM_OPERATOR(AttributeScopeAdvisorySwitchIsOn);
+
+   // HLA 4 Authorization APIs
+#if (RTI_HLA_VERSION >= 2025)
    LINK_CLASS_COPY_CONSTRUCTOR(AuthorizationResult);
    LINK_CLASS_DESTRUCTOR(AuthorizationResult);
    LINK_CLASS_DESTRUCTOR(Authorizer);
    LINK_CLASS_DESTRUCTOR(AuthorizerFactory);
+   LINK_CLASS_COPY_CONSTRUCTOR(HLAauthorizerFactoryFactory);
+   LINK_CLASS_DESTRUCTOR(HLAauthorizerFactoryFactory);
+   LINK_CLASS_COPY_CONSTRUCTOR(Credentials);
+   LINK_CLASS_DESTRUCTOR(Credentials);
+   LINK_CLASS_COPY_CONSTRUCTOR(HLAnoCredentials);
+   LINK_CLASS_DESTRUCTOR(HLAnoCredentials);
+   LINK_CLASS_COPY_CONSTRUCTOR(HLAplainTextPassword);
+   LINK_CLASS_DESTRUCTOR(HLAplainTextPassword);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidCredentials);
+   LINK_CLASS_DESTRUCTOR(InvalidCredentials);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidCredentials);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(Unauthorized);
+   LINK_CLASS_DESTRUCTOR(Unauthorized);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(Unauthorized);
+#endif
    LINK_EXCEPTION_COPY_CONSTRUCTOR(CallNotAllowedFromWithinCallback);
    LINK_CLASS_DESTRUCTOR(CallNotAllowedFromWithinCallback);
    LINK_CLASS_WIDE_STREAM_OPERATOR(CallNotAllowedFromWithinCallback);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_CLASS_COPY_CONSTRUCTOR(ConfigurationResult);
    LINK_CLASS_DESTRUCTOR(ConfigurationResult);
+#endif
    LINK_EXCEPTION_COPY_CONSTRUCTOR(ConnectionFailed);
    LINK_CLASS_DESTRUCTOR(ConnectionFailed);
    LINK_CLASS_WIDE_STREAM_OPERATOR(ConnectionFailed);
@@ -163,14 +194,36 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(CouldNotEncode);
    LINK_CLASS_DESTRUCTOR(CouldNotEncode);
    LINK_CLASS_WIDE_STREAM_OPERATOR(CouldNotEncode);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(CouldNotOpenFOM);
    LINK_CLASS_DESTRUCTOR(CouldNotOpenFOM);
    LINK_CLASS_WIDE_STREAM_OPERATOR(CouldNotOpenFOM);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(ErrorReadingFOM);
+   LINK_CLASS_DESTRUCTOR(ErrorReadingFOM);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(ErrorReadingFOM);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(InconsistentFOM);
+   LINK_CLASS_DESTRUCTOR(InconsistentFOM);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(InconsistentFOM);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidFOM);
+   LINK_CLASS_DESTRUCTOR(InvalidFOM);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidFOM);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidMIM);
+   LINK_CLASS_DESTRUCTOR(InvalidMIM);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidMIM);
+#else
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(CouldNotOpenFDD);
+   LINK_CLASS_DESTRUCTOR(CouldNotOpenFDD);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(CouldNotOpenFDD);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(ErrorReadingFDD);
+   LINK_CLASS_DESTRUCTOR(ErrorReadingFDD);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(ErrorReadingFDD);
+   LINK_EXCEPTION_COPY_CONSTRUCTOR(InconsistentFDD);
+   LINK_CLASS_DESTRUCTOR(InconsistentFDD);
+   LINK_CLASS_WIDE_STREAM_OPERATOR(InconsistentFDD);
+#endif
    LINK_EXCEPTION_COPY_CONSTRUCTOR(CouldNotOpenMIM);
    LINK_CLASS_DESTRUCTOR(CouldNotOpenMIM);
    LINK_CLASS_WIDE_STREAM_OPERATOR(CouldNotOpenMIM);
-   LINK_CLASS_COPY_CONSTRUCTOR(Credentials);
-   LINK_CLASS_DESTRUCTOR(Credentials);
    LINK_CLASS_DESTRUCTOR(DataElement);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(DeletePrivilegeNotHeld);
    LINK_CLASS_DESTRUCTOR(DeletePrivilegeNotHeld);
@@ -181,9 +234,6 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(EncoderException);
    LINK_CLASS_DESTRUCTOR(EncoderException);
    LINK_CLASS_WIDE_STREAM_OPERATOR(EncoderException);
-   LINK_EXCEPTION_COPY_CONSTRUCTOR(ErrorReadingFOM);
-   LINK_CLASS_DESTRUCTOR(ErrorReadingFOM);
-   LINK_CLASS_WIDE_STREAM_OPERATOR(ErrorReadingFOM);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(ErrorReadingMIM);
    LINK_CLASS_DESTRUCTOR(ErrorReadingMIM);
    LINK_CLASS_WIDE_STREAM_OPERATOR(ErrorReadingMIM);
@@ -233,27 +283,33 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_CLASS_WIDE_STREAM_OPERATOR(FederationExecutionDoesNotExist);
    LINK_CLASS_COPY_CONSTRUCTOR(FederationExecutionInformation);
    LINK_CLASS_DESTRUCTOR(FederationExecutionInformation);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_CLASS_COPY_CONSTRUCTOR(FederationExecutionMemberInformation);
    LINK_CLASS_DESTRUCTOR(FederationExecutionMemberInformation);
+#endif
    LINK_CLASS_COPY_CONSTRUCTOR(HLAASCIIchar);
    LINK_CLASS_DESTRUCTOR(HLAASCIIchar);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAASCIIchar);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAASCIIstring);
    LINK_CLASS_DESTRUCTOR(HLAASCIIstring);
-   LINK_CLASS_COPY_CONSTRUCTOR(HLAauthorizerFactoryFactory);
-   LINK_CLASS_DESTRUCTOR(HLAauthorizerFactoryFactory);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAboolean);
    LINK_CLASS_DESTRUCTOR(HLAboolean);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAboolean);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAbyte);
    LINK_CLASS_DESTRUCTOR(HLAbyte);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAbyte);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_CLASS_COPY_CONSTRUCTOR(HLAextendableVariantRecord);
    LINK_CLASS_DESTRUCTOR(HLAextendableVariantRecord);
+#endif
    LINK_CLASS_COPY_CONSTRUCTOR(HLAfixedArray);
    LINK_CLASS_DESTRUCTOR(HLAfixedArray);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAfixedRecord);
    LINK_CLASS_DESTRUCTOR(HLAfixedRecord);
+   LINK_ONLY_BLOCK(HLAfixedRecord, pointer) {
+      // Subscript operator
+      auto & ignoredRef = (*pointer)[0];
+   }
    LINK_CLASS_COPY_CONSTRUCTOR(HLAfloat32BE);
    LINK_CLASS_DESTRUCTOR(HLAfloat32BE);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAfloat32BE);
@@ -300,14 +356,14 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAinteger64Time);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAinteger64TimeFactory);
    LINK_CLASS_DESTRUCTOR(HLAinteger64TimeFactory);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_CLASS_COPY_CONSTRUCTOR(HLAlogicalTime);
    LINK_CLASS_DESTRUCTOR(HLAlogicalTime);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAlogicalTimeFactoryFactory);
    LINK_CLASS_DESTRUCTOR(HLAlogicalTimeFactoryFactory);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAlogicalTimeInterval);
    LINK_CLASS_DESTRUCTOR(HLAlogicalTimeInterval);
-   LINK_CLASS_COPY_CONSTRUCTOR(HLAnoCredentials);
-   LINK_CLASS_DESTRUCTOR(HLAnoCredentials);
+#endif
    LINK_CLASS_COPY_CONSTRUCTOR(HLAoctet);
    LINK_CLASS_DESTRUCTOR(HLAoctet);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAoctet);
@@ -317,13 +373,19 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_CLASS_DESTRUCTOR(HLAoctetPairLE);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAopaqueData);
    LINK_CLASS_DESTRUCTOR(HLAopaqueData);
-   LINK_CLASS_COPY_CONSTRUCTOR(HLAplainTextPassword);
-   LINK_CLASS_DESTRUCTOR(HLAplainTextPassword);
+   LINK_ONLY_BLOCK(HLAopaqueData, pointer) {
+      // Conversion function
+#if (RTI_HLA_VERSION < 2025)
+      const Octet * ignored1 = *pointer;
+#endif
+      const Octet * ignored2 = pointer->get();
+   }
    LINK_CLASS_COPY_CONSTRUCTOR(HLAunicodeChar);
    LINK_CLASS_DESTRUCTOR(HLAunicodeChar);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAunicodeChar);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAunicodeString);
    LINK_CLASS_DESTRUCTOR(HLAunicodeString);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_CLASS_COPY_CONSTRUCTOR(HLAunsignedInteger16BE);
    LINK_CLASS_DESTRUCTOR(HLAunsignedInteger16BE);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAunsignedInteger16BE);
@@ -342,6 +404,7 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_CLASS_COPY_CONSTRUCTOR(HLAunsignedInteger64LE);
    LINK_CLASS_DESTRUCTOR(HLAunsignedInteger64LE);
    LINK_CLASS_WIDE_STREAM_OPERATOR(HLAunsignedInteger64LE);
+#endif
    LINK_CLASS_COPY_CONSTRUCTOR(HLAvariableArray);
    LINK_CLASS_DESTRUCTOR(HLAvariableArray);
    LINK_CLASS_COPY_CONSTRUCTOR(HLAvariantRecord);
@@ -355,9 +418,6 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InTimeAdvancingState);
    LINK_CLASS_DESTRUCTOR(InTimeAdvancingState);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InTimeAdvancingState);
-   LINK_EXCEPTION_COPY_CONSTRUCTOR(InconsistentFOM);
-   LINK_CLASS_DESTRUCTOR(InconsistentFOM);
-   LINK_CLASS_WIDE_STREAM_OPERATOR(InconsistentFOM);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InteractionClassAlreadyBeingChanged);
    LINK_CLASS_DESTRUCTOR(InteractionClassAlreadyBeingChanged);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InteractionClassAlreadyBeingChanged);
@@ -382,15 +442,9 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidAttributeHandle);
    LINK_CLASS_DESTRUCTOR(InvalidAttributeHandle);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidAttributeHandle);
-   LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidCredentials);
-   LINK_CLASS_DESTRUCTOR(InvalidCredentials);
-   LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidCredentials);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidDimensionHandle);
    LINK_CLASS_DESTRUCTOR(InvalidDimensionHandle);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidDimensionHandle);
-   LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidFOM);
-   LINK_CLASS_DESTRUCTOR(InvalidFOM);
-   LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidFOM);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidFederateHandle);
    LINK_CLASS_DESTRUCTOR(InvalidFederateHandle);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidFederateHandle);
@@ -406,18 +460,17 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidLookahead);
    LINK_CLASS_DESTRUCTOR(InvalidLookahead);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidLookahead);
-   LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidMIM);
-   LINK_CLASS_DESTRUCTOR(InvalidMIM);
-   LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidMIM);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidMessageRetractionHandle);
    LINK_CLASS_DESTRUCTOR(InvalidMessageRetractionHandle);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidMessageRetractionHandle);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidObjectClassHandle);
    LINK_CLASS_DESTRUCTOR(InvalidObjectClassHandle);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidObjectClassHandle);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidObjectInstanceHandle);
    LINK_CLASS_DESTRUCTOR(InvalidObjectInstanceHandle);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidObjectInstanceHandle);
+#endif
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidOrderName);
    LINK_CLASS_DESTRUCTOR(InvalidOrderName);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidOrderName);
@@ -445,9 +498,11 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidTransportationName);
    LINK_CLASS_DESTRUCTOR(InvalidTransportationName);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidTransportationName);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidTransportationTypeHandle);
    LINK_CLASS_DESTRUCTOR(InvalidTransportationTypeHandle);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidTransportationTypeHandle);
+#endif
    LINK_EXCEPTION_COPY_CONSTRUCTOR(InvalidUpdateRateDesignator);
    LINK_CLASS_DESTRUCTOR(InvalidUpdateRateDesignator);
    LINK_CLASS_WIDE_STREAM_OPERATOR(InvalidUpdateRateDesignator);
@@ -527,9 +582,11 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(RequestForTimeRegulationPending);
    LINK_CLASS_DESTRUCTOR(RequestForTimeRegulationPending);
    LINK_CLASS_WIDE_STREAM_OPERATOR(RequestForTimeRegulationPending);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(ReportServiceInvocationsAreSubscribed);
    LINK_CLASS_DESTRUCTOR(ReportServiceInvocationsAreSubscribed);
    LINK_CLASS_WIDE_STREAM_OPERATOR(ReportServiceInvocationsAreSubscribed);
+#endif
    LINK_EXCEPTION_COPY_CONSTRUCTOR(RestoreInProgress);
    LINK_CLASS_DESTRUCTOR(RestoreInProgress);
    LINK_CLASS_WIDE_STREAM_OPERATOR(RestoreInProgress);
@@ -539,8 +596,10 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(RestoreNotRequested);
    LINK_CLASS_DESTRUCTOR(RestoreNotRequested);
    LINK_CLASS_WIDE_STREAM_OPERATOR(RestoreNotRequested);
+#if (RTI_HLA_VERSION >= 2025)
    LINK_CLASS_COPY_CONSTRUCTOR(RtiConfiguration);
    LINK_CLASS_DESTRUCTOR(RtiConfiguration);
+#endif
    LINK_EXCEPTION_COPY_CONSTRUCTOR(SaveInProgress);
    LINK_CLASS_DESTRUCTOR(SaveInProgress);
    LINK_CLASS_WIDE_STREAM_OPERATOR(SaveInProgress);
@@ -565,9 +624,6 @@ TEST_F(TestLibRti, linkAllClasses)
    LINK_EXCEPTION_COPY_CONSTRUCTOR(TimeRegulationIsNotEnabled);
    LINK_CLASS_DESTRUCTOR(TimeRegulationIsNotEnabled);
    LINK_CLASS_WIDE_STREAM_OPERATOR(TimeRegulationIsNotEnabled);
-   LINK_EXCEPTION_COPY_CONSTRUCTOR(Unauthorized);
-   LINK_CLASS_DESTRUCTOR(Unauthorized);
-   LINK_CLASS_WIDE_STREAM_OPERATOR(Unauthorized);
    LINK_EXCEPTION_COPY_CONSTRUCTOR(UnsupportedCallbackModel);
    LINK_CLASS_DESTRUCTOR(UnsupportedCallbackModel);
    LINK_CLASS_WIDE_STREAM_OPERATOR(UnsupportedCallbackModel);

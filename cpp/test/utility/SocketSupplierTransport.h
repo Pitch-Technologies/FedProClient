@@ -26,7 +26,19 @@ public:
 
    using SocketSupplier = std::function<std::shared_ptr<FedPro::Socket>()>;
 
+   /**
+    * Create a Transport from a SocketSupplier function.
+    * @param socketSupplier Supplier of connected socket.
+    */
    explicit SocketSupplierTransport(SocketSupplier socketSupplier);
+
+   /**
+    * Create a Transport from an already-connected FedPro::Socket.
+    * @param socket Already-connected FedPro::Socket to return upon connect().
+    */
+   explicit SocketSupplierTransport(std::shared_ptr<FedPro::Socket> socket);
+
+   SocketSupplierTransport(const SocketSupplierTransport & transport) noexcept;
 
    ~SocketSupplierTransport() override;
 

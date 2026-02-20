@@ -29,7 +29,7 @@ MemorySocket::MemorySocket() = default;
 void MemorySocket::addInboundPacket(
       FedPro::string_view packetBytes)
 {
-   std::unique_lock<std::mutex> lock(_inboundMutex);
+   std::unique_lock<std::mutex> lock(_mutex);
    _inboundMemoryBuffer.append(packetBytes.data(), packetBytes.size());
    _condition.notify_all();
 }
@@ -46,7 +46,7 @@ int MemorySocket::recv(
       char * firstBytePos,
       uint32_t numOfBytes) const
 {
-   std::unique_lock<std::mutex> lock(_inboundMutex);
+   std::unique_lock<std::mutex> lock(_mutex);
    while (_open && _inboundMemoryBuffer.empty()) {
       _condition.wait(lock);
    }
@@ -69,6 +69,7 @@ int MemorySocket::recv(
 bool MemorySocket::connect()
 {
    _open = true;
+   std::lock_guard<std::mutex> lock(_mutex);
    _condition.notify_all();
    return true;
 }
@@ -76,5 +77,6 @@ bool MemorySocket::connect()
 void MemorySocket::close()
 {
    _open = false;
+   std::lock_guard<std::mutex> lock(_mutex);
    _condition.notify_all();
 }

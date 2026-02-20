@@ -115,7 +115,7 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
    private void throwIfAlreadyConnected()
    throws AlreadyConnected
    {
-      if (_persistentSession != null) {
+      if (_clientSession != null) {
          throw new AlreadyConnected("Already has a session");
       }
    }
@@ -199,7 +199,7 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
                      "API.version=" + prtiApiVersion + "\n" + parsedRtiConfiguration.getAdditionalSettings());
             }
 
-            _persistentSession = createPersistentSession(clientSettings);
+            createPersistentSession(clientSettings, callbackModel == CallbackModel.HLA_IMMEDIATE);
          } catch (InvalidSetting e) {
             throw new ConnectionFailed(e.getMessage());
          } catch (FedProRtiInternalError e) {
@@ -220,10 +220,7 @@ public class RTIambassadorClientEvolvedBase extends RTIambassadorClientGenericBa
             CallResponse callResponse = doHlaCall(callRequest);
             // Todo - I don't see how we need throwOnException() here? remove?
             throwOnException(callResponse);
-            startStatPrinting();
-            if (callbackModel == CallbackModel.HLA_IMMEDIATE) {
-               startCallbackThread();
-            }
+            startSessionThreads(_clientSession);
          } catch (FedProNotConnected | NotConnected e) {
             throw new RTIinternalError("Failed to connect");
          } catch (FedProConnectionFailed e) {

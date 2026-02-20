@@ -26,10 +26,12 @@
 
 #include "RTIambassadorClient.h"
 
+#include "ClientSession.h"
 #include "FederateAmbassadorDispatcher.h"
 #include <fedpro/FedProExceptions.h>
 #include "RtiConfiguration.h"
 #include "utility/StringUtil.h"
+#include "utility/final.h"
 
 namespace FedPro
 {
@@ -48,16 +50,26 @@ namespace FedPro
    {
       throwIfInCallback(__func__);
       // This holds the session resulting from a failed connection attempt. doConnect may assign a pointer to this.
-      // When the method returns or throws, this local variable and the corresponding session are destroyed.
-      // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks,
-      // since the session may use the lock upon destruction.
-      std::unique_ptr<PersistentSession> failedSession;
+      std::shared_ptr<ClientSession> failedSession;
+      // When the method returns or throws, this executes.
+      auto sessionCleanup = make_final([this, &failedSession]() {
+         if (failedSession) {
+            // Wait for listeners to complete before destroying PersistentSession (cf terminatingSession),
+            // since lostConnection() and sessionTerminated() need to access this client object,
+            // and this the last opportunity to wait for the session's listeners.
+            failedSession->_persistentSession->waitListeners();
+
+            // cleanUpTerminatingSession waits for thread, and destroy the PersistentSession being terminated.
+            // _connectionStateLock MUST NOT be locked when this happens to prevent deadlocks.
+            cleanUpTerminatingSession(*failedSession);
+         }
+      });
 
       std::lock_guard<std::mutex> guard(_connectionStateLock);
 
       throwIfAlreadyConnected();
       try {
-         createPersistentSession(clientSettings);
+         createClientSession(clientSettings, federateAmbassador, callbackModel);
       } catch (const std::invalid_argument & e) {
          throw RTI_NAMESPACE::ConnectionFailed(toWString(e.what()));
       }
@@ -72,7 +84,7 @@ namespace FedPro
          callRequest.set_allocated_connectwithconfigurationandcredentialsrequest(request);
 
          rti1516_2025::fedpro::CallResponse callResponse =
-               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
+               doConnect(callRequest, failedSession);
          if (!callResponse.has_connectwithconfigurationandcredentialsresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
@@ -87,7 +99,7 @@ namespace FedPro
          callRequest.set_allocated_connectwithcredentialsrequest(request);
 
          rti1516_2025::fedpro::CallResponse callResponse =
-               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
+               doConnect(callRequest, failedSession);
          if (!callResponse.has_connectwithcredentialsresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
@@ -106,7 +118,7 @@ namespace FedPro
          callRequest.set_allocated_connectwithconfigurationrequest(request);
 
          rti1516_2025::fedpro::CallResponse callResponse =
-               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
+               doConnect(callRequest, failedSession);
          if (!callResponse.has_connectwithconfigurationresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
@@ -120,7 +132,7 @@ namespace FedPro
          callRequest.set_allocated_connectrequest(request);
 
          rti1516_2025::fedpro::CallResponse callResponse =
-               doConnect(federateAmbassador, callbackModel, callRequest, failedSession);
+               doConnect(callRequest, failedSession);
          if (!callResponse.has_connectresponse()) {
             throw RTI_NAMESPACE::RTIinternalError(L"Missing connect response in Federate Protocol Buffer");
          }
@@ -149,14 +161,14 @@ namespace FedPro
 
    void RTIambassadorClient::throwIfAlreadyConnected() const
    {
-      if (isConnected()) {
+      if (_clientSession) {
          throw RTI_NAMESPACE::AlreadyConnected(L"Already has a session");
       }
    }
 
    void RTIambassadorClient::throwIfInCallback(const char * methodName) const
    {
-      if (isInCurrentCallbackThread()) {
+      if (isInCallbackThread()) {
          throw RTI_NAMESPACE::CallNotAllowedFromWithinCallback(
                std::wstring(L"Cannot call ") + _clientConverter->convertToHla(methodName) + L" from within a callback");
       }
@@ -174,15 +186,6 @@ namespace FedPro
    {
       throwIfInCallback(__func__);
       return evokeMultipleCallbacksBase(minimumTime, maximumTime);
-   }
-
-   void RTIambassadorClient::dispatchHlaCallback(std::unique_ptr<CallbackRequest> callbackRequest)
-   {
-      if (!_federateAmbassadorDispatcher) {
-         throw RTI_NAMESPACE::NotConnected(L"Cannot dispatch callback when FederateAmbassador is not connected");
-      }
-
-      _federateAmbassadorDispatcher->dispatchCallback(std::move(callbackRequest));
    }
 
 } // FedPro

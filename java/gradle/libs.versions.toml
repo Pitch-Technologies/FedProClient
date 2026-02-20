@@ -1,0 +1,19 @@
+[versions]
+fed-pro-client = "2.1.0-SNAPSHOT"
+
+websocket = "1.6.0"
+protobuf = "4.29.1"
+slf4j = "2.0.17"
+jcip = "1.0"
+junit = "4.12"
+
+[libraries]
+java-websocket = { module = "org.java-websocket:Java-WebSocket", name = "java-websocket", version.ref = "websocket" }
+protobuf-java = { module = "com.google.protobuf:protobuf-java", name = "protobuf-java", version.ref = "protobuf" }
+slf4j-api = { module = "org.slf4j:slf4j-api", name = "slf4j-api", version.ref = "slf4j" }
+slf4j-nop = { module = "org.slf4j:slf4j-nop", name = "slf4j-nop", version.ref = "slf4j" }
+jcip-annotations = { module = "net.jcip:jcip-annotations", name = "jcip-annotations" ,version.ref = "jcip" }
+junit = { module = "junit:junit", name = "junit", version.ref = "junit" }
+
+[bundles]
+slf4j = ["slf4j-api" , "slf4j-nop"]
