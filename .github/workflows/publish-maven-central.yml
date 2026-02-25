@@ -26,7 +26,8 @@ jobs:
 
       - name: Publish with Gradle Wrapper
         # Use java/gradlew publishToMavenCentral(automaticRelease = true) to skip manual approval in Maven Central portal
-        run: java/gradlew publishToMavenCentral
+        working-directory: java/
+        run: ./gradlew publishToMavenCentral
         env:
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_PASSWORD }}
