@@ -38,7 +38,7 @@ java {
 }
 
 mavenPublishing {
-    coordinates("se.pitch.oss.fedpro", "hlaevolved-api", libs.versions.fed.pro.client.get())
+    coordinates("se.pitch.oss.fedpro", "hla-evolved-api", libs.versions.fed.pro.client.get())
 
     publishToMavenCentral()
     signAllPublications()
