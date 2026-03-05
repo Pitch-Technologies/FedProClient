@@ -55,7 +55,7 @@ java {
 }
 
 mavenPublishing {
-    coordinates("se.pitch.oss.fedpro", "client", libs.versions.fed.pro.client.get())
+    coordinates("se.pitch.oss.fedpro", "fedpro-client", libs.versions.fed.pro.client.get())
 
     publishToMavenCentral()
     signAllPublications()

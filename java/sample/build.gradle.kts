@@ -28,8 +28,8 @@ dependencies {
     implementation(project(":client"))
     api(project(":api:HLA1516-2025"))
     // Use the following to fetch the client from maven
-    //implementation("se.pitch.oss.fedpro:client:2.1.0-SNAPSHOT")
-    //api("se.pitch.oss.fedpro:hla4-api:2.1.0-SNAPSHOT")
+    //implementation("se.pitch.oss.fedpro:fedpro-client:2.1.0-SNAPSHOT")
+    //api("se.pitch.oss.fedpro:hla-4-api:2.1.0-SNAPSHOT")
 }
 
 sourceSets {

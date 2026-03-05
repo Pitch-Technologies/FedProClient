@@ -47,6 +47,9 @@ cpp/.idea/vcs.xml
 # *.iml
 # *.ipr
 
+# Gradle output
+java/**/build/
+
 # CMake
 cmake-build-*/
 
