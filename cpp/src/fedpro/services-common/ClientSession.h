@@ -19,6 +19,7 @@
 #include "QueuedCallback.h"
 #include "utility/BlockingQueue.h"
 #include "utility/InterruptibleCondition.h"
+#include "utility/string_view.h"
 
 #include <fedpro/Aliases.h>
 #include <fedpro/PersistentSession.h>
@@ -112,7 +113,8 @@ namespace FedPro
 
       void sendHlaCallbackErrorResponse(
             SequenceNumber sequenceNumber,
-            ByteSequence && encodedHlaResponse);
+            string_view exceptionName,
+            string_view exceptionDetails);
 
       thread_local static bool _inCallbackThread;
 

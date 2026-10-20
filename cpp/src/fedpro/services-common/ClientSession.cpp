@@ -30,19 +30,6 @@
 
 namespace FedPro
 {
-   static ::rti1516_2025::fedpro::CallbackResponse createCallbackResponse(
-         const char * exceptionName,
-         const wstring_view exceptionDetails)
-   {
-      auto * exceptionData = new ::rti1516_2025::fedpro::ExceptionData();
-      exceptionData->set_exceptionname(exceptionName);
-      exceptionData->set_details(toString(exceptionDetails));
-
-      ::rti1516_2025::fedpro::CallbackResponse callbackResponse;
-      callbackResponse.set_allocated_callbackfailed(exceptionData);
-      return callbackResponse;
-   }
-
    thread_local bool ClientSession::_inCallbackThread{false};
 
    bool ClientSession::isInCallbackThread()
@@ -128,23 +115,41 @@ namespace FedPro
       try {
          _federateAmbassadorDispatcher->dispatchCallback(std::move(queuedCallback._callbackRequest));
 
-         if (queuedCallback._needsResponse) {
-            rti1516_2025::fedpro::CallbackResponse callbackResponse;
-            callbackResponse.set_allocated_callbacksucceeded(new rti1516_2025::fedpro::CallbackSucceeded());
-            _persistentSession->sendHlaCallbackResponse(queuedCallback._sequenceNumber, callbackResponse.SerializeAsString());
+         try {
+            if (queuedCallback._needsResponse) {
+               rti1516_2025::fedpro::CallbackResponse callbackResponse;
+               callbackResponse.set_allocated_callbacksucceeded(new rti1516_2025::fedpro::CallbackSucceeded());
+               _persistentSession->sendHlaCallbackResponse(queuedCallback._sequenceNumber, callbackResponse.SerializeAsString());
+            }
+         } catch (const SessionIllegalState &) {
+            // Terminated: A failed callback response is not even important enough to log in the context of session termination.
+            // Not initialized: Can basically not happen.
          }
       } catch (const RTI_NAMESPACE::FederateInternalError & e) {
-         const std::string eAsString = toString(e.what());
-         SPDLOG_WARN("Exception in federate callback handler: {}", eAsString);
+         const std::string eAsString{toString(e.what())};
+         SPDLOG_WARN("Exception in FederateAmbassador callback handler: {}", eAsString);
          if (queuedCallback._needsResponse) {
-            rti1516_2025::fedpro::CallbackResponse response{createCallbackResponse(typeid(e).name(), e.what())};
-            sendHlaCallbackErrorResponse(queuedCallback._sequenceNumber, response.SerializeAsString());
+            sendHlaCallbackErrorResponse(queuedCallback._sequenceNumber, typeid(e).name(), eAsString);
          }
-      } catch (const std::runtime_error &) {
-         // TODO: do something more sensible with these exceptions
-      } catch (const SessionIllegalState &) {
-         // Terminated: A failed callback response is not even important enough to log in the context of session termination.
-         // Not initialized: Can basically not happen.
+      } catch (const RTI_NAMESPACE::Exception & e) {
+         const std::string eAsString{toString(e.what())};
+         SPDLOG_ERROR(
+               "Unexpected RTI_NAMESPACE::Exception in FederateAmbassador callback handler: {}",
+               eAsString);
+         if (queuedCallback._needsResponse) {
+            sendHlaCallbackErrorResponse(queuedCallback._sequenceNumber, typeid(e).name(), eAsString);
+         }
+      } catch (const std::exception & e) {
+         SPDLOG_ERROR("Unexpected std::exception in FederateAmbassador callback handler: {}",
+                      e.what());
+         if (queuedCallback._needsResponse) {
+            sendHlaCallbackErrorResponse(queuedCallback._sequenceNumber, typeid(e).name(), e.what());
+         }
+      } catch (const std::string & e) {
+         SPDLOG_ERROR("Unexpected throw of std::string in FederateAmbassador callback handler: {}", e);
+         if (queuedCallback._needsResponse) {
+            sendHlaCallbackErrorResponse(queuedCallback._sequenceNumber, "std::string", e);
+         }
       }
    }
 
@@ -221,18 +226,27 @@ namespace FedPro
          SPDLOG_WARN("Failed to parse callback request with sequence number {}: {}", sequenceNumber, e.what());
          // Report exception "InvalidProtocolBufferException" to match Java client behavior, even though
          // there is no such C++ exception.
-         rti1516_2025::fedpro::CallbackResponse response{createCallbackResponse(
-               "InvalidProtocolBufferException", L"Failed to parse the encoded CallbackRequest")};
-         sendHlaCallbackErrorResponse(sequenceNumber, response.SerializeAsString());
+         sendHlaCallbackErrorResponse(
+               sequenceNumber,
+               "InvalidProtocolBufferException",
+               "Failed to parse the encoded CallbackRequest");
       }
    }
 
    void ClientSession::sendHlaCallbackErrorResponse(
          SequenceNumber sequenceNumber,
-         ByteSequence && encodedHlaResponse)
+         string_view exceptionName,
+         string_view exceptionDetails)
    {
       try {
-         _persistentSession->sendHlaCallbackResponse(sequenceNumber, encodedHlaResponse);
+         auto * exceptionData = new ::rti1516_2025::fedpro::ExceptionData();
+         exceptionData->set_exceptionname(exceptionName.data(), exceptionName.length());
+         exceptionData->set_details(exceptionDetails.data(), exceptionDetails.length());
+
+         ::rti1516_2025::fedpro::CallbackResponse callbackResponse;
+         callbackResponse.set_allocated_callbackfailed(exceptionData);
+
+         _persistentSession->sendHlaCallbackResponse(sequenceNumber, callbackResponse.SerializeAsString());
       } catch (const SessionIllegalState &) {
          // Terminated: A callback error is not even important enough to log in the context of session termination.
          // Not initialized: Can basically not happen

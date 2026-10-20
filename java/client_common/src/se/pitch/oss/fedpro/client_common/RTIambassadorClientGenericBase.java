@@ -153,7 +153,7 @@ public abstract class RTIambassadorClientGenericBase {
                   if (queuedCallback == POISON) {
                      return;
                   }
-                  dispatchCallback(queuedCallback, _persistentSession);
+                  dispatchCallback(queuedCallback, this);
                } finally {
                   synchronized (this) {
                      _callbackInProgress = false;
@@ -219,10 +219,27 @@ public abstract class RTIambassadorClientGenericBase {
                   "Failed to parse callback request with sequence number %d: %s",
                   sequenceNumber,
                   e));
-            sendHlaCallbackErrorResponse(_persistentSession, sequenceNumber, e);
+            sendHlaCallbackErrorResponse(sequenceNumber, e);
          } catch (InterruptedException e) {
             // Time to leave
-            sendHlaCallbackErrorResponse(_persistentSession, sequenceNumber, e);
+            sendHlaCallbackErrorResponse(sequenceNumber, e);
+         }
+      }
+
+      private void sendHlaCallbackErrorResponse(
+            int sequenceNumber, Throwable throwable)
+      {
+         try {
+            CallbackResponse callbackResponse = CallbackResponse.newBuilder()
+                  .setCallbackFailed(ExceptionData.newBuilder()
+                        .setExceptionName(throwable.getClass().getSimpleName())
+                        .setDetails(throwable.getMessage()))
+                  .build();
+
+            _persistentSession.sendHlaCallbackResponse(sequenceNumber, callbackResponse.toByteArray());
+         } catch (SessionIllegalState e) {
+            // Terminated: A callback error is not even important enough to log in the context of session termination.
+            // Not initialized: Can basically not happen
          }
       }
    }
@@ -329,7 +346,7 @@ public abstract class RTIambassadorClientGenericBase {
             if (queuedCallback == POISON) {
                return false;
             }
-            dispatchCallback(queuedCallback, callbackState._persistentSession);
+            dispatchCallback(queuedCallback, callbackState);
          } finally {
             synchronized (callbackState) {
                callbackState._callbackInProgress = false;
@@ -396,7 +413,7 @@ public abstract class RTIambassadorClientGenericBase {
                if (queuedCallback == POISON) {
                   return false;
                }
-               dispatchCallback(queuedCallback, callbackState._persistentSession);
+               dispatchCallback(queuedCallback, callbackState);
             } finally {
                synchronized (callbackState) {
                   callbackState._callbackInProgress = false;
@@ -409,29 +426,35 @@ public abstract class RTIambassadorClientGenericBase {
       }
    }
 
-   private void dispatchCallback(QueuedCallback queuedCallback, PersistentSession session)
+   private void dispatchCallback(QueuedCallback queuedCallback, ClientSession session)
    {
       try {
          _callbackInProgressThread.set(Thread.currentThread());
          dispatchHlaVersionSpecificCallback(queuedCallback.callbackRequest);
          _callbackInProgressThread.set(null);
 
-         if (session != null && queuedCallback.needsResponse) {
-            CallbackResponse callbackResponse =
-                  CallbackResponse.newBuilder().setCallbackSucceeded(CallbackSucceeded.getDefaultInstance()).build();
-            session.sendHlaCallbackResponse(queuedCallback.sequenceNumber, callbackResponse.toByteArray());
+         try {
+            if (session != null && queuedCallback.needsResponse) {
+               CallbackResponse callbackResponse =
+                     CallbackResponse.newBuilder().setCallbackSucceeded(CallbackSucceeded.getDefaultInstance()).build();
+               session._persistentSession.sendHlaCallbackResponse(
+                     queuedCallback.sequenceNumber,
+                     callbackResponse.toByteArray());
+            }
+         } catch (SessionIllegalState e) {
+            // Terminated: A failed callback response is not even important enough to log in the context of session termination.
+            // Not initialized: Can basically not happen.
          }
       } catch (FedProFederateInternalError e) {
-         LOGGER.log(Level.WARNING, e, () -> "Exception in federate callback handler");
+         LOGGER.log(Level.WARNING, e, () -> "Exception in FederateAmbassador callback handler");
          if (queuedCallback.needsResponse) {
-            sendHlaCallbackErrorResponse(session, queuedCallback.sequenceNumber, e.getCause());
+            session.sendHlaCallbackErrorResponse(queuedCallback.sequenceNumber, e.getCause());
          }
-      } catch (FedProRtiInternalError | RuntimeException e) {
-         // TODO: do something more sensible with these exceptions
-         e.printStackTrace();
-      } catch (SessionIllegalState e) {
-         // Terminated: A failed callback response is not even important enough to log in the context of session termination.
-         // Not initialized: Can basically not happen.
+      } catch (Exception e) {
+         LOGGER.log(Level.SEVERE, e, () -> "Unexpected " + e.getClass().getName() + " in FederateAmbassador callback handler");
+         if (queuedCallback.needsResponse) {
+            session.sendHlaCallbackErrorResponse(queuedCallback.sequenceNumber, e);
+         }
       }
    }
 
@@ -573,25 +596,6 @@ public abstract class RTIambassadorClientGenericBase {
    // Derived classes sneakily throw API-specific RTIexception
    protected abstract void throwOnException(CallResponse callResponse)
    throws FedProRtiInternalError;
-
-   private static void sendHlaCallbackErrorResponse(
-         PersistentSession resumingClient, int sequenceNumber, Throwable throwable)
-   {
-      if (resumingClient != null) {
-         try {
-            CallbackResponse callbackResponse = CallbackResponse.newBuilder()
-                  .setCallbackFailed(ExceptionData.newBuilder()
-                        .setExceptionName(throwable.getClass().getSimpleName())
-                        .setDetails(throwable.getMessage()))
-                  .build();
-
-            resumingClient.sendHlaCallbackResponse(sequenceNumber, callbackResponse.toByteArray());
-         } catch (SessionIllegalState e) {
-            // Terminated: A callback error is not even important enough to log in the context of session termination.
-            // Not initialized: Can basically not happen
-         }
-      }
-   }
 
    @GuardedBy("_connectionStateLock")
    protected PersistentSession createPersistentSession(TypedProperties settings, boolean createCallbackThread)
